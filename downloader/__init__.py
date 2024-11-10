@@ -38,7 +38,7 @@ class Deck:
         html.escape(question),
         f"[sound:{media_filename_html}]",
       ],
-      guid=genanki.guid_for(note_id),
+      guid=genanki.guid_for(self.deck().deck_id, note_id),
       tags=self.tags,
     ))
 
@@ -69,7 +69,10 @@ if __name__ == '__main__':
       deck.tags = list(map(str.strip, value.split(",")))
     else:
       video = Video(stripped, cache_path=CACHE)
-      deck.add_video_note(video.title(), video.processed_video(), video.id)
+      deck.add_video_note(
+        video.title(),
+        video.processed_video(),
+        f"youtube {video.id}")
 
   if deck:
     deck.save()
