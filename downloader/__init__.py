@@ -30,12 +30,13 @@ class Deck:
 
   def add_video_note(self, question, video_path, note_id):
     self.media.append(video_path)
+    question_html = html.escape(question).rstrip().replace("\n", "<br/>")
     media_filename_html = html.escape(os.path.basename(video_path))
 
     self.deck().add_note(genanki.Note(
       model=genanki.BASIC_AND_REVERSED_CARD_MODEL,
       fields=[
-        html.escape(question),
+        question_html,
         f"[sound:{media_filename_html}]",
       ],
       guid=genanki.guid_for(self.deck().deck_id, note_id),
@@ -50,28 +51,70 @@ class Deck:
     package.media_files = self.media
     package.write_to_file(path)
 
+def parse_note(deck, lines):
+  lines = "".join(lines)
+  note = lines.split(maxsplit=1)
+
+  if len(note) == 0:
+    raise ValueError("parse_note() called on empty input")
+
+  video = Video(note[0], cache_path=CACHE)
+  if len(note) == 2:
+    question = note[1]
+  else:
+    question = video.title()
+
+  deck.add_video_note(
+    question,
+    video.processed_video(),
+    f"youtube {video.id}")
+
 if __name__ == '__main__':
   deck = None
+  note = []
+
   for line in fileinput.input(encoding="utf-8"):
     if fileinput.isfirstline():
+      if len(note) > 0:
+        parse_note(deck, note)
       if deck:
         deck.save()
       deck = Deck(fileinput.filename())
+      note = []
 
-    stripped = line.strip()
-    if stripped == "" or stripped.startswith("#"):
+    if line.startswith("#"):
       continue
 
-    if stripped.startswith("title:"):
-      deck.title = stripped.removeprefix("title:").strip()
-    elif stripped.startswith("tags:"):
-      deck.tags = stripped.removeprefix("tags:").split()
+    unindented = line.lstrip(" \t")
+    if line != unindented:
+      # Line is indented and thus a continuation of a note
+      if len(note) == 0:
+        # FIXME terrible error message
+        raise ValueError(f"Found indented line with no preceding line ({fileinput.filename()}, line {fileinput.filelineno()})")
+
+      note.append(unindented)
+      continue
+
+    if line.strip() == "":
+      # Blank lines only count inside notes.
+      if len(note) > 0:
+        note.append(line)
+      continue
+
+    # Line is not indented
+    if len(note) > 0:
+      parse_note(deck, note)
+      note = []
+
+    if line.startswith("title:"):
+      deck.title = line.removeprefix("title:").strip()
+    elif line.startswith("tags:"):
+      deck.tags = line.removeprefix("tags:").split()
     else:
-      video = Video(stripped, cache_path=CACHE)
-      deck.add_video_note(
-        video.title(),
-        video.processed_video(),
-        f"youtube {video.id}")
+      note.append(line)
+
+  if len(note) > 0:
+    parse_note(deck, note)
 
   if deck:
     deck.save()
