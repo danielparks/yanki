@@ -65,8 +65,7 @@ if __name__ == '__main__':
     if stripped.startswith("title:"):
       deck.title = stripped.removeprefix("title:").strip()
     elif stripped.startswith("tags:"):
-      value = stripped.removeprefix("tags:")
-      deck.tags = list(map(str.strip, value.split(",")))
+      deck.tags = stripped.removeprefix("tags:").split()
     else:
       video = Video(stripped, cache_path=CACHE)
       deck.add_video_note(
