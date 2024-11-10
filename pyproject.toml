@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "downloader"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Parks <dp+git@oxidized.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-ffmpeg = "^2.0.12"
+yt-dlp = "^2024.11.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
