@@ -1,5 +1,5 @@
-# title: Lifeprint ASL (custom)::Lesson 1 phrases
-# tags: lesson_01, phrases
+title: Lifeprint ASL (custom)::Lesson 1 phrases
+tags: lesson_01, phrases
 
 https://www.youtube.com/watch?v=FHPszRvL9pg
 https://www.youtube.com/watch?v=UyfRF3TeLPs
