@@ -10,6 +10,8 @@ from video import Video
 CACHE = './cache'
 os.makedirs(CACHE, exist_ok=True)
 
+DEBUG = False
+
 def name_to_id(name):
   bytes = hashlib.sha256(name.encode('utf-8')).digest()
   # Apparently deck ID is i64
@@ -26,6 +28,8 @@ class Deck:
   def deck(self):
     if not self._deck:
       self._deck = genanki.Deck(name_to_id(self.title), self.title)
+      if DEBUG:
+        print(f"New deck [{self._deck.deck_id}]: {self.title}")
     return self._deck
 
   def add_video_note(self, question, video_path, note_id):
