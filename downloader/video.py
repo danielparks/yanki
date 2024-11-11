@@ -68,10 +68,33 @@ class Video:
   def title(self, logger=LOGGER):
     return self.info(logger=logger)['title']
 
-  def get_fps(self):
-    #### FIXME
-    return 29.97
+  # FIXME should we cache this?
+  def raw_metadata(self, logger=LOGGER):
+    return json.loads(FFmpeg(executable="ffprobe").input(
+      self.raw_video(logger=logger),
+      print_format="json",
+      show_streams=None,
+    ).execute())
 
+  def get_fps(self, logger=LOGGER):
+    metadata = self.raw_metadata(logger=logger)
+
+    for stream in metadata['streams']:
+      if stream['codec_type'] == 'video':
+        division = stream['avg_frame_rate'].split("/")
+        if len(division) == 0:
+          continue
+
+        fps = float(division.pop(0))
+        for divisor in division:
+          fps = fps / float(divisor)
+
+        return fps
+
+    raw_path = self.raw_video(logger=logger)
+    raise RuntimeError(f"Could not get FPS for video: {raw_path}")
+
+  # FIXME logger
   def parse_time_spec(self, spec):
     if spec.endswith("F"):
       return "%.3f" % (int(spec[:-1])/self.get_fps())
