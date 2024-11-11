@@ -34,7 +34,7 @@ class Video:
     self.id = yt_url_to_id(url)
     self.output_id = [self.id]
     self._info = None
-    self.crop = None
+    self._crop = None
     self.input_options = {}
     self.output_options = { "an": None }
     self.output_ext = "mp4"
@@ -92,6 +92,10 @@ class Video:
     self.output_ext = "jpeg"
     self.output_id.append(f"ss{self.input_options['ss']}")
 
+  def crop(self, crop):
+    self._crop = crop
+    self.output_id.append(f"crop={crop}")
+
   def raw_video(self, logger=LOGGER):
     path = self.raw_video_cache_path(logger=logger)
     if os.path.exists(path) and os.stat(path).st_size > 0:
@@ -126,8 +130,8 @@ class Video:
       raise ValueError("vf output option already set")
 
     vf = []
-    if self.crop:
-      vf.append(f"crop={self.crop}")
+    if self._crop:
+      vf.append(f"crop={self._crop}")
     vf.append("scale=-2:500")
     self.output_options["vf"] = ",".join(vf)
 

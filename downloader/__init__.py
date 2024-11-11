@@ -148,6 +148,8 @@ class DeckParser:
       raise ValueError("_parse_note() called on empty input ({self.where()})")
 
     video = Video(note[0], cache_path=CACHE)
+    if self.deck.crop:
+      video.crop(self.deck.crop)
 
     if len(note) == 2:
       question = self._try_parse_clip(note[1], video)
