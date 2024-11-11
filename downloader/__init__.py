@@ -22,6 +22,7 @@ class Deck:
     self.source = source
     self._deck = None
     self.title = None
+    self.crop = None
     self.tags = []
     self.media = []
 
@@ -32,20 +33,36 @@ class Deck:
         print(f"New deck [{self._deck.deck_id}]: {self.title}")
     return self._deck
 
-  def add_video_note(self, question, video_path, note_id):
-    self.media.append(video_path)
-    question_html = html.escape(question).rstrip().replace("\n", "<br/>")
-    media_filename_html = html.escape(os.path.basename(video_path))
+  def to_html(self, input):
+    return html.escape(input).rstrip().replace("\n", "<br/>")
 
+  def add_html_note(self, note_id, fields):
     self.deck().add_note(genanki.Note(
       model=genanki.BASIC_AND_REVERSED_CARD_MODEL,
-      fields=[
-        question_html,
-        f"[sound:{media_filename_html}]",
-      ],
+      fields=fields,
       guid=genanki.guid_for(self.deck().deck_id, note_id),
       tags=self.tags,
     ))
+    if DEBUG:
+      print(f"Added note {note_id}: {fields}")
+
+  def add_image_note(self, note_id, question, media_path):
+    self.media.append(media_path)
+
+    media_filename_html = html.escape(os.path.basename(media_path))
+    self.add_html_note(note_id, [
+      self.to_html(question),
+      f"<img src=\"{media_filename_html}\"/>",
+    ])
+
+  def add_video_note(self, note_id, question, media_path):
+    self.media.append(media_path)
+
+    media_filename_html = html.escape(os.path.basename(media_path))
+    self.add_html_note(note_id, [
+      self.to_html(question),
+      f"[sound:{media_filename_html}]",
+    ])
 
   def save(self, path=None):
     if not path:
@@ -59,6 +76,7 @@ class DeckParser:
   def __init__(self):
     self.deck = None
     self.path = None
+    self.line_number = None
     self.note = []
 
   def open(self, path):
@@ -66,6 +84,7 @@ class DeckParser:
       self.close()
     self.deck = Deck(path)
     self.path = path
+    self.line_number = None
     self.note = []
 
   def close(self):
@@ -76,11 +95,17 @@ class DeckParser:
 
     self.deck = None
     self.path = None
+    self.line_number = None
     self.note = []
 
+  def where(self):
+    return f"{self.path}, line {self.line_number}"
+
   def parse_line(self, path, line_number, line):
-    if not self.deck:
+    if not self.deck or self.path != path:
       self.open(path)
+
+    self.line_number = line_number
 
     if line.startswith("#"):
       return
@@ -90,7 +115,7 @@ class DeckParser:
       # Line is indented and thus a continuation of a note
       if len(self.note) == 0:
         # FIXME terrible error message
-        raise ValueError(f"Found indented line with no preceding line ({self.path}, line {line_number})")
+        raise ValueError(f"Found indented line with no preceding line ({self.where()})")
 
       self.note.append(unindented)
       return
@@ -110,27 +135,52 @@ class DeckParser:
       self.deck.title = line.removeprefix("title:").strip()
     elif line.startswith("tags:"):
       self.deck.tags = line.removeprefix("tags:").split()
+    elif line.startswith("crop:"):
+      self.deck.crop = line.removeprefix("crop:").strip()
     else:
       self.note.append(line)
 
   def _parse_note(self):
-    lines = "".join(self.note)
-    note = lines.split(maxsplit=1)
+    note = "".join(self.note).split(maxsplit=1)
 
     if len(note) == 0:
       # FIXME wrong exception
-      raise ValueError("_parse_note() called on empty input")
+      raise ValueError("_parse_note() called on empty input ({self.where()})")
 
     video = Video(note[0], cache_path=CACHE)
+
     if len(note) == 2:
-      question = note[1]
+      question = self._try_parse_clip(note[1], video)
     else:
       question = video.title()
 
-    self.deck.add_video_note(
-      question,
-      video.processed_video(),
-      f"youtube {video.id}")
+    output_id = " ".join(video.output_id)
+    answer = video.processed_video()
+    if video.output_ext == "jpeg":
+      self.deck.add_image_note(f"youtube {output_id}", question, answer)
+    else:
+      self.deck.add_video_note(f"youtube {output_id}", question, answer)
+
+  def _try_parse_clip(self, input, video):
+    if not input.startswith("@"):
+      return input
+
+    parts = input.split(maxsplit=1)
+
+    if len(parts) >= 1:
+      clip = parts[0].removeprefix("@").split("-")
+      if len(clip) == 2:
+        video.clip(clip[0], clip[1])
+      elif len(clip) == 1:
+        video.snapshot(clip[0])
+      else:
+        raise ValueError(f"Invalid clip specification {repr(parts[0])} ({self.where()})")
+
+    # Return rest of input
+    if len(parts) == 2:
+      return parts[1]
+    else:
+      return ""
 
 
 if __name__ == '__main__':

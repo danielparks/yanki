@@ -26,12 +26,18 @@ class Logger:
 
 LOGGER = Logger()
 
+# FIXME cannot be reused
 class Video:
   def __init__(self, url, cache_path="."):
     self.url = url
     self.cache_path = cache_path
     self.id = yt_url_to_id(url)
+    self.output_id = [self.id]
     self._info = None
+    self.crop = None
+    self.input_options = {}
+    self.output_options = { "an": None }
+    self.output_ext = "mp4"
 
   def cached(self, filename):
     return os.path.join(self.cache_path, filename)
@@ -43,7 +49,8 @@ class Video:
     return self.cached(self.id + '_raw.' + self.info(logger=logger)['ext'])
 
   def processed_video_cache_path(self):
-    return self.cached(self.id + '_processed.mp4')
+    output_id = "_".join(self.output_id)
+    return self.cached(f"{output_id}_processed.{self.output_ext}")
 
   def info(self, logger=LOGGER):
     if self._info is None:
@@ -60,6 +67,30 @@ class Video:
 
   def title(self, logger=LOGGER):
     return self.info(logger=logger)['title']
+
+  def get_fps(self):
+    #### FIXME
+    return 29.97
+
+  def parse_time_spec(self, spec):
+    if spec.endswith("F"):
+      return "%.3f" % (int(spec[:-1])/self.get_fps())
+    else:
+      return spec
+
+  def clip(self, start_spec, end_spec):
+    self.input_options["ss"] = self.parse_time_spec(start_spec)
+    self.output_options["to"] = self.parse_time_spec(end_spec)
+    self.output_options["copyts"] = None
+    self.output_id.append(f"ss{self.input_options['ss']}")
+    self.output_id.append(f"to{self.output_options['to']}")
+
+  def snapshot(self, time_spec):
+    self.input_options["ss"] = self.parse_time_spec(time_spec)
+    self.output_options["frames:v"] = "1"
+    self.output_options["q:v"] = "2" # JPEG quality
+    self.output_ext = "jpeg"
+    self.output_id.append(f"ss{self.input_options['ss']}")
 
   def raw_video(self, logger=LOGGER):
     path = self.raw_video_cache_path(logger=logger)
@@ -90,11 +121,24 @@ class Video:
 
     raw_path = self.raw_video(logger=logger)
 
-    logger.info(f"{self.id}: processing video")
-    FFmpeg().option("y").input(raw_path).output(
+    if "fv" in self.output_options:
+      # FIXME?
+      raise ValueError("vf output option already set")
+
+    vf = []
+    if self.crop:
+      vf.append(f"crop={self.crop}")
+    vf.append("scale=-2:500")
+    self.output_options["vf"] = ",".join(vf)
+
+    output_id = " ".join(self.output_id)
+    logger.info(f"{output_id}: processing video")
+    FFmpeg().option("y").input(
+      raw_path,
+      self.input_options,
+    ).output(
       output_path,
-      vf="crop=in_h:in_h,scale=500:500",
-      an=None,
+      self.output_options,
     ).execute()
 
     return output_path
