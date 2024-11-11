@@ -69,52 +69,67 @@ def parse_note(deck, lines):
     video.processed_video(),
     f"youtube {video.id}")
 
-if __name__ == '__main__':
-  deck = None
-  note = []
+class DeckParser:
+  def __init__(self):
+    self.deck = None
+    self.path = None
+    self.note = []
 
-  for line in fileinput.input(encoding="utf-8"):
-    if fileinput.isfirstline():
-      if len(note) > 0:
-        parse_note(deck, note)
-      if deck:
-        deck.save()
-      deck = Deck(fileinput.filename())
-      note = []
+  def open(self, path):
+    if self.deck:
+      self.close()
+    self.deck = Deck(path)
+    self.path = path
+    self.note = []
+
+  def close(self):
+    if len(self.note) > 0:
+      parse_note(self.deck, self.note)
+    if self.deck:
+      self.deck.save()
+
+    self.deck = None
+    self.path = None
+    self.note = []
+
+  def parse_line(self, path, line_number, line):
+    if not self.deck:
+      self.open(path)
 
     if line.startswith("#"):
-      continue
+      return
 
     unindented = line.lstrip(" \t")
     if line != unindented:
       # Line is indented and thus a continuation of a note
-      if len(note) == 0:
+      if len(self.note) == 0:
         # FIXME terrible error message
-        raise ValueError(f"Found indented line with no preceding line ({fileinput.filename()}, line {fileinput.filelineno()})")
+        raise ValueError(f"Found indented line with no preceding line ({self.path}, line {line_number})")
 
-      note.append(unindented)
-      continue
+      self.note.append(unindented)
+      return
 
     if line.strip() == "":
       # Blank lines only count inside notes.
-      if len(note) > 0:
-        note.append(line)
-      continue
+      if len(self.note) > 0:
+        self.note.append(line)
+      return
 
     # Line is not indented
-    if len(note) > 0:
-      parse_note(deck, note)
-      note = []
+    if len(self.note) > 0:
+      parse_note(self.deck, self.note)
+      self.note = []
 
     if line.startswith("title:"):
-      deck.title = line.removeprefix("title:").strip()
+      self.deck.title = line.removeprefix("title:").strip()
     elif line.startswith("tags:"):
-      deck.tags = line.removeprefix("tags:").split()
+      self.deck.tags = line.removeprefix("tags:").split()
     else:
-      note.append(line)
+      self.note.append(line)
 
-  if len(note) > 0:
-    parse_note(deck, note)
 
-  if deck:
-    deck.save()
+if __name__ == '__main__':
+  parser = DeckParser()
+  for line in fileinput.input(encoding="utf-8"):
+    parser.parse_line(fileinput.filename(), fileinput.filelineno(), line)
+  parser.close()
