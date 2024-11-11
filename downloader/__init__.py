@@ -51,24 +51,6 @@ class Deck:
     package.media_files = self.media
     package.write_to_file(path)
 
-def parse_note(deck, lines):
-  lines = "".join(lines)
-  note = lines.split(maxsplit=1)
-
-  if len(note) == 0:
-    raise ValueError("parse_note() called on empty input")
-
-  video = Video(note[0], cache_path=CACHE)
-  if len(note) == 2:
-    question = note[1]
-  else:
-    question = video.title()
-
-  deck.add_video_note(
-    question,
-    video.processed_video(),
-    f"youtube {video.id}")
-
 class DeckParser:
   def __init__(self):
     self.deck = None
@@ -84,7 +66,7 @@ class DeckParser:
 
   def close(self):
     if len(self.note) > 0:
-      parse_note(self.deck, self.note)
+      self._parse_note()
     if self.deck:
       self.deck.save()
 
@@ -117,7 +99,7 @@ class DeckParser:
 
     # Line is not indented
     if len(self.note) > 0:
-      parse_note(self.deck, self.note)
+      self._parse_note()
       self.note = []
 
     if line.startswith("title:"):
@@ -126,6 +108,25 @@ class DeckParser:
       self.deck.tags = line.removeprefix("tags:").split()
     else:
       self.note.append(line)
+
+  def _parse_note(self):
+    lines = "".join(self.note)
+    note = lines.split(maxsplit=1)
+
+    if len(note) == 0:
+      # FIXME wrong exception
+      raise ValueError("_parse_note() called on empty input")
+
+    video = Video(note[0], cache_path=CACHE)
+    if len(note) == 2:
+      question = note[1]
+    else:
+      question = video.title()
+
+    self.deck.add_video_note(
+      question,
+      video.processed_video(),
+      f"youtube {video.id}")
 
 
 if __name__ == '__main__':
