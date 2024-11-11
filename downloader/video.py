@@ -34,6 +34,7 @@ class Video:
     self.id = yt_url_to_id(url)
     self.output_id = [self.id]
     self._info = None
+    self._raw_metadata = None
     self._crop = None
     self.input_options = {}
     self.output_options = { "an": None }
@@ -47,6 +48,9 @@ class Video:
 
   def raw_video_cache_path(self, logger=LOGGER):
     return self.cached(self.id + '_raw.' + self.info(logger=logger)['ext'])
+
+  def raw_metadata_cache_path(self):
+    return self.cached(self.id + '_raw_ffprobe.json')
 
   def processed_video_cache_path(self):
     output_id = "_".join(self.output_id)
@@ -68,13 +72,26 @@ class Video:
   def title(self, logger=LOGGER):
     return self.info(logger=logger)['title']
 
-  # FIXME should we cache this?
   def raw_metadata(self, logger=LOGGER):
-    return json.loads(FFmpeg(executable="ffprobe").input(
-      self.raw_video(logger=logger),
-      print_format="json",
-      show_streams=None,
-    ).execute())
+    if self._raw_metadata:
+      return self._raw_metadata
+
+    path = self.raw_metadata_cache_path()
+    try:
+      with open(path, 'r', encoding="utf-8") as file:
+        self._raw_metadata = json.load(file)
+    except FileNotFoundError:
+      metadata_json = FFmpeg(executable="ffprobe").input(
+          self.raw_video(logger=logger),
+          print_format="json",
+          show_streams=None,
+        ).execute()
+      self._raw_metadata = json.loads(metadata_json)
+
+      with open(path, 'wb') as file:
+        file.write(metadata_json)
+
+    return self._raw_metadata
 
   def get_fps(self, logger=LOGGER):
     metadata = self.raw_metadata(logger=logger)
