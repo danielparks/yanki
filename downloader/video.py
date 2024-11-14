@@ -32,7 +32,6 @@ class Video:
     self.url = url
     self.cache_path = cache_path
     self.id = yt_url_to_id(url)
-    self.output_id = [self.id]
     self._info = None
     self._raw_metadata = None
     self._crop = None
@@ -53,8 +52,8 @@ class Video:
     return self.cached(self.id + '_raw_ffprobe.json')
 
   def processed_video_cache_path(self):
-    output_id = "_".join(self.output_id)
-    return self.cached(f"{output_id}_processed.{self.output_ext}")
+    parameters = "_".join(self.ffmpeg_parameters()).replace("/", "_")
+    return self.cached(f"{parameters}_processed.{self.output_ext}")
 
   def info(self, logger=LOGGER):
     if self._info is None:
@@ -122,19 +121,15 @@ class Video:
     self.input_options["ss"] = self.parse_time_spec(start_spec)
     self.output_options["to"] = self.parse_time_spec(end_spec)
     self.output_options["copyts"] = None
-    self.output_id.append(f"ss{self.input_options['ss']}")
-    self.output_id.append(f"to{self.output_options['to']}")
 
   def snapshot(self, time_spec):
     self.input_options["ss"] = self.parse_time_spec(time_spec)
     self.output_options["frames:v"] = "1"
     self.output_options["q:v"] = "2" # JPEG quality
     self.output_ext = "jpeg"
-    self.output_id.append(f"ss{self.input_options['ss']}")
 
   def crop(self, crop):
     self._crop = crop
-    self.output_id.append(f"crop={crop}")
 
   def raw_video(self, logger=LOGGER):
     path = self.raw_video_cache_path(logger=logger)
@@ -158,13 +153,7 @@ class Video:
 
     return path
 
-  def processed_video(self, logger=LOGGER):
-    output_path = self.processed_video_cache_path()
-    if os.path.exists(output_path) and os.stat(output_path).st_size > 0:
-      return output_path
-
-    raw_path = self.raw_video(logger=logger)
-
+  def _ffmpeg_output_options(self):
     if "vf" in self.output_options:
       # FIXME?
       raise ValueError("vf output option already set")
@@ -173,16 +162,49 @@ class Video:
     if self._crop:
       vf.append(f"crop={self._crop}")
     vf.append("scale=-2:500")
-    self.output_options["vf"] = ",".join(vf)
 
-    output_id = " ".join(self.output_id)
-    logger.info(f"{output_id}: processing video")
+    return {
+      "vf": ",".join(vf),
+      **self.output_options,
+    }
+
+  def ffmpeg_parameters(self):
+    """
+    Get most parameters to ffmpeg. Used to identify output for caching.
+
+    Does not include input or output file names, or options like -y.
+    """
+    parameters = []
+
+    for key, value in self.input_options.items():
+      parameters.append(f"-{key}")
+      if value is not None:
+        parameters.append(value)
+
+    parameters.append(self.id)
+
+    for key, value in self._ffmpeg_output_options().items():
+      parameters.append(f"-{key}")
+      if value is not None:
+        parameters.append(value)
+
+    return parameters
+
+  def processed_video(self, logger=LOGGER):
+    output_path = self.processed_video_cache_path()
+    if os.path.exists(output_path) and os.stat(output_path).st_size > 0:
+      return output_path
+
+    raw_path = self.raw_video(logger=logger)
+
+    parameters = " ".join(self.ffmpeg_parameters())
+    logger.info(f"{parameters}: processing video")
     FFmpeg().option("y").input(
       raw_path,
       self.input_options,
     ).output(
       output_path,
-      self.output_options,
+      self._ffmpeg_output_options(),
     ).execute()
 
     return output_path

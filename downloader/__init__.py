@@ -156,7 +156,14 @@ class DeckParser:
     else:
       question = video.title()
 
-    output_id = " ".join(video.output_id)
+    # FIXME note GUID should correspond to the content, so it usually doesn’t
+    # make sense to include crop. For example, if you move the crop to the side
+    # for a note that doesn’t seem like it should change the GUID.
+    #
+    # That said, the same argument applies to adjusting the clip of a video,
+    # or even changing to a different video with a better version of the same
+    # content.
+    output_id = " ".join(video.ffmpeg_parameters())
     answer = video.processed_video()
     if video.output_ext == "jpeg":
       self.deck.add_image_note(f"youtube {output_id}", question, answer)
