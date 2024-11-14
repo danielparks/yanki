@@ -12,6 +12,9 @@ os.makedirs(CACHE, exist_ok=True)
 
 DEBUG = False
 
+GUID_INPUT_PARAMETERS = ['ss']
+GUID_OUTPUT_PARAMETERS = ['to', 'frames:v']
+
 def name_to_id(name):
   bytes = hashlib.sha256(name.encode('utf-8')).digest()
   # Apparently deck ID is i64
@@ -23,6 +26,7 @@ class Deck:
     self._deck = None
     self.title = None
     self.crop = None
+    self.format = None
     self.tags = []
     self.media = []
 
@@ -137,6 +141,8 @@ class DeckParser:
       self.deck.tags = line.removeprefix("tags:").split()
     elif line.startswith("crop:"):
       self.deck.crop = line.removeprefix("crop:").strip()
+    elif line.startswith("format:"):
+      self.deck.format = line.removeprefix("format:").strip()
     else:
       self.note.append(line)
 
@@ -150,25 +156,36 @@ class DeckParser:
     video = Video(note[0], cache_path=CACHE)
     if self.deck.crop:
       video.crop(self.deck.crop)
+    if self.deck.format:
+      video.format(self.deck.format)
 
     if len(note) == 2:
       question = self._try_parse_clip(note[1], video)
     else:
       question = video.title()
 
-    # FIXME note GUID should correspond to the content, so it usually doesn’t
-    # make sense to include crop. For example, if you move the crop to the side
-    # for a note that doesn’t seem like it should change the GUID.
-    #
-    # That said, the same argument applies to adjusting the clip of a video,
-    # or even changing to a different video with a better version of the same
-    # content.
-    output_id = " ".join(video.ffmpeg_parameters())
+    note_id = ["youtube"]
+    input_parameters = video.ffmpeg_input_options()
+    for key in GUID_INPUT_PARAMETERS:
+      if key in input_parameters:
+        note_id.append(f"-{key}")
+        if input_parameters[key] is not None:
+          note_id.append(input_parameters[key])
+
+    note_id.append(video.id)
+    output_parameters = video.ffmpeg_output_options()
+    for key in GUID_OUTPUT_PARAMETERS:
+      if key in output_parameters:
+        note_id.append(f"-{key}")
+        if output_parameters[key] is not None:
+          note_id.append(output_parameters[key])
+
+    note_id = " ".join(note_id)
     answer = video.processed_video()
-    if video.output_ext == "jpeg":
-      self.deck.add_image_note(f"youtube {output_id}", question, answer)
+    if video.is_still() or video.output_ext() == "gif":
+      self.deck.add_image_note(note_id, question, answer)
     else:
-      self.deck.add_video_note(f"youtube {output_id}", question, answer)
+      self.deck.add_video_note(note_id, question, answer)
 
   def _try_parse_clip(self, input, video):
     if not input.startswith("@"):

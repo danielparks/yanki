@@ -35,9 +35,10 @@ class Video:
     self._info = None
     self._raw_metadata = None
     self._crop = None
+    self._format = None
+    self._still = False
     self.input_options = {}
     self.output_options = { "an": None }
-    self.output_ext = "mp4"
 
   def cached(self, filename):
     return os.path.join(self.cache_path, filename)
@@ -53,7 +54,7 @@ class Video:
 
   def processed_video_cache_path(self):
     parameters = "_".join(self.ffmpeg_parameters()).replace("/", "_")
-    return self.cached(f"{parameters}_processed.{self.output_ext}")
+    return self.cached(f"{parameters}_processed.{self.output_ext()}")
 
   def info(self, logger=LOGGER):
     if self._info is None:
@@ -126,10 +127,24 @@ class Video:
     self.input_options["ss"] = self.parse_time_spec(time_spec)
     self.output_options["frames:v"] = "1"
     self.output_options["q:v"] = "2" # JPEG quality
-    self.output_ext = "jpeg"
+    self._still = True
 
   def crop(self, crop):
     self._crop = crop
+
+  def format(self, extenstion):
+    self._format = extenstion
+
+  def output_ext(self):
+    if self._format is not None:
+      return self._format
+    elif self._still:
+      return "jpeg"
+    else:
+      return "mp4"
+
+  def is_still(self):
+    return self._still
 
   def raw_video(self, logger=LOGGER):
     path = self.raw_video_cache_path(logger=logger)
@@ -153,7 +168,10 @@ class Video:
 
     return path
 
-  def _ffmpeg_output_options(self):
+  def ffmpeg_input_options(self):
+    return self.input_options
+
+  def ffmpeg_output_options(self):
     if "vf" in self.output_options:
       # FIXME?
       raise ValueError("vf output option already set")
@@ -176,14 +194,14 @@ class Video:
     """
     parameters = []
 
-    for key, value in self.input_options.items():
+    for key, value in self.ffmpeg_input_options().items():
       parameters.append(f"-{key}")
       if value is not None:
         parameters.append(value)
 
     parameters.append(self.id)
 
-    for key, value in self._ffmpeg_output_options().items():
+    for key, value in self.ffmpeg_output_options().items():
       parameters.append(f"-{key}")
       if value is not None:
         parameters.append(value)
@@ -199,12 +217,11 @@ class Video:
 
     parameters = " ".join(self.ffmpeg_parameters())
     logger.info(f"{parameters}: processing video")
-    FFmpeg().option("y").input(
-      raw_path,
-      self.input_options,
-    ).output(
-      output_path,
-      self._ffmpeg_output_options(),
-    ).execute()
+
+    FFmpeg() \
+      .option("y") \
+      .input(raw_path, self.ffmpeg_input_options()) \
+      .output(output_path, self.ffmpeg_output_options()) \
+      .execute()
 
     return output_path
