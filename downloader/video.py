@@ -165,7 +165,7 @@ class Video:
 
     raw_path = self.raw_video(logger=logger)
 
-    if "fv" in self.output_options:
+    if "vf" in self.output_options:
       # FIXME?
       raise ValueError("vf output option already set")
 
