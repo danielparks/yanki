@@ -5,12 +5,14 @@ description = ""
 authors = ["Daniel Parks <dp+git@oxidized.org>"]
 readme = "README.md"
 
+[tool.poetry.scripts]
+build-deck = "downloader.build_deck:cli"
+
 [tool.poetry.dependencies]
 python = "^3.12"
 python-ffmpeg = "^2.0.12"
 yt-dlp = "^2024.11.4"
 genanki = "^0.13.1"
-
 
 [build-system]
 requires = ["poetry-core"]

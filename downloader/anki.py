@@ -1,11 +1,10 @@
 import genanki
 import hashlib
-import fileinput
 import html
 import os
 import sys
 
-from video import Video
+from downloader.video import Video
 
 CACHE = './cache'
 os.makedirs(CACHE, exist_ok=True)
@@ -207,10 +206,3 @@ class DeckParser:
       return parts[1]
     else:
       return ""
-
-
-if __name__ == '__main__':
-  parser = DeckParser()
-  for line in fileinput.input(encoding="utf-8"):
-    parser.parse_line(fileinput.filename(), fileinput.filelineno(), line)
-  parser.close()
