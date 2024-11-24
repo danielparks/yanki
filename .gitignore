@@ -1,3 +1,3 @@
 /cache
-/example-deck.apkg
+*.apkg
 __pycache__
