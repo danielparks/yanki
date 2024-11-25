@@ -4,7 +4,7 @@ import html
 import os
 import sys
 
-from downloader.video import Video
+from yanki.video import Video
 
 CACHE = './cache'
 os.makedirs(CACHE, exist_ok=True)

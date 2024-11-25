@@ -1,12 +1,12 @@
 import argparse
 import fileinput
 
-from downloader.anki import DeckParser
+from yanki.anki import DeckParser
 
 def cli():
   parser = argparse.ArgumentParser(
-    prog='build-deck',
-    description='Builds and Anki deck from a text file.',
+    prog='yanki',
+    description='Builds an Anki deck from a text file containing YouTube URLs.',
   )
   parser.add_argument('-v', '--verbose', action='store_true')
   parser.add_argument('path', nargs='*')

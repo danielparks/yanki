@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "downloader"
+name = "yanki"
 version = "0.1.0"
-description = ""
+description = "Builds an Anki deck from a text file containing YouTube URLs."
 authors = ["Daniel Parks <dp+git@oxidized.org>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-build-deck = "downloader.build_deck:cli"
+yanki = "yanki.cli:cli"
 
 [tool.poetry.dependencies]
 python = "^3.12"
