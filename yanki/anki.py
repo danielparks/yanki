@@ -87,6 +87,7 @@ class Deck:
 class DeckParser:
   def __init__(self, debug=False):
     self.debug = debug
+    self.parsed = []
     self.deck = None
     self.path = None
     self.line_number = None
@@ -104,12 +105,21 @@ class DeckParser:
     if len(self.note) > 0:
       self._parse_note()
     if self.deck:
-      self.deck.save(debug=self.debug)
+      self.parsed.append(self.deck)
 
     self.deck = None
     self.path = None
     self.line_number = None
     self.note = []
+
+  def save(self):
+    for deck in self.parsed:
+      deck.save(debug=self.debug)
+
+  def flush_parsed(self):
+    parsed = self.parsed
+    self.parsed = []
+    return parsed
 
   def where(self):
     return f"{self.path}, line {self.line_number}"
@@ -118,7 +128,12 @@ class DeckParser:
     """Takes FileInput as parameter."""
     for line in input:
       self.parse_line(input.filename(), input.filelineno(), line)
+      for deck in self.flush_parsed():
+        yield deck
+
     self.close()
+    for deck in self.flush_parsed():
+      yield deck
 
   def parse_line(self, path, line_number, line):
     if not self.deck or self.path != path:
