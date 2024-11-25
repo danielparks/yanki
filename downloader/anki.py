@@ -9,8 +9,6 @@ from downloader.video import Video
 CACHE = './cache'
 os.makedirs(CACHE, exist_ok=True)
 
-DEBUG = False
-
 GUID_INPUT_PARAMETERS = ['ss']
 GUID_OUTPUT_PARAMETERS = ['to', 'frames:v']
 
@@ -19,35 +17,37 @@ def name_to_id(name):
   # Apparently deck ID is i64
   return int.from_bytes(bytes[:8], byteorder='big', signed=True)
 
+class Note:
+  def __init__(self, note_id, fields, tags):
+    self.note_id = note_id
+    self.fields = fields
+    self.tags = tags
+
+  def add_to_deck(self, deck):
+    deck.add_note(genanki.Note(
+      model=genanki.BASIC_AND_REVERSED_CARD_MODEL,
+      fields=self.fields,
+      guid=genanki.guid_for(deck.deck_id, self.note_id),
+      tags=self.tags,
+    ))
+
 class Deck:
   def __init__(self, source=None):
     self.source = source
-    self._deck = None
     self.title = None
     self.crop = None
     self.format = None
+    self.notes = {}
     self.tags = []
     self.media = []
-
-  def deck(self):
-    if not self._deck:
-      self._deck = genanki.Deck(name_to_id(self.title), self.title)
-      if DEBUG:
-        print(f"New deck [{self._deck.deck_id}]: {self.title}")
-    return self._deck
 
   def to_html(self, input):
     return html.escape(input).rstrip().replace("\n", "<br/>")
 
   def add_html_note(self, note_id, fields):
-    self.deck().add_note(genanki.Note(
-      model=genanki.BASIC_AND_REVERSED_CARD_MODEL,
-      fields=fields,
-      guid=genanki.guid_for(self.deck().deck_id, note_id),
-      tags=self.tags,
-    ))
-    if DEBUG:
-      print(f"Added note {note_id}: {fields}")
+    if note_id in self.notes:
+      raise LookupError(f"Note with id {note_id} already exists in deck")
+    self.notes[note_id] = Note(note_id, fields, self.tags)
 
   def add_image_note(self, note_id, question, media_path):
     self.media.append(media_path)
@@ -67,16 +67,26 @@ class Deck:
       f"[sound:{media_filename_html}]",
     ])
 
-  def save(self, path=None):
+  def save(self, path=None, debug=False):
     if not path:
       path = os.path.splitext(self.source)[0] + '.apkg'
 
-    package = genanki.Package(self._deck)
+    deck = genanki.Deck(name_to_id(self.title), self.title)
+    if debug:
+      print(f"New deck [{deck.deck_id}]: {self.title}")
+
+    for note in self.notes.values():
+      note.add_to_deck(deck)
+      if debug:
+        print(f"Added note {note.note_id}: {note.fields}")
+
+    package = genanki.Package(deck)
     package.media_files = self.media
     package.write_to_file(path)
 
 class DeckParser:
-  def __init__(self):
+  def __init__(self, debug=False):
+    self.debug = debug
     self.deck = None
     self.path = None
     self.line_number = None
@@ -94,7 +104,7 @@ class DeckParser:
     if len(self.note) > 0:
       self._parse_note()
     if self.deck:
-      self.deck.save()
+      self.deck.save(debug=self.debug)
 
     self.deck = None
     self.path = None
@@ -103,6 +113,12 @@ class DeckParser:
 
   def where(self):
     return f"{self.path}, line {self.line_number}"
+
+  def parse_input(self, input):
+    """Takes FileInput as parameter."""
+    for line in input:
+      self.parse_line(input.filename(), input.filelineno(), line)
+    self.close()
 
   def parse_line(self, path, line_number, line):
     if not self.deck or self.path != path:
