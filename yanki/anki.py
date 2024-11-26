@@ -6,7 +6,7 @@ import sys
 
 from yanki.video import Video
 
-CACHE = './cache'
+CACHE = 'cache'
 os.makedirs(CACHE, exist_ok=True)
 
 GUID_INPUT_PARAMETERS = ['ss']
