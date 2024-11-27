@@ -80,19 +80,19 @@ def ensure_static_link():
   try:
     os.symlink(web_files_path, static_path)
   except FileExistsError as e:
-    if e.filename == web_files_path and e.filename2 == static_path:
+    if os.readlink(static_path) == web_files_path:
       # Symlink already exists
-      pass
+      return
 
-    try:
-      os.remove(static_path)
-    except Exception as e:
-      sys.exit(f"Error removing {static_path} replace with symlink: {e}")
+  try:
+    os.remove(static_path)
+  except Exception as e:
+    sys.exit(f"Error removing {static_path} replace with symlink: {e}")
 
-    try:
-      os.symlink(web_files_path, static_path)
-    except Exception as e:
-      sys.exit(f"Error symlinking {static_path} to {web_files_path}: {e}")
+  try:
+    os.symlink(web_files_path, static_path)
+  except Exception as e:
+    sys.exit(f"Error symlinking {static_path} to {web_files_path}: {e}")
 
 def static_url(path):
   mtime = os.path.getmtime(os.path.join(path_to_web_files(), path))
