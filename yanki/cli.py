@@ -5,6 +5,7 @@ from http import server
 import functools
 import os
 import textwrap
+import sys
 
 from yanki.anki import DeckParser, CACHE
 
@@ -57,6 +58,10 @@ def serve_http(args, decks):
   with open(os.path.join(CACHE, 'index.html'), 'w', encoding="utf-8") as file:
     file.write(generate_index_html(deck_links))
 
+  # FIXME it would be great to just serve this directory as /static without
+  # needing the symlink.
+  ensure_static_link()
+
   print("Starting HTTP server on http://localhost:8000/")
   Handler = functools.partial(server.SimpleHTTPRequestHandler, directory=CACHE)
   try:
@@ -64,12 +69,43 @@ def serve_http(args, decks):
   except KeyboardInterrupt:
     return 130
 
+def path_to_web_files():
+  from os.path import join, dirname, realpath
+  return join(dirname(dirname(realpath(__file__))), 'web-files')
+
+def ensure_static_link():
+  web_files_path = path_to_web_files()
+  static_path = os.path.join(CACHE, 'static')
+
+  try:
+    os.symlink(web_files_path, static_path)
+  except FileExistsError as e:
+    if e.filename == web_files_path and e.filename2 == static_path:
+      # Symlink already exists
+      pass
+
+    try:
+      os.remove(static_path)
+    except Exception as e:
+      sys.exit(f"Error removing {static_path} replace with symlink: {e}")
+
+    try:
+      os.symlink(web_files_path, static_path)
+    except Exception as e:
+      sys.exit(f"Error symlinking {static_path} to {web_files_path}: {e}")
+
+def static_url(path):
+  mtime = os.path.getmtime(os.path.join(path_to_web_files(), path))
+  return f"/static/{path}?{mtime}"
+
 def generate_index_html(deck_links):
   output = f"""
     <!DOCTYPE html>
     <html>
       <head>
-      <title>Decks</title>
+        <title>Decks</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{static_url('general.css')}">
       </head>
       <body>
         <h1>Decks</h1>
@@ -92,7 +128,9 @@ def htmlize_deck(deck, path_prefix=""):
     <!DOCTYPE html>
     <html>
       <head>
-      <title>{h(deck.title)}</title>
+        <title>{h(deck.title)}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{static_url('general.css')}">
       </head>
       <body>
         <h1>{h(deck.title)}</h1>

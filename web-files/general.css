@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+div.note {
+  margin-bottom: 2em;
+}
