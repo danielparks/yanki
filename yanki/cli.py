@@ -12,7 +12,7 @@ from yanki.anki import DeckParser, CACHE
 def cli():
   parser = argparse.ArgumentParser(
     prog='yanki',
-    description='Builds an Anki deck from a text file containing YouTube URLs.',
+    description='Build Anki decks from text files containing YouTube URLs.',
   )
   parser.add_argument('-v', '--verbose', action='store_true')
   parser.add_argument('--html', action='store_true',

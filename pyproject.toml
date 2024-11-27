@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "yanki"
 version = "0.1.0"
-description = "Builds an Anki deck from a text file containing YouTube URLs."
+description = "Build Anki decks from text files containing YouTube URLs."
 authors = ["Daniel Parks <dp+git@oxidized.org>"]
 readme = "README.md"
 

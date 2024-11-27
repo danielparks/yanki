@@ -1,4 +1,4 @@
-# Builds an Anki deck from a text file containing YouTube URLs.
+# Build Anki decks from text files containing YouTube URLs
 
 ```
 poetry install
