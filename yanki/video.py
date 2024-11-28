@@ -52,9 +52,9 @@ class Video:
   def raw_metadata_cache_path(self):
     return self.cached(self.id + '_raw_ffprobe.json')
 
-  def processed_video_cache_path(self):
+  def processed_video_cache_path(self, prefix='processed_'):
     parameters = "_".join(self.ffmpeg_parameters()).replace("/", "_")
-    return self.cached(f"{parameters}_processed.{self.output_ext()}")
+    return self.cached(f"{prefix}{parameters}.{self.output_ext()}")
 
   def info(self, logger=LOGGER):
     if self._info is None:
@@ -218,10 +218,33 @@ class Video:
     parameters = " ".join(self.ffmpeg_parameters())
     logger.info(f"{parameters}: processing video")
 
+    if "copyts" in self.output_options:
+      # -copyts is needed to clip a video to a specific end time, rather than
+      # using the desired clip duration. However, it sets the timestamps in the
+      # saved video file, which causes a delay before the video starts in
+      # certain players (Safari, QuickTime).
+      #
+      # To fix this, we reprocess the video, so we want to give it a different
+      # name for the first pass.
+      first_pass_output_path = self.processed_video_cache_path(prefix='pass1_')
+    else:
+      first_pass_output_path = output_path
+
     FFmpeg() \
       .option("y") \
       .input(raw_path, self.ffmpeg_input_options()) \
-      .output(output_path, self.ffmpeg_output_options()) \
+      .output(first_pass_output_path, self.ffmpeg_output_options()) \
       .execute()
+
+    if "copyts" in self.output_options:
+      # Strip timestamps
+      logger.info(f"{parameters}: removing timestamps from video")
+      FFmpeg() \
+        .option("y") \
+        .input(first_pass_output_path) \
+        .output(output_path, {'c': 'copy'}) \
+        .execute()
+
+      os.remove(first_pass_output_path)
 
     return output_path
