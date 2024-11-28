@@ -5,6 +5,7 @@ from http import server
 import functools
 import os
 import textwrap
+import re
 import sys
 
 from yanki.anki import DeckParser, CACHE
@@ -137,21 +138,45 @@ def htmlize_deck(deck, path_prefix=""):
   """
 
   for note in deck.notes.values():
-    # FIXME huge kludge
-    # FIXME doesn’t work with images
-    path_html = html.escape(note.fields[1].replace("[sound:", path_prefix).removesuffix("]"))
     output += f"""
         <div class="note">
-          <h3>{h(note.fields[0])}</h3>
-          <video height="300" controls>
-            <source src="{path_html}" type="video/mp4">
-          </video>
+          <h3>{field_to_html(note.fields[0], path_prefix=path_prefix)}</h3>
+          {field_to_html(note.fields[1], path_prefix=path_prefix)}
         </div>"""
 
   return textwrap.dedent(output + f"""
       </body>
     </html>
   """).lstrip()
+
+# FIXME this is a kludge
+# FIXME doesn’t handle HTML escape of attribute value
+def field_to_html(field, path_prefix=''):
+  field = sound_to_html(field, path_prefix=path_prefix)
+  output = []
+
+  for i, value in enumerate(re.split(r'(src|href)="(.+?)"', field)):
+    if i % 3 == 2: # attribute value
+      value = html.escape(os.path.join(path_prefix, value))
+      output.append(f'="{value}"')
+    else: #  attribute name (src|href) or other
+      output.append(value)
+
+  return "".join(output)
+
+# FIXME this is a kludge
+# FIXME doesn’t handle HTML escape of sound:(path)
+def sound_to_html(field, path_prefix=''):
+  output = []
+
+  for i, value in enumerate(re.split(r'\[sound:(.+?)\]', field)):
+    if i % 2 == 1: # [sound:...]
+      value = html.escape(os.path.join(path_prefix, value))
+      output.append(f'<video height="300" controls src="{value}"></video>')
+    else:
+      output.append(value)
+
+  return "".join(output)
 
 def h(s):
   return html.escape(s)
