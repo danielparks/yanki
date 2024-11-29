@@ -140,43 +140,14 @@ def htmlize_deck(deck, path_prefix=""):
   for note in deck.notes.values():
     output += f"""
         <div class="note">
-          <h3>{field_to_html(note.fields[0], path_prefix=path_prefix)}</h3>
-          {field_to_html(note.fields[1], path_prefix=path_prefix)}
+          <h3>{note.fields[0].render_html(path_prefix)}</h3>
+          {note.fields[1].render_html(path_prefix)}
         </div>"""
 
   return textwrap.dedent(output + f"""
       </body>
     </html>
   """).lstrip()
-
-# FIXME this is a kludge
-# FIXME doesn’t handle HTML escape of attribute value
-def field_to_html(field, path_prefix=''):
-  field = sound_to_html(field, path_prefix=path_prefix)
-  output = []
-
-  for i, value in enumerate(re.split(r'(src|href)="(.+?)"', field)):
-    if i % 3 == 2: # attribute value
-      value = html.escape(os.path.join(path_prefix, value))
-      output.append(f'="{value}"')
-    else: #  attribute name (src|href) or other
-      output.append(value)
-
-  return "".join(output)
-
-# FIXME this is a kludge
-# FIXME doesn’t handle HTML escape of sound:(path)
-def sound_to_html(field, path_prefix=''):
-  output = []
-
-  for i, value in enumerate(re.split(r'\[sound:(.+?)\]', field)):
-    if i % 2 == 1: # [sound:...]
-      value = html.escape(os.path.join(path_prefix, value))
-      output.append(f'<video height="300" controls src="{value}"></video>')
-    else:
-      output.append(value)
-
-  return "".join(output)
 
 def h(s):
   return html.escape(s)

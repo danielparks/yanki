@@ -17,6 +17,49 @@ def name_to_id(name):
   # Apparently deck ID is i64
   return int.from_bytes(bytes[:8], byteorder='big', signed=True)
 
+class Field:
+  def __init__(self, raw):
+    self.raw = raw
+
+  def media_paths(self):
+    return []
+
+  def render_anki(self):
+    return self.render_html('')
+
+  def render_html(self, base_path=''):
+    return html.escape(self.raw).rstrip().replace("\n", "<br/>")
+
+  def __str__(self):
+    return self.render_anki()
+
+  def __repr__(self):
+    return repr(self.render_anki())
+
+class MediaField(Field):
+  def __init__(self, path):
+    self.path = path
+
+  def path_in_base(self, base_path):
+    return os.path.join(base_path, os.path.basename(self.path))
+
+  def media_paths(self):
+    return [self.path]
+
+class ImageField(MediaField):
+  def render_html(self, base_path=''):
+    media_filename_html = html.escape(self.path_in_base(base_path))
+    return f'<img src="{media_filename_html}" />'
+
+class VideoField(MediaField):
+  def render_anki(self):
+    media_filename_html = html.escape(self.path_in_base(''))
+    return f"[sound:{media_filename_html}]"
+
+  def render_html(self, base_path='.'):
+    media_filename_html = html.escape(self.path_in_base(base_path))
+    return f'<video controls src="{media_filename_html}"></video>'
+
 class Note:
   def __init__(self, note_id, fields, tags):
     self.note_id = note_id
@@ -26,7 +69,7 @@ class Note:
   def add_to_deck(self, deck):
     deck.add_note(genanki.Note(
       model=genanki.BASIC_AND_REVERSED_CARD_MODEL,
-      fields=self.fields,
+      fields=[field.render_anki() for field in self.fields],
       guid=genanki.guid_for(deck.deck_id, self.note_id),
       tags=self.tags,
     ))
@@ -39,33 +82,11 @@ class Deck:
     self.format = None
     self.notes = {}
     self.tags = []
-    self.media = []
 
-  def to_html(self, input):
-    return html.escape(input).rstrip().replace("\n", "<br/>")
-
-  def add_html_note(self, note_id, fields):
-    if note_id in self.notes:
-      raise LookupError(f"Note with id {note_id} already exists in deck")
-    self.notes[note_id] = Note(note_id, fields, self.tags)
-
-  def add_image_note(self, note_id, question, media_path):
-    self.media.append(media_path)
-
-    media_filename_html = html.escape(os.path.basename(media_path))
-    self.add_html_note(note_id, [
-      self.to_html(question),
-      f"<img src=\"{media_filename_html}\"/>",
-    ])
-
-  def add_video_note(self, note_id, question, media_path):
-    self.media.append(media_path)
-
-    media_filename_html = html.escape(os.path.basename(media_path))
-    self.add_html_note(note_id, [
-      self.to_html(question),
-      f"[sound:{media_filename_html}]",
-    ])
+  def add_note(self, note):
+    if note.note_id in self.notes:
+      raise LookupError(f"Note with id {note.note_id} already exists in deck")
+    self.notes[note.note_id] = note
 
   def save(self, path=None, debug=False):
     if not path:
@@ -75,13 +96,20 @@ class Deck:
     if debug:
       print(f"New deck [{deck.deck_id}]: {self.title}")
 
+    media_files = []
     for note in self.notes.values():
       note.add_to_deck(deck)
       if debug:
         print(f"Added note {note.note_id}: {note.fields}")
 
+      for field in note.fields:
+        for media_path in field.media_paths():
+          media_files.append(media_path)
+          if debug:
+            print(f"Added media file for {note.note_id}: {media_path}")
+
     package = genanki.Package(deck)
-    package.media_files = self.media
+    package.media_files = media_files
     package.write_to_file(path)
 
 class DeckParser:
@@ -211,11 +239,14 @@ class DeckParser:
           note_id.append(output_parameters[key])
 
     note_id = " ".join(note_id)
-    answer = video.processed_video()
+    path = video.processed_video()
     if video.is_still() or video.output_ext() == "gif":
-      self.deck.add_image_note(note_id, question, answer)
+      answer = ImageField(path)
     else:
-      self.deck.add_video_note(note_id, question, answer)
+      answer = VideoField(path)
+
+    self.deck.add_note(
+      Note(note_id, [Field(question), answer], self.deck.tags))
 
   def _try_parse_clip(self, input, video):
     if not input.startswith("@"):

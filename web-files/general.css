@@ -7,3 +7,7 @@ body {
 div.note {
   margin-bottom: 2em;
 }
+
+img, video {
+  height: 300px;
+}
