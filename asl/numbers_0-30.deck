@@ -1,6 +1,8 @@
 title: Lifeprint ASL (custom)::Numbers 0-30
 crop: in_h:in_h:in_w-in_h*5.5/5:0
 
+# Could use this LP video instead https://www.youtube.com/watch?v=M4AFC4eEjlQ
+
 tags: ASL-THAT numbers::0-10
 https://www.youtube.com/watch?v=hFCXyB6q2nU @3033F 0 (Zero)
 https://www.youtube.com/watch?v=hFCXyB6q2nU @340F 1
