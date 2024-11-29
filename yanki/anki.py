@@ -12,6 +12,20 @@ os.makedirs(CACHE, exist_ok=True)
 GUID_INPUT_PARAMETERS = ['ss']
 GUID_OUTPUT_PARAMETERS = ['to', 'frames:v']
 
+REVERSED_CARD_MODEL = genanki.Model(
+  1221938101,
+  'Reversed (yanki)',
+  fields=genanki.BASIC_MODEL.fields.copy(),
+  templates=[
+    {
+      'name': 'Card 2',
+      'qfmt': '{{Back}}',
+      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Front}}',
+    },
+  ],
+  css=genanki.BASIC_MODEL.css,
+)
+
 def name_to_id(name):
   bytes = hashlib.sha256(name.encode('utf-8')).digest()
   # Apparently deck ID is i64
@@ -61,16 +75,29 @@ class VideoField(MediaField):
     return f'<video controls src="{media_filename_html}"></video>'
 
 class Note:
-  def __init__(self, note_id, fields, tags):
+  def __init__(self, note_id, fields, tags, direction='BOTH'):
     self.note_id = note_id
     self.fields = fields
     self.tags = tags
+    self.direction = direction
 
   def add_to_deck(self, deck):
+    if self.direction == 'BOTH':
+      model = genanki.BASIC_AND_REVERSED_CARD_MODEL
+      guid = genanki.guid_for(deck.deck_id, self.note_id)
+    elif self.direction == 'LEFT':
+      model = genanki.BASIC_MODEL
+      guid = genanki.guid_for(deck.deck_id, model, self.note_id)
+    elif self.direction == 'RIGHT':
+      model = REVERSED_CARD_MODEL
+      guid = genanki.guid_for(deck.deck_id, model, self.note_id)
+    else:
+      raise ValueError(f"Invalid direction {self.direction}")
+
     deck.add_note(genanki.Note(
-      model=genanki.BASIC_AND_REVERSED_CARD_MODEL,
+      model=model,
       fields=[field.render_anki() for field in self.fields],
-      guid=genanki.guid_for(deck.deck_id, self.note_id),
+      guid=guid,
       tags=self.tags,
     ))
 
@@ -245,8 +272,10 @@ class DeckParser:
     else:
       answer = VideoField(path)
 
+    (direction, question) = self._try_parse_direction(question)
+
     self.deck.add_note(
-      Note(note_id, [Field(question), answer], self.deck.tags))
+      Note(note_id, [Field(question), answer], self.deck.tags, direction))
 
   def _try_parse_clip(self, input, video):
     if not input.startswith("@"):
@@ -268,3 +297,20 @@ class DeckParser:
       return parts[1]
     else:
       return ""
+
+  def _try_parse_direction(self, input):
+    parts = input.split(maxsplit=1)
+
+    if len(parts) >= 2:
+      if parts[0] == '->':
+        direction = 'RIGHT'
+      elif parts[0] == '<-':
+        direction = 'LEFT'
+      elif parts[0] == '<->':
+        direction = 'BOTH'
+      else:
+        return ('BOTH', input)
+
+      return (direction, parts[1])
+    else:
+      return ('BOTH', input)
