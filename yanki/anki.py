@@ -12,6 +12,20 @@ os.makedirs(CACHE, exist_ok=True)
 GUID_INPUT_PARAMETERS = ['ss']
 GUID_OUTPUT_PARAMETERS = ['to', 'frames:v']
 
+REVERSED_CARD_MODEL = genanki.Model(
+  1221938101,
+  'Reversed (yanki)',
+  fields=genanki.BASIC_MODEL.fields.copy(),
+  templates=[
+    {
+      'name': 'Card 2',
+      'qfmt': '{{Back}}',
+      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Front}}',
+    },
+  ],
+  css=genanki.BASIC_MODEL.css,
+)
+
 def name_to_id(name):
   bytes = hashlib.sha256(name.encode('utf-8')).digest()
   # Apparently deck ID is i64
@@ -68,21 +82,22 @@ class Note:
     self.direction = direction
 
   def add_to_deck(self, deck):
-    fields = self.fields
     if self.direction == 'BOTH':
       model = genanki.BASIC_AND_REVERSED_CARD_MODEL
+      guid = genanki.guid_for(deck.deck_id, self.note_id)
     elif self.direction == 'LEFT':
       model = genanki.BASIC_MODEL
+      guid = genanki.guid_for(deck.deck_id, model, self.note_id)
     elif self.direction == 'RIGHT':
-      model = genanki.BASIC_MODEL
-      fields = reversed(self.fields)
+      model = REVERSED_CARD_MODEL
+      guid = genanki.guid_for(deck.deck_id, model, self.note_id)
     else:
       raise ValueError(f"Invalid direction {self.direction}")
 
     deck.add_note(genanki.Note(
       model=model,
-      fields=[field.render_anki() for field in fields],
-      guid=genanki.guid_for(deck.deck_id, self.note_id),
+      fields=[field.render_anki() for field in self.fields],
+      guid=guid,
       tags=self.tags,
     ))
 
