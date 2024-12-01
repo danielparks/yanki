@@ -1,3 +1,4 @@
+import hashlib
 from ffmpeg import FFmpeg
 import yt_dlp
 import json
@@ -53,7 +54,12 @@ class Video:
     return self.cached(self.id + '_raw_ffprobe.json')
 
   def processed_video_cache_path(self, prefix='processed_'):
-    parameters = "_".join(self.ffmpeg_parameters()).replace("/", "_")
+    parameters = "_".join(self.ffmpeg_parameters())
+    if '/' in parameters or len(parameters) > 60:
+      parameters = hashlib.blake2b(
+        parameters.encode(encoding='utf-8'),
+        digest_size=16,
+        usedforsecurity=False).hexdigest()
     return self.cached(f"{prefix}{parameters}.{self.output_ext()}")
 
   def info(self, logger=LOGGER):
@@ -216,7 +222,7 @@ class Video:
     raw_path = self.raw_video(logger=logger)
 
     parameters = " ".join(self.ffmpeg_parameters())
-    logger.info(f"{parameters}: processing video")
+    logger.info(f"{parameters}: processing video to {output_path}")
 
     if "copyts" in self.output_options:
       # -copyts is needed to clip a video to a specific end time, rather than
