@@ -40,6 +40,7 @@ class Video:
     self._still = False
     self.input_options = {}
     self.output_options = { "an": None }
+    self.filter_complex = None
 
   def cached(self, filename):
     return os.path.join(self.cache_path, filename)
@@ -54,7 +55,10 @@ class Video:
     return self.cached(self.id + '_raw_ffprobe.json')
 
   def processed_video_cache_path(self, prefix='processed_'):
-    parameters = "_".join(self.ffmpeg_parameters())
+    parameters = '_'.join(self.ffmpeg_parameters())
+    if self.filter_complex:
+      parameters += '/' + self.filter_complex
+
     if '/' in parameters or len(parameters) > 60:
       parameters = hashlib.blake2b(
         parameters.encode(encoding='utf-8'),
@@ -138,6 +142,40 @@ class Video:
   def crop(self, crop):
     self._crop = crop
 
+  def slow_filter(self, start=0, end=None, amount=2):
+    """Set a filter to slow (or speed up) part of the video."""
+    if (end is not None and end - start <= 0) or amount == 1:
+      # Nothing is affected
+      self.filter_complex = None
+      return
+
+    pieces = []
+    if start > 0:
+      i = len(pieces)
+      pieces.append(f'[0]trim=0:{start}[v{i}]')
+
+    # The piece that is slowed
+    if end is not None:
+      trim = f'{start}:{end}'
+    else:
+      trim = f'{start}'
+
+    i = len(pieces)
+    pieces.append(
+      f'[0]trim={trim}[v{i}];'
+      + f'[v{i}]setpts={amount}*PTS[v{i}]'
+    )
+
+    if end is not None:
+      i = len(pieces)
+      pieces.append(f'[0]trim={end}[v{i}]')
+
+    # Concatenate all the pieces together
+    inputs = "".join([f'[v{i}]' for i in range(len(pieces))])
+    pieces.append(f'{inputs}concat=n={len(pieces)}')
+
+    self.filter_complex = ';'.join(pieces)
+
   def format(self, extenstion):
     self._format = extenstion
 
@@ -197,6 +235,8 @@ class Video:
     Get most parameters to ffmpeg. Used to identify output for caching.
 
     Does not include input or output file names, or options like -y.
+
+    Does not include -filter_complex, since it runs in a second pass.
     """
     parameters = []
 
@@ -224,7 +264,10 @@ class Video:
     parameters = " ".join(self.ffmpeg_parameters())
     logger.info(f"{parameters}: processing video to {output_path}")
 
-    if "copyts" in self.output_options:
+    second_pass = self.filter_complex or 'copyts' in self.output_options
+    if second_pass:
+      # -filter_complex is incompatible with -vf, so we do it in a second pass.
+      #
       # -copyts is needed to clip a video to a specific end time, rather than
       # using the desired clip duration. However, it sets the timestamps in the
       # saved video file, which causes a delay before the video starts in
@@ -242,14 +285,16 @@ class Video:
       .output(first_pass_output_path, self.ffmpeg_output_options()) \
       .execute()
 
-    if "copyts" in self.output_options:
-      # Strip timestamps
-      logger.info(f"{parameters}: removing timestamps from video")
-      FFmpeg() \
-        .option("y") \
-        .input(first_pass_output_path) \
-        .output(output_path, {'c': 'copy'}) \
-        .execute()
+    if second_pass:
+      if self.filter_complex:
+        logger.info(f"{parameters} second pass: running filter_complex {self.filter_complex}")
+      else:
+        logger.info(f"{parameters} second pass: (no filter)")
+
+      command = FFmpeg().option("y")
+      if self.filter_complex:
+        command.option('filter_complex', self.filter_complex)
+      command.input(first_pass_output_path).output(output_path).execute()
 
       os.remove(first_pass_output_path)
 

@@ -26,6 +26,7 @@ https://www.youtube.com/watch?v=M4AFC4eEjlQ @763F-793F 18
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @814F-848F 19
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @855F-889F 20
 
+slow: 0 - 0.1 * 2
 tags: Lifeprint numbers::21-30
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @900F-937F 21
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @950F-980F 22
@@ -39,6 +40,7 @@ https://www.youtube.com/watch?v=M4AFC4eEjlQ @1300F-1343F 29
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @1355F-1395F 30
 
 # Only use ASL-THAT for the 16-19 variant numbers.
+slow:
 
 # ASL-THAT has three panes in the video
 crop: in_h:in_h:in_w-in_h*5.5/5:0
