@@ -109,6 +109,38 @@ class Deck:
     self.format = None
     self.notes = {}
     self.tags = []
+    self.slow = None
+
+  def add_slow(self, slow_spec):
+    if slow_spec.strip() == '':
+      self.slow = None
+      return
+
+    parts = [p.strip() for p in slow_spec.split('*', maxsplit=1)]
+    if len(parts) != 2:
+      self.slow = None
+      raise ValueError(f"Invalid slow without '*': {slow_spec}")
+
+    amount = float(parts[1])
+
+    parts = [p.strip() for p in parts[0].split('-', maxsplit=1)]
+    if len(parts) != 2:
+      self.slow = None
+      raise ValueError(f"Invalid slow without '-': {slow_spec}")
+
+    if parts[0] == '':
+      start = 0
+    else:
+      start = float(parts[0])
+
+    if parts[1] == '':
+      end = None
+    else:
+      end = float(parts[1])
+
+    ### FIXME check for negatives?
+
+    self.slow = (start, end, amount)
 
   def add_note(self, note):
     if note.note_id in self.notes:
@@ -228,6 +260,8 @@ class DeckParser:
       self.deck.crop = line.removeprefix("crop:").strip()
     elif line.startswith("format:"):
       self.deck.format = line.removeprefix("format:").strip()
+    elif line.startswith("slow:"):
+      self.deck.add_slow(line.removeprefix("slow:").strip())
     else:
       self.note.append(line)
 
@@ -248,6 +282,10 @@ class DeckParser:
       question = self._try_parse_clip(note[1], video)
     else:
       question = video.title()
+
+    if self.deck.slow:
+      (start, end, amount) = self.deck.slow
+      video.slow_filter(start=start, end=end, amount=amount)
 
     note_id = ["youtube"]
     input_parameters = video.ffmpeg_input_options()
