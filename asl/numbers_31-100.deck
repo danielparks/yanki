@@ -1,5 +1,6 @@
 title: Lifeprint ASL (custom)::Numbers 31-100
 crop: in_h:in_h
+audio: strip
 slow: 0 - 0.1 * 2
 
 tags: Lifeprint numbers::31-40

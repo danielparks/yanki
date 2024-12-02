@@ -110,6 +110,7 @@ class Deck:
     self.notes = {}
     self.tags = []
     self.slow = None
+    self.audio = 'include'
 
   def add_slow(self, slow_spec):
     if slow_spec.strip() == '':
@@ -141,6 +142,12 @@ class Deck:
     ### FIXME check for negatives?
 
     self.slow = (start, end, amount)
+
+  def set_audio(self, audio):
+    if audio == 'include' or audio == 'strip':
+      self.audio = audio
+    else:
+      raise ValueError('audio must be either "include" or "strip"')
 
   def add_note(self, note):
     if note.note_id in self.notes:
@@ -262,6 +269,8 @@ class DeckParser:
       self.deck.format = line.removeprefix("format:").strip()
     elif line.startswith("slow:"):
       self.deck.add_slow(line.removeprefix("slow:").strip())
+    elif line.startswith("audio:"):
+      self.deck.set_audio(line.removeprefix("audio:").strip())
     else:
       self.note.append(line)
 
@@ -273,6 +282,7 @@ class DeckParser:
       raise ValueError("_parse_note() called on empty input ({self.where()})")
 
     video = Video(note[0], cache_path=CACHE)
+    video.audio(self.deck.audio)
     if self.deck.crop:
       video.crop(self.deck.crop)
     if self.deck.format:

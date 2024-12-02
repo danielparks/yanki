@@ -39,7 +39,7 @@ class Video:
     self._format = None
     self._still = False
     self.input_options = {}
-    self.output_options = { "an": None }
+    self.output_options = {}
     self.filter_complex = None
 
   def cached(self, filename):
@@ -141,6 +141,15 @@ class Video:
 
   def crop(self, crop):
     self._crop = crop
+
+  def audio(self, audio):
+    if audio == 'strip':
+      self.output_options['an'] = None
+    else:
+      try:
+        del self.output_options['an']
+      except KeyError:
+        pass
 
   def slow_filter(self, start=0, end=None, amount=2):
     """Set a filter to slow (or speed up) part of the video."""
