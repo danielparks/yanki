@@ -4,11 +4,12 @@ import html
 from http import server
 import functools
 import os
+from pathlib import PosixPath
 import textwrap
 import re
 import sys
 
-from yanki.anki import DeckParser, CACHE
+from yanki.anki import DeckParser
 
 def cli():
   parser = argparse.ArgumentParser(
@@ -16,6 +17,9 @@ def cli():
     description='Build Anki decks from text files containing YouTube URLs.',
   )
   parser.add_argument('-v', '--verbose', action='store_true')
+  parser.add_argument('--cache',
+    default=PosixPath('~/.cache/yanki/').expanduser(),
+    help='Path to cache for downloads and media files.')
   parser.add_argument('--html', action='store_true',
     help='Produce HTML summary of deck rather than .apkg file.')
   parser.add_argument('--serve-http', action='store_true',
@@ -23,8 +27,10 @@ def cli():
   parser.add_argument('path', nargs='*')
   args = parser.parse_args()
 
+  os.makedirs(args.cache, exist_ok=True)
+
   input = fileinput.input(files=args.path, encoding="utf-8")
-  parser = DeckParser(debug=args.verbose)
+  parser = DeckParser(cache_path=args.cache, debug=args.verbose)
   decks = parser.parse_input(input)
 
   if args.serve_http:
@@ -32,7 +38,7 @@ def cli():
 
   for deck in decks:
     if args.html:
-      print(htmlize_deck(deck, path_prefix=f"{CACHE}/"))
+      print(htmlize_deck(deck, path_prefix=args.cache))
     else:
       deck.save(debug=args.verbose)
 
@@ -44,7 +50,7 @@ def serve_http(args, decks):
   html_written = set()
   for deck in decks:
     file_name = deck.title.replace('/', '--') + '.html'
-    html_path = os.path.join(CACHE, file_name)
+    html_path = os.path.join(args.cache, file_name)
     if html_path in html_written:
       raise KeyError(f"Duplicate path after munging deck title: {html_path}")
     html_written.add(html_path)
@@ -56,15 +62,18 @@ def serve_http(args, decks):
 
   # FIXME serve html from memory so that you can run multiple copies of
   # this tool at once.
-  with open(os.path.join(CACHE, 'index.html'), 'w', encoding="utf-8") as file:
+  index_path = os.path.join(args.cache, 'index.html')
+  with open(index_path, 'w', encoding="utf-8") as file:
     file.write(generate_index_html(deck_links))
 
   # FIXME it would be great to just serve this directory as /static without
   # needing the symlink.
-  ensure_static_link()
+  ensure_static_link(args.cache)
 
   print("Starting HTTP server on http://localhost:8000/")
-  Handler = functools.partial(server.SimpleHTTPRequestHandler, directory=CACHE)
+  Handler = functools.partial(
+    server.SimpleHTTPRequestHandler,
+    directory=args.cache)
   try:
     server.HTTPServer(('', 8000), Handler).serve_forever()
   except KeyboardInterrupt:
@@ -74,9 +83,9 @@ def path_to_web_files():
   from os.path import join, dirname, realpath
   return join(dirname(dirname(realpath(__file__))), 'web-files')
 
-def ensure_static_link():
+def ensure_static_link(cache_path):
   web_files_path = path_to_web_files()
-  static_path = os.path.join(CACHE, 'static')
+  static_path = os.path.join(cache_path, 'static')
 
   try:
     os.symlink(web_files_path, static_path)

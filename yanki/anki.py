@@ -6,9 +6,6 @@ import sys
 
 from yanki.video import Video
 
-CACHE = 'cache'
-os.makedirs(CACHE, exist_ok=True)
-
 GUID_INPUT_PARAMETERS = ['ss']
 GUID_OUTPUT_PARAMETERS = ['to', 'frames:v']
 
@@ -179,7 +176,8 @@ class Deck:
     package.write_to_file(path)
 
 class DeckParser:
-  def __init__(self, debug=False):
+  def __init__(self, cache_path, debug=False):
+    self.cache_path = cache_path
     self.debug = debug
     self.parsed = []
     self.deck = None
@@ -281,7 +279,7 @@ class DeckParser:
       # FIXME wrong exception
       raise ValueError("_parse_note() called on empty input ({self.where()})")
 
-    video = Video(note[0], cache_path=CACHE)
+    video = Video(note[0], cache_path=self.cache_path)
     video.audio(self.deck.audio)
     if self.deck.crop:
       video.crop(self.deck.crop)
