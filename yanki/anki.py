@@ -106,6 +106,7 @@ class Deck:
     self.slow = None
     self.audio = 'include'
     self.video = 'include'
+    self.note_id = '{url} {clip} {direction}'
 
   def add_slow(self, slow_spec):
     if slow_spec.strip() == '':
@@ -148,7 +149,7 @@ class Deck:
 
   def add_note(self, note):
     if note.note_id in self.notes:
-      raise LookupError(f"Note with id {note.note_id} already exists in deck")
+      raise LookupError(f"Note with id {repr(note.note_id)} already exists in deck")
     self.notes[note.note_id] = note
 
   def save_to_package(self, package):
@@ -157,12 +158,12 @@ class Deck:
 
     for note in self.notes.values():
       note.add_to_deck(deck)
-      LOGGER.debug(f"Added note {note.note_id}: {note.fields}")
+      LOGGER.debug(f"Added note {repr(note.note_id)}: {note.fields}")
 
       for field in note.fields:
         for media_path in field.media_paths():
           package.media_files.append(media_path)
-          LOGGER.debug(f"Added media file for {note.note_id}: {media_path}")
+          LOGGER.debug(f"Added media file for {repr(note.note_id)}: {media_path}")
 
     package.decks.append(deck)
 
@@ -268,6 +269,8 @@ class DeckParser:
       self.deck.set_audio(line.removeprefix("audio:").strip())
     elif line.startswith("video"):
       self.deck.set_video(line.removeprefix("video:").strip())
+    elif line.startswith("note_id:"):
+      self.deck.note_id = line.removeprefix("note_id:").strip()
     else:
       self.note.append(line)
 
@@ -306,15 +309,18 @@ class DeckParser:
       else:
         question = rest
 
+    # Remove trailing whitespace, particularly newlines.
+    question = question.rstrip()
+
     # Figure out note_id
     if video.is_still():
       time = video.ffmpeg_input_options().get('ss', '0F')
-      note_id = f'{video_url} @{time} {direction}'
+      clip = f'@{time}'
     else:
       # Default to no clipping.
       start = video.ffmpeg_input_options().get('ss', '0F')
       end = video.ffmpeg_output_options().get('to', '')
-      note_id = f'{video_url} @{start}-{end} {direction}'
+      clip = f'@{start}-{end}'
 
     if self.deck.slow:
       (start, end, amount) = self.deck.slow
@@ -325,6 +331,18 @@ class DeckParser:
       answer = ImageField(path)
     else:
       answer = VideoField(path)
+
+    try:
+      note_id = self.deck.note_id.format(
+        url=video_url,
+        clip=clip,
+        direction=direction,
+        question=question,
+      )
+    except KeyError as error:
+      # FIXME we don’t know the line number and filename for this since note_id
+      # was set elsewhere.
+      sys.exit(f'Unknown variable in note_id format: {error}')
 
     self.deck.add_note(
       Note(note_id, [Field(question), answer], self.deck.tags, direction))
