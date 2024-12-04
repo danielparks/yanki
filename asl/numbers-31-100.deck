@@ -1,7 +1,7 @@
-title: Lifeprint ASL (custom)::Numbers 31-100
+title: Lifeprint ASL::Numbers::31-100
 crop: in_h:in_h
 audio: strip
-slow: 0 - 0.1 * 2
+slow: 0:00-0:00.1 *2
 
 tags: Lifeprint numbers::31-40
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @1412F-1442F 31
