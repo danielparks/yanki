@@ -1,9 +1,12 @@
-import hashlib
 from ffmpeg import FFmpeg
-import yt_dlp
+import hashlib
 import json
+import logging
 import os
 import urllib
+import yt_dlp
+
+LOGGER = logging.getLogger(__name__)
 
 YT_DLP_OPTIONS = {
   'quiet': True,
@@ -16,16 +19,6 @@ def yt_url_to_id(url):
   if len(query['v']) != 1:
     raise ValueError(f"Expected exactly one v parameter in URL: {url}")
   return query['v'][0]
-
-class Logger:
-  def __init__(self):
-    self.level = 0
-
-  def info(self, message):
-    if self.level >= 0:
-      print(message)
-
-LOGGER = Logger()
 
 # FIXME cannot be reused
 class Video:
@@ -48,8 +41,8 @@ class Video:
   def info_cache_path(self):
     return self.cached(self.id + '_info.json')
 
-  def raw_video_cache_path(self, logger=LOGGER):
-    return self.cached(self.id + '_raw.' + self.info(logger=logger)['ext'])
+  def raw_video_cache_path(self):
+    return self.cached(self.id + '_raw.' + self.info()['ext'])
 
   def raw_metadata_cache_path(self):
     return self.cached(self.id + '_raw_ffprobe.json')
@@ -66,7 +59,7 @@ class Video:
         usedforsecurity=False).hexdigest()
     return self.cached(f"{prefix}{parameters}.{self.output_ext()}")
 
-  def info(self, logger=LOGGER):
+  def info(self):
     if self._info is None:
       try:
         with open(self.info_cache_path(), 'r', encoding="utf-8") as file:
@@ -79,10 +72,10 @@ class Video:
             file.write(json.dumps(ydl.sanitize_info(self._info)))
     return self._info
 
-  def title(self, logger=LOGGER):
-    return self.info(logger=logger)['title']
+  def title(self):
+    return self.info()['title']
 
-  def raw_metadata(self, logger=LOGGER):
+  def raw_metadata(self):
     if self._raw_metadata:
       return self._raw_metadata
 
@@ -92,7 +85,7 @@ class Video:
         self._raw_metadata = json.load(file)
     except FileNotFoundError:
       metadata_json = FFmpeg(executable="ffprobe").input(
-          self.raw_video(logger=logger),
+          self.raw_video(),
           print_format="json",
           show_streams=None,
         ).execute()
@@ -103,8 +96,8 @@ class Video:
 
     return self._raw_metadata
 
-  def get_fps(self, logger=LOGGER):
-    metadata = self.raw_metadata(logger=logger)
+  def get_fps(self):
+    metadata = self.raw_metadata()
 
     for stream in metadata['streams']:
       if stream['codec_type'] == 'video':
@@ -118,7 +111,7 @@ class Video:
 
         return fps
 
-    raw_path = self.raw_video(logger=logger)
+    raw_path = self.raw_video()
     raise RuntimeError(f"Could not get FPS for video: {raw_path}")
 
   # FIXME logger
@@ -199,12 +192,12 @@ class Video:
   def is_still(self):
     return self._still
 
-  def raw_video(self, logger=LOGGER):
-    path = self.raw_video_cache_path(logger=logger)
+  def raw_video(self):
+    path = self.raw_video_cache_path()
     if os.path.exists(path) and os.stat(path).st_size > 0:
       return path
 
-    logger.info(f"{self.id}: downloading raw video to {path}")
+    LOGGER.info(f"{self.id}: downloading raw video to {path}")
     options = {
       'outtmpl': {
         'default': path,
@@ -263,15 +256,15 @@ class Video:
 
     return parameters
 
-  def processed_video(self, logger=LOGGER):
+  def processed_video(self):
     output_path = self.processed_video_cache_path()
     if os.path.exists(output_path) and os.stat(output_path).st_size > 0:
       return output_path
 
-    raw_path = self.raw_video(logger=logger)
+    raw_path = self.raw_video()
 
     parameters = " ".join(self.ffmpeg_parameters())
-    logger.info(f"{parameters}: processing video to {output_path}")
+    LOGGER.info(f"{parameters}: processing video to {output_path}")
 
     second_pass = self.filter_complex or 'copyts' in self.output_options
     if second_pass:
@@ -296,9 +289,9 @@ class Video:
 
     if second_pass:
       if self.filter_complex:
-        logger.info(f"{parameters} second pass: running filter_complex {self.filter_complex}")
+        LOGGER.debug(f"{parameters} second pass: running filter_complex {self.filter_complex}")
       else:
-        logger.info(f"{parameters} second pass: (no filter)")
+        LOGGER.debug(f"{parameters} second pass: (no filter)")
 
       command = FFmpeg().option("y")
       if self.filter_complex:

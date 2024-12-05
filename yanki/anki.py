@@ -1,8 +1,11 @@
 import genanki
 import hashlib
 import html
+import logging
 import os
 import sys
+
+LOGGER = logging.getLogger(__name__)
 
 from yanki.video import Video
 
@@ -151,34 +154,31 @@ class Deck:
       raise LookupError(f"Note with id {note.note_id} already exists in deck")
     self.notes[note.note_id] = note
 
-  def save(self, path=None, debug=False):
+  def save(self, path=None):
     if not path:
       path = os.path.splitext(self.source)[0] + '.apkg'
 
     deck = genanki.Deck(name_to_id(self.title), self.title)
-    if debug:
-      print(f"New deck [{deck.deck_id}]: {self.title}")
+    LOGGER.debug(f"New deck [{deck.deck_id}]: {self.title}")
 
     media_files = []
     for note in self.notes.values():
       note.add_to_deck(deck)
-      if debug:
-        print(f"Added note {note.note_id}: {note.fields}")
+      LOGGER.debug(f"Added note {note.note_id}: {note.fields}")
 
       for field in note.fields:
         for media_path in field.media_paths():
           media_files.append(media_path)
-          if debug:
-            print(f"Added media file for {note.note_id}: {media_path}")
+          LOGGER.debug(f"Added media file for {note.note_id}: {media_path}")
 
     package = genanki.Package(deck)
     package.media_files = media_files
     package.write_to_file(path)
+    LOGGER.info(f"Wrote deck {self.title} to file {path}")
 
 class DeckParser:
-  def __init__(self, cache_path, debug=False):
+  def __init__(self, cache_path):
     self.cache_path = cache_path
-    self.debug = debug
     self.parsed = []
     self.deck = None
     self.path = None
@@ -206,7 +206,7 @@ class DeckParser:
 
   def save(self):
     for deck in self.parsed:
-      deck.save(debug=self.debug)
+      deck.save()
 
   def flush_parsed(self):
     parsed = self.parsed

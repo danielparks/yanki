@@ -1,13 +1,14 @@
 import argparse
 import fileinput
+import functools
 import html
 from http import server
-import functools
+import logging
 import os
 from pathlib import PosixPath
-import textwrap
 import re
 import sys
+import textwrap
 
 from yanki.anki import DeckParser
 
@@ -16,7 +17,7 @@ def cli():
     prog='yanki',
     description='Build Anki decks from text files containing YouTube URLs.',
   )
-  parser.add_argument('-v', '--verbose', action='store_true')
+  parser.add_argument('-v', '--verbose', action='count', default=0)
   parser.add_argument('--cache',
     default=PosixPath('~/.cache/yanki/').expanduser(),
     help='Path to cache for downloads and media files.')
@@ -27,10 +28,21 @@ def cli():
   parser.add_argument('path', nargs='*')
   args = parser.parse_args()
 
+  # Configure logging
+  if args.verbose > 2:
+    sys.exit('--verbose or -v may only be specified up to 2 times.')
+  elif args.verbose == 2:
+    level = logging.DEBUG
+  elif args.verbose == 1:
+    level = logging.INFO
+  else:
+    level = logging.WARN
+  logging.basicConfig(level=level, format='%(message)s')
+
   os.makedirs(args.cache, exist_ok=True)
 
   input = fileinput.input(files=args.path, encoding="utf-8")
-  parser = DeckParser(cache_path=args.cache, debug=args.verbose)
+  parser = DeckParser(cache_path=args.cache)
   decks = parser.parse_input(input)
 
   if args.serve_http:
@@ -40,7 +52,7 @@ def cli():
     if args.html:
       print(htmlize_deck(deck, path_prefix=args.cache))
     else:
-      deck.save(debug=args.verbose)
+      deck.save()
 
   return 0
 
