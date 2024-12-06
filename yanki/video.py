@@ -122,9 +122,12 @@ class Video:
       return spec
 
   def clip(self, start_spec, end_spec):
-    self.input_options["ss"] = self.parse_time_spec(start_spec)
-    self.output_options["to"] = self.parse_time_spec(end_spec)
-    self.output_options["copyts"] = None
+    if start_spec:
+      self.input_options["ss"] = self.parse_time_spec(start_spec)
+    if end_spec:
+      self.output_options["to"] = self.parse_time_spec(end_spec)
+      if start_spec:
+        self.output_options["copyts"] = None
 
   def snapshot(self, time_spec):
     self.input_options["ss"] = self.parse_time_spec(time_spec)
