@@ -1,8 +1,9 @@
-from ffmpeg import FFmpeg
+import ffmpeg
 import hashlib
 import json
 import logging
 import os
+import sys
 import urllib
 import yt_dlp
 
@@ -84,7 +85,7 @@ class Video:
       with open(path, 'r', encoding="utf-8") as file:
         self._raw_metadata = json.load(file)
     except FileNotFoundError:
-      metadata_json = FFmpeg(executable="ffprobe").input(
+      metadata_json = ffmpeg.FFmpeg(executable="ffprobe").input(
           self.raw_video(),
           print_format="json",
           show_streams=None,
@@ -280,11 +281,18 @@ class Video:
     else:
       first_pass_output_path = output_path
 
-    FFmpeg() \
-      .option("y") \
-      .input(raw_path, self.ffmpeg_input_options()) \
-      .output(first_pass_output_path, self.ffmpeg_output_options()) \
-      .execute()
+    try:
+      ffmpeg.FFmpeg() \
+        .option("y") \
+        .input(raw_path, self.ffmpeg_input_options()) \
+        .output(first_pass_output_path, self.ffmpeg_output_options()) \
+        .execute()
+    except ffmpeg.errors.FFmpegError as error:
+      sys.exit(f"""ffmpeg: {error}
+        input: {raw_path}
+        {self.ffmpeg_input_options()}
+        output: {first_pass_output_path}
+        {self.ffmpeg_output_options()}""".replace("\n      ", "\n"))
 
     if second_pass:
       if self.filter_complex:
@@ -292,10 +300,16 @@ class Video:
       else:
         LOGGER.debug(f"{parameters} second pass: (no filter)")
 
-      command = FFmpeg().option("y")
+      command = ffmpeg.FFmpeg().option("y")
       if self.filter_complex:
         command.option('filter_complex', self.filter_complex)
-      command.input(first_pass_output_path).output(output_path).execute()
+      try:
+        command.input(first_pass_output_path).output(output_path).execute()
+      except ffmpeg.errors.FFmpegError as error:
+        sys.exit(f"""ffmpeg: {error}
+          filter_complex: {self.filter_complex}
+          input: {first_pass_output_path}
+          output: {output_path}""".replace("\n        ", "\n"))
 
       os.remove(first_pass_output_path)
 
