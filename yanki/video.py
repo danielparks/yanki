@@ -144,6 +144,15 @@ class Video:
       except KeyError:
         pass
 
+  def video(self, video):
+    if video == 'strip':
+      self.output_options['vn'] = None
+    else:
+      try:
+        del self.output_options['vn']
+      except KeyError:
+        pass
+
   def slow_filter(self, start=0, end=None, amount=2):
     """Set a filter to slow (or speed up) part of the video."""
     if (end is not None and end - start <= 0) or amount == 1:
@@ -221,6 +230,10 @@ class Video:
     if "vf" in self.output_options:
       # FIXME?
       raise ValueError("vf output option already set")
+
+    if "vn" in self.output_options:
+      # video: strip mode, don’t use -vf
+      return self.output_options
 
     vf = []
     if self._crop:

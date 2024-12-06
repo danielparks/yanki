@@ -111,6 +111,7 @@ class Deck:
     self.tags = []
     self.slow = None
     self.audio = 'include'
+    self.video = 'include'
 
   def add_slow(self, slow_spec):
     if slow_spec.strip() == '':
@@ -148,6 +149,12 @@ class Deck:
       self.audio = audio
     else:
       raise ValueError('audio must be either "include" or "strip"')
+
+  def set_video(self, video):
+    if video == 'include' or video == 'strip':
+      self.video = video
+    else:
+      raise ValueError('video must be either "include" or "strip"')
 
   def add_note(self, note):
     if note.note_id in self.notes:
@@ -269,6 +276,8 @@ class DeckParser:
       self.deck.add_slow(line.removeprefix("slow:").strip())
     elif line.startswith("audio:"):
       self.deck.set_audio(line.removeprefix("audio:").strip())
+    elif line.startswith("video"):
+      self.deck.set_video(line.removeprefix("video:").strip())
     else:
       self.note.append(line)
 
@@ -281,6 +290,7 @@ class DeckParser:
 
     video = Video(note[0], cache_path=self.cache_path)
     video.audio(self.deck.audio)
+    video.video(self.deck.video)
     if self.deck.crop:
       video.crop(self.deck.crop)
     if self.deck.format:
