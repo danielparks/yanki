@@ -66,7 +66,7 @@ class Video:
           self._info = json.load(file)
       except FileNotFoundError:
         with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
-          logger.info(f"{self.id}: getting info")
+          LOGGER.info(f"{self.id}: getting info")
           self._info = ydl.extract_info(self.url, download=False)
           with open(self.info_cache_path(), 'w', encoding="utf-8") as file:
             file.write(json.dumps(ydl.sanitize_info(self._info)))
@@ -114,7 +114,6 @@ class Video:
     raw_path = self.raw_video()
     raise RuntimeError(f"Could not get FPS for video: {raw_path}")
 
-  # FIXME logger
   def parse_time_spec(self, spec):
     if spec.endswith("F"):
       return "%.3f" % (int(spec[:-1])/self.get_fps())
