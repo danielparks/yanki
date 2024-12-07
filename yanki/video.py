@@ -21,6 +21,13 @@ def yt_url_to_id(url):
     raise ValueError(f"Expected exactly one v parameter in URL: {url}")
   return query['v'][0]
 
+NON_ZERO_DIGITS = set('123456789')
+def is_non_zero_time(time_spec):
+  for c in time_spec:
+    if c in NON_ZERO_DIGITS:
+      return True
+  return False
+
 # FIXME cannot be reused
 class Video:
   def __init__(self, url, cache_path="."):
@@ -54,6 +61,7 @@ class Video:
       parameters += '/' + self.filter_complex
 
     if '/' in parameters or len(parameters) > 60:
+      LOGGER.debug(f'hashing parameters {repr(parameters)}')
       parameters = hashlib.blake2b(
         parameters.encode(encoding='utf-8'),
         digest_size=16,
@@ -156,20 +164,22 @@ class Video:
       except KeyError:
         pass
 
-  def slow_filter(self, start=0, end=None, amount=2):
+  def slow_filter(self, start='0', end=None, amount=2):
     """Set a filter to slow (or speed up) part of the video."""
-    if (end is not None and end - start <= 0) or amount == 1:
+    if (end is not None and end == start) or amount == 1:
       # Nothing is affected
       self.filter_complex = None
       return
 
+    start = start.replace(':', '\\\\:')
     pieces = []
-    if start > 0:
+    if is_non_zero_time(start):
       i = len(pieces)
       pieces.append(f'[0]trim=0:{start}[v{i}]')
 
     # The piece that is slowed
     if end is not None:
+      end = end.replace(':', '\\\\:')
       trim = f'{start}:{end}'
     else:
       trim = f'{start}'

@@ -130,15 +130,13 @@ class Deck:
       self.slow = None
       raise ValueError(f"Invalid slow without '-': {slow_spec}")
 
-    if parts[0] == '':
-      start = 0
-    else:
-      start = float(parts[0])
+    start = parts[0]
+    if start == '':
+      start = '0'
 
-    if parts[1] == '':
+    end = parts[1]
+    if end == '':
       end = None
-    else:
-      end = float(parts[1])
 
     self.slow = (start, end, amount)
 
