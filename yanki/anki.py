@@ -118,14 +118,14 @@ class Deck:
       self.slow = None
       return
 
-    parts = [p.strip() for p in slow_spec.split('*', maxsplit=1)]
+    parts = [p.strip() for p in slow_spec.split('*')]
     if len(parts) != 2:
       self.slow = None
       raise ValueError(f"Invalid slow without '*': {slow_spec}")
 
     amount = float(parts[1])
 
-    parts = [p.strip() for p in parts[0].split('-', maxsplit=1)]
+    parts = [p.strip() for p in parts[0].split('-')]
     if len(parts) != 2:
       self.slow = None
       raise ValueError(f"Invalid slow without '-': {slow_spec}")
@@ -139,8 +139,6 @@ class Deck:
       end = None
     else:
       end = float(parts[1])
-
-    ### FIXME check for negatives?
 
     self.slow = (start, end, amount)
 
