@@ -1,4 +1,4 @@
-title: Lifeprint ASL (custom)::Numbers 31-100
+title: Test deck::Partial slow
 crop: in_h:in_h
 
 slow: 0:00-0:01 * 20
@@ -17,4 +17,4 @@ slow: 0 - * 8
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @1412F-1446F slow 0 - * 8
 
 slow: 0 - 0.5 * 20
-https://www.youtube.com/watch?v=pxyi6YW8gOE chocolate
+https://www.youtube.com/watch?v=pxyi6YW8gOE chocolate slow 0 - 0.5 * 20
