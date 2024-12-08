@@ -157,27 +157,31 @@ class Deck:
       raise LookupError(f"Note with id {note.note_id} already exists in deck")
     self.notes[note.note_id] = note
 
-  def save(self, path=None):
-    if not path:
-      path = os.path.splitext(self.source)[0] + '.apkg'
-
+  def save_to_package(self, package):
     deck = genanki.Deck(name_to_id(self.title), self.title)
     LOGGER.debug(f"New deck [{deck.deck_id}]: {self.title}")
 
-    media_files = []
     for note in self.notes.values():
       note.add_to_deck(deck)
       LOGGER.debug(f"Added note {note.note_id}: {note.fields}")
 
       for field in note.fields:
         for media_path in field.media_paths():
-          media_files.append(media_path)
+          package.media_files.append(media_path)
           LOGGER.debug(f"Added media file for {note.note_id}: {media_path}")
 
-    package = genanki.Package(deck)
-    package.media_files = media_files
+    package.decks.append(deck)
+
+  def save_to_file(self, path=None):
+    if not path:
+      path = os.path.splitext(self.source)[0] + '.apkg'
+
+    package = genanki.Package([])
+    self.save_to_package(package)
     package.write_to_file(path)
     LOGGER.info(f"Wrote deck {self.title} to file {path}")
+
+    return path
 
 class DeckParser:
   def __init__(self, cache_path):
@@ -206,10 +210,6 @@ class DeckParser:
     self.path = None
     self.line_number = None
     self.note = []
-
-  def save(self):
-    for deck in self.parsed:
-      deck.save()
 
   def flush_parsed(self):
     parsed = self.parsed

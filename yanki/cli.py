@@ -1,6 +1,7 @@
 import argparse
 import fileinput
 import functools
+import genanki
 import html
 from http import server
 import logging
@@ -11,6 +12,8 @@ import sys
 import textwrap
 
 from yanki.anki import DeckParser
+
+LOGGER = logging.getLogger(__name__)
 
 def cli():
   parser = argparse.ArgumentParser(
@@ -25,6 +28,9 @@ def cli():
     help='Produce HTML summary of deck rather than .apkg file.')
   parser.add_argument('--serve-http', action='store_true',
     help='Serve HTML summary of deck on localhost:8000.')
+  parser.add_argument('-o', '--output',
+    help=('Path to save decks to. Defaults to saving indivdual decks to their '
+      + 'own files named after their sources, but with the extension .apkg.'))
   parser.add_argument('path', nargs='*')
   args = parser.parse_args()
 
@@ -48,11 +54,19 @@ def cli():
   if args.serve_http:
     return serve_http(args, decks)
 
+  package = genanki.Package([]) # Only used with --output
   for deck in decks:
     if args.html:
       print(htmlize_deck(deck, path_prefix=args.cache))
+    elif args.output == None:
+      # Automatically figured out the path to save to.
+      deck.save_to_file()
     else:
-      deck.save()
+      deck.save_to_package(package)
+
+  if args.output:
+    package.write_to_file(args.output)
+    LOGGER.info(f"Wrote decks to file {args.output}")
 
   return 0
 
