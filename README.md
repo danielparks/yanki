@@ -10,7 +10,7 @@ That will produce an `asl/lesson-01.apkg` file.
 ### Example deck file
 
 ```text
-title: Lifeprint ASL::Phrases::Lesson 1
+title: Lifeprint ASL::Phrases::Lesson 01
 tags: lesson_01 phrase
 audio: strip
 
