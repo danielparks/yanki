@@ -75,7 +75,7 @@ def serve_http(args, decks):
 
   html_written = set()
   for deck in decks:
-    file_name = deck.title.replace('/', '--') + '.html'
+    file_name = deck.config.title.replace('/', '--') + '.html'
     html_path = os.path.join(args.cache, file_name)
     if html_path in html_written:
       raise KeyError(f"Duplicate path after munging deck title: {html_path}")
@@ -151,7 +151,7 @@ def generate_index_html(deck_links):
 
   for (file_name, deck) in deck_links:
     output += f"""
-          <li><a href="{h(file_name)}">{h(deck.title)}</a></li>"""
+          <li><a href="{h(file_name)}">{h(deck.config.title)}</a></li>"""
 
   return textwrap.dedent(output + f"""
         </ol>
@@ -164,12 +164,12 @@ def htmlize_deck(deck, path_prefix=""):
     <!DOCTYPE html>
     <html>
       <head>
-        <title>{h(deck.title)}</title>
+        <title>{h(deck.config.title)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url('general.css')}">
       </head>
       <body>
-        <h1>{h(deck.title)}</h1>
+        <h1>{h(deck.config.title)}</h1>
   """
 
   for note in deck.notes.values():

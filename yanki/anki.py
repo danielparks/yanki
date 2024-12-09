@@ -1,3 +1,4 @@
+from copy import copy
 import genanki
 import hashlib
 import html
@@ -95,13 +96,11 @@ class Note:
       tags=self.tags,
     ))
 
-class Deck:
-  def __init__(self, source=None):
-    self.source = source
+class Config:
+  def __init__(self):
     self.title = None
     self.crop = None
     self.format = None
-    self.notes = {}
     self.tags = []
     self.slow = None
     self.trim = None
@@ -157,14 +156,20 @@ class Deck:
     else:
       raise ValueError('video must be either "include" or "strip"')
 
+class Deck:
+  def __init__(self, source=None):
+    self.source = source
+    self.config = Config()
+    self.notes = {}
+
   def add_note(self, note):
     if note.note_id in self.notes:
       raise LookupError(f"Note with id {repr(note.note_id)} already exists in deck")
     self.notes[note.note_id] = note
 
   def save_to_package(self, package):
-    deck = genanki.Deck(name_to_id(self.title), self.title)
-    LOGGER.debug(f"New deck [{deck.deck_id}]: {self.title}")
+    deck = genanki.Deck(name_to_id(self.config.title), self.config.title)
+    LOGGER.debug(f"New deck [{deck.deck_id}]: {self.config.title}")
 
     for note in self.notes.values():
       note.add_to_deck(deck)
@@ -184,7 +189,7 @@ class Deck:
     package = genanki.Package([])
     self.save_to_package(package)
     package.write_to_file(path)
-    LOGGER.info(f"Wrote deck {self.title} to file {path}")
+    LOGGER.info(f"Wrote deck {self.config.title} to file {path}")
 
     return path
 
@@ -192,29 +197,32 @@ class DeckParser:
   def __init__(self, cache_path):
     self.cache_path = cache_path
     self.parsed = []
+    self._reset()
+
+  def _reset(self):
     self.deck = None
     self.path = None
     self.line_number = None
+    self._reset_note()
+
+  def _reset_note(self):
     self.note = []
+    self.note_config = None
 
   def open(self, path):
     if self.deck:
       self.close()
+    self._reset()
     self.deck = Deck(path)
     self.path = path
-    self.line_number = None
-    self.note = []
 
   def close(self):
     if len(self.note) > 0:
-      self._parse_note()
+      self._finish_note()
     if self.deck:
       self.parsed.append(self.deck)
 
-    self.deck = None
-    self.path = None
-    self.line_number = None
-    self.note = []
+    self._reset()
 
   def flush_parsed(self):
     parsed = self.parsed
@@ -251,7 +259,12 @@ class DeckParser:
         # FIXME terrible error message
         raise ValueError(f"Found indented line with no preceding line ({self.where()})")
 
-      self.note.append(unindented)
+      if self.note_config is None:
+        self.note_config = copy(self.deck.config)
+
+      unindented = self._check_for_config(unindented, self.note_config)
+      if unindented is not None:
+        self.note.append(unindented)
       return
 
     if line.strip() == "":
@@ -262,55 +275,71 @@ class DeckParser:
 
     # Line is not indented
     if len(self.note) > 0:
-      self._parse_note()
-      self.note = []
+      self._finish_note()
 
-    if line.startswith("title:"):
-      self.deck.title = line.removeprefix("title:").strip()
-    elif line.startswith("tags:"):
-      self.deck.tags = line.removeprefix("tags:").split()
-    elif line.startswith("crop:"):
-      self.deck.crop = line.removeprefix("crop:").strip()
-    elif line.startswith("format:"):
-      self.deck.format = line.removeprefix("format:").strip()
-    elif line.startswith("trim:"):
-      self.deck.set_trim(line.removeprefix("trim:").strip())
-    elif line.startswith("slow:"):
-      self.deck.add_slow(line.removeprefix("slow:").strip())
-    elif line.startswith("audio:"):
-      self.deck.set_audio(line.removeprefix("audio:").strip())
-    elif line.startswith("video"):
-      self.deck.set_video(line.removeprefix("video:").strip())
-    elif line.startswith("note_id:"):
-      self.deck.note_id = line.removeprefix("note_id:").strip()
-    else:
+    line = self._check_for_config(line, self.deck.config)
+    if line is not None:
       self.note.append(line)
 
-  def _parse_note(self):
+  def _check_for_config(self, line, config):
+    # Line without newline
+    line_per_se = line.rstrip('\n\r')
+
+    if line.startswith('"') and line_per_se.endswith('"\n'):
+      # Quotes mean to use the line as-is (add the newline back):
+      return line_per_se[1:-1] + line[len(line_per_se):]
+
+    # FIXME what about reseting the config for the next note?
+    if line.startswith('title:'):
+      config.title = line.removeprefix('title:').strip()
+    elif line.startswith('tags:'):
+      config.tags = line.removeprefix('tags:').split()
+    elif line.startswith('crop:'):
+      config.crop = line.removeprefix('crop:').strip()
+    elif line.startswith('format:'):
+      config.format = line.removeprefix('format:').strip()
+    elif line.startswith('trim:'):
+      config.set_trim(line.removeprefix('trim:').strip())
+    elif line.startswith('slow:'):
+      config.add_slow(line.removeprefix('slow:').strip())
+    elif line.startswith('audio:'):
+      config.set_audio(line.removeprefix('audio:').strip())
+    elif line.startswith('video:'):
+      config.set_video(line.removeprefix('video:').strip())
+    elif line.startswith('note_id'):
+      config.note_id = line.removeprefix('note_id:').strip()
+    else:
+      return line
+
+    return None
+
+  def _finish_note(self):
     try:
       [video_url, *rest] = "".join(self.note).split(maxsplit=1)
     except ValueError:
       # FIXME improve exception?
-      raise ValueError(f'_parse_note() called on empty input ({self.where()})')
+      raise ValueError(f'_finish_note() called on empty input ({self.where()})')
 
     if len(rest) > 0:
       rest = rest[0]
     else:
       rest = ''
 
+    config = self.note_config or self.deck.config
+
     video = Video(video_url, cache_path=self.cache_path)
-    video.audio(self.deck.audio)
-    video.video(self.deck.video)
-    if self.deck.crop:
-      video.crop(self.deck.crop)
-    if self.deck.format:
-      video.format(self.deck.format)
+    video.audio(config.audio)
+    video.video(config.video)
+    if config.crop:
+      video.crop(config.crop)
+    if config.format:
+      video.format(config.format)
 
     # Check for @time or @start-end
     (clip, rest) = self._try_parse_clip(rest)
 
     if clip is not None:
-      if self.deck.trim is not None:
+      if config.trim is not None:
         raise ValueError(f'Clip (@{"-".join(clip)}) is incompatible with trim')
       elif len(clip) == 1:
         video.snapshot(clip[0])
@@ -323,8 +352,8 @@ class DeckParser:
       # Normalize clip for note_id
       clip = [video.parse_time_spec(part) for part in clip]
 
-    if self.deck.trim is not None:
-      video.clip(self.deck.trim[0], self.deck.trim[1])
+    if config.trim is not None:
+      video.clip(config.trim[0], config.trim[1])
 
     # Check for a direction sign
     direction = '<->'
@@ -341,8 +370,8 @@ class DeckParser:
     # Remove trailing whitespace, particularly newlines.
     question = question.rstrip()
 
-    if self.deck.slow:
-      (start, end, amount) = self.deck.slow
+    if config.slow:
+      (start, end, amount) = config.slow
       video.slow_filter(start=start, end=end, amount=amount)
 
     path = video.processed_video()
@@ -358,7 +387,7 @@ class DeckParser:
       clip = f'@{"-".join(clip)}'
 
     try:
-      note_id = self.deck.note_id.format(
+      note_id = config.note_id.format(
         url=video_url,
         clip=clip,
         direction=direction,
@@ -370,7 +399,8 @@ class DeckParser:
       sys.exit(f'Unknown variable in note_id format: {error}')
 
     self.deck.add_note(
-      Note(note_id, [Field(question), answer], self.deck.tags, direction))
+      Note(note_id, [Field(question), answer], config.tags, direction))
+    self._reset_note()
 
   def _try_parse_clip(self, input):
     clip = None
