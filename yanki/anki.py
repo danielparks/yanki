@@ -282,7 +282,7 @@ class DeckParser:
 
     if len(note) == 0:
       # FIXME wrong exception
-      raise ValueError("_parse_note() called on empty input ({self.where()})")
+      raise ValueError(f'_parse_note() called on empty input ({self.where()})')
 
     video = Video(note[0], cache_path=self.cache_path)
     video.audio(self.deck.audio)
