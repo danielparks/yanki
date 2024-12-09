@@ -9,9 +9,6 @@ LOGGER = logging.getLogger(__name__)
 
 from yanki.video import Video
 
-GUID_INPUT_PARAMETERS = ['ss']
-GUID_OUTPUT_PARAMETERS = ['to', 'frames:v']
-
 REVERSED_CARD_MODEL = genanki.Model(
   1221938101,
   'Reversed (yanki)',
@@ -75,29 +72,26 @@ class VideoField(MediaField):
     return f'<video controls src="{media_filename_html}"></video>'
 
 class Note:
-  def __init__(self, note_id, fields, tags, direction='BOTH'):
+  def __init__(self, note_id, fields, tags, direction='<->'):
     self.note_id = note_id
     self.fields = fields
     self.tags = tags
     self.direction = direction
 
   def add_to_deck(self, deck):
-    if self.direction == 'BOTH':
+    if self.direction == '<->':
       model = genanki.BASIC_AND_REVERSED_CARD_MODEL
-      guid = genanki.guid_for(deck.deck_id, self.note_id)
-    elif self.direction == 'LEFT':
+    elif self.direction == '<-':
       model = genanki.BASIC_MODEL
-      guid = genanki.guid_for(deck.deck_id, model, self.note_id)
-    elif self.direction == 'RIGHT':
+    elif self.direction == '->':
       model = REVERSED_CARD_MODEL
-      guid = genanki.guid_for(deck.deck_id, model, self.note_id)
     else:
       raise ValueError(f"Invalid direction {self.direction}")
 
     deck.add_note(genanki.Note(
       model=model,
       fields=[field.render_anki() for field in self.fields],
-      guid=guid,
+      guid=genanki.guid_for(deck.deck_id, self.note_id),
       tags=self.tags,
     ))
 
@@ -278,13 +272,18 @@ class DeckParser:
       self.note.append(line)
 
   def _parse_note(self):
-    note = "".join(self.note).split(maxsplit=1)
-
-    if len(note) == 0:
-      # FIXME wrong exception
+    try:
+      [video_url, *rest] = "".join(self.note).split(maxsplit=1)
+    except ValueError:
+      # FIXME improve exception?
       raise ValueError(f'_parse_note() called on empty input ({self.where()})')
 
-    video = Video(note[0], cache_path=self.cache_path)
+    if len(rest) > 0:
+      rest = rest[0]
+    else:
+      rest = ''
+
+    video = Video(video_url, cache_path=self.cache_path)
     video.audio(self.deck.audio)
     video.video(self.deck.video)
     if self.deck.crop:
@@ -292,39 +291,40 @@ class DeckParser:
     if self.deck.format:
       video.format(self.deck.format)
 
-    if len(note) == 2:
-      question = self._try_parse_clip(note[1], video)
-    else:
+    # Check for @time or @start-end
+    rest = self._try_parse_clip(rest, video)
+
+    # Check for a direction sign
+    direction = '<->'
+    if len(rest) == '':
       question = video.title()
+    else:
+      parts = rest.split(maxsplit=1)
+      if len(parts) >= 2 and parts[0] in ['->', '<-', '<->']:
+        direction = parts[0]
+        question = parts[1]
+      else:
+        question = rest
+
+    # Figure out note_id
+    if video.is_still():
+      time = video.ffmpeg_input_options().get('ss', '0F')
+      note_id = f'{video_url} @{time} {direction}'
+    else:
+      # Default to no clipping.
+      start = video.ffmpeg_input_options().get('ss', '0F')
+      end = video.ffmpeg_output_options().get('to', '')
+      note_id = f'{video_url} @{start}-{end} {direction}'
 
     if self.deck.slow:
       (start, end, amount) = self.deck.slow
       video.slow_filter(start=start, end=end, amount=amount)
 
-    note_id = ["youtube"]
-    input_parameters = video.ffmpeg_input_options()
-    for key in GUID_INPUT_PARAMETERS:
-      if key in input_parameters:
-        note_id.append(f"-{key}")
-        if input_parameters[key] is not None:
-          note_id.append(input_parameters[key])
-
-    note_id.append(video.id)
-    output_parameters = video.ffmpeg_output_options()
-    for key in GUID_OUTPUT_PARAMETERS:
-      if key in output_parameters:
-        note_id.append(f"-{key}")
-        if output_parameters[key] is not None:
-          note_id.append(output_parameters[key])
-
-    note_id = " ".join(note_id)
     path = video.processed_video()
     if video.is_still() or video.output_ext() == "gif":
       answer = ImageField(path)
     else:
       answer = VideoField(path)
-
-    (direction, question) = self._try_parse_direction(question)
 
     self.deck.add_note(
       Note(note_id, [Field(question), answer], self.deck.tags, direction))
@@ -349,20 +349,3 @@ class DeckParser:
       return parts[1]
     else:
       return ""
-
-  def _try_parse_direction(self, input):
-    parts = input.split(maxsplit=1)
-
-    if len(parts) >= 2:
-      if parts[0] == '->':
-        direction = 'RIGHT'
-      elif parts[0] == '<-':
-        direction = 'LEFT'
-      elif parts[0] == '<->':
-        direction = 'BOTH'
-      else:
-        return ('BOTH', input)
-
-      return (direction, parts[1])
-    else:
-      return ('BOTH', input)
