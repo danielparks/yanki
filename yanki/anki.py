@@ -296,7 +296,7 @@ class DeckParser:
 
     # Check for a direction sign
     direction = '<->'
-    if len(rest) == '':
+    if rest == '':
       question = video.title()
     else:
       parts = rest.split(maxsplit=1)
