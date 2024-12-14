@@ -320,6 +320,9 @@ class DeckParser:
         # Should never happen — checked by _try_parse_clip()
         raise ValueError(f'Invalid clip (@{"-".join(clip)})')
 
+      # Normalize clip for note_id
+      clip = [video.parse_time_spec(part) for part in clip]
+
     if self.deck.trim is not None:
       video.clip(self.deck.trim[0], self.deck.trim[1])
 
@@ -351,7 +354,7 @@ class DeckParser:
     # Format clip for note_id
     if clip is None:
       clip = '@0F-'
-    elif len(clip) == 2:
+    else:
       clip = f'@{"-".join(clip)}'
 
     try:
