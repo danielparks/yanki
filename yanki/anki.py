@@ -104,6 +104,7 @@ class Deck:
     self.notes = {}
     self.tags = []
     self.slow = None
+    self.trim = None
     self.audio = 'include'
     self.video = 'include'
     self.note_id = '{url} {clip} {direction}'
@@ -134,6 +135,15 @@ class Deck:
       end = None
 
     self.slow = (start, end, amount)
+
+  def set_trim(self, trim):
+    if trim == '':
+      self.trim = None
+    else:
+      clip = [part.strip() for part in trim.split('-')]
+      if len(clip) != 2:
+        raise ValueError(f'trim must be time-time (found {repr(trim)})')
+      self.trim = (clip[0], clip[1])
 
   def set_audio(self, audio):
     if audio == 'include' or audio == 'strip':
@@ -263,6 +273,8 @@ class DeckParser:
       self.deck.crop = line.removeprefix("crop:").strip()
     elif line.startswith("format:"):
       self.deck.format = line.removeprefix("format:").strip()
+    elif line.startswith("trim:"):
+      self.deck.set_trim(line.removeprefix("trim:").strip())
     elif line.startswith("slow:"):
       self.deck.add_slow(line.removeprefix("slow:").strip())
     elif line.startswith("audio:"):
@@ -295,7 +307,21 @@ class DeckParser:
       video.format(self.deck.format)
 
     # Check for @time or @start-end
-    rest = self._try_parse_clip(rest, video)
+    (clip, rest) = self._try_parse_clip(rest)
+
+    if clip is not None:
+      if self.deck.trim is not None:
+        raise ValueError(f'Clip (@{"-".join(clip)}) is incompatible with trim')
+      elif len(clip) == 1:
+        video.snapshot(clip[0])
+      elif len(clip) == 2:
+        video.clip(clip[0], clip[1])
+      else:
+        # Should never happen — checked by _try_parse_clip()
+        raise ValueError(f'Invalid clip (@{"-".join(clip)})')
+
+    if self.deck.trim is not None:
+      video.clip(self.deck.trim[0], self.deck.trim[1])
 
     # Check for a direction sign
     direction = '<->'
@@ -312,16 +338,6 @@ class DeckParser:
     # Remove trailing whitespace, particularly newlines.
     question = question.rstrip()
 
-    # Figure out note_id
-    if video.is_still():
-      time = video.ffmpeg_input_options().get('ss', '0F')
-      clip = f'@{time}'
-    else:
-      # Default to no clipping.
-      start = video.ffmpeg_input_options().get('ss', '0F')
-      end = video.ffmpeg_output_options().get('to', '')
-      clip = f'@{start}-{end}'
-
     if self.deck.slow:
       (start, end, amount) = self.deck.slow
       video.slow_filter(start=start, end=end, amount=amount)
@@ -331,6 +347,12 @@ class DeckParser:
       answer = ImageField(path)
     else:
       answer = VideoField(path)
+
+    # Format clip for note_id
+    if clip is None:
+      clip = '@0F-'
+    elif len(clip) == 2:
+      clip = f'@{"-".join(clip)}'
 
     try:
       note_id = self.deck.note_id.format(
@@ -347,23 +369,20 @@ class DeckParser:
     self.deck.add_note(
       Note(note_id, [Field(question), answer], self.deck.tags, direction))
 
-  def _try_parse_clip(self, input, video):
+  def _try_parse_clip(self, input):
+    clip = None
+
     if not input.startswith("@"):
-      return input
+      return (clip, input)
 
     parts = input.split(maxsplit=1)
-
     if len(parts) >= 1:
       clip = parts[0].removeprefix("@").split("-")
-      if len(clip) == 2:
-        video.clip(clip[0], clip[1])
-      elif len(clip) == 1:
-        video.snapshot(clip[0])
-      else:
+      if len(clip) < 1 or len(clip) > 2:
         raise ValueError(f"Invalid clip specification {repr(parts[0])} ({self.where()})")
 
     # Return rest of input
     if len(parts) == 2:
-      return parts[1]
+      return (clip, parts[1])
     else:
-      return ""
+      return (clip, "")

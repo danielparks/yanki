@@ -177,6 +177,7 @@ def htmlize_deck(deck, path_prefix=""):
         <div class="note">
           <h3>{note.fields[0].render_html(path_prefix)}</h3>
           {note.fields[1].render_html(path_prefix)}
+          <p class="note_id">{h(note.note_id)}</p>
         </div>"""
 
   return textwrap.dedent(output + f"""

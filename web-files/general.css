@@ -11,3 +11,7 @@ div.note {
 img, video {
   height: 300px;
 }
+
+.note_id {
+  font-family: monospace;
+}
