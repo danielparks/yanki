@@ -28,6 +28,9 @@ def cli():
     help='Produce HTML summary of deck rather than .apkg file.')
   parser.add_argument('--serve-http', action='store_true',
     help='Serve HTML summary of deck on localhost:8000.')
+  parser.add_argument('--dump-videos', action='store_true',
+    help='Make sure the videos from the deck are downloaded to the cache and '
+      + 'display the path to each one.')
   parser.add_argument('-o', '--output',
     help=('Path to save decks to. Defaults to saving indivdual decks to their '
       + 'own files named after their sources, but with the extension .apkg.'))
@@ -53,6 +56,8 @@ def cli():
 
   if args.serve_http:
     return serve_http(args, decks)
+  elif args.dump_videos:
+    return dump_videos(args, decks)
 
   package = genanki.Package([]) # Only used with --output
   for deck in decks:
@@ -187,3 +192,10 @@ def htmlize_deck(deck, path_prefix=""):
 
 def h(s):
   return html.escape(s)
+
+def dump_videos(args, decks):
+  for deck in decks:
+    print(f'title: {deck.config.title}')
+    for id, note in deck.notes.items():
+      paths = [path for field in note.fields for path in field.media_paths()]
+      print(f'{", ".join(paths)} {note.fields[0]}')
