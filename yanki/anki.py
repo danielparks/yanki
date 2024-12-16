@@ -229,6 +229,9 @@ class DeckParser:
     self.parsed = []
     return parsed
 
+  def error(self, message):
+    sys.exit(f"Error in {self.where()}: {message}")
+
   def where(self):
     return f"{self.path}, line {self.line_number}"
 
@@ -256,8 +259,7 @@ class DeckParser:
     if line != unindented:
       # Line is indented and thus a continuation of a note
       if len(self.note) == 0:
-        # FIXME terrible error message
-        raise ValueError(f"Found indented line with no preceding line ({self.where()})")
+        self.error('Found indented line with no preceding unindented line.')
 
       if self.note_config is None:
         self.note_config = copy(self.deck.config)
@@ -289,29 +291,44 @@ class DeckParser:
       # Quotes mean to use the line as-is (add the newline back):
       return line_chomped[1:-1] + line[len(line_chomped):]
 
-    # FIXME what about reseting the config for the next note?
-    if line.startswith('title:'):
-      config.title = line.removeprefix('title:').strip()
-    elif line.startswith('tags:'):
-      config.tags = line.removeprefix('tags:').split()
-    elif line.startswith('crop:'):
-      config.crop = line.removeprefix('crop:').strip()
-    elif line.startswith('format:'):
-      config.format = line.removeprefix('format:').strip()
-    elif line.startswith('trim:'):
-      config.set_trim(line.removeprefix('trim:').strip())
-    elif line.startswith('slow:'):
-      config.add_slow(line.removeprefix('slow:').strip())
-    elif line.startswith('audio:'):
-      config.set_audio(line.removeprefix('audio:').strip())
-    elif line.startswith('video:'):
-      config.set_video(line.removeprefix('video:').strip())
-    elif line.startswith('note_id'):
-      config.note_id = line.removeprefix('note_id:').strip()
-    else:
-      return line
+    try:
+      if line.startswith('title:'):
+        config.title = line.removeprefix('title:').strip()
+      elif line.startswith('tags:'):
+        config.tags = line.removeprefix('tags:').split()
+      elif line.startswith('crop:'):
+        config.crop = line.removeprefix('crop:').strip()
+      elif line.startswith('format:'):
+        config.format = line.removeprefix('format:').strip()
+      elif line.startswith('trim:'):
+        config.set_trim(line.removeprefix('trim:').strip())
+      elif line.startswith('slow:'):
+        config.add_slow(line.removeprefix('slow:').strip())
+      elif line.startswith('audio:'):
+        config.set_audio(line.removeprefix('audio:').strip())
+      elif line.startswith('video:'):
+        config.set_video(line.removeprefix('video:').strip())
+      elif line.startswith('note_id'):
+        note_id = line.removeprefix('note_id:').strip()
+        self._check_note_id(note_id)
+        config.note_id = note_id
+      else:
+        return line
+    except ValueError as error:
+      self.error(error)
 
     return None
+
+  def _check_note_id(self, note_id_format):
+    try:
+      note_id_format.format(
+        url='url',
+        clip='@clip',
+        direction='<->',
+        question='question',
+      )
+    except KeyError as error:
+      self.error(f'Unknown variable in note_id format: {error}')
 
   def _finish_note(self):
     try:
@@ -327,20 +344,23 @@ class DeckParser:
 
     config = self.note_config or self.deck.config
 
-    video = Video(video_url, cache_path=self.cache_path)
-    video.audio(config.audio)
-    video.video(config.video)
-    if config.crop:
-      video.crop(config.crop)
-    if config.format:
-      video.format(config.format)
+    try:
+      video = Video(video_url, cache_path=self.cache_path)
+      video.audio(config.audio)
+      video.video(config.video)
+      if config.crop:
+        video.crop(config.crop)
+      if config.format:
+        video.format(config.format)
+    except ValueError as error:
+      self.error(error)
 
     # Check for @time or @start-end
     (clip, rest) = self._try_parse_clip(rest)
 
     if clip is not None:
       if config.trim is not None:
-        raise ValueError(f'Clip (@{"-".join(clip)}) is incompatible with trim')
+        self.error(f'Clip (@{"-".join(clip)}) is incompatible with “trim:”.')
       elif len(clip) == 1:
         video.snapshot(clip[0])
       elif len(clip) == 2:
@@ -386,36 +406,34 @@ class DeckParser:
     else:
       clip = f'@{"-".join(clip)}'
 
-    try:
-      note_id = config.note_id.format(
-        url=video_url,
-        clip=clip,
-        direction=direction,
-        question=question,
-      )
-    except KeyError as error:
-      # FIXME we don’t know the line number and filename for this since note_id
-      # was set elsewhere.
-      sys.exit(f'Unknown variable in note_id format: {error}')
+    note_id = config.note_id.format(
+      url=video_url,
+      clip=clip,
+      direction=direction,
+      question=question,
+    )
 
-    self.deck.add_note(
-      Note(note_id, [Field(question), answer], config.tags, direction))
+    try:
+      self.deck.add_note(
+        Note(note_id, [Field(question), answer], config.tags, direction))
+    except LookupError as error:
+      self.error(error)
     self._reset_note()
 
   def _try_parse_clip(self, input):
     clip = None
 
-    if not input.startswith("@"):
+    if not input.startswith('@'):
       return (clip, input)
 
     parts = input.split(maxsplit=1)
     if len(parts) >= 1:
-      clip = parts[0].removeprefix("@").split("-")
-      if len(clip) < 1 or len(clip) > 2:
-        raise ValueError(f"Invalid clip specification {repr(parts[0])} ({self.where()})")
+      clip = parts[0].removeprefix('@').split('-')
+      if len(clip) < 1 or len(clip) > 2 or clip[0] == '':
+        self.error(f'Invalid clip specification {repr(parts[0])}.')
 
     # Return rest of input
     if len(parts) == 2:
       return (clip, parts[1])
     else:
-      return (clip, "")
+      return (clip, '')

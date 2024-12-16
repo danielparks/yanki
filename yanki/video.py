@@ -17,7 +17,7 @@ YT_DLP_OPTIONS = {
 def yt_url_to_id(url):
   url_info = urllib.parse.urlparse(url)
   query = urllib.parse.parse_qs(url_info.query)
-  if len(query['v']) != 1:
+  if len(query.get('v', [])) != 1:
     raise ValueError(f"Expected exactly one v parameter in URL: {url}")
   return query['v'][0]
 
