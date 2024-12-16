@@ -1,25 +1,22 @@
 title: Test deck::Partial slow
 crop: in_h:in_h
 note_id: {question}
+trim: 137F-199F
 
-slow: 0:00-0:01 * 20
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1412F-1442F slow: 0:00-0:01 * 20
+slow: 0:00-0:01 * 4
+# config has to start on new line
+https://www.youtube.com/watch?v=YBKx3Lzs-bU slow: 1:00-0:01 * 4
 
-slow:
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1412F-1442F slow none
+https://www.youtube.com/watch?v=YBKx3Lzs-bU slow none
+  slow:
 
-slow: 0.5 - * 8
+https://www.youtube.com/watch?v=YBKx3Lzs-bU
+  slow: -0.5 * 4
+  "slow: -0.5 * 4"
 
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1412F-1442F
-  slow: -0.1 * 40
-  "slow: -0.1 * 40"
+https://www.youtube.com/watch?v=YBKx3Lzs-bU
+  deck config slow 0:00-0:01 * 4
 
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1412F-1442F
-  deck config slow 0.5 - * 8
-
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1412F-1442F slow: 0 - * 8
-  slow: 0 - * 8
-
-https://www.youtube.com/watch?v=pxyi6YW8gOE
-  chocolate
-  slow: 0 - 0.5 * 20
+slow: 1.0 - * 2
+https://www.youtube.com/watch?v=YBKx3Lzs-bU
+  "slow: 1.0 - * 2"
