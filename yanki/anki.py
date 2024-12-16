@@ -283,11 +283,11 @@ class DeckParser:
 
   def _check_for_config(self, line, config):
     # Line without newline
-    line_per_se = line.rstrip('\n\r')
+    line_chomped = line.rstrip('\n\r')
 
-    if line.startswith('"') and line_per_se.endswith('"\n'):
+    if line.startswith('"') and line_chomped.endswith('"'):
       # Quotes mean to use the line as-is (add the newline back):
-      return line_per_se[1:-1] + line[len(line_per_se):]
+      return line_chomped[1:-1] + line[len(line_chomped):]
 
     # FIXME what about reseting the config for the next note?
     if line.startswith('title:'):
