@@ -8,10 +8,12 @@ import logging
 import os
 from pathlib import PosixPath
 import re
+import subprocess
 import sys
 import textwrap
 
 from yanki.anki import DeckParser
+from yanki.video import Video
 
 LOGGER = logging.getLogger(__name__)
 
@@ -31,9 +33,12 @@ def cli():
   parser.add_argument('--dump-videos', action='store_true',
     help='Make sure the videos from the deck are downloaded to the cache and '
       + 'display the path to each one.')
+  parser.add_argument('--open-video', action='store_true',
+    help='Instead of processing deck files, download the passed video URL, '
+      + 'process it, and pass it to the `open` command.')
   parser.add_argument('-o', '--output',
-    help=('Path to save decks to. Defaults to saving indivdual decks to their '
-      + 'own files named after their sources, but with the extension .apkg.'))
+    help='Path to save decks to. Defaults to saving indivdual decks to their '
+      + 'own files named after their sources, but with the extension .apkg.')
   parser.add_argument('path', nargs='*')
   args = parser.parse_args()
 
@@ -49,6 +54,9 @@ def cli():
   logging.basicConfig(level=level, format='%(message)s')
 
   os.makedirs(args.cache, exist_ok=True)
+
+  if args.open_video:
+    return open_video(args, args.path)
 
   input = fileinput.input(files=args.path, encoding="utf-8")
   parser = DeckParser(cache_path=args.cache)
@@ -74,6 +82,20 @@ def cli():
     LOGGER.info(f"Wrote decks to file {args.output}")
 
   return 0
+
+def open_video(args, urls):
+  for url in urls:
+    video = Video(url, cache_path=args.cache)
+    open_in_app([video.processed_video()])
+
+def open_in_app(arguments):
+  # FIXME only works on macOS and Linux; should handle command not found.
+  if os.uname().sysname == 'Darwin':
+    subprocess.run(['open', *arguments], check=True)
+  elif os.uname().sysname == 'Linux':
+    subprocess.run(['xdg-open', *arguments], check=True)
+  else:
+    raise RuntimeError(f'Don’t know how to open {repr(arguments)} on this platform.')
 
 def serve_http(args, decks):
   deck_links = []
