@@ -4,8 +4,8 @@ tags: lesson_12 vocabulary
 audio: strip
 
 https://www.youtube.com/watch?v=z4TGBHXWqdk AFTERNOON
-https://www.youtube.com/watch?v=sCP7LjzZXfY AFTERNOON-every
-https://www.youtube.com/watch?v=QuafKMvHhsM AFTERNOON-all
+https://www.youtube.com/watch?v=sCP7LjzZXfY EVERY-AFTERNOON
+https://www.youtube.com/watch?v=QuafKMvHhsM ALL-AFTERNOON
 https://www.youtube.com/watch?v=6Ag2Q2J9DAU DAY
 https://www.youtube.com/watch?v=GHxNs_IK3Ak ALL-DAY
 https://www.youtube.com/watch?v=selNp_zlyEk EQUAL / tie / fair / justice
@@ -17,11 +17,14 @@ https://www.youtube.com/watch?v=IO0cNQ8OO-4 HOUR / 1-HOUR
 https://www.youtube.com/watch?v=37PZEddIVlA 6-HOURS
 https://www.youtube.com/watch?v=YBJ5rjfxgdc HALF-HOUR
 https://www.youtube.com/watch?v=cNyi0VgluXo MINUTE / SECOND (on hand)
+  trim: 9F-54F
 https://www.youtube.com/watch?v=LTGfCCs0ifE MINUTE / 1-MINUTE (on wrist)
+  trim: 12F-57F
 https://www.youtube.com/watch?v=lWnN5Pnt-Rg 7-MINUTES (on wrist)
 https://www.youtube.com/watch?v=E8kYIwQhg_4 15-MINUTES
 https://www.youtube.com/watch?v=lXVIBinAmQ8 MONDAY
 https://www.youtube.com/watch?v=LGqaMCk2-_Q EVERY-MONDAY
+  trim: 22F-
 https://www.youtube.com/watch?v=YLuGuPS6NU8 MONTH
   trim: 45F-101F
 https://www.youtube.com/watch?v=nYuM6Vz4ApQ MONTHLY / every month
@@ -48,27 +51,34 @@ https://www.youtube.com/watch?v=Gh5pD88Vgw0 SUNDAY (circle)
 https://www.youtube.com/watch?v=EUoby_wzGzY SUNDAY (press down) / WONDERFUL
 https://www.youtube.com/watch?v=bmy6YRYlW0Y SUNDAY (press up)
 https://www.youtube.com/watch?v=8P8eVD4K2jQ EVERY-SUNDAY
+  trim: 30F-88F
 https://www.youtube.com/watch?v=PJs5VaRTMak THURSDAY-[H-version]
 https://www.youtube.com/watch?v=avbqdo5HoQc THURSDAY-[TH-version]
 https://www.youtube.com/watch?v=SJ8A4zsqsO4 EVERY-THURSDAY
 https://www.youtube.com/watch?v=JKCbn8k968s TUESDAY
 https://www.youtube.com/watch?v=MWwg3ZYZCoE EVERY-TUESDAY
+  trim: 37F-87F
 https://www.youtube.com/watch?v=btWz421kwLY WEDNESDAY
 https://www.youtube.com/watch?v=TtBKhQK2tis EVERY-WEDNESDAY
 https://www.youtube.com/watch?v=N6giWOcMj2U WEEK
 https://www.youtube.com/watch?v=XOq4gECFehI TWO-WEEKS
 https://www.youtube.com/watch?v=mCeATJ3-gKA ONCE-a-WEEK
+  trim: 15F-63F
 https://www.youtube.com/watch?v=hYzh6jl9Xec TWICE-a-WEEK
 https://www.youtube.com/watch?v=7ZdjfRn-o6U THRICE-a-WEEK
 https://www.youtube.com/watch?v=xMrT3AcRL2Y WEEKLY
+  trim: 28F-75F
 https://www.youtube.com/watch?v=7aWwoS24vxE LAST-WEEK
 https://www.youtube.com/watch?v=6h0sXdprq8I NEXT-WEEK (two handed)
 https://www.youtube.com/watch?v=FIxUWqNwmfE NEXT-WEEK (underneath version)
 https://www.youtube.com/watch?v=hlmVYpLfaT0 NEXT-WEEK (one handed)
 https://www.youtube.com/watch?v=o0D-dVMQr1E WEEKEND
-# WHAT-DO is in lesson 5
-# YESTERDAY is in lesson 6, but didn’t have this:
-https://www.youtube.com/watch?v=WaIrad_avQI YESTERDAY (initialized)
+https://www.youtube.com/watch?v=W9EH9XSSIu0 WHAT-DO
+  trim: 10F-58F
+https://www.youtube.com/watch?v=BrSb83b9kbY YESTERDAY
+  trim: 13F-72F
+https://www.youtube.com/watch?v=WaIrad_avQI -> YESTERDAY (initialized)
+  trim: 30F-89F
 
 # From video (https://www.youtube.com/watch?v=jSbhpRD86JE)
 tags: lesson_12 vocabulary extra
@@ -83,3 +93,4 @@ https://www.youtube.com/watch?v=AhwgtWiATWE HOME WORK (casual)
 # Can’t find ONCE, THRICE, FOUR-TIMES, etc.
 https://www.youtube.com/watch?v=Wwz4hcFIukw TWICE
 https://www.youtube.com/watch?v=JaLvpaOrpjc USED / SECOND-HAND
+  trim: 18F-85F
