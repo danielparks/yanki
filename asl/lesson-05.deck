@@ -1,3 +1,4 @@
+# https://www.lifeprint.com/asl101/lessons/lesson05.htm
 title: Lifeprint ASL::Vocabulary::Lesson 05 — Actions
 tags: lesson_05 vocabulary
 audio: strip
@@ -11,6 +12,8 @@ https://www.youtube.com/watch?v=vK4GwJaDcWU -> COMPUTER
 https://www.youtube.com/watch?v=IEVgcJA3JWk DOCTOR
 https://www.youtube.com/watch?v=1t6GrmgKN5U -> DOCTOR
 https://www.youtube.com/watch?v=u7HYWBcxh1w DOWNLOAD
+https://www.youtube.com/watch?v=3Dwnb85A_cE STREAMING
+  trim: 6F-63F
 https://www.youtube.com/watch?v=_fYdWJp5-to DRIVE-there
 https://www.youtube.com/watch?v=hgImSdRJwug DRIVE-here
 https://www.youtube.com/watch?v=QPKfFDenOPg EMAIL
@@ -25,6 +28,7 @@ https://www.youtube.com/watch?v=n0Xb58PVX_A HOME
 https://www.youtube.com/watch?v=YirRi12-zWo IN
 https://www.youtube.com/watch?v=8Bm2uG-suEA -> INTERNET
 https://www.youtube.com/watch?v=dnieeX_0vug INTERNET / NETWORK
+https://www.youtube.com/watch?v=ApBX0hnLN6E website / the web / WWW / WW
 https://www.youtube.com/watch?v=OxKJDUAYsjg MOVE
 https://www.youtube.com/watch?v=ACBYkV6CDxI MOVIE
 https://www.youtube.com/watch?v=oz63G93uNGk OUT
@@ -58,9 +62,14 @@ https://www.youtube.com/watch?v=kPjFRjpaTm4 POSSIBLE / CAN
 https://www.youtube.com/watch?v=yFH1f6mgFwI REARRANGE / MOVE things around
 https://www.youtube.com/watch?v=d8v3pe1e1Oo WALK (CL: 1)
 https://www.youtube.com/watch?v=A287sU6gWLk WRISTWATCH
-https://www.youtube.com/watch?v=ApBX0hnLN6E website / the web / WWW / WW
+https://www.youtube.com/watch?v=cHpPKJ7GXoU
+  VIDEO-CHAT / teleconference / Zoom / Skype
+  / [two-way-video-communication in general]
 
-# From video
+  (Directional)
+  trim: 18F-69F
+
+# From video (https://www.youtube.com/watch?v=4MWPlmFX8sk)
 https://www.youtube.com/watch?v=W9EH9XSSIu0 WHAT-DO
 https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
 https://www.youtube.com/watch?v=JPrGWEvbmgE BUS
@@ -76,3 +85,27 @@ https://www.youtube.com/watch?v=XGNaDcecMh0 DOT / period (index finger version)
 https://www.youtube.com/watch?v=17gZsl0jClE GAME
 https://www.youtube.com/watch?v=FFVj-39E94c EVERYONE / EVERYBODY
 https://www.youtube.com/watch?v=fn1PTkU1fGI GO-OUT / LEAVE
+
+# From story (https://www.youtube.com/watch?v=T3TP65mkfQc)
+https://www.youtube.com/watch?v=nrmuwGd7wMA TEXT-[verb-form/texted]
+  trim: 15F-55F
+https://www.youtube.com/watch?v=_QQODnTMuZg
+  trim: 25F-75F
+  TEXT-[texting/present-participle/gerund]
+https://www.youtube.com/watch?v=t17CyIOXPS4 FACEBOOK
+  trim: 15F-63F
+https://www.youtube.com/watch?v=Pt_QBeW9xMg LOOK-AT
+  trim: 17F-64F
+https://www.youtube.com/watch?v=7XQiv-PxecU SEE / VISION
+  trim: 14F-63F
+https://www.youtube.com/watch?v=fka6bGd2TX8 SAY
+  trim: 12F-49F
+https://www.youtube.com/watch?v=ZN_y94vSCcc SAY-NO-TO-ME
+  trim: 13F-58F
+https://www.youtube.com/watch?v=OMC3x4UxQVQ
+  trim: 13F-61F
+  [one-person]-SAY-NO-TO-[other-person]
+https://www.youtube.com/watch?v=SvfopPYaJJU TELL
+  trim: 7F-68F
+https://www.youtube.com/watch?v=ApOIQTLewCw [one-person]-TELL-[other-person]
+  trim: 16F-72F
