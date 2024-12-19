@@ -58,39 +58,42 @@ def cli():
     level = logging.WARN
   logging.basicConfig(level=level, format='%(message)s')
 
-  os.makedirs(args.cache, exist_ok=True)
+  try:
+    os.makedirs(args.cache, exist_ok=True)
 
-  if args.open_videos_from_file:
-    for url in fileinput.input(files=args.path, encoding='utf-8'):
-      open_video(args, [url])
+    if args.open_videos_from_file:
+      for url in fileinput.input(files=args.path, encoding='utf-8'):
+        open_video(args, [url])
+      return 0
+    elif args.open_video:
+      return open_video(args, args.path)
+
+    input = fileinput.input(files=args.path, encoding='utf-8')
+    parser = DeckParser(cache_path=args.cache)
+    decks = parser.parse_input(input)
+
+    if args.serve_http:
+      return serve_http(args, decks)
+    elif args.dump_videos:
+      return dump_videos(args, decks)
+
+    package = genanki.Package([]) # Only used with --output
+    for deck in decks:
+      if args.html:
+        print(htmlize_deck(deck, path_prefix=args.cache))
+      elif args.output == None:
+        # Automatically figured out the path to save to.
+        deck.save_to_file()
+      else:
+        deck.save_to_package(package)
+
+    if args.output:
+      package.write_to_file(args.output)
+      LOGGER.info(f"Wrote decks to file {args.output}")
+
     return 0
-  elif args.open_video:
-    return open_video(args, args.path)
-
-  input = fileinput.input(files=args.path, encoding='utf-8')
-  parser = DeckParser(cache_path=args.cache)
-  decks = parser.parse_input(input)
-
-  if args.serve_http:
-    return serve_http(args, decks)
-  elif args.dump_videos:
-    return dump_videos(args, decks)
-
-  package = genanki.Package([]) # Only used with --output
-  for deck in decks:
-    if args.html:
-      print(htmlize_deck(deck, path_prefix=args.cache))
-    elif args.output == None:
-      # Automatically figured out the path to save to.
-      deck.save_to_file()
-    else:
-      deck.save_to_package(package)
-
-  if args.output:
-    package.write_to_file(args.output)
-    LOGGER.info(f"Wrote decks to file {args.output}")
-
-  return 0
+  except KeyboardInterrupt:
+    return 130
 
 def open_video(args, urls):
   for url in urls:
@@ -136,10 +139,7 @@ def serve_http(args, decks):
   Handler = functools.partial(
     server.SimpleHTTPRequestHandler,
     directory=args.cache)
-  try:
-    server.HTTPServer(('', 8000), Handler).serve_forever()
-  except KeyboardInterrupt:
-    return 130
+  server.HTTPServer(('', 8000), Handler).serve_forever()
 
 def path_to_web_files():
   from os.path import join, dirname, realpath
