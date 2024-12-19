@@ -67,8 +67,11 @@ https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
   trim: 14F-62F
 https://www.youtube.com/watch?v=toVlJsSPSiI -> STUDENT (casual)
   trim: 6F-53F
-https://www.youtube.com/watch?v=LmmA7ltuhuk TEACHING
-  trim: 12F-68F
+# Teach is the first part of the TEACH-ME video for some reason.
+https://www.youtube.com/watch?v=BV6mXa4Gp58 @12F-68F TEACH
+# I don’t feel like we need the gerund for this one:
+#https://www.youtube.com/watch?v=LmmA7ltuhuk TEACHING
+#  trim: 12F-68F
 
 # From video (https://www.youtube.com/watch?v=DaMjr4AfYA0)
 https://www.youtube.com/watch?v=TdCu_nhXVno LESSON
