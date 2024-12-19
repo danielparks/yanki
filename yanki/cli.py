@@ -36,6 +36,11 @@ def cli():
   parser.add_argument('--open-video', action='store_true',
     help='Instead of processing deck files, download the passed video URL, '
       + 'process it, and pass it to the `open` command.')
+  parser.add_argument('--open-videos-from-file', action='store_true',
+    help='Instead of processing deck files, read files containing video URLs '
+      + 'from the arguments or stdin, download the videos, process them, and '
+      + 'pass them to the `open` command. You may use this without arguments '
+      + 'if you want to enter the URLs and have them opened after each line.')
   parser.add_argument('-o', '--output',
     help='Path to save decks to. Defaults to saving indivdual decks to their '
       + 'own files named after their sources, but with the extension .apkg.')
@@ -55,10 +60,14 @@ def cli():
 
   os.makedirs(args.cache, exist_ok=True)
 
-  if args.open_video:
+  if args.open_videos_from_file:
+    for url in fileinput.input(files=args.path, encoding='utf-8'):
+      open_video(args, [url])
+    return 0
+  elif args.open_video:
     return open_video(args, args.path)
 
-  input = fileinput.input(files=args.path, encoding="utf-8")
+  input = fileinput.input(files=args.path, encoding='utf-8')
   parser = DeckParser(cache_path=args.cache)
   decks = parser.parse_input(input)
 
