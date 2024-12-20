@@ -63,7 +63,9 @@ def cli():
 
     if args.open_videos_from_file:
       for url in fileinput.input(files=args.path, encoding='utf-8'):
-        open_video(args, [url])
+        url = url.strip()
+        if url:
+          open_video(args, [url])
       return 0
     elif args.open_video:
       return open_video(args, args.path)
