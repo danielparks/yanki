@@ -1,4 +1,4 @@
-from copy import copy
+from copy import copy, deepcopy
 import genanki
 import hashlib
 import html
@@ -107,6 +107,31 @@ class Config:
     self.audio = 'include'
     self.video = 'include'
     self.note_id = '{deck_id}__{url} {clip} {direction}'
+
+  def update_tags(self, input):
+    new_tags = input.split()
+    found_bare_tag = False
+
+    for tag in new_tags:
+      if tag.startswith('+'):
+        self.tags.append(tag[1:])
+        new_tags = None
+      elif tag.startswith('-'):
+        try:
+          self.tags.remove(tag[1:])
+        except ValueError:
+          pass
+        new_tags = None
+      else:
+        # A tag without a + or - prefix, which implies we’re replacing all tags.
+        # FIXME: quoting so a tag with a + or - prefix can be used easily.
+        found_bare_tag = True
+
+    if found_bare_tag:
+      if new_tags is None:
+        raise ValueError(
+          f'Invalid mix of changing tags with setting tags: {input.strip()}')
+      self.tags = new_tags
 
   def add_slow(self, slow_spec):
     if slow_spec.strip() == '':
@@ -262,7 +287,7 @@ class DeckParser:
         self.error('Found indented line with no preceding unindented line.')
 
       if self.note_config is None:
-        self.note_config = copy(self.deck.config)
+        self.note_config = deepcopy(self.deck.config)
 
       unindented = self._check_for_config(unindented, self.note_config)
       if unindented is not None:
@@ -295,7 +320,7 @@ class DeckParser:
       if line.startswith('title:'):
         config.title = line.removeprefix('title:').strip()
       elif line.startswith('tags:'):
-        config.tags = line.removeprefix('tags:').split()
+        config.update_tags(line.removeprefix('tags:'))
       elif line.startswith('crop:'):
         config.crop = line.removeprefix('crop:').strip()
       elif line.startswith('format:'):
