@@ -14,11 +14,14 @@ YT_DLP_OPTIONS = {
   'skip_unavailable_fragments': False,
 }
 
+class BadURL(ValueError):
+  pass
+
 def yt_url_to_id(url):
   url_info = urllib.parse.urlparse(url)
   query = urllib.parse.parse_qs(url_info.query)
   if len(query.get('v', [])) != 1:
-    raise ValueError(f"Expected exactly one v parameter in URL: {url}")
+    raise BadURL(f"Expected exactly one v parameter in URL: {url}")
   return query['v'][0]
 
 NON_ZERO_DIGITS = set('123456789')
@@ -34,6 +37,8 @@ class Video:
     self.url = url
     self.cache_path = cache_path
     self.id = yt_url_to_id(url)
+    if '/' in self.id:
+      raise BadURL(f'Invalid “/” in video ID: {repr(self.id)}')
     self._info = None
     self._raw_metadata = None
     self._crop = None

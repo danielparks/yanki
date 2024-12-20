@@ -11,9 +11,10 @@ import re
 import subprocess
 import sys
 import textwrap
+import yt_dlp
 
 from yanki.anki import DeckParser
-from yanki.video import Video
+from yanki.video import Video, BadURL
 
 LOGGER = logging.getLogger(__name__)
 
@@ -65,7 +66,13 @@ def cli():
       for url in fileinput.input(files=args.path, encoding='utf-8'):
         url = url.strip()
         if url:
-          open_video(args, [url])
+          try:
+            open_video(args, [url])
+          except BadURL as error:
+            print(f'Error: {error}')
+          except yt_dlp.utils.DownloadError as error:
+            # yt_dlp prints the error itself.
+            pass
       return 0
     elif args.open_video:
       return open_video(args, args.path)
