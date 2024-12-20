@@ -35,3 +35,23 @@ https://www.youtube.com/watch?v=Th7pOg8YbCU YOUR TEACHER NAME WHAT?
 tags: lesson_01 vocabulary extra
 https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
 ```
+
+### Note GUIDs
+
+Anki uses the GUID (Globally Unique ID) field to identify notes for update.
+Yanki generates GUIDs based on the deck ID (generated from the deck title), the
+video URL, the clip of the video (e.g. `@0:01-0:02`), and the direction of the
+note (e.g. `<->`).
+
+You can customize how the GUID is generated with the `note_id` configuration:
+
+    # Default:
+    note_id: {url} {clip} {direction}
+
+    # Only use the text "question":
+    note_id: {question}
+
+The deck ID is always included. Leaving it out would not be very useful; if you
+import a note in deck New that has the same GUID as a note in deck Existing, the
+note in Existing will be updated but will stay in deck Existing. Anki won’t give
+a warning.
