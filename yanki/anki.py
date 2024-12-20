@@ -92,7 +92,7 @@ class Note:
     deck.add_note(genanki.Note(
       model=model,
       fields=[field.render_anki() for field in self.fields],
-      guid=genanki.guid_for(deck.deck_id, self.note_id),
+      guid=genanki.guid_for(self.note_id.format(deck_id=deck.deck_id)),
       tags=self.tags,
     ))
 
@@ -106,7 +106,7 @@ class Config:
     self.trim = None
     self.audio = 'include'
     self.video = 'include'
-    self.note_id = '{url} {clip} {direction}'
+    self.note_id = '{deck_id}__{url} {clip} {direction}'
 
   def add_slow(self, slow_spec):
     if slow_spec.strip() == '':
@@ -322,6 +322,7 @@ class DeckParser:
   def _check_note_id(self, note_id_format):
     try:
       note_id_format.format(
+        deck_id='{deck_id}',
         url='url',
         clip='@clip',
         direction='<->',
@@ -406,7 +407,10 @@ class DeckParser:
     else:
       clip = f'@{"-".join(clip)}'
 
+    # This is a minor kludge: we don’t know the deck ID yet, so we replace it
+    # with itself and then call format() again when we know it.
     note_id = config.note_id.format(
+      deck_id='{deck_id}',
       url=video_url,
       clip=clip,
       direction=direction,

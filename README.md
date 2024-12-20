@@ -46,12 +46,18 @@ note (e.g. `<->`).
 You can customize how the GUID is generated with the `note_id` configuration:
 
     # Default:
-    note_id: {url} {clip} {direction}
+    note_id: {deck_id}__{url} {clip} {direction}
 
-    # Only use the text "question":
-    note_id: {question}
+    # Use the text "question" that corresponds to the video answer:
+    note_id: {deck_id} {question}
 
-The deck ID is always included. Leaving it out would not be very useful; if you
-import a note in deck New that has the same GUID as a note in deck Existing, the
-note in Existing will be updated but will stay in deck Existing. Anki won’t give
-a warning.
+Leaving out `{deck_id}` can be useful if you may need to move notes between
+decks later on. The import will not actually move notes from one deck to
+another, but it will update them in the other deck, and then you can manually
+move them. This is useful if you want to keep your study progress.
+
+If you do leave out `{deck_id}`, you should probably include something else to
+make sure the GUID is unique outside of your repository.
+
+    title: Really Cool Cards::subdeck 1
+    note_id: Really Cool Cards {url} {clip} {direction}
