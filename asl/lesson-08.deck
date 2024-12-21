@@ -207,7 +207,6 @@ https://www.youtube.com/watch?v=kDyFU6UL3qk DRESS / GOWN
 https://www.youtube.com/watch?v=HPSGvj3-kwA SKIRT
   trim: 16F-75F
 
-# Continued from clothes
 tags: +extra
 https://www.youtube.com/watch?v=9mlTPY3sd6E GET-DRESSED / COSTUME
   trim: 11F-53F
@@ -239,17 +238,8 @@ tags: -extra
 
 # From video (https://www.youtube.com/watch?v=Xn0F7rGA-3c)
 tags: +extra
-# NEVER is in lesson 11.
-# SOME is in lesson 10.
 # HARD-OF-HEARING is in lesson 13, but I want to test moving decks.
 https://www.youtube.com/watch?v=gz_R3F29Je0 HARD-OF-HEARING
   trim: 11F-72F
-# PEOPLE is in lesson 11.
-https://www.youtube.com/watch?v=6_5BxE7yBEo BORING (nose version)
-  trim: 11F-62F
-https://www.youtube.com/watch?v=LxJMRoDQMaw TWIN / TWINS
-  trim: 24F-80F
 https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
   trim: 9F-73F
-# No video for BUCKLE.
-# MAYBE is in lesson 37.
