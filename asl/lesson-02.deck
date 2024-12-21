@@ -78,18 +78,11 @@ https://www.youtube.com/watch?v=jJ7aBDd_TvI ADDRESS
 https://www.youtube.com/watch?v=1WVL-cc4-TY THEIR (plural)
   trim: 5F-62F
 
-tags: lesson_02 vocabulary extra Timo
-https://www.youtube.com/watch?v=7njIHQfii8o BROTHER [BOY + SAME]
-  trim: 15F-78F
-https://www.youtube.com/watch?v=aLQI0J28Orc SISTER [GIRL + SAME]
-  trim: 14F-75F
-
-tags: lesson_02 vocabulary phrase extra
+tags: +extra
 https://www.youtube.com/watch?v=1wvGNvkRtNY HOW YOU?
   trim: 12F-123F
 
 # From video (https://www.youtube.com/watch?v=U0qG639Vx-0)
-tags: lesson_02 vocabulary extra
 # LESSON is in lesson 1.
 # OH-I-SEE is in lesson 11.
 https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
@@ -116,3 +109,10 @@ https://www.youtube.com/watch?v=xVruqalpcXs grandson
   trim: 11F-79F
 https://www.youtube.com/watch?v=Yn_g8dWClaE granddaughter
   trim: 14F-83F
+
+# From my ASL teacher
+tags: +Timo
+https://www.youtube.com/watch?v=7njIHQfii8o BROTHER [BOY + SAME]
+  trim: 15F-78F
+https://www.youtube.com/watch?v=aLQI0J28Orc SISTER [GIRL + SAME]
+  trim: 14F-75F
