@@ -9,20 +9,21 @@ note_id: Lifeprint ASL:: {url} {clip} {direction}
 # answer, or maybe in sequence? That would be 5 cards instead of 8.
 https://www.youtube.com/watch?v=St5PWSrZpOY BACKPACK-[A-hand version]
   trim: 9F-52F
-https://www.youtube.com/watch?v=B9TD7vd2-lo BACKPACK-[C-hand version]
+https://www.youtube.com/watch?v=B9TD7vd2-lo -> BACKPACK-[C-hand version]
   trim: 9F-54F
-https://www.youtube.com/watch?v=iTlF3KqKQUA BACKPACK-[small-C-hand version]
+https://www.youtube.com/watch?v=iTlF3KqKQUA -> BACKPACK-[small-C-hand version]
   trim: 9F-57F
-https://www.youtube.com/watch?v=Le7g5M_zIJQ BACKPACK-[modified-C-hand version]
+https://www.youtube.com/watch?v=Le7g5M_zIJQ -> BACKPACK-[modified-C-hand version]
   trim: 11F-56F
 
 # https://www.lifeprint.com/asl101/pages-signs/b/basket.htm
-https://www.youtube.com/watch?v=54ZibiGrHu8 tall-BASKET
-  trim: 8F-62F
 https://www.youtube.com/watch?v=YvegBgfEEO4 BASKET (typical)
   trim: 17F-67F
+https://www.youtube.com/watch?v=54ZibiGrHu8 tall-BASKET
+  trim: 8F-62F
 https://www.youtube.com/watch?v=I6k9JY_aPTM BASKET-with-handle
   trim: 9F-90F
+  tags: +extra
 
 # https://www.lifeprint.com/asl101/pages-signs/b/battery.htm
 https://www.youtube.com/watch?v=MYZPHcuXGGs BATTERY / ELECTRIC
@@ -91,6 +92,7 @@ https://www.youtube.com/watch?v=-V0Dkeyno2s PANTS (pull up version)
 # Can’t find video for PANTS-[B-hand].
 https://www.youtube.com/watch?v=K-791JkOMv0 pants-POCKET
   trim: 0F-62F
+  tags: +extra
 # This version is so similar I don’t think it’s worth studying.
 # https://www.youtube.com/watch?v=53ir6-NIKl4 pants-POCKET (version 2)
 
@@ -99,12 +101,15 @@ https://www.youtube.com/watch?v=2O5wVw-rlIs FIND / pick-up / discover
   trim: 12F-87F
 
 # https://www.lifeprint.com/asl101/pages-signs/s/shirt.htm
-https://www.youtube.com/watch?v=BLqzpaKkkk4 SHIRT / volunteer / apply
+https://www.youtube.com/watch?v=BLqzpaKkkk4
+  SHIRT / volunteer / apply / candidate
   trim: 5F-84F
-https://www.youtube.com/watch?v=9Rcg3QJiClc SHIRT (two handed version)
+https://www.youtube.com/watch?v=9Rcg3QJiClc -> SHIRT (two handed version)
   trim: 15F-61F
 https://www.youtube.com/watch?v=i14EM0ZbtUY BLOUSE-SHIRT
   trim: 12F-56F
+
+tags: +extra
 https://www.youtube.com/watch?v=eQbb9sn3J1s TEE-SHIRT
   trim: 8F-66F
 https://www.youtube.com/watch?v=gW9D4eutcfc BUTTON-DOWN-SHIRT
@@ -137,12 +142,15 @@ https://www.youtube.com/watch?v=Yd8GXz_nrMA PLAID-SHIRT
   trim: 5F-
 https://www.youtube.com/watch?v=DGfm9blIRJs LOGO-ON-SHIRT-[CL: bent-L]
   trim: 7F-62F
+tags: -extra
 
 # https://www.lifeprint.com/asl101/pages-signs/s/shoes.htm
 https://www.youtube.com/watch?v=Yoi_OLX0IEs SHOES
   trim: 12F-82F
 https://www.youtube.com/watch?v=A4RSlW_e10U SANDALS
   trim: 10F-78F
+
+tags: +extra
 https://www.youtube.com/watch?v=m3GGRM0ZTBY shoe laces / SHOE STRING
   trim: 5F-52F
 https://www.youtube.com/watch?v=ASwNClUOtn0 tie shoes / SHOE TIE
@@ -152,6 +160,7 @@ https://www.youtube.com/watch?v=_jWBHOYsnIY SHOE P-O-L-I-S-H
 https://www.youtube.com/watch?v=KF7M_6Lk66M
   GOODY-GOODY / goody two shoes / holier than thou / pious
   trim: 6F-47F
+tags: -extra
 
 # https://www.lifeprint.com/asl101/pages-signs/s/socks.htm
 https://www.youtube.com/watch?v=arMsuswd_AM SOCKS
@@ -160,21 +169,21 @@ https://www.youtube.com/watch?v=arMsuswd_AM SOCKS
 # https://www.lifeprint.com/asl101/pages-signs/u/underwear.htm
 https://www.youtube.com/watch?v=yKAFC9iyxas UNDERWEAR
   trim: 7F-
+
+tags: +extra
 https://www.youtube.com/watch?v=WKuXSd6HkJ0 -> UNDERWEAR (old version)
   trim: 22F-67F
-  tags: +extra
 https://www.youtube.com/watch?v=BTVavVXqKnU BRA
   trim: 20F-77F
-# This version of bikini seems redundant:
-# https://www.youtube.com/watch?v=wTrbD6Q1BL4 bikini / BRA UNDERWEAR
-#   trim: 27F-88F
+https://www.youtube.com/watch?v=wTrbD6Q1BL4 -> BRA UNDERWEAR / bikini
+  trim: 27F-88F
 https://www.youtube.com/watch?v=WolgARwE0Hg bikini / SWIM BRA UNDERWEAR
   trim: 17F-92F
-  tags: +extra
 https://www.youtube.com/watch?v=F1VYQQSYaP0
   UNDER-WHERE (underwear pun; joke sign)
   trim: 7F-
-  tags: +joke +extra
+  tags: +joke
+tags: -extra
 
 # https://www.lifeprint.com/asl101/pages-signs/w/which.htm
 https://www.youtube.com/watch?v=DlMZXBngGKM WHICH
@@ -183,10 +192,11 @@ https://www.youtube.com/watch?v=DlMZXBngGKM WHICH
 # https://www.lifeprint.com/asl101/pages-signs/z/zip.htm
 https://www.youtube.com/watch?v=8wuLrFkO-SU ZIPPER / ZIP-up
   trim: 11F-64F
-https://www.youtube.com/watch?v=XOLT0_VXgpY ZIP-up-jacket
-  trim: 35F-88F
 https://www.youtube.com/watch?v=m9fxgSPo0s0 Z-I-P / zip code
   trim: 11F-60F
+https://www.youtube.com/watch?v=XOLT0_VXgpY ZIP-up-jacket
+  trim: 35F-88F
+  tags: +extra
 
 # https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm and
 # https://www.lifeprint.com/asl101/pages-signs/d/dress.htm
@@ -196,11 +206,13 @@ https://www.youtube.com/watch?v=kDyFU6UL3qk DRESS / GOWN
   trim: 9F-71F
 https://www.youtube.com/watch?v=HPSGvj3-kwA SKIRT
   trim: 16F-75F
+
+# Continued from clothes
+tags: +extra
 https://www.youtube.com/watch?v=9mlTPY3sd6E GET-DRESSED / COSTUME
   trim: 11F-53F
-# CLOTHES FOLD PUT-away? should some of these (and SHIRT) be extra?
-# https://www.youtube.com/watch?v=qOFvjMNB65M CLOTHES FOLD PUT-away
-#   trim: 15F-93F
+https://www.youtube.com/watch?v=qOFvjMNB65M CLOTHES FOLD PUT-away
+  trim: 15F-93F
 https://www.youtube.com/watch?v=I1KuGaQkOFs HANG-UP-[clothing]
   trim: 14F-72F
 https://www.youtube.com/watch?v=QfqIDcay06E remove clothing / STRIP-[clothing]
@@ -209,7 +221,6 @@ https://www.youtube.com/watch?v=MCT3su2--jA CLOTHES PIN
   trim: 27F-72F
 https://www.youtube.com/watch?v=x_exlrQf0_I -> CLOTHES PIN (two handed version)
   trim: 8F-56F
-
 https://www.youtube.com/watch?v=D4b_EZhusLo LEATHER
   trim: 16F-54F
 https://www.youtube.com/watch?v=5EgaD_yNExo CLOTH / FABRIC / MATERIAL
@@ -224,5 +235,21 @@ https://www.youtube.com/watch?v=SMyvuwhWj1A PULLOVER-SWEATER
   trim: 16F-68F
 https://www.youtube.com/watch?v=ziUdqb9aRr4 SUIT
   trim: 15F-70F
+tags: -extra
 
-# TODO tag some of this extra?
+# From video (https://www.youtube.com/watch?v=Xn0F7rGA-3c)
+tags: +extra
+# NEVER is in lesson 11.
+# SOME is in lesson 10.
+# HARD-OF-HEARING is in lesson 13, but I want to test moving decks.
+https://www.youtube.com/watch?v=gz_R3F29Je0 HARD-OF-HEARING
+  trim: 11F-72F
+# PEOPLE is in lesson 11.
+https://www.youtube.com/watch?v=6_5BxE7yBEo BORING (nose version)
+  trim: 11F-62F
+https://www.youtube.com/watch?v=LxJMRoDQMaw TWIN / TWINS
+  trim: 24F-80F
+https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
+  trim: 9F-73F
+# No video for BUCKLE.
+# MAYBE is in lesson 37.
