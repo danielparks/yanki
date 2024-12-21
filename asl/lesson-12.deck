@@ -3,46 +3,75 @@ title: Lifeprint ASL::Vocabulary::Lesson 12 — Routines
 tags: lesson_12 vocabulary
 audio: strip
 
+# https://www.lifeprint.com/asl101/pages-signs/a/afternoon.htm
 https://www.youtube.com/watch?v=z4TGBHXWqdk AFTERNOON
   trim: 18F-92F
 https://www.youtube.com/watch?v=sCP7LjzZXfY EVERY-AFTERNOON
 https://www.youtube.com/watch?v=QuafKMvHhsM ALL-AFTERNOON
+
+# https://www.lifeprint.com/asl101/pages-signs/d/day.htm
 https://www.youtube.com/watch?v=6Ag2Q2J9DAU DAY
 https://www.youtube.com/watch?v=GHxNs_IK3Ak ALL-DAY
   trim: 10F-80F
+
+# https://www.lifeprint.com/asl101/pages-signs/e/equal.htm
 https://www.youtube.com/watch?v=selNp_zlyEk EQUAL / tie / fair / justice
+
+# https://www.lifeprint.com/asl101/pages-signs/e/everyday.htm
 # EVERYDAY / DAILY was in lesson 6
+
+# https://www.lifeprint.com/asl101/pages-signs/f/friday.htm
 https://www.youtube.com/watch?v=ed00ZvaLeo4 FRIDAY
+https://www.youtube.com/watch?v=jVqoNqrwCNg EVERY-FRIDAY
+  trim: 4F-50F
+
+# https://www.lifeprint.com/asl101/pages-signs/h/habit.htm
 https://www.youtube.com/watch?v=AObxjvn8ep8 HABIT
 https://www.youtube.com/watch?v=OlmnBxMJPh0 accustomed-to
+  tags: +extra
+
+# https://www.lifeprint.com/asl101/pages-signs/h/hour.htm
 https://www.youtube.com/watch?v=IO0cNQ8OO-4 HOUR / 1-HOUR
   trim: 11F-71F
 https://www.youtube.com/watch?v=37PZEddIVlA 6-HOURS
 https://www.youtube.com/watch?v=YBJ5rjfxgdc HALF-HOUR
+  tags: +extra
+
+# https://www.lifeprint.com/asl101/pages-signs/m/minute.htm
 https://www.youtube.com/watch?v=cNyi0VgluXo MINUTE / SECOND (on hand)
   trim: 9F-54F
 https://www.youtube.com/watch?v=LTGfCCs0ifE MINUTE / 1-MINUTE (on wrist)
   trim: 12F-57F
 https://www.youtube.com/watch?v=lWnN5Pnt-Rg 7-MINUTES (on wrist)
 https://www.youtube.com/watch?v=E8kYIwQhg_4 15-MINUTES (on hand)
+
+# https://www.lifeprint.com/asl101/pages-signs/m/monday.htm
 https://www.youtube.com/watch?v=lXVIBinAmQ8 MONDAY
 https://www.youtube.com/watch?v=LGqaMCk2-_Q EVERY-MONDAY
   trim: 22F-
+
+# https://www.lifeprint.com/asl101/pages-signs/m/month.htm
 https://www.youtube.com/watch?v=YLuGuPS6NU8 MONTH
   trim: 45F-101F
 https://www.youtube.com/watch?v=nYuM6Vz4ApQ MONTHLY / every month
 https://www.youtube.com/watch?v=c-dg16LcNng BIMONTHLY / every two months
   trim: 15F-85F
+  tags: +extra
 https://www.youtube.com/watch?v=zdMSWqZAzMQ NEXT-MONTH
 https://www.youtube.com/watch?v=DRq7SMExZPk MONTH PAST
 https://www.youtube.com/watch?v=HsTopeSCHKg 3 MONTHS
 https://www.youtube.com/watch?v=cFqUK3YiF0g 10 MONTHS
+
+# https://www.lifeprint.com/asl101/pages-signs/m/morning.htm
 https://www.youtube.com/watch?v=iH8N44QMh7c MORNING
 https://www.youtube.com/watch?v=dUi5yajmY54 ALL-MORNING
   trim: 10F-78F
 https://www.youtube.com/watch?v=jMJYpa-xIjI EVERY-MORNING
   trim: 10F-88F
 https://www.youtube.com/watch?v=HWTOUetDsOk GOOD-MORNING (compound)
+  tags: +extra
+
+# https://www.lifeprint.com/asl101/pages-signs/n/night.htm
 https://www.youtube.com/watch?v=hDcREO5I4Ps NIGHT / evening
   trim: 12F-90F
 https://www.youtube.com/watch?v=lqcLiVJCYTY EVERY-NIGHT
@@ -50,45 +79,73 @@ https://www.youtube.com/watch?v=lqcLiVJCYTY EVERY-NIGHT
 https://www.youtube.com/watch?v=5EJ1dKbjsh4 ALL-NIGHT
   trim: 12F-78F
 https://www.youtube.com/watch?v=ePQ55VvXqy8 GOOD-NIGHT (compound)
+  tags: +extra
 https://www.youtube.com/watch?v=oT0GJQFajVs tonight / NOW NIGHT
+  tags: +extra
+
+# https://www.lifeprint.com/asl101/pages-signs/n/noon.htm
 https://www.youtube.com/watch?v=Zjt7g0C5MTs NOON
   trim: 38F-88F
+
+# https://www.lifeprint.com/asl101/pages-signs/s/saturday.htm
 https://www.youtube.com/watch?v=6aYPttH2RzM SATURDAY
 https://www.youtube.com/watch?v=rBgDE5-cPNU EVERY-SATURDAY
+
+# https://www.lifeprint.com/asl101/pages-signs/s/second.htm
 https://www.youtube.com/watch?v=YkvPYEE027Q SECOND (fingerspelled)
+
+# https://www.lifeprint.com/asl101/pages-signs/s/sunday.htm
 https://www.youtube.com/watch?v=Gh5pD88Vgw0 SUNDAY (circle)
 https://www.youtube.com/watch?v=EUoby_wzGzY SUNDAY (press down) / WONDERFUL
 https://www.youtube.com/watch?v=bmy6YRYlW0Y SUNDAY (press up)
 https://www.youtube.com/watch?v=8P8eVD4K2jQ EVERY-SUNDAY
   trim: 30F-88F
+
+# https://www.lifeprint.com/asl101/pages-signs/t/thursday.htm
 https://www.youtube.com/watch?v=PJs5VaRTMak THURSDAY-[H-version]
 https://www.youtube.com/watch?v=avbqdo5HoQc THURSDAY-[TH-version]
 https://www.youtube.com/watch?v=SJ8A4zsqsO4 EVERY-THURSDAY
+
+# https://www.lifeprint.com/asl101/pages-signs/t/tuesday.htm
 https://www.youtube.com/watch?v=JKCbn8k968s TUESDAY
 https://www.youtube.com/watch?v=MWwg3ZYZCoE EVERY-TUESDAY
   trim: 37F-87F
+
+# https://www.lifeprint.com/asl101/pages-signs/w/wednesday.htm
 https://www.youtube.com/watch?v=btWz421kwLY WEDNESDAY
 https://www.youtube.com/watch?v=TtBKhQK2tis EVERY-WEDNESDAY
+
+# https://www.lifeprint.com/asl101/pages-signs/w/week.htm
 https://www.youtube.com/watch?v=N6giWOcMj2U WEEK
 https://www.youtube.com/watch?v=XOq4gECFehI TWO-WEEKS
-https://www.youtube.com/watch?v=mCeATJ3-gKA ONCE-a-WEEK
-  trim: 15F-63F
-https://www.youtube.com/watch?v=hYzh6jl9Xec TWICE-a-WEEK
-https://www.youtube.com/watch?v=7ZdjfRn-o6U THRICE-a-WEEK
 https://www.youtube.com/watch?v=xMrT3AcRL2Y WEEKLY
   trim: 28F-75F
 https://www.youtube.com/watch?v=7aWwoS24vxE LAST-WEEK
   trim: 16F-82F
 https://www.youtube.com/watch?v=6h0sXdprq8I NEXT-WEEK (two handed)
+
+tags: +extra
 https://www.youtube.com/watch?v=FIxUWqNwmfE NEXT-WEEK (underneath version)
 https://www.youtube.com/watch?v=hlmVYpLfaT0 NEXT-WEEK (one handed)
+https://www.youtube.com/watch?v=mCeATJ3-gKA ONCE-a-WEEK
+  trim: 15F-63F
+https://www.youtube.com/watch?v=hYzh6jl9Xec TWICE-a-WEEK
+https://www.youtube.com/watch?v=7ZdjfRn-o6U THRICE-a-WEEK
+tags: -extra
+
+# https://www.lifeprint.com/asl101/pages-signs/w/weekend.htm
 https://www.youtube.com/watch?v=o0D-dVMQr1E WEEKEND
+
+# https://www.lifeprint.com/asl101/pages-signs/d/do-do.htm (what do)
 https://www.youtube.com/watch?v=W9EH9XSSIu0 WHAT-DO
   trim: 10F-58F
+
+# https://www.lifeprint.com/asl101/pages-signs/y/yesterday.htm
 https://www.youtube.com/watch?v=BrSb83b9kbY YESTERDAY
   trim: 13F-72F
 https://www.youtube.com/watch?v=WaIrad_avQI -> YESTERDAY (initialized)
   trim: 30F-89F
+  tags: +extra
 
 # From video (https://www.youtube.com/watch?v=jSbhpRD86JE)
 tags: +extra
