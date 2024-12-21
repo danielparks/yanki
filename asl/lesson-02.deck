@@ -3,8 +3,8 @@ title: Lifeprint ASL::Vocabulary::Lesson 02 — Family
 tags: lesson_02 vocabulary
 audio: strip
 
-https://www.youtube.com/watch?v=PQsbDNgV5mE LITTLE BOY
-  trim: 12F-63F
+https://www.youtube.com/watch?v=jJ7aBDd_TvI ADDRESS
+  trim: 9F-64F
 https://www.youtube.com/watch?v=E-wBrs3PJhU BOY
   trim: 14F-73F
 https://www.youtube.com/watch?v=G0fzmn3pQng BROTHER
@@ -37,22 +37,20 @@ https://www.youtube.com/watch?v=VE4ZBu9hWnM HEY
   trim: 1F-61F
 https://www.youtube.com/watch?v=Kd_V8gE5-LY HIS / HERS / ITS / THEIRS
   trim: 13F-67F
-https://www.youtube.com/watch?v=z-BwDb6w7ws -> how-MANY / how-MUCH (one hand)
-  trim: 14F-58F
-https://www.youtube.com/watch?v=Lu7VJHlq0o0 how-MANY / how-MUCH (two hands)
-  trim: 3F-57F
 https://www.youtube.com/watch?v=BaPzB4Xsq9Y HOW?
   trim: 13F-60F
 https://www.youtube.com/watch?v=iEO_sbzkZCM -> HOW? (one hand twist version)
   trim: 7F-63F
 https://www.youtube.com/watch?v=TYTsqVZU1dk HUSBAND
   trim: 8F-77F
-https://www.youtube.com/watch?v=gy6b1ePy9nc LITTLE GIRL
-  trim: 1F-47F
 https://www.youtube.com/watch?v=4LPjUIU4VMg LIVE / alive / survive
   trim: 5F-49F
 https://www.youtube.com/watch?v=rTUmMfWQ2rw MAN
   trim: 16F-68F
+https://www.youtube.com/watch?v=z-BwDb6w7ws -> how-MANY / how-MUCH (one hand)
+  trim: 14F-58F
+https://www.youtube.com/watch?v=Lu7VJHlq0o0 how-MANY / how-MUCH (two hands)
+  trim: 3F-57F
 https://www.youtube.com/watch?v=0zRYKjeOM-4 MARRIAGE / marry
   trim: 11F-77F
 https://www.youtube.com/watch?v=DHl2-NT3mIM MOM
@@ -67,20 +65,22 @@ https://www.youtube.com/watch?v=QVPcK3bcFo0 SINGLE / SOMETHING / SOMEONE
   trim: 12F-75F
 https://www.youtube.com/watch?v=0z2_gcB5OJ8 SISTER
   trim: 15F-96F
+https://www.youtube.com/watch?v=1WVL-cc4-TY THEIR (plural)
+  trim: 5F-62F
 https://www.youtube.com/watch?v=Fk4hePvsGxA WIFE
   trim: 16F-93F
 https://www.youtube.com/watch?v=GobeSyJHyLk WOMAN
   trim: 14F-65F
 https://www.youtube.com/watch?v=mJrUYRjvrew WORK
   trim: 14F-75F
-https://www.youtube.com/watch?v=jJ7aBDd_TvI ADDRESS
-  trim: 9F-64F
-https://www.youtube.com/watch?v=1WVL-cc4-TY THEIR (plural)
-  trim: 5F-62F
 
 tags: +extra
 https://www.youtube.com/watch?v=1wvGNvkRtNY HOW YOU?
   trim: 12F-123F
+https://www.youtube.com/watch?v=PQsbDNgV5mE LITTLE BOY
+  trim: 12F-63F
+https://www.youtube.com/watch?v=gy6b1ePy9nc LITTLE GIRL
+  trim: 1F-47F
 
 # From video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 # LESSON is in lesson 1.
