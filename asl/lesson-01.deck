@@ -7,11 +7,9 @@ https://www.youtube.com/watch?v=wTNv94AY-yE AGAIN / repeat
   trim: 16F-78F
 https://www.youtube.com/watch?v=ofL3HMkLDOc DEAF-[a culturally deaf person]
   trim: 35F-173F
-https://www.youtube.com/watch?v=_90JOGT0vfs don’t-UNDERSTAND
-  trim: 14F-65F
 https://www.youtube.com/watch?v=sMRpqyQK72c
-  trim: 5F-57F
   HEARING-[a culturally hearing person]
+  trim: 5F-57F
 https://www.youtube.com/watch?v=78mzpzvN9tc LEARN
   trim: 53F-198F
 https://www.youtube.com/watch?v=8uIg8r1awC4 LIKE
@@ -31,7 +29,7 @@ https://www.youtube.com/watch?v=_8tcT_lmB0w NO
 https://www.youtube.com/watch?v=TRLHLtgHyzo SIGN
   trim: 17F-184F
 https://www.youtube.com/watch?v=FzXDBIEaEhM
-  SIGN-[sign-something-in-fluent-ASL, do-a-sign, sign-language]
+  SIGN-[in-fluent-ASL, do-a-sign, sign-language]
   trim: 15F-61F
 https://www.youtube.com/watch?v=6ky6oywprZ4 SLOW
   trim: 13F-82F
@@ -43,24 +41,22 @@ https://www.youtube.com/watch?v=IvRwNLNR4_w THANK-YOU
   trim: 4F-47F
 https://www.youtube.com/watch?v=a38Nd8EQvdE UNDERSTAND
   trim: 37F-100F
+https://www.youtube.com/watch?v=_90JOGT0vfs don’t-UNDERSTAND
+  trim: 14F-65F
 https://www.youtube.com/watch?v=1udGGPLkA-Q WHAT?
   trim: 12F-58F
+https://www.youtube.com/watch?v=DJU9Vnthfqk WE
+  trim: 12F-66F
 https://www.youtube.com/watch?v=HS0SXS-GHYY WHERE?
   trim: 14F-70F
 https://www.youtube.com/watch?v=PTmtGZ75zyY WHO?
   trim: 12F-58F
-https://www.youtube.com/watch?v=_V31e361KV8 -> WHO-[legacy-version]?
-  trim: 14F-63F
 https://www.youtube.com/watch?v=K0yp2v6Atxs WHY?
   trim: 10F-72F
 https://www.youtube.com/watch?v=0usayvOXzHo YES
   trim: 8F-52F
 https://www.youtube.com/watch?v=-1Hz72xltNk YOUR
   trim: 9F-42F
-https://www.youtube.com/watch?v=DJU9Vnthfqk WE
-  trim: 12F-66F
-https://www.youtube.com/watch?v=Y4OjOj7eaK0 WE-2
-  trim: 12F-56F
 
 tags: +extra
 https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
@@ -72,6 +68,10 @@ https://www.youtube.com/watch?v=BV6mXa4Gp58 @12F-68F TEACH
 # I don’t feel like we need the gerund for this one:
 #https://www.youtube.com/watch?v=LmmA7ltuhuk TEACHING
 #  trim: 12F-68F
+https://www.youtube.com/watch?v=Y4OjOj7eaK0 WE-2
+  trim: 12F-56F
+https://www.youtube.com/watch?v=_V31e361KV8 -> WHO-[legacy-version]?
+  trim: 14F-63F
 
 # From video (https://www.youtube.com/watch?v=DaMjr4AfYA0)
 https://www.youtube.com/watch?v=TdCu_nhXVno LESSON
