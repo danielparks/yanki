@@ -149,19 +149,5 @@ https://www.youtube.com/watch?v=WaIrad_avQI -> YESTERDAY (initialized)
 
 # From video (https://www.youtube.com/watch?v=jSbhpRD86JE)
 tags: +extra
-https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
-  trim: 10F-76F
-https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
-https://www.youtube.com/watch?v=4cXuJHTunR0 LESS
-https://www.youtube.com/watch?v=fAydfnFBDDw ACCOMPANY / GO-WITH
-  trim: 13F-81F
-https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
-  trim: 16F-76F
-https://www.youtube.com/watch?v=zhCTyufusjs NOTHING / nuthin (casual)
-https://www.youtube.com/watch?v=bQdiN_hgeWQ HOME WORK (not casual)
-  trim: 18F-108F
-https://www.youtube.com/watch?v=AhwgtWiATWE HOME WORK (casual)
 # Can’t find ONCE, THRICE, FOUR-TIMES, etc.
 https://www.youtube.com/watch?v=Wwz4hcFIukw TWICE
-https://www.youtube.com/watch?v=JaLvpaOrpjc USED / SECOND-HAND
-  trim: 18F-85F
