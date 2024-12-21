@@ -4,9 +4,20 @@ import hashlib
 import html
 import logging
 import os
+import re
 import sys
 
 LOGGER = logging.getLogger(__name__)
+
+# Regular expression to find http:// URLs in text.
+URL_FINDER = re.compile(r'''
+  # URL with no surrounding parentheses
+  (?<!\() \b(https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-])
+  # URL with surrounding parentheses
+  | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-]) (?=\))
+  # URL with an initial parenthesis
+  | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-]) (?!\))
+''', flags=re.IGNORECASE | re.VERBOSE)
 
 from yanki.video import Video
 
@@ -29,6 +40,10 @@ def name_to_id(name):
   # Apparently deck ID is i64
   return int.from_bytes(bytes[:8], byteorder='big', signed=True)
 
+def url_to_a_element(matchobj):
+  html_url = html.escape(matchobj[0])
+  return f'<a href="{html_url}">{html_url}</a>'
+
 class Field:
   def __init__(self, raw):
     self.raw = raw
@@ -39,8 +54,11 @@ class Field:
   def render_anki(self):
     return self.render_html('')
 
+  # FIXME needs tests
   def render_html(self, base_path=''):
-    return html.escape(self.raw).rstrip().replace("\n", "<br/>")
+    return URL_FINDER.sub(
+      url_to_a_element,
+      html.escape(self.raw).rstrip().replace("\n", "<br/>"))
 
   def __str__(self):
     return self.render_anki()
