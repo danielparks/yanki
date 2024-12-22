@@ -4,7 +4,7 @@ import json
 import logging
 import os
 import sys
-import urllib
+import urllib.parse
 import yt_dlp
 
 LOGGER = logging.getLogger(__name__)
@@ -17,12 +17,48 @@ YT_DLP_OPTIONS = {
 class BadURL(ValueError):
   pass
 
-def yt_url_to_id(url):
-  url_info = urllib.parse.urlparse(url)
-  query = urllib.parse.parse_qs(url_info.query)
-  if len(query.get('v', [])) != 1:
-    raise BadURL(f"Expected exactly one v parameter in URL: {url}")
-  return query['v'][0]
+# Example YouTube video URLs:
+# https://gist.github.com/rodrigoborgesdeoliveira/987683cfbfcc8d800192da1e73adc486
+#
+#   https://www.youtube.com/watch?v=n1PjPqcHswk
+#   https://youtube.com/watch/lalOy8Mbfdc
+def youtube_url_to_id(url_str, url, query):
+  if len(query.get('v', [])) == 1:
+    return query['v'][0]
+
+  try:
+    path = url.path.split('/')
+    if path[0] == '' and path[1] in ('watch', 'v'):
+      return path[2]
+  except IndexError:
+    # Fall through to error.
+    pass
+
+  raise BadURL(f'Unknown YouTube URL format: {url_str}')
+
+# URLs like http://youtu.be/lalOy8Mbfdc
+def youtu_be_url_to_id(url_str, url, query):
+  try:
+    path = url.path.split('/')
+    if path[0] == '':
+      return path[1].split('&')[0]
+  except IndexError:
+    # Fall through to error.
+    pass
+
+  raise BadURL(f'Unknown YouTube URL format: {url_str}')
+
+def url_to_id(url_str):
+  url = urllib.parse.urlparse(url_str)
+  query = urllib.parse.parse_qs(url.query)
+
+  domain = '.' + url.netloc.lower()
+  if domain.endswith('.youtube.com'):
+    return youtube_url_to_id(url_str, url, query)
+  elif domain.endswith('.youtu.be'):
+    return youtu_be_url_to_id(url_str, url, query)
+
+  raise BadURL(f'Unsupported domain {repr(domain[1:])}')
 
 NON_ZERO_DIGITS = set('123456789')
 def is_non_zero_time(time_spec):
@@ -36,7 +72,7 @@ class Video:
   def __init__(self, url, cache_path="."):
     self.url = url
     self.cache_path = cache_path
-    self.id = yt_url_to_id(url)
+    self.id = url_to_id(url)
     if '/' in self.id:
       raise BadURL(f'Invalid “/” in video ID: {repr(self.id)}')
     self._info = None
