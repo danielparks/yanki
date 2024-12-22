@@ -101,6 +101,8 @@ def cli():
       LOGGER.info(f"Wrote decks to file {args.output}")
 
     return 0
+  except BadURL as error:
+    sys.exit(error)
   except KeyboardInterrupt:
     return 130
 

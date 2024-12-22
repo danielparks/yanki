@@ -23,6 +23,7 @@ class BadURL(ValueError):
 #   https://www.youtube.com/watch?v=n1PjPqcHswk
 #   https://youtube.com/watch/lalOy8Mbfdc
 def youtube_url_to_id(url_str, url, query):
+  """Get YouTube video ID, e.g. lalOy8Mbfdc, from a youtube.com URL."""
   if len(query.get('v', [])) == 1:
     return query['v'][0]
 
@@ -38,6 +39,7 @@ def youtube_url_to_id(url_str, url, query):
 
 # URLs like http://youtu.be/lalOy8Mbfdc
 def youtu_be_url_to_id(url_str, url, query):
+  """Get YouTube video ID, e.g. lalOy8Mbfdc, from a youtu.be URL."""
   try:
     path = url.path.split('/')
     if path[0] == '':
@@ -49,16 +51,21 @@ def youtu_be_url_to_id(url_str, url, query):
   raise BadURL(f'Unknown YouTube URL format: {url_str}')
 
 def url_to_id(url_str):
+  """Turn video URL into an ID string that can be part of a file name."""
   url = urllib.parse.urlparse(url_str)
   query = urllib.parse.parse_qs(url.query)
 
-  domain = '.' + url.netloc.lower()
-  if domain.endswith('.youtube.com'):
-    return youtube_url_to_id(url_str, url, query)
-  elif domain.endswith('.youtu.be'):
-    return youtu_be_url_to_id(url_str, url, query)
+  try:
+    domain = '.' + url.netloc.lower()
+    if domain.endswith('.youtube.com'):
+      return 'youtube:' + youtube_url_to_id(url_str, url, query)
+    elif domain.endswith('.youtu.be'):
+      return 'youtube:' + youtu_be_url_to_id(url_str, url, query)
+  except BadURL:
+    # Try to load the URL with yt_dlp and see what happens.
+    pass
 
-  raise BadURL(f'Unsupported domain {repr(domain[1:])}')
+  return url_str.replace('|', '||').replace('/', '|')
 
 NON_ZERO_DIGITS = set('123456789')
 def is_non_zero_time(time_spec):
@@ -74,7 +81,7 @@ class Video:
     self.cache_path = cache_path
     self.id = url_to_id(url)
     if '/' in self.id:
-      raise BadURL(f'Invalid “/” in video ID: {repr(self.id)}')
+      raise BadURL(f'Invalid "/" in video ID: {repr(self.id)}')
     self._info = None
     self._raw_metadata = None
     self._crop = None
@@ -88,13 +95,13 @@ class Video:
     return os.path.join(self.cache_path, filename)
 
   def info_cache_path(self):
-    return self.cached(self.id + '_info.json')
+    return self.cached(f'info_{self.id}.json')
 
   def raw_video_cache_path(self):
-    return self.cached(self.id + '_raw.' + self.info()['ext'])
+    return self.cached('raw_' + self.id + '.' + self.info()['ext'])
 
   def raw_metadata_cache_path(self):
-    return self.cached(self.id + '_raw_ffprobe.json')
+    return self.cached(f'ffprobe_raw_{self.id}.json')
 
   def processed_video_cache_path(self, prefix='processed_'):
     parameters = '_'.join(self.ffmpeg_parameters())
@@ -115,11 +122,14 @@ class Video:
         with open(self.info_cache_path(), 'r', encoding="utf-8") as file:
           self._info = json.load(file)
       except FileNotFoundError:
-        with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
-          LOGGER.info(f"{self.id}: getting info")
-          self._info = ydl.extract_info(self.url, download=False)
-          with open(self.info_cache_path(), 'w', encoding="utf-8") as file:
-            file.write(json.dumps(ydl.sanitize_info(self._info)))
+        try:
+          with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
+            LOGGER.info(f"{self.id}: getting info")
+            self._info = ydl.extract_info(self.url, download=False)
+            with open(self.info_cache_path(), 'w', encoding="utf-8") as file:
+              file.write(json.dumps(ydl.sanitize_info(self._info)))
+        except yt_dlp.utils.YoutubeDLError as error:
+          raise BadURL(f'Error downloading {repr(self.url)}: {error}')
     return self._info
 
   def title(self):
