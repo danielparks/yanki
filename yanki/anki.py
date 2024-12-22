@@ -365,7 +365,7 @@ class DeckParser:
   def _check_note_id(self, note_id_format):
     try:
       note_id_format.format(
-        deck_id='{deck_id}',
+        deck_id='deck_id',
         url='url',
         clip='@clip',
         direction='<->',
@@ -376,7 +376,7 @@ class DeckParser:
 
   def _finish_note(self):
     try:
-      [video_url, *rest] = "".join(self.note).split(maxsplit=1)
+      [video_url, *rest] = ''.join(self.note).split(maxsplit=1)
     except ValueError:
       # FIXME improve exception?
       raise ValueError(f'_finish_note() called on empty input ({self.where()})')
@@ -411,7 +411,7 @@ class DeckParser:
         video.clip(clip[0], clip[1])
       else:
         # Should never happen — checked by _try_parse_clip()
-        raise ValueError(f'Invalid clip (@{"-".join(clip)})')
+        raise RuntimeError(f'Invalid clip: {repr(clip)}')
 
       # Normalize clip for note_id
       clip = [video.parse_time_spec(part) for part in clip]
@@ -450,9 +450,9 @@ class DeckParser:
     else:
       clip = f'@{"-".join(clip)}'
 
-    # This is a minor kludge: we don’t know the deck ID yet, so we replace it
-    # with itself and then call format() again when we know it.
     note_id = config.note_id.format(
+      # This is a minor kludge: we don’t know the deck ID yet, so we replace it
+      # with itself and then call format() again when we know it.
       deck_id='{deck_id}',
       url=video_url,
       clip=clip,
