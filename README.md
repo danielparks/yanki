@@ -48,8 +48,8 @@ You can customize how the GUID is generated with the `note_id` configuration:
     # Default:
     note_id: {deck_id}__{url} {clip} {direction}
 
-    # Use the text "question" that corresponds to the video answer:
-    note_id: {deck_id} {question}
+    # Use the text that corresponds to the video (side_1):
+    note_id: {deck_id} {side_2}
 
 Leaving out `{deck_id}` can be useful if you may need to move notes between
 decks later on. The import will not actually move notes from one deck to

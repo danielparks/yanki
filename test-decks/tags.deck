@@ -1,6 +1,6 @@
 title: Test deck::Tags
 tags: test::a test::b
-note_id: {deck_id} {question}
+note_id: {deck_id} {side_2}
 
 https://www.youtube.com/watch?v=jNQXAC9IVRw Tags [test::a, test::c]
   tags: +test::c -test::b

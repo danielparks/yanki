@@ -91,9 +91,9 @@ class VideoField(MediaField):
     return f'<video controls src="{media_filename_html}"></video>'
 
 class Note:
-  def __init__(self, note_id, fields, tags, direction='<->'):
+  def __init__(self, note_id, side_1, side_2, tags, direction='<->'):
     self.note_id = note_id
-    self.fields = fields
+    self.fields = [side_2, side_1] # Yes, this is correct.
     self.tags = tags
     self.direction = direction
 
@@ -369,7 +369,8 @@ class DeckParser:
         url='url',
         clip='@clip',
         direction='<->',
-        question='question',
+        side_1='side_1',
+        side_2='side_2',
       )
     except KeyError as error:
       self.error(f'Unknown variable in note_id format: {error}')
@@ -422,17 +423,17 @@ class DeckParser:
     # Check for a direction sign
     direction = '<->'
     if rest == '':
-      question = video.title()
+      side_2 = video.title()
     else:
       parts = rest.split(maxsplit=1)
       if len(parts) >= 2 and parts[0] in ['->', '<-', '<->']:
         direction = parts[0]
-        question = parts[1]
+        side_2 = parts[1]
       else:
-        question = rest
+        side_2 = rest
 
     # Remove trailing whitespace, particularly newlines.
-    question = question.rstrip()
+    side_2 = side_2.rstrip()
 
     if config.slow:
       (start, end, amount) = config.slow
@@ -440,9 +441,9 @@ class DeckParser:
 
     path = video.processed_video()
     if video.is_still() or video.output_ext() == "gif":
-      answer = ImageField(path)
+      side_1 = ImageField(path)
     else:
-      answer = VideoField(path)
+      side_1 = VideoField(path)
 
     # Format clip for note_id
     if clip is None:
@@ -452,17 +453,20 @@ class DeckParser:
 
     note_id = config.note_id.format(
       # This is a minor kludge: we don’t know the deck ID yet, so we replace it
-      # with itself and then call format() again when we know it.
+      # with itself and then call format() again when we know the deck ID.
       deck_id='{deck_id}',
       url=video_url,
       clip=clip,
       direction=direction,
-      question=question,
+      ### FIXME should these be renamed to clarify that they’re normalized
+      ### versions of the input text?
+      side_1=' '.join([video_url, clip]),
+      side_2=side_2,
     )
 
     try:
       self.deck.add_note(
-        Note(note_id, [Field(question), answer], config.tags, direction))
+        Note(note_id, side_1, Field(side_2), config.tags, direction))
     except LookupError as error:
       self.error(error)
     self._reset_note()
