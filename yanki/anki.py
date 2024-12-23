@@ -7,6 +7,8 @@ import os
 import re
 import sys
 
+from yanki.video import Video
+
 LOGGER = logging.getLogger(__name__)
 
 # Regular expression to find http:// URLs in text.
@@ -18,8 +20,6 @@ URL_FINDER = re.compile(r'''
   # URL with an initial parenthesis
   | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-]) (?!\))
 ''', flags=re.IGNORECASE | re.VERBOSE)
-
-from yanki.video import Video
 
 # Keep these variables local
 def yanki_card_model():
