@@ -21,32 +21,51 @@ URL_FINDER = re.compile(r'''
 
 from yanki.video import Video
 
-YANKI_CARD_MODEL = genanki.Model(
-  1221938102,
-  'Optionally Bidirectional (yanki)',
-  fields=[
-    # The first field is the one displayed when browsing cards.
-    { 'name': 'Text', 'id': 7504631604350024487, 'font': 'Arial' },
-    { 'name': 'Media', 'id': 7504631604350024486, 'font': 'Arial' },
-    { 'name': 'Text to media', 'id': 7504631604350024488, 'font': 'Arial' },
-    { 'name': 'Media to text', 'id': 7504631604350024489, 'font': 'Arial' },
-  ],
-  templates=[
-    {
-      'name': 'Text to media', # <-
-      'id': 6592322563225791602,
-      'qfmt': '{{#Text to media}}{{Text}}{{/Text to media}}',
-      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Media}}',
-    },
-    {
-      'name': 'Media to text', # ->
-      'id': 6592322563225791603,
-      'qfmt': '{{#Media to text}}{{Media}}{{/Media to text}}',
-      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Text}}',
-    },
-  ],
-  css=genanki.BASIC_OPTIONAL_REVERSED_CARD_MODEL.css,
-)
+# Keep these variables local
+def yanki_card_model():
+  field_base = 7504631604350024486
+  front_template = '{{#Text to media}}<p>{{$FIELD}}</p>{{/Text to media}}'
+  back_template = '''
+    {{FrontSide}}
+
+    <hr id=answer>
+
+    <p>{{$FIELD}}</p>
+
+    {{#More}}
+    <p>{{More}}</p>
+    {{/More}}
+  '''.replace('\n    ', '\n').strip()
+
+  return genanki.Model(
+    1221938102,
+    'Optionally Bidirectional (yanki)',
+    fields=[
+      # The first field is the one displayed when browsing cards.
+      { 'name': 'Text', 'id': field_base+1, 'font': 'Arial' },
+      { 'name': 'More', 'id': field_base+4, 'font': 'Arial' },
+      { 'name': 'Media', 'id': field_base+0, 'font': 'Arial' },
+      { 'name': 'Text to media', 'id': field_base+2, 'font': 'Arial' }, # <-
+      { 'name': 'Media to text', 'id': field_base+3, 'font': 'Arial' }, # ->
+    ],
+    templates=[
+      {
+        'name': 'Text to media', # <-
+        'id': 6592322563225791602,
+        'qfmt': front_template.replace('$FIELD', 'Text'),
+        'afmt': back_template.replace('$FIELD', 'Media'),
+      },
+      {
+        'name': 'Media to text', # ->
+        'id': 6592322563225791603,
+        'qfmt': front_template.replace('$FIELD', 'Media'),
+        'afmt': back_template.replace('$FIELD', 'Text'),
+      },
+    ],
+    css=genanki.BASIC_OPTIONAL_REVERSED_CARD_MODEL.css,
+  )
+
+YANKI_CARD_MODEL = yanki_card_model()
 
 def name_to_id(name):
   bytes = hashlib.sha256(name.encode('utf-8')).digest()
@@ -104,10 +123,11 @@ class VideoField(MediaField):
     return f'<video controls src="{media_filename_html}"></video>'
 
 class Note:
-  def __init__(self, note_id, media, text, tags, direction='<->'):
+  def __init__(self, note_id, media, text, more=Field(''), tags=[], direction='<->'):
     self.note_id = note_id
     self.media = media
     self.text = text
+    self.more = more
     self.tags = tags
     self.direction = direction
 
@@ -130,6 +150,7 @@ class Note:
       model=YANKI_CARD_MODEL,
       fields=[
         self.text.render_anki(),
+        self.more.render_anki(),
         self.media.render_anki(),
         text_to_media,
         media_to_text,
@@ -143,12 +164,16 @@ class Config:
     self.title = None
     self.crop = None
     self.format = None
+    self.more = Field('')
     self.tags = []
     self.slow = None
     self.trim = None
     self.audio = 'include'
     self.video = 'include'
     self.note_id = '{deck_id}__{url} {clip} {direction}'
+
+  def set_more(self, input):
+    self.more = Field(input)
 
   def update_tags(self, input):
     new_tags = input.split()
@@ -361,6 +386,8 @@ class DeckParser:
     try:
       if line.startswith('title:'):
         config.title = line.removeprefix('title:').strip()
+      elif line.startswith('more:'):
+        config.set_more(line.removeprefix('more:').strip())
       elif line.startswith('tags:'):
         config.update_tags(line.removeprefix('tags:'))
       elif line.startswith('crop:'):
@@ -490,7 +517,7 @@ class DeckParser:
 
     try:
       self.deck.add_note(
-        Note(note_id, media, Field(text), config.tags, direction))
+        Note(note_id, media, Field(text), config.more, config.tags, direction))
     except LookupError as error:
       self.error(error)
     self._reset_note()
