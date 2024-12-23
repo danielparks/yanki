@@ -21,18 +21,32 @@ URL_FINDER = re.compile(r'''
 
 from yanki.video import Video
 
-REVERSED_CARD_MODEL = genanki.Model(
-  1221938101,
-  'Reversed (yanki)',
-  fields=genanki.BASIC_MODEL.fields.copy(),
+YANKI_CARD_MODEL = genanki.Model(
+  1221938102,
+  'Optionally Bidirectional (yanki)',
+  fields=[
+    # The text (side 2) field. This is the one displayed when browsing cards.
+    { 'name': 'Front', 'id': 7504631604350024487, 'font': 'Arial' },
+    # The video (side 1) field.
+    { 'name': 'Back', 'id': 7504631604350024486, 'font': 'Arial' },
+    { 'name': 'Front to Back', 'id': 7504631604350024488, 'font': 'Arial' },
+    { 'name': 'Back to Front', 'id': 7504631604350024489, 'font': 'Arial' },
+  ],
   templates=[
     {
-      'name': 'Card 2',
-      'qfmt': '{{Back}}',
+      'name': 'Card 1', # Front to Back, <-
+      'id': 6592322563225791602,
+      'qfmt': '{{#Front to Back}}{{Front}}{{/Front to Back}}',
+      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}',
+    },
+    {
+      'name': 'Card 2', # Back to Front, ->
+      'id': 6592322563225791603,
+      'qfmt': '{{#Back to Front}}{{Back}}{{/Back to Front}}',
       'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Front}}',
     },
   ],
-  css=genanki.BASIC_MODEL.css,
+  css=genanki.BASIC_OPTIONAL_REVERSED_CARD_MODEL.css,
 )
 
 def name_to_id(name):
@@ -93,23 +107,34 @@ class VideoField(MediaField):
 class Note:
   def __init__(self, note_id, side_1, side_2, tags, direction='<->'):
     self.note_id = note_id
-    self.fields = [side_2, side_1] # Yes, this is correct.
+    self.side_1 = side_1
+    self.side_2 = side_2
     self.tags = tags
     self.direction = direction
 
+  def content_fields(self):
+    return [self.side_2, self.side_1]
+
   def add_to_deck(self, deck):
+    media_to_text = text_to_media = ''
     if self.direction == '<->':
-      model = genanki.BASIC_AND_REVERSED_CARD_MODEL
+      text_to_media = '1'
+      media_to_text = '1'
     elif self.direction == '<-':
-      model = genanki.BASIC_MODEL
+      text_to_media = '1'
     elif self.direction == '->':
-      model = REVERSED_CARD_MODEL
+      media_to_text = '1'
     else:
-      raise ValueError(f"Invalid direction {self.direction}")
+      raise ValueError(f"Invalid direction {repr(self.direction)}")
 
     deck.add_note(genanki.Note(
-      model=model,
-      fields=[field.render_anki() for field in self.fields],
+      model=YANKI_CARD_MODEL,
+      fields=[
+        self.side_2.render_anki(),
+        self.side_1.render_anki(),
+        text_to_media,
+        media_to_text,
+      ],
       guid=genanki.guid_for(self.note_id.format(deck_id=deck.deck_id)),
       tags=self.tags,
     ))
@@ -216,9 +241,9 @@ class Deck:
 
     for note in self.notes.values():
       note.add_to_deck(deck)
-      LOGGER.debug(f"Added note {repr(note.note_id)}: {note.fields}")
+      LOGGER.debug(f"Added note {repr(note.note_id)}: {note.content_fields()}")
 
-      for field in note.fields:
+      for field in note.content_fields():
         for media_path in field.media_paths():
           package.media_files.append(media_path)
           LOGGER.debug(f"Added media file for {repr(note.note_id)}: {media_path}")
