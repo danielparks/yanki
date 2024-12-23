@@ -25,25 +25,24 @@ YANKI_CARD_MODEL = genanki.Model(
   1221938102,
   'Optionally Bidirectional (yanki)',
   fields=[
-    # The text (side 2) field. This is the one displayed when browsing cards.
-    { 'name': 'Front', 'id': 7504631604350024487, 'font': 'Arial' },
-    # The video (side 1) field.
-    { 'name': 'Back', 'id': 7504631604350024486, 'font': 'Arial' },
-    { 'name': 'Front to Back', 'id': 7504631604350024488, 'font': 'Arial' },
-    { 'name': 'Back to Front', 'id': 7504631604350024489, 'font': 'Arial' },
+    # The first field is the one displayed when browsing cards.
+    { 'name': 'Text', 'id': 7504631604350024487, 'font': 'Arial' },
+    { 'name': 'Media', 'id': 7504631604350024486, 'font': 'Arial' },
+    { 'name': 'Text to media', 'id': 7504631604350024488, 'font': 'Arial' },
+    { 'name': 'Media to text', 'id': 7504631604350024489, 'font': 'Arial' },
   ],
   templates=[
     {
-      'name': 'Card 1', # Front to Back, <-
+      'name': 'Text to media', # <-
       'id': 6592322563225791602,
-      'qfmt': '{{#Front to Back}}{{Front}}{{/Front to Back}}',
-      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}',
+      'qfmt': '{{#Text to media}}{{Text}}{{/Text to media}}',
+      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Media}}',
     },
     {
-      'name': 'Card 2', # Back to Front, ->
+      'name': 'Media to text', # ->
       'id': 6592322563225791603,
-      'qfmt': '{{#Back to Front}}{{Back}}{{/Back to Front}}',
-      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Front}}',
+      'qfmt': '{{#Media to text}}{{Media}}{{/Media to text}}',
+      'afmt': '{{FrontSide}}\n\n<hr id=answer>\n\n{{Text}}',
     },
   ],
   css=genanki.BASIC_OPTIONAL_REVERSED_CARD_MODEL.css,
@@ -105,15 +104,15 @@ class VideoField(MediaField):
     return f'<video controls src="{media_filename_html}"></video>'
 
 class Note:
-  def __init__(self, note_id, side_1, side_2, tags, direction='<->'):
+  def __init__(self, note_id, media, text, tags, direction='<->'):
     self.note_id = note_id
-    self.side_1 = side_1
-    self.side_2 = side_2
+    self.media = media
+    self.text = text
     self.tags = tags
     self.direction = direction
 
   def content_fields(self):
-    return [self.side_2, self.side_1]
+    return [self.text, self.media]
 
   def add_to_deck(self, deck):
     media_to_text = text_to_media = ''
@@ -130,8 +129,8 @@ class Note:
     deck.add_note(genanki.Note(
       model=YANKI_CARD_MODEL,
       fields=[
-        self.side_2.render_anki(),
-        self.side_1.render_anki(),
+        self.text.render_anki(),
+        self.media.render_anki(),
         text_to_media,
         media_to_text,
       ],
@@ -394,8 +393,8 @@ class DeckParser:
         url='url',
         clip='@clip',
         direction='<->',
-        side_1='side_1',
-        side_2='side_2',
+        media='media',
+        text='text',
       )
     except KeyError as error:
       self.error(f'Unknown variable in note_id format: {error}')
@@ -448,17 +447,17 @@ class DeckParser:
     # Check for a direction sign
     direction = '<->'
     if rest == '':
-      side_2 = video.title()
+      text = video.title()
     else:
       parts = rest.split(maxsplit=1)
       if len(parts) >= 2 and parts[0] in ['->', '<-', '<->']:
         direction = parts[0]
-        side_2 = parts[1]
+        text = parts[1]
       else:
-        side_2 = rest
+        text = rest
 
     # Remove trailing whitespace, particularly newlines.
-    side_2 = side_2.rstrip()
+    text = text.rstrip()
 
     if config.slow:
       (start, end, amount) = config.slow
@@ -466,9 +465,9 @@ class DeckParser:
 
     path = video.processed_video()
     if video.is_still() or video.output_ext() == "gif":
-      side_1 = ImageField(path)
+      media = ImageField(path)
     else:
-      side_1 = VideoField(path)
+      media = VideoField(path)
 
     # Format clip for note_id
     if clip is None:
@@ -485,13 +484,13 @@ class DeckParser:
       direction=direction,
       ### FIXME should these be renamed to clarify that they’re normalized
       ### versions of the input text?
-      side_1=' '.join([video_url, clip]),
-      side_2=side_2,
+      media=' '.join([video_url, clip]),
+      text=text,
     )
 
     try:
       self.deck.add_note(
-        Note(note_id, side_1, Field(side_2), config.tags, direction))
+        Note(note_id, media, Field(text), config.tags, direction))
     except LookupError as error:
       self.error(error)
     self._reset_note()

@@ -1,6 +1,6 @@
 title: Test deck::Partial slow
 crop: in_h:in_h
-note_id: {deck_id} {side_2}
+note_id: {deck_id} {text}
 trim: 137F-199F
 
 slow: 0:00-0:01 * 4
