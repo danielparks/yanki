@@ -4,7 +4,7 @@ tags: lesson_08 vocabulary
 audio: strip
 note_id: Lifeprint ASL:: {url} {clip} {direction}
 
-more: https://www.lifeprint.com/asl101/pages-signs/b/backpack.htm
+more: rst:Lifeprint: `BACKPACK <https://www.lifeprint.com/asl101/pages-signs/b/backpack.htm>`_
 # FIXME Need a better way to do this — show all videos at once when they’re the
 # answer, or maybe in sequence? That would be 5 cards instead of 8.
 https://www.youtube.com/watch?v=St5PWSrZpOY BACKPACK-[A-hand version]
@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=iTlF3KqKQUA -> BACKPACK-[small-C-hand version]
 https://www.youtube.com/watch?v=Le7g5M_zIJQ -> BACKPACK-[modified-C-hand version]
   trim: 11F-56F
 
-more: https://www.lifeprint.com/asl101/pages-signs/b/basket.htm
+more: rst:Lifeprint: `BASKET <https://www.lifeprint.com/asl101/pages-signs/b/basket.htm>`_
 https://www.youtube.com/watch?v=YvegBgfEEO4 BASKET (typical)
   trim: 17F-67F
 https://www.youtube.com/watch?v=54ZibiGrHu8 tall-BASKET
@@ -25,45 +25,45 @@ https://www.youtube.com/watch?v=I6k9JY_aPTM BASKET-with-handle
   trim: 9F-90F
   tags: +extra
 
-more: https://www.lifeprint.com/asl101/pages-signs/b/battery.htm
+more: rst:Lifeprint: `BATTERY <https://www.lifeprint.com/asl101/pages-signs/b/battery.htm>`_
 https://www.youtube.com/watch?v=MYZPHcuXGGs BATTERY / ELECTRIC
   trim: 11F-71F
 
-more: https://www.lifeprint.com/asl101/pages-signs/b/belt.htm
+more: rst:Lifeprint: `BELT <https://www.lifeprint.com/asl101/pages-signs/b/belt.htm>`_
 https://www.youtube.com/watch?v=RNxKCnCTRT0 BELT
   trim: 8F-72F
 
-more: https://www.lifeprint.com/asl101/pages-signs/c/change.htm
+more: rst:Lifeprint: `CHANGE <https://www.lifeprint.com/asl101/pages-signs/c/change.htm>`_
 https://www.youtube.com/watch?v=lT0E7jGHIKY CHANGE-[verb]
   trim: 8F-72F
 
-more: https://www.lifeprint.com/asl101/pages-signs/c/coat.htm
+more: rst:Lifeprint: `COAT <https://www.lifeprint.com/asl101/pages-signs/c/coat.htm>`_
 https://www.youtube.com/watch?v=HWMc-nzJ2MQ COAT / JACKET
   trim: 10F-65F
 
-more: https://www.lifeprint.com/asl101/pages-signs/d/dirty.htm
+more: rst:Lifeprint: `DIRTY <https://www.lifeprint.com/asl101/pages-signs/d/dirty.htm>`_
 https://www.youtube.com/watch?v=K3BygEHQ-Ps DIRTY
   trim: 7F-58F
 https://www.youtube.com/watch?v=O1kESRrCxXs
   SOIL / substance / dirt / real-estate / ground / powder / grit / particulate / sand
   trim: 13F-80F
 
-more: https://www.lifeprint.com/asl101/pages-signs/g/glasses.htm
+more: rst:Lifeprint: `GLASSES <https://www.lifeprint.com/asl101/pages-signs/g/glasses.htm>`_
 https://www.youtube.com/watch?v=Z7mTRgU_Xqs
   GLASSES / THOMAS GALLAUDET / GALLAUDET UNIVERSITY / Moses
   trim: 10F-54F
 https://www.youtube.com/watch?v=s52iaD1mxXU GOGGLES / GLASSES
   trim: 11F-65F
 
-more: https://www.lifeprint.com/asl101/pages-signs/h/hearing-aid.htm
+more: rst:Lifeprint: `HEARING-AID <https://www.lifeprint.com/asl101/pages-signs/h/hearing-aid.htm>`_
 https://www.youtube.com/watch?v=U3LYX2NPHzc HEARING-AID
   trim: 13F-69F
 
-more: https://www.lifeprint.com/asl101/pages-signs/w/washingmachine.htm
+more: rst:Lifeprint: `WASHING-MACHINE <https://www.lifeprint.com/asl101/pages-signs/w/washingmachine.htm>`_
 https://www.youtube.com/watch?v=m8FIqLT7DcI LAUNDRY / WASHING-MACHINE
   trim: 8F-58F
 
-more: https://www.lifeprint.com/asl101/pages-signs/o/off.htm
+more: rst:Lifeprint: `OFF <https://www.lifeprint.com/asl101/pages-signs/o/off.htm>`_
 https://www.youtube.com/watch?v=0NT8n6PZ4pI #OFF
   trim: 13F-46F
 https://www.youtube.com/watch?v=0aux6b4MDSQ POWER-OFF
@@ -76,7 +76,7 @@ https://www.youtube.com/watch?v=vl1LG51Wd1c ->
   more: Be sure to read https://www.lifeprint.com/asl101/pages-signs/o/off.htm
   trim: 21F-75F
 
-more: https://www.lifeprint.com/asl101/pages-signs/o/on.htm
+more: rst:Lifeprint: `ON <https://www.lifeprint.com/asl101/pages-signs/o/on.htm>`_
 https://www.youtube.com/watch?v=e8hiRj3xDiw
   ON / onto
   more: Be sure to read https://www.lifeprint.com/asl101/pages-signs/o/on.htm
@@ -84,7 +84,7 @@ https://www.youtube.com/watch?v=e8hiRj3xDiw
 https://www.youtube.com/watch?v=w0Sl6ta4Obo LIGHTS-ON
   trim: 35F-115F
 
-more: https://www.lifeprint.com/asl101/pages-signs/p/pants.htm
+more: rst:Lifeprint: `PANTS <https://www.lifeprint.com/asl101/pages-signs/p/pants.htm>`_
 https://www.youtube.com/watch?v=-V0Dkeyno2s PANTS (pull up version)
   trim: 10F-61F
 # Can’t find video for PANTS-[B-hand].
@@ -94,11 +94,11 @@ https://www.youtube.com/watch?v=K-791JkOMv0 pants-POCKET
 # This version is so similar I don’t think it’s worth studying.
 # https://www.youtube.com/watch?v=53ir6-NIKl4 pants-POCKET (version 2)
 
-more: https://www.lifeprint.com/asl101/pages-signs/f/find.htm
+more: rst:Lifeprint: `FIND <https://www.lifeprint.com/asl101/pages-signs/f/find.htm>`_
 https://www.youtube.com/watch?v=2O5wVw-rlIs FIND / pick-up / discover
   trim: 12F-87F
 
-more: https://www.lifeprint.com/asl101/pages-signs/s/shirt.htm
+more: rst:Lifeprint: `SHIRT <https://www.lifeprint.com/asl101/pages-signs/s/shirt.htm>`_
 https://www.youtube.com/watch?v=BLqzpaKkkk4
   SHIRT / volunteer / apply / candidate
   trim: 5F-84F
@@ -142,7 +142,7 @@ https://www.youtube.com/watch?v=DGfm9blIRJs LOGO-ON-SHIRT-[CL: bent-L]
   trim: 7F-62F
 tags: -extra
 
-more: https://www.lifeprint.com/asl101/pages-signs/s/shoes.htm
+more: rst:Lifeprint: `SHOES <https://www.lifeprint.com/asl101/pages-signs/s/shoes.htm>`_
 https://www.youtube.com/watch?v=Yoi_OLX0IEs SHOES
   trim: 12F-82F
 https://www.youtube.com/watch?v=A4RSlW_e10U SANDALS
@@ -160,11 +160,11 @@ https://www.youtube.com/watch?v=KF7M_6Lk66M
   trim: 6F-47F
 tags: -extra
 
-more: https://www.lifeprint.com/asl101/pages-signs/s/socks.htm
+more: rst:Lifeprint: `SOCKS <https://www.lifeprint.com/asl101/pages-signs/s/socks.htm>`_
 https://www.youtube.com/watch?v=arMsuswd_AM SOCKS
   trim: 11F-58F
 
-more: https://www.lifeprint.com/asl101/pages-signs/u/underwear.htm
+more: rst:Lifeprint: `UNDERWEAR <https://www.lifeprint.com/asl101/pages-signs/u/underwear.htm>`_
 https://www.youtube.com/watch?v=yKAFC9iyxas UNDERWEAR
   trim: 7F-
 
@@ -183,11 +183,11 @@ https://www.youtube.com/watch?v=F1VYQQSYaP0
   tags: +joke
 tags: -extra
 
-more: https://www.lifeprint.com/asl101/pages-signs/w/which.htm
+more: rst:Lifeprint: `WHICH <https://www.lifeprint.com/asl101/pages-signs/w/which.htm>`_
 https://www.youtube.com/watch?v=DlMZXBngGKM WHICH
   trim: 8F-52F
 
-more: https://www.lifeprint.com/asl101/pages-signs/z/zip.htm
+more: rst:Lifeprint: `ZIP <https://www.lifeprint.com/asl101/pages-signs/z/zip.htm>`_
 https://www.youtube.com/watch?v=8wuLrFkO-SU ZIPPER / ZIP-up
   trim: 11F-64F
 https://www.youtube.com/watch?v=m9fxgSPo0s0 Z-I-P / zip code
@@ -196,7 +196,7 @@ https://www.youtube.com/watch?v=XOLT0_VXgpY ZIP-up-jacket
   trim: 35F-88F
   tags: +extra
 
-more: https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm and https://www.lifeprint.com/asl101/pages-signs/d/dress.htm
+more: rst:Lifeprint: `CLOTHES <https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm>`_
 https://www.youtube.com/watch?v=15czV0-SagI CLOTHES (two handed)
   trim: 11F-77F
 https://www.youtube.com/watch?v=kDyFU6UL3qk DRESS / GOWN

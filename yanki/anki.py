@@ -1,4 +1,5 @@
 from copy import copy, deepcopy
+import docutils.core
 import genanki
 import hashlib
 import html
@@ -72,9 +73,19 @@ def name_to_id(name):
   # Apparently deck ID is i64
   return int.from_bytes(bytes[:8], byteorder='big', signed=True)
 
-def url_to_a_element(matchobj):
-  html_url = html.escape(matchobj[0])
-  return f'<a href="{html_url}">{html_url}</a>'
+def rst_to_html(rst):
+  # From https://wiki.python.org/moin/reStructuredText#The_.22Cool.22_Way
+  parts = docutils.core.publish_parts(source=rst, writer_name='html5')
+  return parts['body_pre_docinfo'] + parts['fragment']
+
+def raw_to_html(raw):
+  if raw.startswith('rst:'):
+    return rst_to_html(raw[4:])
+  elif raw.startswith('html:'):
+    return raw[5:]
+  else:
+    return URL_FINDER.sub(r'<a href="\1">\1</a>', html.escape(raw)) \
+      .rstrip().replace("\n", "<br/>")
 
 class Field:
   def __init__(self, raw):
@@ -86,11 +97,8 @@ class Field:
   def render_anki(self):
     return self.render_html('')
 
-  # FIXME needs tests
   def render_html(self, base_path=''):
-    return URL_FINDER.sub(
-      url_to_a_element,
-      html.escape(self.raw).rstrip().replace("\n", "<br/>"))
+    return raw_to_html(self.raw)
 
   def __str__(self):
     return self.render_anki()
