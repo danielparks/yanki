@@ -25,7 +25,6 @@ URL_FINDER = re.compile(r'''
 # Keep these variables local
 def yanki_card_model():
   field_base = 7504631604350024486
-  front_template = '{{#Text to media}}<p>{{$FIELD}}</p>{{/Text to media}}'
   back_template = '''
     {{FrontSide}}
 
@@ -53,13 +52,13 @@ def yanki_card_model():
       {
         'name': 'Text to media', # <-
         'id': 6592322563225791602,
-        'qfmt': front_template.replace('$FIELD', 'Text'),
+        'qfmt': '{{#Text to media}}<p>{{Text}}</p>{{/Text to media}}',
         'afmt': back_template.replace('$FIELD', 'Media'),
       },
       {
         'name': 'Media to text', # ->
         'id': 6592322563225791603,
-        'qfmt': front_template.replace('$FIELD', 'Media'),
+        'qfmt': '{{#Media to text}}<p>{{Media}}</p>{{/Media to text}}',
         'afmt': back_template.replace('$FIELD', 'Text'),
       },
     ],
