@@ -220,10 +220,14 @@ def htmlize_deck(deck, path_prefix=""):
   """
 
   for note in deck.notes.values():
+    more_html = note.more.render_html(path_prefix)
+    if more_html != '':
+      more_html = f'<div class="more">{more_html}</div>'
     output += f"""
         <div class="note">
-          <h3>{note.fields[0].render_html(path_prefix)}</h3>
-          {note.fields[1].render_html(path_prefix)}
+          <h3>{note.text.render_html(path_prefix)}</h3>
+          {note.media.render_html(path_prefix)}
+          {more_html}
           <p class="note_id">{h(note.note_id)}</p>
         </div>"""
 
@@ -239,5 +243,4 @@ def dump_videos(args, decks):
   for deck in decks:
     print(f'title: {deck.config.title}')
     for id, note in deck.notes.items():
-      paths = [path for field in note.fields for path in field.media_paths()]
-      print(f'{", ".join(paths)} {note.fields[0]}')
+      print(f'{", ".join(note.media_paths())} {note.text}')

@@ -97,7 +97,7 @@ def raw_to_html(raw):
     return URL_FINDER.sub(r'<a href="\1">\1</a>', html.escape(raw)) \
       .rstrip().replace("\n", "<br/>")
 
-class Field:
+class Fragment:
   def __init__(self, raw):
     self.raw = raw
 
@@ -116,7 +116,7 @@ class Field:
   def __repr__(self):
     return repr(self.render_anki())
 
-class MediaField(Field):
+class MediaFragment(Fragment):
   def __init__(self, path):
     self.path = path
 
@@ -126,12 +126,12 @@ class MediaField(Field):
   def media_paths(self):
     return [self.path]
 
-class ImageField(MediaField):
+class ImageFragment(MediaFragment):
   def render_html(self, base_path=''):
     media_filename_html = html.escape(self.path_in_base(base_path))
     return f'<img src="{media_filename_html}" />'
 
-class VideoField(MediaField):
+class VideoFragment(MediaFragment):
   def render_anki(self):
     media_filename_html = html.escape(self.path_in_base(''))
     return f"[sound:{media_filename_html}]"
@@ -140,8 +140,32 @@ class VideoField(MediaField):
     media_filename_html = html.escape(self.path_in_base(base_path))
     return f'<video controls src="{media_filename_html}"></video>'
 
+class Field:
+  def __init__(self, fragments: list[Fragment] = []):
+    self.fragments = fragments
+
+  def add_fragment(self, fragment: Fragment):
+    self.fragments.append(fragment)
+
+  def media_paths(self):
+    for fragment in self.fragments:
+      for path in fragment.media_paths():
+        yield path
+
+  def render_anki(self):
+    return ''.join([fragment.render_anki() for fragment in self.fragments])
+
+  def render_html(self, base_path=''):
+    return ''.join([fragment.render_html(base_path) for fragment in self.fragments])
+
+  def __str__(self):
+    return self.render_anki()
+
+  def __repr__(self):
+    return repr([fragment for fragment in self.fragments])
+
 class Note:
-  def __init__(self, note_id, media, text, more=Field(''), tags=[], direction='<->'):
+  def __init__(self, note_id, media, text, more=Field(), tags=[], direction='<->'):
     self.note_id = note_id
     self.media = media
     self.text = text
@@ -150,7 +174,12 @@ class Note:
     self.direction = direction
 
   def content_fields(self):
-    return [self.text, self.media]
+    return [self.text, self.more, self.media]
+
+  def media_paths(self):
+    for field in self.content_fields():
+      for path in field.media_paths():
+        yield path
 
   def add_to_deck(self, deck):
     media_to_text = text_to_media = ''
@@ -182,7 +211,7 @@ class Config:
     self.title = None
     self.crop = None
     self.format = None
-    self.more = Field('')
+    self.more = Field()
     self.tags = []
     self.slow = None
     self.trim = None
@@ -191,7 +220,10 @@ class Config:
     self.note_id = '{deck_id}__{url} {clip} {direction}'
 
   def set_more(self, input):
-    self.more = Field(input)
+    self.more = Field([Fragment(input)])
+
+  def add_more(self, input):
+    self.more.add_fragment(Fragment(input))
 
   def update_tags(self, input):
     new_tags = input.split()
@@ -406,6 +438,8 @@ class DeckParser:
         config.title = line.removeprefix('title:').strip()
       elif line.startswith('more:'):
         config.set_more(line.removeprefix('more:').strip())
+      elif line.startswith('more+'):
+        config.add_more(line.removeprefix('more+').strip())
       elif line.startswith('tags:'):
         config.update_tags(line.removeprefix('tags:'))
       elif line.startswith('crop:'):
@@ -510,9 +544,9 @@ class DeckParser:
 
     path = video.processed_video()
     if video.is_still() or video.output_ext() == "gif":
-      media = ImageField(path)
+      media = ImageFragment(path)
     else:
-      media = VideoField(path)
+      media = VideoFragment(path)
 
     # Format clip for note_id
     if clip is None:
@@ -535,7 +569,15 @@ class DeckParser:
 
     try:
       self.deck.add_note(
-        Note(note_id, media, Field(text), config.more, config.tags, direction))
+        Note(
+          note_id,
+          media=Field([media]),
+          text=Field([Fragment(text)]),
+          more=config.more,
+          tags=config.tags,
+          direction=direction,
+        )
+      )
     except LookupError as error:
       self.error(error)
     self._reset_note()
