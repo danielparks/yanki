@@ -29,12 +29,12 @@ def yanki_card_model():
   back_template = '''
     {{FrontSide}}
 
-    <hr id=answer>
+    <hr id="answer">
 
     <p>{{$FIELD}}</p>
 
     {{#More}}
-    <p>{{More}}</p>
+    <div class="more">{{More}}</div>
     {{/More}}
   '''.replace('\n    ', '\n').strip()
 
@@ -63,7 +63,18 @@ def yanki_card_model():
         'afmt': back_template.replace('$FIELD', 'Text'),
       },
     ],
-    css=genanki.BASIC_OPTIONAL_REVERSED_CARD_MODEL.css,
+    css='''
+      .card {
+        font: 20px sans-serif;
+        text-align: center;
+        color: #000;
+        background-color: #fff;
+      }
+
+      .more {
+        font-size: 16px;
+      }
+    ''',
   )
 
 YANKI_CARD_MODEL = yanki_card_model()
