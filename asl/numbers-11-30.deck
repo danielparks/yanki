@@ -17,10 +17,10 @@ https://www.youtube.com/watch?v=M4AFC4eEjlQ @855F-889F 20
 # Variants
 slow: 0:00- *2
 tags: +extra
-https://www.youtube.com/watch?v=LR36bN0IayA @30F-46F -> 16
-https://www.youtube.com/watch?v=LR36bN0IayA @56F-77F -> 17
-https://www.youtube.com/watch?v=LR36bN0IayA @86F-103F -> 18
-https://www.youtube.com/watch?v=LR36bN0IayA @112F-131F -> 19
+https://www.youtube.com/watch?v=LR36bN0IayA @30F-46F -> 16 (alternative)
+https://www.youtube.com/watch?v=LR36bN0IayA @56F-77F -> 17 (alternative)
+https://www.youtube.com/watch?v=LR36bN0IayA @86F-103F -> 18 (alternative)
+https://www.youtube.com/watch?v=LR36bN0IayA @112F-131F -> 19 (alternative)
 
 # The sign for twenty is a little fast; stretch it out.
 slow: 0:00-0:00.1 *2
