@@ -1,4 +1,5 @@
 # https://www.lifeprint.com/asl101/lessons/lesson08.htm
+more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https://www.lifeprint.com/asl101/lessons/lesson08.htm>`_
 title: Lifeprint ASL::Vocabulary::Lesson 08 — Clothes
 tags: lesson_08 vocabulary
 audio: strip
@@ -73,13 +74,13 @@ https://www.youtube.com/watch?v=nh_PLvAkWpU LIGHTS-OFF
 # Might remove this one since it is fairly specific:
 https://www.youtube.com/watch?v=vl1LG51Wd1c ->
   OFF-[removed-or-separated-from]
-  more: Be sure to read https://www.lifeprint.com/asl101/pages-signs/o/off.htm
+  more: rst: Be sure to read Lifeprint: `OFF <https://www.lifeprint.com/asl101/pages-signs/o/off.htm>`_
   trim: 21F-75F
 
 more: rst:Lifeprint: `ON <https://www.lifeprint.com/asl101/pages-signs/o/on.htm>`_
 https://www.youtube.com/watch?v=e8hiRj3xDiw
   ON / onto
-  more: Be sure to read https://www.lifeprint.com/asl101/pages-signs/o/on.htm
+  more: rst: Be sure to read Lifeprint: `ON <https://www.lifeprint.com/asl101/pages-signs/o/on.htm>`_
   trim: 15F-66F
 https://www.youtube.com/watch?v=w0Sl6ta4Obo LIGHTS-ON
   trim: 35F-115F
@@ -239,5 +240,7 @@ tags: +extra
 # HARD-OF-HEARING is in lesson 13, but I want to test moving decks.
 https://www.youtube.com/watch?v=gz_R3F29Je0 HARD-OF-HEARING
   trim: 11F-72F
+  more: rst:Lifeprint: `HARD-OF-HEARING <https://www.lifeprint.com/asl101/pages-signs/h/hard-of-hearing.htm>`_
 https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
   trim: 9F-73F
+  more: rst:Lifeprint: `COMFORTABLE <https://www.lifeprint.com/asl101/pages-signs/c/comfortable.htm>`_
