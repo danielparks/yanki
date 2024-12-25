@@ -11,6 +11,7 @@ That will produce an `asl/lesson-01.apkg` file.
 
 ```text
 title: Lifeprint ASL::Phrases::Lesson 01
+more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 1 <https://www.lifeprint.com/asl101/lessons/lesson01.htm>`_
 tags: lesson_01 phrase
 audio: strip
 
