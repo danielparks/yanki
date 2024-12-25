@@ -85,6 +85,7 @@ class Video:
     self._info = None
     self._raw_metadata = None
     self._crop = None
+    self._overlay_text = ''
     self._format = None
     self._still = False
     self.input_options = {}
@@ -197,6 +198,9 @@ class Video:
   def crop(self, crop):
     self._crop = crop
 
+  def overlay_text(self, text):
+    self._overlay_text = text
+
   def audio(self, audio):
     if audio == 'strip':
       self.output_options['an'] = None
@@ -302,6 +306,10 @@ class Video:
     vf = []
     if self._crop:
       vf.append(f"crop={self._crop}")
+    if self._overlay_text:
+      # FIXME escaping https://superuser.com/questions/1821926/how-to-escape-file-path-for-burned-in-text-based-subtitles-with-ffmpeg/1822055#1822055
+      vf.append(f"drawtext=text='{self._overlay_text}':x=20:y=20:font=Arial"
+        ":fontcolor=white:fontsize=48:box=1:boxcolor=black@0.5:boxborderw=20")
     vf.append("scale=-2:500")
 
     return {

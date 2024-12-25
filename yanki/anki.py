@@ -212,6 +212,7 @@ class Config:
     self.crop = None
     self.format = None
     self.more = Field()
+    self.overlay_text = ''
     self.tags = []
     self.slow = None
     self.trim = None
@@ -224,6 +225,9 @@ class Config:
 
   def add_more(self, input):
     self.more.add_fragment(Fragment(input))
+
+  def set_overlay_text(self, input):
+    self.overlay_text = input
 
   def update_tags(self, input):
     new_tags = input.split()
@@ -440,6 +444,8 @@ class DeckParser:
         config.set_more(line.removeprefix('more:').strip())
       elif line.startswith('more+'):
         config.add_more(line.removeprefix('more+').strip())
+      elif line.startswith('overlay_text:'):
+        config.set_overlay_text(line.removeprefix('overlay_text:').strip())
       elif line.startswith('tags:'):
         config.update_tags(line.removeprefix('tags:'))
       elif line.startswith('crop:'):
@@ -502,6 +508,9 @@ class DeckParser:
         video.format(config.format)
     except ValueError as error:
       self.error(error)
+
+    if config.overlay_text:
+      video.overlay_text(config.overlay_text)
 
     # Check for @time or @start-end
     (clip, rest) = self._try_parse_clip(rest)
