@@ -1,0 +1,7 @@
+title: Test deck::overlay_text
+note_id: {deck_id} {text}
+
+https://www.youtube.com/watch?v=jNQXAC9IVRw -> a few words
+  overlay_text: a few words
+https://www.youtube.com/watch?v=jNQXAC9IVRw -> special:characters,a='b'c\d
+  overlay_text: special:characters,a='b'c\d

@@ -79,18 +79,21 @@ class Video:
   def __init__(self, url, cache_path="."):
     self.url = url
     self.cache_path = cache_path
+    self._info = None
+    self._raw_metadata = None
+    self._format = None
+    self._still = False
+
+    # ffmpeg parameters. Every run with the same parameters should produce the
+    # same video (assuming the source hasn’t changed).
     self.id = url_to_id(url)
     if '/' in self.id:
       raise BadURL(f'Invalid "/" in video ID: {repr(self.id)}')
-    self._info = None
-    self._raw_metadata = None
     self._crop = None
     self._overlay_text = ''
-    self._format = None
-    self._still = False
+    self._slow_filter = None
     self.input_options = {}
     self.output_options = {}
-    self.filter_complex = None
 
   def cached(self, filename):
     return os.path.join(self.cache_path, filename)
@@ -106,8 +109,6 @@ class Video:
 
   def processed_video_cache_path(self, prefix='processed_'):
     parameters = '_'.join(self.ffmpeg_parameters())
-    if self.filter_complex:
-      parameters += '/' + self.filter_complex
 
     if '/' in parameters or len(parameters) > 60:
       LOGGER.debug(f'hashing parameters {repr(parameters)}')
@@ -142,18 +143,13 @@ class Video:
 
     path = self.raw_metadata_cache_path()
     try:
-      with open(path, 'r', encoding="utf-8") as file:
+      with open(path, 'r', encoding='utf-8') as file:
         self._raw_metadata = json.load(file)
     except FileNotFoundError:
-      metadata_json = ffmpeg.FFmpeg(executable="ffprobe").input(
-          self.raw_video(),
-          print_format="json",
-          show_streams=None,
-        ).execute()
-      self._raw_metadata = json.loads(metadata_json)
+      self._raw_metadata = ffmpeg.probe(self.raw_video())
 
-      with open(path, 'wb') as file:
-        file.write(metadata_json)
+      with open(path, 'w', encoding='utf-8') as file:
+        json.dump(self._raw_metadata, file)
 
     return self._raw_metadata
 
@@ -223,37 +219,9 @@ class Video:
     """Set a filter to slow (or speed up) part of the video."""
     if (end is not None and end == start) or amount == 1:
       # Nothing is affected
-      self.filter_complex = None
-      return
-
-    start = start.replace(':', '\\\\:')
-    pieces = []
-    if is_non_zero_time(start):
-      i = len(pieces)
-      pieces.append(f'[0]trim=0:{start}[v{i}]')
-
-    # The piece that is slowed
-    if end is not None:
-      end = end.replace(':', '\\\\:')
-      trim = f'{start}:{end}'
+      self._slow_filter = None
     else:
-      trim = f'{start}'
-
-    i = len(pieces)
-    pieces.append(
-      f'[0]trim={trim}[v{i}];'
-      + f'[v{i}]setpts={amount}*PTS[v{i}]'
-    )
-
-    if end is not None:
-      i = len(pieces)
-      pieces.append(f'[0]trim={end}[v{i}]')
-
-    # Concatenate all the pieces together
-    inputs = "".join([f'[v{i}]' for i in range(len(pieces))])
-    pieces.append(f'{inputs}concat=n={len(pieces)}')
-
-    self.filter_complex = ';'.join(pieces)
+      self._slow_filter = (start, end, amount)
 
   def format(self, extenstion):
     self._format = extenstion
@@ -299,31 +267,13 @@ class Video:
       # FIXME?
       raise ValueError("vf output option already set")
 
-    if "vn" in self.output_options:
-      # video: strip mode, don’t use -vf
-      return self.output_options
-
-    vf = []
-    if self._crop:
-      vf.append(f"crop={self._crop}")
-    if self._overlay_text:
-      # FIXME escaping https://superuser.com/questions/1821926/how-to-escape-file-path-for-burned-in-text-based-subtitles-with-ffmpeg/1822055#1822055
-      vf.append(f"drawtext=text='{self._overlay_text}':x=20:y=20:font=Arial"
-        ":fontcolor=white:fontsize=48:box=1:boxcolor=black@0.5:boxborderw=20")
-    vf.append("scale=-2:500")
-
-    return {
-      "vf": ",".join(vf),
-      **self.output_options,
-    }
+    return self.output_options
 
   def ffmpeg_parameters(self):
     """
     Get most parameters to ffmpeg. Used to identify output for caching.
 
     Does not include input or output file names, or options like -y.
-
-    Does not include -filter_complex, since it runs in a second pass.
     """
     parameters = []
 
@@ -339,6 +289,13 @@ class Video:
       if value is not None:
         parameters.append(value)
 
+    if self._crop is not None:
+      parameters.append(f'CROP={repr(self._crop)}')
+    if self._overlay_text != '':
+      parameters.append(f'OVERLAY_TEXT={repr(self._overlay_text)}')
+    if self._slow_filter is not None:
+      parameters.append(f'SLOW_FILTER={repr(self._slow_filter)}')
+
     return parameters
 
   def processed_video(self):
@@ -351,14 +308,14 @@ class Video:
     parameters = " ".join(self.ffmpeg_parameters())
     LOGGER.info(f"{parameters}: processing video to {output_path}")
 
-    second_pass = self.filter_complex or 'copyts' in self.output_options
-    if second_pass:
-      # -filter_complex is incompatible with -vf, so we do it in a second pass.
-      #
+    uses_copyts = 'copyts' in self.output_options
+    if uses_copyts:
       # -copyts is needed to clip a video to a specific end time, rather than
       # using the desired clip duration. However, it sets the timestamps in the
       # saved video file, which causes a delay before the video starts in
       # certain players (Safari, QuickTime).
+      #
+      # It’s also incompatible with certain filters, such as concat.
       #
       # To fix this, we reprocess the video, so we want to give it a different
       # name for the first pass.
@@ -366,36 +323,119 @@ class Video:
     else:
       first_pass_output_path = output_path
 
+    stream = ffmpeg.input(raw_path, **self.ffmpeg_input_options())
+
+    if "vn" not in self.output_options:
+      # Video stream is not being stripped
+      if self._crop:
+        # FIXME kludge; doesn’t handle named params
+        stream = stream.filter('crop', *self._crop.split(':'))
+
+      stream = stream.filter('scale', -2, 500)
+
+      if self._overlay_text:
+        stream = stream.drawtext(
+          text=self._overlay_text,
+          x=20,
+          y=20,
+          font='Arial',
+          fontcolor='white',
+          fontsize=48,
+          box=1,
+          boxcolor='black@0.5',
+          boxborderw=20,
+        )
+
+      if not uses_copyts:
+        # copyts and the concat filter are incompatible
+        stream = self._try_apply_slow_filter(stream)
+
     try:
-      ffmpeg.FFmpeg() \
-        .option("y") \
-        .input(raw_path, self.ffmpeg_input_options()) \
-        .output(first_pass_output_path, self.ffmpeg_output_options()) \
-        .execute()
-    except ffmpeg.errors.FFmpegError as error:
-      sys.exit(f"""ffmpeg: {error}
-        input: {raw_path}
-        {self.ffmpeg_input_options()}
-        output: {first_pass_output_path}
-        {self.ffmpeg_output_options()}""".replace("\n      ", "\n"))
+      (
+        stream
+        .output(first_pass_output_path, **self.ffmpeg_output_options())
+        .overwrite_output()
+        .run(quiet=True)
+      )
+    except ffmpeg.Error as error:
+      sys.stderr.buffer.write(error.stderr)
+      sys.exit("Error in ffmpeg first pass. See above.")
 
-    if second_pass:
-      if self.filter_complex:
-        LOGGER.debug(f"{parameters} second pass: running filter_complex {self.filter_complex}")
-      else:
-        LOGGER.debug(f"{parameters} second pass: (no filter)")
+    if uses_copyts:
+      LOGGER.debug(f"{parameters} second pass")
 
-      command = ffmpeg.FFmpeg().option("y")
-      if self.filter_complex:
-        command.option('filter_complex', self.filter_complex)
       try:
-        command.input(first_pass_output_path).output(output_path).execute()
-      except ffmpeg.errors.FFmpegError as error:
-        sys.exit(f"""ffmpeg: {error}
-          filter_complex: {self.filter_complex}
-          input: {first_pass_output_path}
-          output: {output_path}""".replace("\n        ", "\n"))
+        stream = ffmpeg.input(first_pass_output_path)
+        (
+          self._try_apply_slow_filter(stream)
+          .output(output_path)
+          .overwrite_output()
+          .run(quiet=True)
+        )
+      except ffmpeg.Error as error:
+        sys.stderr.buffer.write(error.stderr)
+        sys.exit("Error in ffmpeg second pass. See above.")
 
       os.remove(first_pass_output_path)
 
     return output_path
+
+  def _try_apply_slow_filter(self, stream):
+    if self._slow_filter is None:
+      return stream
+
+    (start, end, amount) = self._slow_filter
+    if start is None:
+      start = '0F'
+
+    split = stream.split()
+    parts = []
+
+    if is_non_zero_time(start):
+      parts.append(split[len(parts)].trim(start='0', end=start))
+
+    if end is None:
+      end_trim = {}
+    else:
+      end_trim = { 'end': end }
+
+    parts.append(
+      split[len(parts)]
+      .filter('trim', start=start, **end_trim)
+      .setpts(f'{amount}*PTS')
+    )
+
+    if end is not None:
+      parts.append(split[len(parts)].trim(start=end))
+
+    return ffmpeg.concat(*parts)
+
+  def _try_apply_slow_filter(self, stream):
+    if self._slow_filter is None:
+      return stream
+
+    (start, end, amount) = self._slow_filter
+    if start is None:
+      start = '0F'
+
+    split = stream.split()
+    parts = []
+
+    if is_non_zero_time(start):
+      parts.append(split[len(parts)].trim(start='0', end=start))
+
+    if end is None:
+      end_trim = {}
+    else:
+      end_trim = { 'end': end }
+
+    parts.append(
+      split[len(parts)]
+      .filter('trim', start=start, **end_trim)
+      .setpts(f'{amount}*PTS')
+    )
+
+    if end is not None:
+      parts.append(split[len(parts)].trim(start=end))
+
+    return ffmpeg.concat(*parts)

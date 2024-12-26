@@ -600,8 +600,10 @@ class DeckParser:
     parts = input.split(maxsplit=1)
     if len(parts) >= 1:
       clip = parts[0].removeprefix('@').split('-')
-      if len(clip) < 1 or len(clip) > 2 or clip[0] == '':
+      if len(clip) not in (1, 2):
         self.error(f'Invalid clip specification {repr(parts[0])}.')
+      if clip[0] == '':
+        clip[0] = '0F'
 
     # Return rest of input
     if len(parts) == 2:
