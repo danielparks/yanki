@@ -171,7 +171,7 @@ class Video:
     raw_path = self.raw_video()
     raise RuntimeError(f"Could not get FPS for video: {raw_path}")
 
-  def parse_time_spec(self, spec):
+  def normalize_time_spec(self, spec):
     if spec.endswith("F"):
       return "%.3f" % (int(spec[:-1])/self.get_fps())
     else:
@@ -179,14 +179,14 @@ class Video:
 
   def clip(self, start_spec, end_spec):
     if start_spec:
-      self.input_options["ss"] = self.parse_time_spec(start_spec)
+      self.input_options["ss"] = self.normalize_time_spec(start_spec)
     if end_spec:
-      self.output_options["to"] = self.parse_time_spec(end_spec)
+      self.output_options["to"] = self.normalize_time_spec(end_spec)
       if start_spec:
         self.output_options["copyts"] = None
 
   def snapshot(self, time_spec):
-    self.input_options["ss"] = self.parse_time_spec(time_spec)
+    self.input_options["ss"] = self.normalize_time_spec(time_spec)
     self.output_options["frames:v"] = "1"
     self.output_options["q:v"] = "2" # JPEG quality
     self._still = True

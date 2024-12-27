@@ -1,5 +1,7 @@
 from copy import copy, deepcopy
+from dataclasses import dataclass, field
 import docutils.core
+import functools
 import genanki
 import hashlib
 import html
@@ -260,47 +262,218 @@ class Config:
     else:
       raise ValueError('video must be either "include" or "strip"')
 
-class Note:
-  def __init__(self, note_id, media, text, more=Field(), tags=[], direction='<->'):
-    self.note_id = note_id
-    self.media = media
-    self.text = text
-    self.more = more
-    self.tags = tags
-    self.direction = direction
+  def set_note_id(self, note_id_format):
+    try:
+      note_id_format.format(
+        deck_id='deck_id',
+        url='url',
+        clip='@clip',
+        direction='<->',
+        media='media',
+        text='text',
+      )
+    except KeyError as error:
+      raise ValueError(f'Unknown variable in note_id format: {error}')
+    self.note_id = note_id_format
 
-  def content_fields(self):
-    return [self.text, self.more, self.media]
+@dataclass
+class NoteSpec:
+  source_path: str
+  line_number: int
+  source: str # config directives are stripped from this
+  config: Config
+  cache_path: str
+  video_url: str = field(init=False)
+  text: str = field(init=False)
+  clip: list[str] | None = field(default=None, init=False) # FIXME type?
+  direction: str = field(default='<->', init=False) # FIXME type?
+
+  # May be called before __post_init__ finishes
+  def error(self, message):
+    sys.exit(f"Error in {self.where()}: {message}")
+
+  # May be called before __post_init__ finishes
+  def where(self):
+    return f"{self.source_path}, line {self.line_number}"
+
+  # May be called before __post_init__ finishes
+  def _try_parse_clip(self, input):
+    if not input.startswith('@'):
+      return input
+
+    [clip, *rest] = input.split(maxsplit=1)
+    self.clip = clip.removeprefix('@').split('-')
+
+    if len(self.clip) == 2:
+      if self.clip[0] == '':
+        self.clip[0] = '0'
+    elif len(self.clip) != 1 or self.clip[0] == '':
+      self.error(f'Invalid clip specification {repr(clip)}')
+
+    return ''.join(rest) # rest is either [] or [str]
+
+  # May be called before __post_init__ finishes
+  def _try_parse_direction(self, input):
+    parts = input.split(maxsplit=1)
+    if len(parts) >= 1 and parts[0] in ['->', '<-', '<->']:
+      self.direction = parts[0]
+      if len(parts) >= 2:
+        return parts[1]
+      else:
+        return ''
+    else:
+      return input
+
+  def __post_init__(self):
+    try:
+      [self.video_url, *rest] = self.source.split(maxsplit=1)
+    except ValueError:
+      self.error(f'NoteSpec given empty source')
+
+    if len(rest) > 0:
+      # Remove trailing whitespace, particularly newlines.
+      rest = rest[0].rstrip()
+    else:
+      rest = ''
+
+    # Check for @time or @start-end
+    rest = self._try_parse_clip(rest)
+    if self.clip is not None and self.config.trim is not None:
+      self.error(f'Clip {repr(self.provisional_clip_spec())} is '
+        "incompatible with 'trim:'")
+
+    # Check for a direction sign
+    self.text = self._try_parse_direction(rest)
+
+  def provisional_clip_spec(self):
+    if self.clip is None:
+      return '@0-'
+    elif len(self.clip) in (1, 2):
+      return f'@{"-".join(self.clip)}'
+    else:
+      raise ValueError(f'Invalid clip: {repr(clip)}')
+
+class Note:
+  def __init__(self, spec):
+    self.spec = spec
 
   def media_paths(self):
     for field in self.content_fields():
       for path in field.media_paths():
         yield path
 
+  def content_fields(self):
+    return [self.text_field(), self.more_field(), self.media_field()]
+
+  @functools.cache
+  def text_field(self):
+    return Field([Fragment(self.text())])
+
+  @functools.cache
+  def more_field(self):
+    return self.spec.config.more
+
+  @functools.cache
+  def media_field(self):
+    return Field([self.media_fragment()])
+
   def add_to_deck(self, deck):
     media_to_text = text_to_media = ''
-    if self.direction == '<->':
+    if self.spec.direction == '<->':
       text_to_media = '1'
       media_to_text = '1'
-    elif self.direction == '<-':
+    elif self.spec.direction == '<-':
       text_to_media = '1'
-    elif self.direction == '->':
+    elif self.spec.direction == '->':
       media_to_text = '1'
     else:
-      raise ValueError(f"Invalid direction {repr(self.direction)}")
+      raise ValueError(f'Invalid direction {repr(self.spec.direction)}')
 
     deck.add_note(genanki.Note(
       model=YANKI_CARD_MODEL,
       fields=[
-        self.text.render_anki(),
-        self.more.render_anki(),
-        self.media.render_anki(),
+        self.text_field().render_anki(),
+        self.more_field().render_anki(),
+        self.media_field().render_anki(),
         text_to_media,
         media_to_text,
       ],
-      guid=genanki.guid_for(self.note_id.format(deck_id=deck.deck_id)),
-      tags=self.tags,
+      guid=genanki.guid_for(self.note_id(deck.deck_id)),
+      tags=self.spec.config.tags,
     ))
+
+  # {deck_id} is just a placeholder. To get the real note_id, you need to have
+  # a deck_id.
+  @functools.cache
+  def note_id(self, deck_id='{deck_id}'):
+    return self.spec.config.note_id.format(
+      deck_id=deck_id,
+      url=self.spec.video_url,
+      clip=self.clip_spec(),
+      direction=self.spec.direction,
+      ### FIXME should these be renamed to clarify that they’re normalized
+      ### versions of the input text?
+      media=' '.join([self.spec.video_url, self.clip_spec()]),
+      text=self.text(),
+    )
+
+  @functools.cache
+  def clip_spec(self):
+    if self.spec.clip is None:
+      return '@0-'
+    elif len(self.spec.clip) in (1, 2):
+      clip = [self.video().normalize_time_spec(part) for part in self.spec.clip]
+      return f'@{"-".join(clip)}'
+    else:
+      raise ValueError(f'Invalid clip: {repr(self.spec.clip)}')
+
+  def text(self):
+    if self.spec.text == '':
+      return self.video().title()
+    else:
+      return self.spec.text
+
+  @functools.cache
+  def media_fragment(self):
+    path = self.video().processed_video()
+    if self.video().is_still() or self.video().output_ext() == "gif":
+      return ImageFragment(path)
+    else:
+      return VideoFragment(path)
+
+  @functools.cache
+  def video(self):
+    try:
+      video = Video(self.spec.video_url, cache_path=self.spec.cache_path)
+      video.audio(self.spec.config.audio)
+      video.video(self.spec.config.video)
+      if self.spec.config.crop:
+        video.crop(self.spec.config.crop)
+      if self.spec.config.trim:
+        video.clip(self.spec.config.trim[0], self.spec.config.trim[1])
+      if self.spec.config.format:
+        video.format(self.spec.config.format)
+      if self.spec.config.slow:
+        (start, end, amount) = self.spec.config.slow
+        video.slow_filter(start=start, end=end, amount=amount)
+      if self.spec.config.overlay_text:
+        video.overlay_text(self.spec.config.overlay_text)
+    except ValueError as error:
+      self.spec.error(error)
+
+    if self.spec.clip is not None:
+      if self.spec.config.trim is not None:
+        self.spec.error(f'Clip {repr(self.spec.provisional_clip_spec())} is '
+          "incompatible with 'trim:'.")
+
+      if len(self.spec.clip) == 1:
+        video.snapshot(self.spec.clip[0])
+      elif len(self.spec.clip) == 2:
+        video.clip(self.spec.clip[0], self.spec.clip[1])
+      else:
+        raise ValueError(f'Invalid clip: {repr(self.spec.clip)}')
+
+    return video
 
 class Deck:
   def __init__(self, source=None):
@@ -309,9 +482,10 @@ class Deck:
     self.notes = {}
 
   def add_note(self, note):
-    if note.note_id in self.notes:
-      raise LookupError(f"Note with id {repr(note.note_id)} already exists in deck")
-    self.notes[note.note_id] = note
+    id = note.note_id()
+    if id in self.notes:
+      raise LookupError(f'Note with id {repr(id)} already exists in deck')
+    self.notes[id] = note
 
   def save_to_package(self, package):
     deck = genanki.Deck(name_to_id(self.config.title), self.config.title)
@@ -319,12 +493,11 @@ class Deck:
 
     for note in self.notes.values():
       note.add_to_deck(deck)
-      LOGGER.debug(f"Added note {repr(note.note_id)}: {note.content_fields()}")
+      LOGGER.debug(f"Added note {repr(note.note_id())}: {note.content_fields()}")
 
-      for field in note.content_fields():
-        for media_path in field.media_paths():
-          package.media_files.append(media_path)
-          LOGGER.debug(f"Added media file for {repr(note.note_id)}: {media_path}")
+      for media_path in note.media_paths():
+        package.media_files.append(media_path)
+        LOGGER.debug(f"Added media file for {repr(note.note_id())}: {media_path}")
 
     package.decks.append(deck)
 
@@ -342,7 +515,7 @@ class Deck:
 class DeckParser:
   def __init__(self, cache_path):
     self.cache_path = cache_path
-    self.parsed = []
+    self.finished_decks = []
     self._reset()
 
   def _reset(self):
@@ -352,7 +525,7 @@ class DeckParser:
     self._reset_note()
 
   def _reset_note(self):
-    self.note = []
+    self.note_source = []
     self.note_config = None
 
   def open(self, path):
@@ -363,17 +536,17 @@ class DeckParser:
     self.path = path
 
   def close(self):
-    if len(self.note) > 0:
-      self._finish_note()
+    if len(self.note_source) > 0:
+      self._add_note_to_deck(Note(self._finish_note()))
     if self.deck:
-      self.parsed.append(self.deck)
+      self.finished_decks.append(self.deck)
 
     self._reset()
 
-  def flush_parsed(self):
-    parsed = self.parsed
-    self.parsed = []
-    return parsed
+  def flush_decks(self):
+    finished_decks = self.finished_decks
+    self.finished_decks = []
+    return finished_decks
 
   def error(self, message):
     sys.exit(f"Error in {self.where()}: {message}")
@@ -385,11 +558,11 @@ class DeckParser:
     """Takes FileInput as parameter."""
     for line in input:
       self.parse_line(input.filename(), input.filelineno(), line)
-      for deck in self.flush_parsed():
+      for deck in self.flush_decks():
         yield deck
 
     self.close()
-    for deck in self.flush_parsed():
+    for deck in self.flush_decks():
       yield deck
 
   def parse_line(self, path, line_number, line):
@@ -398,36 +571,37 @@ class DeckParser:
 
     self.line_number = line_number
 
-    if line.startswith("#"):
+    if line.startswith('#'):
+      # Comment; skip line.
       return
 
-    unindented = line.lstrip(" \t")
+    unindented = line.lstrip(' \t')
     if line != unindented:
       # Line is indented and thus a continuation of a note
-      if len(self.note) == 0:
-        self.error('Found indented line with no preceding unindented line.')
+      if len(self.note_source) == 0:
+        self.error('Found indented line with no preceding unindented line')
 
       if self.note_config is None:
         self.note_config = deepcopy(self.deck.config)
 
       unindented = self._check_for_config(unindented, self.note_config)
       if unindented is not None:
-        self.note.append(unindented)
+        self.note_source.append(unindented)
       return
 
-    if line.strip() == "":
+    if line.strip() == '':
       # Blank lines only count inside notes.
-      if len(self.note) > 0:
-        self.note.append(line)
+      if len(self.note_source) > 0:
+        self.note_source.append(line)
       return
 
     # Line is not indented
-    if len(self.note) > 0:
-      self._finish_note()
+    if len(self.note_source) > 0:
+      self._add_note_to_deck(Note(self._finish_note()))
 
     line = self._check_for_config(line, self.deck.config)
     if line is not None:
-      self.note.append(line)
+      self.note_source.append(line)
 
   def _check_for_config(self, line, config):
     # Line without newline
@@ -461,9 +635,7 @@ class DeckParser:
       elif line.startswith('video:'):
         config.set_video(line.removeprefix('video:').strip())
       elif line.startswith('note_id'):
-        note_id = line.removeprefix('note_id:').strip()
-        self._check_note_id(note_id)
-        config.note_id = note_id
+        config.set_note_id(line.removeprefix('note_id:').strip())
       else:
         return line
     except ValueError as error:
@@ -471,142 +643,20 @@ class DeckParser:
 
     return None
 
-  def _check_note_id(self, note_id_format):
-    try:
-      note_id_format.format(
-        deck_id='deck_id',
-        url='url',
-        clip='@clip',
-        direction='<->',
-        media='media',
-        text='text',
-      )
-    except KeyError as error:
-      self.error(f'Unknown variable in note_id format: {error}')
-
   def _finish_note(self):
-    try:
-      [video_url, *rest] = ''.join(self.note).split(maxsplit=1)
-    except ValueError:
-      # FIXME improve exception?
-      raise ValueError(f'_finish_note() called on empty input ({self.where()})')
-
-    if len(rest) > 0:
-      rest = rest[0]
-    else:
-      rest = ''
-
-    config = self.note_config or self.deck.config
-
-    try:
-      video = Video(video_url, cache_path=self.cache_path)
-      video.audio(config.audio)
-      video.video(config.video)
-      if config.crop:
-        video.crop(config.crop)
-      if config.format:
-        video.format(config.format)
-    except ValueError as error:
-      self.error(error)
-
-    if config.overlay_text:
-      video.overlay_text(config.overlay_text)
-
-    # Check for @time or @start-end
-    (clip, rest) = self._try_parse_clip(rest)
-
-    if clip is not None:
-      if config.trim is not None:
-        self.error(f'Clip (@{"-".join(clip)}) is incompatible with “trim:”.')
-      elif len(clip) == 1:
-        video.snapshot(clip[0])
-      elif len(clip) == 2:
-        video.clip(clip[0], clip[1])
-      else:
-        # Should never happen — checked by _try_parse_clip()
-        raise RuntimeError(f'Invalid clip: {repr(clip)}')
-
-      # Normalize clip for note_id
-      clip = [video.parse_time_spec(part) for part in clip]
-
-    if config.trim is not None:
-      video.clip(config.trim[0], config.trim[1])
-
-    # Check for a direction sign
-    direction = '<->'
-    if rest == '':
-      text = video.title()
-    else:
-      parts = rest.split(maxsplit=1)
-      if len(parts) >= 2 and parts[0] in ['->', '<-', '<->']:
-        direction = parts[0]
-        text = parts[1]
-      else:
-        text = rest
-
-    # Remove trailing whitespace, particularly newlines.
-    text = text.rstrip()
-
-    if config.slow:
-      (start, end, amount) = config.slow
-      video.slow_filter(start=start, end=end, amount=amount)
-
-    path = video.processed_video()
-    if video.is_still() or video.output_ext() == "gif":
-      media = ImageFragment(path)
-    else:
-      media = VideoFragment(path)
-
-    # Format clip for note_id
-    if clip is None:
-      clip = '@0F-'
-    else:
-      clip = f'@{"-".join(clip)}'
-
-    note_id = config.note_id.format(
-      # This is a minor kludge: we don’t know the deck ID yet, so we replace it
-      # with itself and then call format() again when we know the deck ID.
-      deck_id='{deck_id}',
-      url=video_url,
-      clip=clip,
-      direction=direction,
-      ### FIXME should these be renamed to clarify that they’re normalized
-      ### versions of the input text?
-      media=' '.join([video_url, clip]),
-      text=text,
+    spec = NoteSpec(
+      # FIXME is self.note_config is None possible?
+      config=self.note_config or deepcopy(self.deck.config),
+      source_path=self.path,
+      line_number=self.line_number,
+      source=''.join(self.note_source),
+      cache_path=self.cache_path,
     )
+    self._reset_note()
+    return spec
 
+  def _add_note_to_deck(self, note):
     try:
-      self.deck.add_note(
-        Note(
-          note_id,
-          media=Field([media]),
-          text=Field([Fragment(text)]),
-          more=config.more,
-          tags=config.tags,
-          direction=direction,
-        )
-      )
+      self.deck.add_note(note)
     except LookupError as error:
       self.error(error)
-    self._reset_note()
-
-  def _try_parse_clip(self, input):
-    clip = None
-
-    if not input.startswith('@'):
-      return (clip, input)
-
-    parts = input.split(maxsplit=1)
-    if len(parts) >= 1:
-      clip = parts[0].removeprefix('@').split('-')
-      if len(clip) not in (1, 2):
-        self.error(f'Invalid clip specification {repr(parts[0])}.')
-      if clip[0] == '':
-        clip[0] = '0F'
-
-    # Return rest of input
-    if len(parts) == 2:
-      return (clip, parts[1])
-    else:
-      return (clip, '')
