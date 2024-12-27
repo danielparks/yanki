@@ -166,6 +166,10 @@ class Field:
   def __repr__(self):
     return repr([fragment for fragment in self.fragments])
 
+# Valid variables in note_id format. Used to validate that our code uses the
+# same variables in both places they’re needed.
+NOTE_ID_VARIABLES = set(['deck_id', 'url', 'clip', 'direction', 'media', 'text'])
+
 class Config:
   def __init__(self):
     self.title = None
@@ -264,14 +268,7 @@ class Config:
 
   def set_note_id(self, note_id_format):
     try:
-      note_id_format.format(
-        deck_id='deck_id',
-        url='url',
-        clip='@clip',
-        direction='<->',
-        media='media',
-        text='text',
-      )
+      note_id_format.format(**dict.fromkeys(NOTE_ID_VARIABLES, 'value'))
     except KeyError as error:
       raise ValueError(f'Unknown variable in note_id format: {error}')
     self.note_id = note_id_format
@@ -400,7 +397,7 @@ class Note:
   # a deck_id.
   @functools.cache
   def note_id(self, deck_id='{deck_id}'):
-    return self.spec.config.note_id.format(
+    return self._generate_note_id(
       deck_id=deck_id,
       url=self.spec.video_url(),
       clip=self.clip_spec(),
@@ -410,6 +407,13 @@ class Note:
       media=' '.join([self.spec.video_url(), self.clip_spec()]),
       text=self.text(),
     )
+
+  def _generate_note_id(self, **kwargs):
+    if len(NOTE_ID_VARIABLES.symmetric_difference(kwargs.keys())) > 0:
+      raise KeyError('Incorrect variables passed to generate_note_id()\n'
+        f'  got: {sorted(kwargs.keys())}\n'
+        f'  expected: {sorted(NOTE_ID_VARIABLES)}\n')
+    return self.spec.config.note_id.format(**kwargs)
 
   @functools.cache
   def clip_spec(self):
