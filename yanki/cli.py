@@ -197,6 +197,9 @@ def generate_index_html(deck_links):
   """
 
   for (file_name, deck) in deck_links:
+    if deck.config.title is None:
+      sys.exit(f'Deck {repr(deck.source)} does not contain title')
+
     output += f"""
           <li><a href="{h(file_name)}">{h(deck.config.title)}</a></li>"""
 
@@ -207,6 +210,9 @@ def generate_index_html(deck_links):
   """).lstrip()
 
 def htmlize_deck(deck, path_prefix=""):
+  if deck.config.title is None:
+    sys.exit(f'Deck {repr(deck.source)} does not contain title')
+
   output = f"""
     <!DOCTYPE html>
     <html>
