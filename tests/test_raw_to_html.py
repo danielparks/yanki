@@ -1,5 +1,5 @@
 import pytest
-from yanki.anki import raw_to_html
+from yanki.field import raw_to_html
 
 def test_easy_url():
   assert raw_to_html('foo http://ex/?q=a&t=1#f bar\n') \

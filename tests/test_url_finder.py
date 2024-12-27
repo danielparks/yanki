@@ -1,5 +1,5 @@
 import pytest
-from yanki.anki import URL_FINDER
+from yanki.field import URL_FINDER
 
 def find_url(input):
   return URL_FINDER.search(input)[0]

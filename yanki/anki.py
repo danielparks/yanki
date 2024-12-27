@@ -1,28 +1,16 @@
 from copy import copy, deepcopy
 from dataclasses import dataclass, field
-import docutils.core
 import functools
 import genanki
 import hashlib
-import html
 import logging
 import os
-import re
 import sys
 
+from yanki.field import Fragment, ImageFragment, VideoFragment, Field
 from yanki.video import Video
 
 LOGGER = logging.getLogger(__name__)
-
-# Regular expression to find http:// URLs in text.
-URL_FINDER = re.compile(r'''
-  # URL with no surrounding parentheses
-  (?<!\() \b(https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-])
-  # URL with surrounding parentheses
-  | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-]) (?=\))
-  # URL with an initial parenthesis
-  | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-]) (?!\))
-''', flags=re.IGNORECASE | re.VERBOSE)
 
 # Keep these variables local
 def yanki_card_model():
@@ -84,87 +72,6 @@ def name_to_id(name):
   bytes = hashlib.sha256(name.encode('utf-8')).digest()
   # Apparently deck ID is i64
   return int.from_bytes(bytes[:8], byteorder='big', signed=True)
-
-def rst_to_html(rst):
-  # From https://wiki.python.org/moin/reStructuredText#The_.22Cool.22_Way
-  parts = docutils.core.publish_parts(source=rst, writer_name='html5')
-  return parts['body_pre_docinfo'] + parts['fragment']
-
-def raw_to_html(raw):
-  if raw.startswith('rst:'):
-    return rst_to_html(raw[4:])
-  elif raw.startswith('html:'):
-    return raw[5:]
-  else:
-    return URL_FINDER.sub(r'<a href="\1">\1</a>', html.escape(raw)) \
-      .rstrip().replace("\n", "<br/>")
-
-class Fragment:
-  def __init__(self, raw):
-    self.raw = raw
-
-  def media_paths(self):
-    return []
-
-  def render_anki(self):
-    return self.render_html('')
-
-  def render_html(self, base_path=''):
-    return raw_to_html(self.raw)
-
-  def __str__(self):
-    return self.render_anki()
-
-  def __repr__(self):
-    return repr(self.render_anki())
-
-class MediaFragment(Fragment):
-  def __init__(self, path):
-    self.path = path
-
-  def path_in_base(self, base_path):
-    return os.path.join(base_path, os.path.basename(self.path))
-
-  def media_paths(self):
-    return [self.path]
-
-class ImageFragment(MediaFragment):
-  def render_html(self, base_path=''):
-    media_filename_html = html.escape(self.path_in_base(base_path))
-    return f'<img src="{media_filename_html}" />'
-
-class VideoFragment(MediaFragment):
-  def render_anki(self):
-    media_filename_html = html.escape(self.path_in_base(''))
-    return f"[sound:{media_filename_html}]"
-
-  def render_html(self, base_path='.'):
-    media_filename_html = html.escape(self.path_in_base(base_path))
-    return f'<video controls src="{media_filename_html}"></video>'
-
-class Field:
-  def __init__(self, fragments: list[Fragment] = []):
-    self.fragments = fragments
-
-  def add_fragment(self, fragment: Fragment):
-    self.fragments.append(fragment)
-
-  def media_paths(self):
-    for fragment in self.fragments:
-      for path in fragment.media_paths():
-        yield path
-
-  def render_anki(self):
-    return ''.join([fragment.render_anki() for fragment in self.fragments])
-
-  def render_html(self, base_path=''):
-    return ''.join([fragment.render_html(base_path) for fragment in self.fragments])
-
-  def __str__(self):
-    return self.render_anki()
-
-  def __repr__(self):
-    return repr([fragment for fragment in self.fragments])
 
 # Valid variables in note_id format. Used to validate that our code uses the
 # same variables in both places they’re needed.
