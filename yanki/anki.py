@@ -276,82 +276,76 @@ class Config:
       raise ValueError(f'Unknown variable in note_id format: {error}')
     self.note_id = note_id_format
 
-@dataclass
+@dataclass(frozen=True)
 class NoteSpec:
   source_path: str
   line_number: int
   source: str # config directives are stripped from this
   config: Config
   cache_path: str
-  video_url: str = field(init=False)
-  text: str = field(init=False)
-  clip: list[str] | None = field(default=None, init=False) # FIXME type?
-  direction: str = field(default='<->', init=False) # FIXME type?
 
-  # May be called before __post_init__ finishes
-  def error(self, message):
-    sys.exit(f"Error in {self.where()}: {message}")
+  def video_url(self):
+    return self._parse_video_url()[0]
 
-  # May be called before __post_init__ finishes
-  def where(self):
-    return f"{self.source_path}, line {self.line_number}"
-
-  # May be called before __post_init__ finishes
-  def _try_parse_clip(self, input):
-    if not input.startswith('@'):
-      return input
-
-    [clip, *rest] = input.split(maxsplit=1)
-    self.clip = clip.removeprefix('@').split('-')
-
-    if len(self.clip) == 2:
-      if self.clip[0] == '':
-        self.clip[0] = '0'
-    elif len(self.clip) != 1 or self.clip[0] == '':
-      self.error(f'Invalid clip specification {repr(clip)}')
-
-    return ''.join(rest) # rest is either [] or [str]
-
-  # May be called before __post_init__ finishes
-  def _try_parse_direction(self, input):
-    parts = input.split(maxsplit=1)
-    if len(parts) >= 1 and parts[0] in ['->', '<-', '<->']:
-      self.direction = parts[0]
-      if len(parts) >= 2:
-        return parts[1]
-      else:
-        return ''
-    else:
-      return input
-
-  def __post_init__(self):
+  @functools.cache
+  def _parse_video_url(self):
     try:
-      [self.video_url, *rest] = self.source.split(maxsplit=1)
+      [video_url, *rest] = self.source.rstrip().split(maxsplit=1)
     except ValueError:
       self.error(f'NoteSpec given empty source')
 
-    if len(rest) > 0:
-      # Remove trailing whitespace, particularly newlines.
-      rest = rest[0].rstrip()
-    else:
-      rest = ''
+    return video_url, ''.join(rest) # rest is either [] or [str]
 
-    # Check for @time or @start-end
-    rest = self._try_parse_clip(rest)
-    if self.clip is not None and self.config.trim is not None:
-      self.error(f'Clip ({repr(self.provisional_clip_spec())}) is '
-        "incompatible with 'trim:'")
+  def clip(self):
+    return self._parse_clip()[0]
 
-    # Check for a direction sign
-    self.text = self._try_parse_direction(rest)
+  @functools.cache
+  def _parse_clip(self):
+    input = self._parse_video_url()[1]
+    if not input.startswith('@'):
+      return None, input
+
+    [raw_clip, *rest] = input.split(maxsplit=1)
+    clip = raw_clip.removeprefix('@').split('-')
+
+    if len(clip) == 2:
+      if clip[0] == '':
+        clip[0] = '0'
+    elif len(clip) != 1 or clip[0] == '':
+      self.error(f'Invalid clip specification {repr(raw_clip)}')
+
+    return clip, ''.join(rest) # rest is either [] or [str]
+
+  def direction(self):
+    return self._parse_direction()[0]
+
+  def text(self):
+    return self._parse_direction()[1]
+
+  @functools.cache
+  def _parse_direction(self):
+    input = self._parse_clip()[1]
+
+    try:
+      [direction, *rest] = input.split(maxsplit=1)
+      if direction in ['->', '<-', '<->']:
+        return direction, ''.join(rest) # rest is either [] or [str]
+    except ValueError:
+      pass
+
+    return '<->', input
 
   def provisional_clip_spec(self):
-    if self.clip is None:
+    if self.clip() is None:
       return '@0-'
-    elif len(self.clip) in (1, 2):
-      return f'@{"-".join(self.clip)}'
     else:
-      raise ValueError(f'Invalid clip: {repr(clip)}')
+      return f'@{"-".join(self.clip())}'
+
+  def error(self, message):
+    sys.exit(f"Error in {self.where()}: {message}")
+
+  def where(self):
+    return f"{self.source_path}, line {self.line_number}"
 
 class Note:
   def __init__(self, spec):
@@ -379,15 +373,15 @@ class Note:
 
   def add_to_deck(self, deck):
     media_to_text = text_to_media = ''
-    if self.spec.direction == '<->':
+    if self.spec.direction() == '<->':
       text_to_media = '1'
       media_to_text = '1'
-    elif self.spec.direction == '<-':
+    elif self.spec.direction() == '<-':
       text_to_media = '1'
-    elif self.spec.direction == '->':
+    elif self.spec.direction() == '->':
       media_to_text = '1'
     else:
-      raise ValueError(f'Invalid direction {repr(self.spec.direction)}')
+      raise ValueError(f'Invalid direction {repr(self.spec.direction())}')
 
     deck.add_note(genanki.Note(
       model=YANKI_CARD_MODEL,
@@ -408,30 +402,30 @@ class Note:
   def note_id(self, deck_id='{deck_id}'):
     return self.spec.config.note_id.format(
       deck_id=deck_id,
-      url=self.spec.video_url,
+      url=self.spec.video_url(),
       clip=self.clip_spec(),
-      direction=self.spec.direction,
+      direction=self.spec.direction(),
       ### FIXME should these be renamed to clarify that they’re normalized
       ### versions of the input text?
-      media=' '.join([self.spec.video_url, self.clip_spec()]),
+      media=' '.join([self.spec.video_url(), self.clip_spec()]),
       text=self.text(),
     )
 
   @functools.cache
   def clip_spec(self):
-    if self.spec.clip is None:
+    if self.spec.clip() is None:
       return '@0-'
-    elif len(self.spec.clip) in (1, 2):
-      clip = [self.video().normalize_time_spec(part) for part in self.spec.clip]
+    elif len(self.spec.clip()) in (1, 2):
+      clip = [self.video().normalize_time_spec(t) for t in self.spec.clip()]
       return f'@{"-".join(clip)}'
     else:
-      raise ValueError(f'Invalid clip: {repr(self.spec.clip)}')
+      raise ValueError(f'Invalid clip: {repr(self.spec.clip())}')
 
   def text(self):
-    if self.spec.text == '':
+    if self.spec.text() == '':
       return self.video().title()
     else:
-      return self.spec.text
+      return self.spec.text()
 
   @functools.cache
   def media_fragment(self):
@@ -444,7 +438,7 @@ class Note:
   @functools.cache
   def video(self):
     try:
-      video = Video(self.spec.video_url, cache_path=self.spec.cache_path)
+      video = Video(self.spec.video_url(), cache_path=self.spec.cache_path)
       video.audio(self.spec.config.audio)
       video.video(self.spec.config.video)
       if self.spec.config.crop:
@@ -461,17 +455,17 @@ class Note:
     except ValueError as error:
       self.spec.error(error)
 
-    if self.spec.clip is not None:
+    if self.spec.clip() is not None:
       if self.spec.config.trim is not None:
         self.spec.error(f'Clip ({repr(self.spec.provisional_clip_spec())}) is '
           "incompatible with 'trim:'.")
 
-      if len(self.spec.clip) == 1:
-        video.snapshot(self.spec.clip[0])
-      elif len(self.spec.clip) == 2:
-        video.clip(self.spec.clip[0], self.spec.clip[1])
+      if len(self.spec.clip()) == 1:
+        video.snapshot(self.spec.clip()[0])
+      elif len(self.spec.clip()) == 2:
+        video.clip(self.spec.clip()[0], self.spec.clip()[1])
       else:
-        raise ValueError(f'Invalid clip: {repr(self.spec.clip)}')
+        raise ValueError(f'Invalid clip: {repr(self.spec.clip())}')
 
     return video
 
