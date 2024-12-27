@@ -339,7 +339,7 @@ class NoteSpec:
     # Check for @time or @start-end
     rest = self._try_parse_clip(rest)
     if self.clip is not None and self.config.trim is not None:
-      self.error(f'Clip {repr(self.provisional_clip_spec())} is '
+      self.error(f'Clip ({repr(self.provisional_clip_spec())}) is '
         "incompatible with 'trim:'")
 
     # Check for a direction sign
@@ -463,7 +463,7 @@ class Note:
 
     if self.spec.clip is not None:
       if self.spec.config.trim is not None:
-        self.spec.error(f'Clip {repr(self.spec.provisional_clip_spec())} is '
+        self.spec.error(f'Clip ({repr(self.spec.provisional_clip_spec())}) is '
           "incompatible with 'trim:'.")
 
       if len(self.spec.clip) == 1:
