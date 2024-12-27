@@ -13,7 +13,8 @@ import sys
 import textwrap
 import yt_dlp
 
-from yanki.anki import DeckParser
+from yanki.parser import DeckParser
+from yanki.anki import Deck
 from yanki.video import Video, BadURL
 
 LOGGER = logging.getLogger(__name__)
@@ -79,7 +80,7 @@ def cli():
 
     input = fileinput.input(files=args.path, encoding='utf-8')
     parser = DeckParser(cache_path=args.cache)
-    decks = parser.parse_input(input)
+    decks = [Deck(spec) for spec in parser.parse_input(input)]
 
     if args.serve_http:
       return serve_http(args, decks)
@@ -125,7 +126,7 @@ def serve_http(args, decks):
 
   html_written = set()
   for deck in decks:
-    file_name = deck.config.title.replace('/', '--') + '.html'
+    file_name = deck.title().replace('/', '--') + '.html'
     html_path = os.path.join(args.cache, file_name)
     if html_path in html_written:
       raise KeyError(f"Duplicate path after munging deck title: {html_path}")
@@ -197,11 +198,11 @@ def generate_index_html(deck_links):
   """
 
   for (file_name, deck) in deck_links:
-    if deck.config.title is None:
-      sys.exit(f'Deck {repr(deck.source)} does not contain title')
+    if deck.title() is None:
+      sys.exit(f'Deck {repr(deck.source_path())} does not contain title')
 
     output += f"""
-          <li><a href="{h(file_name)}">{h(deck.config.title)}</a></li>"""
+          <li><a href="{h(file_name)}">{h(deck.title())}</a></li>"""
 
   return textwrap.dedent(output + f"""
         </ol>
@@ -210,19 +211,19 @@ def generate_index_html(deck_links):
   """).lstrip()
 
 def htmlize_deck(deck, path_prefix=""):
-  if deck.config.title is None:
-    sys.exit(f'Deck {repr(deck.source)} does not contain title')
+  if deck.title() is None:
+    sys.exit(f'Deck {repr(deck.source_path())} does not contain title')
 
   output = f"""
     <!DOCTYPE html>
     <html>
       <head>
-        <title>{h(deck.config.title)}</title>
+        <title>{h(deck.title())}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url('general.css')}">
       </head>
       <body>
-        <h1>{h(deck.config.title)}</h1>
+        <h1>{h(deck.title())}</h1>
   """
 
   for note in deck.notes.values():
@@ -247,6 +248,6 @@ def h(s):
 
 def dump_videos(args, decks):
   for deck in decks:
-    print(f'title: {deck.config.title}')
+    print(f'title: {deck.title()}')
     for id, note in deck.notes.items():
       print(f'{", ".join(note.media_paths())} {note.text()}')

@@ -1,4 +1,3 @@
-from copy import copy, deepcopy
 import functools
 import genanki
 import hashlib
@@ -7,7 +6,7 @@ import os
 import sys
 
 from yanki.field import Fragment, ImageFragment, VideoFragment, Field
-from yanki.parser import Config, NoteSpec
+from yanki.parser import Config, NoteSpec, DeckSpec
 from yanki.video import Video
 
 LOGGER = logging.getLogger(__name__)
@@ -196,187 +195,45 @@ class Note:
     return video
 
 class Deck:
-  def __init__(self, source=None):
-    self.source = source
-    self.config = Config()
-    self.notes = {}
+  def __init__(self, spec: DeckSpec):
+    self.spec = spec
+    self.notes = dict()
+    for note_spec in spec.note_specs:
+      self.add_note(Note(note_spec))
+
+  def title(self):
+    return self.spec.config.title
+
+  def source_path(self):
+    return self.spec.source_path
 
   def add_note(self, note):
     id = note.note_id()
     if id in self.notes:
-      raise LookupError(f'Note with id {repr(id)} already exists in deck')
+      note.spec.error(f'Note with id {repr(id)} already exists in deck')
     self.notes[id] = note
 
   def save_to_package(self, package):
-    deck = genanki.Deck(name_to_id(self.config.title), self.config.title)
-    LOGGER.debug(f"New deck [{deck.deck_id}]: {self.config.title}")
+    deck = genanki.Deck(name_to_id(self.title()), self.title())
+    LOGGER.debug(f'New deck [{deck.deck_id}]: {self.title()}')
 
     for note in self.notes.values():
       note.add_to_deck(deck)
-      LOGGER.debug(f"Added note {repr(note.note_id())}: {note.content_fields()}")
+      LOGGER.debug(f'Added note {repr(note.note_id())}: {note.content_fields()}')
 
       for media_path in note.media_paths():
         package.media_files.append(media_path)
-        LOGGER.debug(f"Added media file for {repr(note.note_id())}: {media_path}")
+        LOGGER.debug(f'Added media file for {repr(note.note_id())}: {media_path}')
 
     package.decks.append(deck)
 
   def save_to_file(self, path=None):
     if not path:
-      path = os.path.splitext(self.source)[0] + '.apkg'
+      path = os.path.splitext(self.source_path())[0] + '.apkg'
 
     package = genanki.Package([])
     self.save_to_package(package)
     package.write_to_file(path)
-    LOGGER.info(f"Wrote deck {self.config.title} to file {path}")
+    LOGGER.info(f'Wrote deck {self.title()} to file {path}')
 
     return path
-
-class DeckParser:
-  def __init__(self, cache_path):
-    self.cache_path = cache_path
-    self.finished_decks = []
-    self._reset()
-
-  def _reset(self):
-    self.deck = None
-    self.path = None
-    self.line_number = None
-    self._reset_note()
-
-  def _reset_note(self):
-    self.note_source = []
-    self.note_config = None
-
-  def open(self, path):
-    if self.deck:
-      self.close()
-    self._reset()
-    self.deck = Deck(path)
-    self.path = path
-
-  def close(self):
-    if len(self.note_source) > 0:
-      self._add_note_to_deck(Note(self._finish_note()))
-    if self.deck:
-      self.finished_decks.append(self.deck)
-
-    self._reset()
-
-  def flush_decks(self):
-    finished_decks = self.finished_decks
-    self.finished_decks = []
-    return finished_decks
-
-  def error(self, message):
-    sys.exit(f"Error in {self.where()}: {message}")
-
-  def where(self):
-    return f"{self.path}, line {self.line_number}"
-
-  def parse_input(self, input):
-    """Takes FileInput as parameter."""
-    for line in input:
-      self.parse_line(input.filename(), input.filelineno(), line)
-      for deck in self.flush_decks():
-        yield deck
-
-    self.close()
-    for deck in self.flush_decks():
-      yield deck
-
-  def parse_line(self, path, line_number, line):
-    if not self.deck or self.path != path:
-      self.open(path)
-
-    self.line_number = line_number
-
-    if line.startswith('#'):
-      # Comment; skip line.
-      return
-
-    unindented = line.lstrip(' \t')
-    if line != unindented:
-      # Line is indented and thus a continuation of a note
-      if len(self.note_source) == 0:
-        self.error('Found indented line with no preceding unindented line')
-
-      if self.note_config is None:
-        self.note_config = deepcopy(self.deck.config)
-
-      unindented = self._check_for_config(unindented, self.note_config)
-      if unindented is not None:
-        self.note_source.append(unindented)
-      return
-
-    if line.strip() == '':
-      # Blank lines only count inside notes.
-      if len(self.note_source) > 0:
-        self.note_source.append(line)
-      return
-
-    # Line is not indented
-    if len(self.note_source) > 0:
-      self._add_note_to_deck(Note(self._finish_note()))
-
-    line = self._check_for_config(line, self.deck.config)
-    if line is not None:
-      self.note_source.append(line)
-
-  def _check_for_config(self, line, config):
-    # Line without newline
-    line_chomped = line.rstrip('\n\r')
-
-    if line.startswith('"') and line_chomped.endswith('"'):
-      # Quotes mean to use the line as-is (add the newline back):
-      return line_chomped[1:-1] + line[len(line_chomped):]
-
-    try:
-      if line.startswith('title:'):
-        config.title = line.removeprefix('title:').strip()
-      elif line.startswith('more:'):
-        config.set_more(line.removeprefix('more:').strip())
-      elif line.startswith('more+'):
-        config.add_more(line.removeprefix('more+').strip())
-      elif line.startswith('overlay_text:'):
-        config.set_overlay_text(line.removeprefix('overlay_text:').strip())
-      elif line.startswith('tags:'):
-        config.update_tags(line.removeprefix('tags:'))
-      elif line.startswith('crop:'):
-        config.crop = line.removeprefix('crop:').strip()
-      elif line.startswith('format:'):
-        config.format = line.removeprefix('format:').strip()
-      elif line.startswith('trim:'):
-        config.set_trim(line.removeprefix('trim:').strip())
-      elif line.startswith('slow:'):
-        config.add_slow(line.removeprefix('slow:').strip())
-      elif line.startswith('audio:'):
-        config.set_audio(line.removeprefix('audio:').strip())
-      elif line.startswith('video:'):
-        config.set_video(line.removeprefix('video:').strip())
-      elif line.startswith('note_id'):
-        config.set_note_id_format(line.removeprefix('note_id:').strip())
-      else:
-        return line
-    except ValueError as error:
-      self.error(error)
-
-    return None
-
-  def _finish_note(self):
-    spec = NoteSpec(
-      # FIXME is self.note_config is None possible?
-      config=self.note_config or deepcopy(self.deck.config),
-      source_path=self.path,
-      line_number=self.line_number,
-      source=''.join(self.note_source),
-      cache_path=self.cache_path,
-    )
-    self._reset_note()
-    return spec
-
-  def _add_note_to_deck(self, note):
-    try:
-      self.deck.add_note(note)
-    except LookupError as error:
-      self.error(error)

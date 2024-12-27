@@ -1,5 +1,7 @@
+from copy import copy, deepcopy
 from dataclasses import dataclass, field
 import functools
+import sys
 
 from yanki.field import Fragment, Field
 
@@ -189,3 +191,157 @@ class NoteSpec:
 
   def where(self):
     return f"{self.source_path}, line {self.line_number}"
+
+class DeckSpec:
+  def __init__(self, source_path):
+    self.source_path = source_path
+    self.config = Config()
+    self.note_specs = []
+
+  def add_note_spec(self, note_spec: NoteSpec):
+    self.note_specs.append(note_spec)
+
+class DeckParser:
+  def __init__(self, cache_path):
+    self.cache_path = cache_path
+    self.finished_decks = []
+    self._reset()
+
+  def _reset(self):
+    """Reset working deck data."""
+    self.working_deck = None
+    self.source_path = None
+    self.line_number = None
+    self._reset_note()
+
+  def _reset_note(self):
+    """Reset working note data."""
+    self.note_source = []
+    self.note_config = None
+
+  def open(self, path):
+    """Open a deck file for parsing."""
+    if self.working_deck:
+      self.close()
+    self._reset()
+    self.working_deck = DeckSpec(path)
+    self.source_path = path
+
+  def close(self):
+    """Close deck file and mark working deck finished."""
+    if len(self.note_source) > 0:
+      self._finish_note()
+    self.finished_decks.append(self.working_deck)
+
+    self._reset()
+
+  def flush_decks(self):
+    finished_decks = self.finished_decks
+    self.finished_decks = []
+    return finished_decks
+
+  def error(self, message):
+    sys.exit(f'Error in {self.where()}: {message}')
+
+  def where(self):
+    return f'{self.source_path}, line {self.line_number}'
+
+  def parse_input(self, input):
+    """Takes FileInput as parameter."""
+    for line in input:
+      self.parse_line(input.filename(), input.filelineno(), line)
+      for deck_spec in self.flush_decks():
+        yield deck_spec
+
+    self.close()
+    for deck_spec in self.flush_decks():
+      yield deck_spec
+
+  def parse_line(self, path, line_number, line):
+    if not self.working_deck or self.source_path != path:
+      self.open(path)
+
+    self.line_number = line_number
+
+    if line.startswith('#'):
+      # Comment; skip line.
+      return
+
+    unindented = line.lstrip(' \t')
+    if line != unindented:
+      # Line is indented and thus a continuation of a note
+      if len(self.note_source) == 0:
+        self.error('Found indented line with no preceding unindented line')
+
+      if self.note_config is None:
+        self.note_config = deepcopy(self.working_deck.config)
+
+      unindented = self._check_for_config(unindented, self.note_config)
+      if unindented is not None:
+        self.note_source.append(unindented)
+      return
+
+    if line.strip() == '':
+      # Blank lines only count inside notes.
+      if len(self.note_source) > 0:
+        self.note_source.append(line)
+      return
+
+    # Line is not indented
+    if len(self.note_source) > 0:
+      self._finish_note()
+
+    line = self._check_for_config(line, self.working_deck.config)
+    if line is not None:
+      self.note_source.append(line)
+
+  def _check_for_config(self, line, config):
+    # Line without newline
+    line_chomped = line.rstrip('\n\r')
+
+    if line.startswith('"') and line_chomped.endswith('"'):
+      # Quotes mean to use the line as-is (add the newline back):
+      return line_chomped[1:-1] + line[len(line_chomped):]
+
+    try:
+      if line.startswith('title:'):
+        config.title = line.removeprefix('title:').strip()
+      elif line.startswith('more:'):
+        config.set_more(line.removeprefix('more:').strip())
+      elif line.startswith('more+'):
+        config.add_more(line.removeprefix('more+').strip())
+      elif line.startswith('overlay_text:'):
+        config.set_overlay_text(line.removeprefix('overlay_text:').strip())
+      elif line.startswith('tags:'):
+        config.update_tags(line.removeprefix('tags:'))
+      elif line.startswith('crop:'):
+        config.crop = line.removeprefix('crop:').strip()
+      elif line.startswith('format:'):
+        config.format = line.removeprefix('format:').strip()
+      elif line.startswith('trim:'):
+        config.set_trim(line.removeprefix('trim:').strip())
+      elif line.startswith('slow:'):
+        config.add_slow(line.removeprefix('slow:').strip())
+      elif line.startswith('audio:'):
+        config.set_audio(line.removeprefix('audio:').strip())
+      elif line.startswith('video:'):
+        config.set_video(line.removeprefix('video:').strip())
+      elif line.startswith('note_id'):
+        config.set_note_id_format(line.removeprefix('note_id:').strip())
+      else:
+        return line
+    except ValueError as error:
+      self.error(error)
+
+    return None
+
+  def _finish_note(self):
+    self.working_deck.add_note_spec(NoteSpec(
+      # FIXME is self.note_config is None possible?
+      config=self.note_config or deepcopy(self.working_deck.config),
+      source_path=self.source_path,
+      line_number=self.line_number,
+      source=''.join(self.note_source),
+      cache_path=self.cache_path,
+    ))
+    self._reset_note()
