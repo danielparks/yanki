@@ -164,48 +164,6 @@ class Field:
   def __repr__(self):
     return repr([fragment for fragment in self.fragments])
 
-class Note:
-  def __init__(self, note_id, media, text, more=Field(), tags=[], direction='<->'):
-    self.note_id = note_id
-    self.media = media
-    self.text = text
-    self.more = more
-    self.tags = tags
-    self.direction = direction
-
-  def content_fields(self):
-    return [self.text, self.more, self.media]
-
-  def media_paths(self):
-    for field in self.content_fields():
-      for path in field.media_paths():
-        yield path
-
-  def add_to_deck(self, deck):
-    media_to_text = text_to_media = ''
-    if self.direction == '<->':
-      text_to_media = '1'
-      media_to_text = '1'
-    elif self.direction == '<-':
-      text_to_media = '1'
-    elif self.direction == '->':
-      media_to_text = '1'
-    else:
-      raise ValueError(f"Invalid direction {repr(self.direction)}")
-
-    deck.add_note(genanki.Note(
-      model=YANKI_CARD_MODEL,
-      fields=[
-        self.text.render_anki(),
-        self.more.render_anki(),
-        self.media.render_anki(),
-        text_to_media,
-        media_to_text,
-      ],
-      guid=genanki.guid_for(self.note_id.format(deck_id=deck.deck_id)),
-      tags=self.tags,
-    ))
-
 class Config:
   def __init__(self):
     self.title = None
@@ -301,6 +259,48 @@ class Config:
       self.video = video
     else:
       raise ValueError('video must be either "include" or "strip"')
+
+class Note:
+  def __init__(self, note_id, media, text, more=Field(), tags=[], direction='<->'):
+    self.note_id = note_id
+    self.media = media
+    self.text = text
+    self.more = more
+    self.tags = tags
+    self.direction = direction
+
+  def content_fields(self):
+    return [self.text, self.more, self.media]
+
+  def media_paths(self):
+    for field in self.content_fields():
+      for path in field.media_paths():
+        yield path
+
+  def add_to_deck(self, deck):
+    media_to_text = text_to_media = ''
+    if self.direction == '<->':
+      text_to_media = '1'
+      media_to_text = '1'
+    elif self.direction == '<-':
+      text_to_media = '1'
+    elif self.direction == '->':
+      media_to_text = '1'
+    else:
+      raise ValueError(f"Invalid direction {repr(self.direction)}")
+
+    deck.add_note(genanki.Note(
+      model=YANKI_CARD_MODEL,
+      fields=[
+        self.text.render_anki(),
+        self.more.render_anki(),
+        self.media.render_anki(),
+        text_to_media,
+        media_to_text,
+      ],
+      guid=genanki.guid_for(self.note_id.format(deck_id=deck.deck_id)),
+      tags=self.tags,
+    ))
 
 class Deck:
   def __init__(self, source=None):
