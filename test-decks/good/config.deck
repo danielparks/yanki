@@ -1,17 +1,17 @@
 title: Test deck::Config
 note_id: {deck_id} {text}
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw crop: in_h:in_h
+file://./media/stopwatch.mp4 crop: in_h/4:in_h
   (testing config on same line as URL — should not apply config)
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw crop: in_h:in_h
-  crop: in_h:in_h
+file://./media/stopwatch.mp4 crop: in_h:in_h/4
+  crop: in_h:in_h/4
 
 crop: in_h/2:in_h
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw
-  crop: in_h:in_h/2:100:100
-  "crop: in_h:in_h/2:100:100"
+file://./media/stopwatch.mp4
+  crop: in_h/2:in_h/2:0:100
+  "crop: in_h/2:in_h/2:0:100"
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw
+file://./media/stopwatch.mp4
   deck config: crop: in_h/2:in_h

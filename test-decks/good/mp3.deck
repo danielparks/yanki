@@ -2,5 +2,5 @@ title: Test deck::MP3s
 video: strip
 format: mp3
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw @0:05- elephants
-https://www.youtube.com/watch?v=jNQXAC9IVRw @-0:10 elephants 2
+file://./media/hand-counting.mp4 @0:03.5- 4 5
+file://./media/hand-counting.mp4 @-0:03.5 1 2 3

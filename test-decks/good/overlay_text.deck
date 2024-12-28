@@ -1,9 +1,11 @@
 title: Test deck::overlay_text
 note_id: {deck_id} {text}
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw -> a few words
+file://./media/hand-counting.mp4 -> a few words
   overlay_text: a few words
-https://www.youtube.com/watch?v=jNQXAC9IVRw -> special:characters,a='b'c\d
+file://./media/hand-counting.mp4 -> special:characters,a='b'c\d
   overlay_text: special:characters,a='b'c\d
-https://www.youtube.com/watch?v=jNQXAC9IVRw @0-0:01 -> clipped
+file://./media/hand-counting.mp4 @0-0:01 -> clipped
   overlay_text: clipped
+file://./media/hand-counting.mp4 @0:03 -> snapshot
+  overlay_text: snapshot

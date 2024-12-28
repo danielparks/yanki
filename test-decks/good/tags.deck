@@ -2,11 +2,11 @@ title: Test deck::Tags
 tags: test::a test::b
 note_id: {deck_id} {text}
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw Tags [test::a, test::c]
+file://./media/hand-counting.mp4 Tags [test::a, test::c]
   tags: +test::c -test::b
 
-https://www.youtube.com/watch?v=jNQXAC9IVRw Tags [test::a, test::b]
+file://./media/hand-counting.mp4 Tags [test::a, test::b]
 
 # Remove tag that doesn’t exist
-https://www.youtube.com/watch?v=jNQXAC9IVRw Tags []
+file://./media/hand-counting.mp4 Tags []
   tags: -test::a -test::b -test::c
