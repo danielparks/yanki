@@ -14,7 +14,7 @@ import sys
 import textwrap
 import yt_dlp
 
-from yanki.parser import DeckParser
+from yanki.parser import DeckParser, SyntaxError
 from yanki.anki import Deck
 from yanki.video import Video, BadURL
 
@@ -113,6 +113,8 @@ def cli():
       sys.stderr.buffer.write(error.stderr)
       sys.exit('\nError in ffmpeg. See above.')
   except BadURL as error:
+    sys.exit(error)
+  except SyntaxError as error:
     sys.exit(error)
   except KeyboardInterrupt:
     return 130

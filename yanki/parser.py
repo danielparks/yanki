@@ -11,6 +11,18 @@ NOTE_ID_VARIABLES = frozenset([
   'deck_id', 'url', 'clip', 'direction', 'media', 'text',
 ])
 
+class SyntaxError(Exception):
+  def __init__(self, message: str, source_path: str, line_number: int):
+    self.message = message
+    self.source_path = source_path
+    self.line_number = line_number
+
+  def __str__(self):
+    return f'Error in {self.where()}: {self.message}'
+
+  def where(self):
+    return f'{self.source_path}, line {self.line_number}'
+
 class Config:
   def __init__(self):
     self.title = None
@@ -187,10 +199,7 @@ class NoteSpec:
       return f'@{"-".join(self.clip())}'
 
   def error(self, message):
-    sys.exit(f"Error in {self.where()}: {message}")
-
-  def where(self):
-    return f"{self.source_path}, line {self.line_number}"
+    raise SyntaxError(message, self.source_path, self.line_number)
 
 class DeckSpec:
   def __init__(self, source_path):
@@ -241,10 +250,7 @@ class DeckParser:
     return finished_decks
 
   def error(self, message):
-    sys.exit(f'Error in {self.where()}: {message}')
-
-  def where(self):
-    return f'{self.source_path}, line {self.line_number}'
+    raise SyntaxError(message, self.source_path, self.line_number)
 
   def parse_input(self, input):
     """Takes FileInput as parameter."""
