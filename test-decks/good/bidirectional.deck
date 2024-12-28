@@ -1,5 +1,0 @@
-title: Test deck::Bidirectional
-
-file://./media/first.png @0F -> Image to text
-file://./media/second.png @0F <- Text to image
-file://./media/bidirectional.png @0F <-> Bidirectional

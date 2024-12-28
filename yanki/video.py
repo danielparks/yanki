@@ -15,6 +15,8 @@ YT_DLP_OPTIONS = {
   'skip_unavailable_fragments': False,
 }
 
+STILL_FORMATS = frozenset(['png', 'jpeg', 'jpg'])
+
 class BadURL(ValueError):
   pass
 
@@ -95,7 +97,6 @@ class Video:
     self._info = None
     self._raw_metadata = None
     self._format = None
-    self._still = False
 
     # ffmpeg parameters. Every run with the same parameters should produce the
     # same video (assuming the source hasn’t changed).
@@ -220,7 +221,6 @@ class Video:
     self.input_options["ss"] = self.normalize_time_spec(time_spec)
     self.output_options["frames:v"] = "1"
     self.output_options["q:v"] = "2" # JPEG quality
-    self._still = True
 
   def crop(self, crop):
     self._crop = crop
@@ -254,19 +254,26 @@ class Video:
     else:
       self._slow_filter = (start, end, amount)
 
-  def format(self, extenstion):
-    self._format = extenstion
+  def format(self, extension: str | None):
+    if extension is None:
+      self._format = None
+    else:
+      self._format = extension.lower()
 
   def output_ext(self):
     if self._format is not None:
       return self._format
-    elif self._still:
+    elif self.is_still():
       return "jpeg"
     else:
       return "mp4"
 
   def is_still(self):
-    return self._still
+    return (
+      str(self.output_options.get('frames:v')) == '1'
+      or self._format in STILL_FORMATS
+      or 'duration' not in self.raw_metadata()['format']
+    )
 
   def raw_video(self):
     path = self.raw_video_cache_path()

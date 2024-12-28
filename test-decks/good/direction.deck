@@ -1,0 +1,6 @@
+title: Test deck::Direction
+
+# Also tests that these all are treated as images.
+file://./media/first.png -> Image to text
+file://./media/second.png <- Text to image
+file://./media/bidirectional.png @0F <-> Bidirectional
