@@ -54,19 +54,27 @@ class MediaFragment(Fragment):
   def path_in_base(self, base_path):
     return os.path.join(base_path, os.path.basename(self.path))
 
+  def anki_filename(self):
+    """Get the filename encoded for Anki."""
+    return html.escape(self.path_in_base(''))
+
   def html_path_in_base(self, base_path):
+    """Get the path relative to base_path, and encoded for HTML."""
     return html.escape(quote(self.path_in_base(base_path), encoding='UTF-8'))
 
   def media_paths(self):
     return [self.path]
 
 class ImageFragment(MediaFragment):
+  def render_anki(self):
+    return f'<img src="{self.anki_filename()}" />'
+
   def render_html(self, base_path=''):
     return f'<img src="{self.html_path_in_base(base_path)}" />'
 
 class VideoFragment(MediaFragment):
   def render_anki(self):
-    return f'[sound:{self.html_path_in_base("")}]'
+    return f'[sound:{self.anki_filename()}]'
 
   def render_html(self, base_path='.'):
     return f'<video controls src="{self.html_path_in_base(base_path)}"></video>'
