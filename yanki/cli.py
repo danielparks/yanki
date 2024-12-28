@@ -1,4 +1,5 @@
 import argparse
+import ffmpeg
 import fileinput
 import functools
 import genanki
@@ -102,6 +103,15 @@ def cli():
       LOGGER.info(f"Wrote decks to file {args.output}")
 
     return 0
+  except ffmpeg.Error as error:
+    if level == logging.DEBUG:
+      sys.stderr.buffer.write(error.stderr)
+      sys.stderr.write('\n')
+      raise
+    else:
+      # FFmpeg errors contain a bytestring of ffmpeg’s output.
+      sys.stderr.buffer.write(error.stderr)
+      sys.exit('\nError in ffmpeg. See above.')
   except BadURL as error:
     sys.exit(error)
   except KeyboardInterrupt:

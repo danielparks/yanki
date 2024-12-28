@@ -358,8 +358,8 @@ class Video:
         .run(quiet=True)
       )
     except ffmpeg.Error as error:
-      sys.stderr.buffer.write(error.stderr)
-      sys.exit("Error in ffmpeg first pass. See above.")
+      error.add_note('In first pass.')
+      raise
 
     if uses_copyts:
       LOGGER.debug(f"{parameters} second pass")
@@ -373,8 +373,8 @@ class Video:
           .run(quiet=True)
         )
       except ffmpeg.Error as error:
-        sys.stderr.buffer.write(error.stderr)
-        sys.exit("Error in ffmpeg second pass. See above.")
+        error.add_note('In second pass.')
+        raise
 
       os.remove(first_pass_output_path)
 
