@@ -3,8 +3,9 @@ import hashlib
 import json
 import logging
 import os
+import shutil
 import sys
-import urllib.parse
+from urllib.parse import urlparse, parse_qs
 import yt_dlp
 
 LOGGER = logging.getLogger(__name__)
@@ -52,8 +53,8 @@ def youtu_be_url_to_id(url_str, url, query):
 
 def url_to_id(url_str):
   """Turn video URL into an ID string that can be part of a file name."""
-  url = urllib.parse.urlparse(url_str)
-  query = urllib.parse.parse_qs(url.query)
+  url = urlparse(url_str)
+  query = parse_qs(url.query)
 
   try:
     domain = '.' + url.netloc.lower()
@@ -67,6 +68,17 @@ def url_to_id(url_str):
 
   return url_str.replace('|', '||').replace('/', '|')
 
+def file_url_to_path(url):
+  parts = urlparse(url)
+  if parts.scheme.lower() != 'file':
+    return None
+
+  # urlparse doesn’t handle file: very well:
+  #
+  #   >>> urlparse('file://./media/first.png')
+  #   ParseResult(scheme='file', netloc='.', path='/media/first.png', ...)
+  return parts.netloc + parts.path
+
 NON_ZERO_DIGITS = set('123456789')
 def is_non_zero_time(time_spec):
   for c in time_spec:
@@ -76,8 +88,9 @@ def is_non_zero_time(time_spec):
 
 # FIXME cannot be reused
 class Video:
-  def __init__(self, url, cache_path="."):
+  def __init__(self, url, working_dir='.', cache_path='.'):
     self.url = url
+    self.working_dir = working_dir
     self.cache_path = cache_path
     self._info = None
     self._raw_metadata = None
@@ -118,20 +131,34 @@ class Video:
         usedforsecurity=False).hexdigest()
     return self.cached(f"{prefix}{parameters}.{self.output_ext()}")
 
+  def _download_info(self):
+    path = file_url_to_path(self.url)
+    if path is not None:
+      return {
+        'title': os.path.splitext(os.path.basename(path))[0],
+        'ext': os.path.splitext(path)[1][1:],
+      }
+
+    try:
+      with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
+        LOGGER.info(f"{self.id}: getting info")
+        return ydl.sanitize_info(ydl.extract_info(self.url, download=False))
+    except yt_dlp.utils.YoutubeDLError as error:
+      raise BadURL(f'Error downloading {repr(self.url)}: {error}')
+
   def info(self):
     if self._info is None:
       try:
         with open(self.info_cache_path(), 'r', encoding="utf-8") as file:
           self._info = json.load(file)
+          return self._info
       except FileNotFoundError:
-        try:
-          with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
-            LOGGER.info(f"{self.id}: getting info")
-            self._info = ydl.extract_info(self.url, download=False)
-            with open(self.info_cache_path(), 'w', encoding="utf-8") as file:
-              file.write(json.dumps(ydl.sanitize_info(self._info)))
-        except yt_dlp.utils.YoutubeDLError as error:
-          raise BadURL(f'Error downloading {repr(self.url)}: {error}')
+        pass
+
+      # File not found, but the exception will not show up in context
+      self._info = self._download_info()
+      with open(self.info_cache_path(), 'w', encoding="utf-8") as file:
+        file.write(json.dumps(self._info))
     return self._info
 
   def title(self):
@@ -145,11 +172,15 @@ class Video:
     try:
       with open(path, 'r', encoding='utf-8') as file:
         self._raw_metadata = json.load(file)
+        return self._raw_metadata
     except FileNotFoundError:
-      self._raw_metadata = ffmpeg.probe(self.raw_video())
+      pass
 
-      with open(path, 'w', encoding='utf-8') as file:
-        json.dump(self._raw_metadata, file)
+    # File not found, but the exception will not show up in context
+    self._raw_metadata = ffmpeg.probe(self.raw_video())
+
+    with open(path, 'w', encoding='utf-8') as file:
+      json.dump(self._raw_metadata, file)
 
     return self._raw_metadata
 
@@ -243,6 +274,14 @@ class Video:
       return path
 
     LOGGER.info(f"{self.id}: downloading raw video to {path}")
+
+    # Check if it’s a file:// URL
+    source_path = file_url_to_path(self.url)
+    if source_path is not None:
+      source_path = os.path.join(self.working_dir, source_path)
+      shutil.copy(source_path, path, follow_symlinks=True)
+      return path
+
     options = {
       'outtmpl': {
         'default': path,

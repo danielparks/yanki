@@ -1,6 +1,5 @@
 title: Test deck::Bidirectional
-note_id: {deck_id} {text}
 
-https://www.youtube.com/watch?v=XSkXh1-iPWc @0F -> Image to text
-https://www.youtube.com/watch?v=6dJZfUJmA0k @0F <- Text to image
-https://www.youtube.com/watch?v=_yIQ_vGq6-g @0F <-> Bidirectional
+file://./media/first.png @0F -> Image to text
+file://./media/second.png @0F <- Text to image
+file://./media/bidirectional.png @0F <-> Bidirectional

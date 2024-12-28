@@ -162,8 +162,13 @@ class Note:
 
   @functools.cache
   def video(self):
+    deck_dir = os.path.dirname(self.spec.source_path)
     try:
-      video = Video(self.spec.video_url(), cache_path=self.spec.cache_path)
+      video = Video(
+        self.spec.video_url(),
+        working_dir=deck_dir,
+        cache_path=self.spec.cache_path,
+      )
       video.audio(self.spec.config.audio)
       video.video(self.spec.config.video)
       if self.spec.config.crop:
