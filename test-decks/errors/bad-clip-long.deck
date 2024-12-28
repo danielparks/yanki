@@ -1,4 +1,4 @@
 # Error in test-decks/errors/bad-clip-long.deck, line 4: Invalid clip specification '@0-1-2'
 title: Test deck::Errors::Bad clip long
 
-https://www.youtube.com/watch?v=YBKx3Lzs-bU @0-1-2 invalid
+file://../good/media/hand-counting.mp4 @0-1-2 invalid
