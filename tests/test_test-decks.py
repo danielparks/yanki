@@ -6,10 +6,11 @@ from yanki.anki import Deck
 from yanki.parser import DeckParser, SyntaxError
 from yanki.video import BadURL
 
-def all_error_decks():
-  for (dir_path, _, file_names) in os.walk('test-decks/errors'):
+def find_deck_files(base_path):
+  for (dir_path, _, file_names) in os.walk(base_path):
     for file_name in file_names:
-      yield f'{dir_path}/{file_name}'
+      if file_name.endswith('.deck'):
+        yield f'{dir_path}/{file_name}'
 
 def read_first_line(path):
   with open(path, 'r', encoding='UTF-8') as input:
@@ -25,10 +26,8 @@ def parse_deck(path, tmp_path):
   assert len(decks) == 1
   return decks[0]
 
-@pytest.mark.parametrize('path', all_error_decks())
+@pytest.mark.parametrize('path', find_deck_files('test-decks/errors'))
 def test_deck_error(path, tmp_path):
-  assert path.endswith('.deck')
-
   first_line = read_first_line(path)
   assert first_line[0:2] == '# '
   expected_message = first_line[2:-1] # Strip newline
@@ -38,3 +37,10 @@ def test_deck_error(path, tmp_path):
     parse_deck(path, tmp_path).save_to_package(package)
 
   assert str(error_info.value) == expected_message
+
+@pytest.mark.parametrize('path', find_deck_files('test-decks/good'))
+def test_deck_success(path, tmp_path):
+  package = genanki.Package([])
+  deck = parse_deck(path, tmp_path)
+  assert len(deck.notes) > 0
+  deck.save_to_package(package)
