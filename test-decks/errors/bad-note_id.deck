@@ -1,3 +1,3 @@
+# Error in test-decks/errors/bad-note_id.deck, line 3: Unknown variable in note_id format: 'foo'
+title: Test deck::Errors::Bad note_id
 note_id: {foo}
-
-https://www.youtube.com/watch?v=0usayvOXzHo YES

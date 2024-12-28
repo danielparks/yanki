@@ -1,1 +1,4 @@
+# Error in test-decks/errors/bad-indent.deck, line 2: Found indented line with no preceding unindented line
   test
+
+title: Test deck::Errors::Bad indent

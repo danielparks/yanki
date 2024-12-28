@@ -1,1 +1,3 @@
+# Error in test-decks/errors/bad-tag-mix.deck, line 3: Invalid mix of changing tags with setting tags: a +b
+title: Test deck::Errors::Bad tag mix
 tags: a +b

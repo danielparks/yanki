@@ -1,1 +1,3 @@
+# Error in test-decks/errors/bad-audio-config.deck, line 3: audio must be either "include" or "strip"
+title: Test deck::Errors::Bad audio config
 audio: wtf

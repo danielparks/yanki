@@ -1,3 +1,5 @@
+# Error in test-decks/errors/trim-and-clip.deck, line 5: Clip ('@0F-30F') is incompatible with 'trim:'.
+title: Test deck::Errors::Trim and clip
 trim: 0:00-0:10
 
 https://www.youtube.com/watch?v=YBKx3Lzs-bU @0F-30F 30 frames

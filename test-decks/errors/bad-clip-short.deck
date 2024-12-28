@@ -1,1 +1,4 @@
+# Error in test-decks/errors/bad-clip-short.deck, line 4: Invalid clip specification '@'
+title: Test deck::Errors::Bad clip short
+
 https://www.youtube.com/watch?v=YBKx3Lzs-bU @ invalid

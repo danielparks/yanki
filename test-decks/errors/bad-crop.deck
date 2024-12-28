@@ -1,4 +1,5 @@
-title: Test deck::Errors::Bad Crop
+# ffmpeg error (see stderr output for detail)
+title: Test deck::Errors::Bad crop
 crop: 1000:1
 
 https://www.youtube.com/watch?v=0usayvOXzHo bad crop

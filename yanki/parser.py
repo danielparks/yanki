@@ -240,6 +240,13 @@ class DeckParser:
     """Close deck file and mark working deck finished."""
     if len(self.note_source) > 0:
       self._finish_note()
+
+    if self.working_deck.config.title is None:
+      raise SyntaxError(
+        'Does not contain title',
+        self.working_deck.source_path,
+        1,
+      )
     self.finished_decks.append(self.working_deck)
 
     self._reset()
@@ -262,6 +269,14 @@ class DeckParser:
     self.close()
     for deck_spec in self.flush_decks():
       yield deck_spec
+
+  def parse_path(self, path):
+    with open(path, 'r', encoding='UTF-8') as input:
+      for number, line in enumerate(input):
+        self.parse_line(path, number+1, line)
+
+    self.close()
+    return self.flush_decks()
 
   def parse_line(self, path, line_number, line):
     if not self.working_deck or self.source_path != path:
