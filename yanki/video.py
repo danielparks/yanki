@@ -159,18 +159,22 @@ class Video:
       raise BadURL(f'Error downloading {repr(self.url)}: {error}')
 
   def info(self):
-    if self._info is None:
-      try:
-        with open(self.info_cache_path(), 'r', encoding='utf-8') as file:
-          self._info = json.load(file)
-          return self._info
-      except FileNotFoundError:
-        pass
+    if self._info:
+      return self._info
 
-      # File not found, but the exception will not show up in context
-      self._info = self._download_info()
-      with open(self.info_cache_path(), 'w', encoding='utf-8') as file:
-        file.write(json.dumps(self._info))
+    try:
+      with open(self.info_cache_path(), 'r', encoding='utf-8') as file:
+        self._info = json.load(file)
+        return self._info
+    except FileNotFoundError:
+      # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have the
+      # key path. We use `pass` here to avoid adding this exception to the
+      # context of new exceptions.
+      pass
+
+    self._info = self._download_info()
+    with open(self.info_cache_path(), 'w', encoding='utf-8') as file:
+      file.write(json.dumps(self._info))
     return self._info
 
   def title(self):
