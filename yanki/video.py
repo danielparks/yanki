@@ -88,6 +88,11 @@ def is_non_zero_time(time_spec):
       return True
   return False
 
+def get_key_path(data, path: list[any]):
+  for key in path:
+    data = data[key]
+  return data
+
 # FIXME cannot be reused
 class Video:
   def __init__(self, url, working_dir='.', cache_path='.'):
@@ -165,30 +170,41 @@ class Video:
   def title(self):
     return self.info()['title']
 
-  def raw_metadata(self):
+  def refresh_raw_metadata(self):
+    self._raw_metadata = ffmpeg.probe(self.raw_video())
+
+    with open(self.raw_metadata_cache_path(), 'w', encoding='utf-8') as file:
+      json.dump(self._raw_metadata, file)
+
+    return self._raw_metadata
+
+  def _get_raw_metadata(self):
     if self._raw_metadata:
       return self._raw_metadata
 
-    path = self.raw_metadata_cache_path()
     try:
-      with open(path, 'r', encoding='utf-8') as file:
+      with open(self.raw_metadata_cache_path(), 'r', encoding='utf-8') as file:
         self._raw_metadata = json.load(file)
         return self._raw_metadata
     except FileNotFoundError:
       pass
 
     # File not found, but the exception will not show up in context
-    self._raw_metadata = ffmpeg.probe(self.raw_video())
+    return self.refresh_raw_metadata()
 
-    with open(path, 'w', encoding='utf-8') as file:
-      json.dump(self._raw_metadata, file)
+  # This will refresh metadata once if it doesn’t find the passed path the
+  # first time.
+  def raw_metadata(self, *path):
+    if len(path) == 0:
+      return self._get_raw_metadata()
 
-    return self._raw_metadata
+    try:
+      return get_key_path(self._get_raw_metadata(), path)
+    except (KeyError, IndexError):
+      return get_key_path(self.refresh_raw_metadata(), path)
 
   def get_fps(self):
-    metadata = self.raw_metadata()
-
-    for stream in metadata['streams']:
+    for stream in self.raw_metadata('streams'):
       if stream['codec_type'] == 'video':
         division = stream['avg_frame_rate'].split("/")
         if len(division) == 0:
@@ -272,7 +288,7 @@ class Video:
     return (
       str(self.output_options.get('frames:v')) == '1'
       or self._format in STILL_FORMATS
-      or 'duration' not in self.raw_metadata()['format']
+      or 'duration' not in self.raw_metadata('format')
     )
 
   def raw_video(self):
