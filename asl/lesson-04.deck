@@ -46,10 +46,10 @@ https://www.youtube.com/watch?v=jRHDjxWJma0 SORRY
 https://www.youtube.com/watch?v=A84uvLUmCVU STOP
   trim: 15F-78F
 https://www.youtube.com/watch?v=Whiibgq84LY WASH
-https://www.youtube.com/watch?v=B36qDOOtm20 WALK-TO (classifier)
-https://www.youtube.com/watch?v=0mG8riLnMg4 TOSS AND TURN (classifier)
-https://www.youtube.com/watch?v=XFfZVYvr7fs LIE DOWN (classifier)
-https://www.youtube.com/watch?v=gLrSY9yPNh4 GET-UP (classifier)
+https://www.youtube.com/watch?v=B36qDOOtm20 WALK-TO (classifier V)
+https://www.youtube.com/watch?v=0mG8riLnMg4 TOSS AND TURN (classifier V)
+https://www.youtube.com/watch?v=XFfZVYvr7fs LIE DOWN (classifier V)
+https://www.youtube.com/watch?v=gLrSY9yPNh4 GET-UP (classifier V)
 
 tags: +extra
 https://www.youtube.com/watch?v=-Yqw89wx7TE MAD
@@ -72,9 +72,9 @@ https://www.youtube.com/watch?v=nrIIvGgEyR0 WASH (vertical surface)
 https://www.youtube.com/watch?v=BSUzDA7gQIE WASH-DISHES
   trim: 35F-98F
 # STAND is covered in lesson 5.
-https://www.youtube.com/watch?v=RPIAjkVh1PU GET-UP (classifier, bent-V)
-https://www.youtube.com/watch?v=_CMXWiZJDPM JUMP (classifier)
-https://www.youtube.com/watch?v=rsiLP7wwn2w DIVE (classifier)
+https://www.youtube.com/watch?v=RPIAjkVh1PU GET-UP (classifier bent-V)
+https://www.youtube.com/watch?v=_CMXWiZJDPM JUMP (classifier V)
+https://www.youtube.com/watch?v=rsiLP7wwn2w DIVE (classifier V)
 
 # From video (https://www.youtube.com/watch?v=JVTsQBVL0eA)
 https://www.youtube.com/watch?v=b_1ARTmynPQ NOBODY / NO ONE (two handed)
