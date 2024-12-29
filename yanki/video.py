@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import os
+import shlex
 import shutil
 import sys
 from urllib.parse import urlparse, parse_qs
@@ -412,30 +413,39 @@ class Video:
         # copyts and the concat filter are incompatible
         stream = self._try_apply_slow_filter(stream)
 
+    stream = (
+      stream
+      .output(first_pass_output_path, **self.ffmpeg_output_options())
+      .overwrite_output()
+    )
+
+    if uses_copyts:
+      verb = 'First pass'
+    else:
+      verb = 'Run'
+
+    command = shlex.join(stream.compile())
+    LOGGER.debug(f'{verb} {command}')
     try:
-      (
-        stream
-        .output(first_pass_output_path, **self.ffmpeg_output_options())
-        .overwrite_output()
-        .run(quiet=True)
-      )
+      stream.run(quiet=True)
     except ffmpeg.Error as error:
-      error.add_note('In first pass.')
+      error.add_note(f'{verb}: {command}')
       raise
 
     if uses_copyts:
-      LOGGER.debug(f"{parameters} second pass")
+      stream = ffmpeg.input(first_pass_output_path)
+      stream = (
+        self._try_apply_slow_filter(stream)
+        .output(output_path)
+        .overwrite_output()
+      )
 
+      command = shlex.join(stream.compile())
+      LOGGER.debug(f'Second pass: {command}')
       try:
-        stream = ffmpeg.input(first_pass_output_path)
-        (
-          self._try_apply_slow_filter(stream)
-          .output(output_path)
-          .overwrite_output()
-          .run(quiet=True)
-        )
+        stream.run(quiet=True)
       except ffmpeg.Error as error:
-        error.add_note('In second pass.')
+        error.add_note(f'Second pass: {command}')
         raise
 
       os.remove(first_pass_output_path)
