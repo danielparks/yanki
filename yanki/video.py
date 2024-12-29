@@ -2,6 +2,7 @@ import ffmpeg
 import hashlib
 import json
 import logging
+import math
 import os
 from os.path import getmtime
 import shlex
@@ -415,17 +416,19 @@ class Video:
       first_pass_output_path = output_path
 
     stream = ffmpeg.input(raw_path, **self.ffmpeg_input_options())
+    output_streams = dict()
 
-    if 'vn' not in self.output_options:
+    if 'vn' not in self.output_options and self.has_video():
       # Video stream is not being stripped
+      video = stream['v']
       if self._crop:
         # FIXME kludge; doesn’t handle named params
-        stream = stream.filter('crop', *self._crop.split(':'))
+        video = video.filter('crop', *self._crop.split(':'))
 
-      stream = stream.filter('scale', -2, 500)
+      video = video.filter('scale', -2, 500)
 
       if self._overlay_text:
-        stream = stream.drawtext(
+        video = video.drawtext(
           text=self._overlay_text,
           x=20,
           y=20,
@@ -437,15 +440,27 @@ class Video:
           boxborderw=20,
         )
 
-      if not uses_copyts:
-        # copyts and the concat filter are incompatible
-        stream = self._try_apply_slow_filter(stream)
+      output_streams['v'] = video
 
-    stream = (
-      stream
-      .output(first_pass_output_path, **self.ffmpeg_output_options())
-      .overwrite_output()
-    )
+    if 'an' not in self.output_options and self.has_audio():
+      # Audio stream is not being stripped
+      audio = stream['a']
+      output_streams['a'] = audio
+
+    if not uses_copyts:
+      # copyts and the concat filter are incompatible
+      output_streams = self._try_apply_slow_filter(output_streams)
+
+    if isinstance(output_streams, dict):
+      output_streams = output_streams.values()
+    else:
+      output_streams = [output_streams]
+
+    stream = ffmpeg.output(
+      *output_streams,
+      first_pass_output_path,
+      **self.ffmpeg_output_options()
+    ).overwrite_output()
 
     if uses_copyts:
       verb = 'First pass'
@@ -480,32 +495,66 @@ class Video:
 
     return output_path
 
-  def _try_apply_slow_filter(self, stream):
+  # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
+  def _try_apply_slow_filter(self, streams):
     if self._slow_filter is None:
-      return stream
+      return streams
 
     (start, end, amount) = self._slow_filter
     if start is None:
-      start = '0F'
+      start = '0'
 
-    split = stream.split()
+    wants_video = 'vn' not in self.output_options and self.has_video()
+    wants_audio = 'an' not in self.output_options and self.has_audio()
     parts = []
+    i = 0
+
+    if wants_video:
+      vsplit = streams['v'].split()
+    if wants_audio:
+      asplit = streams['a'].asplit()
 
     if is_non_zero_time(start):
-      parts.append(split[len(parts)].trim(start='0', end=start))
+      if wants_video:
+        parts.append(vsplit[i].trim(start='0', end=start))
+      if wants_audio:
+        parts.append(asplit[i].filter('atrim', start='0', end=start))
+      i += 1
 
     if end is None:
       end_trim = {}
     else:
       end_trim = { 'end': end }
 
-    parts.append(
-      split[len(parts)]
-      .filter('trim', start=start, **end_trim)
-      .setpts(f'{amount}*PTS')
-    )
+    if wants_video:
+      parts.append(
+        vsplit[i]
+        .trim(start=start, **end_trim)
+        .setpts(f'{amount}*PTS')
+      )
+    if wants_audio:
+      part = asplit[i].filter('atrim', start=start, **end_trim)
+
+      if amount < 0.01:
+        # FIXME validate on parse
+        raise ValueError('Cannot slow audio by less than 0.01')
+      elif amount > 2:
+        twos_count = math.floor(math.log2(amount))
+        for _ in range(twos_count):
+          part = part.filter('atempo', 0.5)
+        last_amount = amount/2**twos_count
+        if last_amount != 1:
+          part = part.filter('atempo', 1/last_amount)
+      else:
+        part = part.filter('atempo', 1/amount)
+
+      parts.append(part)
+    i += 1
 
     if end is not None:
-      parts.append(split[len(parts)].trim(start=end))
+      if wants_video:
+        parts.append(vsplit[i].trim(start=end))
+      if wants_audio:
+        parts.append(asplit[i].filter('atrim', start=end))
 
-    return ffmpeg.concat(*parts)
+    return ffmpeg.concat(*parts, v=int(wants_video), a=int(wants_audio))
