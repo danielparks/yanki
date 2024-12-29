@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import os
+from os.path import getmtime
 import shlex
 import shutil
 import sys
@@ -197,9 +198,12 @@ class Video:
       if self._raw_metadata:
         return get_key_path(self._raw_metadata, path)
 
-      with open(self.raw_metadata_cache_path(), 'r', encoding='utf-8') as file:
-        self._raw_metadata = json.load(file)
-        return get_key_path(self._raw_metadata, path)
+      metadata_cache_path = self.raw_metadata_cache_path()
+      if getmtime(metadata_cache_path) >= getmtime(self.raw_video()):
+        # Metadata isn’t older than raw video.
+        with open(metadata_cache_path, 'r', encoding='utf-8') as file:
+          self._raw_metadata = json.load(file)
+          return get_key_path(self._raw_metadata, path)
     except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):
       # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have the
       # key path. We use `pass` here to avoid adding this exception to the
@@ -295,19 +299,37 @@ class Video:
       or 'duration' not in self.raw_metadata('format')
     )
 
+  def has_audio(self):
+    for stream in self.raw_metadata('streams'):
+      if stream['codec_type'] == 'audio':
+        return True
+    return False
+
+  def has_video(self):
+    for stream in self.raw_metadata('streams'):
+      if stream['codec_type'] == 'video':
+        return True
+    return False
+
   def raw_video(self):
     path = self.raw_video_cache_path()
-    if os.path.exists(path) and os.stat(path).st_size > 0:
-      return path
-
-    LOGGER.info(f'{self.id}: downloading raw video to {path}')
+    path_exists = os.path.exists(path) and os.stat(path).st_size > 0
 
     # Check if it’s a file:// URL
     source_path = file_url_to_path(self.url)
     if source_path is not None:
       source_path = os.path.join(self.working_dir, source_path)
-      shutil.copy(source_path, path, follow_symlinks=True)
+      if not path_exists or getmtime(source_path) > getmtime(path):
+        # Cache file doesn’t exist or is old.
+        LOGGER.info(f'{self.id}: downloading raw video to {path}')
+        shutil.copy(source_path, path, follow_symlinks=True)
       return path
+
+    if path_exists:
+      # Already cached, and we can’t check if it’s out of date.
+      return path
+
+    LOGGER.info(f'{self.id}: downloading raw video to {path}')
 
     options = {
       'outtmpl': {
