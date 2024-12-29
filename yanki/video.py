@@ -177,6 +177,7 @@ class Video:
     return self.info()['title']
 
   def refresh_raw_metadata(self):
+    LOGGER.debug(f'refresh raw metadata: {self.raw_video()}')
     self._raw_metadata = ffmpeg.probe(self.raw_video())
 
     with open(self.raw_metadata_cache_path(), 'w', encoding='utf-8') as file:
@@ -184,30 +185,24 @@ class Video:
 
     return self._raw_metadata
 
-  def _get_raw_metadata(self):
-    if self._raw_metadata:
-      return self._raw_metadata
-
-    try:
-      with open(self.raw_metadata_cache_path(), 'r', encoding='utf-8') as file:
-        self._raw_metadata = json.load(file)
-        return self._raw_metadata
-    except FileNotFoundError:
-      pass
-
-    # File not found, but the exception will not show up in context
-    return self.refresh_raw_metadata()
-
   # This will refresh metadata once if it doesn’t find the passed path the
   # first time.
   def raw_metadata(self, *path):
-    if len(path) == 0:
-      return self._get_raw_metadata()
-
     try:
-      return get_key_path(self._get_raw_metadata(), path)
-    except (KeyError, IndexError):
-      return get_key_path(self.refresh_raw_metadata(), path)
+      # FIXME? Track if ffprobe was already run and don’t run it again.
+      if self._raw_metadata:
+        return get_key_path(self._raw_metadata, path)
+
+      with open(self.raw_metadata_cache_path(), 'r', encoding='utf-8') as file:
+        self._raw_metadata = json.load(file)
+        return get_key_path(self._raw_metadata, path)
+    except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):
+      # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have the
+      # key path. We use `pass` here to avoid adding this exception to the
+      # context of new exceptions.
+      pass
+
+    return get_key_path(self.refresh_raw_metadata(), path)
 
   def get_fps(self):
     for stream in self.raw_metadata('streams'):
