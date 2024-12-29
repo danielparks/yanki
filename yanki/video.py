@@ -481,33 +481,3 @@ class Video:
       parts.append(split[len(parts)].trim(start=end))
 
     return ffmpeg.concat(*parts)
-
-  def _try_apply_slow_filter(self, stream):
-    if self._slow_filter is None:
-      return stream
-
-    (start, end, amount) = self._slow_filter
-    if start is None:
-      start = '0F'
-
-    split = stream.split()
-    parts = []
-
-    if is_non_zero_time(start):
-      parts.append(split[len(parts)].trim(start='0', end=start))
-
-    if end is None:
-      end_trim = {}
-    else:
-      end_trim = { 'end': end }
-
-    parts.append(
-      split[len(parts)]
-      .filter('trim', start=start, **end_trim)
-      .setpts(f'{amount}*PTS')
-    )
-
-    if end is not None:
-      parts.append(split[len(parts)].trim(start=end))
-
-    return ffmpeg.concat(*parts)
