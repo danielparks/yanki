@@ -139,7 +139,6 @@ class NoteSpec:
   line_number: int
   source: str # config directives are stripped from this
   config: Config
-  cache_path: str
 
   def video_url(self):
     return self._parse_video_url()[0]
@@ -211,8 +210,7 @@ class DeckSpec:
     self.note_specs.append(note_spec)
 
 class DeckParser:
-  def __init__(self, cache_path):
-    self.cache_path = cache_path
+  def __init__(self):
     self.finished_decks = []
     self._reset()
 
@@ -363,6 +361,5 @@ class DeckParser:
       source_path=self.source_path,
       line_number=self.line_number,
       source=''.join(self.note_source),
-      cache_path=self.cache_path,
     ))
     self._reset_note()

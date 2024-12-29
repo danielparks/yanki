@@ -73,8 +73,10 @@ def name_to_id(name):
   return int.from_bytes(bytes[:8], byteorder='big', signed=True)
 
 class Note:
-  def __init__(self, spec):
+  def __init__(self, spec, cache_path, reprocess=False):
     self.spec = spec
+    self.cache_path = cache_path
+    self.reprocess = reprocess
 
   def media_paths(self):
     for field in self.content_fields():
@@ -167,7 +169,8 @@ class Note:
       video = Video(
         self.spec.video_url(),
         working_dir=deck_dir,
-        cache_path=self.spec.cache_path,
+        cache_path=self.cache_path,
+        reprocess=self.reprocess,
       )
       video.audio(self.spec.config.audio)
       video.video(self.spec.config.video)
@@ -200,11 +203,13 @@ class Note:
     return video
 
 class Deck:
-  def __init__(self, spec: DeckSpec):
+  def __init__(self, spec: DeckSpec, cache_path: str, reprocess: bool = False):
     self.spec = spec
+    self.cache_path = cache_path
+    self.reprocess = reprocess
     self.notes = dict()
     for note_spec in spec.note_specs:
-      self.add_note(Note(note_spec))
+      self.add_note(Note(note_spec, cache_path=cache_path, reprocess=reprocess))
 
   def title(self):
     return self.spec.config.title

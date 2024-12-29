@@ -47,6 +47,8 @@ def cli():
   parser.add_argument('-o', '--output',
     help='Path to save decks to. Defaults to saving indivdual decks to their '
       + 'own files named after their sources, but with the extension .apkg.')
+  parser.add_argument('--reprocess', action='store_true',
+    help='Reprocess videos whether or not anything has changed.')
   parser.add_argument('path', nargs='*')
   args = parser.parse_args()
 
@@ -69,7 +71,7 @@ def cli():
         url = url.strip()
         if url:
           try:
-            open_video(args, [url])
+            open_video(args, [url], args.reprocess)
           except BadURL as error:
             print(f'Error: {error}')
           except yt_dlp.utils.DownloadError as error:
@@ -77,11 +79,13 @@ def cli():
             pass
       return 0
     elif args.open_video:
-      return open_video(args, args.path)
+      return open_video(args, args.path, args.reprocess)
 
     input = fileinput.input(files=args.path, encoding='utf-8')
-    parser = DeckParser(cache_path=args.cache)
-    decks = [Deck(spec) for spec in parser.parse_input(input)]
+    decks = [
+      Deck(spec, cache_path=args.cache, reprocess=args.reprocess)
+      for spec in DeckParser().parse_input(input)
+    ]
 
     if args.serve_http:
       return serve_http(args, decks)
@@ -119,9 +123,9 @@ def cli():
   except KeyboardInterrupt:
     return 130
 
-def open_video(args, urls):
+def open_video(args, urls, reprocess=False):
   for url in urls:
-    video = Video(url, cache_path=args.cache)
+    video = Video(url, cache_path=args.cache, reprocess=reprocess)
     open_in_app([video.processed_video()])
 
 def open_in_app(arguments):

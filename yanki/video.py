@@ -82,6 +82,10 @@ def file_url_to_path(url):
   #   ParseResult(scheme='file', netloc='.', path='/media/first.png', ...)
   return parts.netloc + parts.path
 
+def file_not_empty(path):
+  """Checks that the path is a file and is non-empty."""
+  return os.path.exists(path) and os.stat(path).st_size > 0
+
 NON_ZERO_DIGITS = set('123456789')
 def is_non_zero_time(time_spec):
   for c in time_spec:
@@ -96,10 +100,11 @@ def get_key_path(data, path: list[any]):
 
 # FIXME cannot be reused
 class Video:
-  def __init__(self, url, working_dir='.', cache_path='.'):
+  def __init__(self, url, working_dir='.', cache_path='.', reprocess=False):
     self.url = url
     self.working_dir = working_dir
     self.cache_path = cache_path
+    self.reprocess = reprocess
     self._info = None
     self._raw_metadata = None
     self._format = None
@@ -363,8 +368,11 @@ class Video:
 
   def processed_video(self):
     output_path = self.processed_video_cache_path()
-    if os.path.exists(output_path) and os.stat(output_path).st_size > 0:
+    if not self.reprocess and file_not_empty(output_path):
       return output_path
+
+    # Only reprocess once per run.
+    self.reprocess = False
 
     raw_path = self.raw_video()
 
