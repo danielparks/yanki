@@ -113,7 +113,7 @@ class Video:
     # same video (assuming the source hasn’t changed).
     self.id = url_to_id(url)
     if '/' in self.id:
-      raise BadURL(f'Invalid "/" in video ID: {repr(self.id)}')
+      raise BadURL(f"Invalid '/' in video ID: {repr(self.id)}")
     self._crop = None
     self._overlay_text = ''
     self._slow_filter = None
@@ -141,7 +141,7 @@ class Video:
         parameters.encode(encoding='utf-8'),
         digest_size=16,
         usedforsecurity=False).hexdigest()
-    return self.cached(f"{prefix}{parameters}.{self.output_ext()}")
+    return self.cached(f'{prefix}{parameters}.{self.output_ext()}')
 
   def _download_info(self):
     path = file_url_to_path(self.url)
@@ -153,7 +153,7 @@ class Video:
 
     try:
       with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
-        LOGGER.info(f"{self.id}: getting info")
+        LOGGER.info(f'{self.id}: getting info')
         return ydl.sanitize_info(ydl.extract_info(self.url, download=False))
     except yt_dlp.utils.YoutubeDLError as error:
       raise BadURL(f'Error downloading {repr(self.url)}: {error}')
@@ -161,7 +161,7 @@ class Video:
   def info(self):
     if self._info is None:
       try:
-        with open(self.info_cache_path(), 'r', encoding="utf-8") as file:
+        with open(self.info_cache_path(), 'r', encoding='utf-8') as file:
           self._info = json.load(file)
           return self._info
       except FileNotFoundError:
@@ -169,7 +169,7 @@ class Video:
 
       # File not found, but the exception will not show up in context
       self._info = self._download_info()
-      with open(self.info_cache_path(), 'w', encoding="utf-8") as file:
+      with open(self.info_cache_path(), 'w', encoding='utf-8') as file:
         file.write(json.dumps(self._info))
     return self._info
 
@@ -207,7 +207,7 @@ class Video:
   def get_fps(self):
     for stream in self.raw_metadata('streams'):
       if stream['codec_type'] == 'video':
-        division = stream['avg_frame_rate'].split("/")
+        division = stream['avg_frame_rate'].split('/')
         if len(division) == 0:
           continue
 
@@ -217,27 +217,26 @@ class Video:
 
         return fps
 
-    raw_path = self.raw_video()
-    raise RuntimeError(f"Could not get FPS for video: {raw_path}")
+    raise RuntimeError(f'Could not get FPS for video: {self.raw_video()}')
 
   def normalize_time_spec(self, spec):
-    if spec.endswith("F"):
-      return "%.3f" % (int(spec[:-1])/self.get_fps())
+    if spec.endswith('F'):
+      return '%.3f' % (int(spec[:-1])/self.get_fps())
     else:
       return spec
 
   def clip(self, start_spec, end_spec):
     if start_spec:
-      self.input_options["ss"] = self.normalize_time_spec(start_spec)
+      self.input_options['ss'] = self.normalize_time_spec(start_spec)
     if end_spec:
-      self.output_options["to"] = self.normalize_time_spec(end_spec)
+      self.output_options['to'] = self.normalize_time_spec(end_spec)
       if start_spec:
-        self.output_options["copyts"] = None
+        self.output_options['copyts'] = None
 
   def snapshot(self, time_spec):
-    self.input_options["ss"] = self.normalize_time_spec(time_spec)
-    self.output_options["frames:v"] = "1"
-    self.output_options["q:v"] = "2" # JPEG quality
+    self.input_options['ss'] = self.normalize_time_spec(time_spec)
+    self.output_options['frames:v'] = '1'
+    self.output_options['q:v'] = '2' # JPEG quality
 
   def crop(self, crop):
     self._crop = crop
@@ -281,9 +280,9 @@ class Video:
     if self._format is not None:
       return self._format
     elif self.is_still():
-      return "jpeg"
+      return 'jpeg'
     else:
-      return "mp4"
+      return 'mp4'
 
   def is_still(self):
     return (
@@ -297,7 +296,7 @@ class Video:
     if os.path.exists(path) and os.stat(path).st_size > 0:
       return path
 
-    LOGGER.info(f"{self.id}: downloading raw video to {path}")
+    LOGGER.info(f'{self.id}: downloading raw video to {path}')
 
     # Check if it’s a file:// URL
     source_path = file_url_to_path(self.url)
@@ -326,9 +325,9 @@ class Video:
     return self.input_options
 
   def ffmpeg_output_options(self):
-    if "vf" in self.output_options:
+    if 'vf' in self.output_options:
       # FIXME?
-      raise ValueError("vf output option already set")
+      raise ValueError('vf output option already set')
 
     return self.output_options
 
@@ -341,14 +340,14 @@ class Video:
     parameters = []
 
     for key, value in self.ffmpeg_input_options().items():
-      parameters.append(f"-{key}")
+      parameters.append(f'-{key}')
       if value is not None:
         parameters.append(value)
 
     parameters.append(self.id)
 
     for key, value in self.ffmpeg_output_options().items():
-      parameters.append(f"-{key}")
+      parameters.append(f'-{key}')
       if value is not None:
         parameters.append(value)
 
@@ -371,8 +370,8 @@ class Video:
 
     raw_path = self.raw_video()
 
-    parameters = " ".join(self.ffmpeg_parameters())
-    LOGGER.info(f"{parameters}: processing video to {output_path}")
+    parameters = ' '.join(self.ffmpeg_parameters())
+    LOGGER.info(f'{parameters}: processing video to {output_path}')
 
     uses_copyts = 'copyts' in self.output_options
     if uses_copyts:
@@ -391,7 +390,7 @@ class Video:
 
     stream = ffmpeg.input(raw_path, **self.ffmpeg_input_options())
 
-    if "vn" not in self.output_options:
+    if 'vn' not in self.output_options:
       # Video stream is not being stripped
       if self._crop:
         # FIXME kludge; doesn’t handle named params
