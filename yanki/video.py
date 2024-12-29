@@ -138,7 +138,6 @@ class Video:
     parameters = '_'.join(self.ffmpeg_parameters())
 
     if '/' in parameters or len(parameters) > 60:
-      LOGGER.debug(f'hashing parameters {repr(parameters)}')
       parameters = hashlib.blake2b(
         parameters.encode(encoding='utf-8'),
         digest_size=16,
