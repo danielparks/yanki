@@ -11,22 +11,22 @@ trim: 0:01-0:04
 
 file://./media/stopwatch.mp4
   slow: 0:00-0:01 * 3
-  with trim: slow: 0:00-0:01 * 3
+  with 1s-4s trim: slow: 0:00-0:01 * 3
 
 file://./media/stopwatch.mp4
   slow: -0:01.5 *3
-  with trim: slow: -0:01.5 *3
+  with 1s-4s trim: slow: -0:01.5 *3
 
 file://./media/stopwatch.mp4
   slow: 1- * 0.25
-  with trim: slow: 1- * 0.25
+  with 1s-4s trim: slow: 1- * 0.25
 
 file://./media/stopwatch.mp4
   video: strip
   slow: 1- * 0.25
-  no video / with trim: slow: 1- * 0.25
+  no video / with 1s-4s trim: slow: 1- * 0.25
 
 file://./media/stopwatch.mp4
   audio: strip
   slow: 1- * 0.25
-  no audio / with trim: slow: 1- * 0.25
+  no audio / with 1s-4s trim: slow: 1- * 0.25
