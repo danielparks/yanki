@@ -223,6 +223,7 @@ class Video:
 
   # Expects spec without whitespace
   def time_to_seconds(self, spec):
+    """Converts a time spec like 1:01.02 or 4F to decimal seconds."""
     if spec.endswith('F') or spec.endswith('f'):
       # Frame number
       return int(spec[:-1])/self.get_fps()
@@ -240,16 +241,27 @@ class Video:
 
     return sign*sum
 
+  def time_to_seconds_str(self, spec, format='%.03f'):
+    """
+    Converts a time spec like 1:01.02 or 4F to decimal seconds as a string.
+
+    Handles spec being '' or None by returning '' in those cases.
+    """
+    if spec is None or spec == '':
+      return ''
+    else:
+      return format % self.time_to_seconds(spec)
+
   def clip(self, start_spec, end_spec):
     if start_spec:
-      self.input_options['ss'] = '%0.3f' % self.time_to_seconds(start_spec)
+      self.input_options['ss'] = self.time_to_seconds_str(start_spec)
     if end_spec:
-      self.output_options['to'] = '%0.3f' % self.time_to_seconds(end_spec)
+      self.output_options['to'] = self.time_to_seconds_str(end_spec)
       if start_spec:
         self.output_options['copyts'] = None
 
   def snapshot(self, time_spec):
-    self.input_options['ss'] = '%0.3f' % self.time_to_seconds(time_spec)
+    self.input_options['ss'] = self.time_to_seconds_str(time_spec)
     self.output_options['frames:v'] = '1'
     self.output_options['q:v'] = '2' # JPEG quality
 
