@@ -1,5 +1,6 @@
-# Error in test-decks/errors/duplicate-note.deck, line 5: Note with id '{deck_id}__file://../good/media/hand-counting.mp4 @0- <->' already exists in deck
+# Error in test-decks/errors/duplicate-note.deck, line 6: Note with id 'foo' already exists in deck
 title: Test deck::Errors::Duplicate note
+note_id: foo
 
 file://../good/media/hand-counting.mp4 YES
 file://../good/media/hand-counting.mp4 YES2

@@ -35,7 +35,7 @@ class Config:
     self.trim = None
     self.audio = 'include'
     self.video = 'include'
-    self.note_id_format = '{deck_id}__{url} {clip} {direction}'
+    self.note_id_format = '{deck_id} {url} {clip}'
 
   def set_more(self, input):
     self.more = Field([Fragment(input)])

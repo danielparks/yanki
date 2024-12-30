@@ -48,7 +48,7 @@ note (e.g. `<->`).
 You can customize how the GUID is generated with the `note_id` configuration:
 
     # Default:
-    note_id: {deck_id}__{url} {clip} {direction}
+    note_id: {deck_id} {url} {clip}
 
     # Use the text that corresponds to the video:
     note_id: {deck_id} {text}
@@ -62,4 +62,4 @@ If you do leave out `{deck_id}`, you should probably include something else to
 make sure the GUID is unique outside of your repository.
 
     title: Really Cool Cards::subdeck 1
-    note_id: Really Cool Cards {url} {clip} {direction}
+    note_id: Really Cool Cards {url} {clip}

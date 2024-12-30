@@ -19,6 +19,7 @@ YT_DLP_OPTIONS = {
 }
 
 STILL_FORMATS = frozenset(['png', 'jpeg', 'jpg'])
+TIME_FORMAT = '%0.06f'
 
 class BadURL(ValueError):
   pass
@@ -244,7 +245,7 @@ class Video:
 
     return sign*sum
 
-  def time_to_seconds_str(self, spec, format='%.03f'):
+  def time_to_seconds_str(self, spec, format=TIME_FORMAT):
     """
     Converts a time spec like 1:01.02 or 4F to decimal seconds as a string.
 
@@ -258,16 +259,16 @@ class Video:
   def clip(self, start_spec, end_spec):
     if start_spec:
       start = self.time_to_seconds(start_spec)
-      self.input_options['ss'] = '%0.03f' % start
+      self.input_options['ss'] = TIME_FORMAT % start
     else:
       start = 0
 
     if end_spec:
       end = self.time_to_seconds(end_spec)
-      self.output_options['t'] = '%0.03f' % (end - start)
-      self._parameters['clip'] = ('%0.03f' % start, '%0.03f' % end)
+      self.output_options['t'] = TIME_FORMAT % (end - start)
+      self._parameters['clip'] = (TIME_FORMAT % start, TIME_FORMAT % end)
     else:
-      self._parameters['clip'] = ('%0.03f' % start, None)
+      self._parameters['clip'] = (TIME_FORMAT % start, None)
 
     if 'snapshot' in self._parameters:
       del self._parameters['snapshot']
