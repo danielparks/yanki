@@ -37,6 +37,9 @@ def cli():
   parser.add_argument('--dump-videos', action='store_true',
     help='Make sure the videos from the deck are downloaded to the cache and '
       + 'display the path to each one.')
+  parser.add_argument('--list-notes',
+    help='Print information about every note in the passed format, e.g. '
+      '"{note_id} {text}".')
   parser.add_argument('--open-video', action='store_true',
     help='Instead of processing deck files, download the passed video URL, '
       + 'process it, and pass it to the `open` command.')
@@ -105,6 +108,8 @@ def cli():
       return serve_http(args, decks)
     elif args.dump_videos:
       return dump_videos(args, decks)
+    elif args.list_notes is not None:
+      return list_notes(args, decks)
 
     package = genanki.Package([]) # Only used with --output
     for deck in decks:
@@ -281,3 +286,14 @@ def dump_videos(args, decks):
     print(f'title: {deck.title()}')
     for id, note in deck.notes.items():
       print(f'{", ".join(note.media_paths())} {note.text()}')
+
+def list_notes(args, decks):
+  format = args.list_notes
+  for deck in decks:
+    for note in deck.notes.values():
+      print(format.format(
+        note_id=note.note_id(deck_id=deck.id()),
+        deck=deck.title(),
+        deck_id=deck.id(),
+        **note.variables()
+      ))

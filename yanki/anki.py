@@ -126,18 +126,22 @@ class Note:
 
   # {deck_id} is just a placeholder. To get the real note_id, you need to have
   # a deck_id.
-  @functools.cache
   def note_id(self, deck_id='{deck_id}'):
     return self.spec.config.generate_note_id(
       deck_id=deck_id,
-      url=self.spec.video_url(),
-      clip=self.clip_spec(),
-      direction=self.spec.direction(),
+      **self.variables(),
+    )
+
+  def variables(self):
+    return {
+      'url': self.spec.video_url(),
+      'clip': self.clip_spec(),
+      'direction': self.spec.direction(),
       ### FIXME should these be renamed to clarify that they’re normalized
       ### versions of the input text?
-      media=' '.join([self.spec.video_url(), self.clip_spec()]),
-      text=self.text(),
-    )
+      'media': ' '.join([self.spec.video_url(), self.clip_spec()]),
+      'text': self.text(),
+    }
 
   @functools.cache
   def clip_spec(self):
@@ -213,6 +217,9 @@ class Deck:
     for note_spec in spec.note_specs:
       self.add_note(Note(note_spec, cache_path=cache_path, reprocess=reprocess))
 
+  def id(self):
+    return name_to_id(self.title())
+
   def title(self):
     return self.spec.config.title
 
@@ -226,7 +233,7 @@ class Deck:
     self.notes[id] = note
 
   def save_to_package(self, package):
-    deck = genanki.Deck(name_to_id(self.title()), self.title())
+    deck = genanki.Deck(self.id(), self.title())
     LOGGER.debug(f'New deck [{deck.deck_id}]: {self.title()}')
 
     for note in self.notes.values():
