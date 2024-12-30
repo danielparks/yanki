@@ -88,13 +88,6 @@ def file_not_empty(path):
   """Checks that the path is a file and is non-empty."""
   return os.path.exists(path) and os.stat(path).st_size > 0
 
-NON_ZERO_DIGITS = set('123456789')
-def is_non_zero_time(time_spec):
-  for c in time_spec:
-    if c in NON_ZERO_DIGITS:
-      return True
-  return False
-
 def get_key_path(data, path: list[any]):
   for key in path:
     data = data[key]
@@ -228,22 +221,35 @@ class Video:
 
     raise RuntimeError(f'Could not get FPS for video: {self.raw_video()}')
 
-  def normalize_time_spec(self, spec):
-    if spec.endswith('F'):
-      return '%.3f' % (int(spec[:-1])/self.get_fps())
-    else:
-      return spec
+  # Expects spec without whitespace
+  def time_to_seconds(self, spec):
+    if spec.endswith('F') or spec.endswith('f'):
+      # Frame number
+      return int(spec[:-1])/self.get_fps()
+
+    # [-][HH]:[MM]:[SS.mmm...]
+    sign = 1
+    if spec.startswith('-'):
+      spec = spec[1:]
+      sign = -1
+
+    # FIXME? this acccepts 3.3:500:67.8:0:1.2
+    sum = 0
+    for part in spec.split(':'):
+      sum = sum*60 + float(part)
+
+    return sign*sum
 
   def clip(self, start_spec, end_spec):
     if start_spec:
-      self.input_options['ss'] = self.normalize_time_spec(start_spec)
+      self.input_options['ss'] = '%0.3f' % self.time_to_seconds(start_spec)
     if end_spec:
-      self.output_options['to'] = self.normalize_time_spec(end_spec)
+      self.output_options['to'] = '%0.3f' % self.time_to_seconds(end_spec)
       if start_spec:
         self.output_options['copyts'] = None
 
   def snapshot(self, time_spec):
-    self.input_options['ss'] = self.normalize_time_spec(time_spec)
+    self.input_options['ss'] = '%0.3f' % self.time_to_seconds(time_spec)
     self.output_options['frames:v'] = '1'
     self.output_options['q:v'] = '2' # JPEG quality
 
@@ -503,7 +509,12 @@ class Video:
 
     (start, end, amount) = self._slow_filter
     if start is None:
-      start = '0'
+      start = 0
+    else:
+      start = self.time_to_seconds(start)
+
+    if end is not None:
+      end = self.time_to_seconds(end)
 
     wants_video = 'vn' not in self.output_options and self.has_video()
     wants_audio = 'an' not in self.output_options and self.has_audio()
@@ -515,26 +526,39 @@ class Video:
     if wants_audio:
       asplit = streams['a'].asplit()
 
-    if is_non_zero_time(start):
+    if start != 0:
       if wants_video:
-        parts.append(vsplit[i].trim(start='0', end=start))
+        parts.append(
+          vsplit[i]
+          .filter('select', f'between(t,0,{start})')
+          .filter('setpts', 'PTS-STARTPTS')
+        )
       if wants_audio:
-        parts.append(asplit[i].filter('atrim', start='0', end=start))
+        parts.append(
+          asplit[i]
+          .filter('aselect', f'between(t,0,{start})')
+          .filter('asetpts', 'PTS-STARTPTS')
+        )
       i += 1
 
     if end is None:
-      end_trim = {}
+      expression = f'gte(t,{start})'
     else:
-      end_trim = { 'end': end }
+      expression = f'between(t,{start},{end})'
 
     if wants_video:
       parts.append(
         vsplit[i]
-        .trim(start=start, **end_trim)
+        .filter('select', expression)
+        .filter('setpts', 'PTS-STARTPTS')
         .setpts(f'{amount}*PTS')
       )
     if wants_audio:
-      part = asplit[i].filter('atrim', start=start, **end_trim)
+      part = (
+        asplit[i]
+        .filter('aselect', expression)
+        .filter('asetpts', 'PTS-STARTPTS')
+      )
 
       if amount < 0.01:
         # FIXME validate on parse
@@ -554,8 +578,16 @@ class Video:
 
     if end is not None:
       if wants_video:
-        parts.append(vsplit[i].trim(start=end))
+        parts.append(
+          vsplit[i]
+          .filter('select', f'gte(t,{end})')
+          .filter('setpts', 'PTS-STARTPTS')
+        )
       if wants_audio:
-        parts.append(asplit[i].filter('atrim', start=end))
+        parts.append(
+          asplit[i]
+          .filter('aselect', f'gte(t,{end})')
+          .filter('asetpts', 'PTS-STARTPTS')
+        )
 
     return ffmpeg.concat(*parts, v=int(wants_video), a=int(wants_audio))

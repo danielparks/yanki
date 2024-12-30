@@ -7,7 +7,7 @@ file://./media/stopwatch.mp4
   slow: - * 0.1
   without trim: slow: - * 0.1
 
-trim: 76F-224F
+trim: 0:01-0:04
 
 file://./media/stopwatch.mp4
   slow: 0:00-0:01 * 3
