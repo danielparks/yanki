@@ -1,4 +1,5 @@
 import argparse
+import colorlog
 import ffmpeg
 import fileinput
 import functools
@@ -61,7 +62,20 @@ def cli():
     level = logging.INFO
   else:
     level = logging.WARN
-  logging.basicConfig(level=level, format='%(message)s')
+
+  handler = colorlog.StreamHandler()
+  handler.setFormatter(colorlog.ColoredFormatter(
+    '%(log_color)s%(levelname)s%(reset)s %(light_cyan)s%(name)s:%(reset)s %(message)s',
+    log_colors={
+      'DEBUG':    'bold_white',
+      'INFO':     'bold_green',
+      'WARNING':  'bold_yellow',
+      'ERROR':    'bold_red',
+      'CRITICAL': 'bold_red',
+    },
+  ))
+
+  logging.basicConfig(level=level, handlers=[handler])
 
   try:
     os.makedirs(args.cache, exist_ok=True)

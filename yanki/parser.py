@@ -140,6 +140,17 @@ class NoteSpec:
   source: str # config directives are stripped from this
   config: Config
 
+  @functools.cache
+  def provisional_note_id(self, deck_id='{deck_id}'):
+    return self.config.generate_note_id(
+      deck_id=deck_id,
+      url=self.video_url(),
+      clip=self.provisional_clip_spec(),
+      direction=self.direction(),
+      media=' '.join([self.video_url(), self.provisional_clip_spec()]),
+      text=self.text(),
+    )
+
   def video_url(self):
     return self._parse_video_url()[0]
 

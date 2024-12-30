@@ -102,11 +102,12 @@ def get_key_path(data, path: list[any]):
 
 # FIXME cannot be reused
 class Video:
-  def __init__(self, url, working_dir='.', cache_path='.', reprocess=False):
+  def __init__(self, url, working_dir='.', cache_path='.', reprocess=False, logger=LOGGER):
     self.url = url
     self.working_dir = working_dir
     self.cache_path = cache_path
     self.reprocess = reprocess
+    self.logger = logger
     self._info = None
     self._raw_metadata = None
     self._format = None
@@ -154,7 +155,7 @@ class Video:
 
     try:
       with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
-        LOGGER.info(f'{self.id}: getting info')
+        self.logger.info(f'getting info')
         return ydl.sanitize_info(ydl.extract_info(self.url, download=False))
     except yt_dlp.utils.YoutubeDLError as error:
       raise BadURL(f'Error downloading {repr(self.url)}: {error}')
@@ -182,7 +183,7 @@ class Video:
     return self.info()['title']
 
   def refresh_raw_metadata(self):
-    LOGGER.debug(f'refresh raw metadata: {self.raw_video()}')
+    self.logger.debug(f'refresh raw metadata: {self.raw_video()}')
     self._raw_metadata = ffmpeg.probe(self.raw_video())
 
     with open(self.raw_metadata_cache_path(), 'w', encoding='utf-8') as file:
@@ -321,7 +322,7 @@ class Video:
       source_path = os.path.join(self.working_dir, source_path)
       if not path_exists or getmtime(source_path) > getmtime(path):
         # Cache file doesn’t exist or is old.
-        LOGGER.info(f'{self.id}: downloading raw video to {path}')
+        self.logger.info(f'downloading raw video to {path}')
         shutil.copy(source_path, path, follow_symlinks=True)
       return path
 
@@ -329,7 +330,7 @@ class Video:
       # Already cached, and we can’t check if it’s out of date.
       return path
 
-    LOGGER.info(f'{self.id}: downloading raw video to {path}')
+    self.logger.info(f'downloading raw video to {path}')
 
     options = {
       'outtmpl': {
@@ -397,7 +398,8 @@ class Video:
     raw_path = self.raw_video()
 
     parameters = ' '.join(self.ffmpeg_parameters())
-    LOGGER.info(f'{parameters}: processing video to {output_path}')
+    self.logger.info(f'processing video to {output_path}')
+    self.logger.info(f'processing parameters: {parameters}')
 
     uses_copyts = 'copyts' in self.output_options
     if uses_copyts:
@@ -467,7 +469,7 @@ class Video:
       verb = 'Run'
 
     command = shlex.join(stream.compile())
-    LOGGER.debug(f'{verb} {command}')
+    self.logger.debug(f'{verb} {command}')
     try:
       stream.run(quiet=True)
     except ffmpeg.Error as error:
@@ -483,7 +485,7 @@ class Video:
       )
 
       command = shlex.join(stream.compile())
-      LOGGER.debug(f'Second pass: {command}')
+      self.logger.debug(f'Second pass: {command}')
       try:
         stream.run(quiet=True)
       except ffmpeg.Error as error:

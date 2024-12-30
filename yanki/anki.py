@@ -77,6 +77,7 @@ class Note:
     self.spec = spec
     self.cache_path = cache_path
     self.reprocess = reprocess
+    self.logger = logging.getLogger(f'Note[{self.spec.provisional_note_id()}]')
 
   def media_paths(self):
     for field in self.content_fields():
@@ -171,6 +172,7 @@ class Note:
         working_dir=deck_dir,
         cache_path=self.cache_path,
         reprocess=self.reprocess,
+        logger=self.logger,
       )
       video.audio(self.spec.config.audio)
       video.video(self.spec.config.video)
