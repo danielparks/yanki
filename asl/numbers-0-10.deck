@@ -1,10 +1,10 @@
 title: Lifeprint ASL::Numbers::0-10
 crop: in_h:in_h
 audio: strip
-note_id: Lifeprint ASL {url} {clip}
+note_id: Lifeprint ASL {text}
 
 tags: Lifeprint numbers::0-10
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @0:46 0 (Zero)
+https://www.youtube.com/watch?v=M4AFC4eEjlQ @0:46 0
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @30F 1
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @60F 2
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @90F 3

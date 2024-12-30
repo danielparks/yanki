@@ -1,7 +1,7 @@
 title: Lifeprint ASL::Numbers::31-100
 crop: in_h:in_h
 audio: strip
-note_id: Lifeprint ASL {url} {clip}
+note_id: Lifeprint ASL {text}
 slow: 0:00-0:00.1 *2
 
 tags: Lifeprint numbers::31-40
