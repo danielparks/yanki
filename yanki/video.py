@@ -115,6 +115,7 @@ class Video:
     self._slow_filter = None
     self.input_options = {}
     self.output_options = {}
+    self._parameters = {}
 
   def cached(self, filename):
     return os.path.join(self.cache_path, filename)
@@ -129,14 +130,14 @@ class Video:
     return self.cached(f'ffprobe_raw_{self.id}.json')
 
   def processed_video_cache_path(self, prefix='processed_'):
-    parameters = '_'.join(self.ffmpeg_parameters())
+    parameters = '_'.join(self.parameters())
 
     if '/' in parameters or len(parameters) > 60:
       parameters = hashlib.blake2b(
         parameters.encode(encoding='utf-8'),
         digest_size=16,
         usedforsecurity=False).hexdigest()
-    return self.cached(f'{prefix}{parameters}.{self.output_ext()}')
+    return self.cached(f'{prefix}{self.id}_{parameters}.{self.output_ext()}')
 
   def _download_info(self):
     path = file_url_to_path(self.url)
@@ -228,6 +229,8 @@ class Video:
       # Frame number
       return int(spec[:-1])/self.get_fps()
 
+    # FIXME handle s/ms/us suffixes
+
     # [-][HH]:[MM]:[SS.mmm...]
     sign = 1
     if spec.startswith('-'):
@@ -262,11 +265,21 @@ class Video:
     if end_spec:
       end = self.time_to_seconds(end_spec)
       self.output_options['t'] = '%0.03f' % (end - start)
+      self._parameters['clip'] = ('%0.03f' % start, '%0.03f' % end)
+    else:
+      self._parameters['clip'] = ('%0.03f' % start, None)
+
+    if 'snapshot' in self._parameters:
+      del self._parameters['snapshot']
 
   def snapshot(self, time_spec):
     self.input_options['ss'] = self.time_to_seconds_str(time_spec)
     self.output_options['frames:v'] = '1'
     self.output_options['q:v'] = '2' # JPEG quality
+
+    self._parameters['snapshot'] = self.input_options['ss']
+    if 'clip' in self._parameters:
+      del self._parameters['clip']
 
   def crop(self, crop):
     self._crop = crop
@@ -277,20 +290,22 @@ class Video:
   def audio(self, audio):
     if audio == 'strip':
       self.output_options['an'] = None
+      self._parameters['audio'] = 'strip'
     else:
-      try:
+      if 'an' in self.output_options:
         del self.output_options['an']
-      except KeyError:
-        pass
+      if 'audio' in self._parameters:
+        del self._parameters['audio']
 
   def video(self, video):
     if video == 'strip':
       self.output_options['vn'] = None
+      self._parameters['video'] = 'strip'
     else:
-      try:
+      if 'vn' in self.output_options:
         del self.output_options['vn']
-      except KeyError:
-        pass
+      if 'video' in self._parameters:
+        del self._parameters['video']
 
   def slow_filter(self, start='0', end=None, amount=2):
     """Set a filter to slow (or speed up) part of the video."""
@@ -396,32 +411,19 @@ class Video:
 
     return self.output_options
 
-  def ffmpeg_parameters(self):
-    """
-    Get most parameters to ffmpeg. Used to identify output for caching.
-
-    Does not include input or output file names, or options like -y.
-    """
-    parameters = []
-
-    for key, value in self.ffmpeg_input_options().items():
-      parameters.append(f'-{key}')
-      if value is not None:
-        parameters.append(value)
-
-    parameters.append(self.id)
-
-    for key, value in self.ffmpeg_output_options().items():
-      parameters.append(f'-{key}')
-      if value is not None:
-        parameters.append(value)
+  def parameters(self):
+    """Get parameters for producing the video."""
+    parameters = [
+      f'{key}={repr(value)}'
+      for key, value in self._parameters.items()
+    ]
 
     if self._crop is not None:
-      parameters.append(f'CROP={repr(self._crop)}')
+      parameters.append(f'crop={repr(self._crop)}')
     if self._overlay_text != '':
-      parameters.append(f'OVERLAY_TEXT={repr(self._overlay_text)}')
+      parameters.append(f'overlay_text={repr(self._overlay_text)}')
     if self._slow_filter is not None:
-      parameters.append(f'SLOW_FILTER={repr(self._slow_filter)}')
+      parameters.append(f'slow={repr(self._slow_filter)}')
 
     return parameters
 
@@ -433,9 +435,8 @@ class Video:
     # Only reprocess once per run.
     self.reprocess = False
 
-    parameters = ' '.join(self.ffmpeg_parameters())
-    self.logger.info(f'processing video to {output_path}')
-    self.logger.info(f'processing parameters: {parameters}')
+    parameters = ' '.join(self.parameters())
+    self.logger.info(f'processing with ({parameters}) to {output_path}')
 
     stream = ffmpeg.input(self.raw_video(), **self.ffmpeg_input_options())
     output_streams = dict()
