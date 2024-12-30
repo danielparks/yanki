@@ -254,11 +254,14 @@ class Video:
 
   def clip(self, start_spec, end_spec):
     if start_spec:
-      self.input_options['ss'] = self.time_to_seconds_str(start_spec)
+      start = self.time_to_seconds(start_spec)
+      self.input_options['ss'] = '%0.03f' % start
+    else:
+      start = 0
+
     if end_spec:
-      self.output_options['to'] = self.time_to_seconds_str(end_spec)
-      if start_spec:
-        self.output_options['copyts'] = None
+      end = self.time_to_seconds(end_spec)
+      self.output_options['t'] = '%0.03f' % (end - start)
 
   def snapshot(self, time_spec):
     self.input_options['ss'] = self.time_to_seconds_str(time_spec)
@@ -430,28 +433,11 @@ class Video:
     # Only reprocess once per run.
     self.reprocess = False
 
-    raw_path = self.raw_video()
-
     parameters = ' '.join(self.ffmpeg_parameters())
     self.logger.info(f'processing video to {output_path}')
     self.logger.info(f'processing parameters: {parameters}')
 
-    uses_copyts = 'copyts' in self.output_options
-    if uses_copyts:
-      # -copyts is needed to clip a video to a specific end time, rather than
-      # using the desired clip duration. However, it sets the timestamps in the
-      # saved video file, which causes a delay before the video starts in
-      # certain players (Safari, QuickTime).
-      #
-      # It’s also incompatible with certain filters, such as concat.
-      #
-      # To fix this, we reprocess the video, so we want to give it a different
-      # name for the first pass.
-      first_pass_output_path = self.processed_video_cache_path(prefix='pass1_')
-    else:
-      first_pass_output_path = output_path
-
-    stream = ffmpeg.input(raw_path, **self.ffmpeg_input_options())
+    stream = ffmpeg.input(self.raw_video(), **self.ffmpeg_input_options())
     output_streams = dict()
 
     if self.wants_video():
@@ -483,10 +469,7 @@ class Video:
       audio = stream['a']
       output_streams['a'] = audio
 
-    if not uses_copyts:
-      # copyts and the concat filter are incompatible
-      output_streams = self._try_apply_slow_filter(output_streams)
-
+    output_streams = self._try_apply_slow_filter(output_streams)
     if isinstance(output_streams, dict):
       output_streams = output_streams.values()
     else:
@@ -494,40 +477,17 @@ class Video:
 
     stream = ffmpeg.output(
       *output_streams,
-      first_pass_output_path,
+      output_path,
       **self.ffmpeg_output_options()
     ).overwrite_output()
 
-    if uses_copyts:
-      verb = 'First pass'
-    else:
-      verb = 'Run'
-
     command = shlex.join(stream.compile())
-    self.logger.debug(f'{verb} {command}')
+    self.logger.debug(f'Run {command}')
     try:
       stream.run(quiet=True)
     except ffmpeg.Error as error:
-      error.add_note(f'{verb}: {command}')
+      error.add_note(f'Ran: {command}')
       raise
-
-    if uses_copyts:
-      stream = ffmpeg.input(first_pass_output_path)
-      stream = (
-        self._try_apply_slow_filter(stream)
-        .output(output_path)
-        .overwrite_output()
-      )
-
-      command = shlex.join(stream.compile())
-      self.logger.debug(f'Second pass: {command}')
-      try:
-        stream.run(quiet=True)
-      except ffmpeg.Error as error:
-        error.add_note(f'Second pass: {command}')
-        raise
-
-      os.remove(first_pass_output_path)
 
     return output_path
 

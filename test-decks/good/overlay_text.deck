@@ -1,11 +1,11 @@
-title: Test deck::overlay_text
+title: Test deck::Overlay text
 note_id: {deck_id} {text}
 
 file://./media/hand-counting.mp4 -> a few words
   overlay_text: a few words
 file://./media/hand-counting.mp4 -> special:characters,a='b'c\d
   overlay_text: special:characters,a='b'c\d
-file://./media/hand-counting.mp4 @0-0:01 -> clipped
+file://./media/hand-counting.mp4 @0-0:01.5 -> clipped
   overlay_text: clipped
 file://./media/hand-counting.mp4 @0:03 -> snapshot
   overlay_text: snapshot
