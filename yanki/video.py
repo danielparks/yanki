@@ -20,6 +20,10 @@ YT_DLP_OPTIONS = {
 
 STILL_FORMATS = frozenset(['png', 'jpeg', 'jpg'])
 TIME_FORMAT = '%0.06f'
+FILENAME_ILLEGAL_CHARS = '/"[]'
+
+def chars_in(chars, input):
+  return [char for char in chars if char in input]
 
 class BadURL(ValueError):
   pass
@@ -72,7 +76,16 @@ def url_to_id(url_str):
     # Try to load the URL with yt_dlp and see what happens.
     pass
 
-  return url_str.replace('|', '||').replace('/', '|')
+  # FIXME check this against FILENAME_ILLEGAL_CHARS somehow
+  return (
+    url_str
+    .replace('\\', '\\\\')
+    .replace('|', r'\|')
+    .replace('"', r"\'")
+    .replace('[', r"\(")
+    .replace(']', r"\)")
+    .replace('/', '|')
+  )
 
 def file_url_to_path(url):
   parts = urlparse(url)
@@ -102,15 +115,17 @@ class Video:
     self.cache_path = cache_path
     self.reprocess = reprocess
     self.logger = logger
+
+    self.id = url_to_id(url)
+    invalid = chars_in(FILENAME_ILLEGAL_CHARS, self.id)
+    if invalid:
+      raise BadURL(
+        f'Invalid characters ({"".join(invalid)}) in video ID: {repr(self.id)}'
+      )
+
     self._info = None
     self._raw_metadata = None
     self._format = None
-
-    # ffmpeg parameters. Every run with the same parameters should produce the
-    # same video (assuming the source hasn’t changed).
-    self.id = url_to_id(url)
-    if '/' in self.id:
-      raise BadURL(f"Invalid '/' in video ID: {repr(self.id)}")
     self._crop = None
     self._overlay_text = ''
     self._slow_filter = None
@@ -133,7 +148,7 @@ class Video:
   def processed_video_cache_path(self, prefix='processed_'):
     parameters = '_'.join(self.parameters())
 
-    if '/' in parameters or len(parameters) > 60:
+    if len(parameters) > 60 or chars_in(FILENAME_ILLEGAL_CHARS, parameters):
       parameters = hashlib.blake2b(
         parameters.encode(encoding='utf-8'),
         digest_size=16,
