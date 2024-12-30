@@ -56,7 +56,10 @@ class MediaFragment(Fragment):
 
   def anki_filename(self):
     """Get the filename encoded for Anki."""
-    return html.escape(self.path_in_base(''))
+    # FIXME need to prevent characters that break Anki.
+    # html.escape() breaks Anki. A literal single quote (') is escaped as
+    # &#x27;, which then gets transformed to &amp;%23x27; at some point.
+    return self.path_in_base('')
 
   def html_path_in_base(self, base_path):
     """Get the path relative to base_path, and encoded for HTML."""
