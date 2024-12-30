@@ -319,16 +319,33 @@ class Video:
     )
 
   def has_audio(self):
+    """Does the raw video contain an audio stream?"""
     for stream in self.raw_metadata('streams'):
       if stream['codec_type'] == 'audio':
         return True
     return False
 
+  def wants_audio(self):
+    """Should the output include an audio stream?"""
+    return (
+      'an' not in self.output_options
+      and self.has_audio()
+      and not self.is_still()
+    )
+
   def has_video(self):
+    """Does the raw video contain a video stream or image?"""
     for stream in self.raw_metadata('streams'):
       if stream['codec_type'] == 'video':
         return True
     return False
+
+  def wants_video(self):
+    """Should the output include a video stream or image?"""
+    return (
+      'vn' not in self.output_options
+      and self.has_video()
+    )
 
   def raw_video(self):
     path = self.raw_video_cache_path()
@@ -437,7 +454,7 @@ class Video:
     stream = ffmpeg.input(raw_path, **self.ffmpeg_input_options())
     output_streams = dict()
 
-    if 'vn' not in self.output_options and self.has_video():
+    if self.wants_video():
       # Video stream is not being stripped
       video = stream['v']
       if self._crop:
@@ -461,7 +478,7 @@ class Video:
 
       output_streams['v'] = video
 
-    if 'an' not in self.output_options and self.has_audio():
+    if self.wants_audio():
       # Audio stream is not being stripped
       audio = stream['a']
       output_streams['a'] = audio
@@ -528,8 +545,8 @@ class Video:
     if end is not None:
       end = self.time_to_seconds(end)
 
-    wants_video = 'vn' not in self.output_options and self.has_video()
-    wants_audio = 'an' not in self.output_options and self.has_audio()
+    wants_video = self.wants_video()
+    wants_audio = self.wants_audio()
     parts = []
     i = 0
 
