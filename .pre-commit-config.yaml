@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ['--maxkb=1024']
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-vcs-permalinks
+      - id: check-xml
+      - id: check-yaml
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: mixed-line-ending
+      # - id: name-tests-test
+      # - id: no-commit-to-branch
+#   - repo: https://github.com/astral-sh/ruff-pre-commit
+#     rev: v0.8.4
+#     hooks:
+#       - id: ruff
+#       - id: ruff-format
+#         args: ['--check']
