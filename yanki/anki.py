@@ -188,7 +188,7 @@ class Note:
         video.format(self.spec.config.format)
       if self.spec.config.slow:
         (start, end, amount) = self.spec.config.slow
-        video.slow_filter(start=start, end=end, amount=amount)
+        video.slow(start=start, end=end, amount=amount)
       if self.spec.config.overlay_text:
         video.overlay_text(self.spec.config.overlay_text)
     except ValueError as error:

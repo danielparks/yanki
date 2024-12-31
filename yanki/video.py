@@ -128,7 +128,7 @@ class Video:
     self._format = None
     self._crop = None
     self._overlay_text = ''
-    self._slow_filter = None
+    self._slow = None
     self.input_options = {}
     self.output_options = {}
     self._parameters = {}
@@ -326,8 +326,8 @@ class Video:
       if 'video' in self._parameters:
         del self._parameters['video']
 
-  def slow_filter(self, start=0, end=None, amount=2):
-    """Set a filter to slow (or speed up) part of the video."""
+  def slow(self, start=0, end=None, amount=2):
+    """Slow (or speed up) part of the video."""
     if start == '' or start is None:
       start = 0
     else:
@@ -340,9 +340,9 @@ class Video:
 
     if (end is not None and end == start) or amount == 1:
       # Nothing is affected
-      self._slow_filter = None
+      self._slow = None
     else:
-      self._slow_filter = (start, end, float(amount))
+      self._slow = (start, end, float(amount))
 
   def format(self, extension: str | None):
     if extension is None:
@@ -451,8 +451,8 @@ class Video:
       parameters.append(f'crop={repr(self._crop)}')
     if self._overlay_text != '':
       parameters.append(f'overlay_text={repr(self._overlay_text)}')
-    if self._slow_filter is not None:
-      parameters.append(f'slow={repr(self._slow_filter)}')
+    if self._slow is not None:
+      parameters.append(f'slow={repr(self._slow)}')
 
     return parameters
 
@@ -499,7 +499,7 @@ class Video:
       audio = stream['a']
       output_streams['a'] = audio
 
-    output_streams = self._try_apply_slow_filter(output_streams)
+    output_streams = self._try_apply_slow(output_streams)
     if isinstance(output_streams, dict):
       output_streams = output_streams.values()
     else:
@@ -522,12 +522,12 @@ class Video:
     return output_path
 
   # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
-  def _try_apply_slow_filter(self, streams):
-    if self._slow_filter is None:
+  def _try_apply_slow(self, streams):
+    if self._slow is None:
       return streams
 
     # These are already floats (or None for end):
-    (start, end, amount) = self._slow_filter
+    (start, end, amount) = self._slow
 
     wants_video = self.wants_video()
     wants_audio = self.wants_audio()
