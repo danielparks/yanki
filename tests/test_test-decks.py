@@ -19,7 +19,7 @@ def read_first_line(path):
 
 def parse_deck(path, tmp_path):
   cache_path = tmp_path/'cache'
-  os.makedirs(cache_path, exist_ok=True)
+  cache_path.mkdir(parents=True, exist_ok=True)
 
   decks = [
     Deck(spec, cache_path=cache_path)

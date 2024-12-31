@@ -246,11 +246,17 @@ class Video:
     if isinstance(spec, float) or isinstance(spec, int):
       return float(spec)
 
-    if spec.endswith('F') or spec.endswith('f'):
+    if spec[-1] in 'Ff':
       # Frame number
       return int(spec[:-1])/self.get_fps()
-
-    # FIXME handle s/ms/us suffixes
+    elif spec[-1] in 'Ss':
+      # Second (s), millisecond (ms), or microsecond (us) suffix
+      if spec[-2] in 'Mm':
+        return float(spec[:-2])/1_000
+      elif spec[-2] in 'Uuµ':
+        return float(spec[:-2])/1_000_000
+      else:
+        return float(spec[:-1])
 
     # [-][HH]:[MM]:[SS.mmm...]
     sign = 1
@@ -321,15 +327,8 @@ class Video:
 
   def slow(self, start=0, end=None, amount=2):
     """Slow (or speed up) part of the video."""
-    if start == '' or start is None:
-      start = 0
-    else:
-      start = self.time_to_seconds(start)
-
-    if end == '' or end is None:
-      end = None
-    else:
-      end = self.time_to_seconds(end)
+    start = self.time_to_seconds(start, on_none=0)
+    end = self.time_to_seconds(end, on_none=None)
 
     if (end is not None and end == start) or amount == 1:
       # Nothing is affected
