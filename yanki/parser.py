@@ -78,16 +78,17 @@ class Config:
 
     parts = [p.strip() for p in slow_spec.split('*')]
     if len(parts) != 2:
-      self.slow = None
       raise ValueError(f"Invalid slow without '*': {slow_spec}")
 
     amount = float(parts[1])
+    if amount < 0.01:
+      raise ValueError(f'Cannot slow by less than 0.01: {slow_spec}')
 
     parts = [p.strip() for p in parts[0].split('-')]
     if len(parts) != 2:
-      self.slow = None
       raise ValueError(f"Invalid slow without '-': {slow_spec}")
 
+    # FIXME validate that end > start
     start = parts[0]
     if start == '':
       start = '0'

@@ -1,0 +1,6 @@
+# Error in test-decks/errors/slow-too-fast.deck, line 5: Cannot slow by less than 0.01: 0-1 *0.001
+title: Test deck::Errors::Slow too fast
+
+file://../good/media/hand-counting.mp4 too fast
+  slow: 0-1 *0.001
+
