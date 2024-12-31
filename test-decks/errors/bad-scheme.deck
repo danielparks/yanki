@@ -1,4 +1,4 @@
-# Error downloading 'scheme://foo': Unable to handle request: Unsupported url scheme: "scheme" (requests, urllib)
+# Error downloading 'scheme://foo': Unable to handle request: Unsupported url scheme: "scheme" (urllib)
 title: Test deck::Errors::Bad scheme
 
 scheme://foo foo
