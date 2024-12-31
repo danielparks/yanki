@@ -9,7 +9,6 @@ from http import server
 import logging
 import os
 from pathlib import PosixPath
-import re
 import subprocess
 import sys
 import textwrap
@@ -119,7 +118,7 @@ def cli():
                         open_video(args, [url], args.reprocess)
                     except BadURL as error:
                         print(f"Error: {error}")
-                    except yt_dlp.utils.DownloadError as error:
+                    except yt_dlp.utils.DownloadError:
                         # yt_dlp prints the error itself.
                         pass
             return 0
@@ -143,7 +142,7 @@ def cli():
         for deck in decks:
             if args.html:
                 print(htmlize_deck(deck, path_prefix=args.cache))
-            elif args.output == None:
+            elif args.output is None:
                 # Automatically figured out the path to save to.
                 deck.save_to_file()
             else:
@@ -236,7 +235,7 @@ def ensure_static_link(cache_path):
 
     try:
         os.symlink(web_files_path, static_path)
-    except FileExistsError as e:
+    except FileExistsError:
         if os.readlink(static_path) == web_files_path:
             # Symlink already exists
             return
@@ -281,7 +280,7 @@ def generate_index_html(deck_links):
 
     return textwrap.dedent(
         output
-        + f"""
+        + """
         </ol>
       </body>
     </html>
@@ -319,7 +318,7 @@ def htmlize_deck(deck, path_prefix=""):
 
     return textwrap.dedent(
         output
-        + f"""
+        + """
       </body>
     </html>
   """

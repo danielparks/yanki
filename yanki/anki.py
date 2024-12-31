@@ -3,10 +3,9 @@ import genanki
 import hashlib
 import logging
 import os
-import sys
 
 from yanki.field import Fragment, ImageFragment, VideoFragment, Field
-from yanki.parser import Config, NoteSpec, DeckSpec
+from yanki.parser import DeckSpec
 from yanki.video import Video
 
 LOGGER = logging.getLogger(__name__)

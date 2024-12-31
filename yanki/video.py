@@ -7,7 +7,6 @@ import os
 from os.path import getmtime
 import shlex
 import shutil
-import sys
 from urllib.parse import urlparse, parse_qs
 import yt_dlp
 
@@ -182,7 +181,7 @@ class Video:
 
         try:
             with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
-                self.logger.info(f"getting info")
+                self.logger.info("getting info")
                 return ydl.sanitize_info(
                     ydl.extract_info(self.url, download=False)
                 )
@@ -300,7 +299,7 @@ class Video:
         if end is not None:
             if end - start <= 0:
                 raise ValueError(
-                    f"Cannot clip video to 0 or fewer seconds "
+                    "Cannot clip video to 0 or fewer seconds "
                     "({repr(start_spec)} to {repr(end_spec)})"
                 )
 

@@ -1,4 +1,3 @@
-import pytest
 from yanki.video import url_to_id
 
 # From the following gist, modified to all use the same ID.

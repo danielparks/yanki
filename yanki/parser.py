@@ -1,7 +1,6 @@
-from copy import copy, deepcopy
-from dataclasses import dataclass, field
+from copy import deepcopy
+from dataclasses import dataclass
 import functools
-import sys
 
 from yanki.field import Fragment, Field
 
@@ -173,7 +172,7 @@ class NoteSpec:
         try:
             [video_url, *rest] = self.source.rstrip().split(maxsplit=1)
         except ValueError:
-            self.error(f"NoteSpec given empty source")
+            self.error("NoteSpec given empty source")
 
         return video_url, "".join(rest)  # rest is either [] or [str]
 

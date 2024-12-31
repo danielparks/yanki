@@ -1,4 +1,3 @@
-import pytest
 from yanki.field import URL_FINDER
 
 

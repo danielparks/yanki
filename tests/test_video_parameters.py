@@ -1,6 +1,5 @@
 import pytest
 from yanki.video import Video
-import sys
 
 
 def get_video(tmp_path):

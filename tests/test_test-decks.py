@@ -3,8 +3,7 @@ import os
 import pytest
 
 from yanki.anki import Deck
-from yanki.parser import DeckParser, SyntaxError
-from yanki.video import BadURL
+from yanki.parser import DeckParser
 
 
 @pytest.fixture(scope="session")
