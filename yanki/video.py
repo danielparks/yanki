@@ -19,7 +19,7 @@ YT_DLP_OPTIONS = {
 }
 
 STILL_FORMATS = frozenset(['png', 'jpeg', 'jpg'])
-TIME_FORMAT = '%0.06f'
+TIME_FORMAT = '%0.6f'
 FILENAME_ILLEGAL_CHARS = '/"[]'
 
 def chars_in(chars, input):
@@ -241,6 +241,9 @@ class Video:
   # Expects spec without whitespace
   def time_to_seconds(self, spec):
     """Converts a time spec like 1:01.02 or 4F to decimal seconds."""
+    if isinstance(spec, float) or isinstance(spec, int):
+      return float(spec)
+
     if spec.endswith('F') or spec.endswith('f'):
       # Frame number
       return int(spec[:-1])/self.get_fps()
@@ -281,9 +284,9 @@ class Video:
     if end_spec:
       end = self.time_to_seconds(end_spec)
       self.input_options['t'] = TIME_FORMAT % (end - start)
-      self._parameters['clip'] = (TIME_FORMAT % start, TIME_FORMAT % end)
+      self._parameters['clip'] = (start, end)
     else:
-      self._parameters['clip'] = (TIME_FORMAT % start, None)
+      self._parameters['clip'] = (start, None)
 
     if 'snapshot' in self._parameters:
       del self._parameters['snapshot']
@@ -323,13 +326,23 @@ class Video:
       if 'video' in self._parameters:
         del self._parameters['video']
 
-  def slow_filter(self, start='0', end=None, amount=2):
+  def slow_filter(self, start=0, end=None, amount=2):
     """Set a filter to slow (or speed up) part of the video."""
+    if start == '' or start is None:
+      start = 0
+    else:
+      start = self.time_to_seconds(start)
+
+    if end == '' or end is None:
+      end = None
+    else:
+      end = self.time_to_seconds(end)
+
     if (end is not None and end == start) or amount == 1:
       # Nothing is affected
       self._slow_filter = None
     else:
-      self._slow_filter = (start, end, amount)
+      self._slow_filter = (start, end, float(amount))
 
   def format(self, extension: str | None):
     if extension is None:
@@ -513,14 +526,8 @@ class Video:
     if self._slow_filter is None:
       return streams
 
+    # These are already floats (or None for end):
     (start, end, amount) = self._slow_filter
-    if start is None:
-      start = 0
-    else:
-      start = self.time_to_seconds(start)
-
-    if end is not None:
-      end = self.time_to_seconds(end)
 
     wants_video = self.wants_video()
     wants_audio = self.wants_audio()
