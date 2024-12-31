@@ -280,7 +280,7 @@ class Video:
 
     if end_spec:
       end = self.time_to_seconds(end_spec)
-      self.output_options['t'] = TIME_FORMAT % (end - start)
+      self.input_options['t'] = TIME_FORMAT % (end - start)
       self._parameters['clip'] = (TIME_FORMAT % start, TIME_FORMAT % end)
     else:
       self._parameters['clip'] = (TIME_FORMAT % start, None)
