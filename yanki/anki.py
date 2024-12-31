@@ -148,8 +148,10 @@ class Note:
     if self.spec.clip() is None:
       return '@0-'
     elif len(self.spec.clip()) in (1, 2):
-      clip = [self.video().time_to_seconds_str(t) for t in self.spec.clip()]
-      return f'@{"-".join(clip)}'
+      return '@' + '-'.join([
+        str(self.video().time_to_seconds(t, on_none=''))
+        for t in self.spec.clip()
+      ])
     else:
       raise ValueError(f'Invalid clip: {repr(self.spec.clip())}')
 

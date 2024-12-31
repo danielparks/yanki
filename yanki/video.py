@@ -19,7 +19,6 @@ YT_DLP_OPTIONS = {
 }
 
 STILL_FORMATS = frozenset(['png', 'jpeg', 'jpg'])
-TIME_FORMAT = '%0.6f'
 FILENAME_ILLEGAL_CHARS = '/"[]'
 
 def chars_in(chars, input):
@@ -239,8 +238,11 @@ class Video:
     raise RuntimeError(f'Could not get FPS for video: {self.raw_video()}')
 
   # Expects spec without whitespace
-  def time_to_seconds(self, spec):
+  def time_to_seconds(self, spec, on_none=None):
     """Converts a time spec like 1:01.02 or 4F to decimal seconds."""
+    if spec == '' or spec is None:
+      return on_none
+
     if isinstance(spec, float) or isinstance(spec, int):
       return float(spec)
 
@@ -263,36 +265,27 @@ class Video:
 
     return sign*sum
 
-  def time_to_seconds_str(self, spec, format=TIME_FORMAT):
-    """
-    Converts a time spec like 1:01.02 or 4F to decimal seconds as a string.
-
-    Handles spec being '' or None by returning '' in those cases.
-    """
-    if spec is None or spec == '':
-      return ''
-    else:
-      return format % self.time_to_seconds(spec)
-
   def clip(self, start_spec, end_spec):
-    if start_spec:
-      start = self.time_to_seconds(start_spec)
-      self.input_options['ss'] = TIME_FORMAT % start
-    else:
-      start = 0
+    start = self.time_to_seconds(start_spec, on_none=0)
+    end = self.time_to_seconds(end_spec, on_none=None)
 
-    if end_spec:
-      end = self.time_to_seconds(end_spec)
-      self.input_options['t'] = TIME_FORMAT % (end - start)
-      self._parameters['clip'] = (start, end)
-    else:
-      self._parameters['clip'] = (start, None)
+    if end is not None:
+      if end - start <= 0:
+        raise ValueError(f'Cannot clip video to 0 or fewer seconds '
+          '({repr(start_spec)} to {repr(end_spec)})')
 
+      self.input_options['t'] = (end - start)
+
+    # After the validation step.
+    if start:
+      self.input_options['ss'] = start
+
+    self._parameters['clip'] = (start, end)
     if 'snapshot' in self._parameters:
       del self._parameters['snapshot']
 
   def snapshot(self, time_spec):
-    self.input_options['ss'] = self.time_to_seconds_str(time_spec)
+    self.input_options['ss'] = self.time_to_seconds(time_spec, on_none='')
     self.output_options['frames:v'] = '1'
     self.output_options['q:v'] = '2' # JPEG quality
 
