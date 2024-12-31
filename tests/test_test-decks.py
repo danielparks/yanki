@@ -6,6 +6,10 @@ from yanki.anki import Deck
 from yanki.parser import DeckParser, SyntaxError
 from yanki.video import BadURL
 
+@pytest.fixture(scope="session")
+def cache_path(tmp_path_factory):
+    return tmp_path_factory.mktemp("cache")
+
 def find_deck_files(base_path):
   for (dir_path, _, file_names) in os.walk(base_path):
     for file_name in file_names:
@@ -17,10 +21,7 @@ def read_first_line(path):
     for line in input:
       return line
 
-def parse_deck(path, tmp_path):
-  cache_path = tmp_path/'cache'
-  cache_path.mkdir(parents=True, exist_ok=True)
-
+def parse_deck(path, cache_path):
   decks = [
     Deck(spec, cache_path=cache_path)
     for spec in DeckParser().parse_path(path)
@@ -29,20 +30,20 @@ def parse_deck(path, tmp_path):
   return decks[0]
 
 @pytest.mark.parametrize('path', find_deck_files('test-decks/errors'))
-def test_deck_error(path, tmp_path):
+def test_deck_error(path, cache_path):
   first_line = read_first_line(path)
   assert first_line[0:2] == '# '
   expected_message = first_line[2:-1] # Strip newline
 
   package = genanki.Package([])
   with pytest.raises(Exception) as error_info:
-    parse_deck(path, tmp_path).save_to_package(package)
+    parse_deck(path, cache_path).save_to_package(package)
 
   assert str(error_info.value) == expected_message
 
 @pytest.mark.parametrize('path', find_deck_files('test-decks/good'))
-def test_deck_success(path, tmp_path):
+def test_deck_success(path, cache_path):
   package = genanki.Package([])
-  deck = parse_deck(path, tmp_path)
+  deck = parse_deck(path, cache_path)
   assert len(deck.notes) > 0
   deck.save_to_package(package)

@@ -1,17 +1,17 @@
 title: Test deck::Config
 note_id: {deck_id} {text}
 
-file://./media/stopwatch.mp4 crop: in_h/4:in_h
+file://./media/stopwatch.mp4 more: should not do anything
   (testing config on same line as URL — should not apply config)
 
-file://./media/stopwatch.mp4 crop: in_h:in_h/4
-  crop: in_h:in_h/4
+file://./media/stopwatch.mp4 more: inside note
+  more: inside note
 
-crop: in_h/2:in_h
-
-file://./media/stopwatch.mp4
-  crop: in_h/2:in_h/2:0:100
-  "crop: in_h/2:in_h/2:0:100"
+more: deck config
 
 file://./media/stopwatch.mp4
-  deck config: crop: in_h/2:in_h
+  more: inside note (plus quoted)
+  "more: inside note (plus quoted)"
+
+file://./media/stopwatch.mp4
+  "more: deck config"
