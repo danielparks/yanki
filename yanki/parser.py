@@ -1,6 +1,7 @@
 from copy import deepcopy
 from dataclasses import dataclass
 import functools
+import io
 
 from yanki.field import Fragment, Field
 
@@ -18,7 +19,7 @@ NOTE_ID_VARIABLES = frozenset(
 )
 
 
-class SyntaxError(Exception):
+class DeckSyntaxError(Exception):
     def __init__(self, message: str, source_path: str, line_number: int):
         self.message = message
         self.source_path = source_path
@@ -222,7 +223,7 @@ class NoteSpec:
             return f'@{"-".join(self.clip())}'
 
     def error(self, message):
-        raise SyntaxError(message, self.source_path, self.line_number)
+        raise DeckSyntaxError(message, self.source_path, self.line_number)
 
 
 class DeckSpec:
@@ -266,7 +267,7 @@ class DeckParser:
             self._finish_note()
 
         if self.working_deck.config.title is None:
-            raise SyntaxError(
+            raise DeckSyntaxError(
                 "Does not contain title",
                 self.working_deck.source_path,
                 1,
@@ -281,26 +282,28 @@ class DeckParser:
         return finished_decks
 
     def error(self, message):
-        raise SyntaxError(message, self.source_path, self.line_number)
+        raise DeckSyntaxError(message, self.source_path, self.line_number)
+
+    def parse_file(self, file: io.TextIOBase):
+        for line_number, line in enumerate(file, start=1):
+            self.parse_line(file.name, line_number, line)
+            yield from self.flush_decks()
+
+        self.close()
+        yield from self.flush_decks()
+
+    def parse_path(self, path):
+        with open(path, "r", encoding="UTF-8") as file:
+            yield from self.parse_file(file)
 
     def parse_input(self, input):
         """Takes FileInput as parameter."""
         for line in input:
             self.parse_line(input.filename(), input.filelineno(), line)
-            for deck_spec in self.flush_decks():
-                yield deck_spec
+            yield from self.flush_decks()
 
         self.close()
-        for deck_spec in self.flush_decks():
-            yield deck_spec
-
-    def parse_path(self, path):
-        with open(path, "r", encoding="UTF-8") as input:
-            for number, line in enumerate(input):
-                self.parse_line(path, number + 1, line)
-
-        self.close()
-        return self.flush_decks()
+        yield from self.flush_decks()
 
     def parse_line(self, path, line_number, line):
         if not self.working_deck or self.source_path != path:

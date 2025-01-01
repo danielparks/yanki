@@ -1,7 +1,7 @@
-import argparse
+import click
 import colorlog
+from dataclasses import dataclass
 import ffmpeg
-import fileinput
 import functools
 import genanki
 import html
@@ -14,79 +14,87 @@ import sys
 import textwrap
 import yt_dlp
 
-from yanki.parser import DeckParser, SyntaxError
+
+from yanki.parser import DeckParser, DeckSyntaxError
 from yanki.anki import Deck
 from yanki.video import Video, BadURL
 
 LOGGER = logging.getLogger(__name__)
 
 
-def cli():
-    parser = argparse.ArgumentParser(
-        prog="yanki",
-        description="Build Anki decks from text files containing YouTube URLs.",
-    )
-    parser.add_argument("-v", "--verbose", action="count", default=0)
-    parser.add_argument(
-        "--cache",
-        default=PosixPath("~/.cache/yanki/").expanduser(),
-        help="Path to cache for downloads and media files.",
-    )
-    parser.add_argument(
-        "--html",
-        action="store_true",
-        help="Produce HTML summary of deck rather than .apkg file.",
-    )
-    parser.add_argument(
-        "--serve-http",
-        action="store_true",
-        help="Serve HTML summary of deck on localhost:8000.",
-    )
-    parser.add_argument(
-        "--dump-videos",
-        action="store_true",
-        help="Make sure the videos from the deck are downloaded to the cache and "
-        + "display the path to each one.",
-    )
-    parser.add_argument(
-        "--list-notes",
-        help="Print information about every note in the passed format, e.g. "
-        '"{note_id} {text}".',
-    )
-    parser.add_argument(
-        "--open-video",
-        action="store_true",
-        help="Instead of processing deck files, download the passed video URL, "
-        + "process it, and pass it to the `open` command.",
-    )
-    parser.add_argument(
-        "--open-videos-from-file",
-        action="store_true",
-        help="Instead of processing deck files, read files containing video URLs "
-        + "from the arguments or stdin, download the videos, process them, and "
-        + "pass them to the `open` command. You may use this without arguments "
-        + "if you want to enter the URLs and have them opened after each line.",
-    )
-    parser.add_argument(
-        "-o",
-        "--output",
-        help="Path to save decks to. Defaults to saving indivdual decks to their "
-        + "own files named after their sources, but with the extension .apkg.",
-    )
-    parser.add_argument(
-        "--reprocess",
-        action="store_true",
-        help="Reprocess videos whether or not anything has changed.",
-    )
-    parser.add_argument("path", nargs="*")
-    args = parser.parse_args()
+@dataclass
+class GlobalOptions:
+    cache_path: str
+    reprocess: bool
+
+
+# Only used to pass debug logging status out to the exception handler.
+global log_debug
+log_debug = False
+
+
+def main():
+    try:
+        cli.main(standalone_mode=False)
+    except click.Abort:
+        sys.exit("Abort!")
+    except click.ClickException as error:
+        error.show()
+        return error.exit_code
+    except ffmpeg.Error as error:
+        global log_debug
+        if log_debug:
+            sys.stderr.buffer.write(error.stderr)
+            sys.stderr.write("\n")
+            raise
+        else:
+            # FFmpeg errors contain a bytestring of ffmpeg’s output.
+            sys.stderr.buffer.write(error.stderr)
+            sys.exit("\nError in ffmpeg. See above.")
+    except BadURL as error:
+        sys.exit(error)
+    except DeckSyntaxError as error:
+        sys.exit(error)
+    except KeyboardInterrupt:
+        return 130
+
+
+@click.group()
+@click.option("-v", "--verbose", count=True)
+@click.option(
+    "--cache",
+    default=PosixPath("~/.cache/yanki/").expanduser(),
+    show_default=True,
+    envvar="YANKI_CACHE",
+    show_envvar=True,
+    type=click.Path(
+        exists=False,
+        file_okay=False,
+        writable=True,
+        readable=True,
+        executable=True,
+    ),
+    help="Path to cache for downloads and media files.",
+)
+@click.option(
+    "--reprocess/--no-reprocess",
+    help="Reprocess videos whether or not anything has changed.",
+)
+@click.pass_context
+def cli(ctx, verbose, cache, reprocess):
+    """Build Anki decks from text files containing YouTube URLs."""
+    ctx.obj = GlobalOptions(cache_path=cache, reprocess=reprocess)
 
     # Configure logging
-    if args.verbose > 2:
-        sys.exit("--verbose or -v may only be specified up to 2 times.")
-    elif args.verbose == 2:
+    if verbose > 2:
+        raise click.UsageError(
+            "--verbose or -v may only be specified up to 2 times."
+        )
+    elif verbose == 2:
+        global log_debug
+        log_debug = True
         level = logging.DEBUG
-    elif args.verbose == 1:
+    elif verbose == 1:
         level = logging.INFO
     else:
         level = logging.WARN
@@ -107,94 +115,95 @@ def cli():
 
     logging.basicConfig(level=level, handlers=[handler])
 
-    try:
-        os.makedirs(args.cache, exist_ok=True)
+    os.makedirs(cache, exist_ok=True)
 
-        if args.open_videos_from_file:
-            for url in fileinput.input(files=args.path, encoding="utf-8"):
-                url = url.strip()
-                if url:
-                    try:
-                        open_video(args, [url], args.reprocess)
-                    except BadURL as error:
-                        print(f"Error: {error}")
-                    except yt_dlp.utils.DownloadError:
-                        # yt_dlp prints the error itself.
-                        pass
-            return 0
-        elif args.open_video:
-            return open_video(args, args.path, args.reprocess)
 
-        input = fileinput.input(files=args.path, encoding="utf-8")
-        decks = [
-            Deck(spec, cache_path=args.cache, reprocess=args.reprocess)
-            for spec in DeckParser().parse_input(input)
-        ]
+@cli.command()
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.option(
+    "-o",
+    "--output",
+    type=click.Path(exists=False, dir_okay=False, writable=True),
+    help="Path to save decks to. Defaults to saving indivdual decks to their "
+    "own files named after their sources, but with the extension .apkg.",
+)
+@click.pass_obj
+def build(globals, decks, output):
+    """Build an Anki package from deck files."""
+    package = genanki.Package([])  # Only used with --output
 
-        if args.serve_http:
-            return serve_http(args, decks)
-        elif args.dump_videos:
-            return dump_videos(args, decks)
-        elif args.list_notes is not None:
-            return list_notes(args, decks)
-
-        package = genanki.Package([])  # Only used with --output
-        for deck in decks:
-            if args.html:
-                print(htmlize_deck(deck, path_prefix=args.cache))
-            elif args.output is None:
-                # Automatically figured out the path to save to.
-                deck.save_to_file()
-            else:
-                deck.save_to_package(package)
-
-        if args.output:
-            package.write_to_file(args.output)
-            LOGGER.info(f"Wrote decks to file {args.output}")
-
-        return 0
-    except ffmpeg.Error as error:
-        if level == logging.DEBUG:
-            sys.stderr.buffer.write(error.stderr)
-            sys.stderr.write("\n")
-            raise
+    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+        if output is None:
+            # Automatically figures out the path to save to.
+            deck.save_to_file()
         else:
-            # FFmpeg errors contain a bytestring of ffmpeg’s output.
-            sys.stderr.buffer.write(error.stderr)
-            sys.exit("\nError in ffmpeg. See above.")
-    except BadURL as error:
-        sys.exit(error)
-    except SyntaxError as error:
-        sys.exit(error)
-    except KeyboardInterrupt:
-        return 130
+            deck.save_to_package(package)
+
+    if output:
+        package.write_to_file(output)
+        LOGGER.info(f"Wrote decks to file {output}")
 
 
-def open_video(args, urls, reprocess=False):
-    for url in urls:
-        video = Video(url, cache_path=args.cache, reprocess=reprocess)
-        open_in_app([video.processed_video()])
+@cli.command()
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.option(
+    "-f",
+    "--format",
+    default="{url} {clip} {direction} {text}",
+    show_default=True,
+    type=click.STRING,
+    help="The format to output in.",
+)
+@click.pass_obj
+def list_notes(globals, decks, format):
+    """Print information about every note in the passed format."""
+    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+        for note in deck.notes.values():
+            print(
+                ### FIXME document variables
+                format.format(
+                    note_id=note.note_id(deck_id=deck.id()),
+                    deck=deck.title(),
+                    deck_id=deck.id(),
+                    **note.variables(),
+                )
+            )
 
 
-def open_in_app(arguments):
-    # FIXME only works on macOS and Linux; should handle command not found.
-    if os.uname().sysname == "Darwin":
-        subprocess.run(["open", *arguments], check=True)
-    elif os.uname().sysname == "Linux":
-        subprocess.run(["xdg-open", *arguments], check=True)
-    else:
-        raise RuntimeError(
-            f"Don’t know how to open {repr(arguments)} on this platform."
-        )
+@cli.command()
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.pass_obj
+def dump_videos(globals, decks):
+    """
+    Make sure the videos from the deck are downloaded to the cache and display
+    the path to each one.
+    """
+    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+        print(f"title: {deck.title()}")
+        for id, note in deck.notes.items():
+            print(f'{", ".join(note.media_paths())} {note.text()}')
 
 
-def serve_http(args, decks):
+@cli.command()
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.pass_obj
+def to_html(globals, decks):
+    """Display decks as HTML on stdout."""
+    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+        print(htmlize_deck(deck, path_prefix=globals.cache_path))
+
+
+@cli.command()
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.pass_obj
+def serve_http(globals, decks):
+    """Serve HTML summary of deck on localhost:8000."""
     deck_links = []
 
     html_written = set()
-    for deck in decks:
+    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
         file_name = deck.title().replace("/", "--") + ".html"
-        html_path = os.path.join(args.cache, file_name)
+        html_path = os.path.join(globals.cache_path, file_name)
         if html_path in html_written:
             raise KeyError(
                 f"Duplicate path after munging deck title: {html_path}"
@@ -208,19 +217,76 @@ def serve_http(args, decks):
 
     # FIXME serve html from memory so that you can run multiple copies of
     # this tool at once.
-    index_path = os.path.join(args.cache, "index.html")
+    index_path = os.path.join(globals.cache_path, "index.html")
     with open(index_path, "w", encoding="utf-8") as file:
         file.write(generate_index_html(deck_links))
 
     # FIXME it would be great to just serve this directory as /static without
     # needing the symlink.
-    ensure_static_link(args.cache)
+    ensure_static_link(globals.cache_path)
 
     print("Starting HTTP server on http://localhost:8000/")
     Handler = functools.partial(
-        server.SimpleHTTPRequestHandler, directory=args.cache
+        server.SimpleHTTPRequestHandler, directory=globals.cache_path
     )
     server.HTTPServer(("", 8000), Handler).serve_forever()
+
+
+@cli.command()
+@click.argument("urls", nargs=-1, type=click.STRING)
+@click.pass_obj
+def open_videos(globals, urls):
+    """Download and process the video URLs, then open them with `open`."""
+    for url in urls:
+        video = Video(
+            url, cache_path=globals.cache_path, reprocess=globals.reprocess
+        )
+        open_in_app([video.processed_video()])
+
+
+@cli.command()
+@click.argument("files", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.pass_obj
+def open_videos_from_file(globals, files):
+    """
+    Read files containing video URLs from the arguments or stdin, download the
+    videos, process them, and pass them to the `open` command.
+
+    You may use this without arguments if you want to enter the URLs and have
+    them opened after each line.
+    """
+    if len(files) == 0:
+        files = [sys.stdin]
+
+    for file in files:
+        for url in file:
+            url = url.strip()
+            if not url:
+                next
+
+            try:
+                video = Video(
+                    url,
+                    cache_path=globals.cache_path,
+                    reprocess=globals.reprocess,
+                )
+                open_in_app([video.processed_video()])
+            except BadURL as error:
+                print(f"Error: {error}")
+            except yt_dlp.utils.DownloadError:
+                # yt_dlp prints the error itself.
+                pass
+
+
+def read_deck_specs(files):
+    parser = DeckParser()
+    for file in files:
+        yield from parser.parse_file(file)
+
+
+def read_decks(files, cache_path, reprocess=False):
+    for spec in read_deck_specs(files):
+        yield Deck(spec, cache_path=cache_path, reprocess=reprocess)
 
 
 def path_to_web_files():
@@ -329,22 +395,13 @@ def h(s):
     return html.escape(s)
 
 
-def dump_videos(args, decks):
-    for deck in decks:
-        print(f"title: {deck.title()}")
-        for id, note in deck.notes.items():
-            print(f'{", ".join(note.media_paths())} {note.text()}')
-
-
-def list_notes(args, decks):
-    format = args.list_notes
-    for deck in decks:
-        for note in deck.notes.values():
-            print(
-                format.format(
-                    note_id=note.note_id(deck_id=deck.id()),
-                    deck=deck.title(),
-                    deck_id=deck.id(),
-                    **note.variables(),
-                )
-            )
+def open_in_app(arguments):
+    # FIXME only works on macOS and Linux; should handle command not found.
+    if os.uname().sysname == "Darwin":
+        subprocess.run(["open", *arguments], check=True)
+    elif os.uname().sysname == "Linux":
+        subprocess.run(["xdg-open", *arguments], check=True)
+    else:
+        raise RuntimeError(
+            f"Don’t know how to open {repr(arguments)} on this platform."
+        )

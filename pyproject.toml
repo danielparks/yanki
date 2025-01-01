@@ -6,7 +6,7 @@ authors = ["Daniel Parks <dp+git@oxidized.org>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-yanki = "yanki.cli:cli"
+yanki = "yanki.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -15,6 +15,7 @@ genanki = "^0.13.1"
 docutils = "^0.21.2"
 ffmpeg-python = "^0.2.0"
 colorlog = "^6.9.0"
+click = "^8.1.8"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3"
