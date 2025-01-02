@@ -1,3 +1,5 @@
+import asyncio
+from dataclasses import dataclass
 import functools
 import genanki
 import hashlib
@@ -5,7 +7,7 @@ import logging
 import os
 
 from yanki.field import Fragment, ImageFragment, VideoFragment, Field
-from yanki.parser import DeckSpec
+from yanki.parser import DeckSpec, NoteSpec
 from yanki.video import Video
 
 LOGGER = logging.getLogger(__name__)
@@ -92,99 +94,26 @@ class Note:
             f"Note[{self.spec.provisional_note_id()}]"
         )
 
-    def media_paths(self):
-        for field in self.content_fields():
-            for path in field.media_paths():
-                yield path
+    async def finalize(self, deck_id):
+        video = self.video()
+        media_path = await video.processed_video_async()
 
-    def content_fields(self):
-        return [self.text_field(), self.more_field(), self.media_field()]
-
-    @functools.cache
-    def text_field(self):
-        return Field([Fragment(self.text())])
-
-    @functools.cache
-    def more_field(self):
-        return self.spec.config.more
-
-    @functools.cache
-    def media_field(self):
-        return Field([self.media_fragment()])
-
-    def add_to_deck(self, deck):
-        media_to_text = text_to_media = ""
-        if self.spec.direction() == "<->":
-            text_to_media = "1"
-            media_to_text = "1"
-        elif self.spec.direction() == "<-":
-            text_to_media = "1"
-        elif self.spec.direction() == "->":
-            media_to_text = "1"
+        if video.is_still() or video.output_ext() == "gif":
+            media_fragment = ImageFragment(media_path)
         else:
-            raise ValueError(f"Invalid direction {repr(self.spec.direction())}")
+            media_fragment = VideoFragment(media_path)
 
-        deck.add_note(
-            genanki.Note(
-                model=YANKI_CARD_MODEL,
-                fields=[
-                    self.text_field().render_anki(),
-                    self.more_field().render_anki(),
-                    self.media_field().render_anki(),
-                    text_to_media,
-                    media_to_text,
-                ],
-                guid=genanki.guid_for(self.note_id(deck.deck_id)),
-                tags=self.spec.config.tags,
-            )
+        note_id = self.note_id(deck_id)
+        return FinalNote(
+            note_id=note_id,
+            deck_id=str(deck_id),
+            media_fragment=media_fragment,
+            text=self.text(),
+            spec=self.spec,
+            clip_spec=self.clip_spec(),
+            video=video,
+            logger=logging.getLogger(f"FinalNote[{note_id}]"),
         )
-
-    # {deck_id} is just a placeholder. To get the real note_id, you need to have
-    # a deck_id.
-    def note_id(self, deck_id="{deck_id}"):
-        return self.spec.config.generate_note_id(
-            deck_id=deck_id,
-            **self.variables(),
-        )
-
-    def variables(self):
-        return {
-            "url": self.spec.video_url(),
-            "clip": self.clip_spec(),
-            "direction": self.spec.direction(),
-            ### FIXME should these be renamed to clarify that they’re normalized
-            ### versions of the input text?
-            "media": " ".join([self.spec.video_url(), self.clip_spec()]),
-            "text": self.text(),
-        }
-
-    @functools.cache
-    def clip_spec(self):
-        if self.spec.clip() is None:
-            return "@0-"
-        elif len(self.spec.clip()) in (1, 2):
-            return "@" + "-".join(
-                [
-                    str(self.video().time_to_seconds(t, on_none=""))
-                    for t in self.spec.clip()
-                ]
-            )
-        else:
-            raise ValueError(f"Invalid clip: {repr(self.spec.clip())}")
-
-    def text(self):
-        if self.spec.text() == "":
-            return self.video().title()
-        else:
-            return self.spec.text()
-
-    @functools.cache
-    def media_fragment(self):
-        path = self.video().processed_video()
-        if self.video().is_still() or self.video().output_ext() == "gif":
-            return ImageFragment(path)
-        else:
-            return VideoFragment(path)
 
     @functools.cache
     def video(self):
@@ -229,6 +158,140 @@ class Note:
 
         return video
 
+    # {deck_id} is just a placeholder. To get the real note_id, you need to have
+    # a deck_id.
+    def note_id(self, deck_id="{deck_id}"):
+        return self.spec.config.generate_note_id(
+            deck_id=deck_id,
+            **self.variables(),
+        )
+
+    def variables(self):
+        return {
+            "url": self.spec.video_url(),
+            "clip": self.clip_spec(),
+            "direction": self.spec.direction(),
+            ### FIXME should these be renamed to clarify that they’re normalized
+            ### versions of the input text?
+            "media": f"{self.spec.video_url()} {self.clip_spec()}",
+            "text": self.text(),
+        }
+
+    @functools.cache
+    def clip_spec(self):
+        if self.spec.clip() is None:
+            return "@0-"
+        elif len(self.spec.clip()) in (1, 2):
+            return "@" + "-".join(
+                [
+                    str(self.video().time_to_seconds(t, on_none=""))
+                    for t in self.spec.clip()
+                ]
+            )
+        else:
+            raise ValueError(f"Invalid clip: {repr(self.spec.clip())}")
+
+    def text(self):
+        if self.spec.text() == "":
+            return self.video().title()
+        else:
+            return self.spec.text()
+
+
+@dataclass(frozen=True)
+class FinalNote:
+    deck_id: str
+    note_id: str
+    media_fragment: Fragment
+    text: str
+    spec: NoteSpec
+    clip_spec: str
+    video: Video
+    logger: logging.Logger
+
+    def media_paths(self):
+        for field in self.content_fields():
+            for path in field.media_paths():
+                yield path
+
+    def content_fields(self):
+        return [self.text_field(), self.more_field(), self.media_field()]
+
+    def text_field(self):
+        return Field([Fragment(self.text)])
+
+    def more_field(self):
+        return self.spec.config.more
+
+    def media_field(self):
+        return Field([self.media_fragment])
+
+    def genanki_note(self):
+        media_to_text = text_to_media = ""
+        if self.spec.direction() == "<->":
+            text_to_media = "1"
+            media_to_text = "1"
+        elif self.spec.direction() == "<-":
+            text_to_media = "1"
+        elif self.spec.direction() == "->":
+            media_to_text = "1"
+        else:
+            raise ValueError(f"Invalid direction {repr(self.spec.direction())}")
+
+        return genanki.Note(
+            model=YANKI_CARD_MODEL,
+            fields=[
+                self.text_field().render_anki(),
+                self.more_field().render_anki(),
+                self.media_field().render_anki(),
+                text_to_media,
+                media_to_text,
+            ],
+            guid=genanki.guid_for(self.note_id),
+            tags=self.spec.config.tags,
+        )
+
+
+@dataclass(frozen=True)
+class FinalDeck:
+    deck_id: int
+    title: str
+    source_path: str
+    spec: NoteSpec
+    notes_by_id: dict
+
+    def notes(self):
+        return self.notes_by_id.values()
+
+    def save_to_package(self, package):
+        deck = genanki.Deck(self.deck_id, self.title)
+        LOGGER.debug(f"New deck [{self.deck_id}]: {self.title}")
+
+        for note in self.notes():
+            deck.add_note(note.genanki_note())
+            LOGGER.debug(
+                f"Added note {repr(note.note_id)}: {note.content_fields()}"
+            )
+
+            for media_path in note.media_paths():
+                package.media_files.append(media_path)
+                LOGGER.debug(
+                    f"Added media file for {repr(note.note_id)}: {media_path}"
+                )
+
+        package.decks.append(deck)
+
+    def save_to_file(self, path=None):
+        if not path:
+            path = os.path.splitext(self.source_path)[0] + ".apkg"
+
+        package = genanki.Package([])
+        self.save_to_package(package)
+        package.write_to_file(path)
+        LOGGER.info(f"Wrote deck {self.title} to file {path}")
+
+        return path
+
 
 class Deck:
     def __init__(
@@ -237,11 +300,29 @@ class Deck:
         self.spec = spec
         self.cache_path = cache_path
         self.reprocess = reprocess
-        self.notes = dict()
+        self.notes_by_id = dict()
         for note_spec in spec.note_specs:
             self.add_note(
                 Note(note_spec, cache_path=cache_path, reprocess=reprocess)
             )
+
+    async def finalize(self):
+        async def finalize_note(collection, note, deck_id):
+            final_note = await note.finalize(deck_id)
+            collection[final_note.note_id] = final_note
+
+        final_notes = dict()
+        async with asyncio.TaskGroup() as group:
+            for note in self.notes():
+                group.create_task(finalize_note(final_notes, note, self.id()))
+
+        return FinalDeck(
+            deck_id=self.id(),
+            title=self.title(),
+            source_path=self.source_path(),
+            spec=self.spec,
+            notes_by_id=final_notes,
+        )
 
     def id(self):
         return name_to_id(self.title())
@@ -252,37 +333,11 @@ class Deck:
     def source_path(self):
         return self.spec.source_path
 
+    def notes(self):
+        return self.notes_by_id.values()
+
     def add_note(self, note):
         id = note.note_id()
-        if id in self.notes:
+        if id in self.notes_by_id:
             note.spec.error(f"Note with id {repr(id)} already exists in deck")
-        self.notes[id] = note
-
-    def save_to_package(self, package):
-        deck = genanki.Deck(self.id(), self.title())
-        LOGGER.debug(f"New deck [{deck.deck_id}]: {self.title()}")
-
-        for note in self.notes.values():
-            note.add_to_deck(deck)
-            LOGGER.debug(
-                f"Added note {repr(note.note_id())}: {note.content_fields()}"
-            )
-
-            for media_path in note.media_paths():
-                package.media_files.append(media_path)
-                LOGGER.debug(
-                    f"Added media file for {repr(note.note_id())}: {media_path}"
-                )
-
-        package.decks.append(deck)
-
-    def save_to_file(self, path=None):
-        if not path:
-            path = os.path.splitext(self.source_path())[0] + ".apkg"
-
-        package = genanki.Package([])
-        self.save_to_package(package)
-        package.write_to_file(path)
-        LOGGER.info(f"Wrote deck {self.title()} to file {path}")
-
-        return path
+        self.notes_by_id[id] = note

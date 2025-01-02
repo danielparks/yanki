@@ -1,7 +1,7 @@
 import click
+import asyncio
 import colorlog
 from dataclasses import dataclass
-import ffmpeg
 import functools
 import genanki
 import html
@@ -20,7 +20,7 @@ import yt_dlp
 
 from yanki.parser import DeckParser, DeckSyntaxError
 from yanki.anki import Deck
-from yanki.video import Video, BadURL
+from yanki.video import Video, BadURL, FFmpegError
 
 LOGGER = logging.getLogger(__name__)
 
@@ -28,7 +28,7 @@ LOGGER = logging.getLogger(__name__)
 @dataclass
 class GlobalOptions:
     cache_path: str
-    reprocess: bool
+    reprocess: bool = False
 
 
 # Only used to pass debug logging status out to the exception handler.
@@ -44,7 +44,7 @@ def main():
     except click.ClickException as error:
         error.show()
         return error.exit_code
-    except ffmpeg.Error as error:
+    except FFmpegError as error:
         global log_debug
         if log_debug:
             sys.stderr.buffer.write(error.stderr)
@@ -135,7 +135,7 @@ def build(options, decks, output):
     """Build an Anki package from deck files."""
     package = genanki.Package([])  # Only used with --output
 
-    for deck in read_decks(decks, options.cache_path, options.reprocess):
+    for deck in read_final_decks(decks, options):
         if output is None:
             # Automatically figures out the path to save to.
             deck.save_to_file()
@@ -160,8 +160,8 @@ def build(options, decks, output):
 @click.pass_obj
 def list_notes(options, decks, format):
     """Print information about every note in the passed format."""
-    for deck in read_decks(decks, options.cache_path, options.reprocess):
-        for note in deck.notes.values():
+    for deck in read_decks(decks, options):
+        for note in deck.notes():
             print(
                 ### FIXME document variables
                 format.format(
@@ -181,10 +181,10 @@ def dump_videos(options, decks):
     Make sure the videos from the deck are downloaded to the cache and display
     the path to each one.
     """
-    for deck in read_decks(decks, options.cache_path, options.reprocess):
-        print(f"title: {deck.title()}")
-        for id, note in deck.notes.items():
-            print(f'{", ".join(note.media_paths())} {note.text()}')
+    for deck in read_final_decks(decks, options):
+        print(f"title: {deck.title}")
+        for note in deck.notes():
+            print(f'{", ".join(note.media_paths())} {note.text}')
 
 
 @cli.command()
@@ -192,7 +192,7 @@ def dump_videos(options, decks):
 @click.pass_obj
 def to_html(options, decks):
     """Display decks as HTML on stdout."""
-    for deck in read_decks(decks, options.cache_path, options.reprocess):
+    for deck in read_final_decks(decks, options):
         print(htmlize_deck(deck, path_prefix=options.cache_path))
 
 
@@ -228,8 +228,8 @@ def serve_http(options, decks, bind, run_seconds):
 
     deck_links = []
     html_written = set()
-    for deck in read_decks(decks, options.cache_path, options.reprocess):
-        file_name = deck.title().replace("/", "--") + ".html"
+    for deck in read_final_decks(decks, options):
+        file_name = deck.title.replace("/", "--") + ".html"
         html_path = os.path.join(options.cache_path, file_name)
         if html_path in html_written:
             raise KeyError(
@@ -332,9 +332,27 @@ def read_deck_specs(files):
         yield from parser.parse_file(file)
 
 
-def read_decks(files, cache_path, reprocess=False):
+def read_decks(files, options: GlobalOptions):
     for spec in read_deck_specs(files):
-        yield Deck(spec, cache_path=cache_path, reprocess=reprocess)
+        yield Deck(
+            spec, cache_path=options.cache_path, reprocess=options.reprocess
+        )
+
+
+async def read_final_decks_async(files, options: GlobalOptions):
+    async def finalize_deck(collection, deck):
+        collection.append(await deck.finalize())
+
+    final_decks = []
+    async with asyncio.TaskGroup() as group:
+        for deck in read_decks(files, options):
+            group.create_task(finalize_deck(final_decks, deck))
+
+    return final_decks
+
+
+def read_final_decks(files, options: GlobalOptions):
+    return asyncio.run(read_final_decks_async(files, options))
 
 
 def path_to_web_files():
@@ -385,11 +403,11 @@ def generate_index_html(deck_links):
         <ol>"""
 
     for file_name, deck in deck_links:
-        if deck.title() is None:
-            sys.exit(f"Deck {repr(deck.source_path())} does not contain title")
+        if deck.title is None:
+            sys.exit(f"Deck {repr(deck.source_path)} does not contain title")
 
         output += f"""
-          <li><a href="./{h(file_name)}">{h(deck.title())}</a></li>"""
+          <li><a href="./{h(file_name)}">{h(deck.title)}</a></li>"""
 
     return textwrap.dedent(
         output
@@ -401,21 +419,21 @@ def generate_index_html(deck_links):
 
 
 def htmlize_deck(deck, path_prefix=""):
-    if deck.title() is None:
-        sys.exit(f"Deck {repr(deck.source_path())} does not contain title")
+    if deck.title is None:
+        sys.exit(f"Deck {repr(deck.source_path)} does not contain title")
 
     output = f"""
     <!DOCTYPE html>
     <html>
       <head>
-        <title>{h(deck.title())}</title>
+        <title>{h(deck.title)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url('general.css')}">
       </head>
       <body>
-        <h1>{h(deck.title())}</h1>"""
+        <h1>{h(deck.title)}</h1>"""
 
-    for note in deck.notes.values():
+    for note in deck.notes():
         more_html = note.more_field().render_html(path_prefix)
         if more_html != "":
             more_html = f'<div class="more">{more_html}</div>'
@@ -424,7 +442,7 @@ def htmlize_deck(deck, path_prefix=""):
           <h3>{note.text_field().render_html(path_prefix)}</h3>
           {note.media_field().render_html(path_prefix)}
           {more_html}
-          <p class="note_id">{h(note.note_id())}</p>
+          <p class="note_id">{h(note.note_id)}</p>
         </div>"""
 
     return textwrap.dedent(
