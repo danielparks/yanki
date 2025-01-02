@@ -128,11 +128,11 @@ def cli(ctx, verbose, cache, reprocess):
     "own files named after their sources, but with the extension .apkg.",
 )
 @click.pass_obj
-def build(globals, decks, output):
+def build(options, decks, output):
     """Build an Anki package from deck files."""
     package = genanki.Package([])  # Only used with --output
 
-    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+    for deck in read_decks(decks, options.cache_path, options.reprocess):
         if output is None:
             # Automatically figures out the path to save to.
             deck.save_to_file()
@@ -155,9 +155,9 @@ def build(globals, decks, output):
     help="The format to output in.",
 )
 @click.pass_obj
-def list_notes(globals, decks, format):
+def list_notes(options, decks, format):
     """Print information about every note in the passed format."""
-    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+    for deck in read_decks(decks, options.cache_path, options.reprocess):
         for note in deck.notes.values():
             print(
                 ### FIXME document variables
@@ -173,12 +173,12 @@ def list_notes(globals, decks, format):
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
 @click.pass_obj
-def dump_videos(globals, decks):
+def dump_videos(options, decks):
     """
     Make sure the videos from the deck are downloaded to the cache and display
     the path to each one.
     """
-    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+    for deck in read_decks(decks, options.cache_path, options.reprocess):
         print(f"title: {deck.title()}")
         for id, note in deck.notes.items():
             print(f'{", ".join(note.media_paths())} {note.text()}')
@@ -187,23 +187,23 @@ def dump_videos(globals, decks):
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
 @click.pass_obj
-def to_html(globals, decks):
+def to_html(options, decks):
     """Display decks as HTML on stdout."""
-    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
-        print(htmlize_deck(deck, path_prefix=globals.cache_path))
+    for deck in read_decks(decks, options.cache_path, options.reprocess):
+        print(htmlize_deck(deck, path_prefix=options.cache_path))
 
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
 @click.pass_obj
-def serve_http(globals, decks):
+def serve_http(options, decks):
     """Serve HTML summary of deck on localhost:8000."""
     deck_links = []
 
     html_written = set()
-    for deck in read_decks(decks, globals.cache_path, globals.reprocess):
+    for deck in read_decks(decks, options.cache_path, options.reprocess):
         file_name = deck.title().replace("/", "--") + ".html"
-        html_path = os.path.join(globals.cache_path, file_name)
+        html_path = os.path.join(options.cache_path, file_name)
         if html_path in html_written:
             raise KeyError(
                 f"Duplicate path after munging deck title: {html_path}"
@@ -217,17 +217,17 @@ def serve_http(globals, decks):
 
     # FIXME serve html from memory so that you can run multiple copies of
     # this tool at once.
-    index_path = os.path.join(globals.cache_path, "index.html")
+    index_path = os.path.join(options.cache_path, "index.html")
     with open(index_path, "w", encoding="utf-8") as file:
         file.write(generate_index_html(deck_links))
 
     # FIXME it would be great to just serve this directory as /static without
     # needing the symlink.
-    ensure_static_link(globals.cache_path)
+    ensure_static_link(options.cache_path)
 
     print("Starting HTTP server on http://localhost:8000/")
     Handler = functools.partial(
-        server.SimpleHTTPRequestHandler, directory=globals.cache_path
+        server.SimpleHTTPRequestHandler, directory=options.cache_path
     )
     server.HTTPServer(("", 8000), Handler).serve_forever()
 
@@ -235,11 +235,11 @@ def serve_http(globals, decks):
 @cli.command()
 @click.argument("urls", nargs=-1, type=click.STRING)
 @click.pass_obj
-def open_videos(globals, urls):
+def open_videos(options, urls):
     """Download and process the video URLs, then open them with `open`."""
     for url in urls:
         video = Video(
-            url, cache_path=globals.cache_path, reprocess=globals.reprocess
+            url, cache_path=options.cache_path, reprocess=options.reprocess
         )
         open_in_app([video.processed_video()])
 
@@ -247,7 +247,7 @@ def open_videos(globals, urls):
 @cli.command()
 @click.argument("files", nargs=-1, type=click.File("r", encoding="UTF-8"))
 @click.pass_obj
-def open_videos_from_file(globals, files):
+def open_videos_from_file(options, files):
     """
     Read files containing video URLs from the arguments or stdin, download the
     videos, process them, and pass them to the `open` command.
@@ -267,8 +267,8 @@ def open_videos_from_file(globals, files):
             try:
                 video = Video(
                     url,
-                    cache_path=globals.cache_path,
-                    reprocess=globals.reprocess,
+                    cache_path=options.cache_path,
+                    reprocess=options.reprocess,
                 )
                 open_in_app([video.processed_video()])
             except BadURL as error:
