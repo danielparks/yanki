@@ -2,8 +2,7 @@ import genanki
 import os
 import pytest
 
-from yanki.anki import Deck
-from yanki.parser import DeckParser
+from yanki.cli import read_final_decks, GlobalOptions
 
 
 @pytest.fixture(scope="session")
@@ -25,12 +24,11 @@ def read_first_line(path):
 
 
 def parse_deck(path, cache_path):
-    decks = [
-        Deck(spec, cache_path=cache_path)
-        for spec in DeckParser().parse_path(path)
-    ]
-    assert len(decks) == 1
-    return decks[0]
+    options = GlobalOptions(cache_path=cache_path)
+    with open(path, "r", encoding="UTF-8") as file:
+        decks = read_final_decks([file], options)
+        assert len(decks) == 1
+        return decks[0]
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/errors"))
@@ -40,15 +38,18 @@ def test_deck_error(path, cache_path):
     expected_message = first_line[2:-1]  # Strip newline
 
     package = genanki.Package([])
-    with pytest.raises(Exception) as error_info:
+    with pytest.raises(ExceptionGroup) as error_info:
         parse_deck(path, cache_path).save_to_package(package)
 
-    assert str(error_info.value) == expected_message
+    exception = error_info.value.exceptions[0]
+    while isinstance(exception, ExceptionGroup):
+        exception = exception.exceptions[0]
+    assert str(exception) == expected_message
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/good"))
 def test_deck_success(path, cache_path):
     package = genanki.Package([])
     deck = parse_deck(path, cache_path)
-    assert len(deck.notes) > 0
+    assert len(deck.notes()) > 0
     deck.save_to_package(package)
