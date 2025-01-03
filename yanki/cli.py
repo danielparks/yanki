@@ -85,6 +85,8 @@ def cli(ctx, verbose, cache, reprocess):
     """Build Anki decks from text files containing YouTube URLs."""
     ctx.obj = GlobalOptions(cache_path=cache, reprocess=reprocess)
 
+    os.makedirs(cache, exist_ok=True)
+
     # Configure logging
     if verbose > 2:
         raise click.UsageError(
@@ -114,8 +116,6 @@ def cli(ctx, verbose, cache, reprocess):
     )
 
     logging.basicConfig(level=level, handlers=[handler])
-
-    os.makedirs(cache, exist_ok=True)
 
 
 @cli.command()
