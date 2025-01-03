@@ -83,6 +83,8 @@ https://www.youtube.com/watch?v=M4AFC4eEjlQ @4848F-4881F 93
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @4902F-4938F 94
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @4952F-4986F 95
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @5005F-5034F 96
+# 0-1F doesn’t slow the first frame (issue #16).
+  slow: 0-2F *10
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @5049F-5089F 97
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @5103F-5140F 98
 https://www.youtube.com/watch?v=M4AFC4eEjlQ @5155F-5199F 99
