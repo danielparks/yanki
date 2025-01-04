@@ -8,7 +8,7 @@ import os
 
 from yanki.field import Fragment, ImageFragment, VideoFragment, Field
 from yanki.parser import DeckSpec, NoteSpec
-from yanki.video import Video
+from yanki.video import Video, VideoOptions
 
 LOGGER = logging.getLogger(__name__)
 
@@ -86,10 +86,9 @@ def name_to_id(name):
 
 
 class Note:
-    def __init__(self, spec, cache_path, reprocess=False):
+    def __init__(self, spec, video_options: VideoOptions):
         self.spec = spec
-        self.cache_path = cache_path
-        self.reprocess = reprocess
+        self.video_options = video_options
         self.logger = logging.getLogger(
             f"Note[{self.spec.provisional_note_id()}]"
         )
@@ -122,8 +121,7 @@ class Note:
             video = Video(
                 self.spec.video_url(),
                 working_dir=deck_dir,
-                cache_path=self.cache_path,
-                reprocess=self.reprocess,
+                options=self.video_options,
                 logger=self.logger,
             )
             video.audio(self.spec.config.audio)
@@ -295,16 +293,15 @@ class FinalDeck:
 
 class Deck:
     def __init__(
-        self, spec: DeckSpec, cache_path: str, reprocess: bool = False
+        self,
+        spec: DeckSpec,
+        video_options: VideoOptions,
     ):
         self.spec = spec
-        self.cache_path = cache_path
-        self.reprocess = reprocess
+        self.video_options = video_options
         self.notes_by_id = dict()
         for note_spec in spec.note_specs:
-            self.add_note(
-                Note(note_spec, cache_path=cache_path, reprocess=reprocess)
-            )
+            self.add_note(Note(note_spec, video_options=video_options))
 
     async def finalize(self):
         async def finalize_note(collection, note, deck_id):

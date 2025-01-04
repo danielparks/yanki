@@ -1,5 +1,5 @@
 import pytest
-from yanki.video import Video
+from yanki.video import Video, VideoOptions
 
 
 def get_video(tmp_path):
@@ -8,7 +8,7 @@ def get_video(tmp_path):
 
     return Video(
         "file://./test-decks/good/media/stopwatch.mp4",
-        cache_path=cache_path,
+        options=VideoOptions(cache_path=cache_path),
     )
 
 

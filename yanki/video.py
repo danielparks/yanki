@@ -1,10 +1,11 @@
 import asyncio
+from dataclasses import dataclass
 import ffmpeg
 import hashlib
 import json
 import logging
 import math
-import multiprocessing
+from multiprocessing import cpu_count
 import os
 from os.path import getmtime
 import shlex
@@ -22,9 +23,6 @@ YT_DLP_OPTIONS = {
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
 FILENAME_ILLEGAL_CHARS = '/"[]'
 
-# FIXME? make this not a global?
-FFMPEG_SEMPHORE = asyncio.Semaphore(multiprocessing.cpu_count())
-
 
 def chars_in(chars, input):
     return [char for char in chars if char in input]
@@ -41,6 +39,15 @@ class FFmpegError(RuntimeError):
         self.command = command
         self.stderr = stderr
         self.exit_code = exit_code
+
+
+@dataclass
+class VideoOptions:
+    """Options for processing videos."""
+
+    cache_path: str
+    reprocess: bool = False
+    semaphore: asyncio.Semaphore = asyncio.Semaphore(cpu_count())
 
 
 # Example YouTube video URLs:
@@ -132,16 +139,18 @@ class Video:
     def __init__(
         self,
         url,
+        options,
         working_dir=".",
-        cache_path=".",
-        reprocess=False,
         logger=LOGGER,
     ):
         self.url = url
         self.working_dir = working_dir
-        self.cache_path = cache_path
-        self.reprocess = reprocess
+        self.options = options
         self.logger = logger
+
+        # self.options is read only, and this will be set to false after
+        # reprocessing so we don’t do it over and over.
+        self.reprocess = options.reprocess
 
         self.id = url_to_id(url)
         invalid = chars_in(FILENAME_ILLEGAL_CHARS, self.id)
@@ -161,7 +170,7 @@ class Video:
         self._parameters = {}
 
     def cached(self, filename):
-        return os.path.join(self.cache_path, filename)
+        return os.path.join(self.options.cache_path, filename)
 
     def info_cache_path(self):
         return self.cached(f"info_{self.id}.json")
@@ -552,7 +561,7 @@ class Video:
         command = stream.compile()
         self.logger.debug(f"Run {shlex.join(command)}")
 
-        async with FFMPEG_SEMPHORE:
+        async with self.options.semaphore:
             process = await asyncio.create_subprocess_exec(
                 *command,
                 stdin=asyncio.subprocess.DEVNULL,

@@ -1,12 +1,12 @@
 import click
 import asyncio
 import colorlog
-from dataclasses import dataclass
 import functools
 import genanki
 import html
 from http import server
 import logging
+from multiprocessing import cpu_count
 import os
 from pathlib import PosixPath
 import signal
@@ -21,15 +21,9 @@ import yt_dlp
 
 from yanki.parser import DeckParser, DeckSyntaxError
 from yanki.anki import Deck
-from yanki.video import Video, BadURL, FFmpegError
+from yanki.video import Video, BadURL, FFmpegError, VideoOptions
 
 LOGGER = logging.getLogger(__name__)
-
-
-@dataclass
-class GlobalOptions:
-    cache_path: str
-    reprocess: bool = False
 
 
 # Only used to pass debug logging status out to the exception handler.
@@ -96,10 +90,28 @@ def main():
     "--reprocess/--no-reprocess",
     help="Reprocess videos whether or not anything has changed.",
 )
+@click.option(
+    "-j",
+    "--concurrency",
+    default=cpu_count(),
+    show_default=True,
+    envvar="YANKI_CONCURRENCY",
+    show_envvar=True,
+    type=click.INT,
+    help="How many parallel runs of ffmpeg to allow at once.",
+)
 @click.pass_context
-def cli(ctx, verbose, cache, reprocess):
+def cli(ctx, verbose, cache, reprocess, concurrency):
     """Build Anki decks from text files containing YouTube URLs."""
-    ctx.obj = GlobalOptions(cache_path=cache, reprocess=reprocess)
+
+    if concurrency < 1:
+        raise click.UsageError("--concurrency must be >= 1.")
+
+    ctx.obj = VideoOptions(
+        cache_path=cache,
+        reprocess=reprocess,
+        semaphore=asyncio.Semaphore(concurrency),
+    )
 
     os.makedirs(cache, exist_ok=True)
 
@@ -300,7 +312,8 @@ def open_videos(options, urls):
     """Download and process the video URLs, then open them with `open`."""
     for url in urls:
         video = Video(
-            url, cache_path=options.cache_path, reprocess=options.reprocess
+            url,
+            options=options,
         )
         open_in_app([video.processed_video()])
 
@@ -328,8 +341,7 @@ def open_videos_from_file(options, files):
             try:
                 video = Video(
                     url,
-                    cache_path=options.cache_path,
-                    reprocess=options.reprocess,
+                    options=options,
                 )
                 open_in_app([video.processed_video()])
             except BadURL as error:
@@ -354,14 +366,12 @@ def read_deck_specs(files):
         yield from parser.parse_file(file)
 
 
-def read_decks(files, options: GlobalOptions):
+def read_decks(files, options: VideoOptions):
     for spec in read_deck_specs(files):
-        yield Deck(
-            spec, cache_path=options.cache_path, reprocess=options.reprocess
-        )
+        yield Deck(spec, video_options=options)
 
 
-async def read_final_decks_async(files, options: GlobalOptions):
+async def read_final_decks_async(files, options: VideoOptions):
     async def finalize_deck(collection, deck):
         collection.append(await deck.finalize())
 
@@ -373,7 +383,7 @@ async def read_final_decks_async(files, options: GlobalOptions):
     return final_decks
 
 
-def read_final_decks(files, options: GlobalOptions):
+def read_final_decks(files, options: VideoOptions):
     return asyncio.run(read_final_decks_async(files, options))
 
 
