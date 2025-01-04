@@ -1,9 +1,5 @@
-import genanki
 import os
 import pytest
-
-from yanki.anki import Deck
-from yanki.parser import DeckParser
 
 
 def find_deck_files(base_path):
@@ -19,31 +15,31 @@ def read_first_line(path):
             return line
 
 
-def parse_deck(path, cache_path):
-    decks = [
-        Deck(spec, cache_path=cache_path)
-        for spec in DeckParser().parse_path(path)
-    ]
-    assert len(decks) == 1
-    return decks[0]
-
-
 @pytest.mark.parametrize("path", find_deck_files("test-decks/errors"))
-def test_deck_error(path, cache_path):
+def test_deck_error(path, yanki):
     first_line = read_first_line(path)
-    assert first_line[0:2] == "# "
-    expected_message = first_line[2:-1]  # Strip newline
+    if first_line.startswith("#ends: "):
+        expected_message = first_line.removeprefix("#ends: ")
+    else:
+        assert first_line[0:2] == "# "
+        expected_message = first_line[2:]
 
-    package = genanki.Package([])
-    with pytest.raises(Exception) as error_info:
-        parse_deck(path, cache_path).save_to_package(package)
+    result = yanki.run("to-html", path)
+    assert result.returncode == 1
+    assert result.stdout == ""
 
-    assert str(error_info.value) == expected_message
+    if first_line.startswith("#ends: "):
+        assert result.stderr.endswith(expected_message)
+    else:
+        assert result.stderr == expected_message
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/good"))
-def test_deck_success(path, cache_path):
-    package = genanki.Package([])
-    deck = parse_deck(path, cache_path)
-    assert len(deck.notes) > 0
-    deck.save_to_package(package)
+def test_deck_success(path, yanki):
+    result = yanki.run("to-html", path)
+    assert result.returncode == 0
+    assert result.stderr == ""
+
+    assert result.stdout.startswith("<!DOCTYPE html>\n")
+    assert result.stdout.endswith("</html>\n")
+    assert result.stdout.count('<div class="note">') >= 1
