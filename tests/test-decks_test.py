@@ -6,11 +6,6 @@ from yanki.anki import Deck
 from yanki.parser import DeckParser
 
 
-@pytest.fixture(scope="session")
-def cache_path(tmp_path_factory):
-    return tmp_path_factory.mktemp("cache")
-
-
 def find_deck_files(base_path):
     for dir_path, _, file_names in os.walk(base_path):
         for file_name in file_names:
