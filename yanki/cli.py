@@ -14,6 +14,7 @@ import subprocess
 import sys
 import textwrap
 import threading
+import traceback
 import time
 import yt_dlp
 
@@ -37,29 +38,41 @@ log_debug = False
 
 
 def main():
+    exit_code = 0
     try:
         cli.main(standalone_mode=False)
-    except click.Abort:
+    except* click.Abort:
         sys.exit("Abort!")
-    except click.ClickException as error:
-        error.show()
-        return error.exit_code
-    except FFmpegError as error:
+    except* KeyboardInterrupt:
+        sys.exit(130)
+    except* click.ClickException as group:
+        exit_code = 1
+        for error in find_errors(group):
+            error.show()
+            exit_code = error.exit_code
+    except* FFmpegError as group:
         global log_debug
-        if log_debug:
-            sys.stderr.buffer.write(error.stderr)
-            sys.stderr.write("\n")
-            raise
-        else:
-            # FFmpeg errors contain a bytestring of ffmpeg’s output.
-            sys.stderr.buffer.write(error.stderr)
-            sys.exit("\nError in ffmpeg. See above.")
-    except BadURL as error:
-        sys.exit(error)
-    except DeckSyntaxError as error:
-        sys.exit(error)
-    except KeyboardInterrupt:
-        return 130
+        exit_code = 1
+
+        for error in find_errors(group):
+            if log_debug:
+                sys.stderr.buffer.write(error.stderr)
+                sys.stderr.write("\n")
+                traceback.print_exception(error, file=sys.stderr)
+            else:
+                # FFmpeg errors contain a bytestring of ffmpeg’s output.
+                sys.stderr.buffer.write(error.stderr)
+                print("\nError in ffmpeg. See above.", file=sys.stderr)
+    except* BadURL as group:
+        exit_code = 1
+        for error in find_errors(group):
+            print(error, file=sys.stderr)
+    except* DeckSyntaxError as group:
+        exit_code = 1
+        for error in find_errors(group):
+            print(error, file=sys.stderr)
+
+    return exit_code
 
 
 @click.group()
@@ -324,6 +337,15 @@ def open_videos_from_file(options, files):
             except yt_dlp.utils.DownloadError:
                 # yt_dlp prints the error itself.
                 pass
+
+
+def find_errors(group: ExceptionGroup):
+    """Get actual exceptions out of nested exception groups."""
+    for error in group.exceptions:
+        if isinstance(error, ExceptionGroup):
+            yield from find_errors(error)
+        else:
+            yield error
 
 
 def read_deck_specs(files):
