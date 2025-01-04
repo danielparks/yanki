@@ -382,8 +382,7 @@ def generate_index_html(deck_links):
       <body>
         <h1>Decks</h1>
 
-        <ol>
-  """
+        <ol>"""
 
     for file_name, deck in deck_links:
         if deck.title() is None:
@@ -397,8 +396,7 @@ def generate_index_html(deck_links):
         + """
         </ol>
       </body>
-    </html>
-  """
+    </html>"""
     ).lstrip()
 
 
@@ -415,8 +413,7 @@ def htmlize_deck(deck, path_prefix=""):
         <link rel="stylesheet" href="{static_url('general.css')}">
       </head>
       <body>
-        <h1>{h(deck.title())}</h1>
-  """
+        <h1>{h(deck.title())}</h1>"""
 
     for note in deck.notes.values():
         more_html = note.more_field().render_html(path_prefix)
@@ -434,8 +431,7 @@ def htmlize_deck(deck, path_prefix=""):
         output
         + """
       </body>
-    </html>
-  """
+    </html>"""
     ).lstrip()
 
 

@@ -74,10 +74,9 @@ def test_yanki_to_html(yanki, reference_deck_path):
     result = yanki.run("to-html", reference_deck_path)
     assert result.returncode == 0
     assert result.stderr == ""
-
-    stdout = result.stdout.strip()
-    assert stdout.startswith("<!DOCTYPE html>")
-    assert stdout.endswith("</html>")
+    assert result.stdout.startswith("<!DOCTYPE html>\n")
+    assert result.stdout.endswith("</html>\n")
+    assert result.stdout.count('<div class="note">') == 1
 
 
 def test_yanki_list_notes(yanki, reference_deck_path):
