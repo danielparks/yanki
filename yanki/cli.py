@@ -9,9 +9,12 @@ from http import server
 import logging
 import os
 from pathlib import PosixPath
+import signal
 import subprocess
 import sys
 import textwrap
+import threading
+import time
 import yt_dlp
 
 
@@ -195,11 +198,35 @@ def to_html(options, decks):
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.option(
+    "-b",
+    "--bind",
+    default="localhost:8000",
+    show_default=True,
+    type=click.STRING,
+    help="The address and porrt to bind to. NOTE: this is not appropriate for"
+    " serving production loads.",
+)
+@click.option(
+    "--run-seconds",
+    type=click.FLOAT,
+    help="How many seconds to run the server for. May be decimal. If not"
+    " specified, the server will run until killed by a signal.",
+)
 @click.pass_obj
-def serve_http(options, decks):
+def serve_http(options, decks, bind, run_seconds):
     """Serve HTML summary of deck on localhost:8000."""
-    deck_links = []
+    bind_parts = bind.split(":")
+    if len(bind_parts) != 2:
+        raise click.UsageError("--bind expects a value in address:port format.")
+    [address, port] = bind_parts
 
+    try:
+        port = int(port)
+    except ValueError:
+        raise click.UsageError("--bind expects an integer port.")
+
+    deck_links = []
     html_written = set()
     for deck in read_decks(decks, options.cache_path, options.reprocess):
         file_name = deck.title().replace("/", "--") + ".html"
@@ -225,11 +252,32 @@ def serve_http(options, decks):
     # needing the symlink.
     ensure_static_link(options.cache_path)
 
-    print("Starting HTTP server on http://localhost:8000/")
     Handler = functools.partial(
         server.SimpleHTTPRequestHandler, directory=options.cache_path
     )
-    server.HTTPServer(("", 8000), Handler).serve_forever()
+    httpd = server.HTTPServer((address, port), Handler)
+
+    print(f"Starting HTTP server on http://{bind}/")
+    if run_seconds is None:
+        httpd.serve_forever()
+    else:
+        threading.Thread(target=httpd.serve_forever).start()
+        time.sleep(run_seconds)
+
+        # httpd.shutdown() hangs if start() hasn’t been called.
+        shutdown = threading.Thread(target=httpd.shutdown)
+        shutdown.start()
+
+        # Wait for shutdown to take
+        for _ in range(10):
+            time.sleep(0.1)
+            if not shutdown.is_alive():
+                return
+
+        print("httpd.shutdown() took more than 1 second; terminating.")
+        os.kill(os.getpid(), signal.SIGTERM)
+        time.sleep(0.1)
+        os.kill(os.getpid(), signal.SIGKILL)
 
 
 @cli.command()
