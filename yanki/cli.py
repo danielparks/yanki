@@ -389,7 +389,7 @@ def generate_index_html(deck_links):
             sys.exit(f"Deck {repr(deck.source_path())} does not contain title")
 
         output += f"""
-          <li><a href="{h(file_name)}">{h(deck.title())}</a></li>"""
+          <li><a href="./{h(file_name)}">{h(deck.title())}</a></li>"""
 
     return textwrap.dedent(
         output
