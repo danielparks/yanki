@@ -1,8 +1,11 @@
+import asyncio
+from dataclasses import dataclass
 import ffmpeg
 import hashlib
 import json
 import logging
 import math
+from multiprocessing import cpu_count
 import os
 from os.path import getmtime
 import shlex
@@ -27,6 +30,24 @@ def chars_in(chars, input):
 
 class BadURL(ValueError):
     pass
+
+
+class FFmpegError(RuntimeError):
+    def __init__(self, command, stderr, exit_code):
+        super(FFmpegError, self).__init__("Error running ffmpeg")
+        self.add_note(f"Command run: {shlex.join(command)}")
+        self.command = command
+        self.stderr = stderr
+        self.exit_code = exit_code
+
+
+@dataclass
+class VideoOptions:
+    """Options for processing videos."""
+
+    cache_path: str
+    reprocess: bool = False
+    semaphore: asyncio.Semaphore = asyncio.Semaphore(cpu_count())
 
 
 # Example YouTube video URLs:
@@ -118,16 +139,18 @@ class Video:
     def __init__(
         self,
         url,
+        options,
         working_dir=".",
-        cache_path=".",
-        reprocess=False,
         logger=LOGGER,
     ):
         self.url = url
         self.working_dir = working_dir
-        self.cache_path = cache_path
-        self.reprocess = reprocess
+        self.options = options
         self.logger = logger
+
+        # self.options is read only, and this will be set to false after
+        # reprocessing so we don’t do it over and over.
+        self.reprocess = options.reprocess
 
         self.id = url_to_id(url)
         invalid = chars_in(FILENAME_ILLEGAL_CHARS, self.id)
@@ -147,7 +170,7 @@ class Video:
         self._parameters = {}
 
     def cached(self, filename):
-        return os.path.join(self.cache_path, filename)
+        return os.path.join(self.options.cache_path, filename)
 
     def info_cache_path(self):
         return self.cached(f"info_{self.id}.json")
@@ -472,6 +495,13 @@ class Video:
         if not self.reprocess and file_not_empty(output_path):
             return output_path
 
+        return asyncio.run(self.processed_video_async())
+
+    async def processed_video_async(self):
+        output_path = self.processed_video_cache_path()
+        if not self.reprocess and file_not_empty(output_path):
+            return output_path
+
         # Only reprocess once per run.
         self.reprocess = False
 
@@ -520,15 +550,29 @@ class Video:
             *output_streams, output_path, **self.ffmpeg_output_options()
         ).overwrite_output()
 
-        command = shlex.join(stream.compile())
-        self.logger.debug(f"Run {command}")
-        try:
-            stream.run(quiet=True)
-        except ffmpeg.Error as error:
-            error.add_note(f"Ran: {command}")
-            raise
+        await self.run_async(stream)
 
         return output_path
+
+    def run(self, stream):
+        asyncio.run(self.run_async(stream))
+
+    async def run_async(self, stream):
+        command = stream.compile()
+        self.logger.debug(f"Run {shlex.join(command)}")
+
+        async with self.options.semaphore:
+            process = await asyncio.create_subprocess_exec(
+                *command,
+                stdin=asyncio.subprocess.DEVNULL,
+                stdout=asyncio.subprocess.DEVNULL,
+                stderr=asyncio.subprocess.PIPE,
+            )
+
+            stdout, stderr = await process.communicate()
+
+        if process.returncode:
+            raise FFmpegError(command, stderr, process.returncode)
 
     # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
     def _try_apply_slow(self, streams):

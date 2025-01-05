@@ -30,6 +30,9 @@ script_launch_mode = "subprocess"
 [tool.ruff]
 line-length = 80
 
+[project]
+requires-python = ">= 3.11"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
