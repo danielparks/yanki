@@ -1,7 +1,14 @@
 import inspect
 import io
+import os
+import psutil
 import pytest
 import shutil
+import signal
+import threading
+import time
+import urllib.error
+from urllib.request import urlopen
 
 
 REFERENCE_URL = "file://first.png"
@@ -64,10 +71,42 @@ def test_yanki_build(yanki, reference_deck_path):
 
 
 def test_yanki_serve_http(yanki, reference_deck_path):
-    result = yanki.run("serve-http", "--run-seconds", "0", reference_deck_path)
-    assert result.returncode == 0
-    assert result.stdout == "Starting HTTP server on http://localhost:8000/\n"
-    assert result.stderr == ""
+    # Need to add result to an object to get it out of thread:
+    results = []
+
+    def run_yanki_serve_http():
+        results.append(
+            yanki.run("serve-http", "--run-seconds", "5", reference_deck_path)
+        )
+
+    httpd = threading.Thread(target=run_yanki_serve_http)
+    httpd.start()
+
+    start = time.time()
+    html = None
+    while time.time() - start < 5:  # 5 second timeout
+        time.sleep(0.1)
+        try:
+            html = urlopen("http://localhost:8000/").read()
+            break
+        except urllib.error.URLError as error:
+            if not isinstance(error.reason, ConnectionRefusedError):
+                # Not connection refused.
+                raise
+
+    for child in psutil.Process().children(recursive=False):
+        # KLUDGE: Assume that yanki is the only subprocess.
+        os.kill(child.pid, signal.SIGTERM)
+
+    httpd.join()
+
+    assert html.startswith(b"<!DOCTYPE html>\n")
+
+    assert len(results) == 1
+    result = results[0]
+    assert result.returncode == -signal.SIGTERM
+    # FIXME We don’t always get the “Starting HTTP server” on stdout
+    assert "GET / HTTP" in result.stderr
 
 
 def test_yanki_to_html(yanki, reference_deck_path):
