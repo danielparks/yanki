@@ -13,6 +13,8 @@ import shutil
 from urllib.parse import urlparse, parse_qs
 import yt_dlp
 
+from yanki.errors import ExpectedError
+
 LOGGER = logging.getLogger(__name__)
 
 YT_DLP_OPTIONS = {
@@ -28,7 +30,7 @@ def chars_in(chars, input):
     return [char for char in chars if char in input]
 
 
-class BadURL(ValueError):
+class BadURL(ExpectedError):
     pass
 
 

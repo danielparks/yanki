@@ -8,6 +8,7 @@ import logging
 from multiprocessing import cpu_count
 import os
 from pathlib import PosixPath
+import shlex
 import signal
 import subprocess
 import sys
@@ -17,8 +18,9 @@ import time
 import yt_dlp
 
 
+from yanki.errors import ExpectedError
 from yanki.html import htmlize_deck, generate_index_html, ensure_static_link
-from yanki.parser import DeckParser, DeckSyntaxError
+from yanki.parser import DeckParser
 from yanki.anki import Deck
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
 
@@ -56,11 +58,7 @@ def main():
                 # FFmpeg errors contain a bytestring of ffmpeg’s output.
                 sys.stderr.buffer.write(error.stderr)
                 print("\nError in ffmpeg. See above.", file=sys.stderr)
-    except* BadURL as group:
-        exit_code = 1
-        for error in find_errors(group):
-            print(error, file=sys.stderr)
-    except* DeckSyntaxError as group:
+    except* ExpectedError as group:
         exit_code = 1
         for error in find_errors(group):
             print(error, file=sys.stderr)
@@ -389,10 +387,23 @@ def read_final_decks(files, options: VideoOptions):
 def open_in_app(arguments):
     # FIXME only works on macOS and Linux; should handle command not found.
     if os.uname().sysname == "Darwin":
-        subprocess.run(["open", *arguments], check=True)
+        command = "open"
     elif os.uname().sysname == "Linux":
-        subprocess.run(["xdg-open", *arguments], check=True)
+        command = "xdg-open"
     else:
-        raise RuntimeError(
+        raise ExpectedError(
             f"Don’t know how to open {repr(arguments)} on this platform."
+        )
+
+    command_line = [command, *arguments]
+    result = subprocess.run(
+        command_line,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        encoding="UTF-8",
+    )
+
+    if result.returncode != 0:
+        raise ExpectedError(
+            f"Error running {shlex.join(command_line)}: {result.stdout}"
         )
