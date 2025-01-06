@@ -221,6 +221,12 @@ def to_html(options, decks):
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
 @click.option(
+    "-o",
+    "--open/--no-open",
+    "do_open",
+    help="Open the web site with `open` after starting the server.",
+)
+@click.option(
     "-b",
     "--bind",
     default="localhost:8000",
@@ -236,7 +242,7 @@ def to_html(options, decks):
     " specified, the server will run until killed by a signal.",
 )
 @click.pass_obj
-def serve_http(options, decks, bind, run_seconds):
+def serve_http(options, decks, do_open, bind, run_seconds):
     """Serve HTML summary of deck on localhost:8000."""
     bind_parts = bind.split(":")
     if len(bind_parts) != 2:
@@ -280,11 +286,18 @@ def serve_http(options, decks, bind, run_seconds):
     httpd = server.HTTPServer((address, port), Handler)
 
     print(f"Starting HTTP server on http://{bind}/")
-    if run_seconds is None:
-        httpd.serve_forever()
-    else:
-        threading.Thread(target=httpd.serve_forever).start()
-        time.sleep(run_seconds)
+    threading.Thread(target=httpd.serve_forever).start()
+    start = time.time()
+
+    if do_open:
+        time.sleep(0.5)
+        open_in_app([f"http://localhost:{port}/"])
+
+    if run_seconds is not None:
+        # --open forces the minimum run_seconds to be 0.5.
+        run_seconds -= time.time() - start
+        if run_seconds > 0:
+            time.sleep(run_seconds)
 
         # httpd.shutdown() hangs if start() hasn’t been called.
         shutdown = threading.Thread(target=httpd.shutdown)
