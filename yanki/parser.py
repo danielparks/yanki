@@ -249,13 +249,14 @@ class DeckParser:
         """Reset working deck data."""
         self.working_deck = None
         self.source_path = None
-        self.line_number = None
+        self.line_number = 0
         self._reset_note()
 
     def _reset_note(self):
         """Reset working note data."""
         self.note_source = []
         self.note_config = None
+        self.note_line_number = None
 
     def open(self, path):
         """Open a deck file for parsing."""
@@ -347,6 +348,8 @@ class DeckParser:
 
         line = self._check_for_config(line, self.working_deck.config)
         if line is not None:
+            if len(self.note_source) == 0:
+                self.note_line_number = self.line_number
             self.note_source.append(line)
 
     def _check_for_config(self, line, config):
@@ -397,7 +400,7 @@ class DeckParser:
                 # FIXME is self.note_config is None possible?
                 config=self.note_config or deepcopy(self.working_deck.config),
                 source_path=self.source_path,
-                line_number=self.line_number,
+                line_number=self.note_line_number,
                 source="".join(self.note_source),
             )
         )
