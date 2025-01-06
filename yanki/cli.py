@@ -8,6 +8,7 @@ import logging
 from multiprocessing import cpu_count
 import os
 from pathlib import PosixPath
+import shlex
 import signal
 import subprocess
 import sys
@@ -17,8 +18,9 @@ import time
 import yt_dlp
 
 
+from yanki.errors import ExpectedError
 from yanki.html import htmlize_deck, generate_index_html, ensure_static_link
-from yanki.parser import DeckParser, DeckSyntaxError
+from yanki.parser import DeckParser
 from yanki.anki import Deck
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
 
@@ -56,11 +58,7 @@ def main():
                 # FFmpeg errors contain a bytestring of ffmpeg’s output.
                 sys.stderr.buffer.write(error.stderr)
                 print("\nError in ffmpeg. See above.", file=sys.stderr)
-    except* BadURL as group:
-        exit_code = 1
-        for error in find_errors(group):
-            print(error, file=sys.stderr)
-    except* DeckSyntaxError as group:
+    except* ExpectedError as group:
         exit_code = 1
         for error in find_errors(group):
             print(error, file=sys.stderr)
@@ -223,6 +221,12 @@ def to_html(options, decks):
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
 @click.option(
+    "-o",
+    "--open/--no-open",
+    "do_open",
+    help="Open the web site with `open` after starting the server.",
+)
+@click.option(
     "-b",
     "--bind",
     default="localhost:8000",
@@ -238,7 +242,7 @@ def to_html(options, decks):
     " specified, the server will run until killed by a signal.",
 )
 @click.pass_obj
-def serve_http(options, decks, bind, run_seconds):
+def serve_http(options, decks, do_open, bind, run_seconds):
     """Serve HTML summary of deck on localhost:8000."""
     bind_parts = bind.split(":")
     if len(bind_parts) != 2:
@@ -282,11 +286,18 @@ def serve_http(options, decks, bind, run_seconds):
     httpd = server.HTTPServer((address, port), Handler)
 
     print(f"Starting HTTP server on http://{bind}/")
-    if run_seconds is None:
-        httpd.serve_forever()
-    else:
-        threading.Thread(target=httpd.serve_forever).start()
-        time.sleep(run_seconds)
+    threading.Thread(target=httpd.serve_forever).start()
+    start = time.time()
+
+    if do_open:
+        time.sleep(0.5)
+        open_in_app([f"http://localhost:{port}/"])
+
+    if run_seconds is not None:
+        # --open forces the minimum run_seconds to be 0.5.
+        run_seconds -= time.time() - start
+        if run_seconds > 0:
+            time.sleep(run_seconds)
 
         # httpd.shutdown() hangs if start() hasn’t been called.
         shutdown = threading.Thread(target=httpd.shutdown)
@@ -389,10 +400,23 @@ def read_final_decks(files, options: VideoOptions):
 def open_in_app(arguments):
     # FIXME only works on macOS and Linux; should handle command not found.
     if os.uname().sysname == "Darwin":
-        subprocess.run(["open", *arguments], check=True)
+        command = "open"
     elif os.uname().sysname == "Linux":
-        subprocess.run(["xdg-open", *arguments], check=True)
+        command = "xdg-open"
     else:
-        raise RuntimeError(
+        raise ExpectedError(
             f"Don’t know how to open {repr(arguments)} on this platform."
+        )
+
+    command_line = [command, *arguments]
+    result = subprocess.run(
+        command_line,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        encoding="UTF-8",
+    )
+
+    if result.returncode != 0:
+        raise ExpectedError(
+            f"Error running {shlex.join(command_line)}: {result.stdout}"
         )

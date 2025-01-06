@@ -3,6 +3,7 @@ from dataclasses import dataclass
 import functools
 import io
 
+from yanki.errors import ExpectedError
 from yanki.field import Fragment, Field
 
 # Valid variables in note_id format. Used to validate that our code uses the
@@ -21,7 +22,7 @@ NOTE_ID_VARIABLES = frozenset(
 )
 
 
-class DeckSyntaxError(Exception):
+class DeckSyntaxError(ExpectedError):
     def __init__(self, message: str, source_path: str, line_number: int):
         self.message = message
         self.source_path = source_path
