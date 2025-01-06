@@ -173,6 +173,8 @@ class Note:
             ### versions of the input text?
             "media": f"{self.spec.video_url()} {self.clip_spec()}",
             "text": self.text(),
+            "line_number": self.spec.line_number,
+            "source_path": self.spec.source_path,
         }
 
     @functools.cache

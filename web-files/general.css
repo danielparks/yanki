@@ -12,6 +12,20 @@ img, video {
   height: 300px;
 }
 
-.note_id {
-  font-family: monospace;
+.metadata {
+  border: none;
+  margin: 1em 0;
+}
+
+.metadata td, .metadata th {
+  border: none;
+  text-align: left;
+}
+
+.metadata th {
+  font-weight: normal;
+}
+
+.note_id td, .source td span {
+  font-weight: bold;
 }

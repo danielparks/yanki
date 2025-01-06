@@ -59,7 +59,19 @@ def htmlize_deck(deck, path_prefix=""):
           <h3>{note.text_field().render_html(path_prefix)}</h3>
           {note.media_field().render_html(path_prefix)}
           {more_html}
-          <p class="note_id">{h(note.note_id)}</p>
+          <table class="metadata">
+            <tr class="note_id">
+              <th>Note ID:</th>
+              <td>{h(note.note_id)}</td>
+            </tr>
+            <tr class="source">
+              <th>Source:</th>
+              <td>
+                <span>{h(note.spec.source_path)}</span>
+                line <span>{h(str(note.spec.line_number))}</span>
+              </td>
+            </tr>
+          </table>
         </div>"""
 
     return textwrap.dedent(

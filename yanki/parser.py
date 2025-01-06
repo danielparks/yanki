@@ -15,6 +15,8 @@ NOTE_ID_VARIABLES = frozenset(
         "direction",
         "media",
         "text",
+        "line_number",
+        "source_path",
     ]
 )
 
@@ -163,6 +165,8 @@ class NoteSpec:
             direction=self.direction(),
             media=" ".join([self.video_url(), self.provisional_clip_spec()]),
             text=self.text(),
+            line_number=self.line_number,
+            source_path=self.source_path,
         )
 
     def video_url(self):
