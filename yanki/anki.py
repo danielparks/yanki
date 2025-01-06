@@ -173,6 +173,8 @@ class Note:
             ### versions of the input text?
             "media": f"{self.spec.video_url()} {self.clip_spec()}",
             "text": self.text(),
+            "line_number": self.spec.line_number,
+            "source_path": self.spec.source_path,
         }
 
     @functools.cache
@@ -259,7 +261,11 @@ class FinalDeck:
     notes_by_id: dict
 
     def notes(self):
-        return self.notes_by_id.values()
+        """Returns notes in the same order as the .deck file."""
+        return sorted(
+            self.notes_by_id.values(),
+            key=lambda n: n.spec.line_number,
+        )
 
     def save_to_package(self, package):
         deck = genanki.Deck(self.deck_id, self.title)
@@ -331,7 +337,11 @@ class Deck:
         return self.spec.source_path
 
     def notes(self):
-        return self.notes_by_id.values()
+        """Returns notes in the same order as the .deck file."""
+        return sorted(
+            self.notes_by_id.values(),
+            key=lambda n: n.spec.line_number,
+        )
 
     def add_note(self, note):
         id = note.note_id()
