@@ -141,8 +141,8 @@ def test_yanki_open_videos(yanki, reference_deck_path, cache_path):
         "open-videos", f"file://{reference_deck_path.parent}/first.png"
     )
     assert result.returncode == 0
-    assert result.stdout == ""
-    assert result.stderr.startswith(f"{cache_path}/processed_file:||")
+    assert result.stdout.startswith(f"{cache_path}/processed_file:||")
+    assert result.stderr == ""
 
 
 # input and fake `open` don’t work without subprocess.
@@ -153,5 +153,5 @@ def test_yanki_open_videos_from_file(yanki, reference_deck_path, cache_path):
         stdin=io.StringIO(f"file://{reference_deck_path.parent}/first.png\n"),
     )
     assert result.returncode == 0
-    assert result.stdout == ""
-    assert result.stderr.startswith(f"{cache_path}/processed_file:||")
+    assert result.stdout.startswith(f"{cache_path}/processed_file:||")
+    assert result.stderr == ""

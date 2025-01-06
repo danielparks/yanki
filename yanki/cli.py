@@ -420,3 +420,5 @@ def open_in_app(arguments):
         raise ExpectedError(
             f"Error running {shlex.join(command_line)}: {result.stdout}"
         )
+
+    sys.stdout.write(result.stdout)
