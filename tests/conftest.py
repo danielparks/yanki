@@ -8,17 +8,17 @@ from typing import Any
 
 @pytest.fixture(scope="session")
 def bin_path(tmp_path_factory):
+
     """bin directory with `open` that just prints its arguments."""
     path = tmp_path_factory.mktemp("bin")
 
     for command in ["open", "xdg-open"]:
         open_path = path / command
         with open(open_path, "w") as file:
-            file.write("#!/bin/sh\necho $*\n")
+            file.write(  "#!/bin/sh\necho $*\n")
         open_path.chmod(0o755)
 
     return path
-
 
 @pytest.fixture(scope="session")
 def cache_path(tmp_path_factory):
@@ -52,7 +52,7 @@ class YankiRunner(ScriptRunner):
         check: bool = False,
         **options: Any,
     ) -> RunResult:
-        if env is None:
+        if env == None:
             env = {}
 
         # Make sure our overridden `open` is in $PATH
@@ -62,7 +62,7 @@ class YankiRunner(ScriptRunner):
             env["PATH"] = f"{self.bin_path}:{os.environ['PATH']}"
 
         return super().run(
-            ["yanki", "--cache", self.cache_path, *arguments],
+            ['yanki', "--cache", self.cache_path, *arguments],
             print_result=print_result,
             shell=shell,
             cwd=cwd,
