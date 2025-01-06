@@ -11,10 +11,11 @@ def bin_path(tmp_path_factory):
     """bin directory with `open` that just prints its arguments."""
     path = tmp_path_factory.mktemp("bin")
 
-    open_path = path / "open"
-    with open(open_path, "w") as file:
-        file.write("#!/bin/sh\necho $* >&2\n")
-    open_path.chmod(0o755)
+    for command in ["open", "xdg-open"]:
+        open_path = path / command
+        with open(open_path, "w") as file:
+            file.write("#!/bin/sh\necho $* >&2\n")
+        open_path.chmod(0o755)
 
     return path
 
