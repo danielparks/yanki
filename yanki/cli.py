@@ -20,8 +20,8 @@ import yt_dlp
 
 from yanki.errors import ExpectedError
 from yanki.html import htmlize_deck, generate_index_html, ensure_static_link
-from yanki.parser import DeckParser
-from yanki.anki import Deck
+from yanki.parser import DeckParser, find_invalid_format, NOTE_VARIABLES
+from yanki.anki import Deck, FINAL_NOTE_VARIABLES
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
 
 LOGGER = logging.getLogger(__name__)
@@ -182,31 +182,21 @@ def build(options, decks, output):
 @click.pass_obj
 def list_notes(options, decks, format):
     """Print information about every note in the passed format."""
-    for deck in read_decks(decks, options):
-        for note in deck.notes():
-            print(
+    if find_invalid_format(format, NOTE_VARIABLES) is None:
+        # Don’t need FinalNotes
+        for deck in read_decks(decks, options):
+            for note in deck.notes():
                 ### FIXME document variables
-                format.format(
-                    note_id=note.note_id(deck_id=deck.id()),
-                    deck=deck.title(),
-                    deck_id=deck.id(),
-                    **note.variables(),
-                )
-            )
+                print(format.format(**note.variables(deck_id=deck.id())))
+    else:
+        error = find_invalid_format(format, FINAL_NOTE_VARIABLES)
+        if error is not None:
+            sys.exit("Invalid variable in format: {error}")
 
-
-@cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
-@click.pass_obj
-def dump_videos(options, decks):
-    """
-    Make sure the videos from the deck are downloaded to the cache and display
-    the path to each one.
-    """
-    for deck in read_final_decks(decks, options):
-        print(f"title: {deck.title}")
-        for note in deck.notes():
-            print(f'{", ".join(note.media_paths())} {note.text}')
+        for deck in read_final_decks(decks, options):
+            for note in deck.notes():
+                ### FIXME document variables
+                print(format.format(**note.variables()))
 
 
 @cli.command()

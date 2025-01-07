@@ -125,12 +125,11 @@ def test_yanki_list_notes(yanki, reference_deck_path):
     assert result.stderr == ""
 
 
-def test_yanki_dump_videos(yanki, reference_deck_path, cache_path):
-    result = yanki.run("dump-videos", reference_deck_path)
+def test_yanki_list_final_notes(yanki, reference_deck_path, cache_path):
+    """Check that list-notes can list notes after being processed."""
+    result = yanki.run("list-notes", "-f", "{media_paths}", reference_deck_path)
     assert result.returncode == 0
-    assert result.stdout.startswith(
-        f"title: Test::Reference deck\n{cache_path}"
-    )
+    assert result.stdout.startswith(f"{cache_path}/processed_file:||")
     assert result.stderr == ""
 
 

@@ -7,7 +7,7 @@ import logging
 import os
 
 from yanki.field import Fragment, ImageFragment, VideoFragment, Field
-from yanki.parser import DeckSpec, NoteSpec
+from yanki.parser import DeckSpec, NoteSpec, NOTE_VARIABLES
 from yanki.video import Video, VideoOptions
 
 LOGGER = logging.getLogger(__name__)
@@ -160,12 +160,12 @@ class Note:
     # a deck_id.
     def note_id(self, deck_id="{deck_id}"):
         return self.spec.config.generate_note_id(
-            deck_id=deck_id,
-            **self.variables(),
+            **self.variables(deck_id=deck_id),
         )
 
-    def variables(self):
-        return {
+    def variables(self, deck_id="{deck_id}"):
+        variables = {
+            "deck_id": deck_id,
             "url": self.spec.video_url(),
             "clip": self.clip_spec(),
             "direction": self.spec.direction(),
@@ -176,6 +176,16 @@ class Note:
             "line_number": self.spec.line_number,
             "source_path": self.spec.source_path,
         }
+
+        # FIXME: probably doesn’t need to run every time.
+        if NOTE_VARIABLES != set(variables.keys()):
+            raise KeyError(
+                "Note.variables() does not match NOTE_VARIABLES\n"
+                f"  variables(): {sorted(variables.keys())}\n"
+                f"  expected: {sorted(NOTE_VARIABLES)}\n"
+            )
+
+        return variables
 
     @functools.cache
     def clip_spec(self):
@@ -196,6 +206,22 @@ class Note:
             return self.video().title()
         else:
             return self.spec.text()
+
+
+EXTRA_FINAL_NOTE_VARIABLES = frozenset(
+    [
+        "note_id",
+        "media_paths",
+    ]
+)
+
+FINAL_NOTE_VARIABLES = EXTRA_FINAL_NOTE_VARIABLES | NOTE_VARIABLES
+
+if NOTE_VARIABLES & EXTRA_FINAL_NOTE_VARIABLES:
+    raise KeyError(
+        "Variables in both NOTE_VARIABLES and EXTRA_FINAL_NOTE_VARIABLES: "
+        + ", ".join(sorted(NOTE_VARIABLES & EXTRA_FINAL_NOTE_VARIABLES))
+    )
 
 
 @dataclass(frozen=True)
@@ -225,6 +251,32 @@ class FinalNote:
 
     def media_field(self):
         return Field([self.media_fragment])
+
+    def variables(self):
+        variables = {
+            "deck_id": self.deck_id,
+            "note_id": self.note_id,
+            "url": self.spec.video_url(),
+            "clip": self.clip_spec,
+            "direction": self.spec.direction(),
+            ### FIXME should these be renamed to clarify that they’re normalized
+            ### versions of the input text?
+            "media": f"{self.spec.video_url()} {self.clip_spec}",
+            "text": self.text,
+            "line_number": self.spec.line_number,
+            "source_path": self.spec.source_path,
+            "media_paths": " ".join(self.media_paths()),
+        }
+
+        # FIXME: probably doesn’t need to run every time.
+        if FINAL_NOTE_VARIABLES != set(variables.keys()):
+            raise KeyError(
+                "FinalNote.variables() does not match FINAL_NOTE_VARIABLES\n"
+                f"  variables(): {sorted(variables.keys())}\n"
+                f"  expected: {sorted(FINAL_NOTE_VARIABLES)}\n"
+            )
+
+        return variables
 
     def genanki_note(self):
         media_to_text = text_to_media = ""
@@ -259,6 +311,9 @@ class FinalDeck:
     source_path: str
     spec: NoteSpec
     notes_by_id: dict
+
+    def id(self):
+        return self.deck_id
 
     def notes(self):
         """Returns notes in the same order as the .deck file."""

@@ -8,7 +8,7 @@ from yanki.field import Fragment, Field
 
 # Valid variables in note_id format. Used to validate that our code uses the
 # same variables in both places they’re needed.
-NOTE_ID_VARIABLES = frozenset(
+NOTE_VARIABLES = frozenset(
     [
         "deck_id",
         "url",
@@ -20,6 +20,17 @@ NOTE_ID_VARIABLES = frozenset(
         "source_path",
     ]
 )
+
+
+def find_invalid_format(format, variables):
+    """
+    Try `format` and return `KeyError` if it uses anything not in `variables`.
+    """
+    try:
+        format.format(**dict.fromkeys(variables, "value"))
+        return None
+    except KeyError as error:
+        return error
 
 
 class DeckSyntaxError(ExpectedError):
@@ -134,18 +145,17 @@ class Config:
             raise ValueError('video must be either "include" or "strip"')
 
     def set_note_id_format(self, note_id_format):
-        try:
-            note_id_format.format(**dict.fromkeys(NOTE_ID_VARIABLES, "value"))
-        except KeyError as error:
+        error = find_invalid_format(note_id_format, NOTE_VARIABLES)
+        if error is not None:
             raise ValueError(f"Unknown variable in note_id format: {error}")
         self.note_id_format = note_id_format
 
     def generate_note_id(self, **kwargs):
-        if len(NOTE_ID_VARIABLES.symmetric_difference(kwargs.keys())) > 0:
+        if NOTE_VARIABLES != set(kwargs.keys()):
             raise KeyError(
                 "Incorrect variables passed to generate_note_id()\n"
                 f"  got: {sorted(kwargs.keys())}\n"
-                f"  expected: {sorted(NOTE_ID_VARIABLES)}\n"
+                f"  expected: {sorted(NOTE_VARIABLES)}\n"
             )
         return self.note_id_format.format(**kwargs)
 
