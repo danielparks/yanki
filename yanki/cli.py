@@ -395,7 +395,7 @@ def open_in_app(arguments):
         command = "xdg-open"
     else:
         raise ExpectedError(
-            f"Don’t know how to open {repr(arguments)} on this platform."
+            f"Don’t know how to open {arguments!r} on this platform."
         )
 
     command_line = [command, *arguments]

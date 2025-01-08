@@ -21,7 +21,7 @@ def generate_index_html(deck_links):
 
     for file_name, deck in deck_links:
         if deck.title is None:
-            sys.exit(f"Deck {repr(deck.source_path)} does not contain title")
+            sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
         output += f"""
           <li><a href="./{h(file_name)}">{h(deck.title)}</a></li>"""
@@ -37,7 +37,7 @@ def generate_index_html(deck_links):
 
 def htmlize_deck(deck, path_prefix=""):
     if deck.title is None:
-        sys.exit(f"Deck {repr(deck.source_path)} does not contain title")
+        sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
     output = f"""
     <!DOCTYPE html>

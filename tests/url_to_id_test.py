@@ -153,7 +153,7 @@ def test_youtube_urls():
     for url in YOUTUBE_URLS.split():
         assert (
             url_to_id(url) == "youtube:" + YOUTUBE_ID
-        ), f"id {YOUTUBE_ID} not in {repr(url)}"
+        ), f"id {YOUTUBE_ID} not in {url!r}"
 
 
 def test_other_urls():
