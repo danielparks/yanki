@@ -206,7 +206,7 @@ class Video:
 
         try:
             with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
-                self.logger.info("getting info")
+                self.logger.info(f"getting info about {self.url!r}")
                 return ydl.sanitize_info(
                     ydl.extract_info(self.url, download=False)
                 )
