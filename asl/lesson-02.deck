@@ -9,6 +9,7 @@ https://www.youtube.com/watch?v=jJ7aBDd_TvI ADDRESS
   trim: 9F-64F
 https://www.youtube.com/watch?v=E-wBrs3PJhU BOY
   trim: 14F-73F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=G0fzmn3pQng BROTHER
   trim: 12F-67F
 https://www.youtube.com/watch?v=32hgy9NSs7k CHILD
@@ -19,14 +20,17 @@ https://www.youtube.com/watch?v=5ldQgko88Ms -> CHILDREN (two hands)
   trim: 12F-62F
 https://www.youtube.com/watch?v=1Vllc4F5ic0 DAD
   trim: 9F-69F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=JCTgLJFs4c8 DIVORCE (initialized)
   trim: 6F-63F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=LG83FFHAP4I -> DIVORCE (non-initialized)
   trim: 14F-65F
 https://www.youtube.com/watch?v=s-FkZXpkg6g FINGERSPELL
   trim: 3F-43F
 https://www.youtube.com/watch?v=pwh3cOdoiG4 GIRL
   trim: 15F-74F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=2JCOsxMj6u4 GRANDMA
   trim: 21F-73F
 https://www.youtube.com/watch?v=D8OW3lFL_54 GRANDPA
@@ -41,6 +45,7 @@ https://www.youtube.com/watch?v=Kd_V8gE5-LY HIS / HERS / ITS / THEIRS
   trim: 13F-67F
 https://www.youtube.com/watch?v=BaPzB4Xsq9Y HOW?
   trim: 13F-60F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=iEO_sbzkZCM -> HOW? (one hand twist version)
   trim: 7F-63F
 https://www.youtube.com/watch?v=TYTsqVZU1dk HUSBAND
@@ -55,8 +60,10 @@ https://www.youtube.com/watch?v=Lu7VJHlq0o0 how-MANY / how-MUCH (two hands)
   trim: 3F-57F
 https://www.youtube.com/watch?v=0zRYKjeOM-4 MARRIAGE / marry
   trim: 11F-77F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=DHl2-NT3mIM MOM
   trim: 14F-73F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=jlqHVbCS4H0 parents / MOM DAD
   trim: 16F-65F
 https://www.youtube.com/watch?v=AESubfsrzP0 MY / MINE
@@ -65,6 +72,7 @@ https://www.youtube.com/watch?v=NRbLBTghqNk OUR
   trim: 4F-49F
 https://www.youtube.com/watch?v=QVPcK3bcFo0 SINGLE / SOMETHING / SOMEONE
   trim: 12F-75F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=0z2_gcB5OJ8 SISTER
   trim: 15F-96F
 https://www.youtube.com/watch?v=1WVL-cc4-TY THEIR (plural)
@@ -75,6 +83,7 @@ https://www.youtube.com/watch?v=GobeSyJHyLk WOMAN
   trim: 14F-65F
 https://www.youtube.com/watch?v=mJrUYRjvrew WORK
   trim: 14F-75F
+  tags: +first_100_signs
 
 tags: +extra
 https://www.youtube.com/watch?v=1wvGNvkRtNY HOW YOU?
@@ -83,6 +92,7 @@ https://www.youtube.com/watch?v=PQsbDNgV5mE LITTLE BOY
   trim: 12F-63F
 https://www.youtube.com/watch?v=gy6b1ePy9nc LITTLE GIRL
   trim: 1F-47F
+https://www.youtube.com/watch?v=t0WcqBpEG_0 SINGLE (not married, chin version)
 
 # From video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 https://www.youtube.com/watch?v=7O2mS0Kz4CA MANY
