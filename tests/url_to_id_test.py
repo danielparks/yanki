@@ -152,12 +152,12 @@ https://youtu.be/lalOy8Mbfdc?si=B_RZg_I-lLaa7UU-
 def test_youtube_urls():
     for url in YOUTUBE_URLS.split():
         assert (
-            url_to_id(url) == "youtube:" + YOUTUBE_ID
+            url_to_id(url) == "youtube=" + YOUTUBE_ID
         ), f"id {YOUTUBE_ID} not in {url!r}"
 
 
 def test_other_urls():
     assert (
         url_to_id("https://example.com/video.mp4")
-        == "https:||example.com|video.mp4"
+        == r"https\=||example.com|video.mp4"
     )
