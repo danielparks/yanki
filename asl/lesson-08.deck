@@ -47,6 +47,7 @@ more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https:/
 more+ rst:`COAT <https://www.lifeprint.com/asl101/pages-signs/c/coat.htm>`_
 https://www.youtube.com/watch?v=HWMc-nzJ2MQ COAT / JACKET
   trim: 10F-65F
+  tags: +first_100_signs
 
 more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https://www.lifeprint.com/asl101/lessons/lesson08.htm>`_
 more+ rst:`DIRTY <https://www.lifeprint.com/asl101/pages-signs/d/dirty.htm>`_
@@ -102,6 +103,7 @@ more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https:/
 more+ rst:`PANTS <https://www.lifeprint.com/asl101/pages-signs/p/pants.htm>`_
 https://www.youtube.com/watch?v=-V0Dkeyno2s PANTS (pull up version)
   trim: 10F-61F
+  tags: +first_100_signs
 # Can’t find video for PANTS-[B-hand].
 https://www.youtube.com/watch?v=K-791JkOMv0 pants-POCKET
   trim: 0F-62F
@@ -119,6 +121,7 @@ more+ rst:`SHIRT <https://www.lifeprint.com/asl101/pages-signs/s/shirt.htm>`_
 https://www.youtube.com/watch?v=BLqzpaKkkk4
   SHIRT / volunteer / apply / candidate
   trim: 5F-84F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=9Rcg3QJiClc -> SHIRT (two handed version)
   trim: 15F-61F
 https://www.youtube.com/watch?v=i14EM0ZbtUY BLOUSE-SHIRT
@@ -163,6 +166,7 @@ more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https:/
 more+ rst:`SHOES <https://www.lifeprint.com/asl101/pages-signs/s/shoes.htm>`_
 https://www.youtube.com/watch?v=Yoi_OLX0IEs SHOES
   trim: 12F-82F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=A4RSlW_e10U SANDALS
   trim: 10F-78F
 
@@ -182,11 +186,13 @@ more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https:/
 more+ rst:`SOCKS <https://www.lifeprint.com/asl101/pages-signs/s/socks.htm>`_
 https://www.youtube.com/watch?v=arMsuswd_AM SOCKS
   trim: 11F-58F
+  tags: +first_100_signs
 
 more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https://www.lifeprint.com/asl101/lessons/lesson08.htm>`_
 more+ rst:`UNDERWEAR <https://www.lifeprint.com/asl101/pages-signs/u/underwear.htm>`_
 https://www.youtube.com/watch?v=yKAFC9iyxas UNDERWEAR
   trim: 7F-
+  tags: +first_100_signs
 
 tags: +extra
 https://www.youtube.com/watch?v=WKuXSd6HkJ0 -> UNDERWEAR (old version)

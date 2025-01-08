@@ -8,7 +8,9 @@ note_id: Lifeprint ASL {url} {clip}
 https://www.youtube.com/watch?v=cBBmjJ80m30 #CAR
 https://www.youtube.com/watch?v=BVypOVtFnNk CAN
 https://www.youtube.com/watch?v=YfwGL0ZIBqE CAR / DRIVE
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=MrQpEWyELqo CHURCH
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=lmb1qYJ8g3Y COMPUTER
 https://www.youtube.com/watch?v=IEVgcJA3JWk DOCTOR
 https://www.youtube.com/watch?v=u7HYWBcxh1w DOWNLOAD
@@ -20,12 +22,15 @@ https://www.youtube.com/watch?v=ynLKZnP8dl8 GIVE / bestow
 https://www.youtube.com/watch?v=U5p42-d-buw me-GIVE-you
 https://www.youtube.com/watch?v=sFCgn76UF50 you-GIVE-me
 https://www.youtube.com/watch?v=n0Xb58PVX_A HOME
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=YirRi12-zWo IN
   trim: 29F-88F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=dnieeX_0vug INTERNET / NETWORK
 https://www.youtube.com/watch?v=OxKJDUAYsjg MOVE
 https://www.youtube.com/watch?v=ACBYkV6CDxI MOVIE
 https://www.youtube.com/watch?v=oz63G93uNGk OUT
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=iZZwtHUXBSY PLAYING / PLAY
 https://www.youtube.com/watch?v=G3LICbWdIb8 PUT / install / put there
 https://www.youtube.com/watch?v=weXM5pqwL3g PUT-AWAY
@@ -33,12 +38,14 @@ https://www.youtube.com/watch?v=ZvzKTn4qWfA SIT
 https://www.youtube.com/watch?v=KhhowNO7Ywk STAND
 https://www.youtube.com/watch?v=QmbOr-8K_Kw STAY
 https://www.youtube.com/watch?v=CPp1UOM-olA STORE
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=AL5vDzEz4-k video-RECORD
 https://www.youtube.com/watch?v=8WwxmvrQ_uw FILM / video-RECORD
 https://www.youtube.com/watch?v=5iv2XtBzogU WALK
 https://www.youtube.com/watch?v=4cn6Fyzz8ns WATCH (look at, watch a video)
 https://www.youtube.com/watch?v=D4jG1Qx76yI WEBCAM / video-RECORD-myself
 https://www.youtube.com/watch?v=g4AwGIjxn7k WITH
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
 
 tags: +extra

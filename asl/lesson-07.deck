@@ -9,31 +9,46 @@ https://www.youtube.com/watch?v=T2EJ1vHPMGE OR
 https://www.youtube.com/watch?v=PvFguNv1zIk AND
   trim: 24F-92F
 https://www.youtube.com/watch?v=3wIiujOP6Ag APPLE
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=EfJ4xLiX5IA CANDY
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=4uO8sY4hNYs CEREAL
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=35h7Cgf2Acw CHEESE
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=6JW3ODCZkBQ COOKIE
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=AeJ3voRJJZQ CUP
   trim: 36F-109F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=LqJM7wcUixQ DRINK
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=snIMQ230ANo DRINK-alcohol
 https://www.youtube.com/watch?v=2Dl1Q4vlQKs EAT / FOOD
 https://www.youtube.com/watch?v=uEvKmWqFE-4 EGG
+  tags: +first_100_signs
 # No video for TASTE on its own
 https://www.youtube.com/watch?v=jfoeJtIadRA TASTE AWFUL
 https://www.youtube.com/watch?v=-0I-SsuNzYE TASTE GOOD
 https://www.youtube.com/watch?v=B8EuK0EQHgc FULL
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=mqbwBSuEhjc FULL-[stomach] / stuffed
 https://www.youtube.com/watch?v=IIt5fF-D6d0 HAMBURGER
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=IFHFBhziij4 HOTDOG / SAUSAGE / bologna
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=8ZOUoDZkAoQ HUNGRY / WISH
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=quk_XoRtZWk MILK
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=XIZ2DrdEU3k #PIZZA
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=JZeO2EXjxOE PIZZA (eating slice version)
 https://www.youtube.com/watch?v=_1GRsPk6s3w PIZZA (ZZA version)
 https://www.youtube.com/watch?v=f1FFdgGVFIk POPCORN
 https://www.youtube.com/watch?v=ALdtmqECO6Y SOUP
 https://www.youtube.com/watch?v=-SdOfxGhb0A WATER
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=gp_GwO18i8Y WHAT-KIND
 
 tags: +extra
@@ -60,6 +75,8 @@ https://www.youtube.com/watch?v=m5lfRYfXUIQ ->
 https://www.youtube.com/watch?v=GnHH4QK3Ths -> V-E-G / VEGETABLE / VEGETARIAN
 https://www.youtube.com/watch?v=Ft6JlxIIEP4 TOMATO
 https://www.youtube.com/watch?v=CcLvZ5buj68 CLAM
-https://www.youtube.com/watch?v=Pszo0ZVIcUA CHICKEN
+https://www.youtube.com/watch?v=Pszo0ZVIcUA CHICKEN / BIRD
+  trim: 10F-60F
+  tags: +first_100_signs
 https://www.youtube.com/watch?v=yxlQDmsFo-g ->
   CHICKEN (old version — pecking in hand)
