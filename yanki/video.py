@@ -158,7 +158,7 @@ class Video:
         invalid = chars_in(FILENAME_ILLEGAL_CHARS, self.id)
         if invalid:
             raise BadURL(
-                f'Invalid characters ({"".join(invalid)}) in video ID: {repr(self.id)}'
+                f'Invalid characters ({"".join(invalid)}) in video ID: {self.id!r}'
             )
 
         self._info = None
@@ -211,7 +211,7 @@ class Video:
                     ydl.extract_info(self.url, download=False)
                 )
         except yt_dlp.utils.YoutubeDLError as error:
-            raise BadURL(f"Error downloading {repr(self.url)}: {error}")
+            raise BadURL(f"Error downloading {self.url!r}: {error}")
 
     def info(self):
         if self._info:
@@ -325,7 +325,7 @@ class Video:
             if end - start <= 0:
                 raise ValueError(
                     "Cannot clip video to 0 or fewer seconds "
-                    "({repr(start_spec)} to {repr(end_spec)})"
+                    "({start_spec!r} to {end_spec!r})"
                 )
 
             self.input_options["t"] = end - start
@@ -480,15 +480,15 @@ class Video:
     def parameters(self):
         """Get parameters for producing the video."""
         parameters = [
-            f"{key}={repr(value)}" for key, value in self._parameters.items()
+            f"{key}={value!r}" for key, value in self._parameters.items()
         ]
 
         if self._crop is not None:
-            parameters.append(f"crop={repr(self._crop)}")
+            parameters.append(f"crop={self._crop!r}")
         if self._overlay_text != "":
-            parameters.append(f"overlay_text={repr(self._overlay_text)}")
+            parameters.append(f"overlay_text={self._overlay_text!r}")
         if self._slow is not None:
-            parameters.append(f"slow={repr(self._slow)}")
+            parameters.append(f"slow={self._slow!r}")
 
         return parameters
 

@@ -129,7 +129,7 @@ class Config:
         else:
             clip = [part.strip() for part in trim.split("-")]
             if len(clip) != 2:
-                raise ValueError(f"trim must be time-time (found {repr(trim)})")
+                raise ValueError(f"trim must be time-time (found {trim!r})")
             self.trim = (clip[0], clip[1])
 
     def set_audio(self, audio):
@@ -208,7 +208,7 @@ class NoteSpec:
             if clip[0] == "":
                 clip[0] = "0"
         elif len(clip) != 1 or clip[0] == "":
-            self.error(f"Invalid clip specification {repr(raw_clip)}")
+            self.error(f"Invalid clip specification {raw_clip!r}")
 
         return clip, "".join(rest)  # rest is either [] or [str]
 

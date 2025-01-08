@@ -143,7 +143,7 @@ class Note:
         if self.spec.clip() is not None:
             if self.spec.config.trim is not None:
                 self.spec.error(
-                    f"Clip ({repr(self.spec.provisional_clip_spec())}) is "
+                    f"Clip ({self.spec.provisional_clip_spec()!r}) is "
                     "incompatible with 'trim:'."
                 )
 
@@ -152,7 +152,7 @@ class Note:
             elif len(self.spec.clip()) == 2:
                 video.clip(self.spec.clip()[0], self.spec.clip()[1])
             else:
-                raise ValueError(f"Invalid clip: {repr(self.spec.clip())}")
+                raise ValueError(f"Invalid clip: {self.spec.clip()!r}")
 
         return video
 
@@ -199,7 +199,7 @@ class Note:
                 ]
             )
         else:
-            raise ValueError(f"Invalid clip: {repr(self.spec.clip())}")
+            raise ValueError(f"Invalid clip: {self.spec.clip()!r}")
 
     def text(self):
         if self.spec.text() == "":
@@ -288,7 +288,7 @@ class FinalNote:
         elif self.spec.direction() == "->":
             media_to_text = "1"
         else:
-            raise ValueError(f"Invalid direction {repr(self.spec.direction())}")
+            raise ValueError(f"Invalid direction {self.spec.direction()!r}")
 
         return genanki.Note(
             model=YANKI_CARD_MODEL,
@@ -329,13 +329,13 @@ class FinalDeck:
         for note in self.notes():
             deck.add_note(note.genanki_note())
             LOGGER.debug(
-                f"Added note {repr(note.note_id)}: {note.content_fields()}"
+                f"Added note {note.note_id!r}: {note.content_fields()}"
             )
 
             for media_path in note.media_paths():
                 package.media_files.append(media_path)
                 LOGGER.debug(
-                    f"Added media file for {repr(note.note_id)}: {media_path}"
+                    f"Added media file for {note.note_id!r}: {media_path!r}"
                 )
 
         package.decks.append(deck)
@@ -401,5 +401,5 @@ class Deck:
     def add_note(self, note):
         id = note.note_id()
         if id in self.notes_by_id:
-            note.spec.error(f"Note with id {repr(id)} already exists in deck")
+            note.spec.error(f"Note with id {id!r} already exists in deck")
         self.notes_by_id[id] = note
