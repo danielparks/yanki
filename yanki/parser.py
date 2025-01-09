@@ -235,7 +235,7 @@ class NoteSpec:
         if self.clip() is None:
             return "@0-"
         else:
-            return f'@{"-".join(self.clip())}'
+            return f"@{'-'.join(self.clip())}"
 
     def error(self, message):
         raise DeckSyntaxError(message, self.source_path, self.line_number)
