@@ -58,6 +58,8 @@ https://www.youtube.com/watch?v=z-BwDb6w7ws -> how-MANY / how-MUCH (one hand)
   trim: 14F-58F
 https://www.youtube.com/watch?v=Lu7VJHlq0o0 how-MANY / how-MUCH (two hands)
   trim: 3F-57F
+https://www.youtube.com/watch?v=7O2mS0Kz4CA MANY
+  trim: 20F-
 https://www.youtube.com/watch?v=0zRYKjeOM-4 MARRIAGE / marry
   trim: 11F-77F
   tags: +first_100_signs
@@ -70,9 +72,18 @@ https://www.youtube.com/watch?v=AESubfsrzP0 MY / MINE
   trim: 9F-48F
 https://www.youtube.com/watch?v=NRbLBTghqNk OUR
   trim: 4F-49F
-https://www.youtube.com/watch?v=QVPcK3bcFo0 SINGLE / SOMETHING / SOMEONE
+
+https://www.youtube.com/watch?v=QVPcK3bcFo0 SINGLE / SOMETHING / SOMEONE / ONLY
   trim: 12F-75F
+  more+ rst:`SINGLE <https://www.lifeprint.com/asl101/pages-signs/s/single.htm>`_
   tags: +first_100_signs
+https://www.youtube.com/watch?v=2ikniviFkgo JUST / ONLY / merely
+  trim: 17F-81F
+  more+ rst:`JUST <https://www.lifeprint.com/asl101/pages-signs/j/just.htm>`_
+https://www.youtube.com/watch?v=t0WcqBpEG_0 SINGLE (not married, chin version)
+  trim: 15F-66F
+  more+ rst:`SINGLE <https://www.lifeprint.com/asl101/pages-signs/s/single.htm>`_
+
 https://www.youtube.com/watch?v=0z2_gcB5OJ8 SISTER
   trim: 15F-96F
 https://www.youtube.com/watch?v=1WVL-cc4-TY THEIR (plural)
@@ -92,11 +103,8 @@ https://www.youtube.com/watch?v=PQsbDNgV5mE LITTLE BOY
   trim: 12F-63F
 https://www.youtube.com/watch?v=gy6b1ePy9nc LITTLE GIRL
   trim: 1F-47F
-https://www.youtube.com/watch?v=t0WcqBpEG_0 SINGLE (not married, chin version)
 
 # From video (https://www.youtube.com/watch?v=U0qG639Vx-0)
-https://www.youtube.com/watch?v=7O2mS0Kz4CA MANY
-  trim: 20F-
 # NONE is covered in 31, but it’s too useful to not include here.
 https://www.youtube.com/watch?v=yOq40lDCkcM NONE
   trim: 19F-79F
