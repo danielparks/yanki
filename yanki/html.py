@@ -12,7 +12,7 @@ def generate_index_html(deck_links):
       <head>
         <title>Decks</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{static_url('general.css')}">
+        <link rel="stylesheet" href="{static_url("general.css")}">
       </head>
       <body>
         <h1>Decks</h1>
@@ -45,7 +45,7 @@ def htmlize_deck(deck, path_prefix=""):
       <head>
         <title>{h(deck.title)}</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{static_url('general.css')}">
+        <link rel="stylesheet" href="{static_url("general.css")}">
       </head>
       <body>
         <h1>{h(deck.title)}</h1>"""

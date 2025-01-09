@@ -160,7 +160,7 @@ class Video:
         invalid = chars_in(FILENAME_ILLEGAL_CHARS, self.id)
         if invalid:
             raise BadURL(
-                f'Invalid characters ({"".join(invalid)}) in video ID: {self.id!r}'
+                f"Invalid characters ({''.join(invalid)}) in video ID: {self.id!r}"
             )
 
         self._info = None
