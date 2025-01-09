@@ -10,6 +10,7 @@ import os
 from os.path import getmtime
 import shlex
 import shutil
+import tempfile
 from urllib.parse import urlparse, parse_qs
 import yt_dlp
 
@@ -223,9 +224,9 @@ class Video:
                 self._info = json.load(file)
                 return self._info
         except FileNotFoundError:
-            # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have the
-            # key path. We use `pass` here to avoid adding this exception to the
-            # context of new exceptions.
+            # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
+            # the key path. We use `pass` here to avoid adding this exception to
+            # the context of new exceptions.
             pass
 
         self._info = self._download_info()
@@ -549,11 +550,26 @@ class Video:
         else:
             output_streams = [output_streams]
 
-        stream = ffmpeg.output(
-            *output_streams, output_path, **self.ffmpeg_output_options()
-        ).overwrite_output()
+        (_fd, temp_path) = tempfile.mkstemp(
+            dir=self.options.cache_path,
+            prefix=f"working_{self.id}",
+            suffix=f".{self.output_ext()}",
+        )
 
-        await self.run_async(stream)
+        try:
+            stream = ffmpeg.output(
+                *output_streams, temp_path, **self.ffmpeg_output_options()
+            ).overwrite_output()
+
+            await self.run_async(stream)
+        except:
+            # Remove working file.
+            self.logger.debug(f"Caught failure; removing {temp_path!r}")
+            os.remove(temp_path)
+            raise
+
+        self.logger.debug(f"Success; moving {temp_path!r} to {output_path!r}")
+        os.replace(temp_path, output_path)
 
         return output_path
 
