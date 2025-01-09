@@ -23,7 +23,7 @@ YT_DLP_OPTIONS = {
 }
 
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
-FILENAME_ILLEGAL_CHARS = '/"[]'
+FILENAME_ILLEGAL_CHARS = '/"[]:'
 
 
 def chars_in(chars, input):
@@ -95,9 +95,9 @@ def url_to_id(url_str):
     try:
         domain = "." + url.netloc.lower()
         if domain.endswith(".youtube.com"):
-            return "youtube:" + youtube_url_to_id(url_str, url, query)
+            return "youtube=" + youtube_url_to_id(url_str, url, query)
         elif domain.endswith(".youtu.be"):
-            return "youtube:" + youtu_be_url_to_id(url_str, url, query)
+            return "youtube=" + youtu_be_url_to_id(url_str, url, query)
     except BadURL:
         # Try to load the URL with yt_dlp and see what happens.
         pass
@@ -109,6 +109,7 @@ def url_to_id(url_str):
         .replace('"', r"\'")
         .replace("[", r"\(")
         .replace("]", r"\)")
+        .replace(":", r"\=")
         .replace("/", "|")
     )
 
