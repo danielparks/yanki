@@ -1,6 +1,7 @@
 import asyncio
 from dataclasses import dataclass
 import ffmpeg
+import functools
 import hashlib
 import json
 import logging
@@ -9,7 +10,6 @@ from multiprocessing import cpu_count
 import os
 from os.path import getmtime
 import shlex
-import shutil
 import tempfile
 from urllib.parse import urlparse, parse_qs
 import yt_dlp
@@ -163,7 +163,6 @@ class Video:
                 f"Invalid characters ({''.join(invalid)}) in video ID: {self.id!r}"
             )
 
-        self._info = None
         self._raw_metadata = None
         self._format = None
         self._crop = None
@@ -215,24 +214,21 @@ class Video:
         except yt_dlp.utils.YoutubeDLError as error:
             raise BadURL(f"Error downloading {self.url!r}: {error}")
 
+    @functools.cache
     def info(self):
-        if self._info:
-            return self._info
-
         try:
             with open(self.info_cache_path(), "r", encoding="utf-8") as file:
-                self._info = json.load(file)
-                return self._info
+                return json.load(file)
         except FileNotFoundError:
             # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
             # the key path. We use `pass` here to avoid adding this exception to
             # the context of new exceptions.
             pass
 
-        self._info = self._download_info()
+        info = self._download_info()
         with open(self.info_cache_path(), "w", encoding="utf-8") as file:
-            file.write(json.dumps(self._info))
-        return self._info
+            file.write(json.dumps(info))
+        return info
 
     def title(self):
         return self.info()["title"]
@@ -433,21 +429,17 @@ class Video:
         """Should the output include a video stream or image?"""
         return "vn" not in self.output_options and self.has_video()
 
+    @functools.cache
     def raw_video(self):
-        path = self.raw_video_cache_path()
-        path_exists = os.path.exists(path) and os.stat(path).st_size > 0
-
-        # Check if it’s a file:// URL
+        # If it’s a file:// URL, then there’s no need to cache.
         source_path = file_url_to_path(self.url)
         if source_path is not None:
             source_path = os.path.join(self.working_dir, source_path)
-            if not path_exists or getmtime(source_path) > getmtime(path):
-                # Cache file doesn’t exist or is old.
-                self.logger.info(f"downloading raw video to {path}")
-                shutil.copy(source_path, path, follow_symlinks=True)
-            return path
+            self.logger.info(f"using local raw video {source_path}")
+            return source_path
 
-        if path_exists:
+        path = self.raw_video_cache_path()
+        if os.path.exists(path) and os.stat(path).st_size > 0:
             # Already cached, and we can’t check if it’s out of date.
             return path
 
