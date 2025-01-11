@@ -119,6 +119,7 @@ https://www.youtube.com/watch?v=AxUJzzak-z0 -> MICROWAVE (3 fingers version)
 
 https://www.youtube.com/watch?v=LOW8ZIaAJ-c REFRIGERATOR
   trim: 7F-67F
+  more+ html:<h1>#REF</h1>
   more+ rst:`REFRIGERATOR <https://www.lifeprint.com/asl101/pages-signs/r/refrigerator.htm>`_
 # No video for REFRIGERATOR version with R-hands like COLD
 
@@ -126,7 +127,7 @@ https://www.youtube.com/watch?v=iJ8TFRWJutE SHOWER
   trim: 11F-58F
   more+ rst:`SHOWER <https://www.lifeprint.com/asl101/pages-signs/s/shower.htm>`_
 
-https://www.youtube.com/watch?v=iZJAZYXj-Gw SINK
+https://www.youtube.com/watch?v=iZJAZYXj-Gw #SINK
   trim: 11F-61F
   more+ rst:`SINK <https://www.lifeprint.com/asl101/pages-signs/s/sink.htm>`_
 
@@ -139,12 +140,12 @@ https://www.youtube.com/watch?v=TIi1dumlqjE SINK (verb) / to become submerged
   more+ rst:`SINK <https://www.lifeprint.com/asl101/pages-signs/s/sink.htm>`_
 tags: -extra
 
-https://www.youtube.com/watch?v=c75leThE9AQ STOVE
+https://www.youtube.com/watch?v=c75leThE9AQ #STOVE
   trim: 11F-62F
   more+ rst:`STOVE <https://www.lifeprint.com/asl101/pages-signs/s/stove.htm>`_
 
 tags: +extra
-https://www.youtube.com/watch?v=3_2Zyn10sZI OVEN
+https://www.youtube.com/watch?v=3_2Zyn10sZI #OVEN
   trim: 22F-86F
   more+ rst:`STOVE <https://www.lifeprint.com/asl101/pages-signs/s/stove.htm>`_
 https://www.youtube.com/watch?v=bf1X67Lhu6A OVEN / BAKING
