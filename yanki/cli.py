@@ -105,13 +105,13 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     if concurrency < 1:
         raise click.UsageError("--concurrency must be >= 1.")
 
+    ensure_cache(cache)
+
     ctx.obj = VideoOptions(
         cache_path=cache,
         reprocess=reprocess,
         semaphore=asyncio.Semaphore(concurrency),
     )
-
-    cache.mkdir(parents=True, exist_ok=True)
 
     # Configure logging
     if verbose > 2:
@@ -352,6 +352,24 @@ def open_videos_from_file(options, files):
             except yt_dlp.utils.DownloadError:
                 # yt_dlp prints the error itself.
                 pass
+
+
+CACHEDIR_TAG_CONTENT = """Signature: 8a477f597d28d172789f06886806bc55
+# This file is a cache directory tag created by yanki.
+# For information about cache directory tags, see:
+#	https://bford.info/cachedir/
+#
+# For information about yanki, see:
+#   https://github.com/danielparks/yanki
+"""
+
+
+def ensure_cache(cache_path: Path):
+    """Make sure cache is set up."""
+    cache_path.mkdir(parents=True, exist_ok=True)
+
+    tag_path = cache_path / "CACHEDIR.TAG"
+    tag_path.write_text(CACHEDIR_TAG_CONTENT, encoding="ascii")
 
 
 def find_errors(group: ExceptionGroup):
