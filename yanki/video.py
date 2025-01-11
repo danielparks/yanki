@@ -189,7 +189,7 @@ class Video:
 
         if len(parameters) > 60 or chars_in(FILENAME_ILLEGAL_CHARS, parameters):
             parameters = hashlib.blake2b(
-                parameters.encode(encoding="utf-8"),
+                parameters.encode(encoding="utf_8"),
                 digest_size=16,
                 usedforsecurity=False,
             ).hexdigest()
@@ -217,7 +217,7 @@ class Video:
     @functools.cache
     def info(self):
         try:
-            with open(self.info_cache_path(), "r", encoding="utf-8") as file:
+            with open(self.info_cache_path(), "r", encoding="utf_8") as file:
                 return json.load(file)
         except FileNotFoundError:
             # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
@@ -226,7 +226,7 @@ class Video:
             pass
 
         info = self._download_info()
-        with open(self.info_cache_path(), "w", encoding="utf-8") as file:
+        with open(self.info_cache_path(), "w", encoding="utf_8") as file:
             file.write(json.dumps(info))
         return info
 
@@ -238,7 +238,7 @@ class Video:
         self._raw_metadata = ffmpeg.probe(self.raw_video())
 
         with open(
-            self.raw_metadata_cache_path(), "w", encoding="utf-8"
+            self.raw_metadata_cache_path(), "w", encoding="utf_8"
         ) as file:
             json.dump(self._raw_metadata, file)
 
@@ -255,7 +255,7 @@ class Video:
             metadata_cache_path = self.raw_metadata_cache_path()
             if getmtime(metadata_cache_path) >= getmtime(self.raw_video()):
                 # Metadata isn’t older than raw video.
-                with open(metadata_cache_path, "r", encoding="utf-8") as file:
+                with open(metadata_cache_path, "r", encoding="utf_8") as file:
                     self._raw_metadata = json.load(file)
                     return get_key_path(self._raw_metadata, path)
         except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):

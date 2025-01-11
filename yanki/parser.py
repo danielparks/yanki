@@ -309,7 +309,7 @@ class DeckParser:
         yield from self.flush_decks()
 
     def parse_path(self, path):
-        with open(path, "r", encoding="UTF-8") as file:
+        with open(path, "r", encoding="utf_8") as file:
             yield from self.parse_file(file)
 
     def parse_input(self, input):

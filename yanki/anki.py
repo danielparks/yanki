@@ -80,7 +80,7 @@ YANKI_CARD_MODEL = yanki_card_model()
 
 
 def name_to_id(name):
-    bytes = hashlib.sha256(name.encode("utf-8")).digest()
+    bytes = hashlib.sha256(name.encode("utf_8")).digest()
     # Apparently deck ID is i64
     return int.from_bytes(bytes[:8], byteorder="big", signed=True)
 
