@@ -78,7 +78,7 @@ class MediaFragment(Fragment):
         )
 
     def media_paths(self):
-        return [self.path]
+        return [str(self.path)]
 
 
 class ImageFragment(MediaFragment):
@@ -106,8 +106,7 @@ class Field:
 
     def media_paths(self):
         for fragment in self.fragments:
-            for path in fragment.media_paths():
-                yield path
+            yield from fragment.media_paths()
 
     def render_anki(self):
         return "".join([fragment.render_anki() for fragment in self.fragments])

@@ -7,7 +7,7 @@ from http import server
 import logging
 from multiprocessing import cpu_count
 import os
-from pathlib import PosixPath
+from pathlib import Path
 import shlex
 import signal
 import subprocess
@@ -70,7 +70,7 @@ def main():
 @click.option("-v", "--verbose", count=True)
 @click.option(
     "--cache",
-    default=PosixPath("~/.cache/yanki/").expanduser(),
+    default=Path("~/.cache/yanki/").expanduser(),
     show_default=True,
     envvar="YANKI_CACHE",
     show_envvar=True,
@@ -80,6 +80,7 @@ def main():
         writable=True,
         readable=True,
         executable=True,
+        path_type=Path,
     ),
     help="Path to cache for downloads and media files.",
 )
@@ -110,7 +111,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
         semaphore=asyncio.Semaphore(concurrency),
     )
 
-    os.makedirs(cache, exist_ok=True)
+    cache.mkdir(parents=True, exist_ok=True)
 
     # Configure logging
     if verbose > 2:
@@ -248,22 +249,24 @@ def serve_http(options, decks, do_open, bind, run_seconds):
     html_written = set()
     for deck in read_final_decks(decks, options):
         file_name = deck.title.replace("/", "--") + ".html"
-        html_path = os.path.join(options.cache_path, file_name)
+        html_path = options.cache_path / file_name
         if html_path in html_written:
             raise KeyError(
                 f"Duplicate path after munging deck title: {html_path}"
             )
         html_written.add(html_path)
 
-        with open(html_path, "w", encoding="utf_8") as file:
-            file.write(htmlize_deck(deck, path_prefix=""))
+        html_path.write_text(
+            htmlize_deck(deck, path_prefix=""),
+            encoding="utf_8",
+        )
 
         deck_links.append((file_name, deck))
 
     # FIXME serve html from memory so that you can run multiple copies of
     # this tool at once.
-    index_path = os.path.join(options.cache_path, "index.html")
-    with open(index_path, "w", encoding="utf_8") as file:
+    index_path = options.cache_path / "index.html"
+    with index_path.open("w", encoding="utf_8") as file:
         file.write(generate_index_html(deck_links))
 
     # FIXME it would be great to just serve this directory as /static without
