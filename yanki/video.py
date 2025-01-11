@@ -8,6 +8,7 @@ import logging
 import math
 from multiprocessing import cpu_count
 import os
+from pathlib import Path
 from os.path import getmtime
 import shlex
 import tempfile
@@ -48,7 +49,7 @@ class FFmpegError(RuntimeError):
 class VideoOptions:
     """Options for processing videos."""
 
-    cache_path: str
+    cache_path: Path
     reprocess: bool = False
     semaphore: asyncio.Semaphore = asyncio.Semaphore(cpu_count())
 
@@ -173,7 +174,7 @@ class Video:
         self._parameters = {}
 
     def cached(self, filename):
-        return os.path.join(self.options.cache_path, filename)
+        return self.options.cache_path / filename
 
     def info_cache_path(self):
         return self.cached(f"info_{self.id}.json")
@@ -217,7 +218,7 @@ class Video:
     @functools.cache
     def info(self):
         try:
-            with open(self.info_cache_path(), "r", encoding="utf_8") as file:
+            with self.info_cache_path().open("r", encoding="utf_8") as file:
                 return json.load(file)
         except FileNotFoundError:
             # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
@@ -226,8 +227,8 @@ class Video:
             pass
 
         info = self._download_info()
-        with open(self.info_cache_path(), "w", encoding="utf_8") as file:
-            file.write(json.dumps(info))
+        with self.info_cache_path().open("w", encoding="utf_8") as file:
+            json.dump(info, file)
         return info
 
     def title(self):
@@ -237,34 +238,32 @@ class Video:
         self.logger.debug(f"refresh raw metadata: {self.raw_video()}")
         self._raw_metadata = ffmpeg.probe(self.raw_video())
 
-        with open(
-            self.raw_metadata_cache_path(), "w", encoding="utf_8"
-        ) as file:
+        with self.raw_metadata_cache_path().open("w", encoding="utf_8") as file:
             json.dump(self._raw_metadata, file)
 
         return self._raw_metadata
 
     # This will refresh metadata once if it doesn’t find the passed path the
     # first time.
-    def raw_metadata(self, *path):
+    def raw_metadata(self, *key_path):
         try:
             # FIXME? Track if ffprobe was already run and don’t run it again.
             if self._raw_metadata:
-                return get_key_path(self._raw_metadata, path)
+                return get_key_path(self._raw_metadata, key_path)
 
             metadata_cache_path = self.raw_metadata_cache_path()
             if getmtime(metadata_cache_path) >= getmtime(self.raw_video()):
                 # Metadata isn’t older than raw video.
-                with open(metadata_cache_path, "r", encoding="utf_8") as file:
+                with metadata_cache_path.open("r", encoding="utf_8") as file:
                     self._raw_metadata = json.load(file)
-                    return get_key_path(self._raw_metadata, path)
+                    return get_key_path(self._raw_metadata, key_path)
         except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):
             # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have the
             # key path. We use `pass` here to avoid adding this exception to the
             # context of new exceptions.
             pass
 
-        return get_key_path(self.refresh_raw_metadata(), path)
+        return get_key_path(self.refresh_raw_metadata(), key_path)
 
     def get_fps(self):
         for stream in self.raw_metadata("streams"):
@@ -439,7 +438,7 @@ class Video:
             return source_path
 
         path = self.raw_video_cache_path()
-        if os.path.exists(path) and os.stat(path).st_size > 0:
+        if path.exists() and path.stat().st_size > 0:
             # Already cached, and we can’t check if it’s out of date.
             return path
 

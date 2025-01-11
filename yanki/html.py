@@ -1,6 +1,6 @@
 from html import escape as h
-from os.path import dirname, realpath
 import os
+from pathlib import Path
 import sys
 import textwrap
 
@@ -82,32 +82,32 @@ def htmlize_deck(deck, path_prefix=""):
     ).lstrip()
 
 
-def ensure_static_link(cache_path):
+def ensure_static_link(cache_path: Path):
     web_files_path = path_to_web_files()
-    static_path = os.path.join(cache_path, "static")
+    static_path = cache_path / "static"
 
     try:
-        os.symlink(web_files_path, static_path)
+        static_path.symlink_to(web_files_path)
     except FileExistsError:
-        if os.readlink(static_path) == web_files_path:
+        if static_path.readlink() == web_files_path:
             # Symlink already exists
             return
 
     try:
-        os.remove(static_path)
+        static_path.unlink()
     except Exception as e:
-        sys.exit(f"Error removing {static_path} replace with symlink: {e}")
+        sys.exit(f"Error removing {static_path} to replace with symlink: {e}")
 
     try:
-        os.symlink(web_files_path, static_path)
+        static_path.symlink_to(web_files_path)
     except Exception as e:
         sys.exit(f"Error symlinking {static_path} to {web_files_path}: {e}")
 
 
-def path_to_web_files():
-    return os.path.join(dirname(dirname(realpath(__file__))), "web-files")
+def path_to_web_files() -> Path:
+    return Path(__file__).resolve().parent.parent / "web-files"
 
 
-def static_url(path):
-    mtime = os.path.getmtime(os.path.join(path_to_web_files(), path))
+def static_url(path) -> str:
+    mtime = os.path.getmtime(path_to_web_files() / path)
     return f"/static/{path}?{mtime}"
