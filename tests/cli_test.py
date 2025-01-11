@@ -132,6 +132,10 @@ def test_yanki_list_final_notes(yanki, reference_deck_path, cache_path):
     assert result.stdout.startswith(f"{cache_path}/processed_file\\=||")
     assert result.stderr == ""
 
+    # Might as well check CACHEDIR.TAG too. See https://bford.info/cachedir/
+    contents = (cache_path / "CACHEDIR.TAG").read_bytes()
+    assert contents[:43] == b"Signature: 8a477f597d28d172789f06886806bc55"
+
 
 # Fake `open` doesn’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
