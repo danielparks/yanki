@@ -10,7 +10,7 @@ def find_deck_files(base_path):
 
 
 def read_first_line(path):
-    with open(path, "r", encoding="UTF-8") as input:
+    with open(path, "r", encoding="utf_8") as input:
         for line in input:
             return line
 

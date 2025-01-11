@@ -144,7 +144,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.option(
     "-o",
     "--output",
@@ -170,7 +170,7 @@ def build(options, decks, output):
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.option(
     "-f",
     "--format",
@@ -200,7 +200,7 @@ def list_notes(options, decks, format):
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.pass_obj
 def to_html(options, decks):
     """Display decks as HTML on stdout."""
@@ -209,7 +209,7 @@ def to_html(options, decks):
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.option(
     "-o",
     "--open/--no-open",
@@ -255,7 +255,7 @@ def serve_http(options, decks, do_open, bind, run_seconds):
             )
         html_written.add(html_path)
 
-        with open(html_path, "w", encoding="utf-8") as file:
+        with open(html_path, "w", encoding="utf_8") as file:
             file.write(htmlize_deck(deck, path_prefix=""))
 
         deck_links.append((file_name, deck))
@@ -263,7 +263,7 @@ def serve_http(options, decks, do_open, bind, run_seconds):
     # FIXME serve html from memory so that you can run multiple copies of
     # this tool at once.
     index_path = os.path.join(options.cache_path, "index.html")
-    with open(index_path, "w", encoding="utf-8") as file:
+    with open(index_path, "w", encoding="utf_8") as file:
         file.write(generate_index_html(deck_links))
 
     # FIXME it would be great to just serve this directory as /static without
@@ -319,7 +319,7 @@ def open_videos(options, urls):
 
 
 @cli.command()
-@click.argument("files", nargs=-1, type=click.File("r", encoding="UTF-8"))
+@click.argument("files", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.pass_obj
 def open_videos_from_file(options, files):
     """
@@ -403,7 +403,7 @@ def open_in_app(arguments):
         command_line,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
-        encoding="UTF-8",
+        encoding="utf_8",
     )
 
     if result.returncode != 0:

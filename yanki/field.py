@@ -74,7 +74,7 @@ class MediaFragment(Fragment):
     def html_path_in_base(self, base_path):
         """Get the path relative to base_path, and encoded for HTML."""
         return html.escape(
-            quote(self.path_in_base(base_path), encoding="UTF-8")
+            quote(self.path_in_base(base_path), encoding="utf_8")
         )
 
     def media_paths(self):
