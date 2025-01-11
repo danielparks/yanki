@@ -217,3 +217,22 @@ https://www.youtube.com/watch?v=Esuc74eXfMA UNDER / SUBORDINATE
 https://www.youtube.com/watch?v=jQC2QdxW9u0 ABOVE / SUPERIOR
   trim: 16F-88F
   more+ rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
+
+# From video
+tags: +extra
+https://www.youtube.com/watch?v=DyYb5Y2efP4 APARTMENT
+  trim: 8F-72F
+  more+ html:<h1>#APT</h1>
+  more+ rst:`APARTMENT <https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm>`_
+
+https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one handed)
+  trim: 4F-56F
+  more+ rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
+https://www.youtube.com/watch?v=tNas8PN6pIQ THAT (specific, Y-hand)
+  trim: 12F-51F
+  more+ rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
+https://www.youtube.com/watch?v=IujovunU_X8 THAT (non-specific, two handed)
+  trim: 0-60F
+  more+ rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
+
+# Couldn’t find video for [natural]-GAS or G-A-S.
