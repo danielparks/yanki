@@ -1,8 +1,7 @@
 # Build Anki decks from text files containing YouTube URLs
 
 ```
-poetry install
-poetry run yanki asl/lesson-01.deck
+uv run yanki asl/lesson-01.deck
 ```
 
 That will produce an `asl/lesson-01.apkg` file.
