@@ -25,8 +25,7 @@ def reference_deck_path(tmp_path_factory):
     decks = tmp_path_factory.mktemp("decks")
     shutil.copy("test-decks/good/media/first.png", decks / "first.png")
     path = decks / "reference.deck"
-    with open(path, "w") as file:
-        file.write(REFERENCE_DECK)
+    path.write_text(REFERENCE_DECK, encoding="utf_8")
     return path
 
 

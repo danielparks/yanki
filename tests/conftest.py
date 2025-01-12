@@ -13,8 +13,7 @@ def bin_path(tmp_path_factory):
 
     for command in ["open", "xdg-open"]:
         open_path = path / command
-        with open(open_path, "w") as file:
-            file.write("#!/bin/sh\necho $*\n")
+        open_path.write_bytes(b"#!/bin/sh\necho $*\n")
         open_path.chmod(0o755)
 
     return path
