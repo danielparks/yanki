@@ -79,7 +79,7 @@ https://www.youtube.com/watch?v=BV6mXa4Gp58 @12F-68F TEACH
 #  trim: 12F-68F
 https://www.youtube.com/watch?v=Y4OjOj7eaK0 WE-2
   trim: 12F-56F
-https://www.youtube.com/watch?v=_V31e361KV8 -> WHO-[legacy-version]?
+https://www.youtube.com/watch?v=_V31e361KV8 -> WHO? (legacy version)
   trim: 14F-63F
 
 # From video (https://www.youtube.com/watch?v=DaMjr4AfYA0)
@@ -99,9 +99,11 @@ https://www.youtube.com/watch?v=ZJ80gGVl7yg REVIEW
   trim: 20F-93F
 https://www.youtube.com/watch?v=J8cuP-YSZIA DEAF-APPLAUSE / yay
   trim: 9F-
-https://www.youtube.com/watch?v=Ht2B0VzHFwQ KNOW
+# No video for just plain KNOW
+https://www.youtube.com/watch?v=Ht2B0VzHFwQ FAMILIAR / KNOWLEDGE
   trim: 9F-72F
-https://www.youtube.com/watch?v=MBzzJk_5WwY -> KNOW-[casual-version]
+  more+ KNOW would be a single movement.
+https://www.youtube.com/watch?v=MBzzJk_5WwY -> KNOW (casual version)
   trim: 16F-52F
 https://www.youtube.com/watch?v=UF79ZPZz1hA don’t-KNOW
   trim: 9F-38F
