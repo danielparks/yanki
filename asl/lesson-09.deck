@@ -21,94 +21,85 @@ https://www.youtube.com/watch?v=ZcJGws8g8uE COUCH
   trim: 14F-87F
   more: +rst:`COUCH <https://www.lifeprint.com/asl101/pages-signs/c/couch.htm>`_
 
-https://www.youtube.com/watch?v=xzIU5tmBrLc
-  DOOR / cupboard / closet / cabinet / locker
-  trim: 11F-77F
+group:
   more: +rst:`DOOR <https://www.lifeprint.com/asl101/pages-signs/d/door.htm>`_
-https://www.youtube.com/watch?v=SDTlfgtJKlI OPEN-DOOR
-  trim: 17F-85F
-  more: +rst:`DOOR <https://www.lifeprint.com/asl101/pages-signs/d/door.htm>`_
-https://www.youtube.com/watch?v=kCiFi6IQpBE CLOSE-DOOR
-  trim: 14F-79F
-  more: +rst:`DOOR <https://www.lifeprint.com/asl101/pages-signs/d/door.htm>`_
-https://www.youtube.com/watch?v=LEWPXaskrJk OPEN
-  trim: 22F-77F
-  more: +rst:`DOOR <https://www.lifeprint.com/asl101/pages-signs/d/door.htm>`_
-https://www.youtube.com/watch?v=adXm1AhwMBM CLOSE / CLOSED
-  trim: 25F-85F
-  more: +rst:`DOOR <https://www.lifeprint.com/asl101/pages-signs/d/door.htm>`_
+
+  https://www.youtube.com/watch?v=xzIU5tmBrLc
+    DOOR / cupboard / closet / cabinet / locker
+    trim: 11F-77F
+  https://www.youtube.com/watch?v=SDTlfgtJKlI OPEN-DOOR
+    trim: 17F-85F
+  https://www.youtube.com/watch?v=kCiFi6IQpBE CLOSE-DOOR
+    trim: 14F-79F
+  https://www.youtube.com/watch?v=LEWPXaskrJk OPEN
+    trim: 22F-77F
+  https://www.youtube.com/watch?v=adXm1AhwMBM CLOSE / CLOSED
+    trim: 25F-85F
 
 https://www.youtube.com/watch?v=9G23AjmjyV4 DRESSER / DRAWER
   trim: 13F-76F
   more: +rst:`DRESSER <https://www.lifeprint.com/asl101/pages-signs/d/dresser.htm>`_
 
-https://www.youtube.com/watch?v=NuXm0_3x6n8 DRY
-  trim: 9F-64F
+group:
   more: +rst:`DRYER <https://www.lifeprint.com/asl101/pages-signs/d/dryer.htm>`_
-https://www.youtube.com/watch?v=OF3KatN3TgU DRYER-[DRY-DRY-version]
-  trim: 11F-54F
-  more: +rst:`DRYER <https://www.lifeprint.com/asl101/pages-signs/d/dryer.htm>`_
-https://www.youtube.com/watch?v=HsCGIr9TDbE DRYER-[DRY-spin-around-version]
-  trim: 8F-72F
-  more: +rst:`DRYER <https://www.lifeprint.com/asl101/pages-signs/d/dryer.htm>`_
+
+  https://www.youtube.com/watch?v=NuXm0_3x6n8 DRY
+    trim: 9F-64F
+  https://www.youtube.com/watch?v=OF3KatN3TgU DRYER-[DRY-DRY-version]
+    trim: 11F-54F
+  https://www.youtube.com/watch?v=HsCGIr9TDbE DRYER-[DRY-spin-around-version]
+    trim: 8F-72F
 
 https://www.youtube.com/watch?v=6i1516QNfaY GARAGE
   trim: 15F-
   more: +rst:`GARAGE <https://www.lifeprint.com/asl101/pages-signs/g/garage.htm>`_
 
-# I’m unsure about my interpretation of THROW-OUT and THROW-AWAY
-https://www.youtube.com/watch?v=sHFqJ68Ev8o GARBAGE / trash
-  trim: 4F-
-  more: +rst:`GARBAGE <https://www.lifeprint.com/asl101/pages-signs/g/garbage.htm>`_
-https://www.youtube.com/watch?v=TCopmoEfXaw THROW-AWAY (small variant)
-  trim: 14F-44F
-  more: +rst:`GARBAGE <https://www.lifeprint.com/asl101/pages-signs/g/garbage.htm>`_
-https://www.youtube.com/watch?v=TnWogCQKnXQ THROW-OUT (big variant)
-  trim: 9F-74F
+group:
   more: +rst:`GARBAGE <https://www.lifeprint.com/asl101/pages-signs/g/garbage.htm>`_
 
-https://www.youtube.com/watch?v=-yEO1YL7dSg KITCHEN (“cook” variation)
-  trim: 15F-79F
-  more: +rst:`KITCHEN <https://www.lifeprint.com/asl101/pages-signs/k/kitchen.htm>`_
-https://www.youtube.com/watch?v=u6KL0UFbL5M KITCHEN (one-handed variation)
-  trim: 6F-64F
-  more: +rst:`KITCHEN <https://www.lifeprint.com/asl101/pages-signs/k/kitchen.htm>`_
-https://www.youtube.com/watch?v=Xy0FCuz1KHw COOK / KITCHEN
-  trim: 12F-70F
+  # I’m unsure about my interpretation of THROW-OUT and THROW-AWAY
+  https://www.youtube.com/watch?v=sHFqJ68Ev8o GARBAGE / trash
+    trim: 4F-
+  https://www.youtube.com/watch?v=TCopmoEfXaw THROW-AWAY (small variant)
+    trim: 14F-44F
+  https://www.youtube.com/watch?v=TnWogCQKnXQ THROW-OUT (big variant)
+    trim: 9F-74F
+
+group:
   more: +rst:`KITCHEN <https://www.lifeprint.com/asl101/pages-signs/k/kitchen.htm>`_
 
-# LIGHTS / LIGHTS-ON is in lesson 8
-https://www.youtube.com/watch?v=u33E8wPkfyU LIGHTS-FLASH
-  trim: 11F-57F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-https://www.youtube.com/watch?v=aCIocBQ6ylU
-  LIGHT-device / LIGHT-bulb / LIGHT (general)
-  trim: 9F-102F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-https://www.youtube.com/watch?v=uKSJnAaaXBE BRIGHT / CLEAR / OBVIOUS
-  trim: 10F-71F
+  https://www.youtube.com/watch?v=-yEO1YL7dSg KITCHEN (“cook” variation)
+    trim: 15F-79F
+  https://www.youtube.com/watch?v=u6KL0UFbL5M KITCHEN (one-handed variation)
+    trim: 6F-64F
+  https://www.youtube.com/watch?v=Xy0FCuz1KHw COOK / KITCHEN
+    trim: 12F-70F
+
+group:
   more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
 
-tags: +extra
-https://www.youtube.com/watch?v=fnYd3XHdEPI RAY-of-light / SUN-ray
-  trim: 28F-78F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-https://www.youtube.com/watch?v=KOKG7jy8Loo LAMP
-  trim: 13F-70F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-https://www.youtube.com/watch?v=dTjopMLqGIQ HEADLIGHTS
-  trim: 37F-88F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-https://www.youtube.com/watch?v=C37R_Ix8-qs LIGHT-A-MATCH
-  trim: 11F-72F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-https://www.youtube.com/watch?v=lnbXEMxYdn4 AMBULANCE / LIGHTS-rotating-flashing
-  trim: 13F-86F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-https://www.youtube.com/watch?v=_zgfuzlhI9Q LIGHT-WEIGHT
-  trim: 25F-92F
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
-tags: -extra
+  # LIGHTS / LIGHTS-ON is in lesson 8
+  https://www.youtube.com/watch?v=u33E8wPkfyU LIGHTS-FLASH
+    trim: 11F-57F
+  https://www.youtube.com/watch?v=aCIocBQ6ylU
+    LIGHT-device / LIGHT-bulb / LIGHT (general)
+    trim: 9F-102F
+  https://www.youtube.com/watch?v=uKSJnAaaXBE BRIGHT / CLEAR / OBVIOUS
+    trim: 10F-71F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=fnYd3XHdEPI RAY-of-light / SUN-ray
+    trim: 28F-78F
+  https://www.youtube.com/watch?v=KOKG7jy8Loo LAMP
+    trim: 13F-70F
+  https://www.youtube.com/watch?v=dTjopMLqGIQ HEADLIGHTS
+    trim: 37F-88F
+  https://www.youtube.com/watch?v=C37R_Ix8-qs LIGHT-A-MATCH
+    trim: 11F-72F
+  https://www.youtube.com/watch?v=lnbXEMxYdn4 AMBULANCE / LIGHTS-rotating-flashing
+    trim: 13F-86F
+  https://www.youtube.com/watch?v=_zgfuzlhI9Q LIGHT-WEIGHT
+    trim: 25F-92F
 
 https://www.youtube.com/watch?v=kzvEJrS357s MICROWAVE
   trim: 9F-57F
@@ -127,55 +118,53 @@ https://www.youtube.com/watch?v=iJ8TFRWJutE SHOWER
   trim: 11F-58F
   more: +rst:`SHOWER <https://www.lifeprint.com/asl101/pages-signs/s/shower.htm>`_
 
-https://www.youtube.com/watch?v=iZJAZYXj-Gw #SINK
-  trim: 11F-61F
+group:
   more: +rst:`SINK <https://www.lifeprint.com/asl101/pages-signs/s/sink.htm>`_
 
-tags: +extra
-https://www.youtube.com/watch?v=fwnMkFs7sdc SINK (depictive version)
-  trim: 4F-
-  more: +rst:`SINK <https://www.lifeprint.com/asl101/pages-signs/s/sink.htm>`_
-https://www.youtube.com/watch?v=TIi1dumlqjE SINK (verb) / to become submerged
-  trim: 8F-58F
-  more: +rst:`SINK <https://www.lifeprint.com/asl101/pages-signs/s/sink.htm>`_
-tags: -extra
+  https://www.youtube.com/watch?v=iZJAZYXj-Gw #SINK
+    trim: 11F-61F
 
-https://www.youtube.com/watch?v=c75leThE9AQ #STOVE
-  trim: 11F-62F
+  tags: +extra
+  https://www.youtube.com/watch?v=fwnMkFs7sdc SINK (depictive version)
+    trim: 4F-
+  https://www.youtube.com/watch?v=TIi1dumlqjE SINK (verb) / to become submerged
+    trim: 8F-58F
+
+group:
   more: +rst:`STOVE <https://www.lifeprint.com/asl101/pages-signs/s/stove.htm>`_
 
-tags: +extra
-https://www.youtube.com/watch?v=3_2Zyn10sZI #OVEN
-  trim: 22F-86F
-  more: +rst:`STOVE <https://www.lifeprint.com/asl101/pages-signs/s/stove.htm>`_
-https://www.youtube.com/watch?v=bf1X67Lhu6A OVEN / BAKING
-  more: +rst:`STOVE <https://www.lifeprint.com/asl101/pages-signs/s/stove.htm>`_
-https://www.youtube.com/watch?v=Q0vD9t1u5bI BAKE
-  trim: 14F-67F
-  more: +rst:`STOVE <https://www.lifeprint.com/asl101/pages-signs/s/stove.htm>`_
-tags: -extra
+  https://www.youtube.com/watch?v=c75leThE9AQ #STOVE
+    trim: 11F-62F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=3_2Zyn10sZI #OVEN
+    trim: 22F-86F
+  https://www.youtube.com/watch?v=bf1X67Lhu6A OVEN / BAKING
+  https://www.youtube.com/watch?v=Q0vD9t1u5bI BAKE
+    trim: 14F-67F
 
 https://www.youtube.com/watch?v=UJINxF1cSUA TABLE / DESK
   trim: 11F-73F
   more: +rst:`TABLE <https://www.lifeprint.com/asl101/pages-signs/t/table.htm>`_
 
-https://www.youtube.com/watch?v=VqFX50Z9Y60 WINDOW
-  trim: 10F-75F
-  more: +rst:`WINDOW <https://www.lifeprint.com/asl101/pages-signs/w/window.htm>`_
-https://www.youtube.com/watch?v=C_e84lDOEoU OPEN-WINDOW
-  trim: 10F-69F
-  more: +rst:`WINDOW <https://www.lifeprint.com/asl101/pages-signs/w/window.htm>`_
-https://www.youtube.com/watch?v=a5IIsvDsjcQ CLOSE-WINDOW
-  trim: 10F-72F
+group:
   more: +rst:`WINDOW <https://www.lifeprint.com/asl101/pages-signs/w/window.htm>`_
 
-https://www.youtube.com/watch?v=BrSb83b9kbY YESTERDAY
-  trim: 13F-72F
+  https://www.youtube.com/watch?v=VqFX50Z9Y60 WINDOW
+    trim: 10F-75F
+  https://www.youtube.com/watch?v=C_e84lDOEoU OPEN-WINDOW
+    trim: 10F-69F
+  https://www.youtube.com/watch?v=a5IIsvDsjcQ CLOSE-WINDOW
+    trim: 10F-72F
+
+group:
   more: +rst:`YESTERDAY <https://www.lifeprint.com/asl101/pages-signs/y/yesterday.htm>`_
-https://www.youtube.com/watch?v=WaIrad_avQI -> YESTERDAY (initialized)
-  trim: 30F-89F
-  more: +rst:`YESTERDAY <https://www.lifeprint.com/asl101/pages-signs/y/yesterday.htm>`_
-  tags: +extra
+
+  https://www.youtube.com/watch?v=BrSb83b9kbY YESTERDAY
+    trim: 13F-72F
+  https://www.youtube.com/watch?v=WaIrad_avQI -> YESTERDAY (initialized)
+    trim: 30F-89F
+    tags: +extra
 
 # SAY is in lesson 5 extra
 https://www.youtube.com/watch?v=-Dv4nnY_F18 what-SAY / What was said?
@@ -187,52 +176,48 @@ https://www.youtube.com/watch?v=6IXVVDel4lw TOOTHPASTE
   trim: 13F-74F
   more: +rst:`TOOTHPASTE <https://www.lifeprint.com/asl101/pages-signs/t/toothpaste.htm>`_
 
-https://www.youtube.com/watch?v=7Z1WMbq2Y6E AHEAD
-  trim: 9F-77F
+
+group:
   more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=VoetY5cF1Oo BEHIND
-  trim: 8F-67F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=l2fU_9FofrE FALL-BEHIND
-  trim: 10F-69F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=ESOxu86BLGw AVOID
-  trim: 57F-116F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=6ywnNz3BaMk FOLLOW / following / obey
-  trim: 4F-53F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=P0g3SiRW__4 CATCH-UP
-  trim: 6F-65F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=PNp3dIAoFGA CHASE
-  trim: 11F-69F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=H37s1WoEGEs RACE / COMPETE
-  trim: 7F-68F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=Esuc74eXfMA UNDER / SUBORDINATE
-  trim: 16F-75F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
-https://www.youtube.com/watch?v=jQC2QdxW9u0 ABOVE / SUPERIOR
-  trim: 16F-88F
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
+
+  https://www.youtube.com/watch?v=7Z1WMbq2Y6E AHEAD
+    trim: 9F-77F
+  https://www.youtube.com/watch?v=VoetY5cF1Oo BEHIND
+    trim: 8F-67F
+  https://www.youtube.com/watch?v=l2fU_9FofrE FALL-BEHIND
+    trim: 10F-69F
+  https://www.youtube.com/watch?v=ESOxu86BLGw AVOID
+    trim: 57F-116F
+  https://www.youtube.com/watch?v=6ywnNz3BaMk FOLLOW / following / obey
+    trim: 4F-53F
+  https://www.youtube.com/watch?v=P0g3SiRW__4 CATCH-UP
+    trim: 6F-65F
+  https://www.youtube.com/watch?v=PNp3dIAoFGA CHASE
+    trim: 11F-69F
+  https://www.youtube.com/watch?v=H37s1WoEGEs RACE / COMPETE
+    trim: 7F-68F
+  https://www.youtube.com/watch?v=Esuc74eXfMA UNDER / SUBORDINATE
+    trim: 16F-75F
+  https://www.youtube.com/watch?v=jQC2QdxW9u0 ABOVE / SUPERIOR
+    trim: 16F-88F
 
 # From video
-tags: +extra
-https://www.youtube.com/watch?v=DyYb5Y2efP4 APARTMENT
-  trim: 8F-72F
-  more: +html:<h1>#APT</h1>
-  more: +rst:`APARTMENT <https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm>`_
+group:
+  tags: +extra
 
-https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one handed)
-  trim: 4F-56F
-  more: +rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
-https://www.youtube.com/watch?v=tNas8PN6pIQ THAT (specific, Y-hand)
-  trim: 12F-51F
-  more: +rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
-https://www.youtube.com/watch?v=IujovunU_X8 THAT (non-specific, two handed)
-  trim: 0-60F
-  more: +rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
+  https://www.youtube.com/watch?v=DyYb5Y2efP4 APARTMENT
+    trim: 8F-72F
+    more: +html:<h1>#APT</h1>
+    more: +rst:`APARTMENT <https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm>`_
 
-# Couldn’t find video for [natural]-GAS or G-A-S.
+  group:
+    more: +rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
+
+    https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one handed)
+      trim: 4F-56F
+    https://www.youtube.com/watch?v=tNas8PN6pIQ THAT (specific, Y-hand)
+      trim: 12F-51F
+    https://www.youtube.com/watch?v=IujovunU_X8 THAT (non-specific, two handed)
+      trim: 0-60F
+
+  # Couldn’t find video for [natural]-GAS or G-A-S.
