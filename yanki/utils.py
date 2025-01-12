@@ -1,19 +1,31 @@
 import os
+from pathlib import Path
 import tempfile
 from urllib.parse import urlparse
 import contextlib
 
 
-def file_url_to_path(url):
+class NotFileURL(ValueError):
+    """Raised by file_url_to_path() when the parameter is not a file:// URL."""
+
+    pass
+
+
+def file_url_to_path(url: str) -> Path:
+    """
+    Convert a file:// URL to a Path.
+
+    Raises NotFileURL if the URL is not a file:// URL.
+    """
     parts = urlparse(url)
     if parts.scheme.lower() != "file":
-        return None
+        raise NotFileURL(url)
 
     # urlparse doesn’t handle file: very well:
     #
     #   >>> urlparse('file://./media/first.png')
     #   ParseResult(scheme='file', netloc='.', path='/media/first.png', ...)
-    return parts.netloc + parts.path
+    return Path(parts.netloc + parts.path)
 
 
 def file_not_empty(path):

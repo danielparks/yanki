@@ -5,6 +5,7 @@ import genanki
 import hashlib
 import logging
 import os
+from pathlib import Path
 
 from yanki.field import Fragment, ImageFragment, VideoFragment, Field
 from yanki.parser import DeckSpec, NoteSpec, NOTE_VARIABLES
@@ -120,7 +121,7 @@ class Note:
         try:
             video = Video(
                 self.spec.video_url(),
-                working_dir=deck_dir,
+                working_dir=Path(deck_dir),
                 options=self.video_options,
                 logger=self.logger,
             )
