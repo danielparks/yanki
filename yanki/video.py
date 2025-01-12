@@ -577,33 +577,33 @@ class Video:
             if wants_video:
                 parts.append(
                     vsplit[i]
-                    .filter("select", f"between(t,0,{start})")
+                    .filter("trim", start=0, end=start)
                     .filter("setpts", "PTS-STARTPTS")
                 )
             if wants_audio:
                 parts.append(
                     asplit[i]
-                    .filter("aselect", f"between(t,0,{start})")
+                    .filter("atrim", start=0, end=start)
                     .filter("asetpts", "PTS-STARTPTS")
                 )
             i += 1
 
         if end is None:
-            expression = f"gte(t,{start})"
+            expression = {"start": start}
         else:
-            expression = f"between(t,{start},{end})"
+            expression = {"start": start, "end": end}
 
         if wants_video:
             parts.append(
                 vsplit[i]
-                .filter("select", expression)
+                .filter("trim", **expression)
                 .filter("setpts", "PTS-STARTPTS")
                 .setpts(f"{amount}*PTS")
             )
         if wants_audio:
             part = (
                 asplit[i]
-                .filter("aselect", expression)
+                .filter("atrim", **expression)
                 .filter("asetpts", "PTS-STARTPTS")
             )
 
@@ -627,13 +627,13 @@ class Video:
             if wants_video:
                 parts.append(
                     vsplit[i]
-                    .filter("select", f"gte(t,{end})")
+                    .filter("trim", start=end)
                     .filter("setpts", "PTS-STARTPTS")
                 )
             if wants_audio:
                 parts.append(
                     asplit[i]
-                    .filter("aselect", f"gte(t,{end})")
+                    .filter("atrim", start=end)
                     .filter("asetpts", "PTS-STARTPTS")
                 )
 
