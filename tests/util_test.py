@@ -1,8 +1,9 @@
 import os
+from pathlib import Path
 import pytest
 
 
-from yanki.utils import atomic_open
+from yanki.utils import atomic_open, file_url_to_path, NotFileURL
 
 
 def test_atomic_open(tmp_path):
@@ -49,3 +50,17 @@ def test_atomic_open_deleted(tmp_path):
 
     assert not path.exists()
     assert [path.name for path in tmp_path.iterdir()] == []
+
+
+def test_file_url_to_path():
+    with pytest.raises(NotFileURL):
+        file_url_to_path("foo")
+    with pytest.raises(NotFileURL):
+        file_url_to_path("http://example.com/foo")
+
+    assert file_url_to_path("file://a/b/c") == Path("a/b/c")
+
+    base = Path("/BASE")
+    assert base / file_url_to_path("file:///a/b/c") == Path("/a/b/c")
+    assert base / file_url_to_path("file://./a/b/c") == Path("/BASE/a/b/c")
+    assert base / file_url_to_path("file://") == Path("/BASE")

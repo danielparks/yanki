@@ -7,7 +7,6 @@ import json
 import logging
 import math
 from multiprocessing import cpu_count
-import os
 from pathlib import Path
 from os.path import getmtime
 import shlex
@@ -21,6 +20,7 @@ from yanki.utils import (
     atomic_open,
     get_key_path,
     chars_in,
+    NotFileURL,
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -124,7 +124,7 @@ class Video:
         self,
         url,
         options,
-        working_dir=".",
+        working_dir=Path("."),
         logger=LOGGER,
     ):
         self.url = url
@@ -178,12 +178,14 @@ class Video:
         )
 
     def _download_info(self):
-        path = file_url_to_path(self.url)
-        if path is not None:
+        try:
+            path = file_url_to_path(self.url)
             return {
-                "title": os.path.splitext(os.path.basename(path))[0],
-                "ext": os.path.splitext(path)[1][1:],
+                "title": path.stem,
+                "ext": path.suffix[1:],
             }
+        except NotFileURL:
+            pass
 
         try:
             with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
@@ -409,12 +411,13 @@ class Video:
 
     @functools.cache
     def raw_video(self):
-        # If it’s a file:// URL, then there’s no need to cache.
-        source_path = file_url_to_path(self.url)
-        if source_path is not None:
-            source_path = os.path.join(self.working_dir, source_path)
+        try:
+            # If it’s a file:// URL, then there’s no need to cache.
+            source_path = self.working_dir / file_url_to_path(self.url)
             self.logger.info(f"using local raw video {source_path}")
             return source_path
+        except NotFileURL:
+            pass
 
         path = self.raw_video_cache_path()
         if path.exists() and path.stat().st_size > 0:
@@ -482,7 +485,9 @@ class Video:
         parameters = " ".join(self.parameters())
         self.logger.info(f"processing with ({parameters}) to {output_path}")
 
-        stream = ffmpeg.input(self.raw_video(), **self.ffmpeg_input_options())
+        stream = ffmpeg.input(
+            str(self.raw_video()), **self.ffmpeg_input_options()
+        )
         output_streams = dict()
 
         if self.wants_video():

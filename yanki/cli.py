@@ -313,10 +313,7 @@ def serve_http(options, decks, do_open, bind, run_seconds):
 def open_videos(options, urls):
     """Download and process the video URLs, then open them with `open`."""
     for url in urls:
-        video = Video(
-            url,
-            options=options,
-        )
+        video = Video(url, options=options)
         open_in_app([video.processed_video()])
 
 
@@ -341,10 +338,7 @@ def open_videos_from_file(options, files):
                 next
 
             try:
-                video = Video(
-                    url,
-                    options=options,
-                )
+                video = Video(url, options=options)
                 open_in_app([video.processed_video()])
             except BadURL as error:
                 print(f"Error: {error}")
