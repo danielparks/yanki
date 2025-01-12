@@ -11,11 +11,17 @@ import os
 from pathlib import Path
 from os.path import getmtime
 import shlex
-import tempfile
 from urllib.parse import urlparse, parse_qs
 import yt_dlp
 
 from yanki.errors import ExpectedError
+from yanki.utils import (
+    file_url_to_path,
+    file_not_empty,
+    atomic_open,
+    get_key_path,
+    chars_in,
+)
 
 LOGGER = logging.getLogger(__name__)
 
@@ -26,10 +32,6 @@ YT_DLP_OPTIONS = {
 
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
 FILENAME_ILLEGAL_CHARS = '/"[]:'
-
-
-def chars_in(chars, input):
-    return [char for char in chars if char in input]
 
 
 class BadURL(ExpectedError):
@@ -114,29 +116,6 @@ def url_to_id(url_str):
         .replace(":", r"\=")
         .replace("/", "|")
     )
-
-
-def file_url_to_path(url):
-    parts = urlparse(url)
-    if parts.scheme.lower() != "file":
-        return None
-
-    # urlparse doesn’t handle file: very well:
-    #
-    #   >>> urlparse('file://./media/first.png')
-    #   ParseResult(scheme='file', netloc='.', path='/media/first.png', ...)
-    return parts.netloc + parts.path
-
-
-def file_not_empty(path):
-    """Checks that the path is a file and is non-empty."""
-    return os.path.exists(path) and os.stat(path).st_size > 0
-
-
-def get_key_path(data, path: list[any]):
-    for key in path:
-        data = data[key]
-    return data
 
 
 # FIXME cannot be reused
@@ -227,7 +206,7 @@ class Video:
             pass
 
         info = self._download_info()
-        with self.info_cache_path().open("w", encoding="utf_8") as file:
+        with atomic_open(self.info_cache_path()) as file:
             json.dump(info, file)
         return info
 
@@ -238,7 +217,7 @@ class Video:
         self.logger.debug(f"refresh raw metadata: {self.raw_video()}")
         self._raw_metadata = ffmpeg.probe(self.raw_video())
 
-        with self.raw_metadata_cache_path().open("w", encoding="utf_8") as file:
+        with atomic_open(self.raw_metadata_cache_path()) as file:
             json.dump(self._raw_metadata, file)
 
         return self._raw_metadata
@@ -541,26 +520,13 @@ class Video:
         else:
             output_streams = [output_streams]
 
-        (_fd, temp_path) = tempfile.mkstemp(
-            dir=self.options.cache_path,
-            prefix=f"working_{self.id}",
-            suffix=f".{self.output_ext()}",
-        )
-
-        try:
+        with atomic_open(output_path, encoding=None) as file:
+            file.close()
             stream = ffmpeg.output(
-                *output_streams, temp_path, **self.ffmpeg_output_options()
+                *output_streams, file.name, **self.ffmpeg_output_options()
             ).overwrite_output()
 
             await self.run_async(stream)
-        except:
-            # Remove working file.
-            self.logger.debug(f"Caught failure; removing {temp_path!r}")
-            os.remove(temp_path)
-            raise
-
-        self.logger.debug(f"Success; moving {temp_path!r} to {output_path!r}")
-        os.replace(temp_path, output_path)
 
         return output_path
 
