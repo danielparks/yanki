@@ -266,8 +266,7 @@ def serve_http(options, decks, do_open, bind, run_seconds):
     # FIXME serve html from memory so that you can run multiple copies of
     # this tool at once.
     index_path = options.cache_path / "index.html"
-    with index_path.open("w", encoding="utf_8") as file:
-        file.write(generate_index_html(deck_links))
+    index_path.write_text(generate_index_html(deck_links), encoding="utf_8")
 
     # FIXME it would be great to just serve this directory as /static without
     # needing the symlink.
