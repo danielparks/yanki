@@ -1,205 +1,229 @@
 import io
+import logging
 import pytest
 import textwrap
 
 from yanki.parser import DeckParser, DeckSyntaxError
+from yanki.utils import add_trace_logging
+
+add_trace_logging()
+logging.getLogger("yanki.parser").setLevel(logging.TRACE)
+
+
+def parse_maybe_deck(contents, name="-"):
+    return list(DeckParser().parse_file(name, io.StringIO(contents)))
 
 
 def parse_deck(contents, name="-"):
-    # Strip extra indents and pretend it’s a file.
-    contents = io.StringIO(textwrap.dedent(contents))
-    specs = list(DeckParser().parse_file(name, contents))
+    specs = parse_maybe_deck(contents, name=name)
     assert len(specs) == 1
     return specs[0]
 
 
-def test_two_mores():
-    assert (
-        parse_deck(
-            """
-                title: a
-                more: one
-                more: +two
-            """
-        ).config.more.render_html()
-        == "onetwo"
-    )
+def parse_deck_dedent(contents, name="-"):
+    # Strip extra indents.
+    return parse_deck(textwrap.dedent(contents), name=name)
 
 
-def test_overlays():
-    assert (
-        parse_deck(
-            """
-                title: a
-                overlay_text: one
-            """
-        ).config.overlay_text
-        == "one"
-    )
-
-    assert (
-        parse_deck(
-            """
-                title: a
-                overlay_text: one
-                overlay_text: +two
-            """
-        ).config.overlay_text
-        == "onetwo"
-    )
+def test_empty_deck():
+    assert len(parse_maybe_deck("")) == 0
 
 
-def test_deck_config_whitespace():
-    assert (
-        parse_deck(
-            """
-                title: a
-                overlay_text: one"""
-        ).config.overlay_text
-        == "one"
-    )
-
-    assert (
-        parse_deck(
-            """
-                title: a
-                overlay_text: one
-                overlay_text:"""
-        ).config.overlay_text
-        == ""
-    )
-
-    assert (
-        parse_deck(
-            """
-                title: a
-                overlay_text: one
-                overlay_text:     \t"""
-        ).config.overlay_text
-        == ""
-    )
-
-    assert (
-        parse_deck(
-            """
-                title: a
-                overlay_text: one
-                overlay_text:
-            """
-        ).config.overlay_text
-        == ""
-    )
-
-
-def test_note_config_whitespace():
-    deck = parse_deck(
+def test_group():
+    deck = parse_deck_dedent(
         """
-            title: a
-            overlay_text: deck
+        title: a
+        overlay_text: deck
+        file:///one outer1
+        group:
+            overlay_text: group1
+            file:///two group1a
+            file:///three group1b
 
-            file:///foo note
-                overlay_text: one
+            overlay_text: group1b
+            file:///four group1c
+
+            group:
+                overlay_text: + group2
+                file:///five group2a
+        file:///six outer2
         """
     )
     assert deck.config.overlay_text == "deck"
-    assert deck.note_specs[0].config.overlay_text == "one"
+    assert len(deck.note_specs) == 6
 
+    assert deck.note_specs[0].video_url() == "file:///one"
+    assert deck.note_specs[0].text() == "outer1"
+    assert deck.note_specs[0].config.overlay_text == "deck"
+
+    assert deck.note_specs[1].video_url() == "file:///two"
+    assert deck.note_specs[1].text() == "group1a"
+    assert deck.note_specs[1].config.overlay_text == "group1"
+
+    assert deck.note_specs[2].video_url() == "file:///three"
+    assert deck.note_specs[2].text() == "group1b"
+    assert deck.note_specs[2].config.overlay_text == "group1"
+
+    assert deck.note_specs[3].video_url() == "file:///four"
+    assert deck.note_specs[3].text() == "group1c"
+    assert deck.note_specs[3].config.overlay_text == "group1b"
+
+    assert deck.note_specs[4].video_url() == "file:///five"
+    assert deck.note_specs[4].text() == "group2a"
+    assert deck.note_specs[4].config.overlay_text == "group1b group2"
+
+    assert deck.note_specs[5].video_url() == "file:///six"
+    assert deck.note_specs[5].text() == "outer2"
+    assert deck.note_specs[5].config.overlay_text == "deck"
+
+
+@pytest.mark.parametrize(
+    "lines,more_html",
+    [
+        (["more: one"], "one"),
+        (["more: one", "more: two"], "two"),
+        (["more: one", "more: +two"], "onetwo"),
+        (["more: one", "  two"], "one<br/>two"),
+        (["more: html:one", "  two"], "one\ntwo"),
+        (["more: html:one", "", "  two"], "one\n\ntwo"),
+        (["more: html:one", "  more: two"], "one\nmore: two"),
+    ],
+)
+def test_deck_more_parametrized(lines, more_html):
+    deck = parse_deck("title: a\n" + "\n".join(lines))
+    assert len(deck.note_specs) == 0
+    assert deck.config.more.render_html() == more_html
+
+
+@pytest.mark.parametrize(
+    "lines,overlay_text",
+    [
+        (["overlay_text: one"], "one"),
+        (["overlay_text: one", ""], "one"),
+        (["overlay_text: one", "overlay_text: two"], "two"),
+        (["overlay_text: one", "overlay_text: +two"], "onetwo"),
+        (["overlay_text: one", "overlay_text:"], ""),
+        (["overlay_text: one", "overlay_text:     \t"], ""),
+        (["overlay_text: one", "overlay_text:     \t", ""], ""),
+    ],
+)
+def test_deck_overlay_text_parametrized(lines, overlay_text):
+    deck = parse_deck("title: a\n" + "\n".join(lines))
+    assert len(deck.note_specs) == 0
+    assert deck.config.overlay_text == overlay_text
+
+
+@pytest.mark.parametrize(
+    "lines,overlay_text",
+    [
+        (["  overlay_text:"], ""),
+        (["  overlay_text:", ""], ""),
+        (["  overlay_text:     \t"], ""),
+        (["  overlay_text:     \t", ""], ""),
+        (["  overlay_text: one"], "one"),
+        (["  overlay_text: one", ""], "one"),
+        (["  overlay_text: one", "    two"], "one\ntwo"),
+        (["  overlay_text: one", "", "    two"], "one\n\ntwo"),
+        (["  overlay_text: one", "", "      two"], "one\n\ntwo"),
+        (["  overlay_text: one", "", "    two", ""], "one\n\ntwo"),
+        (["  overlay_text: one", "", "    two", "    "], "one\n\ntwo"),
+        (["  overlay_text: one", "", "    two", "      "], "one\n\ntwo"),
+        (
+            ["  overlay_text: one", "", "    two", "      three"],
+            "one\n\ntwo\n  three",
+        ),
+        (
+            ["  overlay_text: one", "", "    two", "      ", "    three"],
+            "one\n\ntwo\n\nthree",
+        ),
+        (["  overlay_text: one", "  overlay_text: two"], "two"),
+        (["  overlay_text: one", "  overlay_text: +two"], "onetwo"),
+        (["  overlay_text: one", "  overlay_text:"], ""),
+        (["  overlay_text: one", "  overlay_text:", ""], ""),
+        (["  overlay_text: one", "  overlay_text:     \t"], ""),
+        (["  overlay_text: one", "  overlay_text:     \t", ""], ""),
+    ],
+)
+def test_note_overlay_text_parametrized(lines, overlay_text):
     deck = parse_deck(
-        """
-            title: a
-            overlay_text: deck
-
-            file:///foo note
-                overlay_text: one"""
+        "title: a\noverlay_text: deck\nfile:///foo note\n"
+        + "\n".join(lines)
+        + "\n\nfile:///bar note2\n"
     )
+    assert len(deck.note_specs) == 2
     assert deck.config.overlay_text == "deck"
-    assert deck.note_specs[0].config.overlay_text == "one"
+    assert deck.note_specs[0].text() == "note"
+    assert deck.note_specs[0].config.overlay_text == overlay_text
+    assert deck.note_specs[1].text() == "note2"
+    assert deck.note_specs[1].config.overlay_text == "deck"
 
+
+@pytest.mark.parametrize(
+    "note_lines,parsed_text",
+    [
+        (["one", "  two", "  \t", "  three"], "one\ntwo\n\nthree"),
+        (["one", "  two", "  ", "  three"], "one\ntwo\n\nthree"),
+        (["one", "  two", " ", "  three"], "one\ntwo\n\nthree"),
+        (["one", "  two", "", "  three"], "one\ntwo\n\nthree"),
+        (["one", "  two", "  \tthree"], "one\ntwo\n\tthree"),
+        (["one  ", ""], "one"),
+        (["one  ", "  two  ", "     "], "one  \ntwo"),
+        (
+            ["one", "  overlay_text: ignore", "  two", "", "  three"],
+            "one\ntwo\n\nthree",
+        ),
+        (
+            ["one", "  two", "   overlay_text: not config", "  four"],
+            "one\ntwo\n overlay_text: not config\nfour",
+        ),
+        (
+            ["one", "  #two", "  three"],
+            "one\n#two\nthree",
+        ),
+        (
+            ["overlay_text: not config", "  two"],
+            "overlay_text: not config\ntwo",
+        ),
+        (
+            ["#one", "  two"],
+            "#one\ntwo",
+        ),
+    ],
+)
+def test_note_parametrized(note_lines, parsed_text):
     deck = parse_deck(
-        """
-            title: a
-            overlay_text: deck
-
-            file:///foo note
-                overlay_text:"""
+        "title: a\nfile:///foo "
+        + "\n".join(note_lines)
+        + "\nfile:///bar note2\n"
     )
-    assert deck.config.overlay_text == "deck"
-    assert deck.note_specs[0].config.overlay_text == ""
-
-    deck = parse_deck(
-        """
-            title: a
-            overlay_text: deck
-
-            file:///foo note
-                overlay_text:     \t"""
-    )
-    assert deck.config.overlay_text == "deck"
-    assert deck.note_specs[0].config.overlay_text == ""
-
-    deck = parse_deck(
-        """
-            title: a
-            overlay_text: deck
-
-            file:///foo note
-                overlay_text:
-        """
-    )
-    assert deck.config.overlay_text == "deck"
-    assert deck.note_specs[0].config.overlay_text == ""
+    assert len(deck.note_specs) == 2
+    assert deck.note_specs[0].text() == parsed_text
+    assert deck.note_specs[1].text() == "note2"
 
 
-def test_bad_config():
+@pytest.mark.parametrize(
+    "deck,message",
+    [
+        ("  bad", "Error in -, line 1: Unexpected indent"),
+        (
+            "title: a\nfile:///foo one\n  two\n bad",
+            "Error in -, line 4: Unexpected indent",
+        ),
+        (
+            "title: a\nfile:///foo note\n  illegal2: one",
+            "Error in -, line 3: Invalid config directive 'illegal2'",
+        ),
+        (
+            "file:///foo one",
+            "Error in -, line 0: Does not contain title",
+        ),
+        (
+            "title: a\n\tmore title",
+            "Error in -, line 1: Title cannot have more than one line",
+        ),
+    ],
+)
+def test_errors_parametrized(deck, message):
     with pytest.raises(DeckSyntaxError) as error_info:
-        parse_deck(
-            """
-                title: a
-                illegal: deck
-
-                file:///foo note
-                    overlay_text: one
-            """
-        )
-    assert error_info.match("Invalid config directive 'illegal'")
-
-    with pytest.raises(DeckSyntaxError) as error_info:
-        parse_deck(
-            """
-                title: a
-
-                file:///foo note
-                    illegal2: one
-            """
-        )
-    assert error_info.match("Invalid config directive 'illegal2'")
-
-
-def test_multiline_more():
-    with pytest.raises(DeckSyntaxError) as error_info:
-        assert (
-            parse_deck(
-                """
-                    title: a
-                    more: html:one
-                      two
-                """
-            ).config.more.render_html()
-            == "one\ntwo"
-        )
-    assert error_info.match("Found indented line ")
-
-
-def test_multiline_more_with_config():
-    with pytest.raises(DeckSyntaxError) as error_info:
-        assert (
-            parse_deck(
-                """
-                    title: a
-                    more: html:one
-                      more: two
-                """
-            ).config.more.render_html()
-            == "one\nmore: two"
-        )
-    assert error_info.match("Found indented line ")
+        parse_deck(deck)
+    assert str(error_info.value) == message

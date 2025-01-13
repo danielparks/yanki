@@ -1,8 +1,21 @@
+import contextlib
+from functools import partial, partialmethod
+import logging
 import os
 from pathlib import Path
 import tempfile
 from urllib.parse import urlparse
-import contextlib
+
+
+def add_trace_logging():
+    try:
+        logging.TRACE
+    except AttributeError:
+        # From user DerWeh at https://stackoverflow.com/a/55276759/1043949
+        logging.TRACE = 5
+        logging.addLevelName(logging.TRACE, "TRACE")
+        logging.Logger.trace = partialmethod(logging.Logger.log, logging.TRACE)
+        logging.trace = partial(logging.log, logging.TRACE)
 
 
 class NotFileURL(ValueError):

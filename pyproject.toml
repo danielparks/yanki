@@ -28,6 +28,7 @@ yanki = "yanki.cli:main"
 
 [tool.pytest.ini_options]
 script_launch_mode = "subprocess"
+log_cli_level = "DEBUG"
 
 [tool.ruff]
 line-length = 80
