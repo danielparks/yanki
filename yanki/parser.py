@@ -259,7 +259,6 @@ class DeckParser:
     def _reset(self):
         """Reset working deck data."""
         self.working_deck = None
-        self.source_path = None
         self.line_number = 0
         self._reset_note()
 
@@ -275,7 +274,6 @@ class DeckParser:
             self.close()
         self._reset()
         self.working_deck = DeckSpec(path)
-        self.source_path = path
 
     def close(self):
         """Close deck file and mark working deck finished."""
@@ -298,7 +296,11 @@ class DeckParser:
         return finished_decks
 
     def error(self, message):
-        raise DeckSyntaxError(message, self.source_path, self.line_number)
+        source_path = None
+        if self.working_deck is not None:
+            source_path = self.working_deck.source_path
+
+        raise DeckSyntaxError(message, source_path, self.line_number)
 
     def parse_file(self, file: io.TextIOBase):
         for line_number, line in enumerate(file, start=1):
@@ -322,7 +324,7 @@ class DeckParser:
         yield from self.flush_decks()
 
     def parse_line(self, path, line_number, line):
-        if not self.working_deck or self.source_path != path:
+        if not self.working_deck or self.working_deck.source_path != path:
             self.open(path)
 
         self.line_number = line_number
@@ -410,7 +412,7 @@ class DeckParser:
             NoteSpec(
                 # FIXME is self.note_scope is None possible?
                 scope=self.note_scope or deepcopy(self.working_deck.scope),
-                source_path=self.source_path,
+                source_path=self.working_deck.source_path,
                 line_number=self.note_line_number,
                 source="".join(self.note_source),
             )
