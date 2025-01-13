@@ -46,7 +46,7 @@ class DeckSyntaxError(ExpectedError):
         return f"{self.source_path}, line {self.line_number}"
 
 
-class Config:
+class Scope:
     def __init__(self):
         self.title = None
         self.crop = None
@@ -165,11 +165,11 @@ class NoteSpec:
     source_path: str
     line_number: int
     source: str  # config directives are stripped from this
-    config: Config
+    scope: Scope
 
     @functools.cache
     def provisional_note_id(self, deck_id="{deck_id}"):
-        return self.config.generate_note_id(
+        return self.scope.generate_note_id(
             deck_id=deck_id,
             url=self.video_url(),
             clip=self.provisional_clip_spec(),
@@ -244,7 +244,7 @@ class NoteSpec:
 class DeckSpec:
     def __init__(self, source_path):
         self.source_path = source_path
-        self.config = Config()
+        self.scope = Scope()
         self.note_specs = []
 
     def add_note_spec(self, note_spec: NoteSpec):
@@ -266,7 +266,7 @@ class DeckParser:
     def _reset_note(self):
         """Reset working note data."""
         self.note_source = []
-        self.note_config = None
+        self.note_scope = None
         self.note_line_number = None
 
     def open(self, path):
@@ -282,7 +282,7 @@ class DeckParser:
         if len(self.note_source) > 0:
             self._finish_note()
 
-        if self.working_deck.config.title is None:
+        if self.working_deck.scope.title is None:
             raise DeckSyntaxError(
                 "Does not contain title",
                 self.working_deck.source_path,
@@ -339,10 +339,10 @@ class DeckParser:
                     "Found indented line with no preceding unindented line"
                 )
 
-            if self.note_config is None:
-                self.note_config = deepcopy(self.working_deck.config)
+            if self.note_scope is None:
+                self.note_scope = deepcopy(self.working_deck.scope)
 
-            unindented = self._check_for_config(unindented, self.note_config)
+            unindented = self._check_for_config(unindented, self.note_scope)
             if unindented is not None:
                 self.note_source.append(unindented)
             return
@@ -357,13 +357,13 @@ class DeckParser:
         if len(self.note_source) > 0:
             self._finish_note()
 
-        line = self._check_for_config(line, self.working_deck.config)
+        line = self._check_for_config(line, self.working_deck.scope)
         if line is not None:
             if len(self.note_source) == 0:
                 self.note_line_number = self.line_number
             self.note_source.append(line)
 
-    def _check_for_config(self, line, config):
+    def _check_for_config(self, line, scope):
         # Line without newline
         line_chomped = line.rstrip("\n\r")
 
@@ -373,31 +373,31 @@ class DeckParser:
 
         try:
             if line.startswith("title:"):
-                config.title = line.removeprefix("title:").strip()
+                scope.title = line.removeprefix("title:").strip()
             elif line.startswith("more:"):
-                config.set_more(line.removeprefix("more:").strip())
+                scope.set_more(line.removeprefix("more:").strip())
             elif line.startswith("more+"):
-                config.add_more(line.removeprefix("more+").strip())
+                scope.add_more(line.removeprefix("more+").strip())
             elif line.startswith("overlay_text:"):
-                config.set_overlay_text(
+                scope.set_overlay_text(
                     line.removeprefix("overlay_text:").strip()
                 )
             elif line.startswith("tags:"):
-                config.update_tags(line.removeprefix("tags:"))
+                scope.update_tags(line.removeprefix("tags:"))
             elif line.startswith("crop:"):
-                config.crop = line.removeprefix("crop:").strip()
+                scope.crop = line.removeprefix("crop:").strip()
             elif line.startswith("format:"):
-                config.format = line.removeprefix("format:").strip()
+                scope.format = line.removeprefix("format:").strip()
             elif line.startswith("trim:"):
-                config.set_trim(line.removeprefix("trim:").strip())
+                scope.set_trim(line.removeprefix("trim:").strip())
             elif line.startswith("slow:"):
-                config.add_slow(line.removeprefix("slow:").strip())
+                scope.add_slow(line.removeprefix("slow:").strip())
             elif line.startswith("audio:"):
-                config.set_audio(line.removeprefix("audio:").strip())
+                scope.set_audio(line.removeprefix("audio:").strip())
             elif line.startswith("video:"):
-                config.set_video(line.removeprefix("video:").strip())
+                scope.set_video(line.removeprefix("video:").strip())
             elif line.startswith("note_id"):
-                config.set_note_id_format(line.removeprefix("note_id:").strip())
+                scope.set_note_id_format(line.removeprefix("note_id:").strip())
             else:
                 return line
         except ValueError as error:
@@ -408,8 +408,8 @@ class DeckParser:
     def _finish_note(self):
         self.working_deck.add_note_spec(
             NoteSpec(
-                # FIXME is self.note_config is None possible?
-                config=self.note_config or deepcopy(self.working_deck.config),
+                # FIXME is self.note_scope is None possible?
+                scope=self.note_scope or deepcopy(self.working_deck.scope),
                 source_path=self.source_path,
                 line_number=self.note_line_number,
                 source="".join(self.note_source),
