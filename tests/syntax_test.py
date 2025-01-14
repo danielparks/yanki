@@ -18,6 +18,6 @@ def test_two_mores():
                 more: one
                 more+ two
             """)
-        ).scope.more.render_html()
+        ).config.more.render_html()
         == "onetwo"
     )
