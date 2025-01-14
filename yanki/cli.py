@@ -377,7 +377,7 @@ def find_errors(group: ExceptionGroup):
 def read_deck_specs(files):
     parser = DeckParser()
     for file in files:
-        yield from parser.parse_file(file)
+        yield from parser.parse_file(file.name, file)
 
 
 def read_decks(files, options: VideoOptions):

@@ -302,9 +302,9 @@ class DeckParser:
 
         raise DeckSyntaxError(message, source_path, self.line_number)
 
-    def parse_file(self, file: io.TextIOBase):
+    def parse_file(self, file_name: str, file: io.TextIOBase):
         for line_number, line in enumerate(file, start=1):
-            self.parse_line(file.name, line_number, line)
+            self.parse_line(file_name, line_number, line)
             yield from self.flush_decks()
 
         self.close()
@@ -312,7 +312,7 @@ class DeckParser:
 
     def parse_path(self, path):
         with open(path, "r", encoding="utf_8") as file:
-            yield from self.parse_file(file)
+            yield from self.parse_file(file.name, file)
 
     def parse_input(self, input):
         """Takes FileInput as parameter."""
