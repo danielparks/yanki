@@ -173,3 +173,33 @@ def test_bad_config():
             """
         )
     assert error_info.match("Invalid config directive 'illegal2'")
+
+
+def test_multiline_more():
+    with pytest.raises(DeckSyntaxError) as error_info:
+        assert (
+            parse_deck(
+                """
+                    title: a
+                    more: html:one
+                      two
+                """
+            ).config.more.render_html()
+            == "one\ntwo"
+        )
+    assert error_info.match("Found indented line ")
+
+
+def test_multiline_more_with_config():
+    with pytest.raises(DeckSyntaxError) as error_info:
+        assert (
+            parse_deck(
+                """
+                    title: a
+                    more: html:one
+                      more: two
+                """
+            ).config.more.render_html()
+            == "one\nmore: two"
+        )
+    assert error_info.match("Found indented line ")
