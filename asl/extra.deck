@@ -44,6 +44,60 @@ https://www.youtube.com/watch?v=n5rMf-z3Qmc FINAL / LAST
   trim: 24F-90F
 https://www.youtube.com/watch?v=stafgiooHts LAZY
   trim: 13F-62F
+https://www.youtube.com/watch?v=u6cQNKM4Dbs SOMETIMES / once-in-a-while
+  trim: 12F-79F
+https://www.youtube.com/watch?v=lTtQqtfGS84 RARE / rarely / infrequent
+  trim: 11F-98F
+https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
+ trim: 12F-65F
+https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
+  trim: 8F-68F
+https://www.youtube.com/watch?v=00H6TCCoIpU not-YET
+  trim: 16F-61F
+https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
+  trim: 9F-51F
+https://www.youtube.com/watch?v=9ul_1z23KLI LATE
+  trim: 6F-43F
+https://www.youtube.com/watch?v=XVgP90cND4M ENOUGH / SUFFICIENT
+  trim: 6F-78F
+https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
+  trim: 24F-60F
+https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
+  trim: 5F-78F
+https://www.youtube.com/watch?v=1Ko00nas78M BORN
+  trim: 13F-72F
+https://www.youtube.com/watch?v=17gZsl0jClE GAME
+https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
+  trim: 10F-76F
+https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
+https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
+  trim: 16F-76F
+https://www.youtube.com/watch?v=zhCTyufusjs NOTHING / nuthin (casual)
+https://www.youtube.com/watch?v=bQdiN_hgeWQ HOME WORK (not casual)
+  trim: 18F-108F
+https://www.youtube.com/watch?v=AhwgtWiATWE HOME WORK (casual)
+https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
+https://www.youtube.com/watch?v=JPrGWEvbmgE BUS
+https://www.youtube.com/watch?v=8yjqcyk-xwY BIKE / BICYCLE
+https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
+https://www.youtube.com/watch?v=XkSY0TdkQdM LIE / fib
+https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
+https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER
+https://www.youtube.com/watch?v=Pt_QBeW9xMg LOOK-AT
+  trim: 17F-64F
+https://www.youtube.com/watch?v=7XQiv-PxecU SEE / VISION
+  trim: 14F-63F
+https://www.youtube.com/watch?v=SvfopPYaJJU TELL
+  trim: 7F-68F
+https://www.youtube.com/watch?v=ApOIQTLewCw [one-person]-TELL-[other-person]
+  trim: 16F-72F
+
+https://www.youtube.com/watch?v=l3pElzy2Png BUT / however / different
+  more+ rst:`BUT <https://lifeprint.com/asl101/pages-signs/b/but.htm>`_
+https://www.youtube.com/watch?v=EunD6JXshgY DIFFERENT
+  more+ rst:`DIFFERENT <https://lifeprint.com/asl101/pages-signs/d/different.htm>`_
+https://www.youtube.com/watch?v=OwtSP1QozuE ALSO / SAME (index finger version)
+  more+ rst:`SAME <https://lifeprint.com/asl101/pages-signs/s/same.htm>`_
 
 # Related to lesson 7 — food
 https://www.youtube.com/watch?v=mZVixrzz_MM MUSHROOM
