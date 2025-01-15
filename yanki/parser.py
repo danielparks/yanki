@@ -398,7 +398,7 @@ class DeckParser:
                 config.set_audio(line.removeprefix("audio:").strip())
             elif line.startswith("video:"):
                 config.set_video(line.removeprefix("video:").strip())
-            elif line.startswith("note_id"):
+            elif line.startswith("note_id:"):
                 config.set_note_id_format(line.removeprefix("note_id:").strip())
             else:
                 return line
