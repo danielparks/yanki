@@ -21,3 +21,26 @@ def test_two_mores():
         ).config.more.render_html()
         == "onetwo"
     )
+
+
+def test_overlays():
+    assert (
+        parse_deck(
+            textwrap.dedent("""
+                title: a
+                overlay_text: one
+            """)
+        ).config.overlay_text
+        == "one"
+    )
+
+    assert (
+        parse_deck(
+            textwrap.dedent("""
+                title: a
+                overlay_text: one
+                overlay_text: +two
+            """)
+        ).config.overlay_text
+        == "onetwo"
+    )

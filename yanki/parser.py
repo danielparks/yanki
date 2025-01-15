@@ -66,7 +66,10 @@ class NoteConfig:
             self.more = Field([Fragment(input)])
 
     def set_overlay_text(self, input):
-        self.overlay_text = input
+        if input.startswith("+"):
+            self.overlay_text += input[1:]
+        else:
+            self.overlay_text = input
 
     def update_tags(self, input):
         new_tags = input.split()
