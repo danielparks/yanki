@@ -387,7 +387,7 @@ class Deck:
         return name_to_id(self.title())
 
     def title(self):
-        return self.spec.config.title
+        return self.spec.title
 
     def source_path(self):
         return self.spec.source_path

@@ -48,7 +48,6 @@ class DeckSyntaxError(ExpectedError):
 
 class NoteConfig:
     def __init__(self):
-        self.title = None
         self.crop = None
         self.format = None
         self.more = Field()
@@ -243,6 +242,7 @@ class NoteSpec:
 
 class DeckSpec:
     def __init__(self, source_path):
+        self.title = None
         self.source_path = source_path
         self.config = NoteConfig()
         self.note_specs = []
@@ -280,7 +280,7 @@ class DeckParser:
         if len(self.note_source) > 0:
             self._finish_note()
 
-        if self.working_deck.config.title is None:
+        if self.working_deck.title is None:
             raise DeckSyntaxError(
                 "Does not contain title",
                 self.working_deck.source_path,
@@ -375,7 +375,7 @@ class DeckParser:
 
         try:
             if line.startswith("title:"):
-                config.title = line.removeprefix("title:").strip()
+                self.working_deck.title = line.removeprefix("title:").strip()
             elif line.startswith("more:"):
                 config.set_more(line.removeprefix("more:").strip())
             elif line.startswith("more+"):
