@@ -333,37 +333,36 @@ class DeckParser:
             # Comment; skip line.
             return
 
-        unindented = line.lstrip(" \t")
-        if line != unindented:
-            # Line is indented and thus a continuation of a note
-            if len(self.note_source) == 0:
-                self.error(
-                    "Found indented line with no preceding unindented line"
-                )
-
-            if self.note_config is None:
-                self.note_config = deepcopy(self.working_deck.config)
-
-            unindented = self._check_for_config(unindented, self.note_config)
-            if unindented is not None:
-                self.note_source.append(unindented)
-            return
-
         if line.strip() == "":
             # Blank lines only count inside notes.
             if len(self.note_source) > 0:
                 self.note_source.append(line)
             return
 
-        # Line is not indented
-        if len(self.note_source) > 0:
-            self._finish_note()
+        unindented = line.lstrip(" \t")
+        if line == unindented:
+            # Not indented; any previous note can be finished.
+            if len(self.note_source) > 0:
+                self._finish_note()
 
-        line = self._check_for_config(line, self.working_deck.config)
-        if line is not None:
-            if len(self.note_source) == 0:
+            # Line must be a config line or the start of a note.
+            line = self._check_for_config(line, self.working_deck.config)
+            if line is not None:
+                # Start of a note. We’ve already finished the previous note.
                 self.note_line_number = self.line_number
-            self.note_source.append(line)
+                self.note_config = deepcopy(self.working_deck.config)
+                self.note_source.append(line)
+        else:
+            # Line is indented and thus a continuation of a note
+            if len(self.note_source) == 0:
+                self.error(
+                    "Found indented line with no preceding unindented line"
+                )
+
+            unindented = self._check_for_config(unindented, self.note_config)
+            if unindented is not None:
+                self.note_source.append(unindented)
+            return
 
     def _check_for_config(self, line, config):
         # Line without newline
@@ -408,10 +407,10 @@ class DeckParser:
         return None
 
     def _finish_note(self):
+        assert self.note_config is not None
         self.working_deck.add_note_spec(
             NoteSpec(
-                # FIXME is self.note_config is None possible?
-                config=self.note_config or deepcopy(self.working_deck.config),
+                config=self.note_config,
                 source_path=self.working_deck.source_path,
                 line_number=self.note_line_number,
                 source="".join(self.note_source),
