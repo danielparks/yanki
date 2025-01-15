@@ -5,7 +5,7 @@ import re
 from urllib.parse import quote
 
 # Regular expression to find http:// URLs in text.
-URL_FINDER = re.compile(
+URL_REGEX = re.compile(
     r"""
   # URL with no surrounding parentheses
   (?<!\() \b(https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-])
@@ -31,7 +31,7 @@ def raw_to_html(raw):
         return raw[5:]
     else:
         return (
-            URL_FINDER.sub(r'<a href="\1">\1</a>', html.escape(raw))
+            URL_REGEX.sub(r'<a href="\1">\1</a>', html.escape(raw))
             .rstrip()
             .replace("\n", "<br/>")
         )

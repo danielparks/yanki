@@ -1,8 +1,8 @@
-from yanki.field import URL_FINDER
+from yanki.field import URL_REGEX
 
 
 def find_url(input):
-    return URL_FINDER.search(input)[0]
+    return URL_REGEX.search(input)[0]
 
 
 def test_easy_url():
