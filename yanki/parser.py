@@ -60,10 +60,10 @@ class NoteConfig:
         self.note_id_format = "{deck_id} {url} {clip}"
 
     def set_more(self, input):
-        self.more = Field([Fragment(input)])
-
-    def add_more(self, input):
-        self.more.add_fragment(Fragment(input))
+        if input.startswith("+"):
+            self.more.add_fragment(Fragment(input[1:]))
+        else:
+            self.more = Field([Fragment(input)])
 
     def set_overlay_text(self, input):
         self.overlay_text = input
@@ -377,8 +377,6 @@ class DeckParser:
                 self.working_deck.title = line.removeprefix("title:").strip()
             elif line.startswith("more:"):
                 config.set_more(line.removeprefix("more:").strip())
-            elif line.startswith("more+"):
-                config.add_more(line.removeprefix("more+").strip())
             elif line.startswith("overlay_text:"):
                 config.set_overlay_text(
                     line.removeprefix("overlay_text:").strip()

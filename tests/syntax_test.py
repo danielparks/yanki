@@ -16,7 +16,7 @@ def test_two_mores():
             textwrap.dedent("""
                 title: a
                 more: one
-                more+ two
+                more: +two
             """)
         ).config.more.render_html()
         == "onetwo"
