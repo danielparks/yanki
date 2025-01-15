@@ -428,7 +428,7 @@ class Video:
 
         options = {
             "outtmpl": {
-                "default": path,
+                "default": str(path),
             },
             **YT_DLP_OPTIONS,
         }
