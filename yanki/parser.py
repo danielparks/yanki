@@ -46,7 +46,7 @@ class DeckSyntaxError(ExpectedError):
         return f"{self.source_path}, line {self.line_number}"
 
 
-class Config:
+class NoteConfig:
     def __init__(self):
         self.title = None
         self.crop = None
@@ -165,7 +165,7 @@ class NoteSpec:
     source_path: str
     line_number: int
     source: str  # config directives are stripped from this
-    config: Config
+    config: NoteConfig
 
     @functools.cache
     def provisional_note_id(self, deck_id="{deck_id}"):
@@ -244,7 +244,7 @@ class NoteSpec:
 class DeckSpec:
     def __init__(self, source_path):
         self.source_path = source_path
-        self.config = Config()
+        self.config = NoteConfig()
         self.note_specs = []
 
     def add_note_spec(self, note_spec: NoteSpec):
