@@ -190,9 +190,8 @@ def list_notes(options, decks, format):
                 ### FIXME document variables
                 print(format.format(**note.variables(deck_id=deck.id())))
     else:
-        error = find_invalid_format(format, FINAL_NOTE_VARIABLES)
-        if error is not None:
-            sys.exit("Invalid variable in format: {error}")
+        if error := find_invalid_format(format, FINAL_NOTE_VARIABLES):
+            sys.exit(f"Invalid variable in format: {error}")
 
         for deck in read_final_decks(decks, options):
             for note in deck.notes():
