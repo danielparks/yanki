@@ -125,24 +125,24 @@ class Note:
                 options=self.video_options,
                 logger=self.logger,
             )
-            video.audio(self.spec.scope.audio)
-            video.video(self.spec.scope.video)
-            if self.spec.scope.crop:
-                video.crop(self.spec.scope.crop)
-            if self.spec.scope.trim:
-                video.clip(self.spec.scope.trim[0], self.spec.scope.trim[1])
-            if self.spec.scope.format:
-                video.format(self.spec.scope.format)
-            if self.spec.scope.slow:
-                (start, end, amount) = self.spec.scope.slow
+            video.audio(self.spec.config.audio)
+            video.video(self.spec.config.video)
+            if self.spec.config.crop:
+                video.crop(self.spec.config.crop)
+            if self.spec.config.trim:
+                video.clip(self.spec.config.trim[0], self.spec.config.trim[1])
+            if self.spec.config.format:
+                video.format(self.spec.config.format)
+            if self.spec.config.slow:
+                (start, end, amount) = self.spec.config.slow
                 video.slow(start=start, end=end, amount=amount)
-            if self.spec.scope.overlay_text:
-                video.overlay_text(self.spec.scope.overlay_text)
+            if self.spec.config.overlay_text:
+                video.overlay_text(self.spec.config.overlay_text)
         except ValueError as error:
             self.spec.error(error)
 
         if self.spec.clip() is not None:
-            if self.spec.scope.trim is not None:
+            if self.spec.config.trim is not None:
                 self.spec.error(
                     f"Clip ({self.spec.provisional_clip_spec()!r}) is "
                     "incompatible with 'trim:'."
@@ -160,7 +160,7 @@ class Note:
     # {deck_id} is just a placeholder. To get the real note_id, you need to have
     # a deck_id.
     def note_id(self, deck_id="{deck_id}"):
-        return self.spec.scope.generate_note_id(
+        return self.spec.config.generate_note_id(
             **self.variables(deck_id=deck_id),
         )
 
@@ -248,7 +248,7 @@ class FinalNote:
         return Field([Fragment(self.text)])
 
     def more_field(self):
-        return self.spec.scope.more
+        return self.spec.config.more
 
     def media_field(self):
         return Field([self.media_fragment])
@@ -301,7 +301,7 @@ class FinalNote:
                 media_to_text,
             ],
             guid=genanki.guid_for(self.note_id),
-            tags=self.spec.scope.tags,
+            tags=self.spec.config.tags,
         )
 
 
@@ -387,7 +387,7 @@ class Deck:
         return name_to_id(self.title())
 
     def title(self):
-        return self.spec.scope.title
+        return self.spec.title
 
     def source_path(self):
         return self.spec.source_path
