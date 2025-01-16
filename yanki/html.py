@@ -51,8 +51,7 @@ def htmlize_deck(deck, path_prefix=""):
         <h1>{h(deck.title)}</h1>"""
 
     for note in deck.notes():
-        more_html = note.more_field().render_html(path_prefix)
-        if more_html != "":
+        if more_html := note.more_field().render_html(path_prefix):
             more_html = f'<div class="more">{more_html}</div>'
         output += f"""
         <div class="note">

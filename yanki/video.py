@@ -137,8 +137,7 @@ class Video:
         self.reprocess = options.reprocess
 
         self.id = url_to_id(url)
-        invalid = chars_in(FILENAME_ILLEGAL_CHARS, self.id)
-        if invalid:
+        if invalid := chars_in(FILENAME_ILLEGAL_CHARS, self.id):
             raise BadURL(
                 f"Invalid characters ({''.join(invalid)}) in video ID: {self.id!r}"
             )
@@ -435,10 +434,9 @@ class Video:
 
         with yt_dlp.YoutubeDL(options) as ydl:
             # FIXME why not use the in-memory info?
-            error_code = ydl.download_with_info_file(self.info_cache_path())
-            if error_code:
+            if error := ydl.download_with_info_file(self.info_cache_path()):
                 # FIXME??!
-                raise RuntimeError(error_code)
+                raise RuntimeError(error)
 
         return path
 

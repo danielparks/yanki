@@ -188,8 +188,7 @@ class NoteConfig:
             raise ValueError('video must be either "include" or "strip"')
 
     def set_note_id(self, note_id):
-        error = find_invalid_format(note_id, NOTE_VARIABLES)
-        if error is not None:
+        if error := find_invalid_format(note_id, NOTE_VARIABLES):
             raise ValueError(f"Unknown variable in note_id format: {error}")
         self.note_id = note_id
 
