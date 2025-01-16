@@ -1,7 +1,12 @@
 from copy import deepcopy
-from dataclasses import dataclass
+import dataclasses
+from dataclasses import field
 import functools
+import inspect
 import io
+import re
+import types
+import typing
 
 from yanki.errors import ExpectedError
 from yanki.field import Fragment, Field
@@ -19,6 +24,25 @@ NOTE_VARIABLES = frozenset(
         "line_number",
         "source_path",
     ]
+)
+
+# Regular expression to identify config directives.
+#
+# Indentiation must be stripped first, and `fullmatch` must be used.
+CONFIG_REGEX = re.compile(
+    r"""
+    # Config directive must start with a letter.
+    ([a-z][a-z0-9._\[\]-]*):
+
+    # The value must be separated from the colon by whitespace, but if there is
+    # no value then whitespace is not required. (Consider a file that ends with
+    # a config directive and then no newline.)
+    (?:\s+(\S.*))?
+
+    # Trailing whitespace including newlines.
+    \s*
+    """,
+    flags=re.IGNORECASE | re.VERBOSE,
 )
 
 
@@ -46,18 +70,35 @@ class DeckSyntaxError(ExpectedError):
         return f"{self.source_path}, line {self.line_number}"
 
 
+@functools.cache
+def note_config_directives():
+    return set([field.name for field in dataclasses.fields(NoteConfig)])
+
+
+@dataclasses.dataclass()
 class NoteConfig:
-    def __init__(self):
-        self.crop = None
-        self.format = None
-        self.more = Field()
-        self.overlay_text = ""
-        self.tags = []
-        self.slow = None
-        self.trim = None
-        self.audio = "include"
-        self.video = "include"
-        self.note_id_format = "{deck_id} {url} {clip}"
+    crop: str = ""
+    format: str = ""
+    more: Field = field(default_factory=Field)
+    overlay_text: str = ""
+    tags: set[str] = field(default_factory=set)
+    slow: None | tuple[str, None | str, float] = None
+    trim: None | tuple[str, str] = None
+    audio: str = "include"
+    video: str = "include"
+    note_id: str = "{deck_id} {url} {clip}"
+
+    def set(self, name, value):
+        if name in note_config_directives():
+            getattr(self, f"set_{name}")(value)
+        else:
+            raise ValueError(f"Invalid config directive {name!r}")
+
+    def set_crop(self, input):
+        self.crop = input
+
+    def set_format(self, input):
+        self.format = input
 
     def set_more(self, input):
         if input.startswith("+"):
@@ -71,18 +112,18 @@ class NoteConfig:
         else:
             self.overlay_text = input
 
-    def update_tags(self, input):
+    def set_tags(self, input):
         new_tags = input.split()
         found_bare_tag = False
 
         for tag in new_tags:
             if tag.startswith("+"):
-                self.tags.append(tag[1:])
+                self.tags.add(tag[1:])
                 new_tags = None
             elif tag.startswith("-"):
                 try:
                     self.tags.remove(tag[1:])
-                except ValueError:
+                except KeyError:
                     pass
                 new_tags = None
             else:
@@ -95,9 +136,9 @@ class NoteConfig:
                 raise ValueError(
                     f"Invalid mix of changing tags with setting tags: {input.strip()}"
                 )
-            self.tags = new_tags
+            self.tags = set(new_tags)
 
-    def add_slow(self, slow_spec):
+    def set_slow(self, slow_spec):
         if slow_spec.strip() == "":
             self.slow = None
             return
@@ -146,11 +187,16 @@ class NoteConfig:
         else:
             raise ValueError('video must be either "include" or "strip"')
 
-    def set_note_id_format(self, note_id_format):
-        error = find_invalid_format(note_id_format, NOTE_VARIABLES)
+    def set_note_id(self, note_id):
+        error = find_invalid_format(note_id, NOTE_VARIABLES)
         if error is not None:
             raise ValueError(f"Unknown variable in note_id format: {error}")
-        self.note_id_format = note_id_format
+        self.note_id = note_id
+
+    def frozen(self):
+        data = dataclasses.asdict(self)
+        data["tags"] = frozenset(data["tags"])
+        return NoteConfigFrozen(**data)
 
     def generate_note_id(self, **kwargs):
         if NOTE_VARIABLES != set(kwargs.keys()):
@@ -159,15 +205,47 @@ class NoteConfig:
                 f"  got: {sorted(kwargs.keys())}\n"
                 f"  expected: {sorted(NOTE_VARIABLES)}\n"
             )
-        return self.note_id_format.format(**kwargs)
+        return self.note_id.format(**kwargs)
 
 
-@dataclass(frozen=True)
+def make_frozen(klass):
+    """Kludge to produce frozen version of dataclass."""
+
+    name = klass.__name__ + "Frozen"
+    fields = dataclasses.fields(klass)
+
+    # This isn’t realliy necessary. It doesn’t check types. It also only handles
+    # `set[...]` and not `None | set[...]`, etc.
+    for f in fields:
+        if typing.get_origin(f.type) is set:
+            f.type = types.GenericAlias(frozenset, typing.get_args(f.type))
+
+    namespace = {
+        key: value
+        for key, value in klass.__dict__.items()
+        if inspect.isfunction(value)
+        and key != "frozen"
+        and not key.startswith("set")
+        and not key.startswith("_")
+    }
+
+    return dataclasses.make_dataclass(
+        name,
+        fields=[(f.name, f.type, f) for f in fields],
+        namespace=namespace,
+        frozen=True,
+    )
+
+
+NoteConfigFrozen = make_frozen(NoteConfig)
+
+
+@dataclasses.dataclass(frozen=True)
 class NoteSpec:
     source_path: str
     line_number: int
     source: str  # config directives are stripped from this
-    config: NoteConfig
+    config: NoteConfigFrozen
 
     @functools.cache
     def provisional_note_id(self, deck_id="{deck_id}"):
@@ -349,12 +427,14 @@ class DeckParser:
                 self._finish_note()
 
             # Line must be a config line or the start of a note.
-            line = self._check_for_config(line, self.working_deck.config)
-            if line is not None:
+            if matches := CONFIG_REGEX.fullmatch(line):
+                # Config line
+                self._parse_config(matches, self.working_deck.config)
+            else:
                 # Start of a note. We’ve already finished the previous note.
                 self.note_line_number = self.line_number
                 self.note_config = deepcopy(self.working_deck.config)
-                self.note_source.append(line)
+                self.note_source.append(self._strip_quotes(line))
         else:
             # Line is indented and thus a continuation of a note
             if len(self.note_source) == 0:
@@ -362,56 +442,40 @@ class DeckParser:
                     "Found indented line with no preceding unindented line"
                 )
 
-            unindented = self._check_for_config(unindented, self.note_config)
-            if unindented is not None:
-                self.note_source.append(unindented)
-            return
+            if matches := CONFIG_REGEX.fullmatch(unindented):
+                # Config line
+                self._parse_config(matches, self.note_config)
+            else:
+                # Continuation of note
+                self.note_source.append(self._strip_quotes(unindented))
 
-    def _check_for_config(self, line, config):
-        # Line without newline
+    def _parse_config(self, matches, config):
+        # Only call this is CONFIG_REGEX matches.
+        directive = matches[1]
+        value = (matches[2] or "").strip()
+
+        if directive == "title":
+            self.working_deck.title = value
+        else:
+            try:
+                config.set(directive, value)
+            except ValueError as error:
+                self.error(error)
+
+    def _strip_quotes(self, line):
+        """Quotes prevent a line from being a config directive."""
         line_chomped = line.rstrip("\n\r")
-
         if line.startswith('"') and line_chomped.endswith('"'):
-            # Quotes mean to use the line as-is (add the newline back):
+            # Stip quotes, but add the newline back:
             return line_chomped[1:-1] + line[len(line_chomped) :]
 
-        try:
-            if line.startswith("title:"):
-                self.working_deck.title = line.removeprefix("title:").strip()
-            elif line.startswith("more:"):
-                config.set_more(line.removeprefix("more:").strip())
-            elif line.startswith("overlay_text:"):
-                config.set_overlay_text(
-                    line.removeprefix("overlay_text:").strip()
-                )
-            elif line.startswith("tags:"):
-                config.update_tags(line.removeprefix("tags:"))
-            elif line.startswith("crop:"):
-                config.crop = line.removeprefix("crop:").strip()
-            elif line.startswith("format:"):
-                config.format = line.removeprefix("format:").strip()
-            elif line.startswith("trim:"):
-                config.set_trim(line.removeprefix("trim:").strip())
-            elif line.startswith("slow:"):
-                config.add_slow(line.removeprefix("slow:").strip())
-            elif line.startswith("audio:"):
-                config.set_audio(line.removeprefix("audio:").strip())
-            elif line.startswith("video:"):
-                config.set_video(line.removeprefix("video:").strip())
-            elif line.startswith("note_id:"):
-                config.set_note_id_format(line.removeprefix("note_id:").strip())
-            else:
-                return line
-        except ValueError as error:
-            self.error(error)
-
-        return None
+        return line
 
     def _finish_note(self):
         assert self.note_config is not None
         self.working_deck.add_note_spec(
             NoteSpec(
-                config=self.note_config,
+                config=self.note_config.frozen(),
                 source_path=self.working_deck.source_path,
                 line_number=self.note_line_number,
                 source="".join(self.note_source),
