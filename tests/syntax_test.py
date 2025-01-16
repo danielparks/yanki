@@ -6,9 +6,9 @@ from yanki.parser import DeckParser, DeckSyntaxError
 
 
 def parse_deck(contents, name="-"):
-    specs = list(
-        DeckParser().parse_file(name, io.StringIO(textwrap.dedent(contents)))
-    )
+    # Strip extra indents and pretend it’s a file.
+    contents = io.StringIO(textwrap.dedent(contents))
+    specs = list(DeckParser().parse_file(name, contents))
     assert len(specs) == 1
     return specs[0]
 
