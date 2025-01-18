@@ -1,6 +1,9 @@
 import os
 import pytest
 
+from yanki.cli import find_errors, read_final_decks
+from yanki.video import VideoOptions
+
 
 def find_deck_files(base_path):
     for dir_path, _, file_names in os.walk(base_path):
@@ -16,30 +19,23 @@ def read_first_line(path):
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/errors"))
-def test_deck_error(path, yanki):
+def test_deck_error(path, cache_path):
+    options = VideoOptions(cache_path=cache_path)
+    with open(path, "r", encoding="utf_8") as file:
+        with pytest.raises(Exception) as error_info:
+            read_final_decks([file], options)
+
+    [error] = list(find_errors(error_info.value))
+
     first_line = read_first_line(path)
-    if first_line.startswith("#ends: "):
-        expected_message = first_line.removeprefix("#ends: ")
-    else:
-        assert first_line[0:2] == "# "
-        expected_message = first_line[2:]
-
-    result = yanki.run("to-html", path)
-    assert result.returncode == 1
-    assert result.stdout == ""
-
-    if first_line.startswith("#ends: "):
-        assert result.stderr.endswith(expected_message)
-    else:
-        assert result.stderr == expected_message
+    assert first_line[0:2] == "# "
+    assert first_line[-1] == "\n"
+    assert str(error) == first_line[2:-1]
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/good"))
-def test_deck_success(path, yanki):
-    result = yanki.run("to-html", path)
-    assert result.returncode == 0
-    assert result.stderr == ""
-
-    assert result.stdout.startswith("<!DOCTYPE html>\n")
-    assert result.stdout.endswith("</html>\n")
-    assert result.stdout.count('<div class="note">') >= 1
+def test_deck_success(path, cache_path):
+    options = VideoOptions(cache_path=cache_path)
+    with open(path, "r", encoding="utf_8") as file:
+        [deck] = read_final_decks([file], options)
+    assert len(deck.notes()) >= 1
