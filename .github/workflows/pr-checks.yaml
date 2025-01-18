@@ -32,7 +32,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt-get install -y ffmpeg
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: ffmpeg
+          version: 1.0
       - uses: astral-sh/setup-uv@v5
       - run: uv python install
       - run: uv run pytest --color=yes
