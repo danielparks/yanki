@@ -2,5 +2,5 @@
 title: Test deck::Errors::Duplicate note
 note_id: foo
 
-file://../good/media/hand-counting.mp4 YES
-file://../good/media/hand-counting.mp4 YES2
+file://../good/media/first.png YES
+file://../good/media/first.png YES2

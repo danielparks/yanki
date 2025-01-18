@@ -1,17 +1,17 @@
 title: Test deck::Config
 note_id: {deck_id} {text}
 
-file://./media/stopwatch.mp4 more: should not do anything
+file://./media/first.png more: should not do anything
   (testing config on same line as URL — should not apply config)
 
-file://./media/stopwatch.mp4 more: inside note
+file://./media/first.png more: inside note
   more: inside note
 
 more: deck config
 
-file://./media/stopwatch.mp4
+file://./media/first.png
   more: inside note (plus quoted)
   "more: inside note (plus quoted)"
 
-file://./media/stopwatch.mp4
+file://./media/first.png
   "more: deck config"

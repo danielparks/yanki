@@ -2,4 +2,4 @@
 title: Test deck::Errors::Bad crop
 crop: 100000:1
 
-file://../good/media/hand-counting.mp4 bad crop
+file://../good/media/first.png bad crop
