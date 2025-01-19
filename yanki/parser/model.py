@@ -21,6 +21,7 @@ class NoteSpec:
             direction=self.direction(),
             media=" ".join([self.video_url(), self.provisional_clip_spec()]),
             text=self.text(),
+            tags=" ".join(sorted(self.config.tags)),
             line_number=self.line_number,
             source_path=self.source_path,
         )

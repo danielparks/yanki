@@ -16,6 +16,7 @@ NOTE_VARIABLES = frozenset(
         "direction",
         "media",
         "text",
+        "tags",
         "line_number",
         "source_path",
     ]
