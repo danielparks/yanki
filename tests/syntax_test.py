@@ -143,6 +143,8 @@ def test_deck_overlay_text_parametrized(lines, overlay_text):
         (["  overlay_text: one", "  overlay_text:", ""], ""),
         (["  overlay_text: one", "  overlay_text:     \t"], ""),
         (["  overlay_text: one", "  overlay_text:     \t", ""], ""),
+        # Test quotes
+        (["  overlay_text: one", '    "two"'], 'one\n"two"'),
     ],
 )
 def test_note_overlay_text_parametrized(lines, overlay_text):
@@ -189,6 +191,22 @@ def test_note_overlay_text_parametrized(lines, overlay_text):
             ["#one", "  two"],
             "#one\ntwo",
         ),
+        # Test quotes
+        (
+            ["quotes", '  "crop: 1:1"', '  " "', "  last"],
+            "quotes\ncrop: 1:1\n \nlast",
+        ),
+        (
+            ["quotes", '  "crop: 1:1"', '  ""', "  last"],
+            "quotes\ncrop: 1:1\n\nlast",
+        ),
+        (["quotes", '  "crop: 1:1  "', "  last"], "quotes\ncrop: 1:1  \nlast"),
+        (
+            ["quotes", '  "crop: 1:1"  ', "  last"],
+            'quotes\n"crop: 1:1"  \nlast',
+        ),
+        (["quotes", '  "crop: 1:1  "'], "quotes\ncrop: 1:1"),
+        (["quotes", '  "crop: 1:1"  '], 'quotes\n"crop: 1:1"'),
     ],
 )
 def test_note_parametrized(note_lines, parsed_text):
