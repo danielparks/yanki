@@ -87,17 +87,11 @@ https://www.youtube.com/watch?v=Pt_QBeW9xMg LOOK-AT
   trim: 17F-64F
 https://www.youtube.com/watch?v=7XQiv-PxecU SEE / VISION
   trim: 14F-63F
-https://www.youtube.com/watch?v=SvfopPYaJJU TELL
-  trim: 7F-68F
-https://www.youtube.com/watch?v=ApOIQTLewCw [one-person]-TELL-[other-person]
-  trim: 16F-72F
 
 https://www.youtube.com/watch?v=l3pElzy2Png BUT / however / different
   more: +rst:`BUT <https://lifeprint.com/asl101/pages-signs/b/but.htm>`_
 https://www.youtube.com/watch?v=EunD6JXshgY DIFFERENT
   more: +rst:`DIFFERENT <https://lifeprint.com/asl101/pages-signs/d/different.htm>`_
-https://www.youtube.com/watch?v=OwtSP1QozuE ALSO / SAME (index finger version)
-  more: +rst:`SAME <https://lifeprint.com/asl101/pages-signs/s/same.htm>`_
 
 https://www.youtube.com/watch?v=lqow5S8tnMs BEFORE / PRIOR-to
   trim: 12F-63F
@@ -143,6 +137,14 @@ https://www.youtube.com/watch?v=7bCApb-yubw MAYBE / MAY / MIGHT
   trim: 15F-71F
   more: +rst:`MAYBE <https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm>`_
 
+https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
+  trim: 13F-75F
+  more: +rst:`DONKEY <https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm>`_
+
+https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
+  trim: 13F-68F
+  more: +rst:`STUBBORN <https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm>`_
+
 
 # Related to lesson 7 — food
 https://www.youtube.com/watch?v=mZVixrzz_MM MUSHROOM
@@ -184,6 +186,10 @@ https://www.youtube.com/watch?v=ajIA0oBLMgM CENTS
   tags: +first_100_signs
 https://www.youtube.com/watch?v=AFByTjllk70 FINE / FEE / COST / PRICE / CHARGE
   tags: +first_100_signs
+https://www.youtube.com/watch?v=0sF9ZKAYAwo SHEEP / WOOL
+  trim: 14F-68F
+  tags: +first_100_signs
+# No video for PIG. https://www.youtube.com/watch?v=XoHbKx-kYKA at 3:13
 
 # Related to first 100 signs
 https://www.youtube.com/watch?v=Ka8vriGAuWY PLACE
