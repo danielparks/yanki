@@ -23,7 +23,9 @@ from yanki.html import htmlize_deck, generate_index_html, ensure_static_link
 from yanki.parser import DeckFilesParser, find_invalid_format, NOTE_VARIABLES
 from yanki.anki import Deck, FINAL_NOTE_VARIABLES
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
+from yanki.utils import add_trace_logging
 
+add_trace_logging()
 LOGGER = logging.getLogger(__name__)
 
 
@@ -114,12 +116,15 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     )
 
     # Configure logging
-    if verbose > 2:
+    global log_debug
+    if verbose > 3:
         raise click.UsageError(
-            "--verbose or -v may only be specified up to 2 times."
+            "--verbose or -v may only be specified up to 3 times."
         )
+    elif verbose == 3:
+        log_debug = True
+        level = logging.TRACE
     elif verbose == 2:
-        global log_debug
         log_debug = True
         level = logging.DEBUG
     elif verbose == 1:
@@ -132,6 +137,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
         colorlog.ColoredFormatter(
             "%(log_color)s%(levelname)s%(reset)s %(light_cyan)s%(name)s:%(reset)s %(message)s",
             log_colors={
+                "TRACE": "bold_purple",
                 "DEBUG": "bold_white",
                 "INFO": "bold_green",
                 "WARNING": "bold_yellow",
