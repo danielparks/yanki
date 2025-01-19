@@ -1,9 +1,13 @@
 import contextlib
+import dataclasses
 from functools import partial, partialmethod
+import inspect
 import logging
 import os
 from pathlib import Path
 import tempfile
+import types
+import typing
 from urllib.parse import urlparse
 
 
@@ -84,3 +88,32 @@ def get_key_path(data, path: list[any]):
 
 def chars_in(chars, input):
     return [char for char in chars if char in input]
+
+
+def make_frozen(klass):
+    """Kludge to produce frozen version of dataclass."""
+
+    name = klass.__name__ + "Frozen"
+    fields = dataclasses.fields(klass)
+
+    # This isn’t realliy necessary. It doesn’t check types. It also only handles
+    # `set[...]` and not `None | set[...]`, etc.
+    for f in fields:
+        if typing.get_origin(f.type) is set:
+            f.type = types.GenericAlias(frozenset, typing.get_args(f.type))
+
+    namespace = {
+        key: value
+        for key, value in klass.__dict__.items()
+        if inspect.isfunction(value)
+        and key != "frozen"
+        and not key.startswith("set")
+        and not key.startswith("_")
+    }
+
+    return dataclasses.make_dataclass(
+        name,
+        fields=[(f.name, f.type, f) for f in fields],
+        namespace=namespace,
+        frozen=True,
+    )
