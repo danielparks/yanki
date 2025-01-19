@@ -20,7 +20,7 @@ import yt_dlp
 
 from yanki.errors import ExpectedError
 from yanki.html import htmlize_deck, generate_index_html, ensure_static_link
-from yanki.parser import DeckParser, find_invalid_format, NOTE_VARIABLES
+from yanki.parser import DeckFilesParser, find_invalid_format, NOTE_VARIABLES
 from yanki.anki import Deck, FINAL_NOTE_VARIABLES
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
 
@@ -374,7 +374,7 @@ def find_errors(group: ExceptionGroup):
 
 
 def read_deck_specs(files):
-    parser = DeckParser()
+    parser = DeckFilesParser()
     for file in files:
         yield from parser.parse_file(file.name, file)
 

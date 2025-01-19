@@ -3,7 +3,8 @@ import logging
 import pytest
 import textwrap
 
-from yanki.parser import DeckParser, DeckSyntaxError
+from yanki.errors import DeckSyntaxError
+from yanki.parser import DeckFilesParser
 from yanki.utils import add_trace_logging
 
 add_trace_logging()
@@ -11,7 +12,7 @@ logging.getLogger("yanki.parser").setLevel(logging.TRACE)
 
 
 def parse_maybe_deck(contents, name="-"):
-    return list(DeckParser().parse_file(name, io.StringIO(contents)))
+    return list(DeckFilesParser().parse_file(name, io.StringIO(contents)))
 
 
 def parse_deck(contents, name="-"):
