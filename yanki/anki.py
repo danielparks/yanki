@@ -174,6 +174,7 @@ class Note:
             ### versions of the input text?
             "media": f"{self.spec.video_url()} {self.clip_spec()}",
             "text": self.text(),
+            "tags": " ".join(sorted(self.spec.config.tags)),
             "line_number": self.spec.line_number,
             "source_path": self.spec.source_path,
         }
@@ -264,6 +265,7 @@ class FinalNote:
             ### versions of the input text?
             "media": f"{self.spec.video_url()} {self.clip_spec}",
             "text": self.text,
+            "tags": " ".join(sorted(self.spec.config.tags)),
             "line_number": self.spec.line_number,
             "source_path": self.spec.source_path,
             "media_paths": " ".join(self.media_paths()),
