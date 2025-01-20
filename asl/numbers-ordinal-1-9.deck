@@ -1,10 +1,10 @@
 title: Lifeprint ASL::Numbers::Ordinal 1-9
-crop: in_h:in_h
-audio: strip
-note_id: Lifeprint ASL {text}
 more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
   `Cardinal and Ordinal numbers
   <https://www.lifeprint.com/asl101/pages-signs/n/numbersordianlandcardinal.htm>`_
+crop: in_h:in_h
+audio: strip
+note_id: Lifeprint ASL {text}
 
 tags: Lifeprint numbers::ordinal::1-9
 https://www.youtube.com/watch?v=IxHcuZfsiwE 1st
