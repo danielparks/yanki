@@ -15,8 +15,6 @@ https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY
 https://www.youtube.com/watch?v=GLAPZdS-gpU WRONG
 https://www.youtube.com/watch?v=b4bEDbnaGv4 FUNNY
 https://www.youtube.com/watch?v=NBqpHJiufXU SICK
-https://www.youtube.com/watch?v=3E2_HVDL9T8 SHARE / PARTNER
-  trim: 13F-66F
 https://www.youtube.com/watch?v=1wk1W5GuGiI COFFEE
   trim: 13F-72F
 https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
@@ -148,6 +146,33 @@ https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
 
 https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
   trim: 9F-61F
+
+https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
+  trim: 7F-50F
+
+group:
+  more: +rst:`REMEMBER <https://www.lifeprint.com/asl101/pages-signs/r/remember.htm>`_
+
+  https://www.youtube.com/watch?v=AlQ5uuZk0ps REMEMBER
+    trim: 2F-65F
+  https://www.youtube.com/watch?v=yabFLDVcEOM MEMORY / MEMORIZE
+    trim: 30F-99F
+
+group:
+  more: +rst:`PARTNER <https://www.lifeprint.com/asl101/pages-signs/p/partner.htm>`_
+
+  # Dr Bill does SHARE PERSON, but in class we were taught to just use SHARE.
+  https://www.youtube.com/watch?v=3E2_HVDL9T8 SHARE / romantic-PARTNER
+    trim: 13F-66F
+  https://www.youtube.com/watch?v=hxvnNhay64c PARTNERSHIP (non-romantic)
+    trim: 5F-70F
+  https://www.youtube.com/watch?v=cMlRLyAmpZc ROOMATE / PARTNER (non-romantic)
+    trim: 12F-72F
+  https://www.youtube.com/watch?v=zYc7JHABcwg PAIR / COUPLE
+    trim: 10F-55F
+  https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
+    trim: 5F-55F
+
 
 # Related to lesson 7 — food
 https://www.youtube.com/watch?v=mZVixrzz_MM MUSHROOM
