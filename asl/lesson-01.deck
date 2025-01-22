@@ -59,13 +59,20 @@ https://www.youtube.com/watch?v=HS0SXS-GHYY WHERE?
 https://www.youtube.com/watch?v=PTmtGZ75zyY WHO?
   trim: 12F-58F
   tags: +first_100_signs
-https://www.youtube.com/watch?v=K0yp2v6Atxs WHY?
-  trim: 10F-72F
-  tags: +first_100_signs
 https://www.youtube.com/watch?v=0usayvOXzHo YES
   trim: 8F-52F
 https://www.youtube.com/watch?v=-1Hz72xltNk YOUR
   trim: 9F-42F
+
+group:
+  more: +rst:`WHY <https://www.lifeprint.com/asl101/pages-signs/w/why.htm>`_
+
+  https://www.youtube.com/watch?v=K0yp2v6Atxs WHY?
+    trim: 10F-72F
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=_pEFV5SwtoI -> WHY? (fluttering 8 version)
+    trim 17F-62F
+    tags: +extra
 
 tags: +extra
 https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
