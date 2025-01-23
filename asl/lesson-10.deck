@@ -21,6 +21,7 @@ group:
 # Not really part of this lesson
 https://www.youtube.com/watch?v=yxlQDmsFo-g ->
   CHICKEN (old version — pecking in hand)
+  trim: 2F-62F
   more: +rst:`CHICKEN <https://www.lifeprint.com/asl101/pages-signs/c/chicken.htm>`_
   tags: +extra
 
@@ -105,8 +106,11 @@ group:
 
   tags: +extra
   https://www.youtube.com/watch?v=OTaYxoigN2U pony / SMALL HORSE
+    trim: 16F-81F
   https://www.youtube.com/watch?v=nwvGqVXrHVk HORSE #FLY
+    trim: 16F-77F
   https://www.youtube.com/watch?v=V0FI60wvzpo HORSE #TRAIL
+    trim: 15F-90F
 
 group:
   more: +rst:`KNOW <https://www.lifeprint.com/asl101/pages-signs/k/know.htm>`_
@@ -122,6 +126,7 @@ group:
 
   tags: +extra
   https://www.youtube.com/watch?v=Yn0yXSaV7u0 KNOW THAT-[Y-hand]
+    trim: 3F-
     crop: in_h:in_h
   https://www.youtube.com/watch?v=2QI65MBJEnU -> KNOW THAT-[flat-hand]
     trim: 12F-
