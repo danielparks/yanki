@@ -165,29 +165,13 @@ class Note:
         )
 
     def variables(self, deck_id="{deck_id}"):
-        variables = {
+        return {
+            **self.spec.variables(),
             "deck_id": deck_id,
-            "url": self.spec.video_url(),
             "clip": self.clip_spec(),
-            "direction": self.spec.direction(),
-            ### FIXME should these be renamed to clarify that they’re normalized
-            ### versions of the input text?
             "media": f"{self.spec.video_url()} {self.clip_spec()}",
             "text": self.text(),
-            "tags": " ".join(sorted(self.spec.config.tags)),
-            "line_number": self.spec.line_number,
-            "source_path": self.spec.source_path,
         }
-
-        # FIXME: probably doesn’t need to run every time.
-        if NOTE_VARIABLES != set(variables.keys()):
-            raise KeyError(
-                "Note.variables() does not match NOTE_VARIABLES\n"
-                f"  variables(): {sorted(variables.keys())}\n"
-                f"  expected: {sorted(NOTE_VARIABLES)}\n"
-            )
-
-        return variables
 
     @functools.cache
     def clip_spec(self):
@@ -255,31 +239,15 @@ class FinalNote:
         return Field([self.media_fragment])
 
     def variables(self):
-        variables = {
+        return {
+            **self.spec.variables(),
             "deck_id": self.deck_id,
             "note_id": self.note_id,
-            "url": self.spec.video_url(),
             "clip": self.clip_spec,
-            "direction": self.spec.direction(),
-            ### FIXME should these be renamed to clarify that they’re normalized
-            ### versions of the input text?
             "media": f"{self.spec.video_url()} {self.clip_spec}",
             "text": self.text,
-            "tags": " ".join(sorted(self.spec.config.tags)),
-            "line_number": self.spec.line_number,
-            "source_path": self.spec.source_path,
             "media_paths": " ".join(self.media_paths()),
         }
-
-        # FIXME: probably doesn’t need to run every time.
-        if FINAL_NOTE_VARIABLES != set(variables.keys()):
-            raise KeyError(
-                "FinalNote.variables() does not match FINAL_NOTE_VARIABLES\n"
-                f"  variables(): {sorted(variables.keys())}\n"
-                f"  expected: {sorted(FINAL_NOTE_VARIABLES)}\n"
-            )
-
-        return variables
 
     def genanki_note(self):
         media_to_text = text_to_media = ""

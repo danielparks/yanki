@@ -10,13 +10,24 @@ from yanki.utils import make_frozen
 # same variables in both places they’re needed.
 NOTE_VARIABLES = frozenset(
     [
+        # From NoteConfig:
+        "crop",
+        "format",
+        "more",
+        "overlay_text",
+        "tags",
+        "slow",
+        "trim",
+        "audio",
+        "video",
+        "note_id_format",
+        # From NoteSpec
         "deck_id",
         "url",
         "clip",
         "direction",
         "media",
         "text",
-        "tags",
         "line_number",
         "source_path",
     ]
@@ -162,13 +173,44 @@ class NoteConfig:
         return NoteConfigFrozen(**data)
 
     def generate_note_id(self, **kwargs):
-        if NOTE_VARIABLES != set(kwargs.keys()):
+        passed_keys = set(kwargs.keys())
+        if NOTE_VARIABLES != passed_keys:
             raise KeyError(
                 "Incorrect variables passed to generate_note_id()\n"
-                f"  got: {sorted(kwargs.keys())}\n"
-                f"  expected: {sorted(NOTE_VARIABLES)}\n"
+                f"  unknown: {sorted(passed_keys - NOTE_VARIABLES)}\n"
+                f"  missing: {sorted(NOTE_VARIABLES - passed_keys)}\n"
             )
         return self.note_id.format(**kwargs)
+
+    def slow_spec(self):
+        if self.slow is None:
+            return ""
+
+        (start, end, amount) = self.slow
+        if end is None:
+            end = ""
+
+        return f"{start}-{end}*{amount}"
+
+    def trim_spec(self):
+        if self.trim is None:
+            return ""
+
+        return "-".join(self.trim)
+
+    def variables(self):
+        return {
+            "crop": self.crop,
+            "format": self.format,
+            "more": self.more.render_html(),  # FIXME should be spec?
+            "overlay_text": self.overlay_text,
+            "tags": " ".join(sorted(self.tags)),
+            "slow": self.slow_spec(),
+            "trim": self.trim_spec(),
+            "audio": self.audio,
+            "video": self.video,
+            "note_id_format": self.note_id,
+        }
 
 
 NoteConfigFrozen = make_frozen(NoteConfig)

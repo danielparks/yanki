@@ -14,17 +14,22 @@ class NoteSpec:
 
     @functools.cache
     def provisional_note_id(self, deck_id="{deck_id}"):
-        return self.config.generate_note_id(
-            deck_id=deck_id,
-            url=self.video_url(),
-            clip=self.provisional_clip_spec(),
-            direction=self.direction(),
-            media=" ".join([self.video_url(), self.provisional_clip_spec()]),
-            text=self.text(),
-            tags=" ".join(sorted(self.config.tags)),
-            line_number=self.line_number,
-            source_path=self.source_path,
-        )
+        return self.config.generate_note_id(**self.variables(deck_id=deck_id))
+
+    @functools.cache
+    def variables(self, deck_id="{deck_id}"):
+        """Get variables related to this note, including config variables."""
+        return {
+            **self.config.variables(),
+            "deck_id": deck_id,
+            "url": self.video_url(),
+            "clip": self.provisional_clip_spec(),
+            "direction": self.direction(),
+            "media": " ".join([self.video_url(), self.provisional_clip_spec()]),
+            "text": self.text(),
+            "line_number": self.line_number,
+            "source_path": self.source_path,
+        }
 
     def video_url(self):
         return self._parse_video_url()[0]
