@@ -71,7 +71,7 @@ group:
     trim: 10F-72F
     tags: +first_100_signs
   https://www.youtube.com/watch?v=_pEFV5SwtoI -> WHY? (fluttering 8 version)
-    trim 17F-62F
+    trim: 17F-62F
     tags: +extra
 
 tags: +extra
