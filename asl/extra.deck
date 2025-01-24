@@ -199,6 +199,31 @@ group:
   https://www.youtube.com/watch?v=fFprjIePuqw NEIGHBOR-[next one over]
     trim: 8F-64F
 
+group:
+  more: +rst:`MOST <https://www.lifeprint.com/asl101/pages-signs/m/most.htm>`_
+
+  https://www.youtube.com/watch?v=nPntlOgjAxo MOST
+    trim: 0-69F
+
+group:
+  more: +rst:`MUCH <https://www.lifeprint.com/asl101/pages-signs/m/much.htm>`_
+    and `A-LOT <https://www.lifeprint.com/asl101/pages-signs/a/a-lot.htm>`_
+
+  https://www.youtube.com/watch?v=KgU9qm6vXJ0 MUCH / A-LOT
+    trim: 12F-69F
+
+group:
+  more: +rst:`YOUNG <https://www.lifeprint.com/asl101/pages-signs/y/young.htm>`_
+
+  https://www.youtube.com/watch?v=I02FA61xpCs YOUNG
+    trim: 26F-95F
+
+group:
+  more: +rst:`APOSTROPHE-S <https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm>`_
+
+  https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
+    trim: 15F-63F
+
 # Related to lesson 7 — food
 https://www.youtube.com/watch?v=mZVixrzz_MM MUSHROOM
   trim: 16F-76F
