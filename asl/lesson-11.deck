@@ -47,7 +47,7 @@ group:
 
   https://www.youtube.com/watch?v=l3pElzy2Png BUT / however / different
     trim: 10F-59F
-  https://www.youtube.com/watch?v=A-n2pjNaz-k #BUT
+  https://www.youtube.com/watch?v=A-n2pjNaz-k B-U-T
     trim: 13F-62F
   https://www.youtube.com/watch?v=EunD6JXshgY DIFFERENT
     trim: 16F-77F
@@ -133,7 +133,7 @@ group:
   more: +rst:`OR <https://www.lifeprint.com/asl101/pages-signs/o/or.htm>`_
 
   # OR (bodyshift) is covered in lesson 7.
-  https://www.youtube.com/watch?v=6cB9xVBOasE #OR
+  https://www.youtube.com/watch?v=6cB9xVBOasE O-R
     trim: 7F-49F
   https://www.youtube.com/watch?v=1a2K-NNgODY THEN / or
     trim: 1F-60F
