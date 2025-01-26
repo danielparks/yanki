@@ -51,8 +51,7 @@ group:
   https://www.youtube.com/watch?v=IO0cNQ8OO-4 HOUR / 1-HOUR
     trim: 11F-71F
   https://www.youtube.com/watch?v=37PZEddIVlA 6-HOURS
-  https://www.youtube.com/watch?v=YBJ5rjfxgdc HALF-HOUR
-    tags: +extra
+  # HALF-HOUR in lesson 16
 
 group:
   more: +rst:`MINUTE <https://www.lifeprint.com/asl101/pages-signs/m/minute.htm>`_

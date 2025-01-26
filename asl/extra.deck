@@ -24,22 +24,14 @@ https://www.youtube.com/watch?v=AjTT29zx3SQ nickname
   trim: 12F-54F
 https://www.youtube.com/watch?v=ClNyMzf07dQ NUMBER
   trim: 13F-76F
-https://www.youtube.com/watch?v=tZ04_s30aXY FIRST / PRIMARY
-  trim: 10F-70F
-https://www.youtube.com/watch?v=n5rMf-z3Qmc FINAL / LAST
-  trim: 24F-90F
 https://www.youtube.com/watch?v=stafgiooHts LAZY
   trim: 13F-62F
 https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
  trim: 12F-65F
 https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
   trim: 8F-68F
-https://www.youtube.com/watch?v=00H6TCCoIpU not-YET
-  trim: 16F-61F
 https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
   trim: 9F-51F
-https://www.youtube.com/watch?v=9ul_1z23KLI LATE
-  trim: 6F-43F
 https://www.youtube.com/watch?v=XVgP90cND4M ENOUGH / SUFFICIENT
   trim: 6F-78F
 https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
@@ -71,20 +63,6 @@ https://www.youtube.com/watch?v=7XQiv-PxecU SEE / VISION
   trim: 14F-63F
 https://www.youtube.com/watch?v=FYw8NR16pDE WE-WILL-SEE
   trim: 7F-63F
-
-https://www.youtube.com/watch?v=lqow5S8tnMs BEFORE / PRIOR-to
-  trim: 12F-63F
-  more: +rst:`BEFORE <https://lifeprint.com/asl101/pages-signs/b/before.htm>`_
-https://www.youtube.com/watch?v=1dhDpb69eSM -> BEFORE / PRIOR-to
-  trim: 18F-76F
-  more: +rst:`BEFORE <https://lifeprint.com/asl101/pages-signs/b/before.htm>`_
-
-https://www.youtube.com/watch?v=AZqgw-USe2I OVER / ACROSS / AFTER
-  trim: 6F-65F
-  more: +rst:`AFTER <https://lifeprint.com/asl101/pages-signs/a/after.htm>`_
-https://www.youtube.com/watch?v=nEGhuagav-w FROM-NOW-ON / FROM-THEN-ON / AFTER
-  trim: 3F-69F
-  more: +rst:`AFTER <https://lifeprint.com/asl101/pages-signs/a/after.htm>`_
 
 https://www.youtube.com/watch?v=EKop7phm0Hs OPPOSITE / ALLERGY
   trim: 23F-75F
@@ -190,12 +168,6 @@ group:
     trim: 14F-66F
   https://www.youtube.com/watch?v=fFprjIePuqw NEIGHBOR-[next one over]
     trim: 8F-64F
-
-group:
-  more: +rst:`MOST <https://www.lifeprint.com/asl101/pages-signs/m/most.htm>`_
-
-  https://www.youtube.com/watch?v=nPntlOgjAxo MOST
-    trim: 0-69F
 
 group:
   more: +rst:`MUCH <https://www.lifeprint.com/asl101/pages-signs/m/much.htm>`_
