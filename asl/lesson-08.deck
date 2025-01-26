@@ -262,10 +262,6 @@ tags: -extra
 # From video (https://www.youtube.com/watch?v=Xn0F7rGA-3c)
 more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 8 <https://www.lifeprint.com/asl101/lessons/lesson08.htm>`_
 tags: +extra
-# HARD-OF-HEARING is in lesson 13, but I want to test moving decks.
-https://www.youtube.com/watch?v=gz_R3F29Je0 HARD-OF-HEARING
-  trim: 11F-72F
-  more: +rst:`HARD-OF-HEARING <https://www.lifeprint.com/asl101/pages-signs/h/hard-of-hearing.htm>`_
 https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
   trim: 9F-73F
   more: +rst:`COMFORTABLE <https://www.lifeprint.com/asl101/pages-signs/c/comfortable.htm>`_
