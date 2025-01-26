@@ -1,0 +1,135 @@
+title: Lifeprint ASL::Vocabulary::Lesson 16 — Activities
+more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
+  `lesson 16 <https://www.lifeprint.com/asl101/lessons/lesson16.htm>`_
+tags: lesson_16 vocabulary
+audio: strip
+note_id: Lifeprint ASL {url} {clip}
+
+group:
+  # HOUR is in lesson 12
+  more: +rst:`HALF-HOUR <https://www.lifeprint.com/asl101/pages-signs/h/half-hour.htm>`_
+
+  https://www.youtube.com/watch?v=dhMoV3k8R8U HALF-HOUR (1-hand version)
+    trim: 9F-60F
+  https://www.youtube.com/watch?v=YBJ5rjfxgdc -> HALF-HOUR (B-hand version)
+    trim: 9F-56F
+
+group:
+  more: +rst:`AFTER <https://www.lifeprint.com/asl101/pages-signs/a/after.htm>`_
+
+  https://www.youtube.com/watch?v=AZqgw-USe2I OVER / ACROSS / AFTER
+    trim: 6F-65F
+
+group:
+  more: +rst:`APPOINTMENT <https://www.lifeprint.com/asl101/pages-signs/a/appointment.htm>`_
+
+group:
+  more: +rst:`BEFORE <https://www.lifeprint.com/asl101/pages-signs/b/before.htm>`_
+
+  https://www.youtube.com/watch?v=lqow5S8tnMs BEFORE / PRIOR-to
+    trim: 12F-63F
+  https://www.youtube.com/watch?v=1dhDpb69eSM -> BEFORE / PRIOR-to
+    trim: 18F-76F
+
+# BEST and BETTER are in lesson 3.
+
+group:
+  more: +rst:`DO <https://www.lifeprint.com/asl101/pages-signs/d/do.htm>`_
+
+  https://www.youtube.com/watch?v=D__fueHfB0E
+    DO / ACTION / BEHAVIOR (small circle version)
+    trim: 4F-52F
+  https://www.youtube.com/watch?v=fHAIkNdVyfo
+    DO / ACTION / BEHAVIOR (side-to-side version)
+    trim 8F-54F
+  https://www.youtube.com/watch?v=8wui6wLF_Vs -> D-I-D
+    trim: 7F-
+
+# what-DO in lesson 12.
+
+group:
+  more: +rst:`END <https://www.lifeprint.com/asl101/pages-signs/e/end.htm>`_
+
+group:
+  more: +rst:`FEW <https://www.lifeprint.com/asl101/pages-signs/f/few.htm>`_
+
+group:
+  more: +rst:`FROM-NOW-ON <https://www.lifeprint.com/asl101/pages-signs/f/from-now-on.htm>`_
+
+  # Slight difference in path of hand. See AFTER page.
+  https://www.youtube.com/watch?v=rIE6pSjWh6A AFTER / FROM-NOW-ON / FROM-THEN-ON
+  https://www.youtube.com/watch?v=nEGhuagav-w
+    -> FROM-NOW-ON / FROM-THEN-ON / AFTER
+    trim: 3F-69F
+
+group:
+  more: +rst:`FIRST <https://www.lifeprint.com/asl101/pages-signs/f/first.htm>`_
+
+  https://www.youtube.com/watch?v=tZ04_s30aXY
+    FIRST / PRIMARY (thumb version)
+    trim: 10F-70F
+  https://www.youtube.com/watch?v=p5hoRJW1nRg
+    -> FIRST / PRIMARY (index finger version)
+    trim: 18F-88F
+  # No video for past-the-thumb version
+
+  tags: +extra
+  https://www.youtube.com/watch?v=x9xgoFqsBkE FIRST-PLACE
+  # No video for SECOND-PLACE or THIRD-PLACE
+
+group:
+  more: +rst:`LAST <https://www.lifeprint.com/asl101/pages-signs/l/last.htm>`_
+
+  https://www.youtube.com/watch?v=n5rMf-z3Qmc FINAL / LAST
+    trim: 24F-90F
+
+group:
+  more: +rst:`LATE <https://www.lifeprint.com/asl101/pages-signs/l/late.htm>`_
+
+  https://www.youtube.com/watch?v=9ul_1z23KLI LATE
+    trim: 6F-43F
+
+group:
+  more: +rst:`LOOK <https://www.lifeprint.com/asl101/pages-signs/l/look.htm>`_
+
+group:
+  more: +rst:`MIDDLE <https://www.lifeprint.com/asl101/pages-signs/m/middle.htm>`_
+
+group:
+  more: +rst:`CENTER <https://www.lifeprint.com/asl101/pages-signs/c/center.htm>`_
+
+group:
+  more: +rst:`MIDNIGHT <https://www.lifeprint.com/asl101/pages-signs/m/midnight.htm>`_
+
+group:
+  more: +rst:`MOST <https://www.lifeprint.com/asl101/pages-signs/m/most.htm>`_
+
+  https://www.youtube.com/watch?v=nPntlOgjAxo MOST
+    trim: 0-69F
+
+group:
+  more: +rst:`NEXT <https://www.lifeprint.com/asl101/pages-signs/n/next.htm>`_
+
+  https://www.youtube.com/watch?v=U9LJw1dsPkM NEXT
+    trim: 12F-68F
+
+# NOT is in lesson 3.
+
+group:
+  more: +rst:`NOT-YET <https://www.lifeprint.com/asl101/pages-signs/n/not-yet.htm>`_
+
+  https://www.youtube.com/watch?v=00H6TCCoIpU not-YET
+    trim: 16F-61F
+    more: +Note that the tongue goes over the lower teeth.
+
+group:
+  more: +rst:`OFTEN <https://www.lifeprint.com/asl101/pages-signs/o/often.htm>`_
+
+group:
+  more: +rst:`RECENT <https://www.lifeprint.com/asl101/pages-signs/r/recent.htm>`_
+
+group:
+  more: +rst:`SEE <https://www.lifeprint.com/asl101/pages-signs/s/see.htm>`_
+
+group:
+  more: +rst:`SOON <https://www.lifeprint.com/asl101/pages-signs/s/soon.htm>`_

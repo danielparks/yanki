@@ -15,9 +15,16 @@ https://www.youtube.com/watch?v=prwtXZ1o2As BAD
   tags: +first_100_signs
 https://www.youtube.com/watch?v=2xdhyJEgXdI BATHROOM / toilet
   tags: +first_100_signs
-https://www.youtube.com/watch?v=N0sg_yIVULo BEST
-https://www.youtube.com/watch?v=sQ_ABcs0n0A BETTER
-  trim: 14F-70F
+
+group:
+  more: +rst:`BEST <https://www.lifeprint.com/asl101/pages-signs/b/best.htm>`_
+  https://www.youtube.com/watch?v=N0sg_yIVULo BEST
+
+group:
+  more: +rst:`BETTER <https://www.lifeprint.com/asl101/pages-signs/b/better.htm>`_
+  https://www.youtube.com/watch?v=sQ_ABcs0n0A BETTER
+    trim: 14F-70F
+
 https://www.youtube.com/watch?v=e7Tz3OSQBQQ CITY / TOWN / COMMUNITY
 https://www.youtube.com/watch?v=zYsmQgZRW0g CLASS
 https://www.youtube.com/watch?v=2zSgd7yskRg DISLIKE
@@ -47,8 +54,13 @@ https://www.youtube.com/watch?v=LLGY5yaSLDk very-LARGE
 https://www.youtube.com/watch?v=nJwr-yWRdNQ MORE
   tags: +first_100_signs
 https://www.youtube.com/watch?v=Eo-vEE1gFxM NEED / MUST / SHOULD
-https://www.youtube.com/watch?v=pUn7pNE5HEE NOT
-  trim: 11F-83F
+
+group:
+  more: +rst:`NOT <https://www.lifeprint.com/asl101/pages-signs/n/not.htm>`_
+
+  https://www.youtube.com/watch?v=pUn7pNE5HEE NOT / un-
+    trim: 11F-83F
+
 https://www.youtube.com/watch?v=ts66KJwecg0 SCHOOL
   tags: +first_100_signs
 https://www.youtube.com/watch?v=RKnUlZ8bOzs SMALL
