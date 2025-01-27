@@ -5,10 +5,24 @@ tags: lesson_13 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
+# Incomplete stub
+
 # Listed in lesson goals instead of the vocab list.
 https://www.youtube.com/watch?v=HVNMUR4iy1Y
   public school / HEARING SCHOOL / SPEAKING SCHOOL
   trim: 7F-75F
+
+group:
+  more: +rst:`ARTICLE <https://www.lifeprint.com/asl101/pages-signs/a/article.htm>`_
+
+group:
+  more: +rst:`CLOSE-CAPTIONED <https://www.lifeprint.com/asl101/pages-signs/c/close-captioned.htm>`_
+
+group:
+  more: +rst:`COLLEGE <https://www.lifeprint.com/asl101/pages-signs/c/college.htm>`_
+
+group:
+  more: +rst:`RESIDENTIAL-SCHOOL <https://www.lifeprint.com/asl101/pages-signs/r/residential-school.htm>`_
 
 group:
   more: +rst:`EASY <https://www.lifeprint.com/asl101/pages-signs/e/easy.htm>`_
@@ -23,6 +37,14 @@ group:
     trim: 12F-68F
 
 group:
+  more: +rst:`FALSE <https://www.lifeprint.com/asl101/pages-signs/f/false.htm>`_
+
+# FLASH-THE-LIGHTS was in lesson 9.
+
+group:
+  more: +rst:`GRADUATE <https://www.lifeprint.com/asl101/pages-signs/g/graduate.htm>`_
+
+group:
   more: +rst:`HARD <https://www.lifeprint.com/asl101/pages-signs/h/hard.htm>`_
 
   https://www.youtube.com/watch?v=RgGjl2y6dkM HARD / DIFFICULT
@@ -34,6 +56,29 @@ group:
   https://www.youtube.com/watch?v=gz_R3F29Je0 HARD-OF-HEARING
     trim: 11F-72F
 
+group:
+  more: +rst:`HIGH-SCHOOL <https://www.lifeprint.com/asl101/pages-signs/h/high-school.htm>`_
+
+group:
+  more: +rst:`INTERPRETER <https://www.lifeprint.com/asl101/pages-signs/i/interpreter.htm>`_
+
+group:
+  more: +rst:`LIST <https://www.lifeprint.com/asl101/pages-signs/l/list.htm>`_
+
+group:
+  more: +rst:`NOTE <https://www.lifeprint.com/asl101/pages-signs/n/note.htm>`_
+
+group:
+  more: +rst:`RESEARCH <https://www.lifeprint.com/asl101/pages-signs/r/research.htm>`_
+
+group:
+  more: +rst:`SQUARE <https://www.lifeprint.com/asl101/pages-signs/s/square.htm>`_
+
+group:
+  more: +rst:`TEST <https://www.lifeprint.com/asl101/pages-signs/t/test.htm>`_
+
+group:
+  more: +rst:`WRITE <https://www.lifeprint.com/asl101/pages-signs/w/write.htm>`_
 group:
   more: +rst:`WRONG <https://www.lifeprint.com/asl101/pages-signs/w/wrong.htm>`_
 
