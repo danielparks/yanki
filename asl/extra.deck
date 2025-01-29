@@ -11,7 +11,6 @@ https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST
 https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH
 https://www.youtube.com/watch?v=eFsZ6FwpX8g TOP
 https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY
-https://www.youtube.com/watch?v=b4bEDbnaGv4 FUNNY
 https://www.youtube.com/watch?v=1wk1W5GuGiI COFFEE
   trim: 13F-72F
 https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
@@ -57,6 +56,90 @@ https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
 https://www.youtube.com/watch?v=XkSY0TdkQdM LIE / fib
 https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
 https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER
+
+group:
+  more: +rst:`FUNNY <https://www.lifeprint.com/asl101/pages-signs/f/funny.htm>`_
+
+  https://www.youtube.com/watch?v=b4bEDbnaGv4 FUNNY / COMEDY
+    trim: 16F-50F
+  https://www.youtube.com/watch?v=P4vVkngSqwc HUMOR / humorous / funny / amusing
+    trim: 9F-60F
+  https://www.youtube.com/watch?v=hDYLTkXTSx4 FUN
+    trim: 27F-88F
+  https://www.youtube.com/watch?v=ThDzxD04uwY F-U-N
+    trim: 15F-60F
+  https://www.youtube.com/watch?v=tGOLzJ2Hgdo JOKE / TEASE
+    trim: 7F-64F
+  https://www.youtube.com/watch?v=_8kwIE4_JAY MOCK / make fun of
+    trim: 8F-62F
+
+group:
+  more: +rst:`START <https://www.lifeprint.com/asl101/pages-signs/s/start.htm>`_
+
+  https://www.youtube.com/watch?v=wFuWmTNw4SE START / begin / initiate
+    trim: 4F-48F
+
+group:
+  more: +rst:`DEPRESSED <https://www.lifeprint.com/asl101/pages-signs/d/depressed.htm>`_
+
+  https://www.youtube.com/watch?v=mLWP-yNA0XU
+    DEPRESSED / DEPRESSION / feeling down
+    trim: 20F-97F
+  https://www.youtube.com/watch?v=pHDIa-ao9BQ ->
+    DEPRESSED / DEPRESSION / feeling down (flat hands version)
+    trim: 13F-60F
+
+group:
+  more: +rst:`EXPENSIVE <https://www.lifeprint.com/asl101/pages-signs/e/expensive.htm>`_
+
+  https://www.youtube.com/watch?v=ZdmmD6ZsQrw EXPENSIVE
+    trim: 26F-80F
+
+group:
+  more: +rst:`CHEAP <https://www.lifeprint.com/asl101/pages-signs/c/cheap.htm>`_
+
+  https://www.youtube.com/watch?v=H-39q5BLM44 CHEAP / INEXPENSIVE
+    trim: 7F-59F
+
+group:
+  more: +rst:`THAN <https://www.lifeprint.com/asl101/pages-signs/t/than.htm>`_
+
+  https://www.youtube.com/watch?v=tJEiWP-t7vM THAN
+    trim: 9F-
+  https://www.youtube.com/watch?v=k1gbEtvnv_U BELOW / LESS-THAN
+    trim: 8F-55F
+  https://www.youtube.com/watch?v=PKKSio0w4ao ABOVE / MORE-THAN
+    trim: 4F-69F
+  https://www.youtube.com/watch?v=4cXuJHTunR0 LESS
+    trim: 16F-65F
+  https://www.youtube.com/watch?v=GoWQcHeKxbs CONTAIN / LIMIT
+    trim: 10F-67F
+  https://www.youtube.com/watch?v=Z9GwJUmZijE UP-TO / MAXIMUM
+    trim: 9F-70F
+  # Not the same sign as the page says, but it matches handspeak.com:
+  https://www.youtube.com/watch?v=XUQ5dC95Euk MINIMUM / AT LEAST
+    trim: 4F-57F
+
+group:
+  more: +rst:`DEPEND <https://www.lifeprint.com/asl101/pages-signs/d/depend.htm>`_
+
+  https://www.youtube.com/watch?v=8E1NT-uiDXs DEPEND / it-DEPENDS / DEPENDS-on
+    trim: 10F-73F
+
+group:
+  more: +rst:`THEATER <https://www.lifeprint.com/asl101/pages-signs/t/theater.htm>`_
+
+  https://www.youtube.com/watch?v=ZaxcUQkJ2a4
+    THEATER / ACT / DRAMA / PLAY / SHOW
+    trim: 14F-75F
+
+https://www.youtube.com/watch?v=lFSWuq0YurM
+  VOICE-LOCK / keep-you-voice-off / no-talking (idiomatic)
+  trim: 10F-71F
+
+https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
+  trim: 3F-57F
+  more: +rst:`HAIR <https://www.lifeprint.com/asl101/pages-signs/h/hair.htm>`_
 
 https://www.youtube.com/watch?v=EKop7phm0Hs OPPOSITE / ALLERGY
   trim: 23F-75F
