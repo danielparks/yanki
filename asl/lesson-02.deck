@@ -35,10 +35,17 @@ https://www.youtube.com/watch?v=2JCOsxMj6u4 GRANDMA
   trim: 21F-73F
 https://www.youtube.com/watch?v=D8OW3lFL_54 GRANDPA
   trim: 12F-66F
-https://www.youtube.com/watch?v=8ABNk9pzVOc -> HAVE (one hand)
-  trim: 10F-69F
-https://www.youtube.com/watch?v=OZKNIcIFqvU HAVE (two hands)
-  trim: 4F-57F
+
+group:
+  more: +rst:`HAVE <https://www.lifeprint.com/asl101/pages-signs/h/have.htm>`_
+
+  https://www.youtube.com/watch?v=8ABNk9pzVOc ->
+    HAVE / possess / contains / exists / there-is (one handed)
+    trim: 10F-69F
+  https://www.youtube.com/watch?v=OZKNIcIFqvU
+    HAVE / possess / contains / exists / there-is (two handed)
+    trim: 4F-57F
+
 https://www.youtube.com/watch?v=VE4ZBu9hWnM HEY
   trim: 1F-61F
 https://www.youtube.com/watch?v=Kd_V8gE5-LY HIS / HERS / ITS / THEIRS
