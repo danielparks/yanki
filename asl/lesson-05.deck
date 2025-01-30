@@ -5,96 +5,202 @@ tags: lesson_05 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-https://www.youtube.com/watch?v=cBBmjJ80m30 C-A-R
-https://www.youtube.com/watch?v=BVypOVtFnNk CAN
-https://www.youtube.com/watch?v=YfwGL0ZIBqE CAR / DRIVE
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=MrQpEWyELqo CHURCH
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=lmb1qYJ8g3Y COMPUTER
-https://www.youtube.com/watch?v=IEVgcJA3JWk DOCTOR
-https://www.youtube.com/watch?v=u7HYWBcxh1w DOWNLOAD
-  trim: 30F-92F
-https://www.youtube.com/watch?v=_fYdWJp5-to DRIVE-there
-https://www.youtube.com/watch?v=hgImSdRJwug DRIVE-here
-https://www.youtube.com/watch?v=QPKfFDenOPg EMAIL
-https://www.youtube.com/watch?v=ynLKZnP8dl8 GIVE / bestow
-https://www.youtube.com/watch?v=U5p42-d-buw me-GIVE-you
-https://www.youtube.com/watch?v=sFCgn76UF50 you-GIVE-me
-https://www.youtube.com/watch?v=n0Xb58PVX_A HOME
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=YirRi12-zWo IN
-  trim: 29F-88F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=dnieeX_0vug INTERNET / NETWORK
-https://www.youtube.com/watch?v=OxKJDUAYsjg MOVE
-https://www.youtube.com/watch?v=ACBYkV6CDxI MOVIE
-https://www.youtube.com/watch?v=oz63G93uNGk OUT
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=iZZwtHUXBSY PLAYING / PLAY
-https://www.youtube.com/watch?v=G3LICbWdIb8 PUT / install / put there
-https://www.youtube.com/watch?v=weXM5pqwL3g PUT-AWAY
-https://www.youtube.com/watch?v=ZvzKTn4qWfA SIT
-https://www.youtube.com/watch?v=nVDFsl5hR44 SIT-anxious
-https://www.youtube.com/watch?v=KhhowNO7Ywk STAND
-https://www.youtube.com/watch?v=QmbOr-8K_Kw STAY
-https://www.youtube.com/watch?v=CPp1UOM-olA STORE
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=AL5vDzEz4-k video-RECORD
-https://www.youtube.com/watch?v=8WwxmvrQ_uw FILM / video-RECORD
-https://www.youtube.com/watch?v=5iv2XtBzogU WALK
-https://www.youtube.com/watch?v=4cn6Fyzz8ns WATCH (look at, watch a video)
-https://www.youtube.com/watch?v=D4jG1Qx76yI WEBCAM / video-RECORD-myself
-https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
+group:
+  more: +rst:`CAN <https://www.lifeprint.com/asl101/pages-signs/c/can.htm>`_
 
-https://www.youtube.com/watch?v=g4AwGIjxn7k WITH
-  trim: 11F-76F
-  more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=kq2iGRiNAvk
-  WITH-long-term / go-steady / monogamous
-  trim: 10F-82F
-  more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
-  tags: +extra
-https://www.youtube.com/watch?v=fAydfnFBDDw GO-WITH / ACCOMPANY
-  trim: 13F-80F
-  more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
-  tags: +extra
-https://www.youtube.com/watch?v=H8frIh9Lb_A all-TOGETHER / solidarity
-  trim: 14F-88F
-  more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
-  tags: +extra
+  https://www.youtube.com/watch?v=BVypOVtFnNk CAN
 
-tags: +extra
-https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
-https://www.youtube.com/watch?v=vK4GwJaDcWU -> COMPUTER
-https://www.youtube.com/watch?v=1t6GrmgKN5U -> DOCTOR
-https://www.youtube.com/watch?v=qD6MtwD7zMU FOOD STORE
-https://www.youtube.com/watch?v=yHgkatFgesQ -> GIVE / bestow
-https://www.youtube.com/watch?v=PkJpgPxNhwE -> me-GIVE-you
-https://www.youtube.com/watch?v=cF-yNfJGAPM GIVE-to-all / distribute
-https://www.youtube.com/watch?v=Br_CO9Ov50s GIVE-you-from-third-person
-  trim: 18F-83F
-https://www.youtube.com/watch?v=8Bm2uG-suEA -> INTERNET
-https://www.youtube.com/watch?v=1BA03vGRvAk MOVE-away
-https://www.youtube.com/watch?v=em0EHJsuZ9w MOVE-here
-https://www.youtube.com/watch?v=WwCJMduRxzU MOVE-later / POSTPONE
-https://www.youtube.com/watch?v=6Yx7NEqOvHo NURSE
-https://www.youtube.com/watch?v=kPjFRjpaTm4 POSSIBLE / CAN
-https://www.youtube.com/watch?v=yFH1f6mgFwI REARRANGE / MOVE things around
-  trim: 13F-98F
-https://www.youtube.com/watch?v=OWLRwjpnJV8 SIT-restless
-https://www.youtube.com/watch?v=3Dwnb85A_cE STREAMING
-  trim: 6F-63F
-https://www.youtube.com/watch?v=cHpPKJ7GXoU
-  VIDEO-CHAT / teleconference / Zoom / Skype
+group:
+  more: +rst:`CAR <https://www.lifeprint.com/asl101/pages-signs/c/car.htm>`_
+  https://www.youtube.com/watch?v=cBBmjJ80m30 C-A-R
+  https://www.youtube.com/watch?v=YfwGL0ZIBqE CAR / DRIVE
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=_fYdWJp5-to DRIVE-there
+  https://www.youtube.com/watch?v=hgImSdRJwug DRIVE-here
 
-  (Directional)
-  trim: 18F-69F
-https://www.youtube.com/watch?v=d8v3pe1e1Oo WALK (CL: 1)
-https://www.youtube.com/watch?v=mVLZ267V540 WATCH (keep an eye on)
-https://www.youtube.com/watch?v=A287sU6gWLk WRISTWATCH
-https://www.youtube.com/watch?v=ApBX0hnLN6E website / the web / WWW / WW
+group:
+  more: +rst:`CHURCH <https://www.lifeprint.com/asl101/pages-signs/c/church.htm>`_
+
+  https://www.youtube.com/watch?v=MrQpEWyELqo CHURCH
+    tags: +first_100_signs
+
+group:
+  more: +rst:`COMPUTER <https://www.lifeprint.com/asl101/pages-signs/c/computer.htm>`_
+
+  https://www.youtube.com/watch?v=lmb1qYJ8g3Y COMPUTER
+  https://www.youtube.com/watch?v=vK4GwJaDcWU -> COMPUTER
+    tags: +extra
+
+group:
+  more: +rst:`DOCTOR <https://www.lifeprint.com/asl101/pages-signs/d/doctor.htm>`_
+
+  https://www.youtube.com/watch?v=IEVgcJA3JWk DOCTOR
+  https://www.youtube.com/watch?v=1t6GrmgKN5U -> DOCTOR
+    tags: +extra
+
+group:
+  more: +rst:`DOWNLOAD <https://www.lifeprint.com/asl101/pages-signs/d/download.htm>`_
+
+  https://www.youtube.com/watch?v=u7HYWBcxh1w DOWNLOAD
+    trim: 30F-92F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=3Dwnb85A_cE STREAMING
+    trim: 6F-63F
+
+group:
+  more: +rst:`EMAIL <https://www.lifeprint.com/asl101/pages-signs/e/email.htm>`_
+
+  https://www.youtube.com/watch?v=QPKfFDenOPg EMAIL
+
+group:
+  more: +rst:`GIVE <https://www.lifeprint.com/asl101/pages-signs/g/give.htm>`_
+
+  https://www.youtube.com/watch?v=ynLKZnP8dl8 GIVE / bestow
+  https://www.youtube.com/watch?v=U5p42-d-buw me-GIVE-you
+  https://www.youtube.com/watch?v=sFCgn76UF50 you-GIVE-me
+
+  tags: +extra
+  https://www.youtube.com/watch?v=yHgkatFgesQ -> GIVE / bestow
+  https://www.youtube.com/watch?v=PkJpgPxNhwE -> me-GIVE-you
+  https://www.youtube.com/watch?v=cF-yNfJGAPM GIVE-to-all / distribute
+  https://www.youtube.com/watch?v=Br_CO9Ov50s GIVE-you-from-third-person
+    trim: 18F-83F
+
+group:
+  more: +rst:`HOME <https://www.lifeprint.com/asl101/pages-signs/h/home.htm>`_
+
+  https://www.youtube.com/watch?v=n0Xb58PVX_A HOME
+    tags: +first_100_signs
+
+group:
+  more: +rst:`INTERNET <https://www.lifeprint.com/asl101/pages-signs/i/internet.htm>`_
+
+  https://www.youtube.com/watch?v=dnieeX_0vug INTERNET / NETWORK
+
+  tags: +extra
+  https://www.youtube.com/watch?v=8Bm2uG-suEA -> INTERNET
+  https://www.youtube.com/watch?v=ApBX0hnLN6E website / the web / WWW / WW
+  https://www.youtube.com/watch?v=cHpPKJ7GXoU
+    VIDEO-CHAT / teleconference / Zoom / Skype
+
+    (Directional)
+    trim: 18F-69F
+
+group:
+  more: +rst:`IN, OUT <https://www.lifeprint.com/asl101/pages-signs/i/inout.htm>`_
+
+  https://www.youtube.com/watch?v=YirRi12-zWo IN
+    trim: 29F-88F
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=oz63G93uNGk OUT
+    tags: +first_100_signs
+
+group:
+  more: +rst:`MOVIE <https://www.lifeprint.com/asl101/pages-signs/m/movie.htm>`_
+
+  https://www.youtube.com/watch?v=ACBYkV6CDxI MOVIE
+
+group:
+  more: +rst:`PLAY <https://www.lifeprint.com/asl101/pages-signs/p/play.htm>`_
+
+  https://www.youtube.com/watch?v=iZZwtHUXBSY PLAYING / PLAY
+
+group:
+  more: +rst:`PUT <https://www.lifeprint.com/asl101/pages-signs/p/put.htm>`_
+
+  https://www.youtube.com/watch?v=G3LICbWdIb8 PUT / install / put there
+  https://www.youtube.com/watch?v=weXM5pqwL3g PUT-AWAY
+
+group:
+  more: +rst:`MOVE <https://www.lifeprint.com/asl101/pages-signs/m/move.htm>`_
+
+  https://www.youtube.com/watch?v=OxKJDUAYsjg MOVE
+
+  tags: +extra
+  https://www.youtube.com/watch?v=1BA03vGRvAk MOVE-away
+  https://www.youtube.com/watch?v=em0EHJsuZ9w MOVE-here
+  https://www.youtube.com/watch?v=WwCJMduRxzU MOVE-later / POSTPONE
+  https://www.youtube.com/watch?v=yFH1f6mgFwI REARRANGE / MOVE things around
+    trim: 13F-98F
+
+group:
+  more: +rst:`SIT <https://www.lifeprint.com/asl101/pages-signs/s/sit.htm>`_
+
+  https://www.youtube.com/watch?v=ZvzKTn4qWfA SIT
+  https://www.youtube.com/watch?v=nVDFsl5hR44 SIT-anxious
+
+  tags: +extra
+  https://www.youtube.com/watch?v=OWLRwjpnJV8 SIT-restless
+
+group:
+  more: +rst:`STAND <https://www.lifeprint.com/asl101/pages-signs/s/stand.htm>`_
+
+  https://www.youtube.com/watch?v=KhhowNO7Ywk STAND
+
+group:
+  more: +rst:`STAY <https://www.lifeprint.com/asl101/pages-signs/s/stay.htm>`_
+
+  https://www.youtube.com/watch?v=QmbOr-8K_Kw STAY
+
+group:
+  more: +rst:`STORE <https://www.lifeprint.com/asl101/pages-signs/s/store.htm>`_
+
+  https://www.youtube.com/watch?v=CPp1UOM-olA STORE
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=qD6MtwD7zMU FOOD STORE
+
+group:
+  more: +rst:`WALK <https://www.lifeprint.com/asl101/pages-signs/w/walk.htm>`_
+
+  https://www.youtube.com/watch?v=5iv2XtBzogU WALK
+
+  tags: +extra
+  https://www.youtube.com/watch?v=xyAZKJHPG3c HIKE / WALK
+  https://www.youtube.com/watch?v=d8v3pe1e1Oo WALK (CL: 1)
+
+group:
+  more: +rst:`WATCH <https://www.lifeprint.com/asl101/pages-signs/w/watch.htm>`_
+
+  https://www.youtube.com/watch?v=4cn6Fyzz8ns WATCH (look at, watch a video)
+
+  tags: +extra
+  https://www.youtube.com/watch?v=mVLZ267V540 WATCH (keep an eye on)
+  https://www.youtube.com/watch?v=A287sU6gWLk WRISTWATCH
+
+group:
+  more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
+
+  https://www.youtube.com/watch?v=g4AwGIjxn7k WITH
+    trim: 11F-76F
+    more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=kq2iGRiNAvk
+    WITH-long-term / go-steady / monogamous
+    trim: 10F-82F
+    more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
+    tags: +extra
+  https://www.youtube.com/watch?v=fAydfnFBDDw GO-WITH / ACCOMPANY
+    trim: 13F-80F
+    more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
+    tags: +extra
+  https://www.youtube.com/watch?v=H8frIh9Lb_A all-TOGETHER / solidarity
+    trim: 14F-88F
+    more: +rst:`WITH <https://www.lifeprint.com/asl101/pages-signs/w/with.htm>`_
+    tags: +extra
+
+group:
+  more: +rst:`VIDEO <https://www.lifeprint.com/asl101/pages-signs/v/video.htm>`_
+
+  https://www.youtube.com/watch?v=AL5vDzEz4-k video-RECORD
+  https://www.youtube.com/watch?v=8WwxmvrQ_uw FILM / video-RECORD
+
+group:
+  more: +rst:`WEBCAM <https://www.lifeprint.com/asl101/pages-signs/w/webcam.htm>`_
+
+  https://www.youtube.com/watch?v=D4jG1Qx76yI WEBCAM / video-RECORD-myself
 
 # From video (https://www.youtube.com/watch?v=4MWPlmFX8sk)
 https://www.youtube.com/watch?v=pSPtgQM_ndg DEAD
