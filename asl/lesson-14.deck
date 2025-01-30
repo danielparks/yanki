@@ -5,12 +5,18 @@ tags: lesson_14 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-# Incomplete stub
+group:
+  more: +rst:`AUTUMN <https://www.lifeprint.com/asl101/pages-signs/a/autumn.htm>`_
+
+  https://www.youtube.com/watch?v=g_DZl3jIAbY AUTUMN / FALL
+    trim: 13F-72F
 
 group:
   more: +rst:`COLD <https://www.lifeprint.com/asl101/pages-signs/c/cold.htm>`_
 
-  https://www.youtube.com/watch?v=vHgjYI-ig2s COLD (temperature)
+  https://www.youtube.com/watch?v=vHgjYI-ig2s
+    COLD (temperature) / WINTER (in context)
+    trim: 8F-63F
     tags: +first_100_signs
 
 group:
@@ -18,6 +24,12 @@ group:
 
   https://www.youtube.com/watch?v=2dMLLV2JWXE COOL (temperature)
     tags: +first_100_signs
+
+group:
+  more: +rst:`DEODORANT <https://www.lifeprint.com/asl101/pages-signs/d/deodorant.htm>`_
+
+  https://www.youtube.com/watch?v=WImRv1IKl0U DEODORANT
+    trim: 9F-64F
 
 group:
   more: +rst:`ENJOY <https://www.lifeprint.com/asl101/pages-signs/e/enjoy.htm>`_
@@ -40,6 +52,7 @@ group:
   more: +rst:`HOT <https://www.lifeprint.com/asl101/pages-signs/h/hot.htm>`_
 
   https://www.youtube.com/watch?v=a0robonALIk HOT (temperature)
+    trim: 10F-48F
     tags: +first_100_signs
 
 group:
@@ -47,19 +60,133 @@ group:
 
   # Most common version of MAN in lesson 2. Maybe this should go there?
   https://www.youtube.com/watch?v=uJ7_4nc3BZk -> MAN / BOY FINE
+    trim: 10F-58F
   https://www.youtube.com/watch?v=xb0_f3hdD54 -> MAN / BOY ADULT
+    trim: 17F-78F
+
+group:
+  more: +rst:`MOON <https://www.lifeprint.com/asl101/pages-signs/m/moon.htm>`_
+
+  https://www.youtube.com/watch?v=vtl8Wc8XCbk MOON
+    trim: 10F-70F
+  # No video for modified-C hand tap around eye version.
+
+group:
+  more: +rst:`RAIN <https://www.lifeprint.com/asl101/pages-signs/r/rain.htm>`_
+
+  https://www.youtube.com/watch?v=Bk4w3wvvehE RAIN
+    trim: 43F-92F
+  https://www.youtube.com/watch?v=4MVeZA49PNk RAIN-HARD
+    trim: 19F-72F
 
 group:
   more: +rst:`SICK <https://www.lifeprint.com/asl101/pages-signs/s/sick.htm>`_
 
   https://www.youtube.com/watch?v=NBqpHJiufXU SICK
+    trim: 14F-71F
   https://www.youtube.com/watch?v=ksiDNmyqL0M DISEASE / ILLNESS
+    trim: 12F-86F
 
 group:
   more: +rst:`SLEEP <https://www.lifeprint.com/asl101/pages-signs/s/sleep.htm>`_
 
   https://www.youtube.com/watch?v=dXEqaWSEztY SLEEP
+    trim: 12F-58F
     tags: +first_100_signs
+
+group:
+  more: +rst:`SNOW <https://www.lifeprint.com/asl101/pages-signs/s/snow.htm>`_
+
+  https://www.youtube.com/watch?v=glF8fDZPiOc SNOW (general version)
+    trim: 5F-
+  https://www.youtube.com/watch?v=x-dZm8O0gys LIGHT-SNOW
+    trim: 10F-67F
+  https://www.youtube.com/watch?v=VJVRwexVDfA HARD-SNOW / BIZZARD / SNOW-STORM
+    trim: 12F-90F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=NAY6UqiBwKk SNOW B-A-N-K
+    trim: 9F-
+  https://www.youtube.com/watch?v=gyC6F4DJLQ4 SNOW HILL (depictive)
+    trim: 8F-
+
+group:
+  more: +rst:`SPRING <https://www.lifeprint.com/asl101/pages-signs/s/spring.htm>`_
+
+  https://www.youtube.com/watch?v=5h69GQntuhw SPRING / PLANT / GARDEN
+    trim: 8F-93F
+  https://www.youtube.com/watch?v=j7TOWgQt8rI GROW / GROWTH
+    trim: 20F-89F
+
+group:
+  more: +rst:`SUMMER <https://www.lifeprint.com/asl101/pages-signs/s/summer.htm>`_
+
+  https://www.youtube.com/watch?v=AaXReP9YjVE SUMMER
+    trim: 10F-
+
+group:
+  more: +rst:`SUN <https://www.lifeprint.com/asl101/pages-signs/s/sun.htm>`_
+
+  https://www.youtube.com/watch?v=fnYd3XHdEPI SUN (ray version)
+    trim: 28F-78F
+  https://www.youtube.com/watch?v=_zPeOLUL8GY SUN (C-hand version)
+    trim: 19F-78F
+  https://www.youtube.com/watch?v=852pcRTvXp8 -> SUN (circle version)
+    trim: 19F-72F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=AjJTLUhIHww SUN (C-hand version, specific location)
+    trim: 35F-164F
+  https://www.youtube.com/watch?v=878nLVWZmFI -> SUNSET (C-hand version)
+    trim: 14F-77F
+  https://www.youtube.com/watch?v=AJQcfZZf04M SUNSET (O-hand version)
+    trim: 13F-83F
+  https://www.youtube.com/watch?v=RUQyUdMJkws SUN BEATING-DOWN
+    trim: 11F-80F
+  https://www.youtube.com/watch?v=z668-eh0Aks -> SUN BEATING-DOWN
+    trim: 14F-76F
+  https://www.youtube.com/watch?v=dzB1IiNmlp4 SUNLIGHT
+    trim: 4F-64F
+  https://www.youtube.com/watch?v=dlXlDOD0UVo SUNBATHE / TAN / TANNING / LYING OUT
+    trim: 15F-66F
+
+group:
+  more: +rst:`SUNRISE <https://www.lifeprint.com/asl101/pages-signs/s/sunrise.htm>`_
+
+  https://www.youtube.com/watch?v=bS5TGnuQWpo SUNRISE (F-hand version)
+    trim: 0-69F
+  https://www.youtube.com/watch?v=mQUYA9p-Fqs -> SUNRISE (C-hand version)
+    trim: 10F-82F
+  https://www.youtube.com/watch?v=G4aFaJtzQGk -> SUNRISE (O-hand version)
+    trim: 7F-76F
+
+group:
+  more: +rst:`SLEEP-IN <https://www.lifeprint.com/asl101/pages-signs/s/sleepin.htm>`_
+
+  https://www.youtube.com/watch?v=ycHdzOuwoZw OVERSLEEP / SLEEP-IN
+    trim: 12F-68F
+
+group:
+  more: +rst:`USE <https://www.lifeprint.com/asl101/pages-signs/u/use.htm>`_
+
+  https://www.youtube.com/watch?v=yQScIrYGgaE USE / WEAR
+    trim: 15F-66F
+  https://www.youtube.com/watch?v=gvU21ZCewRk -> USE (sideways U-hand version)
+    trim: 2F-44F
+
+group:
+  more: +rst:`VACATION <https://www.lifeprint.com/asl101/pages-signs/v/vacation.htm>`_
+
+  https://www.youtube.com/watch?v=V81liG2gQbo VACATION
+    trim: 12F-61F
+  https://www.youtube.com/watch?v=T-_FfKOCHIM NOT-WORKING / TIME-OFF
+    trim: 4F-60F
+
+group:
+  more: +rst:`WAKE-UP <https://www.lifeprint.com/asl101/pages-signs/w/wake.htm>`_
+
+  https://www.youtube.com/watch?v=0n0eQSCS3Ow WAKE-UP
+    trim: 10F-68F
 
 group:
   more: +rst:`WARM <https://www.lifeprint.com/asl101/pages-signs/w/warm.htm>`_
@@ -68,8 +195,70 @@ group:
     tags: +first_100_signs
 
 group:
+  more: +rst:`WEATHER <https://www.lifeprint.com/asl101/pages-signs/w/weather.htm>`_
+
+  https://www.youtube.com/watch?v=AxL3Q6C73fg WEATHER (W-hands version)
+    trim: 3F-60F
+  https://www.youtube.com/watch?v=mb_1tS6EGQ4 WEATHER (single W-hand version)
+    trim: 17F-64F
+  https://www.youtube.com/watch?v=lr7sFBlmWIY -> WEATHER (5-hands version)
+    trim: 5F-
+  https://www.youtube.com/watch?v=NOcMCP5hyqo -> WEATHER (twist version)
+    trim: 13F-33F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=Od4BsRl6fPQ FLOOD
+    trim: 14F-78F
+  https://www.youtube.com/watch?v=FT17b-fyP4o CLOUD / CLOUDY
+    trim: 9F-77F
+  https://www.youtube.com/watch?v=x4sckBIupsg -> STORM (cloud version)
+    trim: 17F-162F
+  https://www.youtube.com/watch?v=xpVL76kbtzo STORM (swirl version)
+    trim: 5F-57F
+  https://www.youtube.com/watch?v=0VYi0Xiky-I FIRE / BLAZING / BONFIRE / INFERNO
+    trim: 10F-78F
+  https://www.youtube.com/watch?v=-xoJ_2O126Y -> FIRE / FLAMES / BURNED-UP
+    trim: 13F-76F
+  https://www.youtube.com/watch?v=oYYyWuK-V1o -> BURN-up / go-up-in-FLAMES
+    trim: 13F-63F
+  https://www.youtube.com/watch?v=qg-uh752pW0 TORNADO / HURRICANE / TYPHOON
+    trim: 8F-63F
+  https://www.youtube.com/watch?v=n1ASdG6oJnU TORNADO (index fingers version) / CYCLONE / WHIRLWIND
+    trim: 11F-53F
+  https://www.youtube.com/watch?v=dzPZV6kESJQ -> TORNADO (middle fingers version)
+    trim: 5F-
+  https://www.youtube.com/watch?v=WV5Vw9bUfOg -> TORNADO (A-hand version)
+    trim: 34F-
+  https://www.youtube.com/watch?v=KAOseWslhHQ EARTHQUAKE
+    trim: 12F-84F
+  https://www.youtube.com/watch?v=DzBMXVvHoQ4 -> SHAKE! / quake / thunderous / seismic / tremor (S-hands version)
+    trim: 9F-68F
+  https://www.youtube.com/watch?v=Ao2nfyRAjng -> SHAKE! / quake / thunderous / seismic / tremor (5-hands version)
+    trim: 12F-76F
+  https://www.youtube.com/watch?v=tYeqvZ9Cqc8 F-O-G
+    trim: 2F-69F
+
+group:
+  more: +rst:`WIND <https://www.lifeprint.com/asl101/pages-signs/w/wind.htm>`_
+
+  https://www.youtube.com/watch?v=RA04zvXojYA BREEZE
+    trim: 9F-72F
+  https://www.youtube.com/watch?v=sKI8Y16sTu8 strong-WIND / WINDY / STORM
+    trim: 5F-87F
+
+group:
+  more: +rst:`WINTER <https://www.lifeprint.com/asl101/pages-signs/w/winter.htm>`_
+
+  https://www.youtube.com/watch?v=-ahugfd5Znc WINTER (initialized)
+    trim: 10F-60F
+
+group:
   more: +rst:`WOMAN <https://www.lifeprint.com/asl101/pages-signs/w/woman.htm>`_
 
   # Most common version of WOMAN in lesson 2. Maybe this should go there?
   https://www.youtube.com/watch?v=mZMoRLldXOs -> WOMAN / GIRL FINE
   # No GIRL ADULT video, and not mentioned on web page.
+
+# Listed directly on lesson page.
+https://www.youtube.com/watch?v=q2rGWWhPBFQ CL:1 GO-FOR-A-STROLL
+  trim: 13F-85F
