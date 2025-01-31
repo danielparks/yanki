@@ -1,0 +1,79 @@
+title: Lifeprint ASL::Vocabulary::Lesson 17 — Eating
+more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
+  `lesson 17 <https://www.lifeprint.com/asl101/lessons/lesson17.htm>`_
+tags: lesson_17 vocabulary
+audio: strip
+note_id: Lifeprint ASL {url} {clip}
+
+# Incomplete stub
+# Group URLs found with: Array.from(window.getSelection().getRangeAt(0).cloneContents().querySelectorAll('a[href]')).map(a => a.href).join("\n")
+
+group:
+  more: +rst:`A-LOT <https://www.lifeprint.com/asl101/pages-signs/a/a-lot.htm>`_
+
+  https://www.youtube.com/watch?v=KgU9qm6vXJ0 MUCH / A-LOT
+    trim: 12F-69F
+
+group:
+  more: +rst:`BANANA <https://www.lifeprint.com/asl101/pages-signs/b/banana.htm>`_
+
+group:
+  more: +rst:`BEER <https://www.lifeprint.com/asl101/pages-signs/b/beer.htm>`_
+
+group:
+  more: +rst:`BREAKFAST <https://www.lifeprint.com/asl101/pages-signs/b/breakfast.htm>`_
+
+group:
+  more: +rst:`CUP <https://www.lifeprint.com/asl101/pages-signs/c/cup.htm>`_
+
+group:
+  more: +rst:`DINNER <https://www.lifeprint.com/asl101/pages-signs/d/dinner.htm>`_
+
+group:
+  more: +rst:`DISH <https://www.lifeprint.com/asl101/pages-signs/d/dish.htm>`_
+
+group:
+  more: +rst:`FRENCH-FRIES <https://www.lifeprint.com/asl101/pages-signs/f/frenchfries.htm>`_
+
+group:
+  more: +rst:`FRENCH-TOAST <https://www.lifeprint.com/asl101/pages-signs/f/frenchtoast.htm>`_
+
+group:
+  more: +rst:`GRAPES <https://www.lifeprint.com/asl101/pages-signs/g/grapes.htm>`_
+
+group:
+  more: +rst:`KETCHUP <https://www.lifeprint.com/asl101/pages-signs/k/ketchup.htm>`_
+
+group:
+  more: +rst:`LUNCH <https://www.lifeprint.com/asl101/pages-signs/l/lunch.htm>`_
+
+group:
+  more: +rst:`MAYONNAISE <https://www.lifeprint.com/asl101/pages-signs/m/mayonnaise.htm>`_
+
+group:
+  more: +rst:`MUSTARD <https://www.lifeprint.com/asl101/pages-signs/m/mustard.htm>`_
+
+group:
+  more: +rst:`PANCAKE <https://www.lifeprint.com/asl101/pages-signs/p/pancake.htm>`_
+
+group:
+  more: +rst:`PEPPER <https://www.lifeprint.com/asl101/pages-signs/p/pepper.htm>`_
+
+group:
+  more: +rst:`PICKLE <https://www.lifeprint.com/asl101/pages-signs/p/pickle.htm>`_
+
+group:
+  more: +rst:`POP <https://www.lifeprint.com/asl101/pages-signs/p/pop.htm>`_
+
+group:
+  more: +rst:`SALAD <https://www.lifeprint.com/asl101/pages-signs/s/salad.htm>`_
+
+group:
+  more: +rst:`SALT <https://www.lifeprint.com/asl101/pages-signs/s/salt.htm>`_
+
+# SINK is in lesson 9.
+
+group:
+  more: +rst:`SOAP <https://www.lifeprint.com/asl101/pages-signs/s/soap.htm>`_
+
+# SOUP is in lesson 7.
