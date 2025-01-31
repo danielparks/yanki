@@ -32,6 +32,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - run: sudo apt-get update
       - run: sudo apt-get install -y ffmpeg
       - uses: astral-sh/setup-uv@v5
       - run: uv python install
