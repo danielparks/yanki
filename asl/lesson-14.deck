@@ -6,6 +6,20 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
+  more: +rst:`CL:1 <https://www.lifeprint.com/asl101/pages-signs/c/cl1.htm>`_
+
+  https://www.youtube.com/watch?v=d8v3pe1e1Oo WALK (CL:1)
+    trim: 9F-67F
+  https://www.youtube.com/watch?v=q2rGWWhPBFQ STROLL (CL:1)
+    trim: 13F-85F
+  https://www.youtube.com/watch?v=ufYAt_dEUII GO-OUT (CL:1)
+    trim: 11F-64F
+  https://www.youtube.com/watch?v=1QFAYYsiIGA RUNNING-over-surface (CL:1)
+    trim: 10F-
+  https://www.youtube.com/watch?v=H5bDTkiOg_Y WALKING-over-surface (CL:1)
+    trim: 2F-
+
+group:
   more: +rst:`AUTUMN <https://www.lifeprint.com/asl101/pages-signs/a/autumn.htm>`_
 
   https://www.youtube.com/watch?v=g_DZl3jIAbY AUTUMN / FALL
@@ -258,7 +272,3 @@ group:
   # Most common version of WOMAN in lesson 2. Maybe this should go there?
   https://www.youtube.com/watch?v=mZMoRLldXOs -> WOMAN / GIRL FINE
   # No GIRL ADULT video, and not mentioned on web page.
-
-# Listed directly on lesson page.
-https://www.youtube.com/watch?v=q2rGWWhPBFQ CL:1 GO-FOR-A-STROLL
-  trim: 13F-85F
