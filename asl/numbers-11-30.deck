@@ -1,41 +1,47 @@
 title: Lifeprint ASL::Numbers::11-30
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `Numbers
-  11–20 <https://www.lifeprint.com/asl101/pages-signs/n/numbers11-20.htm>`_
-  and `21–30 <https://www.lifeprint.com/asl101/pages-signs/n/numbers21-30.htm>`_
 crop: in_h:in_h
 audio: strip
 note_id: Lifeprint ASL {text}
 
-tags: Lifeprint numbers::11-20
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @390F-430F 11
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @450F-482F 12
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @505F-545F 13
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @562F-595F 14
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @615F-640F 15
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @660F-700F 16
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @713F-750F 17
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @763F-793F 18
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @814F-848F 19
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @855F-889F 20
+group:
+  tags: Lifeprint numbers::11-20
+  more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `Numbers
+    11–20 <https://www.lifeprint.com/asl101/pages-signs/n/numbers11-20.htm>`_
 
-# Variants
-slow: 0:00- *2
-tags: +extra
-https://www.youtube.com/watch?v=LR36bN0IayA @30F-46F -> 16 (alternative)
-https://www.youtube.com/watch?v=LR36bN0IayA @56F-77F -> 17 (alternative)
-https://www.youtube.com/watch?v=LR36bN0IayA @86F-103F -> 18 (alternative)
-https://www.youtube.com/watch?v=LR36bN0IayA @112F-131F -> 19 (alternative)
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @390F-430F 11
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @450F-482F 12
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @505F-545F 13
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @562F-595F 14
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @615F-640F 15
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @660F-700F 16
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @713F-750F 17
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @763F-793F 18
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @814F-848F 19
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @855F-889F 20
 
-# The sign for twenty is a little fast; stretch it out.
-slow: 0:00-0:00.1 *2
-tags: Lifeprint numbers::21-30
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @900F-937F 21
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @950F-980F 22
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1000F-1025F 23
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1046F-1089F 24
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1098F-1130F 25
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1151F-1184F 26
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1197F-1235F 27
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1250F-1288F 28
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1300F-1343F 29
-https://www.youtube.com/watch?v=M4AFC4eEjlQ @1355F-1395F 30
+  # Variants
+  slow: 0:00- *2
+  tags: +extra
+  https://www.youtube.com/watch?v=LR36bN0IayA @30F-46F -> 16 (alternative)
+  https://www.youtube.com/watch?v=LR36bN0IayA @56F-77F -> 17 (alternative)
+  https://www.youtube.com/watch?v=LR36bN0IayA @86F-103F -> 18 (alternative)
+  https://www.youtube.com/watch?v=LR36bN0IayA @112F-131F -> 19 (alternative)
+
+group:
+  tags: Lifeprint numbers::21-30
+  more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `Numbers 21–30
+    <https://www.lifeprint.com/asl101/pages-signs/n/numbers21-30.htm>`_
+
+  # The sign for twenty is a little fast; stretch it out.
+  slow: 0:00-0:00.1 *2
+
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @900F-937F 21
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @950F-980F 22
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1000F-1025F 23
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1046F-1089F 24
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1098F-1130F 25
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1151F-1184F 26
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1197F-1235F 27
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1250F-1288F 28
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1300F-1343F 29
+  https://www.youtube.com/watch?v=M4AFC4eEjlQ @1355F-1395F 30
