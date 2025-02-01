@@ -1,5 +1,6 @@
 import docutils.core
 import html
+import functools
 import os
 import re
 from urllib.parse import quote
@@ -24,6 +25,7 @@ def rst_to_html(rst):
     return parts["body_pre_docinfo"] + parts["fragment"]
 
 
+@functools.cache
 def raw_to_html(raw):
     if raw.startswith("rst:"):
         return rst_to_html(raw[4:])
