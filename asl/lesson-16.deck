@@ -5,8 +5,6 @@ tags: lesson_16 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-# Incomplete stub
-
 group:
   # HOUR is in lesson 12
   more: +rst:`HALF-HOUR <https://www.lifeprint.com/asl101/pages-signs/h/half-hour.htm>`_
@@ -24,6 +22,9 @@ group:
 
 group:
   more: +rst:`APPOINTMENT <https://www.lifeprint.com/asl101/pages-signs/a/appointment.htm>`_
+
+  https://www.youtube.com/watch?v=N-Ka5PxfVkA APPOINTMENT / RESERVATION
+    trim: 11F-66F
 
 group:
   more: +rst:`BEFORE <https://www.lifeprint.com/asl101/pages-signs/b/before.htm>`_
@@ -52,14 +53,31 @@ group:
 group:
   more: +rst:`END <https://www.lifeprint.com/asl101/pages-signs/e/end.htm>`_
 
+  https://www.youtube.com/watch?v=SiRvPUToJvw END (straight movement version
+    trim: 18F-73F
+  https://www.youtube.com/watch?v=lRBeEfuQmGM END (L-movement version)
+    trim: 11F-146F
+
 group:
   more: +rst:`FEW <https://www.lifeprint.com/asl101/pages-signs/f/few.htm>`_
+    FEW and SEVERAL are inflections of the same sign. Fewer is closer to the
+    body with fewer fingers. More is a more open body with more fingers.
+
+  https://www.youtube.com/watch?v=jU6JOj4UucI FEW (3-hand version)
+    trim: 10F-77F
+  https://www.youtube.com/watch?v=LCkYr7H9sVY SEVERAL / FEW (4-hand version)
+    trim: 1F-65F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=s3L8_TvWFoE -> FEW / SEVERAL (pinkie version)
+    trim: 14F-57F
 
 group:
   more: +rst:`FROM-NOW-ON <https://www.lifeprint.com/asl101/pages-signs/f/from-now-on.htm>`_
 
   # Slight difference in path of hand. See AFTER page.
   https://www.youtube.com/watch?v=rIE6pSjWh6A AFTER / FROM-NOW-ON / FROM-THEN-ON
+    trim: 8F-63F
   https://www.youtube.com/watch?v=nEGhuagav-w
     -> FROM-NOW-ON / FROM-THEN-ON / AFTER
     trim: 3F-69F
@@ -77,6 +95,7 @@ group:
 
   tags: +extra
   https://www.youtube.com/watch?v=x9xgoFqsBkE FIRST-PLACE
+    trim: 2F-57F
   # No video for SECOND-PLACE or THIRD-PLACE
 
 group:
@@ -102,11 +121,17 @@ group:
 group:
   more: +rst:`MIDDLE <https://www.lifeprint.com/asl101/pages-signs/m/middle.htm>`_
 
-group:
-  more: +rst:`CENTER <https://www.lifeprint.com/asl101/pages-signs/c/center.htm>`_
+  https://www.youtube.com/watch?v=dV6jdKRJTvc MIDDLE / CENTER
+    trim: 12F-59F
+  https://www.youtube.com/watch?v=9xbR8Yk9vXg CENTER (bent hand version)
+    trim: 7F-65F
+  # No video for MIDPOINT.
 
 group:
   more: +rst:`MIDNIGHT <https://www.lifeprint.com/asl101/pages-signs/m/midnight.htm>`_
+
+  https://www.youtube.com/watch?v=p7CPi7lDY3c MIDNIGHT
+    trim: 48F-112F
 
 group:
   more: +rst:`MOST <https://www.lifeprint.com/asl101/pages-signs/m/most.htm>`_
@@ -132,13 +157,20 @@ group:
 group:
   more: +rst:`OFTEN <https://www.lifeprint.com/asl101/pages-signs/o/often.htm>`_
 
+  https://www.youtube.com/watch?v=4dtwTr_w12I OFTEN
+    trim: 3F-52F
+
 group:
   more: +rst:`RECENT <https://www.lifeprint.com/asl101/pages-signs/r/recent.htm>`_
+
+  https://www.youtube.com/watch?v=PBpeJcpk7t8 RECENT / RECENTLY
+    trim: 8F-60F
 
 group:
   more: +rst:`SEE <https://www.lifeprint.com/asl101/pages-signs/s/see.htm>`_
 
   https://www.youtube.com/watch?v=JytzcBQp8d4 LOOK / LOOK-AT (near face version)
+    trim: 12F-51F
   https://www.youtube.com/watch?v=7XQiv-PxecU SEE / VISION
     trim: 14F-63F
 
@@ -146,11 +178,24 @@ group:
   https://www.youtube.com/watch?v=FYw8NR16pDE WE-WILL-SEE
     trim: 7F-63F
   https://www.youtube.com/watch?v=3n81DT4NTOw SEE-you-LATER
+    trim: 17F-71F
   https://www.youtube.com/watch?v=9caSpFr1I28
     LOOK-OVER / browse / sight see / window shopping
 
     (sequential version)
+    trim: 10F-83F
   https://www.youtube.com/watch?v=yNbHzvmnZgc LOOK-OVER (circles version)
+    trim: 10F-65F
 
 group:
   more: +rst:`SOON <https://www.lifeprint.com/asl101/pages-signs/s/soon.htm>`_
+
+  https://www.youtube.com/watch?v=ty0cXz3tYlM SOON (F-hand version)
+    trim: 1F-50F
+  https://www.youtube.com/watch?v=pkNaLLQKuUU SOON (H-hand version)
+    trim: 15F-69F
+  # No video for F on nose version.
+
+  tags: +extra
+  https://www.youtube.com/watch?v=YfTrFCqaAks BRIEF / short duration
+    trim: 3F-58F
