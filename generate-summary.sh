@@ -8,4 +8,4 @@ yanki list-notes -f '{note_id} TEXT: {text!r}
 | sort \
 >asl/summary.txt
 
-git --no-pager diff --word-diff-regex=. --color=always asl/summary.txt
+git --no-pager diff --word-diff-regex=. -U1 --color=always asl/summary.txt
