@@ -8,6 +8,7 @@ import logging
 from multiprocessing import cpu_count
 import os
 from pathlib import Path
+import re
 import shlex
 import signal
 import subprocess
@@ -337,11 +338,7 @@ def open_videos_from_file(options, files):
         files = [sys.stdin]
 
     for file in files:
-        for url in file:
-            url = url.strip()
-            if not url:
-                next
-
+        for url in _find_urls(file):
             try:
                 video = Video(url, options=options)
                 open_in_app([video.processed_video()])
@@ -350,6 +347,26 @@ def open_videos_from_file(options, files):
             except yt_dlp.utils.DownloadError:
                 # yt_dlp prints the error itself.
                 pass
+
+
+def _find_urls(file):
+    """
+    Find URLs in a file to open.
+
+    Ignore blank lines and # comments. URLs are separated by whitespace.
+    """
+    for line in file:
+        line = line.strip()
+        # Skip blank lines and comments
+        if not line or line.startswith("#"):
+            continue
+        # Remove trailing comments
+        line = re.split(r"\s+#", line, maxsplit=1)[0]
+        for url in line.split():
+            if ":" in url:
+                yield url
+            else:
+                print(f"Does not look like a URL: {url!r}")
 
 
 CACHEDIR_TAG_CONTENT = """Signature: 8a477f597d28d172789f06886806bc55
