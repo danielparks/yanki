@@ -14,6 +14,7 @@ group:
   more: +rst:`BICYCLE <https://www.lifeprint.com/asl101/pages-signs/b/bicycle.htm>`_
 
   https://www.youtube.com/watch?v=8yjqcyk-xwY BIKE / BICYCLE
+    trim: 0-142F
 
 group:
   more: +rst:`BOAT <https://www.lifeprint.com/asl101/pages-signs/b/boat.htm>`_
@@ -63,6 +64,7 @@ group:
   more: +rst:`HELICOPTER <https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm>`_
 
   https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER
+    trim: 16F-78F
   # incomplete
 
 group:
@@ -72,9 +74,11 @@ group:
   more: +rst:`LEAVE <https://www.lifeprint.com/asl101/pages-signs/l/leave.htm>`_
 
   https://www.youtube.com/watch?v=fn1PTkU1fGI LEAVE / GO-OUT
+    trim: 8F-67F
   https://www.youtube.com/watch?v=qo15m6gbYEo TAKE OFF / LEAVE
     trim: 9F-74F
   https://www.youtube.com/watch?v=ji9JOLaIj9I JAM / GET-OUT-OF-HERE / LEAVE
+    trim: 12F-60F
   # incomplete
 
 group:
