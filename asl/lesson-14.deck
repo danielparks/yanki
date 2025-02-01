@@ -6,7 +6,7 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`CL:1 <https://www.lifeprint.com/asl101/pages-signs/c/cl1.htm>`_
+  more: +rst:`Classifier 1 <https://www.lifeprint.com/asl101/pages-signs/c/cl1.htm>`_
 
   https://www.youtube.com/watch?v=d8v3pe1e1Oo WALK (CL:1)
     trim: 9F-67F
