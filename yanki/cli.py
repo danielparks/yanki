@@ -20,7 +20,7 @@ import yt_dlp
 
 
 from yanki.errors import ExpectedError
-from yanki.html import htmlize_deck, generate_index_html, ensure_static_link
+from yanki.html_out import htmlize_deck, generate_index_html, ensure_static_link
 from yanki.parser import DeckFilesParser, find_invalid_format, NOTE_VARIABLES
 from yanki.anki import Deck, FINAL_NOTE_VARIABLES
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
@@ -448,3 +448,8 @@ def open_in_app(arguments):
         )
 
     sys.stdout.write(result.stdout)
+
+
+if __name__ == "__main__":
+    # Needed to call script directly, e.g. for profiling.
+    main()
