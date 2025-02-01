@@ -1,17 +1,18 @@
 # Build Anki decks from text files containing YouTube URLs
 
 ```
-uv run yanki asl/lesson-01.deck
+uv run yanki build -o out.apkg asl/*.deck
 ```
 
-That will produce an `asl/lesson-01.apkg` file.
+That will produce an `out.apkg` file.
 
 ### Example deck file
 
 ```text
 title: Lifeprint ASL::Phrases::Lesson 01
 overlay_text: Phrase
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 1 <https://www.lifeprint.com/asl101/lessons/lesson01.htm>`_
+more: rst:From `Lifeprint <https://www.lifeprint.com/>`_
+  ASLU `lesson 1 <https://www.lifeprint.com/asl101/lessons/lesson01.htm>`_
 tags: Lifeprint lesson_01 phrase
 audio: strip
 
@@ -40,9 +41,8 @@ https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
 ### Note GUIDs
 
 Anki uses the GUID (Globally Unique ID) field to identify notes for update.
-Yanki generates GUIDs based on the deck ID (generated from the deck title), the
-video URL, the clip of the video (e.g. `@0:01-0:02`), and the direction of the
-note (e.g. `<->`).
+By default, Yanki generates GUIDs based on the deck ID (generated from the deck
+title), the video URL, and the clip of the video (e.g. `@0:01-0:02`).
 
 You can customize how the GUID is generated with the `note_id` configuration:
 
@@ -52,7 +52,7 @@ You can customize how the GUID is generated with the `note_id` configuration:
     # Use the text that corresponds to the video:
     note_id: {deck_id} {text}
 
-Leaving out `{deck_id}` can be useful if you may need to move notes between
+Leaving out `{deck_id}` can be useful if you might need to move notes between
 decks later on. The import will not actually move notes from one deck to
 another, but it will update them in the other deck, and then you can manually
 move them. This is useful if you want to keep your study progress.
