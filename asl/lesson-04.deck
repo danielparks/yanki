@@ -5,91 +5,207 @@ tags: Lifeprint lesson_04 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-https://www.youtube.com/watch?v=m0IIdSY4-tI don’t-WANT
-  trim: 12F-78F
-https://www.youtube.com/watch?v=_c8v25YlVyY AUNT
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=PqtMCA2lu9w UNCLE
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=JtgGFe8HIFQ SON
-https://www.youtube.com/watch?v=hJD5uIn7ZHg DAUGHTER
-https://www.youtube.com/watch?v=25cSn8yqYPs ANGRY
-  trim: 19F-76F
-https://www.youtube.com/watch?v=ljYpx7ee9zg BABY
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=12eeoE4uG_k BED (one handed)
-  trim: 15F-70F
-https://www.youtube.com/watch?v=HA0RpgkXZn8 BED (two handed)
-  trim: 31F-
-https://www.youtube.com/watch?v=83WlTF0pTAE BEDROOM
-  trim: 13F-74F
-https://www.youtube.com/watch?v=exx7eObiynQ BRUSH-TEETH
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=H6CQg4zRmlA CRY
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=wgb7pcdTIy8 EXCUSE
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=UxO5Q0fSqOw FEEL
-https://www.youtube.com/watch?v=6RRmIyhkMx0 FRIEND
-https://www.youtube.com/watch?v=FhNdhtl2TdQ BOYFRIEND (compound)
-  trim: 20F-88F
-https://www.youtube.com/watch?v=M8MOxjnMIJo GIRLFRIEND (compound)
-  trim: 0F-55F
-https://www.youtube.com/watch?v=ZXHHO_DY6_A HAPPY
-  trim: 13F-70F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=fj6Ums0JqNE HELP / assistance
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=xs4k_Qf3BSc HURT / pain / injury
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=LHYJVE-Xb00
-  HURT / pain / throbbing / aching (jabbing version)
-https://www.youtube.com/watch?v=M8CXHkOskvo IF / SUPPOSE
-https://www.youtube.com/watch?v=mM752iAos2w IDEA
-  trim: 17F-72F
-https://www.youtube.com/watch?v=lRIRPw5EdSU LOVE
-  trim: 28F-75F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=ByET2PW3OrQ ROOM / BOX
-  trim: 25F-82F
-https://www.youtube.com/watch?v=zfkQYQhrZ6Q SAD
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=jRHDjxWJma0 SORRY
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=A84uvLUmCVU STOP
-  trim: 15F-78F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=Whiibgq84LY WASH
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=B36qDOOtm20 WALK-TO (classifier V)
-https://www.youtube.com/watch?v=0mG8riLnMg4 TOSS AND TURN (classifier V)
-https://www.youtube.com/watch?v=XFfZVYvr7fs LIE DOWN (classifier V)
-https://www.youtube.com/watch?v=gLrSY9yPNh4 GET-UP (classifier V)
+group:
+  more: +rst:`ANGRY <https://www.lifeprint.com/asl101/pages-signs/a/angry.htm>`_
 
-tags: +extra
-https://www.youtube.com/watch?v=-Yqw89wx7TE MAD
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=_nM3LdN2cMc CRY (bawl version)
-https://www.youtube.com/watch?v=9MqGbv3S1iQ GOOD-FRIEND
-  trim: 19F-82F
-https://www.youtube.com/watch?v=EHkYHDKBm5Y -> BOYFRIEND
-  trim: 15F-85F
-https://www.youtube.com/watch?v=4B3VtEF78lM -> GIRLFRIEND
-  trim: 13F-77F
-https://www.youtube.com/watch?v=sdeo6oIoWFU HELP-me
-https://www.youtube.com/watch?v=pJTfpuwYrXE WASH-face
-https://www.youtube.com/watch?v=HTfmbXLbIio WASH HANDS
-https://www.youtube.com/watch?v=nrIIvGgEyR0 WASH (vertical surface)
-  trim: 44F-110F
-# LAUNDRY / WASHING-MACHINE is in lesson 8.
-https://www.youtube.com/watch?v=BSUzDA7gQIE DISH WASH
-  trim: 35F-98F
-# STAND is covered in lesson 5.
-https://www.youtube.com/watch?v=RPIAjkVh1PU GET-UP (classifier bent-V)
-https://www.youtube.com/watch?v=_CMXWiZJDPM JUMP (classifier V)
-https://www.youtube.com/watch?v=rsiLP7wwn2w DIVE (classifier V)
+  https://www.youtube.com/watch?v=25cSn8yqYPs ANGRY
+    trim: 19F-76F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=-Yqw89wx7TE MAD
+    tags: +first_100_signs
+
+group:
+  more: +rst:`AUNT <https://www.lifeprint.com/asl101/pages-signs/a/aunt.htm>`_
+
+  https://www.youtube.com/watch?v=_c8v25YlVyY AUNT
+    tags: +first_100_signs
+
+group:
+  more: +rst:`BABY <https://www.lifeprint.com/asl101/pages-signs/b/baby.htm>`_
+
+  https://www.youtube.com/watch?v=ljYpx7ee9zg BABY
+    tags: +first_100_signs
+
+group:
+  more: +rst:`BED <https://www.lifeprint.com/asl101/pages-signs/b/bed.htm>`_
+
+  https://www.youtube.com/watch?v=12eeoE4uG_k BED (one handed)
+    trim: 15F-70F
+  https://www.youtube.com/watch?v=HA0RpgkXZn8 BED (two handed)
+    trim: 31F-
+
+group:
+  more: +rst:`BEDROOM <https://www.lifeprint.com/asl101/pages-signs/b/bedroom.htm>`_
+
+  https://www.youtube.com/watch?v=83WlTF0pTAE BEDROOM
+    trim: 13F-74F
+
+group:
+  more: +rst:`BRUSH-TEETH <https://www.lifeprint.com/asl101/pages-signs/b/brushteeth.htm>`_
+
+  https://www.youtube.com/watch?v=exx7eObiynQ BRUSH-TEETH
+    tags: +first_100_signs
+
+group:
+  more: +rst:`CRY <https://www.lifeprint.com/asl101/pages-signs/c/cry.htm>`_
+
+  https://www.youtube.com/watch?v=H6CQg4zRmlA CRY
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=_nM3LdN2cMc CRY (bawl version)
+
+group:
+  more: +rst:`DAUGHTER <https://www.lifeprint.com/asl101/pages-signs/d/daughter.htm>`_
+
+  https://www.youtube.com/watch?v=hJD5uIn7ZHg DAUGHTER
+
+group:
+  more: +rst:`DON’T-WANT <https://www.lifeprint.com/asl101/pages-signs/d/dont-want.htm>`_
+
+  https://www.youtube.com/watch?v=m0IIdSY4-tI don’t-WANT
+    trim: 12F-78F
+
+group:
+  more: +rst:`EXCUSE <https://www.lifeprint.com/asl101/pages-signs/e/excuse.htm>`_
+
+  https://www.youtube.com/watch?v=wgb7pcdTIy8 EXCUSE
+    tags: +first_100_signs
+
+group:
+  more: +rst:`FEEL <https://www.lifeprint.com/asl101/pages-signs/f/feel.htm>`_
+
+  https://www.youtube.com/watch?v=UxO5Q0fSqOw FEEL
+
+group:
+  more: +rst:`FRIEND <https://www.lifeprint.com/asl101/pages-signs/f/friend.htm>`_
+
+  https://www.youtube.com/watch?v=6RRmIyhkMx0 FRIEND
+  https://www.youtube.com/watch?v=FhNdhtl2TdQ BOYFRIEND (compound)
+    trim: 20F-88F
+  https://www.youtube.com/watch?v=M8MOxjnMIJo GIRLFRIEND (compound)
+    trim: 0F-55F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=9MqGbv3S1iQ GOOD-FRIEND
+    trim: 19F-82F
+  https://www.youtube.com/watch?v=EHkYHDKBm5Y -> BOYFRIEND
+    trim: 15F-85F
+  https://www.youtube.com/watch?v=4B3VtEF78lM -> GIRLFRIEND
+    trim: 13F-77F
+
+group:
+  more: +rst:`HAPPY <https://www.lifeprint.com/asl101/pages-signs/h/happy.htm>`_
+
+  https://www.youtube.com/watch?v=ZXHHO_DY6_A HAPPY
+    trim: 13F-70F
+    tags: +first_100_signs
+
+group:
+  more: +rst:`HELP <https://www.lifeprint.com/asl101/pages-signs/h/help.htm>`_
+
+  https://www.youtube.com/watch?v=fj6Ums0JqNE HELP / assistance
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=sdeo6oIoWFU HELP-me
+
+group:
+  more: +rst:`HURT <https://www.lifeprint.com/asl101/pages-signs/h/hurt.htm>`_
+
+  https://www.youtube.com/watch?v=xs4k_Qf3BSc HURT / pain / injury
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=LHYJVE-Xb00
+    HURT / pain / throbbing / aching (jabbing version)
+
+group:
+  more: +rst:`IF <https://www.lifeprint.com/asl101/pages-signs/i/if.htm>`_
+
+  https://www.youtube.com/watch?v=M8CXHkOskvo IF / SUPPOSE
+
+group:
+  more: +rst:`IDEA <https://www.lifeprint.com/asl101/pages-signs/i/idea.htm>`_
+
+  https://www.youtube.com/watch?v=mM752iAos2w IDEA
+    trim: 17F-72F
+
+group:
+  more: +rst:`LOVE <https://www.lifeprint.com/asl101/pages-signs/l/love.htm>`_
+
+  https://www.youtube.com/watch?v=lRIRPw5EdSU LOVE
+    trim: 28F-75F
+    tags: +first_100_signs
+
+group:
+  more: +rst:`ROOM <https://www.lifeprint.com/asl101/pages-signs/r/room.htm>`_
+
+  https://www.youtube.com/watch?v=ByET2PW3OrQ ROOM / BOX
+    trim: 25F-82F
+
+group:
+  more: +rst:`SAD <https://www.lifeprint.com/asl101/pages-signs/s/sad.htm>`_
+
+  https://www.youtube.com/watch?v=zfkQYQhrZ6Q SAD
+    tags: +first_100_signs
+
+group:
+  more: +rst:`SON <https://www.lifeprint.com/asl101/pages-signs/s/son.htm>`_
+
+  https://www.youtube.com/watch?v=JtgGFe8HIFQ SON
+
+group:
+  more: +rst:`SORRY <https://www.lifeprint.com/asl101/pages-signs/s/sorry.htm>`_
+
+  https://www.youtube.com/watch?v=jRHDjxWJma0 SORRY
+    tags: +first_100_signs
+
+group:
+  more: +rst:`STOP <https://www.lifeprint.com/asl101/pages-signs/s/stop.htm>`_
+
+  https://www.youtube.com/watch?v=A84uvLUmCVU STOP
+    trim: 15F-78F
+    tags: +first_100_signs
+
+# SUPPOSE is the same as IF.
+
+group:
+  more: +rst:`UNCLE <https://www.lifeprint.com/asl101/pages-signs/u/uncle.htm>`_
+
+  https://www.youtube.com/watch?v=PqtMCA2lu9w UNCLE
+    tags: +first_100_signs
+
+group:
+  more: +rst:`WASH <https://www.lifeprint.com/asl101/pages-signs/w/wash.htm>`_
+
+  https://www.youtube.com/watch?v=Whiibgq84LY WASH
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=pJTfpuwYrXE WASH-face
+  https://www.youtube.com/watch?v=HTfmbXLbIio WASH HANDS
+  https://www.youtube.com/watch?v=nrIIvGgEyR0 WASH (vertical surface)
+    trim: 44F-110F
+  # LAUNDRY / WASHING-MACHINE is in lesson 8.
+  https://www.youtube.com/watch?v=BSUzDA7gQIE DISH WASH
+    trim: 35F-98F
+
+group:
+  more: +rst:`Classifier V <https://www.lifeprint.com/asl101/pages-signs/c/clv.htm>`_
+
+  https://www.youtube.com/watch?v=B36qDOOtm20 WALK-TO (classifier V)
+  https://www.youtube.com/watch?v=0mG8riLnMg4 TOSS AND TURN (classifier V)
+  https://www.youtube.com/watch?v=XFfZVYvr7fs LIE DOWN (classifier V)
+  https://www.youtube.com/watch?v=gLrSY9yPNh4 GET-UP (classifier V)
+
+  tags: +extra
+  # STAND is covered in lesson 5.
+  https://www.youtube.com/watch?v=RPIAjkVh1PU GET-UP (classifier bent-V)
+  https://www.youtube.com/watch?v=_CMXWiZJDPM JUMP (classifier V)
+  https://www.youtube.com/watch?v=rsiLP7wwn2w DIVE (classifier V)
 
 # From video (https://www.youtube.com/watch?v=JVTsQBVL0eA)
+tags: +extra
 https://www.youtube.com/watch?v=b_1ARTmynPQ NOBODY / NO ONE (two handed)
   trim: 8F-61F
 https://www.youtube.com/watch?v=bnkOMzdwYgY NOBODY / NO ONE (one handed)
