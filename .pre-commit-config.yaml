@@ -23,3 +23,14 @@ repos:
       - id: ruff
       - id: ruff-format
         args: ['--check']
+  - repo: local
+    hooks:
+      - id: generate-summary.sh
+        name: generate-summary.sh
+        language: system
+        entry: ./generate-summary.sh
+        exclude: ^test|^web|^README|^\.git
+        pass_filenames: false
+        types: [file]
+        stages: [pre-commit, pre-merge-commit]
+        require_serial: true
