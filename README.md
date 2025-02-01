@@ -12,7 +12,7 @@ That will produce an `asl/lesson-01.apkg` file.
 title: Lifeprint ASL::Phrases::Lesson 01
 overlay_text: Phrase
 more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU `lesson 1 <https://www.lifeprint.com/asl101/lessons/lesson01.htm>`_
-tags: lesson_01 phrase
+tags: Lifeprint lesson_01 phrase
 audio: strip
 
 https://www.youtube.com/watch?v=FHPszRvL9pg YOU what-NAME?
@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=0Kvv6FpF348 YOUR TEACHER what-NAME?
 https://www.youtube.com/watch?v=Th7pOg8YbCU YOUR TEACHER NAME WHAT?
 
 # You can change tags used for future tags at any time:
-tags: lesson_01 vocabulary extra
+tags: Lifeprint lesson_01 vocabulary extra
 https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
 ```
 
