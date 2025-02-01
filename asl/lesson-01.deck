@@ -5,64 +5,170 @@ tags: Lifeprint lesson_01 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-https://www.youtube.com/watch?v=wTNv94AY-yE AGAIN / repeat
-  trim: 16F-78F
-https://www.youtube.com/watch?v=ofL3HMkLDOc DEAF-[a culturally deaf person]
-  trim: 35F-173F
-https://www.youtube.com/watch?v=sMRpqyQK72c
-  HEARING-[a culturally hearing person]
-  trim: 5F-57F
-https://www.youtube.com/watch?v=78mzpzvN9tc LEARN
-  trim: 53F-198F
-https://www.youtube.com/watch?v=8uIg8r1awC4 LIKE
-  trim: 12F-60F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=moMl2Po7R1o MEANING
-  trim: 12F-62F
-https://www.youtube.com/watch?v=FC1R9kyegJY MEET
-  trim: 9F-58F
-https://www.youtube.com/watch?v=AvAGx3xiOq8 MEET-you
-  trim: 0F-61F
-https://www.youtube.com/watch?v=GbeC9TFuSX4 NAME
-  trim: 14F-60F
-https://www.youtube.com/watch?v=2PeTh4Ym048 NICE / CLEAN
-  trim: 22F-92F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=_8tcT_lmB0w NO
-  trim: 15F-141F
-https://www.youtube.com/watch?v=TRLHLtgHyzo SIGN
-  trim: 17F-184F
-https://www.youtube.com/watch?v=FzXDBIEaEhM
-  SIGN-[in-fluent-ASL, do-a-sign, sign-language]
-  trim: 15F-61F
-https://www.youtube.com/watch?v=6ky6oywprZ4 SLOW
-  trim: 13F-82F
-https://www.youtube.com/watch?v=jrf2XYqjg2o STUDENT
-  trim: 14F-81F
-https://www.youtube.com/watch?v=hJZhwVjk-eo TEACHER
-  trim: 23F-100F
-https://www.youtube.com/watch?v=IvRwNLNR4_w THANK-YOU
-  trim: 4F-47F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=a38Nd8EQvdE UNDERSTAND
-  trim: 37F-100F
-https://www.youtube.com/watch?v=_90JOGT0vfs don’t-UNDERSTAND
-  trim: 14F-65F
-https://www.youtube.com/watch?v=1udGGPLkA-Q WHAT?
-  trim: 12F-58F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=DJU9Vnthfqk WE
-  trim: 12F-66F
-https://www.youtube.com/watch?v=HS0SXS-GHYY WHERE?
-  trim: 14F-70F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=PTmtGZ75zyY WHO?
-  trim: 12F-58F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=0usayvOXzHo YES
-  trim: 8F-52F
-https://www.youtube.com/watch?v=-1Hz72xltNk YOUR
-  trim: 9F-42F
+group:
+  more: +rst:`AGAIN <https://www.lifeprint.com/asl101/pages-signs/a/again.htm>`_
+
+  https://www.youtube.com/watch?v=wTNv94AY-yE AGAIN / repeat
+    trim: 16F-78F
+
+group:
+  more: +rst:`DEAF <https://www.lifeprint.com/asl101/pages-signs/d/deaf.htm>`_
+
+  https://www.youtube.com/watch?v=ofL3HMkLDOc DEAF-[a culturally deaf person]
+    trim: 35F-173F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=kF6jSzkDCUs -> DEAF (legacy version)
+    trim: 8F-
+
+group:
+  more: +rst:`HEARING <https://www.lifeprint.com/asl101/pages-signs/h/hearing.htm>`_
+
+  https://www.youtube.com/watch?v=sMRpqyQK72c
+    HEARING-[a culturally hearing person]
+    trim: 5F-57F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=5eIt4-SifYA AUDIO / SOUND / EAR / HEARING
+    trim: 9F-54F
+
+group:
+  more: +rst:`LEARN <https://www.lifeprint.com/asl101/pages-signs/l/learn.htm>`_
+
+  https://www.youtube.com/watch?v=78mzpzvN9tc LEARN
+    trim: 53F-198F
+
+group:
+  more: +rst:`LIKE <https://www.lifeprint.com/asl101/pages-signs/l/like.htm>`_
+
+  https://www.youtube.com/watch?v=8uIg8r1awC4 LIKE
+    trim: 12F-60F
+    tags: +first_100_signs
+
+group:
+  more: +rst:`MEANING <https://www.lifeprint.com/asl101/pages-signs/m/meaning.htm>`_
+
+  https://www.youtube.com/watch?v=moMl2Po7R1o MEANING
+    trim: 12F-62F
+
+group:
+  more: +rst:`MEET <https://www.lifeprint.com/asl101/pages-signs/m/meet.htm>`_
+
+  https://www.youtube.com/watch?v=FC1R9kyegJY MEET
+    trim: 9F-58F
+  https://www.youtube.com/watch?v=AvAGx3xiOq8 MEET-you
+    trim: 0-61F
+
+group:
+  more: +rst:`NAME <https://www.lifeprint.com/asl101/pages-signs/n/name.htm>`_
+
+  https://www.youtube.com/watch?v=GbeC9TFuSX4 NAME
+    trim: 14F-60F
+
+group:
+  more: +rst:`NICE <https://www.lifeprint.com/asl101/pages-signs/n/nice.htm>`_
+
+  https://www.youtube.com/watch?v=2PeTh4Ym048 NICE / CLEAN
+    trim: 22F-92F
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
+    trim: 14F-62F
+
+group:
+  more: +rst:`NO <https://www.lifeprint.com/asl101/pages-signs/n/no.htm>`_
+
+  https://www.youtube.com/watch?v=_8tcT_lmB0w NO
+    trim: 15F-141F
+
+group:
+  more: +rst:`SIGN <https://www.lifeprint.com/asl101/pages-signs/s/sign.htm>`_
+
+  https://www.youtube.com/watch?v=TRLHLtgHyzo SIGN
+    trim: 17F-184F
+  https://www.youtube.com/watch?v=FzXDBIEaEhM
+    SIGN-[in-fluent-ASL, do-a-sign, sign-language]
+    trim: 15F-61F
+
+group:
+  more: +rst:`SLOW <https://www.lifeprint.com/asl101/pages-signs/s/slow.htm>`_
+
+  https://www.youtube.com/watch?v=6ky6oywprZ4 SLOW
+    trim: 13F-82F
+
+group:
+  more: +rst:`STUDENT <https://www.lifeprint.com/asl101/pages-signs/s/student.htm>`_
+
+  https://www.youtube.com/watch?v=jrf2XYqjg2o STUDENT
+    trim: 14F-81F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=toVlJsSPSiI -> STUDENT (casual)
+    trim: 6F-53F
+
+group:
+  more: +rst:`TEACHER <https://www.lifeprint.com/asl101/pages-signs/t/teacher.htm>`_
+
+  https://www.youtube.com/watch?v=hJZhwVjk-eo TEACHER
+    trim: 23F-100F
+
+  tags: +extra
+  # Teach is the first part of the TEACH-ME video for some reason.
+  https://www.youtube.com/watch?v=BV6mXa4Gp58 @12F-68F TEACH
+  # I don’t feel like we need the gerund for this one:
+  #https://www.youtube.com/watch?v=LmmA7ltuhuk TEACHING
+  #  trim: 12F-68F
+
+group:
+  more: +rst:`THANK-YOU <https://www.lifeprint.com/asl101/pages-signs/t/thankyou.htm>`_
+
+  https://www.youtube.com/watch?v=IvRwNLNR4_w THANK-YOU
+    trim: 4F-47F
+    tags: +first_100_signs
+
+group:
+  more: +rst:`UNDERSTAND <https://www.lifeprint.com/asl101/pages-signs/u/understand.htm>`_
+
+  https://www.youtube.com/watch?v=a38Nd8EQvdE UNDERSTAND
+    trim: 37F-100F
+  https://www.youtube.com/watch?v=_90JOGT0vfs don’t-UNDERSTAND
+    trim: 14F-65F
+
+group:
+  more: +rst:`WE <https://www.lifeprint.com/asl101/pages-signs/w/we.htm>`_
+
+  https://www.youtube.com/watch?v=DJU9Vnthfqk WE
+    trim: 12F-66F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=Y4OjOj7eaK0 WE-2
+    trim: 12F-56F
+
+group:
+  more: +rst:`HUH <https://www.lifeprint.com/asl101/pages-signs/h/huh.htm>`_
+
+  https://www.youtube.com/watch?v=1udGGPLkA-Q WHAT?
+    trim: 12F-58F
+    tags: +first_100_signs
+
+group:
+  more: +rst:`WHERE <https://www.lifeprint.com/asl101/pages-signs/w/where.htm>`_
+
+  https://www.youtube.com/watch?v=HS0SXS-GHYY WHERE?
+    trim: 14F-70F
+    tags: +first_100_signs
+
+group:
+  more: +rst:`WHO <https://www.lifeprint.com/asl101/pages-signs/w/who.htm>`_
+
+  https://www.youtube.com/watch?v=PTmtGZ75zyY WHO?
+    trim: 12F-58F
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=_V31e361KV8 -> WHO? (legacy version)
+    trim: 14F-63F
 
 group:
   more: +rst:`WHY <https://www.lifeprint.com/asl101/pages-signs/w/why.htm>`_
@@ -70,28 +176,27 @@ group:
   https://www.youtube.com/watch?v=K0yp2v6Atxs WHY?
     trim: 10F-72F
     tags: +first_100_signs
+
+  tags: +extra
   https://www.youtube.com/watch?v=_pEFV5SwtoI -> WHY? (fluttering 8 version)
     trim: 17F-62F
-    tags: +extra
 
-tags: +extra
-https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
-  trim: 14F-62F
-https://www.youtube.com/watch?v=toVlJsSPSiI -> STUDENT (casual)
-  trim: 6F-53F
-# Teach is the first part of the TEACH-ME video for some reason.
-https://www.youtube.com/watch?v=BV6mXa4Gp58 @12F-68F TEACH
-# I don’t feel like we need the gerund for this one:
-#https://www.youtube.com/watch?v=LmmA7ltuhuk TEACHING
-#  trim: 12F-68F
-https://www.youtube.com/watch?v=Y4OjOj7eaK0 WE-2
-  trim: 12F-56F
-https://www.youtube.com/watch?v=_V31e361KV8 -> WHO? (legacy version)
-  trim: 14F-63F
+group:
+  more: +rst:`YES <https://www.lifeprint.com/asl101/pages-signs/y/yes.htm>`_
+
+  https://www.youtube.com/watch?v=0usayvOXzHo YES
+    trim: 8F-52F
+
+group:
+  more: +rst:`YOUR <https://www.lifeprint.com/asl101/pages-signs/y/your.htm>`_
+
+  https://www.youtube.com/watch?v=-1Hz72xltNk YOUR
+    trim: 9F-42F
 
 # From video (https://www.youtube.com/watch?v=DaMjr4AfYA0)
 # A number of these are covered in future lessons, but they come up too much
 # in the videos and are too useful to leave out.
+tags: +extra
 https://www.youtube.com/watch?v=TdCu_nhXVno LESSON
   trim: 21F-72F
 https://www.youtube.com/watch?v=nHUxT-iHJwM PRACTICE
