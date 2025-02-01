@@ -5,105 +5,213 @@ tags: Lifeprint lesson_03 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-https://www.youtube.com/watch?v=n1PjPqcHswk #ALL
-https://www.youtube.com/watch?v=BEfH2a6OfRA ALL / whole / entire
-https://www.youtube.com/watch?v=o2_DYu4TWcQ ASK-me
-https://www.youtube.com/watch?v=GtzG1RpF_E4 me-ASK-you
-https://www.youtube.com/watch?v=-JLJeA_R9es REQUEST / ASK
-  trim: 34F-84F
-https://www.youtube.com/watch?v=prwtXZ1o2As BAD
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=2xdhyJEgXdI BATHROOM / toilet
-  tags: +first_100_signs
+group:
+  more: +rst:`ALL <https://www.lifeprint.com/asl101/pages-signs/a/all.htm>`_
+
+  https://www.youtube.com/watch?v=n1PjPqcHswk #ALL
+  https://www.youtube.com/watch?v=BEfH2a6OfRA ALL / whole / entire
 
 group:
-  more: +rst:`BEST <https://www.lifeprint.com/asl101/pages-signs/b/best.htm>`_
+  more: +rst:`ASK <https://www.lifeprint.com/asl101/pages-signs/a/ask.htm>`_
+
+  https://www.youtube.com/watch?v=o2_DYu4TWcQ ASK-me
+  https://www.youtube.com/watch?v=GtzG1RpF_E4 me-ASK-you
+  https://www.youtube.com/watch?v=-JLJeA_R9es REQUEST / ASK
+    trim: 34F-84F
+
+group:
+  more: +rst:`BAD <https://www.lifeprint.com/asl101/pages-signs/b/bad.htm>`_
+
+  https://www.youtube.com/watch?v=prwtXZ1o2As BAD
+    tags: +first_100_signs
+
+group:
+  more: +rst:`BATHROOM <https://www.lifeprint.com/asl101/pages-signs/b/bathroom.htm>`_
+
+  https://www.youtube.com/watch?v=2xdhyJEgXdI BATHROOM / toilet
+    tags: +first_100_signs
+
+group:
+  more: +rst:`BIG <https://www.lifeprint.com/asl101/pages-signs/b/big.htm>`_
+
+  https://www.youtube.com/watch?v=TdQ0qHYQSvg LARGE / BIG
+    trim: 16F-80F
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=LLGY5yaSLDk very-LARGE
+
+group:
+  more: +rst:`CITY <https://www.lifeprint.com/asl101/pages-signs/c/city.htm>`_
+
+  https://www.youtube.com/watch?v=e7Tz3OSQBQQ CITY / TOWN / COMMUNITY
+
+  tags: +extra
+  https://www.youtube.com/watch?v=Y8QX1lAPwOs -> CITY (twisting version)
+    trim: 30F-85F
+
+group:
+  more: +rst:`CLASS <https://www.lifeprint.com/asl101/pages-signs/c/class.htm>`_
+
+  https://www.youtube.com/watch?v=zYsmQgZRW0g CLASS
+
+group:
+  more: +rst:`COME <https://www.lifeprint.com/asl101/pages-signs/c/come.htm>`_
+
+  https://www.youtube.com/watch?v=utAS6HfhNuQ COME-here
+    trim: 0F-70F
+    tags: +first_100_signs
+
+group:
+  more: +rst:`DON’T-LIKE <https://www.lifeprint.com/asl101/pages-signs/d/dont-like.htm>`_
+
+  https://www.youtube.com/watch?v=2zSgd7yskRg DISLIKE
+    trim: 9F-70F
+
+group:
+  more: +rst:`FAMILY <https://www.lifeprint.com/asl101/pages-signs/f/family.htm>`_
+
+  https://www.youtube.com/watch?v=SxrxUgeTt00 FAMILY
+    trim: 10F-63F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=ejsrcVWMyHo GROUP (initialized version)
+    trim: 0F-69F
+  https://www.youtube.com/watch?v=GIwg3-xBDpE TEAM
+    trim: 11F-74F
+
+group:
+  more: +rst:`FAVORITE <https://www.lifeprint.com/asl101/pages-signs/f/favorite.htm>`_
+
+  https://www.youtube.com/watch?v=fNKs28s0ONw FAVORITE / PREFER / rather / taste
+
+group:
+  more: +rst:`FINE <https://www.lifeprint.com/asl101/pages-signs/f/fine.htm>`_
+
+  https://www.youtube.com/watch?v=OHHKerxHJjQ FINE
+
+  tags: +extra
+  https://www.youtube.com/watch?v=1p_XFIHeOeI POLITE
+    trim: 16F-70F
+  https://www.youtube.com/watch?v=Tn1v02j3tv8 SWELL / COOL / NEAT / FINE
+
+group:
+  more: +rst:`FROM <https://www.lifeprint.com/asl101/pages-signs/f/from.htm>`_
+
+  https://www.youtube.com/watch?v=7OEW40vhX68 FROM
+
+group:
+  more: +rst:`GO <https://www.lifeprint.com/asl101/pages-signs/g/go.htm>`_
+
+  https://www.youtube.com/watch?v=ZEyH-t5ALCs GO-to
+    trim: 19F-78F
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=n5RebYTHao8 ATTEND
+    trim: 12F-52F
+
+group:
+  more: +rst:`GOOD <https://www.lifeprint.com/asl101/pages-signs/g/good.htm>`_
+
+  https://www.youtube.com/watch?v=tTDXplV6TKA GOOD (two hands)
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=KLvLH7I80G0 GOOD (single hand)
+
+  tags: +extra
+  https://www.youtube.com/watch?v=ZyuJALfNGU8 GOOD JOB
+    trim: 4F-46F
+
+group:
+  more: +rst:`GOOD / BETTER / BEST <https://www.lifeprint.com/asl101/pages-signs/g/good-better-best.htm>`_
+
+  https://www.youtube.com/watch?v=sQ_ABcs0n0A BETTER
+    trim: 14F-70F
   https://www.youtube.com/watch?v=N0sg_yIVULo BEST
 
 group:
-  more: +rst:`BETTER <https://www.lifeprint.com/asl101/pages-signs/b/better.htm>`_
-  https://www.youtube.com/watch?v=sQ_ABcs0n0A BETTER
-    trim: 14F-70F
+  more: +rst:`HERE <https://www.lifeprint.com/asl101/pages-signs/h/here.htm>`_
 
-https://www.youtube.com/watch?v=e7Tz3OSQBQQ CITY / TOWN / COMMUNITY
-https://www.youtube.com/watch?v=zYsmQgZRW0g CLASS
-https://www.youtube.com/watch?v=2zSgd7yskRg DISLIKE
-  trim: 9F-70F
-https://www.youtube.com/watch?v=SxrxUgeTt00 FAMILY
-  trim: 10F-63F
-https://www.youtube.com/watch?v=fNKs28s0ONw FAVORITE / PREFER / rather / taste
-https://www.youtube.com/watch?v=OHHKerxHJjQ FINE
-https://www.youtube.com/watch?v=7OEW40vhX68 FROM
-https://www.youtube.com/watch?v=ZEyH-t5ALCs GO-to
-  trim: 19F-78F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=tTDXplV6TKA GOOD (two hands)
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=Z24DQnf-GDk GROW-UP
-https://www.youtube.com/watch?v=2dALbgMQWmk HERE
-  trim: 27F-117F
-https://www.youtube.com/watch?v=utAS6HfhNuQ COME-here
-  trim: 0F-70F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=-LllUQJj1aM right-HERE
-https://www.youtube.com/watch?v=lBSZYk72vmY HOUSE
-https://www.youtube.com/watch?v=TdQ0qHYQSvg LARGE
-  trim: 16F-80F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=LLGY5yaSLDk very-LARGE
-https://www.youtube.com/watch?v=nJwr-yWRdNQ MORE
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=Eo-vEE1gFxM NEED / MUST / SHOULD
+  https://www.youtube.com/watch?v=2dALbgMQWmk HERE
+    trim: 27F-117F
+  https://www.youtube.com/watch?v=-LllUQJj1aM right-HERE
 
 group:
-  more: +rst:`NOT <https://www.lifeprint.com/asl101/pages-signs/n/not.htm>`_
+  more: +rst:`HOUSE <https://www.lifeprint.com/asl101/pages-signs/h/house.htm>`_
+
+  https://www.youtube.com/watch?v=lBSZYk72vmY HOUSE
+
+group:
+  more: +rst:`MORE <https://www.lifeprint.com/asl101/pages-signs/m/more.htm>`_
+
+  https://www.youtube.com/watch?v=nJwr-yWRdNQ MORE
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=ijqIBiWCcNw ONE-MORE
+    trim: 14F-60F
+
+group:
+  more: +rst:`NEED <https://www.lifeprint.com/asl101/pages-signs/n/need.htm>`_
+
+  https://www.youtube.com/watch?v=Eo-vEE1gFxM NEED / MUST / SHOULD
+
+  tags: +extra
+  https://www.youtube.com/watch?v=B84UGJp2vg0 SHOULD
+    trim: 23F-83F
+
+group:
+  more: +rst:`SCHOOL <https://www.lifeprint.com/asl101/pages-signs/s/school.htm>`_
+
+  https://www.youtube.com/watch?v=ts66KJwecg0 SCHOOL
+    tags: +first_100_signs
+
+group:
+  more: +rst:`SO-SO <https://www.lifeprint.com/asl101/pages-signs/s/so-so.htm>`_
+
+  https://www.youtube.com/watch?v=fhhBx_WQGAo SO-SO
+
+group:
+  more: +rst:`SMALL <https://www.lifeprint.com/asl101/pages-signs/s/small.htm>`_
+
+  https://www.youtube.com/watch?v=RKnUlZ8bOzs SMALL
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=etDZh54TngU TINY
+
+group:
+  more: +rst:`THINK <https://www.lifeprint.com/asl101/pages-signs/t/think.htm>`_
+
+  https://www.youtube.com/watch?v=NdTKb3Kig88 THINK
+
+  tags: +extra
+  https://www.youtube.com/watch?v=K0p8o9za-2c THINKING (finger circle version)
+    trim: 13F-79F
+  https://www.youtube.com/watch?v=Gh3AcgvZGD4 ->
+    THINKING / pondering (fingers fluttering version)
+    trim: 0F-55F
+  https://www.youtube.com/watch?v=f11IOL70KME MULL OVER
+    trim: 6F-86F
+  https://www.youtube.com/watch?v=IzTXn1s6JdQ SLIPPED-MIND
+    trim: 165F-223F
+
+group:
+  more: +rst:`RAISED <https://www.lifeprint.com/asl101/pages-signs/r/raised.htm>`_
+
+  https://www.youtube.com/watch?v=Z24DQnf-GDk GROW-UP
+
+group:
+  more: +rst:`WANT <https://www.lifeprint.com/asl101/pages-signs/w/want.htm>`_
+
+  https://www.youtube.com/watch?v=IRUlCZ9jRjM WANT
+
+group:
+  more: +rst:`negation <https://www.lifeprint.com/asl101/pages-signs/n/negation.htm>`_
 
   https://www.youtube.com/watch?v=pUn7pNE5HEE NOT / un-
     trim: 11F-83F
 
-https://www.youtube.com/watch?v=ts66KJwecg0 SCHOOL
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=RKnUlZ8bOzs SMALL
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=fhhBx_WQGAo SO-SO
-https://www.youtube.com/watch?v=NdTKb3Kig88 THINK
-https://www.youtube.com/watch?v=etDZh54TngU TINY
-https://www.youtube.com/watch?v=IRUlCZ9jRjM WANT
-
-tags: +extra
-https://www.youtube.com/watch?v=n5RebYTHao8 ATTEND
-  trim: 12F-52F
-https://www.youtube.com/watch?v=Y8QX1lAPwOs -> CITY (twisting version)
-  trim: 30F-85F
-https://www.youtube.com/watch?v=KLvLH7I80G0 GOOD (single hand)
-https://www.youtube.com/watch?v=f11IOL70KME MULL OVER
-  trim: 6F-86F
-https://www.youtube.com/watch?v=ijqIBiWCcNw ONE-MORE
-  trim: 14F-60F
-https://www.youtube.com/watch?v=1p_XFIHeOeI POLITE
-  trim: 16F-70F
-https://www.youtube.com/watch?v=B84UGJp2vg0 SHOULD
-  trim: 23F-83F
-https://www.youtube.com/watch?v=IzTXn1s6JdQ SLIPPED-MIND
-  trim: 165F-223F
-https://www.youtube.com/watch?v=Tn1v02j3tv8 SWELL / COOL / NEAT / FINE
-https://www.youtube.com/watch?v=GIwg3-xBDpE TEAM
-  trim: 11F-74F
-https://www.youtube.com/watch?v=K0p8o9za-2c THINKING (finger circle version)
-  trim: 13F-79F
-https://www.youtube.com/watch?v=Gh3AcgvZGD4 ->
-  THINKING / pondering (fingers fluttering version)
-  trim: 0F-55F
-
 # From video (https://www.youtube.com/watch?v=r4jsQdoW1bw)
+tags: +extra
 https://www.youtube.com/watch?v=aoZUc6qJD8I BRAIN / MIND / mental
   trim: 15F-70F
-https://www.youtube.com/watch?v=CBvbmM7dHaY CATEGORY / CLUSTER / section / group
-  trim: 7F-50F
-https://www.youtube.com/watch?v=ejsrcVWMyHo GROUP (initialized version)
-  trim: 0F-69F
-https://www.youtube.com/watch?v=ZyuJALfNGU8 GOOD JOB
-  trim: 4F-46F
 https://www.youtube.com/watch?v=5UnUWDYxfv0 CORRECT / right / accurate
   trim: 4F-60F
 https://www.youtube.com/watch?v=BV6mXa4Gp58 @98F-150F TEACH-ME (directional)
