@@ -1,6 +1,6 @@
 title: Lifeprint ASL::Vocabulary::Extra
 more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-tags: Lifeprint vocabulary extra
+tags: Lifeprint vocabulary extra extra-deck
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
@@ -256,6 +256,69 @@ group:
   https://www.youtube.com/watch?v=y2vzVSDM00k FRIENDLY
     trim: 8F-
 
+# From lesson 2 video (https://www.youtube.com/watch?v=U0qG639Vx-0)
+https://www.youtube.com/watch?v=yOq40lDCkcM NONE
+  trim: 19F-79F
+https://www.youtube.com/watch?v=lrBSEVw7KdY HALF / 1/2
+  trim: 19F-64F
+https://www.youtube.com/watch?v=xVruqalpcXs grandson
+  trim: 11F-79F
+https://www.youtube.com/watch?v=Yn_g8dWClaE granddaughter
+  trim: 14F-83F
+
+# From lesson 3 video (https://www.youtube.com/watch?v=r4jsQdoW1bw)
+https://www.youtube.com/watch?v=aoZUc6qJD8I BRAIN / MIND / mental
+  trim: 15F-70F
+https://www.youtube.com/watch?v=5UnUWDYxfv0 CORRECT / right / accurate
+  trim: 4F-60F
+https://www.youtube.com/watch?v=BV6mXa4Gp58 @98F-150F TEACH-ME (directional)
+
+# From lesson 4 video (https://www.youtube.com/watch?v=JVTsQBVL0eA)
+https://www.youtube.com/watch?v=b_1ARTmynPQ NOBODY / NO ONE (two handed)
+  trim: 8F-61F
+https://www.youtube.com/watch?v=bnkOMzdwYgY NOBODY / NO ONE (one handed)
+  trim: 11F-74F
+https://www.youtube.com/watch?v=tgADS6Sg84o ROFL (Rolling On the Floor Laughing)
+  trim: 11F-79F
+
+# From lesson 5 video (https://www.youtube.com/watch?v=4MWPlmFX8sk)
+https://www.youtube.com/watch?v=pSPtgQM_ndg DEAD
+https://www.youtube.com/watch?v=sh1LBgeZNnM at symbol (@)
+https://www.youtube.com/watch?v=XGNaDcecMh0 DOT / period (index finger version)
+https://www.youtube.com/watch?v=FFVj-39E94c EVERYONE / EVERYBODY
+  trim: 21F-90F
+
+# From lesson 5 story (https://www.youtube.com/watch?v=T3TP65mkfQc)
+https://www.youtube.com/watch?v=nrmuwGd7wMA TEXT-[verb-form/texted]
+  trim: 15F-55F
+https://www.youtube.com/watch?v=_QQODnTMuZg TEXTING
+  trim: 25F-75F
+https://www.youtube.com/watch?v=ZN_y94vSCcc SAY-NO-TO-ME
+  trim: 13F-58F
+https://www.youtube.com/watch?v=OMC3x4UxQVQ
+  trim: 13F-61F
+  [one-person]-SAY-NO-TO-[other-person]
+
+# Related to lesson 6
+https://www.youtube.com/watch?v=r7sKUtZZDK4 OLD-1 / 1-year-old
+https://www.youtube.com/watch?v=SLYDB5KnHU4 OLD-4 / 4-year-old
+https://www.youtube.com/watch?v=LJrnjok5unE OLD-17 / 17-year-old
+
+# From lesson 6 story (https://www.youtube.com/watch?v=cDmQLqjn-EQ)
+https://www.youtube.com/watch?v=joS21m5GZf8 LIVING-ROOM ["L" – FORMAL/POLITE]
+  trim: 10F-82F
+https://www.youtube.com/watch?v=ehLkCbu_ZnQ laugh ha ha
+
+# From lesson 7 video (https://www.youtube.com/watch?v=kHg4wAOF4X0)
+https://www.youtube.com/watch?v=9yoJHvDfj-4 BOTH
+https://www.youtube.com/watch?v=pYPZpBatN5c -> BOTH (C to S)
+https://www.youtube.com/watch?v=zMd-DsDftP8 VEGETABLE / VEGETARIAN
+https://www.youtube.com/watch?v=m5lfRYfXUIQ ->
+  VEGETABLE / VEGETARIAN (twist version)
+https://www.youtube.com/watch?v=GnHH4QK3Ths -> V-E-G / VEGETABLE / VEGETARIAN
+https://www.youtube.com/watch?v=Ft6JlxIIEP4 TOMATO
+https://www.youtube.com/watch?v=CcLvZ5buj68 CLAM
+
 # Related to lesson 7 — food
 https://www.youtube.com/watch?v=mZVixrzz_MM MUSHROOM
   trim: 16F-76F
@@ -267,6 +330,32 @@ https://www.youtube.com/watch?v=POinkxTejsE MAGIC
   trim: 5F-65F
 https://www.youtube.com/watch?v=_dw1k2H0WHI MAGIC MUSHROOMS
   trim: 4F-80F
+
+# From lesson 8 video (https://www.youtube.com/watch?v=Xn0F7rGA-3c)
+https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
+  trim: 9F-73F
+  more: +rst:`COMFORTABLE <https://www.lifeprint.com/asl101/pages-signs/c/comfortable.htm>`_
+
+# From lesson 9 video (https://www.youtube.com/watch?v=6bsTw2ouTpQ)
+https://www.youtube.com/watch?v=DyYb5Y2efP4 APARTMENT
+  trim: 8F-72F
+  more: +html:<h1>A-P-T</h1>
+  more: +rst:`APARTMENT <https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm>`_
+
+group:
+  more: +rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
+
+  https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one handed)
+    trim: 4F-56F
+  https://www.youtube.com/watch?v=tNas8PN6pIQ THAT (specific, Y-hand)
+    trim: 12F-51F
+  https://www.youtube.com/watch?v=IujovunU_X8 THAT (non-specific, two handed)
+    trim: 0-60F
+
+# From lesson 12 video (https://www.youtube.com/watch?v=jSbhpRD86JE)
+# Can’t find ONCE, THRICE, FOUR-TIMES, etc.
+https://www.youtube.com/watch?v=Wwz4hcFIukw TWICE
+  more: +rst:`TWICE <https://www.lifeprint.com/asl101/pages-signs/t/twice.htm>`_
 
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm

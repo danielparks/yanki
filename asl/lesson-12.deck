@@ -189,9 +189,3 @@ group:
     trim: 10F-58F
 
 # YESTERDAY is in lesson 9
-
-# From video (https://www.youtube.com/watch?v=jSbhpRD86JE)
-tags: +extra
-# Can’t find ONCE, THRICE, FOUR-TIMES, etc.
-https://www.youtube.com/watch?v=Wwz4hcFIukw TWICE
-  more: +rst:`TWICE <https://www.lifeprint.com/asl101/pages-signs/t/twice.htm>`_

@@ -164,16 +164,19 @@ group:
     trim: 30F-89F
     tags: +extra
 
-# SAY is in lesson 5 extra
-https://www.youtube.com/watch?v=-Dv4nnY_F18 what-SAY / What was said?
-  trim: 9F-57F
+group:
   more: +rst:`SAY <https://www.lifeprint.com/asl101/pages-signs/s/say.htm>`_
+
+  https://www.youtube.com/watch?v=fka6bGd2TX8 SAY
+    trim: 12F-49F
+
   tags: +extra
+  https://www.youtube.com/watch?v=-Dv4nnY_F18 what-SAY / What was said?
+    trim: 9F-57F
 
 https://www.youtube.com/watch?v=6IXVVDel4lw TOOTHPASTE
   trim: 13F-74F
   more: +rst:`TOOTHPASTE <https://www.lifeprint.com/asl101/pages-signs/t/toothpaste.htm>`_
-
 
 group:
   more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
@@ -198,24 +201,3 @@ group:
     trim: 16F-75F
   https://www.youtube.com/watch?v=jQC2QdxW9u0 ABOVE / SUPERIOR
     trim: 16F-88F
-
-# From video
-group:
-  tags: +extra
-
-  https://www.youtube.com/watch?v=DyYb5Y2efP4 APARTMENT
-    trim: 8F-72F
-    more: +html:<h1>A-P-T</h1>
-    more: +rst:`APARTMENT <https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm>`_
-
-  group:
-    more: +rst:`THAT <https://www.lifeprint.com/asl101/pages-signs/t/that.htm>`_
-
-    https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one handed)
-      trim: 4F-56F
-    https://www.youtube.com/watch?v=tNas8PN6pIQ THAT (specific, Y-hand)
-      trim: 12F-51F
-    https://www.youtube.com/watch?v=IujovunU_X8 THAT (non-specific, two handed)
-      trim: 0-60F
-
-  # Couldn’t find video for [natural]-GAS or G-A-S.

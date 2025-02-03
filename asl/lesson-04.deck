@@ -203,12 +203,3 @@ group:
   https://www.youtube.com/watch?v=RPIAjkVh1PU GET-UP (classifier bent-V)
   https://www.youtube.com/watch?v=_CMXWiZJDPM JUMP (classifier V)
   https://www.youtube.com/watch?v=rsiLP7wwn2w DIVE (classifier V)
-
-# From video (https://www.youtube.com/watch?v=JVTsQBVL0eA)
-tags: +extra
-https://www.youtube.com/watch?v=b_1ARTmynPQ NOBODY / NO ONE (two handed)
-  trim: 8F-61F
-https://www.youtube.com/watch?v=bnkOMzdwYgY NOBODY / NO ONE (one handed)
-  trim: 11F-74F
-https://www.youtube.com/watch?v=tgADS6Sg84o ROFL (Rolling On the Floor Laughing)
-  trim: 11F-79F
