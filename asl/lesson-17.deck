@@ -6,7 +6,6 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 # Incomplete stub
-# Group URLs found with: Array.from(window.getSelection().getRangeAt(0).cloneContents().querySelectorAll('a[href]')).map(a => { var result = /\/([^\/]+)\.html?$/i.exec(a.href); var word = "source"; if (result) { word = result[1].toUpperCase() } return "\ngroup:\n  more: +rst:`" + word + " <" + a.href + ">`_\n" }).join("")
 
 group:
   more: +rst:`A-LOT <https://www.lifeprint.com/asl101/pages-signs/a/a-lot.htm>`_
@@ -23,8 +22,7 @@ group:
 group:
   more: +rst:`BREAKFAST <https://www.lifeprint.com/asl101/pages-signs/b/breakfast.htm>`_
 
-group:
-  more: +rst:`CUP <https://www.lifeprint.com/asl101/pages-signs/c/cup.htm>`_
+# CUP is in lesson 7.
 
 group:
   more: +rst:`DINNER <https://www.lifeprint.com/asl101/pages-signs/d/dinner.htm>`_
