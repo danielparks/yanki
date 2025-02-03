@@ -5,91 +5,181 @@ tags: Lifeprint lesson_06 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-https://www.youtube.com/watch?v=wmJfQSUsnQ8 OLD
-https://www.youtube.com/watch?v=Wzio7B5VT_I COLOR
-  trim: 14F-98F
-https://www.youtube.com/watch?v=O5_4x8p5t4U BLACK
-  trim: 11F-72F
-https://www.youtube.com/watch?v=2O8jkekJkiE BLUE
-  trim: 7F-58F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=HGBcts4shKw BROWN
-  trim: 14F-
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=WrkXE5l6udM GREEN
-  trim: 8F-73F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=K1EAxRE0ZaM ORANGE
-  trim: 16F-79F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=pyW0OYYrZ7U RED
-  trim: 15F-87F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=uLjkLwFvFtw WHITE
-  trim: 6F-62F
-https://www.youtube.com/watch?v=nK4_8-U-Y9I YELLOW
-  trim: 8F-59F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=ua6jgiWYZPw DRAW
-https://www.youtube.com/watch?v=7xQE2N0z7gM FINISH / all done / and then
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=RMUZFdu6VtI FUTURE / WILL
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=4Md8yfrXzp8 LATER (one handed)
-  trim: 47F-
-https://www.youtube.com/watch?v=nAGD0JwteGM LONG
-https://www.youtube.com/watch?v=g2j70neQ_lI NOW / current
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=Zg7-DM25KIM PAPER
-https://www.youtube.com/watch?v=j7rjBay5FIE PAST / before now / previously / ago
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=NF_jrhLKWlY YOURSELF / SELF / YOUR-OWN
-  trim: 34F-84F
-https://www.youtube.com/watch?v=TzNk3Yl2tMw MYSELF / MY-OWN
-https://www.youtube.com/watch?v=RiypOflHvXQ ITSELF
-https://www.youtube.com/watch?v=n5NIhFE3wy4 THEMSELVES / THEIR-OWN
-https://www.youtube.com/watch?v=4zMWHsJlHGg OURSELVES / OUR-OWN
-https://www.youtube.com/watch?v=6gFOZMDptIk TOMORROW
-https://www.youtube.com/watch?v=E17VasimjWo EVERYDAY / DAILY / common
-https://www.youtube.com/watch?v=YfwgS9ZsBVw WAIT
-https://www.youtube.com/watch?v=YWxvqP__qos WHEN
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=zTIJAgTai40 YEAR
-  trim: 15F-83F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=EB8jOD4VRjY ANNUALLY
-https://www.youtube.com/watch?v=lXjnX94oaSY LAST-YEAR
-https://www.youtube.com/watch?v=xSAerxW0Qjg NEXT-YEAR
+group:
+  more: +rst:`COLOR <https://www.lifeprint.com/asl101/pages-signs/c/color.htm>`_
+
+  https://www.youtube.com/watch?v=Wzio7B5VT_I COLOR
+    trim: 14F-98F
+
+group:
+  tags: +colors
+  https://www.youtube.com/watch?v=O5_4x8p5t4U BLACK
+    trim: 11F-72F
+    more: +rst:`BLACK <https://www.lifeprint.com/asl101/pages-signs/b/black.htm>`_
+
+  https://www.youtube.com/watch?v=HGBcts4shKw BROWN
+    trim: 14F-
+    more: +rst:`BROWN <https://www.lifeprint.com/asl101/pages-signs/b/brown.htm>`_
+    tags: +first_100_signs
+
+  https://www.youtube.com/watch?v=pyW0OYYrZ7U RED
+    trim: 15F-87F
+    more: +rst:`RED <https://www.lifeprint.com/asl101/pages-signs/r/red.htm>`_
+    tags: +first_100_signs
+
+  https://www.youtube.com/watch?v=K1EAxRE0ZaM ORANGE
+    trim: 16F-79F
+    more: +rst:`ORANGE <https://www.lifeprint.com/asl101/pages-signs/o/orange.htm>`_
+    tags: +first_100_signs
+
+  https://www.youtube.com/watch?v=2O8jkekJkiE BLUE
+    trim: 7F-58F
+    more: +rst:`BLUE <https://www.lifeprint.com/asl101/pages-signs/b/blue.htm>`_
+    tags: +first_100_signs
+
+  https://www.youtube.com/watch?v=nK4_8-U-Y9I YELLOW
+    trim: 8F-59F
+    more: +rst:`YELLOW <https://www.lifeprint.com/asl101/pages-signs/y/yellow.htm>`_
+    tags: +first_100_signs
+
+  https://www.youtube.com/watch?v=WrkXE5l6udM GREEN
+    trim: 8F-73F
+    more: +rst:`GREEN <https://www.lifeprint.com/asl101/pages-signs/g/green.htm>`_
+    tags: +first_100_signs
+
+  https://www.youtube.com/watch?v=uLjkLwFvFtw WHITE
+    trim: 6F-62F
+    more: +rst:`WHITE <https://www.lifeprint.com/asl101/pages-signs/w/white.htm>`_
+
+  # Mostly linked from COLOR page. Some of these are in first_100_signs.
+  tags: +extra
+
+  https://www.youtube.com/watch?v=ZF3xvvxonIM GOLD / CALIFORNIA
+    more: +rst:`GOLD <https://www.lifeprint.com/asl101/pages-signs/g/gold.htm>`_
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=jvq-s7ZhhUE GRAY
+    more: +rst:`GRAY <https://www.lifeprint.com/asl101/pages-signs/g/gray.htm>`_
+  https://www.youtube.com/watch?v=aNilWTBIl0g PINK
+    more: +rst:`PINK <https://www.lifeprint.com/asl101/pages-signs/p/pink.htm>`_
+  https://www.youtube.com/watch?v=zgdzYtHB6jg PURPLE
+    more: +rst:`PURPLE <https://www.lifeprint.com/asl101/pages-signs/p/purple.htm>`_
+  https://www.youtube.com/watch?v=Yi52SqYnlJE SILVER
+    trim: 23F-91F
+    more: +rst:`SILVER <https://www.lifeprint.com/asl101/pages-signs/s/silver.htm>`_
+    tags: +first_100_signs
+
+group:
+  more: +rst:`DRAW <https://www.lifeprint.com/asl101/pages-signs/d/draw.htm>`_
+
+  https://www.youtube.com/watch?v=ua6jgiWYZPw DRAW
+
+group:
+  more: +rst:`FINISH <https://www.lifeprint.com/asl101/pages-signs/f/finish.htm>`_
+
+  https://www.youtube.com/watch?v=7xQE2N0z7gM FINISH / all done / and then
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=gYB8ji01BLo knock it off / FINISH
+
+group:
+  more: +rst:`FUTURE <https://www.lifeprint.com/asl101/pages-signs/f/future.htm>`_
+
+  https://www.youtube.com/watch?v=RMUZFdu6VtI FUTURE / WILL
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=VHP823jOw8c SOMEDAY / eventually
+
+group:
+  more: +rst:`LONG <https://www.lifeprint.com/asl101/pages-signs/l/long.htm>`_
+
+  https://www.youtube.com/watch?v=nAGD0JwteGM LONG
+
+group:
+  more: +rst:`NOW <https://www.lifeprint.com/asl101/pages-signs/n/now.htm>`_
+
+  https://www.youtube.com/watch?v=g2j70neQ_lI NOW / current
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=EtW1-NdM5qI TODAY (now-now)
+
+  tags: +extra
+  https://www.youtube.com/watch?v=IlLRJ6jw4lY TODAY (now-day)
+
+group:
+  more: +rst:`OLD <https://www.lifeprint.com/asl101/pages-signs/o/old.htm>`_
+
+  https://www.youtube.com/watch?v=wmJfQSUsnQ8 OLD
+
+group:
+  more: +rst:`PAPER <https://www.lifeprint.com/asl101/pages-signs/p/paper.htm>`_
+
+  https://www.youtube.com/watch?v=Zg7-DM25KIM PAPER
+
+# These weren’t linked, but they were mentioned in the vocab list:
+https://www.youtube.com/watch?v=vKE5vsfIhYk DICTIONARY
+  more: +rst:`DICTIONARY <https://www.lifeprint.com/asl101/pages-signs/d/dictionary.htm>`_
+  tags: +extra
+https://www.youtube.com/watch?v=XOhKB7tH58c PAGE
+  more: +rst:`PAGE <https://www.lifeprint.com/asl101/pages-signs/p/page.htm>`_
+  tags: +extra
+
+group:
+  more: +rst:`PAST <https://www.lifeprint.com/asl101/pages-signs/p/past.htm>`_
+
+  https://www.youtube.com/watch?v=j7rjBay5FIE PAST / before now / previously / ago
+    tags: +first_100_signs
+
+  tags: +extra
+  https://www.youtube.com/watch?v=Cb3PdUWf_wk PAST / long ago / once upon a time
+
+group:
+  more: +rst:`SELF <https://www.lifeprint.com/asl101/pages-signs/s/self.htm>`_
+
+  https://www.youtube.com/watch?v=NF_jrhLKWlY YOURSELF / SELF / YOUR-OWN
+    trim: 34F-84F
+  https://www.youtube.com/watch?v=TzNk3Yl2tMw MYSELF / MY-OWN
+  https://www.youtube.com/watch?v=RiypOflHvXQ ITSELF
+  https://www.youtube.com/watch?v=n5NIhFE3wy4 THEMSELVES / THEIR-OWN
+  https://www.youtube.com/watch?v=4zMWHsJlHGg OURSELVES / OUR-OWN
+
+group:
+  more: +rst:`TOMORROW <https://www.lifeprint.com/asl101/pages-signs/t/tomorrow.htm>`_
+
+  https://www.youtube.com/watch?v=6gFOZMDptIk TOMORROW
+  https://www.youtube.com/watch?v=E17VasimjWo EVERYDAY / DAILY / common
+
+group:
+  more: +rst:`WAIT <https://www.lifeprint.com/asl101/pages-signs/w/wait.htm>`_
+
+  https://www.youtube.com/watch?v=YfwgS9ZsBVw WAIT
+  https://www.youtube.com/watch?v=El-hYok08Qk WAIT-[long]
+    trim: 14F-94F
+
+group:
+  more: +rst:`WHEN <https://www.lifeprint.com/asl101/pages-signs/w/when.htm>`_
+
+  https://www.youtube.com/watch?v=YWxvqP__qos WHEN
+    tags: +first_100_signs
+
+group:
+  more: +rst:`YEAR <https://www.lifeprint.com/asl101/pages-signs/y/year.htm>`_
+
+  https://www.youtube.com/watch?v=zTIJAgTai40 YEAR
+    trim: 15F-83F
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=EB8jOD4VRjY ANNUALLY
+  https://www.youtube.com/watch?v=lXjnX94oaSY LAST-YEAR
+  https://www.youtube.com/watch?v=xSAerxW0Qjg NEXT-YEAR
+
+  tags: +extra
+  https://www.youtube.com/watch?v=jw_R6ttIrgg -> YEAR
+  https://www.youtube.com/watch?v=uzKuS-RsvkA -> LAST-YEAR
+  https://www.youtube.com/watch?v=DWSpXjv2Qfc 2-YEAR-future
+    trim: 15F-84F
+  https://www.youtube.com/watch?v=yaGTeg26GQM 3-YEAR-future
+    trim: 6F-76F
+  https://www.youtube.com/watch?v=bYtZFk5ZS_k 2-YEAR-past
+    trim: 4F-72F
+  https://www.youtube.com/watch?v=avVBOT7EUBY 3-YEAR-past
+    trim: 12F-72F
 
 # Lesson goals include “understand o’clock,” but that’s covered in lesson 10.
-
-tags: +extra
-https://www.youtube.com/watch?v=vKE5vsfIhYk DICTIONARY
-https://www.youtube.com/watch?v=gYB8ji01BLo knock it off / FINISH
-https://www.youtube.com/watch?v=ZF3xvvxonIM GOLD / CALIFORNIA
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=jvq-s7ZhhUE GRAY
-https://www.youtube.com/watch?v=X4003aEoiWo LATER (two handed)
-https://www.youtube.com/watch?v=XOhKB7tH58c PAGE
-https://www.youtube.com/watch?v=Cb3PdUWf_wk PAST / long ago / once upon a time
-https://www.youtube.com/watch?v=aNilWTBIl0g PINK
-https://www.youtube.com/watch?v=zgdzYtHB6jg PURPLE
-https://www.youtube.com/watch?v=Yi52SqYnlJE SILVER
-  trim: 23F-91F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=VHP823jOw8c SOMEDAY / eventually
-https://www.youtube.com/watch?v=IlLRJ6jw4lY TODAY (now-day)
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=EtW1-NdM5qI TODAY (now-now)
-https://www.youtube.com/watch?v=El-hYok08Qk WAIT-[long]
-  trim: 14F-94F
-https://www.youtube.com/watch?v=jw_R6ttIrgg -> YEAR
-https://www.youtube.com/watch?v=uzKuS-RsvkA -> LAST-YEAR
-https://www.youtube.com/watch?v=DWSpXjv2Qfc 2-YEAR-future
-  trim: 15F-84F
-https://www.youtube.com/watch?v=yaGTeg26GQM 3-YEAR-future
-  trim: 6F-76F
-https://www.youtube.com/watch?v=bYtZFk5ZS_k 2-YEAR-past
-  trim: 4F-72F
-https://www.youtube.com/watch?v=avVBOT7EUBY 3-YEAR-past
-  trim: 12F-72F
