@@ -112,6 +112,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
 
     ctx.obj = VideoOptions(
         cache_path=cache,
+        progress=verbose > 0,
         reprocess=reprocess,
         semaphore=asyncio.Semaphore(concurrency),
     )

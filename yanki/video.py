@@ -25,11 +25,6 @@ from yanki.utils import (
 
 LOGGER = logging.getLogger(__name__)
 
-YT_DLP_OPTIONS = {
-    "quiet": True,
-    "skip_unavailable_fragments": False,
-}
-
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
 FILENAME_ILLEGAL_CHARS = '/"[]:'
 
@@ -52,6 +47,7 @@ class VideoOptions:
     """Options for processing videos."""
 
     cache_path: Path
+    progress: bool = False
     reprocess: bool = False
     semaphore: asyncio.Semaphore = asyncio.Semaphore(cpu_count())
 
@@ -187,7 +183,7 @@ class Video:
             pass
 
         try:
-            with yt_dlp.YoutubeDL(YT_DLP_OPTIONS.copy()) as ydl:
+            with self._yt_dlp() as ydl:
                 self.logger.info(f"getting info about {self.url!r}")
                 return ydl.sanitize_info(
                     ydl.extract_info(self.url, download=False)
@@ -425,14 +421,7 @@ class Video:
 
         self.logger.info(f"downloading raw video to {path}")
 
-        options = {
-            "outtmpl": {
-                "default": str(path),
-            },
-            **YT_DLP_OPTIONS,
-        }
-
-        with yt_dlp.YoutubeDL(options) as ydl:
+        with self._yt_dlp(outtmpl={"default": str(path)}) as ydl:
             # FIXME why not use the in-memory info?
             if error := ydl.download_with_info_file(self.info_cache_path()):
                 # FIXME??!
@@ -636,3 +625,15 @@ class Video:
                 )
 
         return ffmpeg.concat(*parts, v=int(wants_video), a=int(wants_audio))
+
+    def _yt_dlp(self, **kwargs):
+        """Run yt_dlp"""
+        return yt_dlp.YoutubeDL(
+            {
+                "logtostderr": True,
+                "noprogress": not self.options.progress,
+                "skip_unavailable_fragments": False,
+                "quiet": True,
+                **kwargs,
+            }
+        )
