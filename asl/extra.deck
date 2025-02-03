@@ -58,6 +58,24 @@ https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
 https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
 https://www.youtube.com/watch?v=6Yx7NEqOvHo NURSE
 
+group:
+  more: +rst:`BOTTLE <https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm>`_
+  https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
+    trim: 31F-94F
+
+group:
+  more: +rst:`EXPERIENCE <https://www.lifeprint.com/asl101/pages-signs/e/experience.htm>`_
+  https://www.youtube.com/watch?v=m03M4FcaC9Q EXPERIENCE
+
+group:
+  more: +rst:`TRY <https://www.lifeprint.com/asl101/pages-signs/t/try.htm>`_
+  https://www.youtube.com/watch?v=izb3v8uj9rs TRY (T-hand version)
+  https://www.youtube.com/watch?v=Hr11yePqoek TRY (A-hand version)
+
+group:
+  more: +rst:`CUTE <https://www.lifeprint.com/asl101/pages-signs/c/cute.htm>`_
+  https://www.youtube.com/watch?v=zEtSV7lXycY SUGAR / CUTE / CANDY
+
 https://www.youtube.com/watch?v=CBvbmM7dHaY CATEGORY / CLUSTER / section / group
   trim: 7F-50F
   more: rst:`CLUSTER <https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm>`_
