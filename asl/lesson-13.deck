@@ -160,6 +160,7 @@ group:
 
   https://www.youtube.com/watch?v=rqBe62cqd6w WRITE
     trim: 20F-85F
+  # No video for WRITE-[on-board], which is used in the phrases (as WRITE).
 
 group:
   more: +rst:`WRONG <https://www.lifeprint.com/asl101/pages-signs/w/wrong.htm>`_
@@ -170,3 +171,9 @@ group:
   https://www.youtube.com/watch?v=L-ufbEVTJSk
     MISTAKE / make-a-MISTAKE / screw up
     trim: 4F-41F
+
+# Not in vocab list, but used in phrases.
+group:
+  more: +rst:`BECOME <https://www.lifeprint.com/asl101/pages-signs/b/become.htm>`_
+  https://www.youtube.com/watch?v=moCca94sHsU BECOME
+    trim: 6F-75F
