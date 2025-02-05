@@ -12,6 +12,7 @@ dependencies = [
   "ffmpeg-python >=0.2.0,<0.3",
   "colorlog >=6.9.0,<7.0",
   "click >=8.1.8,<9.0",
+  "mistletoe>=1.4.0",
 ]
 
 [dependency-groups]
