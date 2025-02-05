@@ -37,6 +37,7 @@ group:
   more: +rst:`COOL <https://www.lifeprint.com/asl101/pages-signs/c/cool.htm>`_
 
   https://www.youtube.com/watch?v=2dMLLV2JWXE COOL (temperature)
+    trim: 25F-68F
     tags: +first_100_signs
 
 group:
@@ -55,12 +56,15 @@ group:
   more: +rst:`FREEZE <https://www.lifeprint.com/asl101/pages-signs/f/freeze.htm>`_
 
   https://www.youtube.com/watch?v=mA15ML-vAd0 ICE / FREEZE
+    trim: 0-48F
   https://www.youtube.com/watch?v=yDqXf13m6PA BRAIN FREEZE / SHOCKED (idiom)
+    trim: 11F-82F
 
 group:
   more: +rst:`GO-TO-BED <https://www.lifeprint.com/asl101/pages-signs/g/go-to-bed.htm>`_
 
   https://www.youtube.com/watch?v=opGSFLEio9E GO-TO-BED
+    trim: 7F-58F
 
 group:
   more: +rst:`HOT <https://www.lifeprint.com/asl101/pages-signs/h/hot.htm>`_
@@ -206,6 +210,7 @@ group:
   more: +rst:`WARM <https://www.lifeprint.com/asl101/pages-signs/w/warm.htm>`_
 
   https://www.youtube.com/watch?v=rSgVWUc1J0w WARM (temperature)
+    trim: 1F-
     tags: +first_100_signs
 
 group:
@@ -271,4 +276,12 @@ group:
 
   # Most common version of WOMAN in lesson 2. Maybe this should go there?
   https://www.youtube.com/watch?v=mZMoRLldXOs -> WOMAN / GIRL FINE
+    trim: 14F-67F
   # No GIRL ADULT video, and not mentioned on web page.
+
+group:
+  more: +rst:`QM-WIG <https://www.lifeprint.com/asl101/pages-signs/q/qm-wig.htm>`_
+    (QM-WIG is not actually covered in lesson, but it comes up in the phrases.)
+  tags: +extra
+  https://www.youtube.com/watch?v=kS2VaLVITiw QM-wig / QUESTION
+    trim: 14F-69F
