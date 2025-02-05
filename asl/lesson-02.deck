@@ -1,12 +1,12 @@
 title: Lifeprint ASL::Vocabulary::Lesson 02 — Family
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 2 <https://www.lifeprint.com/asl101/lessons/lesson02.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 2](https://www.lifeprint.com/asl101/lessons/lesson02.htm)
 tags: Lifeprint lesson_02 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`BOY <https://www.lifeprint.com/asl101/pages-signs/b/boy.htm>`_
+  more: +md:[BOY](https://www.lifeprint.com/asl101/pages-signs/b/boy.htm)
 
   https://www.youtube.com/watch?v=E-wBrs3PJhU BOY
     trim: 14F-73F
@@ -17,13 +17,13 @@ group:
     trim: 12F-63F
 
 group:
-  more: +rst:`MAN <https://www.lifeprint.com/asl101/pages-signs/m/man.htm>`_
+  more: +md:[MAN](https://www.lifeprint.com/asl101/pages-signs/m/man.htm)
 
   https://www.youtube.com/watch?v=rTUmMfWQ2rw MAN
     trim: 16F-68F
 
 group:
-  more: +rst:`BROTHER <https://www.lifeprint.com/asl101/pages-signs/b/brother.htm>`_
+  more: +md:[BROTHER](https://www.lifeprint.com/asl101/pages-signs/b/brother.htm)
 
   https://www.youtube.com/watch?v=G0fzmn3pQng BROTHER
     trim: 12F-67F
@@ -34,7 +34,7 @@ group:
     trim: 15F-78F
 
 group:
-  more: +rst:`CHILD <https://www.lifeprint.com/asl101/pages-signs/c/child.htm>`_
+  more: +md:[CHILD](https://www.lifeprint.com/asl101/pages-signs/c/child.htm)
 
   https://www.youtube.com/watch?v=32hgy9NSs7k CHILD
     trim: 10F-67F
@@ -44,14 +44,14 @@ group:
     trim: 12F-62F
 
 group:
-  more: +rst:`DAD <https://www.lifeprint.com/asl101/pages-signs/d/dad.htm>`_
+  more: +md:[DAD](https://www.lifeprint.com/asl101/pages-signs/d/dad.htm)
 
   https://www.youtube.com/watch?v=1Vllc4F5ic0 DAD
     trim: 9F-69F
     tags: +first_100_signs
 
 group:
-  more: +rst:`DIVORCE <https://www.lifeprint.com/asl101/pages-signs/d/divorce.htm>`_
+  more: +md:[DIVORCE](https://www.lifeprint.com/asl101/pages-signs/d/divorce.htm)
 
   https://www.youtube.com/watch?v=JCTgLJFs4c8 DIVORCE (initialized)
     trim: 6F-63F
@@ -64,7 +64,7 @@ group:
     trim: 15F-60F
 
 group:
-  more: +rst:`GIRL <https://www.lifeprint.com/asl101/pages-signs/g/girl.htm>`_
+  more: +md:[GIRL](https://www.lifeprint.com/asl101/pages-signs/g/girl.htm)
 
   https://www.youtube.com/watch?v=pwh3cOdoiG4 GIRL
     trim: 15F-74F
@@ -75,25 +75,25 @@ group:
     trim: 1F-47F
 
 group:
-  more: +rst:`WOMAN <https://www.lifeprint.com/asl101/pages-signs/w/woman.htm>`_
+  more: +md:[WOMAN](https://www.lifeprint.com/asl101/pages-signs/w/woman.htm)
 
   https://www.youtube.com/watch?v=GobeSyJHyLk WOMAN
     trim: 14F-65F
 
 group:
-  more: +rst:`GRANDMA <https://www.lifeprint.com/asl101/pages-signs/g/grandma.htm>`_
+  more: +md:[GRANDMA](https://www.lifeprint.com/asl101/pages-signs/g/grandma.htm)
 
   https://www.youtube.com/watch?v=2JCOsxMj6u4 GRANDMA
     trim: 21F-73F
 
 group:
-  more: +rst:`GRANDPA <https://www.lifeprint.com/asl101/pages-signs/g/grandpa.htm>`_
+  more: +md:[GRANDPA](https://www.lifeprint.com/asl101/pages-signs/g/grandpa.htm)
 
   https://www.youtube.com/watch?v=D8OW3lFL_54 GRANDPA
     trim: 12F-66F
 
 group:
-  more: +rst:`HAVE <https://www.lifeprint.com/asl101/pages-signs/h/have.htm>`_
+  more: +md:[HAVE](https://www.lifeprint.com/asl101/pages-signs/h/have.htm)
 
   https://www.youtube.com/watch?v=OZKNIcIFqvU
     HAVE / possess / contains / exists / there-is (two handed)
@@ -103,13 +103,13 @@ group:
     trim: 10F-69F
 
 group:
-  more: +rst:`HEY <https://www.lifeprint.com/asl101/pages-signs/h/hey.htm>`_
+  more: +md:[HEY](https://www.lifeprint.com/asl101/pages-signs/h/hey.htm)
 
   https://www.youtube.com/watch?v=VE4ZBu9hWnM HEY
     trim: 1F-61F
 
 group:
-  more: +rst:`HOW <https://www.lifeprint.com/asl101/pages-signs/h/how.htm>`_
+  more: +md:[HOW](https://www.lifeprint.com/asl101/pages-signs/h/how.htm)
 
   https://www.youtube.com/watch?v=BaPzB4Xsq9Y HOW?
     trim: 13F-60F
@@ -122,7 +122,7 @@ group:
     trim: 12F-123F
 
 group:
-  more: +rst:`HOW-MANY <https://www.lifeprint.com/asl101/pages-signs/h/how-many.htm>`_
+  more: +md:[HOW-MANY](https://www.lifeprint.com/asl101/pages-signs/h/how-many.htm)
 
   https://www.youtube.com/watch?v=Lu7VJHlq0o0 how-MANY / how-MUCH (two hands)
     trim: 3F-57F
@@ -130,14 +130,14 @@ group:
     trim: 14F-58F
 
 group:
-  more: +rst:`MANY <https://www.lifeprint.com/asl101/pages-signs/m/many.htm>`_
+  more: +md:[MANY](https://www.lifeprint.com/asl101/pages-signs/m/many.htm)
 
   tags: +extra
   https://www.youtube.com/watch?v=7O2mS0Kz4CA MANY
     trim: 20F-
 
 group:
-  more: +rst:`LIVE <https://www.lifeprint.com/asl101/pages-signs/l/live.htm>`_
+  more: +md:[LIVE](https://www.lifeprint.com/asl101/pages-signs/l/live.htm)
 
   https://www.youtube.com/watch?v=4LPjUIU4VMg LIVE / alive / survive
     trim: 5F-49F
@@ -145,7 +145,7 @@ group:
     trim: 9F-64F
 
 group:
-  more: +rst:`MARRIAGE <https://www.lifeprint.com/asl101/pages-signs/m/marriage.htm>`_
+  more: +md:[MARRIAGE](https://www.lifeprint.com/asl101/pages-signs/m/marriage.htm)
 
   https://www.youtube.com/watch?v=0zRYKjeOM-4 MARRIAGE / marry
     trim: 11F-77F
@@ -156,20 +156,20 @@ group:
     trim: 16F-93F
 
 group:
-  more: +rst:`MOM <https://www.lifeprint.com/asl101/pages-signs/m/mom.htm>`_
+  more: +md:[MOM](https://www.lifeprint.com/asl101/pages-signs/m/mom.htm)
 
   https://www.youtube.com/watch?v=DHl2-NT3mIM MOM
     trim: 14F-73F
     tags: +first_100_signs
 
 group:
-  more: +rst:`PARENTS <https://www.lifeprint.com/asl101/pages-signs/p/parents.htm>`_
+  more: +md:[PARENTS](https://www.lifeprint.com/asl101/pages-signs/p/parents.htm)
 
   https://www.youtube.com/watch?v=jlqHVbCS4H0 parents / MOM DAD
     trim: 16F-65F
 
 group:
-  more: +rst:`SINGLE <https://www.lifeprint.com/asl101/pages-signs/s/single.htm>`_
+  more: +md:[SINGLE](https://www.lifeprint.com/asl101/pages-signs/s/single.htm)
 
   https://www.youtube.com/watch?v=QVPcK3bcFo0
     SINGLE / SOMETHING / SOMEONE / ONLY
@@ -181,14 +181,14 @@ group:
     trim: 15F-66F
 
 group:
-  more: +rst:`JUST <https://www.lifeprint.com/asl101/pages-signs/j/just.htm>`_
+  more: +md:[JUST](https://www.lifeprint.com/asl101/pages-signs/j/just.htm)
 
   https://www.youtube.com/watch?v=2ikniviFkgo JUST / ONLY / merely
     trim: 17F-81F
-    more: +rst:`JUST <https://www.lifeprint.com/asl101/pages-signs/j/just.htm>`_
+    more: +md:[JUST](https://www.lifeprint.com/asl101/pages-signs/j/just.htm)
 
 group:
-  more: +rst:`SISTER <https://www.lifeprint.com/asl101/pages-signs/s/sister.htm>`_
+  more: +md:[SISTER](https://www.lifeprint.com/asl101/pages-signs/s/sister.htm)
 
   https://www.youtube.com/watch?v=0z2_gcB5OJ8 SISTER
     trim: 15F-96F
@@ -199,38 +199,38 @@ group:
     trim: 14F-75F
 
 group:
-  more: +rst:`SPELL <https://www.lifeprint.com/asl101/pages-signs/s/spell.htm>`_
+  more: +md:[SPELL](https://www.lifeprint.com/asl101/pages-signs/s/spell.htm)
 
   https://www.youtube.com/watch?v=s-FkZXpkg6g FINGERSPELL
     trim: 3F-43F
 
 group:
-  more: +rst:`WORK <https://www.lifeprint.com/asl101/pages-signs/w/work.htm>`_
+  more: +md:[WORK](https://www.lifeprint.com/asl101/pages-signs/w/work.htm)
 
   https://www.youtube.com/watch?v=mJrUYRjvrew WORK
     trim: 14F-75F
     tags: +first_100_signs
 
 group:
-  more: +rst:`HIS <https://www.lifeprint.com/asl101/pages-signs/h/his.htm>`_
+  more: +md:[HIS](https://www.lifeprint.com/asl101/pages-signs/h/his.htm)
 
   https://www.youtube.com/watch?v=Kd_V8gE5-LY HIS / HERS / ITS / THEIRS
     trim: 13F-67F
 
 group:
-  more: +rst:`MY <https://www.lifeprint.com/asl101/pages-signs/m/my.htm>`_
+  more: +md:[MY](https://www.lifeprint.com/asl101/pages-signs/m/my.htm)
 
   https://www.youtube.com/watch?v=AESubfsrzP0 MY / MINE
     trim: 9F-48F
 
 group:
-  more: +rst:`OUR <https://www.lifeprint.com/asl101/pages-signs/o/our.htm>`_
+  more: +md:[OUR](https://www.lifeprint.com/asl101/pages-signs/o/our.htm)
 
   https://www.youtube.com/watch?v=NRbLBTghqNk OUR
     trim: 4F-49F
 
 group:
-  more: +rst:`THEIR <https://www.lifeprint.com/asl101/pages-signs/t/their.htm>`_
+  more: +md:[THEIR](https://www.lifeprint.com/asl101/pages-signs/t/their.htm)
 
   https://www.youtube.com/watch?v=1WVL-cc4-TY THEIR (plural)
     trim: 5F-62F

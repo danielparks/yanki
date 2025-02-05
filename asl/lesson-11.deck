@@ -1,12 +1,12 @@
 title: Lifeprint ASL::Vocabulary::Lesson 11 — Questions
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 11 <https://www.lifeprint.com/asl101/lessons/lesson11.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 11](https://www.lifeprint.com/asl101/lessons/lesson11.htm)
 tags: Lifeprint lesson_11 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`ABOUT <https://www.lifeprint.com/asl101/pages-signs/a/about.htm>`_
+  more: +md:[ABOUT](https://www.lifeprint.com/asl101/pages-signs/a/about.htm)
 
   https://www.youtube.com/watch?v=wFkG56b4nuw ABOUT (flat O version)
     trim: 8F-70F
@@ -22,19 +22,19 @@ group:
     trim: 12F-70F
 
 group:
-  more: +rst:`ALWAYS <https://www.lifeprint.com/asl101/pages-signs/a/always.htm>`_
+  more: +md:[ALWAYS](https://www.lifeprint.com/asl101/pages-signs/a/always.htm)
 
   https://www.youtube.com/watch?v=Y3zx5yBwHRE ALWAYS
     trim: 22F-103F
 
 group:
-  more: +rst:`ANY <https://www.lifeprint.com/asl101/pages-signs/a/any.htm>`_
+  more: +md:[ANY](https://www.lifeprint.com/asl101/pages-signs/a/any.htm)
 
   https://www.youtube.com/watch?v=wEllyA0JhDI ANY
     trim: 19F-50F
 
 group:
-  more: +rst:`BACK <https://www.lifeprint.com/asl101/pages-signs/b/back.htm>`_
+  more: +md:[BACK](https://www.lifeprint.com/asl101/pages-signs/b/back.htm)
 
   https://www.youtube.com/watch?v=XJxCL0rri5o #BACK / B-C-K
     trim: 9F-53F
@@ -43,7 +43,7 @@ group:
   # Can’t find sign for back (body part).
 
 group:
-  more: +rst:`BUT <https://www.lifeprint.com/asl101/pages-signs/b/but.htm>`_
+  more: +md:[BUT](https://www.lifeprint.com/asl101/pages-signs/b/but.htm)
 
   https://www.youtube.com/watch?v=l3pElzy2Png BUT / however / different
     trim: 10F-59F
@@ -51,14 +51,14 @@ group:
     trim: 13F-62F
   https://www.youtube.com/watch?v=EunD6JXshgY DIFFERENT
     trim: 16F-77F
-    more: +rst:`DIFFERENT <https://lifeprint.com/asl101/pages-signs/d/different.htm>`_
+    more: +md:[DIFFERENT](https://lifeprint.com/asl101/pages-signs/d/different.htm)
 
   tags: +extra
   https://www.youtube.com/watch?v=muhJ-bu9vJQ but hold on
     trim: 10F-
 
 group:
-  more: +rst:`CALL <https://www.lifeprint.com/asl101/pages-signs/c/call.htm>`_
+  more: +md:[CALL](https://www.lifeprint.com/asl101/pages-signs/c/call.htm)
 
   https://www.youtube.com/watch?v=xQCWPv-PrVM CALL-by-phone (hearing version)
     trim: 3F-53F
@@ -78,13 +78,13 @@ group:
     trim: 9F-48F
 
 group:
-  more: +rst:`CAN’T <https://www.lifeprint.com/asl101/pages-signs/c/cant.htm>`_
+  more: +md:[CAN’T](https://www.lifeprint.com/asl101/pages-signs/c/cant.htm)
 
   https://www.youtube.com/watch?v=uHq728Enn2E CAN’T
     trim: 9F-
 
 group:
-  more: +rst:`FOR <https://www.lifeprint.com/asl101/pages-signs/f/for.htm>`_
+  more: +md:[FOR](https://www.lifeprint.com/asl101/pages-signs/f/for.htm)
 
   https://www.youtube.com/watch?v=xAhjtGNnQVk FOR
     trim: 11F-71F
@@ -92,45 +92,45 @@ group:
     trim: 15F-68F
 
 group:
-  more: +rst:`GREAT <https://www.lifeprint.com/asl101/pages-signs/g/great.htm>`_
+  more: +md:[GREAT](https://www.lifeprint.com/asl101/pages-signs/g/great.htm)
 
   https://www.youtube.com/watch?v=X67gLEcynIM GREAT / WONDERFUL
     trim: 8F-59F
 
 group:
-  more: +rst:`LITTLE <https://www.lifeprint.com/asl101/pages-signs/l/little.htm>`_
+  more: +md:[LITTLE](https://www.lifeprint.com/asl101/pages-signs/l/little.htm)
 
   # SMALL is covered in lesson 3.
   https://www.youtube.com/watch?v=_wbvHtct0kg LITTLE-BIT
     trim: 27F-73F
 
 group:
-  more: +rst:`MAKE <https://www.lifeprint.com/asl101/pages-signs/m/make.htm>`_
+  more: +md:[MAKE](https://www.lifeprint.com/asl101/pages-signs/m/make.htm)
 
   https://www.youtube.com/watch?v=mKdOj-IxfPc MAKE / produce
     trim: 12F-53F
   # No video for variant of MAKE
 
 group:
-  more: +rst:`NEVER <https://www.lifeprint.com/asl101/pages-signs/n/never.htm>`_
+  more: +md:[NEVER](https://www.lifeprint.com/asl101/pages-signs/n/never.htm)
 
   https://www.youtube.com/watch?v=ew7FIPLu5SE NEVER
     trim: 8F-69F
 
 group:
-  more: +rst:`NEW <https://www.lifeprint.com/asl101/pages-signs/n/new.htm>`_
+  more: +md:[NEW](https://www.lifeprint.com/asl101/pages-signs/n/new.htm)
 
   https://www.youtube.com/watch?v=cftJMIT87TQ NEW
     trim: 1F-58F
 
 group:
-  more: +rst:`OH-I-SEE <https://www.lifeprint.com/asl101/pages-signs/o/oh-i-see.htm>`_
+  more: +md:[OH-I-SEE](https://www.lifeprint.com/asl101/pages-signs/o/oh-i-see.htm)
 
   https://www.youtube.com/watch?v=zi9T8_Xm2v0 OH-I-SEE
     trim: 4F-58F
 
 group:
-  more: +rst:`OR <https://www.lifeprint.com/asl101/pages-signs/o/or.htm>`_
+  more: +md:[OR](https://www.lifeprint.com/asl101/pages-signs/o/or.htm)
 
   # OR (bodyshift) is covered in lesson 7.
   https://www.youtube.com/watch?v=6cB9xVBOasE O-R
@@ -139,7 +139,7 @@ group:
     trim: 1F-60F
 
 group:
-  more: +rst:`PEOPLE <https://www.lifeprint.com/asl101/pages-signs/p/people.htm>`_
+  more: +md:[PEOPLE](https://www.lifeprint.com/asl101/pages-signs/p/people.htm)
 
   https://www.youtube.com/watch?v=wYxR1be1WfY PEOPLE (forward P version)
     trim: 2F-63F
@@ -152,13 +152,13 @@ group:
     tags: +extra
 
 group:
-  more: +rst:`PERSON <https://www.lifeprint.com/asl101/pages-signs/p/person.htm>`_
+  more: +md:[PERSON](https://www.lifeprint.com/asl101/pages-signs/p/person.htm)
 
   https://www.youtube.com/watch?v=RXX7T4-saPs PERSON / AGENT / one who does
     trim: 14F-59F
 
 group:
-  more: +rst:`SOMETIMES <https://www.lifeprint.com/asl101/pages-signs/s/sometimes.htm>`_
+  more: +md:[SOMETIMES](https://www.lifeprint.com/asl101/pages-signs/s/sometimes.htm)
 
   https://www.youtube.com/watch?v=u6cQNKM4Dbs SOMETIMES / once-in-a-while
     trim: 12F-79F
@@ -166,7 +166,7 @@ group:
     trim: 11F-98F
 
 group:
-  more: +rst:`TALK <https://www.lifeprint.com/asl101/pages-signs/t/talk.htm>`_
+  more: +md:[TALK](https://www.lifeprint.com/asl101/pages-signs/t/talk.htm)
 
   https://www.youtube.com/watch?v=vB3APsM4FFQ @92F-135F
     TALK / SPEAK
@@ -181,7 +181,7 @@ group:
     trim: 7F-75F
 
   group:
-    more: +rst:`CHAT <https://www.lifeprint.com/asl101/pages-signs/c/chat.htm>`_
+    more: +md:[CHAT](https://www.lifeprint.com/asl101/pages-signs/c/chat.htm)
 
     https://www.youtube.com/watch?v=6KdtmP3ymSI
       CHAT-with
@@ -200,14 +200,14 @@ group:
       trim: 8F-65F
 
 group:
-  more: +rst:`THING <https://www.lifeprint.com/asl101/pages-signs/t/thing.htm>`_
+  more: +md:[THING](https://www.lifeprint.com/asl101/pages-signs/t/thing.htm)
 
   https://www.youtube.com/watch?v=OPu_3piG0hc
     THING / resource / stuff / material
     trim: 0-48F
 
 group:
-  more: +rst:`NERVOUS <https://www.lifeprint.com/asl101/pages-signs/n/nervous.htm>`_
+  more: +md:[NERVOUS](https://www.lifeprint.com/asl101/pages-signs/n/nervous.htm)
   # SIT-anxious is in lesson 5.
 
   https://www.youtube.com/watch?v=FH4vSmX7SfU

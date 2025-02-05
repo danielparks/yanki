@@ -1,59 +1,59 @@
 title: Lifeprint ASL::Vocabulary::Lesson 07 — Food
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 7 <https://www.lifeprint.com/asl101/lessons/lesson07.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 7](https://www.lifeprint.com/asl101/lessons/lesson07.htm)
 tags: Lifeprint lesson_07 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 # OR (bodyshift) is in lesson goals, not vocab list.
 https://www.youtube.com/watch?v=T2EJ1vHPMGE OR
-  more: +rst:`OR <https://www.lifeprint.com/asl101/pages-signs/o/or.htm>`_
+  more: +md:[OR](https://www.lifeprint.com/asl101/pages-signs/o/or.htm)
 
 group:
-  more: +rst:`AND <https://www.lifeprint.com/asl101/pages-signs/a/and.htm>`_
+  more: +md:[AND](https://www.lifeprint.com/asl101/pages-signs/a/and.htm)
 
   https://www.youtube.com/watch?v=PvFguNv1zIk AND
     trim: 24F-92F
 
 group:
-  more: +rst:`APPLE <https://www.lifeprint.com/asl101/pages-signs/a/apple.htm>`_
+  more: +md:[APPLE](https://www.lifeprint.com/asl101/pages-signs/a/apple.htm)
 
   https://www.youtube.com/watch?v=3wIiujOP6Ag APPLE
     tags: +first_100_signs
 
 group:
-  more: +rst:`CANDY <https://www.lifeprint.com/asl101/pages-signs/c/candy.htm>`_
+  more: +md:[CANDY](https://www.lifeprint.com/asl101/pages-signs/c/candy.htm)
 
   https://www.youtube.com/watch?v=EfJ4xLiX5IA CANDY
     tags: +first_100_signs
 
 group:
-  more: +rst:`CEREAL <https://www.lifeprint.com/asl101/pages-signs/c/cereal.htm>`_
+  more: +md:[CEREAL](https://www.lifeprint.com/asl101/pages-signs/c/cereal.htm)
 
   https://www.youtube.com/watch?v=4uO8sY4hNYs CEREAL
     tags: +first_100_signs
 
 group:
-  more: +rst:`CHEESE <https://www.lifeprint.com/asl101/pages-signs/c/cheese.htm>`_
+  more: +md:[CHEESE](https://www.lifeprint.com/asl101/pages-signs/c/cheese.htm)
 
   https://www.youtube.com/watch?v=35h7Cgf2Acw CHEESE
     tags: +first_100_signs
 
 group:
-  more: +rst:`COOKIE <https://www.lifeprint.com/asl101/pages-signs/c/cookie.htm>`_
+  more: +md:[COOKIE](https://www.lifeprint.com/asl101/pages-signs/c/cookie.htm)
 
   https://www.youtube.com/watch?v=6JW3ODCZkBQ COOKIE
     tags: +first_100_signs
 
 group:
-  more: +rst:`CUP <https://www.lifeprint.com/asl101/pages-signs/c/cup.htm>`_
+  more: +md:[CUP](https://www.lifeprint.com/asl101/pages-signs/c/cup.htm)
 
   https://www.youtube.com/watch?v=AeJ3voRJJZQ CUP
     trim: 36F-109F
     tags: +first_100_signs
 
 group:
-  more: +rst:`DRINK <https://www.lifeprint.com/asl101/pages-signs/d/drink.htm>`_
+  more: +md:[DRINK](https://www.lifeprint.com/asl101/pages-signs/d/drink.htm)
 
   https://www.youtube.com/watch?v=LqJM7wcUixQ DRINK
     tags: +first_100_signs
@@ -63,18 +63,18 @@ group:
   https://www.youtube.com/watch?v=9keaZndfaDI DRINK-small-alcohol
 
 group:
-  more: +rst:`EAT <https://www.lifeprint.com/asl101/pages-signs/e/eat.htm>`_
+  more: +md:[EAT](https://www.lifeprint.com/asl101/pages-signs/e/eat.htm)
 
   https://www.youtube.com/watch?v=2Dl1Q4vlQKs EAT / FOOD
 
 group:
-  more: +rst:`EGG <https://www.lifeprint.com/asl101/pages-signs/e/egg.htm>`_
+  more: +md:[EGG](https://www.lifeprint.com/asl101/pages-signs/e/egg.htm)
 
   https://www.youtube.com/watch?v=uEvKmWqFE-4 EGG
     tags: +first_100_signs
 
 group:
-  more: +rst:`TASTE <https://www.lifeprint.com/asl101/pages-signs/t/taste.htm>`_
+  more: +md:[TASTE](https://www.lifeprint.com/asl101/pages-signs/t/taste.htm)
 
   # No video for TASTE on its own
   https://www.youtube.com/watch?v=jfoeJtIadRA TASTE AWFUL
@@ -85,7 +85,7 @@ group:
   https://www.youtube.com/watch?v=iIs-ZMgqy-8 AWFUL / terrible / intense
 
 group:
-  more: +rst:`FULL <https://www.lifeprint.com/asl101/pages-signs/f/full.htm>`_
+  more: +md:[FULL](https://www.lifeprint.com/asl101/pages-signs/f/full.htm)
 
   https://www.youtube.com/watch?v=B8EuK0EQHgc FULL
     tags: +first_100_signs
@@ -95,13 +95,13 @@ group:
   https://www.youtube.com/watch?v=TIm5secMkAA FED-UP / had it up to here
 
 group:
-  more: +rst:`HAMBURGER <https://www.lifeprint.com/asl101/pages-signs/h/hamburger.htm>`_
+  more: +md:[HAMBURGER](https://www.lifeprint.com/asl101/pages-signs/h/hamburger.htm)
 
   https://www.youtube.com/watch?v=IIt5fF-D6d0 HAMBURGER
     tags: +first_100_signs
 
 group:
-  more: +rst:`HOTDOG <https://www.lifeprint.com/asl101/pages-signs/h/hotdog.htm>`_
+  more: +md:[HOTDOG](https://www.lifeprint.com/asl101/pages-signs/h/hotdog.htm)
 
   https://www.youtube.com/watch?v=IFHFBhziij4 HOTDOG / SAUSAGE / bologna
     tags: +first_100_signs
@@ -110,7 +110,7 @@ group:
   https://www.youtube.com/watch?v=iGQ_oA7WodY HOTDOG (finger in bun version)
 
 group:
-  more: +rst:`HUNGRY <https://www.lifeprint.com/asl101/pages-signs/h/hungry.htm>`_
+  more: +md:[HUNGRY](https://www.lifeprint.com/asl101/pages-signs/h/hungry.htm)
 
   https://www.youtube.com/watch?v=8ZOUoDZkAoQ HUNGRY / WISH
     tags: +first_100_signs
@@ -119,13 +119,13 @@ group:
   https://www.youtube.com/watch?v=v0ietqTGqf4 HANGRY (HUNGRY GROUCHY)
 
 group:
-  more: +rst:`MILK <https://www.lifeprint.com/asl101/pages-signs/m/milk.htm>`_
+  more: +md:[MILK](https://www.lifeprint.com/asl101/pages-signs/m/milk.htm)
 
   https://www.youtube.com/watch?v=quk_XoRtZWk MILK
     tags: +first_100_signs
 
 group:
-  more: +rst:`PIZZA <https://www.lifeprint.com/asl101/pages-signs/p/pizza.htm>`_
+  more: +md:[PIZZA](https://www.lifeprint.com/asl101/pages-signs/p/pizza.htm)
 
   https://www.youtube.com/watch?v=XIZ2DrdEU3k P-I-ZZ-A
     tags: +first_100_signs
@@ -133,27 +133,27 @@ group:
   https://www.youtube.com/watch?v=_1GRsPk6s3w -> PIZZA (ZZA version)
 
 group:
-  more: +rst:`POPCORN <https://www.lifeprint.com/asl101/pages-signs/p/popcorn.htm>`_
+  more: +md:[POPCORN](https://www.lifeprint.com/asl101/pages-signs/p/popcorn.htm)
 
   https://www.youtube.com/watch?v=f1FFdgGVFIk POPCORN
     trim: 10F-53F
 
 group:
-  more: +rst:`SOUP <https://www.lifeprint.com/asl101/pages-signs/s/soup.htm>`_
+  more: +md:[SOUP](https://www.lifeprint.com/asl101/pages-signs/s/soup.htm)
 
   https://www.youtube.com/watch?v=ALdtmqECO6Y SOUP / SPOON
     trim: 13F-75F
     tags: +first_100_signs
 
 group:
-  more: +rst:`WATER <https://www.lifeprint.com/asl101/pages-signs/w/water.htm>`_
+  more: +md:[WATER](https://www.lifeprint.com/asl101/pages-signs/w/water.htm)
 
   https://www.youtube.com/watch?v=-SdOfxGhb0A WATER
     trim: 15F-72F
     tags: +first_100_signs
 
 group:
-  more: +rst:`WHAT-KIND <https://www.lifeprint.com/asl101/pages-signs/w/what-kind.htm>`_
+  more: +md:[WHAT-KIND](https://www.lifeprint.com/asl101/pages-signs/w/what-kind.htm)
 
   https://www.youtube.com/watch?v=gp_GwO18i8Y WHAT-KIND
     trim: 7F-

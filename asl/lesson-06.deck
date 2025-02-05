@@ -1,12 +1,12 @@
 title: Lifeprint ASL::Vocabulary::Lesson 06 — Colors & Time
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 6 <https://www.lifeprint.com/asl101/lessons/lesson06.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 6](https://www.lifeprint.com/asl101/lessons/lesson06.htm)
 tags: Lifeprint lesson_06 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`COLOR <https://www.lifeprint.com/asl101/pages-signs/c/color.htm>`_
+  more: +md:[COLOR](https://www.lifeprint.com/asl101/pages-signs/c/color.htm)
 
   https://www.youtube.com/watch?v=Wzio7B5VT_I COLOR
     trim: 14F-98F
@@ -15,66 +15,66 @@ group:
   tags: +colors
   https://www.youtube.com/watch?v=O5_4x8p5t4U BLACK
     trim: 11F-72F
-    more: +rst:`BLACK <https://www.lifeprint.com/asl101/pages-signs/b/black.htm>`_
+    more: +md:[BLACK](https://www.lifeprint.com/asl101/pages-signs/b/black.htm)
 
   https://www.youtube.com/watch?v=HGBcts4shKw BROWN
     trim: 14F-
-    more: +rst:`BROWN <https://www.lifeprint.com/asl101/pages-signs/b/brown.htm>`_
+    more: +md:[BROWN](https://www.lifeprint.com/asl101/pages-signs/b/brown.htm)
     tags: +first_100_signs
 
   https://www.youtube.com/watch?v=pyW0OYYrZ7U RED
     trim: 15F-87F
-    more: +rst:`RED <https://www.lifeprint.com/asl101/pages-signs/r/red.htm>`_
+    more: +md:[RED](https://www.lifeprint.com/asl101/pages-signs/r/red.htm)
     tags: +first_100_signs
 
   https://www.youtube.com/watch?v=K1EAxRE0ZaM ORANGE
     trim: 16F-79F
-    more: +rst:`ORANGE <https://www.lifeprint.com/asl101/pages-signs/o/orange.htm>`_
+    more: +md:[ORANGE](https://www.lifeprint.com/asl101/pages-signs/o/orange.htm)
     tags: +first_100_signs
 
   https://www.youtube.com/watch?v=2O8jkekJkiE BLUE
     trim: 7F-58F
-    more: +rst:`BLUE <https://www.lifeprint.com/asl101/pages-signs/b/blue.htm>`_
+    more: +md:[BLUE](https://www.lifeprint.com/asl101/pages-signs/b/blue.htm)
     tags: +first_100_signs
 
   https://www.youtube.com/watch?v=nK4_8-U-Y9I YELLOW
     trim: 8F-59F
-    more: +rst:`YELLOW <https://www.lifeprint.com/asl101/pages-signs/y/yellow.htm>`_
+    more: +md:[YELLOW](https://www.lifeprint.com/asl101/pages-signs/y/yellow.htm)
     tags: +first_100_signs
 
   https://www.youtube.com/watch?v=WrkXE5l6udM GREEN
     trim: 8F-73F
-    more: +rst:`GREEN <https://www.lifeprint.com/asl101/pages-signs/g/green.htm>`_
+    more: +md:[GREEN](https://www.lifeprint.com/asl101/pages-signs/g/green.htm)
     tags: +first_100_signs
 
   https://www.youtube.com/watch?v=uLjkLwFvFtw WHITE
     trim: 6F-62F
-    more: +rst:`WHITE <https://www.lifeprint.com/asl101/pages-signs/w/white.htm>`_
+    more: +md:[WHITE](https://www.lifeprint.com/asl101/pages-signs/w/white.htm)
 
   # Mostly linked from COLOR page. Some of these are in first_100_signs.
   tags: +extra
 
   https://www.youtube.com/watch?v=ZF3xvvxonIM GOLD / CALIFORNIA
-    more: +rst:`GOLD <https://www.lifeprint.com/asl101/pages-signs/g/gold.htm>`_
+    more: +md:[GOLD](https://www.lifeprint.com/asl101/pages-signs/g/gold.htm)
     tags: +first_100_signs
   https://www.youtube.com/watch?v=jvq-s7ZhhUE GRAY
-    more: +rst:`GRAY <https://www.lifeprint.com/asl101/pages-signs/g/gray.htm>`_
+    more: +md:[GRAY](https://www.lifeprint.com/asl101/pages-signs/g/gray.htm)
   https://www.youtube.com/watch?v=aNilWTBIl0g PINK
-    more: +rst:`PINK <https://www.lifeprint.com/asl101/pages-signs/p/pink.htm>`_
+    more: +md:[PINK](https://www.lifeprint.com/asl101/pages-signs/p/pink.htm)
   https://www.youtube.com/watch?v=zgdzYtHB6jg PURPLE
-    more: +rst:`PURPLE <https://www.lifeprint.com/asl101/pages-signs/p/purple.htm>`_
+    more: +md:[PURPLE](https://www.lifeprint.com/asl101/pages-signs/p/purple.htm)
   https://www.youtube.com/watch?v=Yi52SqYnlJE SILVER
     trim: 23F-91F
-    more: +rst:`SILVER <https://www.lifeprint.com/asl101/pages-signs/s/silver.htm>`_
+    more: +md:[SILVER](https://www.lifeprint.com/asl101/pages-signs/s/silver.htm)
     tags: +first_100_signs
 
 group:
-  more: +rst:`DRAW <https://www.lifeprint.com/asl101/pages-signs/d/draw.htm>`_
+  more: +md:[DRAW](https://www.lifeprint.com/asl101/pages-signs/d/draw.htm)
 
   https://www.youtube.com/watch?v=ua6jgiWYZPw DRAW
 
 group:
-  more: +rst:`FINISH <https://www.lifeprint.com/asl101/pages-signs/f/finish.htm>`_
+  more: +md:[FINISH](https://www.lifeprint.com/asl101/pages-signs/f/finish.htm)
 
   https://www.youtube.com/watch?v=7xQE2N0z7gM FINISH / all done / and then
     tags: +first_100_signs
@@ -83,19 +83,19 @@ group:
   https://www.youtube.com/watch?v=gYB8ji01BLo knock it off / FINISH
 
 group:
-  more: +rst:`FUTURE <https://www.lifeprint.com/asl101/pages-signs/f/future.htm>`_
+  more: +md:[FUTURE](https://www.lifeprint.com/asl101/pages-signs/f/future.htm)
 
   https://www.youtube.com/watch?v=RMUZFdu6VtI FUTURE / WILL
     tags: +first_100_signs
   https://www.youtube.com/watch?v=VHP823jOw8c SOMEDAY / eventually
 
 group:
-  more: +rst:`LONG <https://www.lifeprint.com/asl101/pages-signs/l/long.htm>`_
+  more: +md:[LONG](https://www.lifeprint.com/asl101/pages-signs/l/long.htm)
 
   https://www.youtube.com/watch?v=nAGD0JwteGM LONG
 
 group:
-  more: +rst:`NOW <https://www.lifeprint.com/asl101/pages-signs/n/now.htm>`_
+  more: +md:[NOW](https://www.lifeprint.com/asl101/pages-signs/n/now.htm)
 
   https://www.youtube.com/watch?v=g2j70neQ_lI NOW / current
     tags: +first_100_signs
@@ -105,25 +105,25 @@ group:
   https://www.youtube.com/watch?v=IlLRJ6jw4lY TODAY (now-day)
 
 group:
-  more: +rst:`OLD <https://www.lifeprint.com/asl101/pages-signs/o/old.htm>`_
+  more: +md:[OLD](https://www.lifeprint.com/asl101/pages-signs/o/old.htm)
 
   https://www.youtube.com/watch?v=wmJfQSUsnQ8 OLD
 
 group:
-  more: +rst:`PAPER <https://www.lifeprint.com/asl101/pages-signs/p/paper.htm>`_
+  more: +md:[PAPER](https://www.lifeprint.com/asl101/pages-signs/p/paper.htm)
 
   https://www.youtube.com/watch?v=Zg7-DM25KIM PAPER
 
 # These weren’t linked, but they were mentioned in the vocab list:
 https://www.youtube.com/watch?v=vKE5vsfIhYk DICTIONARY
-  more: +rst:`DICTIONARY <https://www.lifeprint.com/asl101/pages-signs/d/dictionary.htm>`_
+  more: +md:[DICTIONARY](https://www.lifeprint.com/asl101/pages-signs/d/dictionary.htm)
   tags: +extra
 https://www.youtube.com/watch?v=XOhKB7tH58c PAGE
-  more: +rst:`PAGE <https://www.lifeprint.com/asl101/pages-signs/p/page.htm>`_
+  more: +md:[PAGE](https://www.lifeprint.com/asl101/pages-signs/p/page.htm)
   tags: +extra
 
 group:
-  more: +rst:`PAST <https://www.lifeprint.com/asl101/pages-signs/p/past.htm>`_
+  more: +md:[PAST](https://www.lifeprint.com/asl101/pages-signs/p/past.htm)
 
   https://www.youtube.com/watch?v=j7rjBay5FIE PAST / before now / previously / ago
     tags: +first_100_signs
@@ -132,7 +132,7 @@ group:
   https://www.youtube.com/watch?v=Cb3PdUWf_wk PAST / long ago / once upon a time
 
 group:
-  more: +rst:`SELF <https://www.lifeprint.com/asl101/pages-signs/s/self.htm>`_
+  more: +md:[SELF](https://www.lifeprint.com/asl101/pages-signs/s/self.htm)
 
   https://www.youtube.com/watch?v=NF_jrhLKWlY YOURSELF / SELF / YOUR-OWN
     trim: 34F-84F
@@ -142,26 +142,26 @@ group:
   https://www.youtube.com/watch?v=4zMWHsJlHGg OURSELVES / OUR-OWN
 
 group:
-  more: +rst:`TOMORROW <https://www.lifeprint.com/asl101/pages-signs/t/tomorrow.htm>`_
+  more: +md:[TOMORROW](https://www.lifeprint.com/asl101/pages-signs/t/tomorrow.htm)
 
   https://www.youtube.com/watch?v=6gFOZMDptIk TOMORROW
   https://www.youtube.com/watch?v=E17VasimjWo EVERYDAY / DAILY / common
 
 group:
-  more: +rst:`WAIT <https://www.lifeprint.com/asl101/pages-signs/w/wait.htm>`_
+  more: +md:[WAIT](https://www.lifeprint.com/asl101/pages-signs/w/wait.htm)
 
   https://www.youtube.com/watch?v=YfwgS9ZsBVw WAIT
   https://www.youtube.com/watch?v=El-hYok08Qk WAIT-[long]
     trim: 14F-94F
 
 group:
-  more: +rst:`WHEN <https://www.lifeprint.com/asl101/pages-signs/w/when.htm>`_
+  more: +md:[WHEN](https://www.lifeprint.com/asl101/pages-signs/w/when.htm)
 
   https://www.youtube.com/watch?v=YWxvqP__qos WHEN
     tags: +first_100_signs
 
 group:
-  more: +rst:`YEAR <https://www.lifeprint.com/asl101/pages-signs/y/year.htm>`_
+  more: +md:[YEAR](https://www.lifeprint.com/asl101/pages-signs/y/year.htm)
 
   https://www.youtube.com/watch?v=zTIJAgTai40 YEAR
     trim: 15F-83F

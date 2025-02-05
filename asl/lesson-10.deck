@@ -1,12 +1,12 @@
 title: Lifeprint ASL::Vocabulary::Lesson 10 — Animals
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 10 <https://www.lifeprint.com/asl101/lessons/lesson10.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 10](https://www.lifeprint.com/asl101/lessons/lesson10.htm)
 tags: Lifeprint lesson_10 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`BIRD <https://www.lifeprint.com/asl101/pages-signs/b/bird.htm>`_
+  more: +md:[BIRD](https://www.lifeprint.com/asl101/pages-signs/b/bird.htm)
 
   https://www.youtube.com/watch?v=Pszo0ZVIcUA CHICKEN / BIRD
     trim: 10F-60F
@@ -22,11 +22,11 @@ group:
 https://www.youtube.com/watch?v=yxlQDmsFo-g ->
   CHICKEN (old version — pecking in hand)
   trim: 2F-62F
-  more: +rst:`CHICKEN <https://www.lifeprint.com/asl101/pages-signs/c/chicken.htm>`_
+  more: +md:[CHICKEN](https://www.lifeprint.com/asl101/pages-signs/c/chicken.htm)
   tags: +extra
 
 group:
-  more: +rst:`BOOK <https://www.lifeprint.com/asl101/pages-signs/b/book.htm>`_
+  more: +md:[BOOK](https://www.lifeprint.com/asl101/pages-signs/b/book.htm)
 
   https://www.youtube.com/watch?v=Kwvw-K6GYW8 BOOK
     trim: 13F-74F
@@ -37,15 +37,15 @@ group:
 
 https://www.youtube.com/watch?v=p-nShFm-6MQ BOOKSTORE
   trim: 13F-82F
-  more: +rst:`BOOKSTORE <https://www.lifeprint.com/asl101/pages-signs/b/https://www.lifeprint.com/asl101/pages-signs/b/bookstore.htm.htm>`_
+  more: +md:[BOOKSTORE](https://www.lifeprint.com/asl101/pages-signs/b/https://www.lifeprint.com/asl101/pages-signs/b/bookstore.htm.htm)
 
 https://www.youtube.com/watch?v=a-COvvqJXe8 BUG / insect / critter
   trim: 11F-62F
-  more: +rst:`BUG <https://www.lifeprint.com/asl101/pages-signs/b/bug.htm>`_
+  more: +md:[BUG](https://www.lifeprint.com/asl101/pages-signs/b/bug.htm)
   tags: +first_100_signs
 
 group:
-  more: +rst:`CAT <https://www.lifeprint.com/asl101/pages-signs/c/cat.htm>`_
+  more: +md:[CAT](https://www.lifeprint.com/asl101/pages-signs/c/cat.htm)
 
   https://www.youtube.com/watch?v=a3b8LAX68Ho CAT (F hand version)
     trim: 11F-54F
@@ -63,11 +63,11 @@ group:
 
 https://www.youtube.com/watch?v=I2_nB2cXP58 COW
   trim: 13F-75F
-  more: +rst:`COW <https://www.lifeprint.com/asl101/pages-signs/c/cow.htm>`_
+  more: +md:[COW](https://www.lifeprint.com/asl101/pages-signs/c/cow.htm)
   tags: +first_100_signs
 
 group:
-  more: +rst:`DOG <https://www.lifeprint.com/asl101/pages-signs/d/dog.htm>`_
+  more: +md:[DOG](https://www.lifeprint.com/asl101/pages-signs/d/dog.htm)
 
   https://www.youtube.com/watch?v=IbpJtH_QssM DOG
     trim: 9F-68F
@@ -81,7 +81,7 @@ group:
     trim: 16F-77F
 
 group:
-  more: +rst:`FISH <https://www.lifeprint.com/asl101/pages-signs/f/fish.htm>`_
+  more: +md:[FISH](https://www.lifeprint.com/asl101/pages-signs/f/fish.htm)
 
   https://www.youtube.com/watch?v=3xKLhk4NgCs FISH (one-handed)
     trim: 10F-58F
@@ -94,11 +94,11 @@ group:
 
 https://www.youtube.com/watch?v=mZRz-Uyj2fo GET
   trim: 8F-73F
-  more: +rst:`GET <https://www.lifeprint.com/asl101/pages-signs/g/get.htm>`_
+  more: +md:[GET](https://www.lifeprint.com/asl101/pages-signs/g/get.htm)
 # Not sure if I should include HIT (see GET page)
 
 group:
-  more: +rst:`HORSE <https://www.lifeprint.com/asl101/pages-signs/h/horse.htm>`_
+  more: +md:[HORSE](https://www.lifeprint.com/asl101/pages-signs/h/horse.htm)
 
   https://www.youtube.com/watch?v=xCJGQseQ3Fw HORSE
     trim: 15F-90F
@@ -113,7 +113,7 @@ group:
     trim: 15F-90F
 
 group:
-  more: +rst:`KNOW <https://www.lifeprint.com/asl101/pages-signs/k/know.htm>`_
+  more: +md:[KNOW](https://www.lifeprint.com/asl101/pages-signs/k/know.htm)
 
   # No video for just plain KNOW
   https://www.youtube.com/watch?v=Ht2B0VzHFwQ FAMILIAR / KNOWLEDGE
@@ -133,18 +133,18 @@ group:
 
 https://www.youtube.com/watch?v=tZnyCPaiRlQ LOOK-LIKE
   trim: 10F-61F
-  more: +rst:`LOOK-LIKE <https://www.lifeprint.com/asl101/pages-signs/l/looklike.htm>`_
+  more: +md:[LOOK-LIKE](https://www.lifeprint.com/asl101/pages-signs/l/looklike.htm)
 
 https://www.youtube.com/watch?v=azXM8PGqgLg PET
   trim: 12F-68F
-  more: +rst:`PET <https://www.lifeprint.com/asl101/pages-signs/p/pet.htm>`_
+  more: +md:[PET](https://www.lifeprint.com/asl101/pages-signs/p/pet.htm)
 
 https://www.youtube.com/watch?v=Nz8zvtGUTPU READING
   trim: 6F-50F
-  more: +rst:`READ <https://www.lifeprint.com/asl101/pages-signs/r/read.htm>`_
+  more: +md:[READ](https://www.lifeprint.com/asl101/pages-signs/r/read.htm)
 
 group:
-  more: +rst:`SAME <https://www.lifeprint.com/asl101/pages-signs/s/same.htm>`_
+  more: +md:[SAME](https://www.lifeprint.com/asl101/pages-signs/s/same.htm)
 
   https://www.youtube.com/watch?v=cnX45VWbjmc SAME
     trim: 10F-73F
@@ -157,10 +157,10 @@ group:
 
 https://www.youtube.com/watch?v=iXEkbLPuFYk SOME / PART / PARTIAL
   trim: 9F-55F
-  more: +rst:`SOME <https://www.lifeprint.com/asl101/pages-signs/s/some.htm>`_
+  more: +md:[SOME](https://www.lifeprint.com/asl101/pages-signs/s/some.htm)
 
 group:
-  more: +rst:`TAKE <https://www.lifeprint.com/asl101/pages-signs/t/take.htm>`_
+  more: +md:[TAKE](https://www.lifeprint.com/asl101/pages-signs/t/take.htm)
 
   https://www.youtube.com/watch?v=1kFEVdGTAUU TAKE-from
     trim: 14F-64F
@@ -168,7 +168,7 @@ group:
     trim: 13F-80F
 
 group:
-  more: +rst:`TELL <https://www.lifeprint.com/asl101/pages-signs/t/tell.htm>`_
+  more: +md:[TELL](https://www.lifeprint.com/asl101/pages-signs/t/tell.htm)
 
   https://www.youtube.com/watch?v=SvfopPYaJJU TELL / TELL-you
     trim: 7F-68F
@@ -178,7 +178,7 @@ group:
     trim: 16F-72F
 
 group:
-  more: +rst:`TIME <https://www.lifeprint.com/asl101/pages-signs/t/time.htm>`_
+  more: +md:[TIME](https://www.lifeprint.com/asl101/pages-signs/t/time.htm)
 
   https://www.youtube.com/watch?v=ANRCVPkuN8Y TIME
     trim: 15F-64F
@@ -206,9 +206,9 @@ group:
 https://www.youtube.com/watch?v=bloIqtYN8fI
   TRUE / authentic / real / sure / indeed
   trim: 3F-49F
-  more: +rst:`TRUE <https://www.lifeprint.com/asl101/pages-signs/t/true.htm>`_
+  more: +md:[TRUE](https://www.lifeprint.com/asl101/pages-signs/t/true.htm)
 
 # From video; used in phrases.
 https://www.youtube.com/watch?v=LQ0PcUNB_IM UPSTAIRS
   trim: 11F-62F
-  more: +rst:`UP <https://www.lifeprint.com/asl101/pages-signs/u/up.htm>`_
+  more: +md:[UP](https://www.lifeprint.com/asl101/pages-signs/u/up.htm)

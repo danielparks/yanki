@@ -1,6 +1,7 @@
 import docutils.core
 import html
 import functools
+import mistletoe
 import os
 import re
 from urllib.parse import quote
@@ -27,7 +28,9 @@ def rst_to_html(rst):
 
 @functools.cache
 def raw_to_html(raw):
-    if raw.startswith("rst:"):
+    if raw.startswith("md:"):
+        return mistletoe.markdown(raw[3:])
+    elif raw.startswith("rst:"):
         return rst_to_html(raw[4:])
     elif raw.startswith("html:"):
         return raw[5:]
