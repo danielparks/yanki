@@ -1,6 +1,6 @@
 title: Lifeprint ASL::Vocabulary::Lesson 13 — School
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 13 <https://www.lifeprint.com/asl101/lessons/lesson13.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 13](https://www.lifeprint.com/asl101/lessons/lesson13.htm)
 tags: Lifeprint lesson_13 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=HVNMUR4iy1Y
   trim: 7F-75F
 
 group:
-  more: +rst:`ARTICLE <https://www.lifeprint.com/asl101/pages-signs/a/article.htm>`_
+  more: +md:[ARTICLE](https://www.lifeprint.com/asl101/pages-signs/a/article.htm)
 
   https://www.youtube.com/watch?v=qrlFqLaaJSs
     ARTICLE / CHAPTER / COLUMN / SECTION (C-hand)
@@ -22,7 +22,7 @@ group:
   # Not all variations listed on page seem to have videos.
 
 group:
-  more: +rst:`CLOSE-CAPTIONED <https://www.lifeprint.com/asl101/pages-signs/c/close-captioned.htm>`_
+  more: +md:[CLOSE-CAPTIONED](https://www.lifeprint.com/asl101/pages-signs/c/close-captioned.htm)
 
   https://www.youtube.com/watch?v=chpyf4VHajk CLOSED-CAPTION (CC version)
     trim: 7F-50F
@@ -31,7 +31,7 @@ group:
   # Other variations at https://www.handspeak.com/word/3787/
 
 group:
-  more: +rst:`COLLEGE <https://www.lifeprint.com/asl101/pages-signs/c/college.htm>`_
+  more: +md:[COLLEGE](https://www.lifeprint.com/asl101/pages-signs/c/college.htm)
 
   https://www.youtube.com/watch?v=eXg-cfQuwwM COLLEGE / UNIVERSITY
     trim: 11F-69F
@@ -39,14 +39,14 @@ group:
 
 # Not listed as vocab explicitly, but it did say “COLLEGE-[university]”
 group:
-  more: +rst:`UNIVERSITY <https://www.lifeprint.com/asl101/pages-signs/u/university.htm>`_
+  more: +md:[UNIVERSITY](https://www.lifeprint.com/asl101/pages-signs/u/university.htm)
   tags: +extra
 
   https://www.youtube.com/watch?v=A63jDYGVSPU UNIVERSITY
     trim: 5F-61F
 
 group:
-  more: +rst:`RESIDENTIAL-SCHOOL <https://www.lifeprint.com/asl101/pages-signs/r/residential-school.htm>`_
+  more: +md:[RESIDENTIAL-SCHOOL](https://www.lifeprint.com/asl101/pages-signs/r/residential-school.htm)
 
   https://www.youtube.com/watch?v=JA8Kr2vBYrY
     RESIDENTIAL-SCHOOL / DEAF-SCHOOL / institute (i+i version)
@@ -56,21 +56,21 @@ group:
     trim: 28F-99F
 
 group:
-  more: +rst:`EASY <https://www.lifeprint.com/asl101/pages-signs/e/easy.htm>`_
+  more: +md:[EASY](https://www.lifeprint.com/asl101/pages-signs/e/easy.htm)
 
   https://www.youtube.com/watch?v=HD10hA6FKFs EASY
     trim: 12F-67F
 
 # Not listed as vocab explicitly, but it did say “EASY-[ALMOST]”
 group:
-  more: +rst:`ALMOST <https://www.lifeprint.com/asl101/pages-signs/a/almost.htm>`_
+  more: +md:[ALMOST](https://www.lifeprint.com/asl101/pages-signs/a/almost.htm)
   tags: +extra
 
   https://www.youtube.com/watch?v=lSLPqu_vm-k ALMOST
     trim: 12F-68F
 
 group:
-  more: +rst:`FALSE <https://www.lifeprint.com/asl101/pages-signs/f/false.htm>`_
+  more: +md:[FALSE](https://www.lifeprint.com/asl101/pages-signs/f/false.htm)
 
   https://www.youtube.com/watch?v=eZx4AGq-3P0
     FALSE / FAKE / FOSTER / ARTIFICIAL / fiction (in context)
@@ -79,7 +79,7 @@ group:
 # FLASH-THE-LIGHTS was in lesson 9.
 
 group:
-  more: +rst:`GRADUATE <https://www.lifeprint.com/asl101/pages-signs/g/graduate.htm>`_
+  more: +md:[GRADUATE](https://www.lifeprint.com/asl101/pages-signs/g/graduate.htm)
 
   https://www.youtube.com/watch?v=Uch6xFIQ3X0 GRADUATE
     trim: 11F-77F
@@ -88,25 +88,25 @@ group:
     tags: +extra
 
 group:
-  more: +rst:`HARD <https://www.lifeprint.com/asl101/pages-signs/h/hard.htm>`_
+  more: +md:[HARD](https://www.lifeprint.com/asl101/pages-signs/h/hard.htm)
 
   https://www.youtube.com/watch?v=RgGjl2y6dkM HARD / DIFFICULT
     trim: 9F-66F
 
 group:
-  more: +rst:`HARD-OF-HEARING <https://www.lifeprint.com/asl101/pages-signs/h/hard-of-hearing.htm>`_
+  more: +md:[HARD-OF-HEARING](https://www.lifeprint.com/asl101/pages-signs/h/hard-of-hearing.htm)
 
   https://www.youtube.com/watch?v=gz_R3F29Je0 HARD-OF-HEARING
     trim: 11F-72F
 
 group:
-  more: +rst:`HIGH-SCHOOL <https://www.lifeprint.com/asl101/pages-signs/h/high-school.htm>`_
+  more: +md:[HIGH-SCHOOL](https://www.lifeprint.com/asl101/pages-signs/h/high-school.htm)
 
   https://www.youtube.com/watch?v=xWL4VIQcHXI HIGH-SCHOOL
     trim: 12F-129F
 
 group:
-  more: +rst:`INTERPRETER <https://www.lifeprint.com/asl101/pages-signs/i/interpreter.htm>`_
+  more: +md:[INTERPRETER](https://www.lifeprint.com/asl101/pages-signs/i/interpreter.htm)
 
   https://www.youtube.com/watch?v=uhygNx8qHyY INTERPRET
     trim: 11F-62F
@@ -115,7 +115,7 @@ group:
     trim: 8F-74F
 
 group:
-  more: +rst:`LIST <https://www.lifeprint.com/asl101/pages-signs/l/list.htm>`_
+  more: +md:[LIST](https://www.lifeprint.com/asl101/pages-signs/l/list.htm)
 
   https://www.youtube.com/watch?v=LFubvvh2-sE LIST
     trim: 15F-
@@ -123,7 +123,7 @@ group:
     trim: 15F-84F
 
 group:
-  more: +rst:`NOTE <https://www.lifeprint.com/asl101/pages-signs/n/note.htm>`_
+  more: +md:[NOTE](https://www.lifeprint.com/asl101/pages-signs/n/note.htm)
 
   https://www.youtube.com/watch?v=Um8GB14XWiM
     to-DOCUMENT / to-NOTE / make-a-RECORD
@@ -133,20 +133,20 @@ group:
     tags: +extra
 
 group:
-  more: +rst:`RESEARCH <https://www.lifeprint.com/asl101/pages-signs/r/research.htm>`_
+  more: +md:[RESEARCH](https://www.lifeprint.com/asl101/pages-signs/r/research.htm)
 
   https://www.youtube.com/watch?v=f6JW_IbLybo INVESTIGATE / RESEARCH
     trim: 7F-59F
   # No video with just initialized version of RESEARCH
 
 group:
-  more: +rst:`SQUARE <https://www.lifeprint.com/asl101/pages-signs/s/square.htm>`_
+  more: +md:[SQUARE](https://www.lifeprint.com/asl101/pages-signs/s/square.htm)
 
   https://www.youtube.com/watch?v=5Eyz4CYuaUc SQUARE / BOARD / SIGN / BILLBOARD
     trim: 15F-93F
 
 group:
-  more: +rst:`TEST <https://www.lifeprint.com/asl101/pages-signs/t/test.htm>`_
+  more: +md:[TEST](https://www.lifeprint.com/asl101/pages-signs/t/test.htm)
 
   https://www.youtube.com/watch?v=GtBVLsZBlC8
     TEST / QUIZ / EXAM (1-x-5 version)
@@ -156,14 +156,14 @@ group:
     trim: 19F-62F
 
 group:
-  more: +rst:`WRITE <https://www.lifeprint.com/asl101/pages-signs/w/write.htm>`_
+  more: +md:[WRITE](https://www.lifeprint.com/asl101/pages-signs/w/write.htm)
 
   https://www.youtube.com/watch?v=rqBe62cqd6w WRITE
     trim: 20F-85F
   # No video for WRITE-[on-board], which is used in the phrases (as WRITE).
 
 group:
-  more: +rst:`WRONG <https://www.lifeprint.com/asl101/pages-signs/w/wrong.htm>`_
+  more: +md:[WRONG](https://www.lifeprint.com/asl101/pages-signs/w/wrong.htm)
 
   https://www.youtube.com/watch?v=xt3jJMKpCqY
     WRONG / inaccurate / an error / a mistake
@@ -174,6 +174,6 @@ group:
 
 # Not in vocab list, but used in phrases.
 group:
-  more: +rst:`BECOME <https://www.lifeprint.com/asl101/pages-signs/b/become.htm>`_
+  more: +md:[BECOME](https://www.lifeprint.com/asl101/pages-signs/b/become.htm)
   https://www.youtube.com/watch?v=moCca94sHsU BECOME
     trim: 6F-75F

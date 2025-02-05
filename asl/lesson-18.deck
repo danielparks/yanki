@@ -1,6 +1,6 @@
 title: Lifeprint ASL::Vocabulary::Lesson 18 — Travel
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 18 <https://www.lifeprint.com/asl101/lessons/lesson18.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 18](https://www.lifeprint.com/asl101/lessons/lesson18.htm)
 tags: Lifeprint lesson_18 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
@@ -8,37 +8,37 @@ note_id: Lifeprint ASL {url} {clip}
 # Incomplete stub
 
 group:
-  more: +rst:`AIRPLANE <https://www.lifeprint.com/asl101/pages-signs/a/airplane.htm>`_
+  more: +md:[AIRPLANE](https://www.lifeprint.com/asl101/pages-signs/a/airplane.htm)
 
 group:
-  more: +rst:`BICYCLE <https://www.lifeprint.com/asl101/pages-signs/b/bicycle.htm>`_
+  more: +md:[BICYCLE](https://www.lifeprint.com/asl101/pages-signs/b/bicycle.htm)
 
   https://www.youtube.com/watch?v=8yjqcyk-xwY BIKE / BICYCLE
     trim: 0-142F
 
 group:
-  more: +rst:`BOAT <https://www.lifeprint.com/asl101/pages-signs/b/boat.htm>`_
+  more: +md:[BOAT](https://www.lifeprint.com/asl101/pages-signs/b/boat.htm)
 
 group:
-  more: +rst:`BUILD <https://www.lifeprint.com/asl101/pages-signs/b/build.htm>`_
+  more: +md:[BUILD](https://www.lifeprint.com/asl101/pages-signs/b/build.htm)
 
 group:
-  more: +rst:`Classifier 3 <https://www.lifeprint.com/asl101/pages-signs/c/cl3.htm>`_
+  more: +md:[Classifier 3](https://www.lifeprint.com/asl101/pages-signs/c/cl3.htm)
 
 group:
-  more: +rst:`CRASH <https://www.lifeprint.com/asl101/pages-signs/c/crash.htm>`_
+  more: +md:[CRASH](https://www.lifeprint.com/asl101/pages-signs/c/crash.htm)
 
 group:
-  more: +rst:`ELEVATOR <https://www.lifeprint.com/asl101/pages-signs/e/elevator.htm>`_
+  more: +md:[ELEVATOR](https://www.lifeprint.com/asl101/pages-signs/e/elevator.htm)
 
 # ENJOY is in lesson 14.
 # FIND is in lesson 8.
 
 group:
-  more: +rst:`FLY <https://www.lifeprint.com/asl101/pages-signs/f/fly.htm>`_
+  more: +md:[FLY](https://www.lifeprint.com/asl101/pages-signs/f/fly.htm)
 
 group:
-  more: +rst:`FUN <https://www.lifeprint.com/asl101/pages-signs/f/fun.htm>`_
+  more: +md:[FUN](https://www.lifeprint.com/asl101/pages-signs/f/fun.htm)
 
   https://www.youtube.com/watch?v=hDYLTkXTSx4 FUN
     trim: 27F-88F
@@ -58,20 +58,20 @@ group:
 # GARAGE is in lesson 9.
 
 group:
-  more: +rst:`GET-ON <https://www.lifeprint.com/asl101/pages-signs/g/get-on.htm>`_
+  more: +md:[GET-ON](https://www.lifeprint.com/asl101/pages-signs/g/get-on.htm)
 
 group:
-  more: +rst:`HELICOPTER <https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm>`_
+  more: +md:[HELICOPTER](https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm)
 
   https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER
     trim: 16F-78F
   # incomplete
 
 group:
-  more: +rst:`KEY <https://www.lifeprint.com/asl101/pages-signs/k/key.htm>`_
+  more: +md:[KEY](https://www.lifeprint.com/asl101/pages-signs/k/key.htm)
 
 group:
-  more: +rst:`LEAVE <https://www.lifeprint.com/asl101/pages-signs/l/leave.htm>`_
+  more: +md:[LEAVE](https://www.lifeprint.com/asl101/pages-signs/l/leave.htm)
 
   https://www.youtube.com/watch?v=fn1PTkU1fGI LEAVE / GO-OUT
     trim: 8F-67F
@@ -82,36 +82,36 @@ group:
   # incomplete
 
 group:
-  more: +rst:`LOSE <https://www.lifeprint.com/asl101/pages-signs/l/lose.htm>`_
+  more: +md:[LOSE](https://www.lifeprint.com/asl101/pages-signs/l/lose.htm)
 
 group:
-  more: +rst:`MOTORCYCLE <https://www.lifeprint.com/asl101/pages-signs/m/motorcycle.htm>`_
+  more: +md:[MOTORCYCLE](https://www.lifeprint.com/asl101/pages-signs/m/motorcycle.htm)
 
 group:
-  more: +rst:`PRACTICE <https://www.lifeprint.com/asl101/pages-signs/p/practice.htm>`_
+  more: +md:[PRACTICE](https://www.lifeprint.com/asl101/pages-signs/p/practice.htm)
 
   # Lesson 1 extra. Should I move it up?
 
 group:
-  more: +rst:`RIDE <https://www.lifeprint.com/asl101/pages-signs/r/ride.htm>`_
+  more: +md:[RIDE](https://www.lifeprint.com/asl101/pages-signs/r/ride.htm)
 
 group:
-  more: +rst:`ROCKET <https://www.lifeprint.com/asl101/pages-signs/r/rocket.htm>`_
+  more: +md:[ROCKET](https://www.lifeprint.com/asl101/pages-signs/r/rocket.htm)
 
 group:
-  more: +rst:`SEARCH <https://www.lifeprint.com/asl101/pages-signs/s/search.htm>`_
+  more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
 
 group:
-  more: +rst:`SUBWAY <https://www.lifeprint.com/asl101/pages-signs/s/subway.htm>`_
+  more: +md:[SUBWAY](https://www.lifeprint.com/asl101/pages-signs/s/subway.htm)
 
 group:
-  more: +rst:`TICKET <https://www.lifeprint.com/asl101/pages-signs/t/ticket.htm>`_
+  more: +md:[TICKET](https://www.lifeprint.com/asl101/pages-signs/t/ticket.htm)
 
 group:
-  more: +rst:`TRAIN <https://www.lifeprint.com/asl101/pages-signs/t/train.htm>`_
+  more: +md:[TRAIN](https://www.lifeprint.com/asl101/pages-signs/t/train.htm)
 
 group:
-  more: +rst:`TRAVEL <https://www.lifeprint.com/asl101/pages-signs/t/travel.htm>`_
+  more: +md:[TRAVEL](https://www.lifeprint.com/asl101/pages-signs/t/travel.htm)
 
 group:
-  more: +rst:`TRUCK <https://www.lifeprint.com/asl101/pages-signs/t/truck.htm>`_
+  more: +md:[TRUCK](https://www.lifeprint.com/asl101/pages-signs/t/truck.htm)

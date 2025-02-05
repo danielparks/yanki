@@ -1,18 +1,18 @@
 title: Lifeprint ASL::Vocabulary::Lesson 15 — Careers
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 15 <https://www.lifeprint.com/asl101/lessons/lesson15.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 15](https://www.lifeprint.com/asl101/lessons/lesson15.htm)
 tags: Lifeprint lesson_15 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`AIDE <https://www.lifeprint.com/asl101/pages-signs/a/aide.htm>`_
+  more: +md:[AIDE](https://www.lifeprint.com/asl101/pages-signs/a/aide.htm)
 
   https://www.youtube.com/watch?v=lGa3EU5ifHk AIDE / ASSISTANT
     trim: 17F-72F
 
 group:
-  more: +rst:`BABYSITTER <https://www.lifeprint.com/asl101/pages-signs/b/babysitter.htm>`_
+  more: +md:[BABYSITTER](https://www.lifeprint.com/asl101/pages-signs/b/babysitter.htm)
 
   https://www.youtube.com/watch?v=1PsaWJIMdkQ BABY KEEP PERSON / babysitter
     trim: 11F-75F
@@ -21,13 +21,13 @@ group:
   # Can’t find video for BABY WATCHER version.
 
 group:
-  more: +rst:`BOSS <https://www.lifeprint.com/asl101/pages-signs/b/boss.htm>`_
+  more: +md:[BOSS](https://www.lifeprint.com/asl101/pages-signs/b/boss.htm)
 
   https://www.youtube.com/watch?v=wlhbw8q_5yU BOSS / COACH
     trim: 11F-63F
 
 group:
-  more: +rst:`COOK <https://www.lifeprint.com/asl101/pages-signs/c/cook.htm>`_
+  more: +md:[COOK](https://www.lifeprint.com/asl101/pages-signs/c/cook.htm)
 
   # General COOK sign is in lesson 9.
   tags: +extra
@@ -40,14 +40,14 @@ group:
   # the COOK P-O-T video because it is muddled with COOK POT.
 
 group:
-  more: +rst:`FARM <https://www.lifeprint.com/asl101/pages-signs/f/farm.htm>`_
+  more: +md:[FARM](https://www.lifeprint.com/asl101/pages-signs/f/farm.htm)
 
   https://www.youtube.com/watch?v=smPpqc0kwFE FARM
     trim: 7F-56F
   # Doesn’t seem worthwhile to include FARM+PERSON / FARMER.
 
 group:
-  more: +rst:`FIREFIGHTER <https://www.lifeprint.com/asl101/pages-signs/f/firefighter.htm>`_
+  more: +md:[FIREFIGHTER](https://www.lifeprint.com/asl101/pages-signs/f/firefighter.htm)
 
   https://www.youtube.com/watch?v=m3XdUF24faE FIREFIGHTER (tap version)
     trim: 11F-66F
@@ -57,7 +57,7 @@ group:
     trim: 17F-78F
 
 group:
-  more: +rst:`IN-LAW <https://www.lifeprint.com/asl101/pages-signs/i/in-law.htm>`_
+  more: +md:[IN-LAW](https://www.lifeprint.com/asl101/pages-signs/i/in-law.htm)
 
   https://www.youtube.com/watch?v=qb4bHwxsNvs BROTHER+IN-LAW
     trim: 8F-69F
@@ -69,13 +69,13 @@ group:
     trim: 12F-63F
 
 group:
-  more: +rst:`LIBRARY <https://www.lifeprint.com/asl101/pages-signs/l/library.htm>`_
+  more: +md:[LIBRARY](https://www.lifeprint.com/asl101/pages-signs/l/library.htm)
 
   https://www.youtube.com/watch?v=CSaOomMxWl4 LIBRARY
   # Doesn’t seem worthwhile to include LIBRARY+PERSON / LIBRARIAN.
 
 group:
-  more: +rst:`MAIN <https://www.lifeprint.com/asl101/pages-signs/m/main.htm>`_
+  more: +md:[MAIN](https://www.lifeprint.com/asl101/pages-signs/m/main.htm)
 
   https://www.youtube.com/watch?v=XZDwagpGFUs
     academic-MAJOR / main / discipline / field / line of work / career
@@ -88,7 +88,7 @@ group:
     trim: 3F-54F
 
 group:
-  more: +rst:`NEIGHBOR <https://www.lifeprint.com/asl101/pages-signs/n/neighbor.htm>`_
+  more: +md:[NEIGHBOR](https://www.lifeprint.com/asl101/pages-signs/n/neighbor.htm)
 
   https://www.youtube.com/watch?v=6OjPyxcUncA NEIGHBOR
     trim: 14F-66F
@@ -96,7 +96,7 @@ group:
     trim: 8F-64F
 
 group:
-  more: +rst:`PICTURE <https://www.lifeprint.com/asl101/pages-signs/p/picture.htm>`_
+  more: +md:[PICTURE](https://www.lifeprint.com/asl101/pages-signs/p/picture.htm)
 
   https://www.youtube.com/watch?v=8_eI8t4exD8 PICTURE
     trim: 72F-223F
@@ -106,7 +106,7 @@ group:
     trim: 6F-64F
 
 group:
-  more: +rst:`POLICE <https://www.lifeprint.com/asl101/pages-signs/p/police.htm>`_
+  more: +md:[POLICE](https://www.lifeprint.com/asl101/pages-signs/p/police.htm)
 
   https://www.youtube.com/watch?v=TyxYhCL1RSA
     POLICE / COP / person who wears a badge (modified C-hand version)
@@ -116,7 +116,7 @@ group:
     trim: 18F-60F
 
 group:
-  more: +rst:`PRESIDENT <https://www.lifeprint.com/asl101/pages-signs/p/president.htm>`_
+  more: +md:[PRESIDENT](https://www.lifeprint.com/asl101/pages-signs/p/president.htm)
 
   https://www.youtube.com/watch?v=XuNvPyMBB4M PRESIDENT / superintendent
     trim: 8F-56F
@@ -124,7 +124,7 @@ group:
     trim: 10F-55F
 
 group:
-  more: +rst:`PRINTER <https://www.lifeprint.com/asl101/pages-signs/p/printer.htm>`_
+  more: +md:[PRINTER](https://www.lifeprint.com/asl101/pages-signs/p/printer.htm)
 
   https://www.youtube.com/watch?v=xXR8DCZkx0g PRINTER (device) / NEWSPAPER
     trim: 11F-58F
@@ -132,13 +132,13 @@ group:
     trim: 7F-71F
 
 group:
-  more: +rst:`PROGRAM <https://www.lifeprint.com/asl101/pages-signs/p/program.htm>`_
+  more: +md:[PROGRAM](https://www.lifeprint.com/asl101/pages-signs/p/program.htm)
 
   https://www.youtube.com/watch?v=QWPNcp9nirg PROGRAM (verb and noun)
     trim: 20F-101F
 
 group:
-  more: +rst:`SCIENTIST <https://www.lifeprint.com/asl101/pages-signs/s/scientist.htm>`_
+  more: +md:[SCIENTIST](https://www.lifeprint.com/asl101/pages-signs/s/scientist.htm)
 
   https://www.youtube.com/watch?v=ExlOozGYqvU SCIENCE (S-hand version)
     trim: 4F-57F
@@ -146,7 +146,7 @@ group:
     trim: 7F-73F
 
 group:
-  more: +rst:`SECRETARY <https://www.lifeprint.com/asl101/pages-signs/s/secretary.htm>`_
+  more: +md:[SECRETARY](https://www.lifeprint.com/asl101/pages-signs/s/secretary.htm)
 
   https://www.youtube.com/watch?v=U3lM2jSLNno SECRETARY (write version)
     trim: 9F-58F
@@ -158,7 +158,7 @@ group:
     trim: 10F-74F
 
 group:
-  more: +rst:`SELF <https://www.lifeprint.com/asl101/pages-signs/s/self.htm>`_
+  more: +md:[SELF](https://www.lifeprint.com/asl101/pages-signs/s/self.htm)
 
   # Most of SELF was in lesson 6.
   https://www.youtube.com/watch?v=DN1QXUwV7FI
@@ -166,7 +166,7 @@ group:
     trim: 7F-55F
 
 group:
-  more: +rst:`STEPFATHER <https://www.lifeprint.com/asl101/pages-signs/s/stepfather.htm>`_
+  more: +md:[STEPFATHER](https://www.lifeprint.com/asl101/pages-signs/s/stepfather.htm)
 
   https://www.youtube.com/watch?v=FMFaNWfWhXg STEPFATHER / SECOND+DAD
     trim: 8F-58F
@@ -178,7 +178,7 @@ group:
   # No video for FOSTER FATHER.
 
 group:
-  more: +rst:`STEPMOTHER <https://www.lifeprint.com/asl101/pages-signs/s/stepmother.htm>`_
+  more: +md:[STEPMOTHER](https://www.lifeprint.com/asl101/pages-signs/s/stepmother.htm)
 
   https://www.youtube.com/watch?v=h5KnufbmVHw STEPMOTHER / SECOND+MOM
     trim: 13F-58F
@@ -190,7 +190,7 @@ group:
   # No video for FOSTER MOTHER.
 
 group:
-  more: +rst:`WAITER <https://www.lifeprint.com/asl101/pages-signs/w/waiter.htm>`_
+  more: +md:[WAITER](https://www.lifeprint.com/asl101/pages-signs/w/waiter.htm)
 
   https://www.youtube.com/watch?v=2icFerNdwcA WAITER / SERVER (SERVE version)
     trim: 11F-82F

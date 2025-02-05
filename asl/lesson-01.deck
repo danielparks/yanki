@@ -1,18 +1,18 @@
 title: Lifeprint ASL::Vocabulary::Lesson 01 — Introduction
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 1 <https://www.lifeprint.com/asl101/lessons/lesson01.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 1](https://www.lifeprint.com/asl101/lessons/lesson01.htm)
 tags: Lifeprint lesson_01 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`AGAIN <https://www.lifeprint.com/asl101/pages-signs/a/again.htm>`_
+  more: +md:[AGAIN](https://www.lifeprint.com/asl101/pages-signs/a/again.htm)
 
   https://www.youtube.com/watch?v=wTNv94AY-yE AGAIN / repeat
     trim: 16F-78F
 
 group:
-  more: +rst:`DEAF <https://www.lifeprint.com/asl101/pages-signs/d/deaf.htm>`_
+  more: +md:[DEAF](https://www.lifeprint.com/asl101/pages-signs/d/deaf.htm)
 
   https://www.youtube.com/watch?v=ofL3HMkLDOc DEAF-[a culturally deaf person]
     trim: 35F-173F
@@ -22,7 +22,7 @@ group:
     trim: 8F-
 
 group:
-  more: +rst:`HEARING <https://www.lifeprint.com/asl101/pages-signs/h/hearing.htm>`_
+  more: +md:[HEARING](https://www.lifeprint.com/asl101/pages-signs/h/hearing.htm)
 
   https://www.youtube.com/watch?v=sMRpqyQK72c
     HEARING-[a culturally hearing person]
@@ -33,26 +33,26 @@ group:
     trim: 9F-54F
 
 group:
-  more: +rst:`LEARN <https://www.lifeprint.com/asl101/pages-signs/l/learn.htm>`_
+  more: +md:[LEARN](https://www.lifeprint.com/asl101/pages-signs/l/learn.htm)
 
   https://www.youtube.com/watch?v=78mzpzvN9tc LEARN
     trim: 53F-198F
 
 group:
-  more: +rst:`LIKE <https://www.lifeprint.com/asl101/pages-signs/l/like.htm>`_
+  more: +md:[LIKE](https://www.lifeprint.com/asl101/pages-signs/l/like.htm)
 
   https://www.youtube.com/watch?v=8uIg8r1awC4 LIKE
     trim: 12F-60F
     tags: +first_100_signs
 
 group:
-  more: +rst:`MEANING <https://www.lifeprint.com/asl101/pages-signs/m/meaning.htm>`_
+  more: +md:[MEANING](https://www.lifeprint.com/asl101/pages-signs/m/meaning.htm)
 
   https://www.youtube.com/watch?v=moMl2Po7R1o MEANING
     trim: 12F-62F
 
 group:
-  more: +rst:`MEET <https://www.lifeprint.com/asl101/pages-signs/m/meet.htm>`_
+  more: +md:[MEET](https://www.lifeprint.com/asl101/pages-signs/m/meet.htm)
 
   https://www.youtube.com/watch?v=FC1R9kyegJY MEET
     trim: 9F-58F
@@ -60,13 +60,13 @@ group:
     trim: 0-61F
 
 group:
-  more: +rst:`NAME <https://www.lifeprint.com/asl101/pages-signs/n/name.htm>`_
+  more: +md:[NAME](https://www.lifeprint.com/asl101/pages-signs/n/name.htm)
 
   https://www.youtube.com/watch?v=GbeC9TFuSX4 NAME
     trim: 14F-60F
 
 group:
-  more: +rst:`NICE <https://www.lifeprint.com/asl101/pages-signs/n/nice.htm>`_
+  more: +md:[NICE](https://www.lifeprint.com/asl101/pages-signs/n/nice.htm)
 
   https://www.youtube.com/watch?v=2PeTh4Ym048 NICE / CLEAN
     trim: 22F-92F
@@ -77,13 +77,13 @@ group:
     trim: 14F-62F
 
 group:
-  more: +rst:`NO <https://www.lifeprint.com/asl101/pages-signs/n/no.htm>`_
+  more: +md:[NO](https://www.lifeprint.com/asl101/pages-signs/n/no.htm)
 
   https://www.youtube.com/watch?v=_8tcT_lmB0w NO
     trim: 15F-141F
 
 group:
-  more: +rst:`SIGN <https://www.lifeprint.com/asl101/pages-signs/s/sign.htm>`_
+  more: +md:[SIGN](https://www.lifeprint.com/asl101/pages-signs/s/sign.htm)
 
   https://www.youtube.com/watch?v=TRLHLtgHyzo SIGN
     trim: 17F-184F
@@ -92,13 +92,13 @@ group:
     trim: 15F-61F
 
 group:
-  more: +rst:`SLOW <https://www.lifeprint.com/asl101/pages-signs/s/slow.htm>`_
+  more: +md:[SLOW](https://www.lifeprint.com/asl101/pages-signs/s/slow.htm)
 
   https://www.youtube.com/watch?v=6ky6oywprZ4 SLOW
     trim: 13F-82F
 
 group:
-  more: +rst:`STUDENT <https://www.lifeprint.com/asl101/pages-signs/s/student.htm>`_
+  more: +md:[STUDENT](https://www.lifeprint.com/asl101/pages-signs/s/student.htm)
 
   https://www.youtube.com/watch?v=jrf2XYqjg2o STUDENT
     trim: 14F-81F
@@ -108,7 +108,7 @@ group:
     trim: 6F-53F
 
 group:
-  more: +rst:`TEACHER <https://www.lifeprint.com/asl101/pages-signs/t/teacher.htm>`_
+  more: +md:[TEACHER](https://www.lifeprint.com/asl101/pages-signs/t/teacher.htm)
 
   https://www.youtube.com/watch?v=hJZhwVjk-eo TEACHER
     trim: 23F-100F
@@ -121,14 +121,14 @@ group:
   #  trim: 12F-68F
 
 group:
-  more: +rst:`THANK-YOU <https://www.lifeprint.com/asl101/pages-signs/t/thankyou.htm>`_
+  more: +md:[THANK-YOU](https://www.lifeprint.com/asl101/pages-signs/t/thankyou.htm)
 
   https://www.youtube.com/watch?v=IvRwNLNR4_w THANK-YOU
     trim: 4F-47F
     tags: +first_100_signs
 
 group:
-  more: +rst:`UNDERSTAND <https://www.lifeprint.com/asl101/pages-signs/u/understand.htm>`_
+  more: +md:[UNDERSTAND](https://www.lifeprint.com/asl101/pages-signs/u/understand.htm)
 
   https://www.youtube.com/watch?v=a38Nd8EQvdE UNDERSTAND
     trim: 37F-100F
@@ -136,7 +136,7 @@ group:
     trim: 14F-65F
 
 group:
-  more: +rst:`WE <https://www.lifeprint.com/asl101/pages-signs/w/we.htm>`_
+  more: +md:[WE](https://www.lifeprint.com/asl101/pages-signs/w/we.htm)
 
   https://www.youtube.com/watch?v=DJU9Vnthfqk WE
     trim: 12F-66F
@@ -146,21 +146,21 @@ group:
     trim: 12F-56F
 
 group:
-  more: +rst:`HUH <https://www.lifeprint.com/asl101/pages-signs/h/huh.htm>`_
+  more: +md:[HUH](https://www.lifeprint.com/asl101/pages-signs/h/huh.htm)
 
   https://www.youtube.com/watch?v=1udGGPLkA-Q WHAT?
     trim: 12F-58F
     tags: +first_100_signs
 
 group:
-  more: +rst:`WHERE <https://www.lifeprint.com/asl101/pages-signs/w/where.htm>`_
+  more: +md:[WHERE](https://www.lifeprint.com/asl101/pages-signs/w/where.htm)
 
   https://www.youtube.com/watch?v=HS0SXS-GHYY WHERE?
     trim: 14F-70F
     tags: +first_100_signs
 
 group:
-  more: +rst:`WHO <https://www.lifeprint.com/asl101/pages-signs/w/who.htm>`_
+  more: +md:[WHO](https://www.lifeprint.com/asl101/pages-signs/w/who.htm)
 
   https://www.youtube.com/watch?v=PTmtGZ75zyY WHO?
     trim: 12F-58F
@@ -171,7 +171,7 @@ group:
     trim: 14F-63F
 
 group:
-  more: +rst:`WHY <https://www.lifeprint.com/asl101/pages-signs/w/why.htm>`_
+  more: +md:[WHY](https://www.lifeprint.com/asl101/pages-signs/w/why.htm)
 
   https://www.youtube.com/watch?v=K0yp2v6Atxs WHY?
     trim: 10F-72F
@@ -182,13 +182,13 @@ group:
     trim: 17F-62F
 
 group:
-  more: +rst:`YES <https://www.lifeprint.com/asl101/pages-signs/y/yes.htm>`_
+  more: +md:[YES](https://www.lifeprint.com/asl101/pages-signs/y/yes.htm)
 
   https://www.youtube.com/watch?v=0usayvOXzHo YES
     trim: 8F-52F
 
 group:
-  more: +rst:`YOUR <https://www.lifeprint.com/asl101/pages-signs/y/your.htm>`_
+  more: +md:[YOUR](https://www.lifeprint.com/asl101/pages-signs/y/your.htm)
 
   https://www.youtube.com/watch?v=-1Hz72xltNk YOUR
     trim: 9F-42F

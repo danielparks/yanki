@@ -1,28 +1,28 @@
 title: Lifeprint ASL::Vocabulary::Lesson 09 — Things
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 9 <https://www.lifeprint.com/asl101/lessons/lesson09.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 9](https://www.lifeprint.com/asl101/lessons/lesson09.htm)
 tags: Lifeprint lesson_09 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 https://www.youtube.com/watch?v=bL5R1zZXaRY BASEMENT
   trim: 10F-72F
-  more: +rst:`BASEMENT <https://www.lifeprint.com/asl101/pages-signs/b/basement.htm>`_
+  more: +md:[BASEMENT](https://www.lifeprint.com/asl101/pages-signs/b/basement.htm)
 
 https://www.youtube.com/watch?v=HCOkhtgWKxs BATH TUB
   trim: 9F-75F
-  more: +rst:`BATHTUB <https://www.lifeprint.com/asl101/pages-signs/b/bathtub.htm>`_
+  more: +md:[BATHTUB](https://www.lifeprint.com/asl101/pages-signs/b/bathtub.htm)
 https://www.youtube.com/watch?v=r8wxFtDjU5Y BATH
   trim: 10F-72F
-  more: +rst:`BATHTUB <https://www.lifeprint.com/asl101/pages-signs/b/bathtub.htm>`_
+  more: +md:[BATHTUB](https://www.lifeprint.com/asl101/pages-signs/b/bathtub.htm)
   tags: +first_100_signs
 
 https://www.youtube.com/watch?v=ZcJGws8g8uE COUCH
   trim: 14F-87F
-  more: +rst:`COUCH <https://www.lifeprint.com/asl101/pages-signs/c/couch.htm>`_
+  more: +md:[COUCH](https://www.lifeprint.com/asl101/pages-signs/c/couch.htm)
 
 group:
-  more: +rst:`DOOR <https://www.lifeprint.com/asl101/pages-signs/d/door.htm>`_
+  more: +md:[DOOR](https://www.lifeprint.com/asl101/pages-signs/d/door.htm)
 
   https://www.youtube.com/watch?v=xzIU5tmBrLc
     DOOR / cupboard / closet / cabinet / locker
@@ -38,10 +38,10 @@ group:
 
 https://www.youtube.com/watch?v=9G23AjmjyV4 DRESSER / DRAWER
   trim: 13F-76F
-  more: +rst:`DRESSER <https://www.lifeprint.com/asl101/pages-signs/d/dresser.htm>`_
+  more: +md:[DRESSER](https://www.lifeprint.com/asl101/pages-signs/d/dresser.htm)
 
 group:
-  more: +rst:`DRYER <https://www.lifeprint.com/asl101/pages-signs/d/dryer.htm>`_
+  more: +md:[DRYER](https://www.lifeprint.com/asl101/pages-signs/d/dryer.htm)
 
   https://www.youtube.com/watch?v=NuXm0_3x6n8 DRY
     trim: 9F-64F
@@ -52,10 +52,10 @@ group:
 
 https://www.youtube.com/watch?v=6i1516QNfaY GARAGE
   trim: 15F-
-  more: +rst:`GARAGE <https://www.lifeprint.com/asl101/pages-signs/g/garage.htm>`_
+  more: +md:[GARAGE](https://www.lifeprint.com/asl101/pages-signs/g/garage.htm)
 
 group:
-  more: +rst:`GARBAGE <https://www.lifeprint.com/asl101/pages-signs/g/garbage.htm>`_
+  more: +md:[GARBAGE](https://www.lifeprint.com/asl101/pages-signs/g/garbage.htm)
 
   # I’m unsure about my interpretation of THROW-OUT and THROW-AWAY
   https://www.youtube.com/watch?v=sHFqJ68Ev8o GARBAGE / trash
@@ -66,7 +66,7 @@ group:
     trim: 9F-74F
 
 group:
-  more: +rst:`KITCHEN <https://www.lifeprint.com/asl101/pages-signs/k/kitchen.htm>`_
+  more: +md:[KITCHEN](https://www.lifeprint.com/asl101/pages-signs/k/kitchen.htm)
 
   https://www.youtube.com/watch?v=-yEO1YL7dSg KITCHEN (“cook” variation)
     trim: 15F-79F
@@ -76,7 +76,7 @@ group:
     trim: 12F-70F
 
 group:
-  more: +rst:`LIGHT <https://www.lifeprint.com/asl101/pages-signs/l/light.htm>`_
+  more: +md:[LIGHT](https://www.lifeprint.com/asl101/pages-signs/l/light.htm)
 
   # LIGHTS / LIGHTS-ON is in lesson 8
   https://www.youtube.com/watch?v=u33E8wPkfyU FLASH-THE-LIGHTS
@@ -101,23 +101,23 @@ group:
 
 https://www.youtube.com/watch?v=kzvEJrS357s MICROWAVE
   trim: 9F-57F
-  more: +rst:`MICROWAVE <https://www.lifeprint.com/asl101/pages-signs/m/microwave.htm>`_
+  more: +md:[MICROWAVE](https://www.lifeprint.com/asl101/pages-signs/m/microwave.htm)
 https://www.youtube.com/watch?v=AxUJzzak-z0 -> MICROWAVE (3 fingers version)
   trim: 9F-54F
-  more: +rst:`MICROWAVE <https://www.lifeprint.com/asl101/pages-signs/m/microwave.htm>`_
+  more: +md:[MICROWAVE](https://www.lifeprint.com/asl101/pages-signs/m/microwave.htm)
 
 https://www.youtube.com/watch?v=LOW8ZIaAJ-c REFRIGERATOR
   trim: 7F-67F
   more: +html:<h1>R-E-F</h1>
-  more: +rst:`REFRIGERATOR <https://www.lifeprint.com/asl101/pages-signs/r/refrigerator.htm>`_
+  more: +md:[REFRIGERATOR](https://www.lifeprint.com/asl101/pages-signs/r/refrigerator.htm)
 # No video for REFRIGERATOR version with R-hands like COLD
 
 https://www.youtube.com/watch?v=iJ8TFRWJutE SHOWER
   trim: 11F-58F
-  more: +rst:`SHOWER <https://www.lifeprint.com/asl101/pages-signs/s/shower.htm>`_
+  more: +md:[SHOWER](https://www.lifeprint.com/asl101/pages-signs/s/shower.htm)
 
 group:
-  more: +rst:`SINK <https://www.lifeprint.com/asl101/pages-signs/s/sink.htm>`_
+  more: +md:[SINK](https://www.lifeprint.com/asl101/pages-signs/s/sink.htm)
 
   https://www.youtube.com/watch?v=iZJAZYXj-Gw S-I-N-K
     trim: 11F-61F
@@ -129,7 +129,7 @@ group:
     trim: 8F-58F
 
 group:
-  more: +rst:`STOVE <https://www.lifeprint.com/asl101/pages-signs/s/stove.htm>`_
+  more: +md:[STOVE](https://www.lifeprint.com/asl101/pages-signs/s/stove.htm)
 
   https://www.youtube.com/watch?v=c75leThE9AQ S-T-O-V-E
     trim: 11F-62F
@@ -143,10 +143,10 @@ group:
 
 https://www.youtube.com/watch?v=UJINxF1cSUA TABLE / DESK
   trim: 11F-73F
-  more: +rst:`TABLE <https://www.lifeprint.com/asl101/pages-signs/t/table.htm>`_
+  more: +md:[TABLE](https://www.lifeprint.com/asl101/pages-signs/t/table.htm)
 
 group:
-  more: +rst:`WINDOW <https://www.lifeprint.com/asl101/pages-signs/w/window.htm>`_
+  more: +md:[WINDOW](https://www.lifeprint.com/asl101/pages-signs/w/window.htm)
 
   https://www.youtube.com/watch?v=VqFX50Z9Y60 WINDOW
     trim: 10F-75F
@@ -156,7 +156,7 @@ group:
     trim: 10F-72F
 
 group:
-  more: +rst:`YESTERDAY <https://www.lifeprint.com/asl101/pages-signs/y/yesterday.htm>`_
+  more: +md:[YESTERDAY](https://www.lifeprint.com/asl101/pages-signs/y/yesterday.htm)
 
   https://www.youtube.com/watch?v=BrSb83b9kbY YESTERDAY
     trim: 13F-72F
@@ -165,7 +165,7 @@ group:
     tags: +extra
 
 group:
-  more: +rst:`SAY <https://www.lifeprint.com/asl101/pages-signs/s/say.htm>`_
+  more: +md:[SAY](https://www.lifeprint.com/asl101/pages-signs/s/say.htm)
 
   https://www.youtube.com/watch?v=fka6bGd2TX8 SAY
     trim: 12F-49F
@@ -176,10 +176,10 @@ group:
 
 https://www.youtube.com/watch?v=6IXVVDel4lw TOOTHPASTE
   trim: 13F-74F
-  more: +rst:`TOOTHPASTE <https://www.lifeprint.com/asl101/pages-signs/t/toothpaste.htm>`_
+  more: +md:[TOOTHPASTE](https://www.lifeprint.com/asl101/pages-signs/t/toothpaste.htm)
 
 group:
-  more: +rst:`WITH (advanced) <https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm>`_
+  more: +md:[WITH (advanced)](https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm)
 
   https://www.youtube.com/watch?v=7Z1WMbq2Y6E AHEAD
     trim: 9F-77F

@@ -1,12 +1,12 @@
 title: Lifeprint ASL::Vocabulary::Lesson 14 — Seasons
-more: rst:From `Lifeprint <https://www.lifeprint.com/>`_ ASLU
-  `lesson 14 <https://www.lifeprint.com/asl101/lessons/lesson14.htm>`_
+more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
+  [lesson 14](https://www.lifeprint.com/asl101/lessons/lesson14.htm)
 tags: Lifeprint lesson_14 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +rst:`Classifier 1 <https://www.lifeprint.com/asl101/pages-signs/c/cl1.htm>`_
+  more: +md:[Classifier 1](https://www.lifeprint.com/asl101/pages-signs/c/cl1.htm)
 
   https://www.youtube.com/watch?v=d8v3pe1e1Oo WALK (CL:1)
     trim: 9F-67F
@@ -20,13 +20,13 @@ group:
     trim: 2F-
 
 group:
-  more: +rst:`AUTUMN <https://www.lifeprint.com/asl101/pages-signs/a/autumn.htm>`_
+  more: +md:[AUTUMN](https://www.lifeprint.com/asl101/pages-signs/a/autumn.htm)
 
   https://www.youtube.com/watch?v=g_DZl3jIAbY AUTUMN / FALL
     trim: 13F-72F
 
 group:
-  more: +rst:`COLD <https://www.lifeprint.com/asl101/pages-signs/c/cold.htm>`_
+  more: +md:[COLD](https://www.lifeprint.com/asl101/pages-signs/c/cold.htm)
 
   https://www.youtube.com/watch?v=vHgjYI-ig2s
     COLD (temperature) / WINTER (in context)
@@ -34,26 +34,26 @@ group:
     tags: +first_100_signs
 
 group:
-  more: +rst:`COOL <https://www.lifeprint.com/asl101/pages-signs/c/cool.htm>`_
+  more: +md:[COOL](https://www.lifeprint.com/asl101/pages-signs/c/cool.htm)
 
   https://www.youtube.com/watch?v=2dMLLV2JWXE COOL (temperature)
     trim: 25F-68F
     tags: +first_100_signs
 
 group:
-  more: +rst:`DEODORANT <https://www.lifeprint.com/asl101/pages-signs/d/deodorant.htm>`_
+  more: +md:[DEODORANT](https://www.lifeprint.com/asl101/pages-signs/d/deodorant.htm)
 
   https://www.youtube.com/watch?v=WImRv1IKl0U DEODORANT
     trim: 9F-64F
 
 group:
-  more: +rst:`ENJOY <https://www.lifeprint.com/asl101/pages-signs/e/enjoy.htm>`_
+  more: +md:[ENJOY](https://www.lifeprint.com/asl101/pages-signs/e/enjoy.htm)
 
   https://www.youtube.com/watch?v=Uo_AUbP0O9g ENJOY / appreciate / pleasure
     trim: 12F-88F
 
 group:
-  more: +rst:`FREEZE <https://www.lifeprint.com/asl101/pages-signs/f/freeze.htm>`_
+  more: +md:[FREEZE](https://www.lifeprint.com/asl101/pages-signs/f/freeze.htm)
 
   https://www.youtube.com/watch?v=mA15ML-vAd0 ICE / FREEZE
     trim: 0-48F
@@ -61,20 +61,20 @@ group:
     trim: 11F-82F
 
 group:
-  more: +rst:`GO-TO-BED <https://www.lifeprint.com/asl101/pages-signs/g/go-to-bed.htm>`_
+  more: +md:[GO-TO-BED](https://www.lifeprint.com/asl101/pages-signs/g/go-to-bed.htm)
 
   https://www.youtube.com/watch?v=opGSFLEio9E GO-TO-BED
     trim: 7F-58F
 
 group:
-  more: +rst:`HOT <https://www.lifeprint.com/asl101/pages-signs/h/hot.htm>`_
+  more: +md:[HOT](https://www.lifeprint.com/asl101/pages-signs/h/hot.htm)
 
   https://www.youtube.com/watch?v=a0robonALIk HOT (temperature)
     trim: 10F-48F
     tags: +first_100_signs
 
 group:
-  more: +rst:`MAN <https://www.lifeprint.com/asl101/pages-signs/m/man.htm>`_
+  more: +md:[MAN](https://www.lifeprint.com/asl101/pages-signs/m/man.htm)
 
   # Most common version of MAN in lesson 2. Maybe this should go there?
   https://www.youtube.com/watch?v=uJ7_4nc3BZk -> MAN / BOY FINE
@@ -83,14 +83,14 @@ group:
     trim: 17F-78F
 
 group:
-  more: +rst:`MOON <https://www.lifeprint.com/asl101/pages-signs/m/moon.htm>`_
+  more: +md:[MOON](https://www.lifeprint.com/asl101/pages-signs/m/moon.htm)
 
   https://www.youtube.com/watch?v=vtl8Wc8XCbk MOON
     trim: 10F-70F
   # No video for modified-C hand tap around eye version.
 
 group:
-  more: +rst:`RAIN <https://www.lifeprint.com/asl101/pages-signs/r/rain.htm>`_
+  more: +md:[RAIN](https://www.lifeprint.com/asl101/pages-signs/r/rain.htm)
 
   https://www.youtube.com/watch?v=Bk4w3wvvehE RAIN
     trim: 43F-92F
@@ -98,7 +98,7 @@ group:
     trim: 19F-72F
 
 group:
-  more: +rst:`SICK <https://www.lifeprint.com/asl101/pages-signs/s/sick.htm>`_
+  more: +md:[SICK](https://www.lifeprint.com/asl101/pages-signs/s/sick.htm)
 
   https://www.youtube.com/watch?v=NBqpHJiufXU SICK
     trim: 14F-71F
@@ -106,14 +106,14 @@ group:
     trim: 12F-86F
 
 group:
-  more: +rst:`SLEEP <https://www.lifeprint.com/asl101/pages-signs/s/sleep.htm>`_
+  more: +md:[SLEEP](https://www.lifeprint.com/asl101/pages-signs/s/sleep.htm)
 
   https://www.youtube.com/watch?v=dXEqaWSEztY SLEEP
     trim: 12F-58F
     tags: +first_100_signs
 
 group:
-  more: +rst:`SNOW <https://www.lifeprint.com/asl101/pages-signs/s/snow.htm>`_
+  more: +md:[SNOW](https://www.lifeprint.com/asl101/pages-signs/s/snow.htm)
 
   https://www.youtube.com/watch?v=glF8fDZPiOc SNOW (general version)
     trim: 5F-
@@ -129,7 +129,7 @@ group:
     trim: 8F-
 
 group:
-  more: +rst:`SPRING <https://www.lifeprint.com/asl101/pages-signs/s/spring.htm>`_
+  more: +md:[SPRING](https://www.lifeprint.com/asl101/pages-signs/s/spring.htm)
 
   https://www.youtube.com/watch?v=5h69GQntuhw SPRING / PLANT / GARDEN
     trim: 8F-93F
@@ -137,13 +137,13 @@ group:
     trim: 20F-89F
 
 group:
-  more: +rst:`SUMMER <https://www.lifeprint.com/asl101/pages-signs/s/summer.htm>`_
+  more: +md:[SUMMER](https://www.lifeprint.com/asl101/pages-signs/s/summer.htm)
 
   https://www.youtube.com/watch?v=AaXReP9YjVE SUMMER
     trim: 10F-
 
 group:
-  more: +rst:`SUN <https://www.lifeprint.com/asl101/pages-signs/s/sun.htm>`_
+  more: +md:[SUN](https://www.lifeprint.com/asl101/pages-signs/s/sun.htm)
 
   https://www.youtube.com/watch?v=fnYd3XHdEPI SUN (ray version)
     trim: 28F-78F
@@ -169,7 +169,7 @@ group:
     trim: 15F-66F
 
 group:
-  more: +rst:`SUNRISE <https://www.lifeprint.com/asl101/pages-signs/s/sunrise.htm>`_
+  more: +md:[SUNRISE](https://www.lifeprint.com/asl101/pages-signs/s/sunrise.htm)
 
   https://www.youtube.com/watch?v=bS5TGnuQWpo SUNRISE (F-hand version)
     trim: 0-69F
@@ -179,13 +179,13 @@ group:
     trim: 7F-76F
 
 group:
-  more: +rst:`SLEEP-IN <https://www.lifeprint.com/asl101/pages-signs/s/sleepin.htm>`_
+  more: +md:[SLEEP-IN](https://www.lifeprint.com/asl101/pages-signs/s/sleepin.htm)
 
   https://www.youtube.com/watch?v=ycHdzOuwoZw OVERSLEEP / SLEEP-IN
     trim: 12F-68F
 
 group:
-  more: +rst:`USE <https://www.lifeprint.com/asl101/pages-signs/u/use.htm>`_
+  more: +md:[USE](https://www.lifeprint.com/asl101/pages-signs/u/use.htm)
 
   https://www.youtube.com/watch?v=yQScIrYGgaE USE / WEAR
     trim: 15F-66F
@@ -193,7 +193,7 @@ group:
     trim: 2F-44F
 
 group:
-  more: +rst:`VACATION <https://www.lifeprint.com/asl101/pages-signs/v/vacation.htm>`_
+  more: +md:[VACATION](https://www.lifeprint.com/asl101/pages-signs/v/vacation.htm)
 
   https://www.youtube.com/watch?v=V81liG2gQbo VACATION
     trim: 12F-61F
@@ -201,20 +201,20 @@ group:
     trim: 4F-60F
 
 group:
-  more: +rst:`WAKE-UP <https://www.lifeprint.com/asl101/pages-signs/w/wake.htm>`_
+  more: +md:[WAKE-UP](https://www.lifeprint.com/asl101/pages-signs/w/wake.htm)
 
   https://www.youtube.com/watch?v=0n0eQSCS3Ow WAKE-UP
     trim: 10F-68F
 
 group:
-  more: +rst:`WARM <https://www.lifeprint.com/asl101/pages-signs/w/warm.htm>`_
+  more: +md:[WARM](https://www.lifeprint.com/asl101/pages-signs/w/warm.htm)
 
   https://www.youtube.com/watch?v=rSgVWUc1J0w WARM (temperature)
     trim: 1F-
     tags: +first_100_signs
 
 group:
-  more: +rst:`WEATHER <https://www.lifeprint.com/asl101/pages-signs/w/weather.htm>`_
+  more: +md:[WEATHER](https://www.lifeprint.com/asl101/pages-signs/w/weather.htm)
 
   https://www.youtube.com/watch?v=AxL3Q6C73fg WEATHER (W-hands version)
     trim: 3F-60F
@@ -258,7 +258,7 @@ group:
     trim: 2F-69F
 
 group:
-  more: +rst:`WIND <https://www.lifeprint.com/asl101/pages-signs/w/wind.htm>`_
+  more: +md:[WIND](https://www.lifeprint.com/asl101/pages-signs/w/wind.htm)
 
   https://www.youtube.com/watch?v=RA04zvXojYA BREEZE
     trim: 9F-72F
@@ -266,13 +266,13 @@ group:
     trim: 5F-87F
 
 group:
-  more: +rst:`WINTER <https://www.lifeprint.com/asl101/pages-signs/w/winter.htm>`_
+  more: +md:[WINTER](https://www.lifeprint.com/asl101/pages-signs/w/winter.htm)
 
   https://www.youtube.com/watch?v=-ahugfd5Znc WINTER (initialized)
     trim: 10F-60F
 
 group:
-  more: +rst:`WOMAN <https://www.lifeprint.com/asl101/pages-signs/w/woman.htm>`_
+  more: +md:[WOMAN](https://www.lifeprint.com/asl101/pages-signs/w/woman.htm)
 
   # Most common version of WOMAN in lesson 2. Maybe this should go there?
   https://www.youtube.com/watch?v=mZMoRLldXOs -> WOMAN / GIRL FINE
@@ -280,7 +280,7 @@ group:
   # No GIRL ADULT video, and not mentioned on web page.
 
 group:
-  more: +rst:`QM-WIG <https://www.lifeprint.com/asl101/pages-signs/q/qm-wig.htm>`_
+  more: +md:[QM-WIG](https://www.lifeprint.com/asl101/pages-signs/q/qm-wig.htm)
     (QM-WIG is not actually covered in lesson, but it comes up in the phrases.)
   tags: +extra
   https://www.youtube.com/watch?v=kS2VaLVITiw QM-wig / QUESTION
