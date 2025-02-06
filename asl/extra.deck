@@ -255,7 +255,6 @@ group:
   https://www.youtube.com/watch?v=GF5UtlyLuyw FRUIT
     trim: 10F-78F
 
-
 group:
   more: +md:[YOUNG](https://www.lifeprint.com/asl101/pages-signs/y/young.htm)
 
@@ -273,6 +272,41 @@ group:
 
   https://www.youtube.com/watch?v=y2vzVSDM00k FRIENDLY
     trim: 8F-
+
+group:
+  more: +md:[EITHER](https://www.lifeprint.com/asl101/pages-signs/e/either.htm)
+  https://www.youtube.com/watch?v=uLoKdhE7rYU EITHER
+    trim: 12F-76F
+
+https://www.youtube.com/watch?v=0SxXfJAnBHk
+  WHATEVER / regardless / doesn’t matter / anyway / that’s not important
+  trim: 0-51F
+  more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
+
+group:
+  more: +md:[EXPLAIN](https://www.lifeprint.com/asl101/pages-signs/e/explain.htm)
+  https://www.youtube.com/watch?v=2Na_TOtHw2E EXPLAIN / DESCRIBE / INSTRUCTIONS
+    trim: 27F-92F
+
+group:
+  more: +md:[SHOW](https://www.lifeprint.com/asl101/pages-signs/s/show.htm)
+
+  https://www.youtube.com/watch?v=4vABNRuGfRw SHOW / display / represent
+    trim: 8F-69F
+  https://www.youtube.com/watch?v=U48BpmXzSXk SHOW-me
+    trim: 7F-66F
+  https://www.youtube.com/watch?v=z_MPz6HY1W4 SHOW-3rd-person
+    trim: 3F-
+
+  tags: +extra
+  https://www.youtube.com/watch?v=UYkt4YgYcuE
+    SHOW-UP / appearance / appear / pop up / symptom
+    trim: 6F-57F
+
+group:
+  more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
+  https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
+    trim: 26F-98F
 
 # From lesson 2 video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 https://www.youtube.com/watch?v=yOq40lDCkcM NONE
