@@ -13,6 +13,7 @@ import shlex
 import signal
 import subprocess
 import sys
+import tempfile
 import threading
 import traceback
 import time
@@ -176,6 +177,27 @@ def build(options, decks, output):
     if output:
         package.write_to_file(output)
         LOGGER.info(f"Wrote decks to file {output}")
+
+
+@cli.command()
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@click.pass_obj
+def update(options, decks):
+    """
+    Update Anki with one or more decks.
+
+    This will build the .apkg file in a temporary directory that will eventually
+    be deleted. It will then open the .apkg file with the `open` command.
+    """
+    with tempfile.NamedTemporaryFile(suffix=".apkg", delete=False) as file:
+        file.close()
+        package = genanki.Package([])
+        for deck in read_final_decks(decks, options):
+            deck.save_to_package(package)
+        LOGGER.debug(f"Wrote decks to file {file.name}")
+        package.write_to_file(file.name)
+        LOGGER.debug(f"Opening {file.name}")
+        open_in_app([file.name])
 
 
 @cli.command()

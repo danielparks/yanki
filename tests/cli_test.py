@@ -1,6 +1,7 @@
 import inspect
 import io
 import os
+from pathlib import Path
 import psutil
 import pytest
 import shutil
@@ -67,6 +68,16 @@ def test_yanki_build(yanki, reference_deck_path):
     assert result.stdout == ""
     assert result.stderr == ""
     assert reference_deck_path.with_suffix(".apkg").is_file()
+
+
+# Fake `open` doesn’t work without subprocess.
+@pytest.mark.script_launch_mode("subprocess")
+def test_yanki_update(yanki, reference_deck_path):
+    result = yanki.run("update", reference_deck_path)
+    assert result.returncode == 0
+    assert result.stdout.endswith(".apkg\n")
+    assert Path(result.stdout[:-1]).is_file()
+    assert result.stderr == ""
 
 
 def test_yanki_serve_http(yanki, reference_deck_path):
