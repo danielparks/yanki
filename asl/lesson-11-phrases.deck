@@ -7,63 +7,63 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 https://www.youtube.com/watch?v=h4nGgT_So1s TELL-me ABOUT YOUR TEACHER
-  more: +html:<h3>Tell me about your teacher.</h3>
+  more: +md:### Tell me about your teacher.
 
 https://www.youtube.com/watch?v=ttUpOpqfc2g YOU GO CLASS ON-TIME ALWAYS?
-  more: +html:<h3>Do you always go to class on time?</h3>
+  more: +md:### Do you always go to class on time?
 
 https://www.youtube.com/watch?v=_sKsAw7lDUA YOU HAVE DOG AND CAT YOU?
-  more: +html:<h3>Do you have a cat and a dog?</h3>
+  more: +md:### Do you have a cat and a dog?
 
 https://www.youtube.com/watch?v=YBdMgvyyrrg YOUR FAMILY ANY DEAF?
-  more: +html:<h3>Is anyone in your family deaf?</h3>
+  more: +md:### Is anyone in your family deaf?
 
 https://www.youtube.com/watch?v=Tz8YkD7Zke4 CLASS FINISH, #BACK HOME YOU?
-  more: +html:<h3>Are you going back home after class?</h3>
+  more: +md:### Are you going back home after class?
 
 https://www.youtube.com/watch?v=qGTHUR3DUR8 HOW YOU FEEL?
-  more: +html:<h3>How do you feel?</h3>
+  more: +md:### How do you feel?
 
 https://www.youtube.com/watch?v=qpmzNo0yVMc DEAF CAN CALL HEARING-[people] HOW?
-  more: +html:<h3>How can deaf people call hearing people on the phone?</h3>
-    <p>Use the Relay.</p>
+  more: +md:### How can deaf people call hearing people on the phone?
+    Use the Relay.
 
 https://www.youtube.com/watch?v=kyZ5gMy7ihM
   YOU CAN'T UNDERSTAND HE/SHE TEACHER, WHY?
-  more: +html:<h3>Why can't you understand the teacher?</h3>
+  more: +md:### Why can't you understand the teacher?
 
 https://www.youtube.com/watch?v=bpOcs-n-G0o TAKE-UP ASL FOR-FOR?
-  more: +html:<h3>Why are you taking ASL?</h3>
+  more: +md:### Why are you taking ASL?
 
 https://www.youtube.com/watch?v=M8NJYo9TgQY BOOK YOU THINK WONDERFUL, NAME?
-  more: +html:<h3>Name a book that you think is wonderful.</h3>
+  more: +md:### Name a book that you think is wonderful.
 
 https://www.youtube.com/watch?v=-Fz2Wut5Km0 YOUR BEDROOM DIRTY LITTLE-BIT?
-  more: +html:<h3>Is your bedroom a little bit dirty?</h3>
+  more: +md:### Is your bedroom a little bit dirty?
 
 https://www.youtube.com/watch?v=5blPNuezesY SOUP, YOU KNOW HOW MAKE?
-  more: +html:<h3>Do you know how to make soup?</h3>
+  more: +md:### Do you know how to make soup?
 
 https://www.youtube.com/watch?v=eO38PqJOak0 YOU NEVER EAT CANDY YOU?
-  more: +html:<h3>You never eat candy!?</h3>
+  more: +md:### You never eat candy!?
 
 https://www.youtube.com/watch?v=vWFF30NDQhA NEW CAR HAVE YOU?
-  more: +html:<h3>Do you have a new car?</h3>
+  more: +md:### Do you have a new car?
 
 https://www.youtube.com/watch?v=ennG1UnqhjM YOU PREFER PIZZA OR HAMBURGER?
-  more: +html:<h3>Would you rather have pizza or a hamburger?</h3>
+  more: +md:### Would you rather have pizza or a hamburger?
 
 https://www.youtube.com/watch?v=JfNlOiIa2gQ YOU LIKE MEET NEW PEOPLE YOU?
-  more: +html:<h3>Do you like to meet new people?</h3>
+  more: +md:### Do you like to meet new people?
 
 https://www.youtube.com/watch?v=aQ3JNyVy5ik YOU FEEL NERVOUS, WHEN?
-  more: +html:<h3>When do you feel nervous?</h3>
+  more: +md:### When do you feel nervous?
 
 https://www.youtube.com/watch?v=YLFFW5DdpkA YOU LIKE CHAT-WITH DEAF?
-  more: +html:<h3>Do you like to chat with deaf people?</h3>
+  more: +md:### Do you like to chat with deaf people?
 
 https://www.youtube.com/watch?v=5lhQHdin_5g PEOPLE YOU LIKE WHAT-KIND?
-  more: +html:<h3>What type of people do you like?</h3>
+  more: +md:### What type of people do you like?
 
 https://www.youtube.com/watch?v=xauWp5DgUvE LEARN NEW THING YOU LIKE?
-  more: +html:<h3>Do you like to learn new things?</h3>
+  more: +md:### Do you like to learn new things?
