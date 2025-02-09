@@ -404,7 +404,7 @@ https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
 # From lesson 9 video (https://www.youtube.com/watch?v=6bsTw2ouTpQ)
 https://www.youtube.com/watch?v=DyYb5Y2efP4 APARTMENT
   trim: 8F-72F
-  more: +html:<h1>A-P-T</h1>
+  more: +md:# A-P-T
   more: +md:[APARTMENT](https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm)
 
 group:
