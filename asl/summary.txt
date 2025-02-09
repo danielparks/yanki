@@ -2058,7 +2058,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=SMyvuwhWj1A @0- TAGS: 'Lifeprint e
 Lifeprint ASL https://www.youtube.com/watch?v=SMyvuwhWj1A @0- TEXT: 'PULLOVER-SWEATER'
 Lifeprint ASL https://www.youtube.com/watch?v=SiRvPUToJvw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/end.htm">END</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=SiRvPUToJvw @0- TAGS: 'Lifeprint lesson_16 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=SiRvPUToJvw @0- TEXT: 'END (straight movement version'
+Lifeprint ASL https://www.youtube.com/watch?v=SiRvPUToJvw @0- TEXT: 'END (straight movement version)'
 Lifeprint ASL https://www.youtube.com/watch?v=SpTMc5tGXag @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/shirt.htm">SHIRT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=SpTMc5tGXag @0- TAGS: 'Lifeprint extra lesson_08 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=SpTMc5tGXag @0- TEXT: 'MEDIUM-SLEEVED-SHIRT'
