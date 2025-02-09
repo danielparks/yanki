@@ -59,9 +59,10 @@ group:
     trim: 11F-146F
 
 group:
-  more: +md:[FEW](https://www.lifeprint.com/asl101/pages-signs/f/few.htm)
-    FEW and SEVERAL are inflections of the same sign. Fewer is closer to the
-    body with fewer fingers. More is a more open body with more fingers.
+  more: +md:[FEW](https://www.lifeprint.com/asl101/pages-signs/f/few.htm) and
+    SEVERAL are inflections of the same sign. Signing closer to the body with
+    fewer fingers indicates _fewer_, and signing with an open body and more
+    fingers indicates _more_.
 
   https://www.youtube.com/watch?v=jU6JOj4UucI FEW (3-hand version)
     trim: 10F-77F
@@ -74,6 +75,8 @@ group:
 
 group:
   more: +md:[FROM-NOW-ON](https://www.lifeprint.com/asl101/pages-signs/f/from-now-on.htm)
+    can also mean [AFTER](https://www.lifeprint.com/asl101/pages-signs/a/after.htm)
+    if the hand moves directly out.
 
   # Slight difference in path of hand. See AFTER page.
   https://www.youtube.com/watch?v=rIE6pSjWh6A AFTER / FROM-NOW-ON / FROM-THEN-ON
@@ -165,6 +168,7 @@ group:
 
 group:
   more: +md:[OFTEN](https://www.lifeprint.com/asl101/pages-signs/o/often.htm)
+    can become “frequent” if signed faster and with an additional movement.
 
   https://www.youtube.com/watch?v=4dtwTr_w12I OFTEN
     trim: 3F-52F
@@ -206,5 +210,5 @@ group:
   # No video for F on nose version.
 
   tags: +extra
-  https://www.youtube.com/watch?v=YfTrFCqaAks BRIEF / short duration
+  https://www.youtube.com/watch?v=YfTrFCqaAks BRIEF / short duration / KNIFE
     trim: 3F-58F
