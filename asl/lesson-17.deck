@@ -21,14 +21,17 @@ group:
   more: +md:[BEER](https://www.lifeprint.com/asl101/pages-signs/b/beer.htm)
 
   https://www.youtube.com/watch?v=YoySFjYgjc8 BEER (double movement version)
+    trim: 18F-59F
   # Single movement version is BROWN, in lesson 6.
   https://www.youtube.com/watch?v=tSEu8Asd9e0 B-E-E-R
+    trim: 24F-57F
 
 group:
   more: +md:[BREAKFAST](https://www.lifeprint.com/asl101/pages-signs/b/breakfast.htm)
 
   https://www.youtube.com/watch?v=MoiessLRht4 BREAKFAST / EAT MORNING
   https://www.youtube.com/watch?v=VXLG6ft7kno BREAKFAST (initialized version)
+    trim: 9F-45F
 
 # CUP is in lesson 7.
 
