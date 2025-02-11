@@ -56,6 +56,80 @@ https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
 https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
 https://www.youtube.com/watch?v=6Yx7NEqOvHo NURSE
 
+https://www.youtube.com/watch?v=CBvbmM7dHaY CATEGORY / CLUSTER / section / group
+  trim: 7F-50F
+  more: md:[CLUSTER](https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm)
+
+https://www.youtube.com/watch?v=lFSWuq0YurM
+  VOICE-LOCK / keep-you-voice-off / no-talking (idiomatic)
+  trim: 10F-71F
+
+https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
+  trim: 3F-57F
+  more: +md:[HAIR](https://www.lifeprint.com/asl101/pages-signs/h/hair.htm)
+
+https://www.youtube.com/watch?v=EKop7phm0Hs OPPOSITE / ALLERGY
+  trim: 23F-75F
+  more: +md:[OPPOSITE](https://www.lifeprint.com/asl101/pages-signs/o/opposite.htm)
+https://www.youtube.com/watch?v=O3LpW_EpHaw
+  trim: 14F-70F
+  RECOGNIZE / NOTICE / DETECT (non-directional)
+  more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
+https://www.youtube.com/watch?v=su0Hg7jFJ0g
+  trim: 3F-62F
+  RECOGNIZE / NOTICE / DETECT (directional)
+  more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
+
+https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
+  trim: 23F-
+  more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
+https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
+  trim: 8F-61F
+  more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
+
+https://www.youtube.com/watch?v=6_5BxE7yBEo BORED
+  trim: 11F-62F
+  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
+https://www.youtube.com/watch?v=7gxOKAj-JZQ BORING / DRY / DULL / not-interesting
+  trim: 7F-
+  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
+
+https://www.youtube.com/watch?v=7bCApb-yubw MAYBE / MAY / MIGHT
+  trim: 15F-71F
+  more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
+
+https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
+  trim: 13F-75F
+  more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
+
+https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
+  trim: 13F-68F
+  more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
+
+https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
+  trim: 9F-61F
+
+https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
+  trim: 7F-50F
+
+https://www.youtube.com/watch?v=pNW4_GkXVhY WEIRD
+  trim: 8F-65F
+  more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
+
+https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
+  trim: 4F-60F
+  more: +md:[STRANGE](https://www.lifeprint.com/asl101/pages-signs/s/strange.htm)
+
+https://www.youtube.com/watch?v=0SxXfJAnBHk
+  WHATEVER / regardless / doesn’t matter / anyway / that’s not important
+  trim: 0-51F
+  more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
+
+https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
+  more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
+
+# Groups represent Lifeprint pages with everything on them.
+
 group:
   more: +md:[BIRTH](https://www.lifeprint.com/asl101/pages-signs/b/birth.htm)
   https://www.youtube.com/watch?v=1Ko00nas78M BORN / BIRTH (B-hand version)
@@ -123,10 +197,6 @@ group:
 group:
   more: +md:[CUTE](https://www.lifeprint.com/asl101/pages-signs/c/cute.htm)
   https://www.youtube.com/watch?v=zEtSV7lXycY SUGAR / CUTE / CANDY
-
-https://www.youtube.com/watch?v=CBvbmM7dHaY CATEGORY / CLUSTER / section / group
-  trim: 7F-50F
-  more: md:[CLUSTER](https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm)
 
 group:
   more: +md:[POSSIBLE](https://www.lifeprint.com/asl101/pages-signs/p/possible.htm)
@@ -199,58 +269,6 @@ group:
   https://www.youtube.com/watch?v=95AiB9DJaiI SURPRISE
     trim: 3F-56F
 
-https://www.youtube.com/watch?v=lFSWuq0YurM
-  VOICE-LOCK / keep-you-voice-off / no-talking (idiomatic)
-  trim: 10F-71F
-
-https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
-  trim: 3F-57F
-  more: +md:[HAIR](https://www.lifeprint.com/asl101/pages-signs/h/hair.htm)
-
-https://www.youtube.com/watch?v=EKop7phm0Hs OPPOSITE / ALLERGY
-  trim: 23F-75F
-  more: +md:[OPPOSITE](https://www.lifeprint.com/asl101/pages-signs/o/opposite.htm)
-https://www.youtube.com/watch?v=O3LpW_EpHaw
-  trim: 14F-70F
-  RECOGNIZE / NOTICE / DETECT (non-directional)
-  more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
-https://www.youtube.com/watch?v=su0Hg7jFJ0g
-  trim: 3F-62F
-  RECOGNIZE / NOTICE / DETECT (directional)
-  more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
-
-https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
-  trim: 23F-
-  more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
-https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
-  trim: 8F-61F
-  more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
-
-https://www.youtube.com/watch?v=6_5BxE7yBEo BORED
-  trim: 11F-62F
-  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
-https://www.youtube.com/watch?v=7gxOKAj-JZQ BORING / DRY / DULL / not-interesting
-  trim: 7F-
-  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
-
-https://www.youtube.com/watch?v=7bCApb-yubw MAYBE / MAY / MIGHT
-  trim: 15F-71F
-  more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
-
-https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
-  trim: 13F-75F
-  more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
-
-https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
-  trim: 13F-68F
-  more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
-
-https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
-  trim: 9F-61F
-
-https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
-  trim: 7F-50F
-
 group:
   more: +md:[REMEMBER](https://www.lifeprint.com/asl101/pages-signs/r/remember.htm)
 
@@ -273,14 +291,6 @@ group:
     trim: 10F-55F
   https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
     trim: 5F-55F
-
-https://www.youtube.com/watch?v=pNW4_GkXVhY WEIRD
-  trim: 8F-65F
-  more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
-
-https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
-  trim: 4F-60F
-  more: +md:[STRANGE](https://www.lifeprint.com/asl101/pages-signs/s/strange.htm)
 
 group:
   more: +md:[TOO-MUCH](https://www.lifeprint.com/asl101/pages-signs/t/too-much.htm)
@@ -326,11 +336,6 @@ group:
   https://www.youtube.com/watch?v=uLoKdhE7rYU EITHER
     trim: 12F-76F
 
-https://www.youtube.com/watch?v=0SxXfJAnBHk
-  WHATEVER / regardless / doesn’t matter / anyway / that’s not important
-  trim: 0-51F
-  more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
-
 group:
   more: +md:[EXPLAIN](https://www.lifeprint.com/asl101/pages-signs/e/explain.htm)
   https://www.youtube.com/watch?v=2Na_TOtHw2E EXPLAIN / DESCRIBE / INSTRUCTIONS
@@ -360,9 +365,6 @@ group:
   more: +md:[VARIOUS](https://www.lifeprint.com/asl101/pages-signs/v/various.htm)
   https://www.youtube.com/watch?v=nN8-OhCTosE VARYING / VARIETY / VARIOUS
   https://www.youtube.com/watch?v=0GaEEybVYVw VARIOUS / etc / and-so-forth / yadda-yadda
-
-https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
-  more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
 
 group:
   more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
