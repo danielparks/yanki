@@ -5,41 +5,58 @@ tags: Lifeprint lesson_18 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-# Incomplete stub
-
 group:
   more: +md:[AIRPLANE](https://www.lifeprint.com/asl101/pages-signs/a/airplane.htm)
+  https://www.youtube.com/watch?v=eD5BTz7lR-o AIRPLANE
+  https://www.youtube.com/watch?v=u1pDng38AxE FLY / FLY-AIRPLANE
 
 group:
   more: +md:[BICYCLE](https://www.lifeprint.com/asl101/pages-signs/b/bicycle.htm)
-
   https://www.youtube.com/watch?v=8yjqcyk-xwY BIKE / BICYCLE
     trim: 0-142F
 
 group:
   more: +md:[BOAT](https://www.lifeprint.com/asl101/pages-signs/b/boat.htm)
+  https://www.youtube.com/watch?v=aDt-KNA-v04 SHIP / BOAT
+
+  tags: +extra
+  https://www.youtube.com/watch?v=GBMSdLL7mTY SAILBOAT / BOAT
+  https://www.youtube.com/watch?v=n6-cBztjHb0 SHIP-WITH-SAILS / BOAT
+  https://www.youtube.com/watch?v=mEws8MNWC_w F-E-R-R-Y BOAT
+  # No video for CRUISE.
 
 group:
   more: +md:[BUILD](https://www.lifeprint.com/asl101/pages-signs/b/build.htm)
+  https://www.youtube.com/watch?v=Ytt6YIYV6qs
+    BUILD / CONSTRUCT (bent hand version)
+  https://www.youtube.com/watch?v=_UAPcbyeN_I
+    BUILD / CONSTRUCT (H-hand version)
+  https://www.youtube.com/watch?v=k2FNY6d_jVg BUILDING
+  https://www.youtube.com/watch?v=GUr6CFbZ2FM BUILD (layers version)
 
 group:
   more: +md:[Classifier 3](https://www.lifeprint.com/asl101/pages-signs/c/cl3.htm)
+    (vehicles)
+  https://www.youtube.com/watch?v=kI0t70vmXUo CRASH
+  # Not sure if I should try to find signs from the lesson videos on that page.
 
 group:
   more: +md:[CRASH](https://www.lifeprint.com/asl101/pages-signs/c/crash.htm)
+  https://www.youtube.com/watch?v=G3z4RviEFLs car-CRASH
+  https://www.youtube.com/watch?v=qKjTQ7pkclk -> car-CRASH (5-hand version)
 
 group:
   more: +md:[ELEVATOR](https://www.lifeprint.com/asl101/pages-signs/e/elevator.htm)
+  https://www.youtube.com/watch?v=ztBZaV2yoxs ELEVATOR (E-hand version)
+  https://www.youtube.com/watch?v=JdQtf0sl5KI ELEVATOR (Classifier V version)
 
 # ENJOY is in lesson 14.
 # FIND is in lesson 8.
-
-group:
-  more: +md:[FLY](https://www.lifeprint.com/asl101/pages-signs/f/fly.htm)
+# FLY has birds and insects flying; I’m skipping. Airplane and flying on one
+# are covered by AIRPLANE.
 
 group:
   more: +md:[FUN](https://www.lifeprint.com/asl101/pages-signs/f/fun.htm)
-
   https://www.youtube.com/watch?v=hDYLTkXTSx4 FUN
     trim: 27F-88F
   https://www.youtube.com/watch?v=ThDzxD04uwY F-U-N
@@ -59,59 +76,100 @@ group:
 
 group:
   more: +md:[GET-ON](https://www.lifeprint.com/asl101/pages-signs/g/get-on.htm)
+  https://www.youtube.com/watch?v=WlmxA_7SlYM GET-ON
 
 group:
   more: +md:[HELICOPTER](https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm)
-
-  https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER
+  https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER (classifier 3)
     trim: 16F-78F
-  # incomplete
+  https://www.youtube.com/watch?v=FxcrY6piGv8 HELICOPTER / DRONE (classifier 1)
+    trim: 4F-65F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=2WBXjTIMk4c HELICOPTER-fly-away (classifier 3)
 
 group:
   more: +md:[KEY](https://www.lifeprint.com/asl101/pages-signs/k/key.htm)
+    (LOCK-it would be a single motion)
+  https://www.youtube.com/watch?v=gDbPETMB9dk KEYS
 
 group:
   more: +md:[LEAVE](https://www.lifeprint.com/asl101/pages-signs/l/leave.htm)
-
   https://www.youtube.com/watch?v=fn1PTkU1fGI LEAVE / GO-OUT
     trim: 8F-67F
-  https://www.youtube.com/watch?v=qo15m6gbYEo TAKE OFF / LEAVE
-    trim: 9F-74F
+  https://www.youtube.com/watch?v=HMCubJnD-aE
+    ABANDON / LEAVE-BEHIND / LEFT-OVERS / REMAINING
+    trim: 1F-59F
+
+  tags: +extra
   https://www.youtube.com/watch?v=ji9JOLaIj9I JAM / GET-OUT-OF-HERE / LEAVE
     trim: 12F-60F
-  # incomplete
+  https://www.youtube.com/watch?v=qo15m6gbYEo TAKE OFF / LEAVE
+    trim: 9F-74F
+  https://www.youtube.com/watch?v=84XYguYDLjs EXODUS / MASS-LEAVE
+  https://www.youtube.com/watch?v=shvegK_StOg -> EXODUS / MASS-LEAVE
+  https://www.youtube.com/watch?v=3cMNYOqgCZA EVACUATE / FLEE
+  https://www.youtube.com/watch?v=e1EY8LBfXSw ZOOM (L-G version) / LEAVE-QUICKLY
 
 group:
   more: +md:[LOSE](https://www.lifeprint.com/asl101/pages-signs/l/lose.htm)
+  https://www.youtube.com/watch?v=hToPKg_N4qY LOSE-item
+  https://www.youtube.com/watch?v=wYni2mbSABs LOSE-competition
 
 group:
   more: +md:[MOTORCYCLE](https://www.lifeprint.com/asl101/pages-signs/m/motorcycle.htm)
+  https://www.youtube.com/watch?v=suzyI59Ryh0 MOTORCYCLE
 
 group:
   more: +md:[PRACTICE](https://www.lifeprint.com/asl101/pages-signs/p/practice.htm)
-
-  # Lesson 1 extra. Should I move it up?
+  https://www.youtube.com/watch?v=nHUxT-iHJwM PRACTICE
+    trim: 10F-67F
 
 group:
   more: +md:[RIDE](https://www.lifeprint.com/asl101/pages-signs/r/ride.htm)
+  https://www.youtube.com/watch?v=Z-o_ssuD-Ys RIDE-in
+  https://www.youtube.com/watch?v=jH31aBCskRk GET-in-[a-seat]
+  https://www.youtube.com/watch?v=qAdpmlMPJ5s RIDER / PASSENGER
+  # No video for RIDE-on
 
 group:
   more: +md:[ROCKET](https://www.lifeprint.com/asl101/pages-signs/r/rocket.htm)
+  https://www.youtube.com/watch?v=-JbDwGd48Ug ROCKET (initialized/palm version)
+  https://www.youtube.com/watch?v=w5gxAKgu2CU
+    ROCKET (non-initialized/fist version) / launch / missile / projectile
 
 group:
   more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
+  https://www.youtube.com/watch?v=uj4e7ldHVbY SEARCH / LOOK-FOR / SEEK
 
 group:
   more: +md:[SUBWAY](https://www.lifeprint.com/asl101/pages-signs/s/subway.htm)
+  https://www.youtube.com/watch?v=94f1aywB0h8 SUBWAY
+  # Didn’t find video for other version of SUBWAY (Y-hand facing other way).
 
 group:
   more: +md:[TICKET](https://www.lifeprint.com/asl101/pages-signs/t/ticket.htm)
+  https://www.youtube.com/watch?v=os3UZ0eilLE TICKET (noun)
+  https://www.youtube.com/watch?v=JT_5JGxYOkE @37F-74F TICKET (verb)
 
 group:
   more: +md:[TRAIN](https://www.lifeprint.com/asl101/pages-signs/t/train.htm)
+  https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
+  https://www.youtube.com/watch?v=40Jn-HXFtIw TRAIN-GONE (idiom)
 
 group:
   more: +md:[TRAVEL](https://www.lifeprint.com/asl101/pages-signs/t/travel.htm)
+  https://www.youtube.com/watch?v=Qq4J0wc3_nM TOUR / TRAVEL
+  https://www.youtube.com/watch?v=ZtG9hL7slCA TRAVEL-AROUND
+
+  tags: +extra
+  https://www.youtube.com/watch?v=AbpCaS_sQAo -> TRAVEL (index finger version)
+  https://www.youtube.com/watch?v=xYtFD9E-ljA -> TRAVEL-AROUND (8-hand version)
 
 group:
   more: +md:[TRUCK](https://www.lifeprint.com/asl101/pages-signs/t/truck.htm)
+  https://www.youtube.com/watch?v=LiSC8Vt5tmI T-R-U-C-K
+  # Didn’t find video for DRIVE-truck.
+
+  tags: +extra
+  https://www.youtube.com/watch?v=stWHtqJAzng -> TRUCK (signed English version)
