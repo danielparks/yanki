@@ -42,9 +42,14 @@ group:
 group:
   more: +md:[FARM](https://www.lifeprint.com/asl101/pages-signs/f/farm.htm)
 
-  https://www.youtube.com/watch?v=smPpqc0kwFE FARM
+  https://www.youtube.com/watch?v=smPpqc0kwFE FARM (horizontal version)
     trim: 7F-56F
   # Doesn’t seem worthwhile to include FARM+PERSON / FARMER.
+
+  tags: +extra
+  # This wasn’t on the page, but it seems more common here and is the first
+  # sign on Handspeak:
+  https://www.youtube.com/watch?v=0UzFHwQ6TJc FARM (upright version)
 
 group:
   more: +md:[FIREFIGHTER](https://www.lifeprint.com/asl101/pages-signs/f/firefighter.htm)

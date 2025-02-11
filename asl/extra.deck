@@ -37,8 +37,6 @@ https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
   trim: 24F-60F
 https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
   trim: 5F-78F
-https://www.youtube.com/watch?v=1Ko00nas78M BORN
-  trim: 13F-72F
 https://www.youtube.com/watch?v=17gZsl0jClE GAME
 https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
   trim: 10F-76F
@@ -59,13 +57,63 @@ https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
 https://www.youtube.com/watch?v=6Yx7NEqOvHo NURSE
 
 group:
+  more: +md:[BIRTH](https://www.lifeprint.com/asl101/pages-signs/b/birth.htm)
+  https://www.youtube.com/watch?v=1Ko00nas78M BORN / BIRTH (B-hand version)
+    trim: 13F-72F
+
+  # Not on page, but it seems common around here.
+  https://www.youtube.com/watch?v=7qjJ90asdUs BORN / BIRTH (S-hand version)
+
+group:
+  more: +md:[BIRTHDAY](https://www.lifeprint.com/asl101/pages-signs/b/birthday.htm)
+    There are a lot more variations of BIRTHDAY; see what local people use.
+  https://www.youtube.com/watch?v=eB0lhZn8N9A BIRTHDAY / BIRTH
+  https://www.youtube.com/watch?v=1n3eN9v8VV0 BIRTH-[arrive] DAY
+
+group:
   more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
   https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
     trim: 31F-94F
 
 group:
+  more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
+  https://www.youtube.com/watch?v=9SMHSwdQUwE CHRISTMAS (C-hand version)
+  https://www.youtube.com/watch?v=41xJpgSzFdI CHRISTMAS -> (C-hand-up version)
+  https://www.youtube.com/watch?v=2VMFGfplpac CHRISTMAS (C tree twist out version)
+  https://www.youtube.com/watch?v=cg8PmdDrQ7Q CHRISTMAS -> (C tree twist in version)
+
+group:
+  more: +md:[COUNTRY](https://www.lifeprint.com/asl101/pages-signs/c/country.htm)
+  https://www.youtube.com/watch?v=YgCmE5kljQw
+    COUNTRY / RURAL / COUNTY (Y-hand version)
+  https://www.youtube.com/watch?v=ygSdMz0TnYI
+    COUNTRY / RURAL / COUNTY (flat hand version)
+  https://www.youtube.com/watch?v=seKiOd6TxLw FOREIGN
+
+group:
   more: +md:[EXPERIENCE](https://www.lifeprint.com/asl101/pages-signs/e/experience.htm)
   https://www.youtube.com/watch?v=m03M4FcaC9Q EXPERIENCE
+
+group:
+  more: +md:[FAR](https://www.lifeprint.com/asl101/pages-signs/f/far.htm)
+  https://www.youtube.com/watch?v=zVJ7-WuHsow FAR (A-hand version)
+  https://www.youtube.com/watch?v=Xecxz2jXc1I FAR-away (classifier 1)
+  https://www.youtube.com/watch?v=e6xOK0LXSjc NOT-FAR / CLOSE
+
+group:
+  more: +md:[HAPPEN](https://www.lifeprint.com/asl101/pages-signs/h/happen.htm)
+    and [When vs Happen (Advanced Discussion)](https://www.lifeprint.com/asl101/pages-signs/w/when2.htm)
+  https://www.youtube.com/watch?v=FsM-D-NCNdc HAPPEN
+
+group:
+  more: +md:[LOUSY](https://www.lifeprint.com/asl101/pages-signs/l/lousy.htm)
+  https://www.youtube.com/watch?v=6CtpIW3fQtw LOUSY
+
+group:
+  more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
+  https://www.youtube.com/watch?v=Zv7n5RlK6W4 NEAR / CLOSE-by / CLOSE-to
+  https://www.youtube.com/watch?v=nwYLaBzkSMw ->
+    NEAR / CLOSE-by / CLOSE-to (pat hand version)
 
 group:
   more: +md:[TRY](https://www.lifeprint.com/asl101/pages-signs/t/try.htm)
@@ -317,9 +365,41 @@ https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
   more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
 
 group:
+  more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
+  https://www.youtube.com/watch?v=nEwU553Q8tE OTHER
+
+group:
+  more: +md:[PROUD](https://www.lifeprint.com/asl101/pages-signs/p/proud.htm)
+  https://www.youtube.com/watch?v=v74BSmAB5Uk PRIDE / PROUD
+
+group:
+  more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
+  https://www.youtube.com/watch?v=uj4e7ldHVbY SEARCH / LOOK-FOR / SEEK
+
+group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
   https://www.youtube.com/watch?v=WY99FSoo6dI
     SINCE / UP-TO-NOW / have-been / so-far / all-along
+
+group:
+  more: +md:[SILLY](https://www.lifeprint.com/asl101/pages-signs/s/silly.htm)
+  https://www.youtube.com/watch?v=4lVC2h-vul0 SILLY
+  https://www.youtube.com/watch?v=iGHjj_DXzkI RIDICULOUS
+  https://www.youtube.com/watch?v=LsMDCQMcMAE FRIVOLOUS / frivolity / silly-playing-around
+
+group:
+  more: +md:[SUCCEED](https://www.lifeprint.com/asl101/pages-signs/s/succeed.htm)
+  https://www.youtube.com/watch?v=SrzPozIawec
+    SUCCESS / SUCCEED / accomplish / managed to
+  https://www.youtube.com/watch?v=y-o6GhUKPbI PAH! / SUCCEED-finally
+
+group:
+  more: +md:[WHAT’S-UP](https://www.lifeprint.com/asl101/pages-signs/w/whats-up.htm)
+  https://www.youtube.com/watch?v=Q6fYE2gn9mM WHAT’S-UP
+
+group:
+  more: +md:[WORRY](https://www.lifeprint.com/asl101/pages-signs/w/worry.htm)
+  https://www.youtube.com/watch?v=HX-57T9JTwI WORRY
 
 # From lesson 2 video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 https://www.youtube.com/watch?v=yOq40lDCkcM NONE
