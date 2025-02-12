@@ -885,7 +885,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=3xKLhk4NgCs @0- TEXT: 'FISH (one-h
 Lifeprint ASL https://www.youtube.com/watch?v=41xJpgSzFdI @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=41xJpgSzFdI_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=41xJpgSzFdI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm">CHRISTMAS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=41xJpgSzFdI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=41xJpgSzFdI @0- TEXT: 'CHRISTMAS -> (C-hand-up version)'
+Lifeprint ASL https://www.youtube.com/watch?v=41xJpgSzFdI @0- TEXT: 'CHRISTMAS (C-hand-up version)'
 Lifeprint ASL https://www.youtube.com/watch?v=42A3aALiSng @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=42A3aALiSng_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=42A3aALiSng @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/j/job.htm">JOB</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=42A3aALiSng @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -3957,7 +3957,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=cftJMIT87TQ @0- TEXT: 'NEW'
 Lifeprint ASL https://www.youtube.com/watch?v=cg8PmdDrQ7Q @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=cg8PmdDrQ7Q_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=cg8PmdDrQ7Q @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm">CHRISTMAS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=cg8PmdDrQ7Q @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=cg8PmdDrQ7Q @0- TEXT: 'CHRISTMAS -> (C tree twist in version)'
+Lifeprint ASL https://www.youtube.com/watch?v=cg8PmdDrQ7Q @0- TEXT: 'CHRISTMAS (C tree twist in version)'
 Lifeprint ASL https://www.youtube.com/watch?v=chpyf4VHajk @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=chpyf4VHajk_audio='strip'_clip=(0.23356666666666667, 1.6683333333333334).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=chpyf4VHajk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/close-captioned.htm">CLOSE-CAPTIONED</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=chpyf4VHajk @0- TAGS: 'Lifeprint lesson_13 vocabulary'
