@@ -2754,6 +2754,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=PNp3dIAoFGA @0- MEDIA: "/Users/dan
 Lifeprint ASL https://www.youtube.com/watch?v=PNp3dIAoFGA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm">WITH (advanced)</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=PNp3dIAoFGA @0- TAGS: 'Lifeprint lesson_09 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=PNp3dIAoFGA @0- TEXT: 'CHASE'
+Lifeprint ASL https://www.youtube.com/watch?v=PObXeUDqJ-o @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=PObXeUDqJ-o_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=PObXeUDqJ-o @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/bored.htm">BORED</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=PObXeUDqJ-o @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=PObXeUDqJ-o @0- TEXT: 'very-BORING (horns version)'
 Lifeprint ASL https://www.youtube.com/watch?v=POinkxTejsE @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=POinkxTejsE_audio='strip'_clip=(0.16683333333333333, 2.168833333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=POinkxTejsE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=POinkxTejsE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
