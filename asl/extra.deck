@@ -138,6 +138,12 @@ https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
 # Groups represent Lifeprint pages with everything on them.
 
 group:
+  more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
+
+  https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
+    trim: 15F-63F
+
+group:
   more: +md:[BIRTH](https://www.lifeprint.com/asl101/pages-signs/b/birth.htm)
   https://www.youtube.com/watch?v=1Ko00nas78M BORN / BIRTH (B-hand version)
     trim: 13F-72F
@@ -152,17 +158,23 @@ group:
   https://www.youtube.com/watch?v=1n3eN9v8VV0 BIRTH-[arrive] DAY
 
 group:
-  more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
-  https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
-    trim: 31F-94F
-
-group:
   more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
   https://www.youtube.com/watch?v=6_5BxE7yBEo BORED
     trim: 11F-62F
   https://www.youtube.com/watch?v=7gxOKAj-JZQ BORING / DRY / DULL / not-interesting
     trim: 7F-
   https://www.youtube.com/watch?v=PObXeUDqJ-o very-BORING (horns version)
+
+group:
+  more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
+  https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
+    trim: 31F-94F
+
+group:
+  more: +md:[CHEAP](https://www.lifeprint.com/asl101/pages-signs/c/cheap.htm)
+
+  https://www.youtube.com/watch?v=H-39q5BLM44 CHEAP / INEXPENSIVE
+    trim: 7F-59F
 
 group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
@@ -180,20 +192,82 @@ group:
   https://www.youtube.com/watch?v=seKiOd6TxLw FOREIGN
 
 group:
+  more: +md:[CUTE](https://www.lifeprint.com/asl101/pages-signs/c/cute.htm)
+  https://www.youtube.com/watch?v=zEtSV7lXycY SUGAR / CUTE / CANDY
+
+group:
+  more: +md:[DEPEND](https://www.lifeprint.com/asl101/pages-signs/d/depend.htm)
+
+  https://www.youtube.com/watch?v=8E1NT-uiDXs DEPEND / it-DEPENDS / DEPENDS-on
+    trim: 10F-73F
+
+group:
+  more: +md:[DEPRESSED](https://www.lifeprint.com/asl101/pages-signs/d/depressed.htm)
+
+  https://www.youtube.com/watch?v=mLWP-yNA0XU
+    DEPRESSED / DEPRESSION / feeling down
+    trim: 20F-97F
+  https://www.youtube.com/watch?v=pHDIa-ao9BQ ->
+    DEPRESSED / DEPRESSION / feeling down (flat hands version)
+    trim: 13F-60F
+
+group:
   more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
   https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
     trim: 13F-75F
   # Don’t really need two-handed variation. STUBBORN has it’s own page.
 
 group:
+  more: +md:[EITHER](https://www.lifeprint.com/asl101/pages-signs/e/either.htm)
+  https://www.youtube.com/watch?v=uLoKdhE7rYU EITHER
+    trim: 12F-76F
+
+group:
+  more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
+  https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
+    trim: 26F-98F
+
+group:
+  more: +md:[EXPENSIVE](https://www.lifeprint.com/asl101/pages-signs/e/expensive.htm)
+
+  https://www.youtube.com/watch?v=ZdmmD6ZsQrw EXPENSIVE
+    trim: 26F-80F
+
+group:
   more: +md:[EXPERIENCE](https://www.lifeprint.com/asl101/pages-signs/e/experience.htm)
   https://www.youtube.com/watch?v=m03M4FcaC9Q EXPERIENCE
+
+group:
+  more: +md:[EXPLAIN](https://www.lifeprint.com/asl101/pages-signs/e/explain.htm)
+  https://www.youtube.com/watch?v=2Na_TOtHw2E EXPLAIN / DESCRIBE / INSTRUCTIONS
+    trim: 27F-92F
 
 group:
   more: +md:[FAR](https://www.lifeprint.com/asl101/pages-signs/f/far.htm)
   https://www.youtube.com/watch?v=zVJ7-WuHsow FAR (A-hand version)
   https://www.youtube.com/watch?v=Xecxz2jXc1I FAR-away (classifier 1)
   https://www.youtube.com/watch?v=e6xOK0LXSjc NOT-FAR / CLOSE
+
+group:
+  more: +md:[FRIENDLY](https://www.lifeprint.com/asl101/pages-signs/f/friendly.htm)
+
+  https://www.youtube.com/watch?v=y2vzVSDM00k FRIENDLY
+    trim: 8F-
+
+group:
+  more: +md:[FRUIT](https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm)
+
+  https://www.youtube.com/watch?v=GF5UtlyLuyw FRUIT
+    trim: 10F-78F
+
+group:
+  more: +md:[GROW](https://www.lifeprint.com/asl101/pages-signs/g/grow.htm)
+
+  # GROW is in lesson 14 under SPRING
+  https://www.youtube.com/watch?v=K06cSaDx4BM GROW-large
+    trim: 41F-109F
+  https://www.youtube.com/watch?v=FE1X19IEu0E SPROUT
+    trim: 6F-
 
 group:
   more: +md:[HAPPEN](https://www.lifeprint.com/asl101/pages-signs/h/happen.htm)
@@ -216,6 +290,34 @@ group:
     NEAR / CLOSE-by / CLOSE-to (pat hand version)
 
 group:
+  more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
+  https://www.youtube.com/watch?v=nEwU553Q8tE OTHER
+
+group:
+  more: +md:[PARTNER](https://www.lifeprint.com/asl101/pages-signs/p/partner.htm)
+
+  # Dr Bill does SHARE PERSON, but in class we were taught to just use SHARE.
+  https://www.youtube.com/watch?v=3E2_HVDL9T8 SHARE / romantic-PARTNER
+    trim: 13F-66F
+  https://www.youtube.com/watch?v=hxvnNhay64c PARTNERSHIP (non-romantic)
+    trim: 5F-70F
+  https://www.youtube.com/watch?v=cMlRLyAmpZc ROOMATE / PARTNER (non-romantic)
+    trim: 12F-72F
+  https://www.youtube.com/watch?v=zYc7JHABcwg PAIR / COUPLE
+    trim: 10F-55F
+  https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
+    trim: 5F-55F
+
+group:
+  more: +md:[POSSIBLE](https://www.lifeprint.com/asl101/pages-signs/p/possible.htm)
+
+  https://www.youtube.com/watch?v=kPjFRjpaTm4 POSSIBLE / CAN
+
+group:
+  more: +md:[PROUD](https://www.lifeprint.com/asl101/pages-signs/p/proud.htm)
+  https://www.youtube.com/watch?v=v74BSmAB5Uk PRIDE / PROUD
+
+group:
   more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
   https://www.youtube.com/watch?v=O3LpW_EpHaw
     RECOGNIZE / NOTICE / DETECT (non-directional)
@@ -225,23 +327,42 @@ group:
     trim: 3F-62F
 
 group:
-  more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
-  https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
-    trim: 13F-68F
+  more: +md:[REMEMBER](https://www.lifeprint.com/asl101/pages-signs/r/remember.htm)
+
+  https://www.youtube.com/watch?v=AlQ5uuZk0ps REMEMBER
+    trim: 2F-65F
+  https://www.youtube.com/watch?v=yabFLDVcEOM MEMORY / MEMORIZE
+    trim: 30F-99F
 
 group:
-  more: +md:[TRY](https://www.lifeprint.com/asl101/pages-signs/t/try.htm)
-  https://www.youtube.com/watch?v=izb3v8uj9rs TRY (T-hand version)
-  https://www.youtube.com/watch?v=Hr11yePqoek TRY (A-hand version)
+  more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
+  https://www.youtube.com/watch?v=uj4e7ldHVbY SEARCH / LOOK-FOR / SEEK
 
 group:
-  more: +md:[CUTE](https://www.lifeprint.com/asl101/pages-signs/c/cute.htm)
-  https://www.youtube.com/watch?v=zEtSV7lXycY SUGAR / CUTE / CANDY
+  more: +md:[SHOW](https://www.lifeprint.com/asl101/pages-signs/s/show.htm)
+
+  https://www.youtube.com/watch?v=4vABNRuGfRw SHOW / display / represent
+    trim: 8F-69F
+  https://www.youtube.com/watch?v=U48BpmXzSXk SHOW-me
+    trim: 7F-66F
+  https://www.youtube.com/watch?v=z_MPz6HY1W4 SHOW-3rd-person
+    trim: 3F-
+
+  tags: +extra
+  https://www.youtube.com/watch?v=UYkt4YgYcuE
+    SHOW-UP / appearance / appear / pop up / symptom
+    trim: 6F-57F
 
 group:
-  more: +md:[POSSIBLE](https://www.lifeprint.com/asl101/pages-signs/p/possible.htm)
+  more: +md:[SILLY](https://www.lifeprint.com/asl101/pages-signs/s/silly.htm)
+  https://www.youtube.com/watch?v=4lVC2h-vul0 SILLY
+  https://www.youtube.com/watch?v=iGHjj_DXzkI RIDICULOUS
+  https://www.youtube.com/watch?v=LsMDCQMcMAE FRIVOLOUS / frivolity / silly-playing-around
 
-  https://www.youtube.com/watch?v=kPjFRjpaTm4 POSSIBLE / CAN
+group:
+  more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
+  https://www.youtube.com/watch?v=WY99FSoo6dI
+    SINCE / UP-TO-NOW / have-been / so-far / all-along
 
 group:
   more: +md:[START](https://www.lifeprint.com/asl101/pages-signs/s/start.htm)
@@ -250,26 +371,21 @@ group:
     trim: 4F-48F
 
 group:
-  more: +md:[DEPRESSED](https://www.lifeprint.com/asl101/pages-signs/d/depressed.htm)
-
-  https://www.youtube.com/watch?v=mLWP-yNA0XU
-    DEPRESSED / DEPRESSION / feeling down
-    trim: 20F-97F
-  https://www.youtube.com/watch?v=pHDIa-ao9BQ ->
-    DEPRESSED / DEPRESSION / feeling down (flat hands version)
-    trim: 13F-60F
+  more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
+  https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
+    trim: 13F-68F
 
 group:
-  more: +md:[EXPENSIVE](https://www.lifeprint.com/asl101/pages-signs/e/expensive.htm)
-
-  https://www.youtube.com/watch?v=ZdmmD6ZsQrw EXPENSIVE
-    trim: 26F-80F
+  more: +md:[SUCCEED](https://www.lifeprint.com/asl101/pages-signs/s/succeed.htm)
+  https://www.youtube.com/watch?v=SrzPozIawec
+    SUCCESS / SUCCEED / accomplish / managed to
+  https://www.youtube.com/watch?v=y-o6GhUKPbI PAH! / SUCCEED-finally
 
 group:
-  more: +md:[CHEAP](https://www.lifeprint.com/asl101/pages-signs/c/cheap.htm)
+  more: +md:[SURPRISE](https://www.lifeprint.com/asl101/pages-signs/s/surprise.htm)
 
-  https://www.youtube.com/watch?v=H-39q5BLM44 CHEAP / INEXPENSIVE
-    trim: 7F-59F
+  https://www.youtube.com/watch?v=95AiB9DJaiI SURPRISE
+    trim: 3F-56F
 
 group:
   more: +md:[THAN](https://www.lifeprint.com/asl101/pages-signs/t/than.htm)
@@ -291,46 +407,11 @@ group:
     trim: 4F-57F
 
 group:
-  more: +md:[DEPEND](https://www.lifeprint.com/asl101/pages-signs/d/depend.htm)
-
-  https://www.youtube.com/watch?v=8E1NT-uiDXs DEPEND / it-DEPENDS / DEPENDS-on
-    trim: 10F-73F
-
-group:
   more: +md:[THEATER](https://www.lifeprint.com/asl101/pages-signs/t/theater.htm)
 
   https://www.youtube.com/watch?v=ZaxcUQkJ2a4
     THEATER / ACT / DRAMA / PLAY / SHOW
     trim: 14F-75F
-
-group:
-  more: +md:[SURPRISE](https://www.lifeprint.com/asl101/pages-signs/s/surprise.htm)
-
-  https://www.youtube.com/watch?v=95AiB9DJaiI SURPRISE
-    trim: 3F-56F
-
-group:
-  more: +md:[REMEMBER](https://www.lifeprint.com/asl101/pages-signs/r/remember.htm)
-
-  https://www.youtube.com/watch?v=AlQ5uuZk0ps REMEMBER
-    trim: 2F-65F
-  https://www.youtube.com/watch?v=yabFLDVcEOM MEMORY / MEMORIZE
-    trim: 30F-99F
-
-group:
-  more: +md:[PARTNER](https://www.lifeprint.com/asl101/pages-signs/p/partner.htm)
-
-  # Dr Bill does SHARE PERSON, but in class we were taught to just use SHARE.
-  https://www.youtube.com/watch?v=3E2_HVDL9T8 SHARE / romantic-PARTNER
-    trim: 13F-66F
-  https://www.youtube.com/watch?v=hxvnNhay64c PARTNERSHIP (non-romantic)
-    trim: 5F-70F
-  https://www.youtube.com/watch?v=cMlRLyAmpZc ROOMATE / PARTNER (non-romantic)
-    trim: 12F-72F
-  https://www.youtube.com/watch?v=zYc7JHABcwg PAIR / COUPLE
-    trim: 10F-55F
-  https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
-    trim: 5F-55F
 
 group:
   more: +md:[TOO-MUCH](https://www.lifeprint.com/asl101/pages-signs/t/too-much.htm)
@@ -339,101 +420,14 @@ group:
     trim: 9F-64F
 
 group:
-  more: +md:[GROW](https://www.lifeprint.com/asl101/pages-signs/g/grow.htm)
-
-  # GROW is in lesson 14 under SPRING
-  https://www.youtube.com/watch?v=K06cSaDx4BM GROW-large
-    trim: 41F-109F
-  https://www.youtube.com/watch?v=FE1X19IEu0E SPROUT
-    trim: 6F-
-
-group:
-  more: +md:[FRUIT](https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm)
-
-  https://www.youtube.com/watch?v=GF5UtlyLuyw FRUIT
-    trim: 10F-78F
-
-group:
-  more: +md:[YOUNG](https://www.lifeprint.com/asl101/pages-signs/y/young.htm)
-
-  https://www.youtube.com/watch?v=I02FA61xpCs YOUNG
-    trim: 26F-95F
-
-group:
-  more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
-
-  https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
-    trim: 15F-63F
-
-group:
-  more: +md:[FRIENDLY](https://www.lifeprint.com/asl101/pages-signs/f/friendly.htm)
-
-  https://www.youtube.com/watch?v=y2vzVSDM00k FRIENDLY
-    trim: 8F-
-
-group:
-  more: +md:[EITHER](https://www.lifeprint.com/asl101/pages-signs/e/either.htm)
-  https://www.youtube.com/watch?v=uLoKdhE7rYU EITHER
-    trim: 12F-76F
-
-group:
-  more: +md:[EXPLAIN](https://www.lifeprint.com/asl101/pages-signs/e/explain.htm)
-  https://www.youtube.com/watch?v=2Na_TOtHw2E EXPLAIN / DESCRIBE / INSTRUCTIONS
-    trim: 27F-92F
-
-group:
-  more: +md:[SHOW](https://www.lifeprint.com/asl101/pages-signs/s/show.htm)
-
-  https://www.youtube.com/watch?v=4vABNRuGfRw SHOW / display / represent
-    trim: 8F-69F
-  https://www.youtube.com/watch?v=U48BpmXzSXk SHOW-me
-    trim: 7F-66F
-  https://www.youtube.com/watch?v=z_MPz6HY1W4 SHOW-3rd-person
-    trim: 3F-
-
-  tags: +extra
-  https://www.youtube.com/watch?v=UYkt4YgYcuE
-    SHOW-UP / appearance / appear / pop up / symptom
-    trim: 6F-57F
-
-group:
-  more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
-  https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
-    trim: 26F-98F
+  more: +md:[TRY](https://www.lifeprint.com/asl101/pages-signs/t/try.htm)
+  https://www.youtube.com/watch?v=izb3v8uj9rs TRY (T-hand version)
+  https://www.youtube.com/watch?v=Hr11yePqoek TRY (A-hand version)
 
 group:
   more: +md:[VARIOUS](https://www.lifeprint.com/asl101/pages-signs/v/various.htm)
   https://www.youtube.com/watch?v=nN8-OhCTosE VARYING / VARIETY / VARIOUS
   https://www.youtube.com/watch?v=0GaEEybVYVw VARIOUS / etc / and-so-forth / yadda-yadda
-
-group:
-  more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
-  https://www.youtube.com/watch?v=nEwU553Q8tE OTHER
-
-group:
-  more: +md:[PROUD](https://www.lifeprint.com/asl101/pages-signs/p/proud.htm)
-  https://www.youtube.com/watch?v=v74BSmAB5Uk PRIDE / PROUD
-
-group:
-  more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
-  https://www.youtube.com/watch?v=uj4e7ldHVbY SEARCH / LOOK-FOR / SEEK
-
-group:
-  more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
-  https://www.youtube.com/watch?v=WY99FSoo6dI
-    SINCE / UP-TO-NOW / have-been / so-far / all-along
-
-group:
-  more: +md:[SILLY](https://www.lifeprint.com/asl101/pages-signs/s/silly.htm)
-  https://www.youtube.com/watch?v=4lVC2h-vul0 SILLY
-  https://www.youtube.com/watch?v=iGHjj_DXzkI RIDICULOUS
-  https://www.youtube.com/watch?v=LsMDCQMcMAE FRIVOLOUS / frivolity / silly-playing-around
-
-group:
-  more: +md:[SUCCEED](https://www.lifeprint.com/asl101/pages-signs/s/succeed.htm)
-  https://www.youtube.com/watch?v=SrzPozIawec
-    SUCCESS / SUCCEED / accomplish / managed to
-  https://www.youtube.com/watch?v=y-o6GhUKPbI PAH! / SUCCEED-finally
 
 group:
   more: +md:[WHAT’S-UP](https://www.lifeprint.com/asl101/pages-signs/w/whats-up.htm)
@@ -442,6 +436,12 @@ group:
 group:
   more: +md:[WORRY](https://www.lifeprint.com/asl101/pages-signs/w/worry.htm)
   https://www.youtube.com/watch?v=HX-57T9JTwI WORRY
+
+group:
+  more: +md:[YOUNG](https://www.lifeprint.com/asl101/pages-signs/y/young.htm)
+
+  https://www.youtube.com/watch?v=I02FA61xpCs YOUNG
+    trim: 26F-95F
 
 # From lesson 2 video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 https://www.youtube.com/watch?v=yOq40lDCkcM NONE
