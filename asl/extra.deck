@@ -183,9 +183,9 @@ group:
 group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
   https://www.youtube.com/watch?v=9SMHSwdQUwE CHRISTMAS (C-hand version)
-  https://www.youtube.com/watch?v=41xJpgSzFdI CHRISTMAS -> (C-hand-up version)
+  https://www.youtube.com/watch?v=41xJpgSzFdI -> CHRISTMAS (C-hand-up version)
   https://www.youtube.com/watch?v=2VMFGfplpac CHRISTMAS (C tree twist out version)
-  https://www.youtube.com/watch?v=cg8PmdDrQ7Q CHRISTMAS -> (C tree twist in version)
+  https://www.youtube.com/watch?v=cg8PmdDrQ7Q -> CHRISTMAS (C tree twist in version)
 
 group:
   more: +md:[COUNTRY](https://www.lifeprint.com/asl101/pages-signs/c/country.htm)
@@ -377,8 +377,11 @@ group:
 group:
   more: +md:[SILLY](https://www.lifeprint.com/asl101/pages-signs/s/silly.htm)
   https://www.youtube.com/watch?v=4lVC2h-vul0 SILLY
+    trim: 6F-51F
   https://www.youtube.com/watch?v=iGHjj_DXzkI RIDICULOUS
+    trim: 1F-35F
   https://www.youtube.com/watch?v=LsMDCQMcMAE FRIVOLOUS / frivolity / silly-playing-around
+    trim: 28F-
 
 group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
@@ -387,11 +390,14 @@ group:
 
 group:
   more: +md:[SMART](https://www.lifeprint.com/asl101/pages-signs/s/smart.htm)
-  https://www.youtube.com/watch?v=jSrpOyl3ASc SMART / INTELLIGENT (index finger version)
+  https://www.youtube.com/watch?v=jSrpOyl3ASc
+    SMART / INTELLIGENT (index finger version)
     trim: 7F-66F
-  https://www.youtube.com/watch?v=HduVfkAvx_M SMART / INTELLIGENT / CLEVER / BRIGHT (8-hand version)
+  https://www.youtube.com/watch?v=HduVfkAvx_M
+    SMART / INTELLIGENT / CLEVER / BRIGHT (8-hand version)
     trim: 12F-62F
-  https://www.youtube.com/watch?v=Yuc8uoiNDzs SENSE / MAKE-SENSE
+  https://www.youtube.com/watch?v=Yuc8uoiNDzs
+    SENSE / MAKE-SENSE / BRAIN / MIND / mental
     trim: 18F-68F
   https://www.youtube.com/watch?v=vnon88Fjhsg COMMON-SENSE
     trim: 9F-56F
@@ -487,8 +493,6 @@ https://www.youtube.com/watch?v=Yn_g8dWClaE granddaughter
   trim: 14F-83F
 
 # From lesson 3 video (https://www.youtube.com/watch?v=r4jsQdoW1bw)
-https://www.youtube.com/watch?v=aoZUc6qJD8I BRAIN / MIND / mental
-  trim: 15F-70F
 https://www.youtube.com/watch?v=5UnUWDYxfv0 CORRECT / right / accurate
   trim: 4F-60F
 https://www.youtube.com/watch?v=BV6mXa4Gp58 @98F-150F TEACH-ME (directional)
