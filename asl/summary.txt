@@ -3517,7 +3517,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=YoySFjYgjc8 @0- TEXT: 'BEER (doubl
 Lifeprint ASL https://www.youtube.com/watch?v=Yuc8uoiNDzs @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=Yuc8uoiNDzs_audio='strip'_clip=(0.6006, 2.2689333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Yuc8uoiNDzs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/smart.htm">SMART</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Yuc8uoiNDzs @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=Yuc8uoiNDzs @0- TEXT: 'SENSE / MAKE-SENSE'
+Lifeprint ASL https://www.youtube.com/watch?v=Yuc8uoiNDzs @0- TEXT: 'SENSE / MAKE-SENSE / BRAIN / MIND / mental'
 Lifeprint ASL https://www.youtube.com/watch?v=YvegBgfEEO4 @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=YvegBgfEEO4_audio='strip'_clip=(0.5672333333333334, 2.2355666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=YvegBgfEEO4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/basket.htm">BASKET</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=YvegBgfEEO4 @0- TAGS: 'Lifeprint lesson_08 vocabulary'
@@ -3786,10 +3786,6 @@ Lifeprint ASL https://www.youtube.com/watch?v=ajIA0oBLMgM @0- MEDIA: "/Users/dan
 Lifeprint ASL https://www.youtube.com/watch?v=ajIA0oBLMgM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ajIA0oBLMgM @0- TAGS: 'Lifeprint extra extra-deck first_100_signs vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ajIA0oBLMgM @0- TEXT: 'CENTS'
-Lifeprint ASL https://www.youtube.com/watch?v=aoZUc6qJD8I @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=aoZUc6qJD8I_audio='strip'_clip=(0.5005000000000001, 2.3356666666666666).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=aoZUc6qJD8I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=aoZUc6qJD8I @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=aoZUc6qJD8I @0- TEXT: 'BRAIN / MIND / mental'
 Lifeprint ASL https://www.youtube.com/watch?v=arMsuswd_AM @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=arMsuswd_AM_audio='strip'_clip=(0.3670333333333333, 1.9352666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=arMsuswd_AM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/socks.htm">SOCKS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=arMsuswd_AM @0- TAGS: 'Lifeprint first_100_signs lesson_08 vocabulary'
