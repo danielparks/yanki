@@ -4,103 +4,136 @@ tags: Lifeprint vocabulary extra extra-deck
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-https://www.youtube.com/watch?v=ZHo1AKNIvBY OREGON
-https://www.youtube.com/watch?v=y7Jyiy6soRM BREAK (broken)
-https://www.youtube.com/watch?v=4Wvw0BFABwY BREAK / INTERMISSION
-https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST
-https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH
-https://www.youtube.com/watch?v=eFsZ6FwpX8g TOP
-https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY
-https://www.youtube.com/watch?v=1wk1W5GuGiI COFFEE
-  trim: 13F-72F
-https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
-  trim: 10F-59F
-https://www.youtube.com/watch?v=TXgVQkDoMEc CAFETERIA / CAFÉ
-  trim: 7F-
-https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
-  trim: 18F-74F
-https://www.youtube.com/watch?v=AjTT29zx3SQ nickname
-  trim: 12F-54F
-https://www.youtube.com/watch?v=ClNyMzf07dQ NUMBER
-  trim: 13F-76F
-https://www.youtube.com/watch?v=stafgiooHts LAZY
-  trim: 13F-62F
-https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
-  trim: 12F-65F
-https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
-  trim: 8F-68F
 https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
   trim: 9F-51F
-https://www.youtube.com/watch?v=XVgP90cND4M ENOUGH / SUFFICIENT
-  trim: 6F-78F
-https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
-  trim: 24F-60F
-https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
-  trim: 5F-78F
-https://www.youtube.com/watch?v=17gZsl0jClE GAME
-https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
-  trim: 10F-76F
-https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
-https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
-  trim: 16F-76F
-https://www.youtube.com/watch?v=zhCTyufusjs NOTHING / nuthin (casual)
-https://www.youtube.com/watch?v=bQdiN_hgeWQ HOME WORK (not casual)
-  trim: 18F-108F
-https://www.youtube.com/watch?v=AhwgtWiATWE HOME WORK (casual)
-https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
+
+https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
+  trim: 18F-74F
+
+https://www.youtube.com/watch?v=y7Jyiy6soRM BREAK (broken)
+
+https://www.youtube.com/watch?v=4Wvw0BFABwY BREAK / INTERMISSION
+
 https://www.youtube.com/watch?v=JPrGWEvbmgE BUS
-https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
-https://www.youtube.com/watch?v=XkSY0TdkQdM LIE / fib
-https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
-https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
-https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
-https://www.youtube.com/watch?v=6Yx7NEqOvHo NURSE
+https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
+
+https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY
+
+https://www.youtube.com/watch?v=TXgVQkDoMEc CAFETERIA / CAFÉ
+  trim: 7F-
 
 https://www.youtube.com/watch?v=CBvbmM7dHaY CATEGORY / CLUSTER / section / group
   trim: 7F-50F
   more: md:[CLUSTER](https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm)
 
-https://www.youtube.com/watch?v=lFSWuq0YurM
-  VOICE-LOCK / keep-you-voice-off / no-talking (idiomatic)
-  trim: 10F-71F
+https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
+
+https://www.youtube.com/watch?v=1wk1W5GuGiI COFFEE
+  trim: 13F-72F
+
+https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
+  trim: 8F-68F
+
+https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
+  more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
+
+https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
+  trim: 9F-61F
+
+https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH
+
+https://www.youtube.com/watch?v=XVgP90cND4M ENOUGH / SUFFICIENT
+  trim: 6F-78F
+
+https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST
+
+https://www.youtube.com/watch?v=17gZsl0jClE GAME
 
 https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
   trim: 3F-57F
   more: +md:[HAIR](https://www.lifeprint.com/asl101/pages-signs/h/hair.htm)
 
+https://www.youtube.com/watch?v=AhwgtWiATWE HOME WORK (casual)
+
+https://www.youtube.com/watch?v=bQdiN_hgeWQ HOME WORK (not casual)
+  trim: 18F-108F
+
+https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
+  trim: 5F-78F
+
+https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
+  trim: 7F-50F
+
+https://www.youtube.com/watch?v=stafgiooHts LAZY
+  trim: 13F-62F
+
+https://www.youtube.com/watch?v=XkSY0TdkQdM LIE / fib
+
+https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
+
+https://www.youtube.com/watch?v=AjTT29zx3SQ nickname
+  trim: 12F-54F
+
+https://www.youtube.com/watch?v=zhCTyufusjs NOTHING / nuthin (casual)
+
+https://www.youtube.com/watch?v=ClNyMzf07dQ NUMBER
+  trim: 13F-76F
+
+https://www.youtube.com/watch?v=6Yx7NEqOvHo NURSE
+
 https://www.youtube.com/watch?v=EKop7phm0Hs OPPOSITE / ALLERGY
   trim: 23F-75F
   more: +md:[OPPOSITE](https://www.lifeprint.com/asl101/pages-signs/o/opposite.htm)
 
-https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
-  trim: 23F-
-  more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
+https://www.youtube.com/watch?v=ZHo1AKNIvBY OREGON
+
+https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
+
+https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
+
+https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
+  trim: 10F-76F
 
 https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
   trim: 8F-61F
   more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
 
-https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
-  trim: 9F-61F
+https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
+  trim: 10F-59F
 
-https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
-  trim: 7F-50F
-
-https://www.youtube.com/watch?v=pNW4_GkXVhY WEIRD
-  trim: 8F-65F
-  more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
+https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
+  trim: 12F-65F
 
 https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
   trim: 4F-60F
   more: +md:[STRANGE](https://www.lifeprint.com/asl101/pages-signs/s/strange.htm)
+
+https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
+  trim: 16F-76F
+
+https://www.youtube.com/watch?v=eFsZ6FwpX8g TOP
+
+https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
+
+https://www.youtube.com/watch?v=lFSWuq0YurM
+  VOICE-LOCK / keep-you-voice-off / no-talking (idiomatic)
+  trim: 10F-71F
+
+https://www.youtube.com/watch?v=pNW4_GkXVhY WEIRD
+  trim: 8F-65F
+  more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
 
 https://www.youtube.com/watch?v=0SxXfJAnBHk
   WHATEVER / regardless / doesn’t matter / anyway / that’s not important
   trim: 0-51F
   more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
 
-https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
-  more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
+https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
+  trim: 23F-
+  more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
+
+https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
+  trim: 24F-60F
 
 # Groups represent Lifeprint pages with everything on them.
 
