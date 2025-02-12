@@ -3777,7 +3777,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=aUF9QfTiyoA @0- TEXT: 'SLEEP-IN, Y
 Lifeprint ASL https://www.youtube.com/watch?v=aXtUXP-Pd8A @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=aXtUXP-Pd8A_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=aXtUXP-Pd8A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<h3>What did you do after school yesterday?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=aXtUXP-Pd8A @0- TAGS: 'Lifeprint lesson_16 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=aXtUXP-Pd8A @0- TEXT: 'YESTERDAY, SCHOOL FINISH FROM-THEN-ON YOU what-DO?'
+Lifeprint ASL https://www.youtube.com/watch?v=aXtUXP-Pd8A @0- TEXT: 'YESTERDAY, SCHOOL FINISH FROM-THEN-ON what-DO YOU?'
 Lifeprint ASL https://www.youtube.com/watch?v=adXm1AhwMBM @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=adXm1AhwMBM_audio='strip'_clip=(0.8341666666666667, 2.8361666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=adXm1AhwMBM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/door.htm">DOOR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=adXm1AhwMBM @0- TAGS: 'Lifeprint lesson_09 vocabulary'
