@@ -31,6 +31,8 @@ https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
 https://www.youtube.com/watch?v=1wk1W5GuGiI COFFEE
   trim: 13F-72F
 
+https://www.youtube.com/watch?v=zy9ju0c_9oo COMPLEX / COMPLICATED
+
 https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
   trim: 8F-68F
 
@@ -71,6 +73,9 @@ https://www.youtube.com/watch?v=XkSY0TdkQdM LIE / fib
 
 https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
 
+https://www.youtube.com/watch?v=1o8VwwFYyrs
+  MUFFIN / CUPCAKE / CAKE (palm version)
+
 https://www.youtube.com/watch?v=AjTT29zx3SQ nickname
   trim: 12F-54F
 
@@ -103,6 +108,8 @@ https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
 
 https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
   trim: 12F-65F
+
+https://www.youtube.com/watch?v=H2vcSP2PRxU STEEP / GROUND-GOING-UP
 
 https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
   trim: 4F-60F
@@ -275,6 +282,10 @@ group:
   https://www.youtube.com/watch?v=FsM-D-NCNdc HAPPEN
 
 group:
+  more: +md:[JOB](https://www.lifeprint.com/asl101/pages-signs/j/job.htm)
+  https://www.youtube.com/watch?v=42A3aALiSng #JOB
+
+group:
   more: +md:[LOUSY](https://www.lifeprint.com/asl101/pages-signs/l/lousy.htm)
   https://www.youtube.com/watch?v=6CtpIW3fQtw LOUSY
 
@@ -282,6 +293,10 @@ group:
   more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
   https://www.youtube.com/watch?v=7bCApb-yubw MAYBE / MAY / MIGHT
     trim: 15F-71F
+
+group:
+  more: +md:[MEDICINE](https://www.lifeprint.com/asl101/pages-signs/m/medicine.htm)
+  https://www.youtube.com/watch?v=88xSMjuFPHA MEDICINE / MEDICAL / DRUG
 
 group:
   more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
@@ -307,6 +322,15 @@ group:
     trim: 10F-55F
   https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
     trim: 5F-55F
+
+group:
+  more: +md:[PAY](https://www.lifeprint.com/asl101/pages-signs/p/pay.htm)
+  https://www.youtube.com/watch?v=WX0DTnUs2Ek PAY / PAY-you / PAYMENT
+    trim: 15F-75F
+  https://www.youtube.com/watch?v=aPmr-RX9kvM PAY-me
+    trim: 0-44F
+  https://www.youtube.com/watch?v=1PwaJzeQTuo IX PAY-them
+    trim: 6F-66F
 
 group:
   more: +md:[POSSIBLE](https://www.lifeprint.com/asl101/pages-signs/p/possible.htm)
@@ -363,6 +387,23 @@ group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
   https://www.youtube.com/watch?v=WY99FSoo6dI
     SINCE / UP-TO-NOW / have-been / so-far / all-along
+
+group:
+  more: +md:[SMART](https://www.lifeprint.com/asl101/pages-signs/s/smart.htm)
+  https://www.youtube.com/watch?v=jSrpOyl3ASc SMART / INTELLIGENT (index finger version)
+    trim: 7F-66F
+  https://www.youtube.com/watch?v=HduVfkAvx_M SMART / INTELLIGENT / CLEVER / BRIGHT (8-hand version)
+    trim: 12F-62F
+  https://www.youtube.com/watch?v=Yuc8uoiNDzs SENSE / MAKE-SENSE
+    trim: 18F-68F
+  https://www.youtube.com/watch?v=vnon88Fjhsg COMMON-SENSE
+    trim: 9F-56F
+
+group:
+  more: +md:[SPANISH](https://www.lifeprint.com/asl101/pages-signs/s/spanish.htm)
+  https://www.youtube.com/watch?v=kBbDaJNNO6U SPANISH / SPAIN (single movement version)
+  https://www.youtube.com/watch?v=Cph1Vk3lFXk SPAIN (chest version)
+  https://www.youtube.com/watch?v=46OcU3kYyVQ SPAIN / SPANISH (double movement version)
 
 group:
   more: +md:[START](https://www.lifeprint.com/asl101/pages-signs/s/start.htm)
