@@ -26,7 +26,7 @@ https://www.youtube.com/watch?v=ClNyMzf07dQ NUMBER
 https://www.youtube.com/watch?v=stafgiooHts LAZY
   trim: 13F-62F
 https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
- trim: 12F-65F
+  trim: 12F-65F
 https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
   trim: 8F-68F
 https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
@@ -71,40 +71,14 @@ https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
 https://www.youtube.com/watch?v=EKop7phm0Hs OPPOSITE / ALLERGY
   trim: 23F-75F
   more: +md:[OPPOSITE](https://www.lifeprint.com/asl101/pages-signs/o/opposite.htm)
-https://www.youtube.com/watch?v=O3LpW_EpHaw
-  trim: 14F-70F
-  RECOGNIZE / NOTICE / DETECT (non-directional)
-  more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
-https://www.youtube.com/watch?v=su0Hg7jFJ0g
-  trim: 3F-62F
-  RECOGNIZE / NOTICE / DETECT (directional)
-  more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
 
 https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
   trim: 23F-
   more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
+
 https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
   trim: 8F-61F
   more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
-
-https://www.youtube.com/watch?v=6_5BxE7yBEo BORED
-  trim: 11F-62F
-  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
-https://www.youtube.com/watch?v=7gxOKAj-JZQ BORING / DRY / DULL / not-interesting
-  trim: 7F-
-  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
-
-https://www.youtube.com/watch?v=7bCApb-yubw MAYBE / MAY / MIGHT
-  trim: 15F-71F
-  more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
-
-https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
-  trim: 13F-75F
-  more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
-
-https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
-  trim: 13F-68F
-  more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
 
 https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
   trim: 9F-61F
@@ -150,6 +124,14 @@ group:
     trim: 31F-94F
 
 group:
+  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
+  https://www.youtube.com/watch?v=6_5BxE7yBEo BORED
+    trim: 11F-62F
+  https://www.youtube.com/watch?v=7gxOKAj-JZQ BORING / DRY / DULL / not-interesting
+    trim: 7F-
+  https://www.youtube.com/watch?v=PObXeUDqJ-o very-BORING (horns version)
+
+group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
   https://www.youtube.com/watch?v=9SMHSwdQUwE CHRISTMAS (C-hand version)
   https://www.youtube.com/watch?v=41xJpgSzFdI CHRISTMAS -> (C-hand-up version)
@@ -163,6 +145,12 @@ group:
   https://www.youtube.com/watch?v=ygSdMz0TnYI
     COUNTRY / RURAL / COUNTY (flat hand version)
   https://www.youtube.com/watch?v=seKiOd6TxLw FOREIGN
+
+group:
+  more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
+  https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
+    trim: 13F-75F
+  # Don’t really need two-handed variation. STUBBORN has it’s own page.
 
 group:
   more: +md:[EXPERIENCE](https://www.lifeprint.com/asl101/pages-signs/e/experience.htm)
@@ -184,10 +172,29 @@ group:
   https://www.youtube.com/watch?v=6CtpIW3fQtw LOUSY
 
 group:
+  more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
+  https://www.youtube.com/watch?v=7bCApb-yubw MAYBE / MAY / MIGHT
+    trim: 15F-71F
+
+group:
   more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
   https://www.youtube.com/watch?v=Zv7n5RlK6W4 NEAR / CLOSE-by / CLOSE-to
   https://www.youtube.com/watch?v=nwYLaBzkSMw ->
     NEAR / CLOSE-by / CLOSE-to (pat hand version)
+
+group:
+  more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
+  https://www.youtube.com/watch?v=O3LpW_EpHaw
+    RECOGNIZE / NOTICE / DETECT (non-directional)
+    trim: 14F-70F
+  https://www.youtube.com/watch?v=su0Hg7jFJ0g
+    RECOGNIZE / NOTICE / DETECT (directional)
+    trim: 3F-62F
+
+group:
+  more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
+  https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
+    trim: 13F-68F
 
 group:
   more: +md:[TRY](https://www.lifeprint.com/asl101/pages-signs/t/try.htm)
@@ -443,8 +450,8 @@ https://www.youtube.com/watch?v=_QQODnTMuZg TEXTING
 https://www.youtube.com/watch?v=ZN_y94vSCcc SAY-NO-TO-ME
   trim: 13F-58F
 https://www.youtube.com/watch?v=OMC3x4UxQVQ
-  trim: 13F-61F
   [one-person]-SAY-NO-TO-[other-person]
+  trim: 13F-61F
 
 # Related to lesson 6
 https://www.youtube.com/watch?v=r7sKUtZZDK4 OLD-1 / 1-year-old
