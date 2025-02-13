@@ -143,6 +143,10 @@ https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
 # Groups represent Lifeprint pages with everything on them.
 
 group:
+  more: +md:[AFRAID](https://www.lifeprint.com/asl101/pages-signs/a/afraid.htm)
+  https://www.youtube.com/watch?v=OMEUC9FKU_k FEAR / AFRAID / SCARE
+
+group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
@@ -174,6 +178,11 @@ group:
     trim: 31F-94F
 
 group:
+  more: +md:[CAREFUL](https://www.lifeprint.com/asl101/pages-signs/c/careful.htm)
+  https://www.youtube.com/watch?v=GgjVnyBLmhg CAREFUL / CARE
+  https://www.youtube.com/watch?v=GSjbYcneOzE TAKE-CARE
+
+group:
   more: +md:[CHEAP](https://www.lifeprint.com/asl101/pages-signs/c/cheap.htm)
   https://www.youtube.com/watch?v=H-39q5BLM44 CHEAP / INEXPENSIVE
     trim: 7F-59F
@@ -196,6 +205,10 @@ group:
 group:
   more: +md:[CUTE](https://www.lifeprint.com/asl101/pages-signs/c/cute.htm)
   https://www.youtube.com/watch?v=zEtSV7lXycY SUGAR / CUTE / CANDY
+
+group:
+  more: +md:[DANGER](https://www.lifeprint.com/asl101/pages-signs/d/danger.htm)
+  https://www.youtube.com/watch?v=MawcqSlNyCY DANGEROUS / DANGER
 
 group:
   more: +md:[DELICIOUS](https://www.lifeprint.com/asl101/pages-signs/d/delicious.htm)
