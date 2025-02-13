@@ -145,6 +145,7 @@ https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
 group:
   more: +md:[AFRAID](https://www.lifeprint.com/asl101/pages-signs/a/afraid.htm)
   https://www.youtube.com/watch?v=OMEUC9FKU_k FEAR / AFRAID / SCARE
+    trim: 27F-82F
 
 group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
@@ -157,12 +158,15 @@ group:
     trim: 13F-72F
   # Not on page, but it seems common around here.
   https://www.youtube.com/watch?v=7qjJ90asdUs BORN / BIRTH (S-hand version)
+    trim: 10F-64F
 
 group:
   more: +md:[BIRTHDAY](https://www.lifeprint.com/asl101/pages-signs/b/birthday.htm)
     There are a lot more variations of BIRTHDAY; see what local people use.
   https://www.youtube.com/watch?v=eB0lhZn8N9A BIRTHDAY / BIRTH
+    trim: 24F-82F
   https://www.youtube.com/watch?v=1n3eN9v8VV0 BIRTH-[arrive] DAY
+    trim: 14F-94F
 
 group:
   more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
@@ -190,30 +194,41 @@ group:
 group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
   https://www.youtube.com/watch?v=9SMHSwdQUwE CHRISTMAS (C-hand version)
+    trim: 4F-49F
   https://www.youtube.com/watch?v=41xJpgSzFdI -> CHRISTMAS (C-hand-up version)
+    trim: 18F-67F
   https://www.youtube.com/watch?v=2VMFGfplpac CHRISTMAS (C tree twist out version)
+    trim: 4F-54F
   https://www.youtube.com/watch?v=cg8PmdDrQ7Q -> CHRISTMAS (C tree twist in version)
+    trim: 3F-
 
 group:
   more: +md:[COUNTRY](https://www.lifeprint.com/asl101/pages-signs/c/country.htm)
   https://www.youtube.com/watch?v=YgCmE5kljQw
     COUNTRY / RURAL / COUNTY (Y-hand version)
+    trim: 13F-76F
   https://www.youtube.com/watch?v=ygSdMz0TnYI
     COUNTRY / RURAL / COUNTY (flat hand version)
+    trim: 5F-76F
   https://www.youtube.com/watch?v=seKiOd6TxLw FOREIGN
+    trim: 5F-69F
 
 group:
   more: +md:[CUTE](https://www.lifeprint.com/asl101/pages-signs/c/cute.htm)
   https://www.youtube.com/watch?v=zEtSV7lXycY SUGAR / CUTE / CANDY
+    trim: 17F-57F
 
 group:
   more: +md:[DANGER](https://www.lifeprint.com/asl101/pages-signs/d/danger.htm)
   https://www.youtube.com/watch?v=MawcqSlNyCY DANGEROUS / DANGER
+    trim: 3F-61F
 
 group:
   more: +md:[DELICIOUS](https://www.lifeprint.com/asl101/pages-signs/d/delicious.htm)
   https://www.youtube.com/watch?v=jHACe_ba-tc DELICIOUS (snap version)
+    trim: 11F-58F
   https://www.youtube.com/watch?v=SgUwD_atMHo DELICIOUS (open-8 version)
+    trim: 11F-76F
 
 group:
   more: +md:[DEPEND](https://www.lifeprint.com/asl101/pages-signs/d/depend.htm)
