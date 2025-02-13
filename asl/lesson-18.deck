@@ -18,21 +18,29 @@ group:
 group:
   more: +md:[BOAT](https://www.lifeprint.com/asl101/pages-signs/b/boat.htm)
   https://www.youtube.com/watch?v=aDt-KNA-v04 SHIP / BOAT
+    trim: 1F-69F
 
   tags: +extra
   https://www.youtube.com/watch?v=GBMSdLL7mTY SAILBOAT / BOAT
+    trim: 5F-71F
   https://www.youtube.com/watch?v=n6-cBztjHb0 SHIP-WITH-SAILS / BOAT
+    trim: 10F-86F
   https://www.youtube.com/watch?v=mEws8MNWC_w F-E-R-R-Y BOAT
+    trim: 5F-97F
   # No video for CRUISE.
 
 group:
   more: +md:[BUILD](https://www.lifeprint.com/asl101/pages-signs/b/build.htm)
   https://www.youtube.com/watch?v=Ytt6YIYV6qs
     BUILD / CONSTRUCT (bent hand version)
+    trim: 11F-62F
   https://www.youtube.com/watch?v=_UAPcbyeN_I
     BUILD / CONSTRUCT (H-hand version)
+    trim: 4F-57F
   https://www.youtube.com/watch?v=k2FNY6d_jVg BUILDING
+    trim: 27F-102F
   https://www.youtube.com/watch?v=GUr6CFbZ2FM BUILD (layers version)
+    trim: 6F-83F
 
 group:
   more: +md:[Classifier 3](https://www.lifeprint.com/asl101/pages-signs/c/cl3.htm)
@@ -109,7 +117,7 @@ group:
   https://www.youtube.com/watch?v=84XYguYDLjs EXODUS / MASS-LEAVE
   https://www.youtube.com/watch?v=shvegK_StOg -> EXODUS / MASS-LEAVE
   https://www.youtube.com/watch?v=3cMNYOqgCZA EVACUATE / FLEE
-  https://www.youtube.com/watch?v=e1EY8LBfXSw ZOOM (L-G version) / LEAVE-QUICKLY
+  # ZOOM / LEAVE-QUICKLY is the same as TRAIN-GONE
 
 group:
   more: +md:[LOSE](https://www.lifeprint.com/asl101/pages-signs/l/lose.htm)
@@ -155,7 +163,8 @@ group:
 group:
   more: +md:[TRAIN](https://www.lifeprint.com/asl101/pages-signs/t/train.htm)
   https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
-  https://www.youtube.com/watch?v=40Jn-HXFtIw TRAIN-GONE (idiom)
+  https://www.youtube.com/watch?v=40Jn-HXFtIw
+    TRAIN-GONE (idiom) / ZOOM (L-G version) / LEAVE-QUICKLY
 
 group:
   more: +md:[TRAVEL](https://www.lifeprint.com/asl101/pages-signs/t/travel.htm)
