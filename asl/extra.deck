@@ -213,6 +213,36 @@ group:
     trim: 13F-60F
 
 group:
+  more: +md:[DOLLAR](https://www.lifeprint.com/asl101/pages-signs/d/dollar.htm)
+  https://www.youtube.com/watch?v=6VJ7PPwX3v8 DOLLAR
+    trim: 11F-71F
+    tags: +first_100_signs
+  https://www.youtube.com/watch?v=ai1UbD3sNpA -> DOLLAR (end of hand version)
+    trim: 6F-
+  https://www.youtube.com/watch?v=sh2rTfdHORE $1 (twist version)
+    trim: 6F-73F
+  https://www.youtube.com/watch?v=MarNwlwO55s $2 (twist version)
+    trim: 4F-61F
+  https://www.youtube.com/watch?v=I6V4qa3Cba8 $3 (twist version)
+    trim: 6F-73F
+  https://www.youtube.com/watch?v=Pho1TLBdTrI $4 (twist version)
+    trim: 5F-56F
+  https://www.youtube.com/watch?v=Nqh5E8Sy8sA $5 (twist version)
+    trim: 13F-56F
+  https://www.youtube.com/watch?v=4UAAwjWUSdI FIVE DOLLAR / $5
+    trim: 11F-61F
+  https://www.youtube.com/watch?v=9WFbxIVfthI $6 (twist version)
+    trim: 4F-66F
+  https://www.youtube.com/watch?v=aK_bbVxNgYQ $7 (twist version)
+    trim: 28F-91F
+  https://www.youtube.com/watch?v=gDJs3VGp8tw $8 (twist version)
+    trim: 7F-72F
+  https://www.youtube.com/watch?v=LnjDfEuBrmY $9 (twist version)
+    trim: 8F-69F
+  https://www.youtube.com/watch?v=yxQ0PDgcfoY TEN DOLLAR / $10
+    trim: 24F-85F
+
+group:
   more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
   https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
     trim: 13F-75F
@@ -656,8 +686,6 @@ https://www.youtube.com/watch?v=rnb9FxPO7is PLEASE
 https://www.youtube.com/watch?v=orl2KrOMEIQ TALL (bent hand version)
   tags: +first_100_signs
 https://www.youtube.com/watch?v=TooM2jWw9CU SHORT (height)
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=6VJ7PPwX3v8 DOLLARS
   tags: +first_100_signs
 https://www.youtube.com/watch?v=ajIA0oBLMgM CENTS
   tags: +first_100_signs
