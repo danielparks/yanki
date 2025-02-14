@@ -1,4 +1,4 @@
-title: Lifeprint ASL::Vocabulary::Extra
+title: Lifeprint ASL::Lesson Vocabulary::Extra
 more: md:From [Lifeprint](https://www.lifeprint.com/) ASLU
 tags: Lifeprint vocabulary extra extra-deck
 audio: strip
@@ -11,11 +11,7 @@ https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
   trim: 18F-74F
 
 https://www.youtube.com/watch?v=y7Jyiy6soRM BREAK (broken)
-
 https://www.youtube.com/watch?v=4Wvw0BFABwY BREAK / INTERMISSION
-
-https://www.youtube.com/watch?v=JPrGWEvbmgE BUS
-https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
 
 https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY
 
@@ -42,8 +38,6 @@ https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
 https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
   trim: 9F-61F
 
-https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH
-
 https://www.youtube.com/watch?v=XVgP90cND4M ENOUGH / SUFFICIENT
   trim: 6F-78F
 
@@ -54,11 +48,6 @@ https://www.youtube.com/watch?v=17gZsl0jClE GAME
 https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
   trim: 3F-57F
   more: +md:[HAIR](https://www.lifeprint.com/asl101/pages-signs/h/hair.htm)
-
-https://www.youtube.com/watch?v=AhwgtWiATWE HOME WORK (casual)
-
-https://www.youtube.com/watch?v=bQdiN_hgeWQ HOME WORK (not casual)
-  trim: 18F-108F
 
 https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
   trim: 5F-78F
@@ -71,10 +60,6 @@ https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
 
 https://www.youtube.com/watch?v=stafgiooHts LAZY
   trim: 13F-62F
-
-https://www.youtube.com/watch?v=XkSY0TdkQdM LIE / fib
-
-https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
 
 https://www.youtube.com/watch?v=1o8VwwFYyrs
   MUFFIN / CUPCAKE / CAKE (palm version)
@@ -97,11 +82,6 @@ https://www.youtube.com/watch?v=ZHo1AKNIvBY OREGON
 
 https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
 
-https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
-
-https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
-  trim: 10F-76F
-
 https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
   trim: 8F-61F
   more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
@@ -114,31 +94,11 @@ https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
 
 https://www.youtube.com/watch?v=H2vcSP2PRxU STEEP / GROUND-GOING-UP
 
-https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
-  trim: 4F-60F
-  more: +md:[STRANGE](https://www.lifeprint.com/asl101/pages-signs/s/strange.htm)
-
-https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
-  trim: 16F-76F
-
 https://www.youtube.com/watch?v=eFsZ6FwpX8g TOP
 
 https://www.youtube.com/watch?v=lFSWuq0YurM
   VOICE-LOCK / keep-you-voice-off / no-talking (idiomatic)
   trim: 10F-71F
-
-https://www.youtube.com/watch?v=pNW4_GkXVhY WEIRD
-  trim: 8F-65F
-  more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
-
-https://www.youtube.com/watch?v=0SxXfJAnBHk
-  WHATEVER / regardless / doesn’t matter / anyway / that’s not important
-  trim: 0-51F
-  more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
-
-https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
-  trim: 23F-
-  more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
 
 https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
   trim: 24F-60F
@@ -183,6 +143,11 @@ group:
   more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
   https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
     trim: 31F-94F
+
+group:
+  more: +md:[BUS](https://www.lifeprint.com/asl101/pages-signs/b/bus.htm)
+  https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
+  https://www.youtube.com/watch?v=JPrGWEvbmgE -> BUS (may be regional)
 
 group:
   more: +md:[CAREFUL](https://www.lifeprint.com/asl101/pages-signs/c/careful.htm)
@@ -259,6 +224,10 @@ group:
     trim: 12F-76F
 
 group:
+  more: +md:[ENGLISH](https://www.lifeprint.com/asl101/pages-signs/e/english.htm)
+  https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH / ENGLAND
+
+group:
   more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
   https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
     trim: 26F-98F
@@ -307,8 +276,18 @@ group:
   https://www.youtube.com/watch?v=FsM-D-NCNdc HAPPEN
 
 group:
+  more: +md:[HOMEWORK](https://www.lifeprint.com/asl101/pages-signs/h/homework.htm)
+  https://www.youtube.com/watch?v=AhwgtWiATWE HOMEWORK
+
+group:
   more: +md:[JOB](https://www.lifeprint.com/asl101/pages-signs/j/job.htm)
   https://www.youtube.com/watch?v=42A3aALiSng #JOB
+
+group:
+  more: +md:[LIE](https://www.lifeprint.com/asl101/pages-signs/l/lie.htm)
+  https://www.youtube.com/watch?v=XkSY0TdkQdM LIE / fib
+  https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
+  # No video for LIAR or LIE version 3.
 
 group:
   more: +md:[LOUSY](https://www.lifeprint.com/asl101/pages-signs/l/lousy.htm)
@@ -351,6 +330,13 @@ group:
     trim: 10F-55F
   https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
     trim: 5F-55F
+
+group:
+  more: +md:[PARTY](https://www.lifeprint.com/asl101/pages-signs/p/party.htm)
+  https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
+  https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
+    trim: 10F-76F
+  # No video for twisting P version.
 
 group:
   more: +md:[PAY](https://www.lifeprint.com/asl101/pages-signs/p/pay.htm)
@@ -439,9 +425,19 @@ group:
     trim: 4F-48F
 
 group:
+  more: +md:[STRANGE](https://www.lifeprint.com/asl101/pages-signs/s/strange.htm)
+  https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
+    trim: 4F-60F
+
+group:
   more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
   https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
     trim: 13F-68F
+
+group:
+  more: +md:[STUDY](https://www.lifeprint.com/asl101/pages-signs/s/study.htm)
+  https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
+    trim: 16F-76F
 
 group:
   more: +md:[SUCCEED](https://www.lifeprint.com/asl101/pages-signs/s/succeed.htm)
@@ -495,8 +491,28 @@ group:
   https://www.youtube.com/watch?v=0GaEEybVYVw VARIOUS / etc / and-so-forth / yadda-yadda
 
 group:
+  more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
+  https://www.youtube.com/watch?v=pNW4_GkXVhY WEIRD
+    trim: 8F-65F
+
+group:
+  more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
+  https://www.youtube.com/watch?v=0SxXfJAnBHk
+    WHATEVER / regardless / doesn’t matter / anyway / that’s not important
+    trim: 0-51F
+  https://www.youtube.com/watch?v=zXfNs1eO7i0
+    WHATEVER (L-hands version, sarcastic)
+  https://www.youtube.com/watch?v=2PtaPd6wT9c WHATEVER (joke, pinky version)
+    tags: +extra
+
+group:
   more: +md:[WHAT’S-UP](https://www.lifeprint.com/asl101/pages-signs/w/whats-up.htm)
   https://www.youtube.com/watch?v=Q6fYE2gn9mM WHAT’S-UP
+
+group:
+  more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
+  https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
+    trim: 23F-
 
 group:
   more: +md:[WORRY](https://www.lifeprint.com/asl101/pages-signs/w/worry.htm)
