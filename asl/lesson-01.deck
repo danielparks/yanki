@@ -192,20 +192,3 @@ group:
 
   https://www.youtube.com/watch?v=-1Hz72xltNk YOUR
     trim: 9F-42F
-
-# From video (https://www.youtube.com/watch?v=DaMjr4AfYA0)
-# A number of these are covered in future lessons, but they come up too much
-# in the videos and are too useful to leave out.
-tags: +extra
-https://www.youtube.com/watch?v=TdCu_nhXVno LESSON
-  trim: 21F-72F
-https://www.youtube.com/watch?v=TVFEnWVgoII FORGOT / FORGET
-  trim: 9F-83F
-https://www.youtube.com/watch?v=-PNCpqJXy_A SECOND-item-of-two
-  trim: 13F-62F
-https://www.youtube.com/watch?v=ZLN8GbGcxbw VOCABULARY
-  trim: 19F-62F
-https://www.youtube.com/watch?v=ZJ80gGVl7yg REVIEW
-  trim: 20F-93F
-https://www.youtube.com/watch?v=J8cuP-YSZIA DEAF-APPLAUSE / yay
-  trim: 9F-

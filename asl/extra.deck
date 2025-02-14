@@ -504,6 +504,20 @@ group:
   https://www.youtube.com/watch?v=I02FA61xpCs YOUNG
     trim: 26F-95F
 
+# From lesson 1 video (https://www.youtube.com/watch?v=DaMjr4AfYA0)
+https://www.youtube.com/watch?v=TdCu_nhXVno LESSON
+  trim: 21F-72F
+https://www.youtube.com/watch?v=TVFEnWVgoII FORGOT / FORGET
+  trim: 9F-83F
+https://www.youtube.com/watch?v=-PNCpqJXy_A SECOND-item-of-two
+  trim: 13F-62F
+https://www.youtube.com/watch?v=ZLN8GbGcxbw VOCABULARY
+  trim: 19F-62F
+https://www.youtube.com/watch?v=ZJ80gGVl7yg REVIEW
+  trim: 20F-93F
+https://www.youtube.com/watch?v=J8cuP-YSZIA DEAF-APPLAUSE / yay
+  trim: 9F-
+
 # From lesson 2 video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 https://www.youtube.com/watch?v=yOq40lDCkcM NONE
   trim: 19F-79F

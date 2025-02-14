@@ -555,8 +555,8 @@ Lifeprint ASL https://www.youtube.com/watch?v=-LllUQJj1aM @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=-LllUQJj1aM @0- TAGS: 'Lifeprint lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=-LllUQJj1aM @0- TEXT: 'right-HERE'
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=-PNCpqJXy_A_audio='strip'_clip=(0.4337666666666667, 2.0687333333333333).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- TEXT: 'SECOND-item-of-two'
 Lifeprint ASL https://www.youtube.com/watch?v=-Ryxlrb2h5U @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=-Ryxlrb2h5U_audio='strip'_clip=(0.10010000000000001, 2.3356666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=-Ryxlrb2h5U @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/book.htm">BOOK</a></p>\n'
@@ -2367,8 +2367,8 @@ Lifeprint ASL https://www.youtube.com/watch?v=IzTXn1s6JdQ @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=IzTXn1s6JdQ @0- TAGS: 'Lifeprint extra lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=IzTXn1s6JdQ @0- TEXT: 'SLIPPED-MIND'
 Lifeprint ASL https://www.youtube.com/watch?v=J8cuP-YSZIA @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=J8cuP-YSZIA_audio='strip'_clip=(0.15014999210567864, None).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=J8cuP-YSZIA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=J8cuP-YSZIA @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=J8cuP-YSZIA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=J8cuP-YSZIA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=J8cuP-YSZIA @0- TEXT: 'DEAF-APPLAUSE / yay'
 Lifeprint ASL https://www.youtube.com/watch?v=JA8Kr2vBYrY @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=JA8Kr2vBYrY_audio='strip'_clip=(0.26693333333333336, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=JA8Kr2vBYrY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/residential-school.htm">RESIDENTIAL-SCHOOL</a></p>\n'
@@ -3203,8 +3203,8 @@ Lifeprint ASL https://www.youtube.com/watch?v=TRLHLtgHyzo @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=TRLHLtgHyzo @0- TAGS: 'Lifeprint lesson_01 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=TRLHLtgHyzo @0- TEXT: 'SIGN'
 Lifeprint ASL https://www.youtube.com/watch?v=TVFEnWVgoII @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=TVFEnWVgoII_audio='strip'_clip=(0.3, 2.7666666666666666).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=TVFEnWVgoII @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=TVFEnWVgoII @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=TVFEnWVgoII @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=TVFEnWVgoII @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=TVFEnWVgoII @0- TEXT: 'FORGOT / FORGET'
 Lifeprint ASL https://www.youtube.com/watch?v=TXgVQkDoMEc @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=TXgVQkDoMEc_audio='strip'_clip=(0.23356666666666667, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=TXgVQkDoMEc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
@@ -3219,8 +3219,8 @@ Lifeprint ASL https://www.youtube.com/watch?v=TcP83Utr_RI @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=TcP83Utr_RI @0- TAGS: 'Lifeprint lesson_15 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=TcP83Utr_RI @0- TEXT: 'SCIENCE (A-hand version)'
 Lifeprint ASL https://www.youtube.com/watch?v=TdCu_nhXVno @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=TdCu_nhXVno_audio='strip'_clip=(0.84, 2.88).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=TdCu_nhXVno @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=TdCu_nhXVno @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=TdCu_nhXVno @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=TdCu_nhXVno @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=TdCu_nhXVno @0- TEXT: 'LESSON'
 Lifeprint ASL https://www.youtube.com/watch?v=TdQ0qHYQSvg @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=TdQ0qHYQSvg_audio='strip'_clip=(0.5338666666666667, 2.6693333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=TdQ0qHYQSvg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/big.htm">BIG</a></p>\n'
@@ -3719,12 +3719,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=ZHo1AKNIvBY @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=ZHo1AKNIvBY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ZHo1AKNIvBY @0- TEXT: 'OREGON'
 Lifeprint ASL https://www.youtube.com/watch?v=ZJ80gGVl7yg @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=ZJ80gGVl7yg_audio='strip'_clip=(0.6673333333333333, 3.1031).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=ZJ80gGVl7yg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=ZJ80gGVl7yg @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=ZJ80gGVl7yg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=ZJ80gGVl7yg @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ZJ80gGVl7yg @0- TEXT: 'REVIEW'
 Lifeprint ASL https://www.youtube.com/watch?v=ZLN8GbGcxbw @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=ZLN8GbGcxbw_audio='strip'_clip=(0.6339666666666667, 2.0687333333333333).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=ZLN8GbGcxbw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=ZLN8GbGcxbw @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=ZLN8GbGcxbw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=ZLN8GbGcxbw @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ZLN8GbGcxbw @0- TEXT: 'VOCABULARY'
 Lifeprint ASL https://www.youtube.com/watch?v=ZMQz2hoT5V4 @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=ZMQz2hoT5V4_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ZMQz2hoT5V4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
