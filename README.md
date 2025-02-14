@@ -9,7 +9,7 @@ That will produce an `out.apkg` file.
 ### Example deck file
 
 ```text
-title: Lifeprint ASL::Phrases::Lesson 01
+title: Lifeprint ASL::Phrases::Phrases 01
 overlay_text: Phrase
 more: md:From [Lifeprint](https://www.lifeprint.com/)
   ASLU [lesson 1](https://www.lifeprint.com/asl101/lessons/lesson01.htm)
