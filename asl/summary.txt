@@ -785,7 +785,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=1t6GrmgKN5U @0- TEXT: 'DOCTOR'
 Lifeprint ASL https://www.youtube.com/watch?v=1udGGPLkA-Q @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=1udGGPLkA-Q_audio='strip'_clip=(0.40040000000000003, 1.9352666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=1udGGPLkA-Q @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/huh.htm">HUH</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=1udGGPLkA-Q @0- TAGS: 'Lifeprint first_100_signs lesson_01 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=1udGGPLkA-Q @0- TEXT: 'WHAT?'
+Lifeprint ASL https://www.youtube.com/watch?v=1udGGPLkA-Q @0- TEXT: 'WHAT? / HUH?'
 Lifeprint ASL https://www.youtube.com/watch?v=1wk1W5GuGiI @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=1wk1W5GuGiI_audio='strip'_clip=(0.4337666666666667, 2.4024).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=1wk1W5GuGiI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=1wk1W5GuGiI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
