@@ -2742,6 +2742,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=NBqpHJiufXU @0- MEDIA: "/Users/dan
 Lifeprint ASL https://www.youtube.com/watch?v=NBqpHJiufXU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sick.htm">SICK</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=NBqpHJiufXU @0- TAGS: 'Lifeprint lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=NBqpHJiufXU @0- TEXT: 'SICK'
+Lifeprint ASL https://www.youtube.com/watch?v=NCvURDLrHNM @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=NCvURDLrHNM_audio='strip'_clip=(0.3670333333333333, 2.4024).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=NCvURDLrHNM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=NCvURDLrHNM @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=NCvURDLrHNM @0- TEXT: 'KID / KIDS'
 Lifeprint ASL https://www.youtube.com/watch?v=NF_jrhLKWlY @0- MEDIA: "/Users/daniel/.cache/yanki/processed_youtube=NF_jrhLKWlY_audio='strip'_clip=(1.1344666666666667, 2.8028).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=NF_jrhLKWlY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson06.htm">lesson 6</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/self.htm">SELF</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=NF_jrhLKWlY @0- TAGS: 'Lifeprint lesson_06 vocabulary'
