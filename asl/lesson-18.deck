@@ -8,7 +8,9 @@ note_id: Lifeprint ASL {url} {clip}
 group:
   more: +md:[AIRPLANE](https://www.lifeprint.com/asl101/pages-signs/a/airplane.htm)
   https://www.youtube.com/watch?v=eD5BTz7lR-o AIRPLANE
+    trim: 0-60F
   https://www.youtube.com/watch?v=u1pDng38AxE FLY / FLY-AIRPLANE
+    trim: 24F-81F
 
 group:
   more: +md:[BICYCLE](https://www.lifeprint.com/asl101/pages-signs/b/bicycle.htm)
@@ -45,18 +47,21 @@ group:
 group:
   more: +md:[Classifier 3](https://www.lifeprint.com/asl101/pages-signs/c/cl3.htm)
     (vehicles)
-  https://www.youtube.com/watch?v=kI0t70vmXUo CRASH
-  # Not sure if I should try to find signs from the lesson videos on that page.
+  # Not sure if I should try to find signs from the lesson videos on this page.
 
 group:
   more: +md:[CRASH](https://www.lifeprint.com/asl101/pages-signs/c/crash.htm)
-  https://www.youtube.com/watch?v=G3z4RviEFLs car-CRASH
+  https://www.youtube.com/watch?v=G3z4RviEFLs car-CRASH (classifier 3)
+    trim: 4F-65F
   https://www.youtube.com/watch?v=qKjTQ7pkclk -> car-CRASH (5-hand version)
+    trim: 12F-79F
 
 group:
   more: +md:[ELEVATOR](https://www.lifeprint.com/asl101/pages-signs/e/elevator.htm)
   https://www.youtube.com/watch?v=ztBZaV2yoxs ELEVATOR (E-hand version)
+    trim: 14F-64F
   https://www.youtube.com/watch?v=JdQtf0sl5KI ELEVATOR (Classifier V version)
+    trim: 17F-73F
 
 # ENJOY is in lesson 14.
 # FIND is in lesson 8.
@@ -85,6 +90,7 @@ group:
 group:
   more: +md:[GET-ON](https://www.lifeprint.com/asl101/pages-signs/g/get-on.htm)
   https://www.youtube.com/watch?v=WlmxA_7SlYM GET-ON
+    trim: 20F-84F
 
 group:
   more: +md:[HELICOPTER](https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm)
@@ -95,11 +101,13 @@ group:
 
   tags: +extra
   https://www.youtube.com/watch?v=2WBXjTIMk4c HELICOPTER-fly-away (classifier 3)
+    trim: 8F-
 
 group:
   more: +md:[KEY](https://www.lifeprint.com/asl101/pages-signs/k/key.htm)
     (LOCK-it would be a single motion)
   https://www.youtube.com/watch?v=gDbPETMB9dk KEYS
+    trim: 13F-87F
 
 group:
   more: +md:[LEAVE](https://www.lifeprint.com/asl101/pages-signs/l/leave.htm)
@@ -115,18 +123,24 @@ group:
   https://www.youtube.com/watch?v=qo15m6gbYEo TAKE OFF / LEAVE
     trim: 9F-74F
   https://www.youtube.com/watch?v=84XYguYDLjs EXODUS / MASS-LEAVE
+    trim: 12F-82F
   https://www.youtube.com/watch?v=shvegK_StOg -> EXODUS / MASS-LEAVE
+    trim: 17F-92F
   https://www.youtube.com/watch?v=3cMNYOqgCZA EVACUATE / FLEE
+    trim: 11F-91F
   # ZOOM / LEAVE-QUICKLY is the same as TRAIN-GONE
 
 group:
   more: +md:[LOSE](https://www.lifeprint.com/asl101/pages-signs/l/lose.htm)
   https://www.youtube.com/watch?v=hToPKg_N4qY LOSE-item
+    trim: 14F-67F
   https://www.youtube.com/watch?v=wYni2mbSABs LOSE-competition
+    trim: 5F-61F
 
 group:
   more: +md:[MOTORCYCLE](https://www.lifeprint.com/asl101/pages-signs/m/motorcycle.htm)
   https://www.youtube.com/watch?v=suzyI59Ryh0 MOTORCYCLE
+    trim: 9F-58F
 
 group:
   more: +md:[PRACTICE](https://www.lifeprint.com/asl101/pages-signs/p/practice.htm)
@@ -136,49 +150,65 @@ group:
 group:
   more: +md:[RIDE](https://www.lifeprint.com/asl101/pages-signs/r/ride.htm)
   https://www.youtube.com/watch?v=Z-o_ssuD-Ys RIDE-in
+    trim: 13F-64F
   https://www.youtube.com/watch?v=jH31aBCskRk GET-in-[a-seat]
+    trim: 5F-63F
   https://www.youtube.com/watch?v=qAdpmlMPJ5s RIDER / PASSENGER
+    trim: 11F-80F
   # No video for RIDE-on
 
 group:
   more: +md:[ROCKET](https://www.lifeprint.com/asl101/pages-signs/r/rocket.htm)
   https://www.youtube.com/watch?v=-JbDwGd48Ug ROCKET (initialized/palm version)
+    trim: 9F-74F
   https://www.youtube.com/watch?v=w5gxAKgu2CU
     ROCKET (non-initialized/fist version) / launch / missile / projectile
+    trim: 22F-79F
 
 group:
   more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
   https://www.youtube.com/watch?v=uj4e7ldHVbY SEARCH / LOOK-FOR / SEEK
+    trim: 2F-61F
 
 group:
   more: +md:[SUBWAY](https://www.lifeprint.com/asl101/pages-signs/s/subway.htm)
   https://www.youtube.com/watch?v=94f1aywB0h8 SUBWAY
+    trim: 10F-63F
   # Didn’t find video for other version of SUBWAY (Y-hand facing other way).
 
 group:
   more: +md:[TICKET](https://www.lifeprint.com/asl101/pages-signs/t/ticket.htm)
   https://www.youtube.com/watch?v=os3UZ0eilLE TICKET (noun)
+    trim: 9F-70F
   https://www.youtube.com/watch?v=JT_5JGxYOkE @37F-74F TICKET (verb)
 
 group:
   more: +md:[TRAIN](https://www.lifeprint.com/asl101/pages-signs/t/train.htm)
   https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
+    trim: 16F-70F
   https://www.youtube.com/watch?v=40Jn-HXFtIw
     TRAIN-GONE (idiom) / ZOOM (L-G version) / LEAVE-QUICKLY
+    trim: 8F-63F
 
 group:
   more: +md:[TRAVEL](https://www.lifeprint.com/asl101/pages-signs/t/travel.htm)
   https://www.youtube.com/watch?v=Qq4J0wc3_nM TOUR / TRAVEL
+    trim: 10F-71F
   https://www.youtube.com/watch?v=ZtG9hL7slCA TRAVEL-AROUND
+    trim: 10F-74F
 
   tags: +extra
   https://www.youtube.com/watch?v=AbpCaS_sQAo -> TRAVEL (index finger version)
+    trim: 4F-
   https://www.youtube.com/watch?v=xYtFD9E-ljA -> TRAVEL-AROUND (8-hand version)
+    trim: 4F-69F
 
 group:
   more: +md:[TRUCK](https://www.lifeprint.com/asl101/pages-signs/t/truck.htm)
   https://www.youtube.com/watch?v=LiSC8Vt5tmI T-R-U-C-K
+    trim: 9F-65F
   # Didn’t find video for DRIVE-truck.
 
   tags: +extra
   https://www.youtube.com/watch?v=stWHtqJAzng -> TRUCK (signed English version)
+    trim: 8F-68F
