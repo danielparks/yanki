@@ -249,8 +249,11 @@ group:
 group:
   more: +md:[FAR](https://www.lifeprint.com/asl101/pages-signs/f/far.htm)
   https://www.youtube.com/watch?v=zVJ7-WuHsow FAR (A-hand version)
+    trim: 12F-85F
   https://www.youtube.com/watch?v=Xecxz2jXc1I FAR-away (classifier 1)
+    trim: 19F-89F
   https://www.youtube.com/watch?v=e6xOK0LXSjc NOT-FAR / CLOSE
+    trim: 45F-104F
 
 group:
   more: +md:[FRIENDLY](https://www.lifeprint.com/asl101/pages-signs/f/friendly.htm)
@@ -344,7 +347,7 @@ group:
     trim: 15F-75F
   https://www.youtube.com/watch?v=aPmr-RX9kvM PAY-me
     trim: 0-44F
-  https://www.youtube.com/watch?v=1PwaJzeQTuo IX PAY-them
+  https://www.youtube.com/watch?v=1PwaJzeQTuo IX-her PAY-him
     trim: 6F-66F
 
 group:
@@ -502,7 +505,9 @@ group:
     trim: 0-51F
   https://www.youtube.com/watch?v=zXfNs1eO7i0
     WHATEVER (L-hands version, sarcastic)
+    trim: 25F-93F
   https://www.youtube.com/watch?v=2PtaPd6wT9c WHATEVER (joke, pinky version)
+    trim: 12F-
     tags: +extra
 
 group:
