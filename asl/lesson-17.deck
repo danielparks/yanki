@@ -7,19 +7,18 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[A-LOT](https://www.lifeprint.com/asl101/pages-signs/a/a-lot.htm)
-
   https://www.youtube.com/watch?v=KgU9qm6vXJ0 MUCH / A-LOT
     trim: 12F-69F
 
 group:
   more: +md:[BANANA](https://www.lifeprint.com/asl101/pages-signs/b/banana.htm)
-
   https://www.youtube.com/watch?v=rdIxbPqmlOQ BANANA (modified O-hand version)
-  https://www.youtube.com/watch?v=4yKyCDC-Tdc BANANA (X-hand version)
+    trim: 19F-92F
+  https://www.youtube.com/watch?v=4yKyCDC-Tdc -> BANANA (X-hand version)
+    trim: 15F-66F
 
 group:
   more: +md:[BEER](https://www.lifeprint.com/asl101/pages-signs/b/beer.htm)
-
   https://www.youtube.com/watch?v=YoySFjYgjc8 BEER (double movement version)
     trim: 18F-59F
   # Single movement version is BROWN, in lesson 6.
@@ -28,8 +27,8 @@ group:
 
 group:
   more: +md:[BREAKFAST](https://www.lifeprint.com/asl101/pages-signs/b/breakfast.htm)
-
   https://www.youtube.com/watch?v=MoiessLRht4 BREAKFAST / EAT MORNING
+    trim: 4F-57F
   https://www.youtube.com/watch?v=VXLG6ft7kno BREAKFAST (initialized version)
     trim: 9F-45F
 
@@ -37,122 +36,139 @@ group:
 
 group:
   more: +md:[DINNER](https://www.lifeprint.com/asl101/pages-signs/d/dinner.htm)
-
   https://www.youtube.com/watch?v=X7UPEOYKzZs DINNER / EAT NIGHT
+    trim: 8F-57F
   https://www.youtube.com/watch?v=3GNtDPNQjts DINNER (initialized version)
+    trim: 10F-52F
 
 group:
   more: +md:[DISH](https://www.lifeprint.com/asl101/pages-signs/d/dish.htm)
-
   https://www.youtube.com/watch?v=kzuiLQ-ZCxI DISH / PLATE (square)
+    trim: 8F-63F
   https://www.youtube.com/watch?v=ZQsxcjnXOdk -> DISH / PLATE (rounded)
+    trim: 5F-53F
   https://www.youtube.com/watch?v=S8wey-YGD9I -> DISH / PLATE (classifier LL)
+    trim: 3F-56F
   https://www.youtube.com/watch?v=WcciABj5yCY -> DISH / PLATE (Y-hands)
+    trim: 16F-56F
 
 group:
   more: +md:[FRENCH-FRIES](https://www.lifeprint.com/asl101/pages-signs/f/frenchfries.htm)
-
   https://www.youtube.com/watch?v=ggo7f9YBkwY FRENCH-FRIES
+    trim: 2F-43F
   https://www.youtube.com/watch?v=ZEpqnX7zdhw -> FRENCH-FRIES (palm-down version)
+    trim: 5F-56F
 
 group:
   more: +md:[FRENCH-TOAST](https://www.lifeprint.com/asl101/pages-signs/f/frenchtoast.htm)
-
   https://www.youtube.com/watch?v=5XlyPWXbWlU FRENCH TOAST
+    trim: 11F-
 
 group:
   # Not listed in vocab, but helpful for FRENCH TOAST.
   more: +md:[FRENCH](https://www.lifeprint.com/asl101/pages-signs/f/french.htm)
   tags: +extra
-
   https://www.youtube.com/watch?v=7c2SLSeZNB4 FRENCH (front-to-back version)
-  https://www.youtube.com/watch?v=PmkGVSVin6Y FRENCH (back-to-front version)
+    trim: 0-48F
+  https://www.youtube.com/watch?v=PmkGVSVin6Y -> FRENCH (back-to-front version)
+    trim: 16F-64F
 
 group:
   # Not listed in vocab, but helpful for FRENCH TOAST.
   more: +md:[TOAST](https://www.lifeprint.com/asl101/pages-signs/t/toast.htm)
   tags: +extra
-
   https://www.youtube.com/watch?v=Z1eia5vN7Zk TOAST
+    trim: 8F-64F
 
 group:
   more: +md:[GRAPES](https://www.lifeprint.com/asl101/pages-signs/g/grapes.htm)
-
   https://www.youtube.com/watch?v=NZ68mfHiZa8 GRAPES
+    trim: 14F-65F
 
 group:
   more: +md:[KETCHUP](https://www.lifeprint.com/asl101/pages-signs/k/ketchup.htm)
-
   https://www.youtube.com/watch?v=8pg6KkRCOis KETCHUP
+    trim: 15F-74F
   https://www.youtube.com/watch?v=GFtj4e_YPs0 CATSUP / CAT U-P (idiomatic, pun)
-  https://www.youtube.com/watch?v=iws8A_-o8sg -> CATSUP / CAT UP (idiomatic, pun)
-  https://www.youtube.com/watch?v=NTVqfeGn2F4 -> CATSUP / CAT UP (A-hand version, idiomatic, pun)
+    trim: 7F-80F
+  https://www.youtube.com/watch?v=iws8A_-o8sg ->
+    CATSUP / CAT UP (point version, idiomatic, pun)
+    trim: 13F-58F
+  https://www.youtube.com/watch?v=NTVqfeGn2F4 ->
+    CATSUP / CAT UP (A-hand version, idiomatic, pun)
+    trim: 10F-56F
 
 group:
   more: +md:[LUNCH](https://www.lifeprint.com/asl101/pages-signs/l/lunch.htm)
-
   https://www.youtube.com/watch?v=KCRdHBabpUw LUNCH / EAT NOON
+    trim: 12F-61F
   https://www.youtube.com/watch?v=HAKN3e77ud8 -> LUNCH / EAT 12-NOON
+    trim: 13F-59F
   https://www.youtube.com/watch?v=zl0_6LYNMlg LUNCH (initialized vversion)
+    trim: 8F-45F
 
 group:
   more: +md:[MAYONNAISE](https://www.lifeprint.com/asl101/pages-signs/m/mayonnaise.htm)
-
   https://www.youtube.com/watch?v=-8DfTPM5lqM MAYONNAISE / M-A-Y-O
+    trim: 12F-78F
 
 group:
   more: +md:[MUSTARD](https://www.lifeprint.com/asl101/pages-signs/m/mustard.htm)
-
   https://www.youtube.com/watch?v=Btq3oESoacI MUSTARD / M-R-D
+    trim: 5F-64F
 
 group:
   more: +md:[PANCAKE](https://www.lifeprint.com/asl101/pages-signs/p/pancake.htm)
-
   https://www.youtube.com/watch?v=U6Q2Ck683KE PANCAKE
+    trim: 8F-75F
   # No video for P-hand version.
 
 group:
   more: +md:[PEPPER](https://www.lifeprint.com/asl101/pages-signs/p/pepper.htm)
-
   https://www.youtube.com/watch?v=UYVDfe4FgUQ PEPPER
-  https://www.youtube.com/watch?v=f6dR_7jckBg PEPPER (initialized version)
+    trim: 16F-77F
+  https://www.youtube.com/watch?v=f6dR_7jckBg -> PEPPER (initialized version)
+    trim: 13F-68F
     tags: +extra
 
 group:
   more: +md:[PICKLE](https://www.lifeprint.com/asl101/pages-signs/p/pickle.htm)
-
   https://www.youtube.com/watch?v=QKpzylQ5618 PICKLE
+    trim: 13F-70F
   https://www.youtube.com/watch?v=HncaBGYEXyA VINEGAR
+    trim: 6F-49F
     tags: +extra
 
 group:
   more: +md:[POP](https://www.lifeprint.com/asl101/pages-signs/p/pop.htm)
-
   https://www.youtube.com/watch?v=I3lZvG43Z14 POP / SODA
-
+    trim: 14F-79F
   # Most of the soda types don’t have videos, so I’m skipping them.
 
 group:
   more: +md:[SALAD](https://www.lifeprint.com/asl101/pages-signs/s/salad.htm)
-
   https://www.youtube.com/watch?v=UZgQNIxw2m8 SALAD
+    trim: 13F-68F
 
 group:
   more: +md:[SALT](https://www.lifeprint.com/asl101/pages-signs/s/salt.htm)
-
   https://www.youtube.com/watch?v=Ln3uCrAlHK8 SALT (fluttering fingers version)
+    trim: 11F-68F
   https://www.youtube.com/watch?v=gk2fVViSW3Y -> SALT (tap version)
+    trim: 13F-70F
 
   tags: +extra
   https://www.youtube.com/watch?v=H8Z6yk1hT7w ->
     SALT (fluttering fingers on 1 finger version)
+    trim: 7F-60F
   https://www.youtube.com/watch?v=Y2sxFcvir6o SEASONING
+    trim: 14F-62F
 
 # SINK is in lesson 9.
 
 group:
   more: +md:[SOAP](https://www.lifeprint.com/asl101/pages-signs/s/soap.htm)
-
   https://www.youtube.com/watch?v=GQ3SAb7DnMw SOAP
+    trim: 9F-60F
 
 # SOUP is in lesson 7.
