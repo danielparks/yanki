@@ -1,14 +1,245 @@
-# Build Anki decks from text files containing YouTube URLs
+# Build [Anki] decks from text files containing YouTube URLs
+
+Yanki makes it easy to build and maintain video flashcard decks for [Anki]. It
+can use local video or image files, or it can download videos from any source
+[yt-dlp] supports, such as YouTube.
+
+## Usage
+
+You will need `ffmpeg` installed to use Yanki. On macOS, install it from
+[ffmpeg.org] or [`brew`]. On Linux or Windows, try installing from
+[here][yt-dlp ffmpeg].
+
+This is a Python package that can be run with [`uv`]:
 
 ```
 uv run yanki build -o out.apkg asl/*.deck
 ```
 
-That will produce an `out.apkg` file.
+That will produce an `out.apkg` file that can be opened by [Anki].
 
-### Example deck file
+[Anki]: https://apps.ankiweb.net
+[yt-dlp]: https://github.com/yt-dlp/yt-dlp
+[ffmpeg.org]: https://www.ffmpeg.org
+[`brew`]: https://brew.sh
+[yt-dlp ffmpeg]: https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds
+[`uv`]: https://docs.astral.sh/uv/
 
-```text
+## Examples
+
+The [`asl/`] directory contains example `.deck` files that can be used to build
+a deck for the vocabulary and phrases in each [Lifeprint.com ASLU][LP] lesson.
+See its [README] for information about how I chose which signs to include.
+
+**If you are interested in learning American Sign Language, please see Dr. Bill
+Vicar’s [Lifeprint.com ASLU][LP]. These decks can help you, but they cannot
+replace the Lifeprint lessons and vocabulary pages.**
+
+**Plus, Lifeprint is full of Dr. Bill’s humor.**
+
+[`asl/`]: asl#readme
+[README]: asl#readme
+[LP]: https://www.lifeprint.com
+
+## Deck file format
+
+A deck file is composed to **config** lines and **note** lines.
+
+### Notes
+
+Notes are what we call a collection of (generally) two (flash) cards. For
+example, the following line defines a note that is composed of two flash cards:
+
+```
+https://www.youtube.com/watch?v=UyfRF3TeLPs YOUR NAME?
+```
+
+The cards are:
+
+  * Video -> “YOUR NAME?”
+  * “YOUR NAME?” -> Video
+
+If the text component is left off, Yanki will use the title of the video
+(assuming it’s available).
+
+If the line gets too long, you can continue on the following line by indenting
+it, for example:
+
+```
+https://www.youtube.com/watch?v=UDM9KJJtRbE
+  -> YOU DIVORCE-[non-initialized] YOU?
+```
+
+#### Direction (`<-`, `<->`, `->`)
+
+You may customize which cards are generated using a direction sign. For example,
+the following will only generate one card, which will first display the video,
+then the text:
+
+```
+https://www.youtube.com/watch?v=_V31e361KV8 -> WHO? (legacy version)
+```
+
+You may also use `<-` for a single card going from text to video, or you may
+explicitly set a note to generate both cards with `<->` (this is the default
+behavior).
+
+#### Clip (`@time-time`)
+
+You may clip or snapshot videos. There are actually two ways to do this, and
+this one is intended for cutting up videos into multiple flash cards.
+
+You can snapshot a video by specifying a single frame (`#F`) or a timestamp
+(`MM:SS.sss` or just `SS.sss`). For example, this generates cards with a still
+image from frame 320:
+
+```
+https://www.youtube.com/watch?v=M4AFC4eEjlQ @320F 9
+```
+
+You can clip a video by specifying a range of frames or timestamps:
+
+```
+https://www.youtube.com/watch?v=M4AFC4eEjlQ @350F-377F 10
+```
+
+Note that both of these notes have the same video URL. By default, yanki uses
+the video URL, the deck name, and the clip to identify the note, so without
+the clip the following would generate an error:
+
+```
+https://www.youtube.com/watch?v=M4AFC4eEjlQ 9
+https://www.youtube.com/watch?v=M4AFC4eEjlQ 10
+```
+
+### Config lines
+
+Config lines set configuration for future notes, unless they’re _inside_ a
+note, in which case they set the configuration for that note and nothing else.
+
+```yaml
+https://www.youtube.com/watch?v=FHPszRvL9pg note 1
+overlay_text: deck
+https://www.youtube.com/watch?v=UyfRF3TeLPs note 2
+  overlay_text: note
+https://www.youtube.com/watch?v=zW8cpOVeKZ4 note 3
+```
+
+The above example produces 3 notes (and 6 cards):
+
+  1. note 1, with no overlay text.
+  2. note 2, with the overlay text “note”.
+  2. note 3, with the overlay text “deck”.
+
+#### `title` — Deck title
+
+`title` sets the title of the deck. You _must_ set this somewhere in your deck
+file. I recommend putting it right at the top for clarity.
+
+#### `group` — Group notes together for easy configuration
+
+This allows setting configuration on a group of notes without affecting anything
+else in the deck. Example:
+
+```yaml
+group:
+  more: +md:[FIRST](https://www.lifeprint.com/asl101/pages-signs/f/first.htm)
+  https://www.youtube.com/watch?v=tZ04_s30aXY FIRST / PRIMARY
+
+  tags: +extra
+  https://www.youtube.com/watch?v=x9xgoFqsBkE FIRST-PLACE
+```
+
+Each config set on the group only applies to the notes after it, so the `more`
+line applies to both, and the `tags` line only applies to the last note.
+
+Neither applies to any notes outside the group.
+
+You may nest groups.
+
+#### `more` — Add more information to answer card
+
+This configuration adds more information to the answer side of the each card
+generated by a note. For example:
+
+```
+file://video.mp4 text
+  more: added context
+```
+
+The above generates two cards:
+
+  * _video.mp4_ -> “text” “added context”
+  * “text” -> _video.mp4_ “added context”
+
+You may set content in three formats:
+
+  * No prefix, e.g. `more: some text`. This converts URLs into links and HTML
+    escapes everything. Appropriate for plain text.
+  * `html:`, e.g. `more: html:<b>text</b>`. This passes the text through (minus
+    the “html:” prefix and it is rendered as HTML by Anki.
+  * `rst:` This renders the following text as [reStructuredText].
+  * `md:` This renders the following text as [CommonMark Markdown].
+
+You may also use a plus before any prefix to append the rendered text to the
+whatever has already been set. For example:
+
+```yaml
+more: html:<b>First</b>
+file://video.mp4 text
+  more: +md: _second_
+```
+
+The above generates a note with the `more` text set to “**First** _second_”.
+
+[reStructuredText]: https://docutils.sourceforge.io/rst.html
+[CommonMark Markdown]: https://commonmark.org
+
+#### `note_id` — Note GUIDs
+
+Anki uses the GUID (Globally Unique ID) field to identify notes for update.
+By default, Yanki generates GUIDs based on the deck ID (generated from the deck
+title), the video URL, and the clip of the video (e.g. `@0:01-0:02`).
+
+You can customize how the GUID is generated with the `note_id` configuration:
+
+```yaml
+# Default:
+note_id: {deck_id} {url} {clip}
+
+# Use the text that corresponds to the video:
+note_id: {deck_id} {text}
+```
+
+Leaving out `{deck_id}` can be useful if you might need to move notes between
+decks later on. Unfortunately, the import will not actually move notes from one
+deck to another, but it will update them in the other deck, and then you can
+manually move them. This is useful if you want to keep your study progress.
+
+If you do leave out `{deck_id}`, you should probably include something else to
+make sure the GUID is unique outside of your repository.
+
+```yaml
+title: Really Cool Cards::subdeck 1
+note_id: Really Cool Cards {url} {clip}
+```
+
+#### Other configs
+
+These deserve better documentation, but here they are in short:
+
+  * `crop`: How to crop the video, if at all
+  * `format`: The file extension of the media to generate (default: `mp4`)
+  * `overlay_text`: Set overlay text to appear on the video
+  * `tags`: Set tags for notes (divided by spaces)
+  * `slow`: Slow or speed a portion of the video
+  * `trim`: Like clipping (`@time-time`), but doesn’t change the `note_id`
+  * `audio`: `include` (default) or `strip` (remove from media)
+  * `video`: `include` (default) or `strip` (remove from media)
+
+## Example deck
+
+```yaml
 title: Lifeprint ASL::Phrases::Phrases 01
 overlay_text: Phrase
 more: md:From [Lifeprint](https://www.lifeprint.com/)
@@ -37,28 +268,3 @@ https://www.youtube.com/watch?v=Th7pOg8YbCU YOUR TEACHER NAME WHAT?
 tags: Lifeprint lesson_01 vocabulary extra
 https://www.youtube.com/watch?v=b_qv-0Jbqn0 CLEAN-UP
 ```
-
-### Note GUIDs
-
-Anki uses the GUID (Globally Unique ID) field to identify notes for update.
-By default, Yanki generates GUIDs based on the deck ID (generated from the deck
-title), the video URL, and the clip of the video (e.g. `@0:01-0:02`).
-
-You can customize how the GUID is generated with the `note_id` configuration:
-
-    # Default:
-    note_id: {deck_id} {url} {clip}
-
-    # Use the text that corresponds to the video:
-    note_id: {deck_id} {text}
-
-Leaving out `{deck_id}` can be useful if you might need to move notes between
-decks later on. The import will not actually move notes from one deck to
-another, but it will update them in the other deck, and then you can manually
-move them. This is useful if you want to keep your study progress.
-
-If you do leave out `{deck_id}`, you should probably include something else to
-make sure the GUID is unique outside of your repository.
-
-    title: Really Cool Cards::subdeck 1
-    note_id: Really Cool Cards {url} {clip}
