@@ -4074,6 +4074,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=bf1X67Lhu6A @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=bf1X67Lhu6A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/stove.htm">STOVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=bf1X67Lhu6A @0- TAGS: 'Lifeprint extra lesson_09 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=bf1X67Lhu6A @0- TEXT: 'OVEN / BAKING'
+Lifeprint ASL https://www.youtube.com/watch?v=bfXH1Yolqys @0- MEDIA: "processed_youtube=bfXH1Yolqys_audio='strip'_clip=(0.40040000000000003, 2.3690333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=bfXH1Yolqys @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/still.htm">STILL</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=bfXH1Yolqys @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=bfXH1Yolqys @0- TEXT: 'STILL'
 Lifeprint ASL https://www.youtube.com/watch?v=bgpsOPBxgao @0- MEDIA: "processed_youtube=bgpsOPBxgao_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=bgpsOPBxgao @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=bgpsOPBxgao @0- TAGS: 'Lifeprint lesson_02 phrase'
