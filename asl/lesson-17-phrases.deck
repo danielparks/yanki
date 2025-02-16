@@ -8,10 +8,12 @@ note_id: Lifeprint ASL {url} {clip}
 
 https://www.youtube.com/watch?v=LDvg5HbKmZI
   YOU LIKE BANANA?
+  trim: 12F-130F
   more: +md:### Do you like bananas?
 
 https://www.youtube.com/watch?v=9g3grX5iaXc
   WATER, MILK, POP, BEER, YOU PREFER DRINK WHICH?
+  trim: 31F-213F
   more: +md:### Which do you prefer to drink, water, milk, pop, or beer?
 
 https://www.youtube.com/watch?v=85OMf_zQEiA
@@ -52,7 +54,8 @@ https://www.youtube.com/watch?v=nh79WZSiu3Y
   more: +md:### Do you want mustard on your hotdog?
 
 https://www.youtube.com/watch?v=BA9ksDQ8CwE
-  TOMORROW EAT MORNING YOU WANT PANCAKE AND SAUSAGE-[hotdog]?
+  TOMORROW EAT MORNING YOU WANT PANCAKE AND SAUSAGE-[hotdog] YOU?
+  trim: 9F-206F
   more: +md:### Would you like pancakes and sausage for breakfast tomorrow?
 
 https://www.youtube.com/watch?v=PhRveJMmAnY
