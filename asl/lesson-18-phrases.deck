@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=BuJnWLgBy0o
   more: +md:### Have you been on a boat before?
 
 https://www.youtube.com/watch?v=vsUZY9RAnW8
-  YOU WANT BUILD your-SELF HOUSE?
+  YOU WANT BUILD your-SELF HOUSE YOU?
   more: +md:### Do you want to build your own house?
 
 https://www.youtube.com/watch?v=tsMRr87i-bI
@@ -76,11 +76,12 @@ https://www.youtube.com/watch?v=Cnb-HYBxCJI
   more: +md:### Is there a subway in your city?
 
 https://www.youtube.com/watch?v=5kmIFjhWwyM
-  last-YEAR YOU TICKET HOW-MANY?
+  last-YEAR TICKET YOU HOW-MANY?
   more: +md:### How many tickets did you get last year?
 
 https://www.youtube.com/watch?v=euuDZY08_NQ ->
   last-YEAR-[1-handed] YOU TICKET HOW-MANY?
+  trim: 14F-131F
   more: +md:### How many tickets did you get last year?
 
 https://www.youtube.com/watch?v=fI-GcAvPLaI
