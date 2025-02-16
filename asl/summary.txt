@@ -1234,7 +1234,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=6ky6oywprZ4 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=6ky6oywprZ4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/slow.htm">SLOW</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6ky6oywprZ4 @0- TAGS: 'Lifeprint lesson_01 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=6ky6oywprZ4 @0- TEXT: 'SLOW'
-Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- MEDIA: "processed_youtube=6vE-x3yBFa4_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- MEDIA: 'processed_youtube=6vE-x3yBFa4_f01f0c0889ee0ada2b1d4d40cd0faa12.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<h3>How often do you often eat grapes?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- TAGS: 'Lifeprint lesson_17 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- TEXT: 'GRAPES, YOU EAT HOW OFTEN?'
@@ -1329,7 +1329,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=852pcRTvXp8 @0- TEXT: 'SUN (circle
 Lifeprint ASL https://www.youtube.com/watch?v=85OMf_zQEiA @0- MEDIA: "processed_youtube=85OMf_zQEiA_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=85OMf_zQEiA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<h3>What did you have for breakfast?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=85OMf_zQEiA @0- TAGS: 'Lifeprint lesson_17 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=85OMf_zQEiA @0- TEXT: 'NOW-MORNING EAT WHAT?'
+Lifeprint ASL https://www.youtube.com/watch?v=85OMf_zQEiA @0- TEXT: 'NOW-MORNING YOU EAT WHAT?'
 Lifeprint ASL https://www.youtube.com/watch?v=86UjqJCApqo @0- MEDIA: "processed_youtube=86UjqJCApqo_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=86UjqJCApqo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<h3>What time did you go to bed last Saturday?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=86UjqJCApqo @0- TAGS: 'Lifeprint lesson_16 phrase'
@@ -1994,7 +1994,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=ExlOozGYqvU @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=ExlOozGYqvU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson15.htm">lesson 15</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/scientist.htm">SCIENTIST</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ExlOozGYqvU @0- TAGS: 'Lifeprint lesson_15 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ExlOozGYqvU @0- TEXT: 'SCIENCE (S-hand version)'
-Lifeprint ASL https://www.youtube.com/watch?v=F0gevk7WKDI @0- MEDIA: "processed_youtube=F0gevk7WKDI_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=F0gevk7WKDI @0- MEDIA: 'processed_youtube=F0gevk7WKDI_81b8fc56ae6fe9bbbde5cd3c5051507b.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=F0gevk7WKDI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<h3>Do you have a doctor’s appointment?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=F0gevk7WKDI @0- TAGS: 'Lifeprint lesson_16 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=F0gevk7WKDI @0- TEXT: 'DOCTOR APPOINTMENT, YOU HAVE?'
