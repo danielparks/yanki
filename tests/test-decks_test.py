@@ -2,6 +2,7 @@ import os
 import pytest
 
 from yanki.cli import find_errors, read_final_decks
+from yanki.filter import DeckFilter
 from yanki.video import VideoOptions
 
 
@@ -23,7 +24,7 @@ def test_deck_error(path, cache_path):
     options = VideoOptions(cache_path=cache_path)
     with open(path, "r", encoding="utf_8") as file:
         with pytest.raises(Exception) as error_info:
-            read_final_decks([file], options)
+            read_final_decks([file], options, DeckFilter())
 
     [error] = list(find_errors(error_info.value))
 
@@ -37,5 +38,5 @@ def test_deck_error(path, cache_path):
 def test_deck_success(path, cache_path):
     options = VideoOptions(cache_path=cache_path)
     with open(path, "r", encoding="utf_8") as file:
-        [deck] = read_final_decks([file], options)
+        [deck] = read_final_decks([file], options, DeckFilter())
     assert len(deck.notes()) >= 1

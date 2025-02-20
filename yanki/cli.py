@@ -21,6 +21,7 @@ import yt_dlp
 
 
 from yanki.errors import ExpectedError
+from yanki.filter import DeckFilter, filter_options
 from yanki.html_out import htmlize_deck, generate_index_html, ensure_static_link
 from yanki.parser import DeckFilesParser, find_invalid_format, NOTE_VARIABLES
 from yanki.anki import Deck, FINAL_NOTE_VARIABLES
@@ -155,6 +156,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@filter_options
 @click.option(
     "-o",
     "--output",
@@ -163,11 +165,11 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     "own files named after their sources, but with the extension .apkg.",
 )
 @click.pass_obj
-def build(options, decks, output):
+def build(options, decks, filter, output):
     """Build an Anki package from deck files."""
     package = genanki.Package([])  # Only used with --output
 
-    for deck in read_final_decks(decks, options):
+    for deck in read_final_decks(decks, options, filter):
         if output is None:
             # Automatically figures out the path to save to.
             deck.save_to_file()
@@ -181,8 +183,9 @@ def build(options, decks, output):
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@filter_options
 @click.pass_obj
-def update(options, decks):
+def update(options, decks, filter):
     """
     Update Anki with one or more decks.
 
@@ -192,7 +195,7 @@ def update(options, decks):
     with tempfile.NamedTemporaryFile(suffix=".apkg", delete=False) as file:
         file.close()
         package = genanki.Package([])
-        for deck in read_final_decks(decks, options):
+        for deck in read_final_decks(decks, options, filter):
             deck.save_to_package(package)
         LOGGER.debug(f"Wrote decks to file {file.name}")
         package.write_to_file(file.name)
@@ -202,6 +205,7 @@ def update(options, decks):
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@filter_options
 @click.option(
     "-f",
     "--format",
@@ -211,11 +215,11 @@ def update(options, decks):
     help="The format to output in.",
 )
 @click.pass_obj
-def list_notes(options, decks, format):
+def list_notes(options, decks, format, filter):
     """Print information about every note in the passed format."""
     if find_invalid_format(format, NOTE_VARIABLES) is None:
         # Don’t need FinalNotes
-        for deck in read_decks(decks, options):
+        for deck in read_decks(decks, options, filter):
             for note in deck.notes():
                 ### FIXME document variables
                 print(format.format(**note.variables(deck_id=deck.id())))
@@ -223,7 +227,7 @@ def list_notes(options, decks, format):
         if error := find_invalid_format(format, FINAL_NOTE_VARIABLES):
             sys.exit(f"Invalid variable in format: {error}")
 
-        for deck in read_final_decks(decks, options):
+        for deck in read_final_decks(decks, options, filter):
             for note in deck.notes():
                 ### FIXME document variables
                 print(format.format(**note.variables()))
@@ -231,15 +235,17 @@ def list_notes(options, decks, format):
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@filter_options
 @click.pass_obj
-def to_html(options, decks):
+def to_html(options, decks, filter):
     """Display decks as HTML on stdout."""
-    for deck in read_final_decks(decks, options):
+    for deck in read_final_decks(decks, options, filter):
         print(htmlize_deck(deck, path_prefix=options.cache_path))
 
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@filter_options
 @click.option(
     "-o",
     "--open/--no-open",
@@ -262,7 +268,7 @@ def to_html(options, decks):
     " specified, the server will run until killed by a signal.",
 )
 @click.pass_obj
-def serve_http(options, decks, do_open, bind, run_seconds):
+def serve_http(options, decks, filter, do_open, bind, run_seconds):
     """Serve HTML summary of deck on localhost:8000."""
     bind_parts = bind.split(":")
     if len(bind_parts) != 2:
@@ -276,7 +282,7 @@ def serve_http(options, decks, do_open, bind, run_seconds):
 
     deck_links = []
     html_written = set()
-    for deck in read_final_decks(decks, options):
+    for deck in read_final_decks(decks, options, filter):
         file_name = deck.title.replace("/", "--") + ".html"
         html_path = options.cache_path / file_name
         if html_path in html_written:
@@ -419,31 +425,35 @@ def find_errors(group: ExceptionGroup):
             yield error
 
 
-def read_deck_specs(files):
+def read_deck_specs(files, filter=DeckFilter()):
     parser = DeckFilesParser()
     for file in files:
-        yield from parser.parse_file(file.name, file)
+        for deck_spec in parser.parse_file(file.name, file):
+            for deck_spec in filter.filter(deck_spec):
+                yield deck_spec
 
 
-def read_decks(files, options: VideoOptions):
-    for spec in read_deck_specs(files):
+def read_decks(files, options: VideoOptions, filter=DeckFilter()):
+    for spec in read_deck_specs(files, filter):
         yield Deck(spec, video_options=options)
 
 
-async def read_final_decks_async(files, options: VideoOptions):
+async def read_final_decks_async(
+    files, options: VideoOptions, filter=DeckFilter()
+):
     async def finalize_deck(collection, deck):
         collection.append(await deck.finalize())
 
     final_decks = []
     async with asyncio.TaskGroup() as group:
-        for deck in read_decks(files, options):
+        for deck in read_decks(files, options, filter):
             group.create_task(finalize_deck(final_decks, deck))
 
     return final_decks
 
 
-def read_final_decks(files, options: VideoOptions):
-    return asyncio.run(read_final_decks_async(files, options))
+def read_final_decks(files, options: VideoOptions, filter=DeckFilter()):
+    return asyncio.run(read_final_decks_async(files, options, filter))
 
 
 def open_in_app(arguments):
