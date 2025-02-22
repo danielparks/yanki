@@ -1,14 +1,18 @@
 import click
+import asyncio
 
+from yanki.parser import DeckFilesParser
+from yanki.anki import Deck
+from yanki.video import VideoOptions
 from yanki.parser import NoteSpec, DeckSpec
 
 
 class DeckFilter:
     """Filter notes in decks."""
 
-    def __init__(self):
-        self.tags_exclude = set()
-        self.tags_include = set()
+    def __init__(self, include=set(), exclude=set()):
+        self.tags_include = set(include)
+        self.tags_exclude = set(exclude)
 
     def _include_note(self, note_spec: NoteSpec):
         tags = note_spec.config.tags
@@ -73,3 +77,39 @@ def filter_options(function):
         expose_value=False,
     )
     return exclude(include(function))
+
+
+def read_deck_specs(files, filter=DeckFilter()):
+    """Read `DeckSpec`s from `files`."""
+    parser = DeckFilesParser()
+    for file in files:
+        for deck_spec in parser.parse_file(file.name, file):
+            for deck_spec in filter.filter(deck_spec):
+                yield deck_spec
+
+
+def read_decks(files, options: VideoOptions, filter=DeckFilter()):
+    """Read `Deck`s from `files`."""
+    for spec in read_deck_specs(files, filter):
+        yield Deck(spec, video_options=options)
+
+
+async def read_final_decks_async(
+    files, options: VideoOptions, filter=DeckFilter()
+):
+    """Read `FinalDeck`s from `files` (async)."""
+
+    async def finalize_deck(collection, deck):
+        collection.append(await deck.finalize())
+
+    final_decks = []
+    async with asyncio.TaskGroup() as group:
+        for deck in read_decks(files, options, filter):
+            group.create_task(finalize_deck(final_decks, deck))
+
+    return final_decks
+
+
+def read_final_decks(files, options: VideoOptions, filter=DeckFilter()):
+    """Read `FinalDeck`s from `files`."""
+    return asyncio.run(read_final_decks_async(files, options, filter))
