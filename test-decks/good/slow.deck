@@ -5,16 +5,16 @@ file://./media/stopwatch.mp4
   slow: - * 0.1
   without trim: slow: - * 0.1
 
-trim: 0:01-0:02
+trim: 0-0.75s
 
 file://./media/stopwatch.mp4
   slow: -0:00.5 * 4
-  with 1s-2s trim: slow: -0:00.5 * 4
+  with 0-0.75s trim: slow: -0:00.5 * 4
 
 file://./media/stopwatch.mp4
   slow: 0.25-0:00.5 *3
-  with 1s-2s trim: slow: 0.25-0:00.5 *3
+  with 0-0.75s trim: slow: 0.25-0:00.5 *3
 
 file://./media/stopwatch.mp4
   slow: 0.5- * 0.25
-  with 1s-2s trim: slow: 0.5- * 0.25
+  with 0-0.75s trim: slow: 0.5- * 0.25
