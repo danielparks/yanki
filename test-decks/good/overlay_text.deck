@@ -3,7 +3,7 @@ note_id: {deck_id} {text}
 
 file://./media/stopwatch.mp4 -> a few words
   overlay_text: a few words
-file://./media/stopwatch.mp4 @0-1 -> clipped
+file://./media/stopwatch.mp4 @0-0.5 -> clipped
   overlay_text: clipped
 file://./media/stopwatch.mp4 @50ms -> special:,a='b'c\d
   overlay_text: special:,a='b'c\d
