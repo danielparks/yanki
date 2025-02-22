@@ -21,10 +21,10 @@ import yt_dlp
 
 
 from yanki.errors import ExpectedError
-from yanki.filter import DeckFilter, filter_options
+from yanki.filter import filter_options, read_decks, read_final_decks
 from yanki.html_out import htmlize_deck, generate_index_html, ensure_static_link
-from yanki.parser import DeckFilesParser, find_invalid_format, NOTE_VARIABLES
-from yanki.anki import Deck, FINAL_NOTE_VARIABLES
+from yanki.parser import find_invalid_format, NOTE_VARIABLES
+from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
 from yanki.utils import add_trace_logging
 
@@ -423,37 +423,6 @@ def find_errors(group: ExceptionGroup):
             yield from find_errors(error)
         else:
             yield error
-
-
-def read_deck_specs(files, filter=DeckFilter()):
-    parser = DeckFilesParser()
-    for file in files:
-        for deck_spec in parser.parse_file(file.name, file):
-            for deck_spec in filter.filter(deck_spec):
-                yield deck_spec
-
-
-def read_decks(files, options: VideoOptions, filter=DeckFilter()):
-    for spec in read_deck_specs(files, filter):
-        yield Deck(spec, video_options=options)
-
-
-async def read_final_decks_async(
-    files, options: VideoOptions, filter=DeckFilter()
-):
-    async def finalize_deck(collection, deck):
-        collection.append(await deck.finalize())
-
-    final_decks = []
-    async with asyncio.TaskGroup() as group:
-        for deck in read_decks(files, options, filter):
-            group.create_task(finalize_deck(final_decks, deck))
-
-    return final_decks
-
-
-def read_final_decks(files, options: VideoOptions, filter=DeckFilter()):
-    return asyncio.run(read_final_decks_async(files, options, filter))
 
 
 def open_in_app(arguments):

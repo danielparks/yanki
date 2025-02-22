@@ -1,8 +1,8 @@
 import os
 import pytest
 
-from yanki.cli import find_errors, read_final_decks
-from yanki.filter import DeckFilter
+from yanki.cli import find_errors
+from yanki.filter import DeckFilter, read_final_decks
 from yanki.video import VideoOptions
 
 
