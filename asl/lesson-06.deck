@@ -7,7 +7,6 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[COLOR](https://www.lifeprint.com/asl101/pages-signs/c/color.htm)
-
   https://www.youtube.com/watch?v=Wzio7B5VT_I COLOR
     trim: 14F-98F
 
@@ -70,12 +69,10 @@ group:
 
 group:
   more: +md:[DRAW](https://www.lifeprint.com/asl101/pages-signs/d/draw.htm)
-
   https://www.youtube.com/watch?v=ua6jgiWYZPw DRAW
 
 group:
   more: +md:[FINISH](https://www.lifeprint.com/asl101/pages-signs/f/finish.htm)
-
   https://www.youtube.com/watch?v=7xQE2N0z7gM FINISH / all done / and then
     tags: +first_100_signs
 
@@ -84,34 +81,27 @@ group:
 
 group:
   more: +md:[FUTURE](https://www.lifeprint.com/asl101/pages-signs/f/future.htm)
-
   https://www.youtube.com/watch?v=RMUZFdu6VtI FUTURE / WILL
     tags: +first_100_signs
   https://www.youtube.com/watch?v=VHP823jOw8c SOMEDAY / eventually
 
 group:
   more: +md:[LONG](https://www.lifeprint.com/asl101/pages-signs/l/long.htm)
-
   https://www.youtube.com/watch?v=nAGD0JwteGM LONG
 
 group:
   more: +md:[NOW](https://www.lifeprint.com/asl101/pages-signs/n/now.htm)
-
   https://www.youtube.com/watch?v=g2j70neQ_lI NOW / current
     tags: +first_100_signs
   https://www.youtube.com/watch?v=EtW1-NdM5qI TODAY (now-now)
-
-  tags: +extra
   https://www.youtube.com/watch?v=IlLRJ6jw4lY TODAY (now-day)
 
 group:
   more: +md:[OLD](https://www.lifeprint.com/asl101/pages-signs/o/old.htm)
-
   https://www.youtube.com/watch?v=wmJfQSUsnQ8 OLD
 
 group:
   more: +md:[PAPER](https://www.lifeprint.com/asl101/pages-signs/p/paper.htm)
-
   https://www.youtube.com/watch?v=Zg7-DM25KIM PAPER
 
 # These weren’t linked, but they were mentioned in the vocab list:
@@ -124,7 +114,6 @@ https://www.youtube.com/watch?v=XOhKB7tH58c PAGE
 
 group:
   more: +md:[PAST](https://www.lifeprint.com/asl101/pages-signs/p/past.htm)
-
   https://www.youtube.com/watch?v=j7rjBay5FIE PAST / before now / previously / ago
     tags: +first_100_signs
 
@@ -133,36 +122,32 @@ group:
 
 group:
   more: +md:[SELF](https://www.lifeprint.com/asl101/pages-signs/s/self.htm)
-
   https://www.youtube.com/watch?v=NF_jrhLKWlY YOURSELF / SELF / YOUR-OWN
     trim: 34F-84F
   https://www.youtube.com/watch?v=TzNk3Yl2tMw MYSELF / MY-OWN
-  https://www.youtube.com/watch?v=RiypOflHvXQ ITSELF
+  https://www.youtube.com/watch?v=RiypOflHvXQ ITSELF / ITS-OWN
   https://www.youtube.com/watch?v=n5NIhFE3wy4 THEMSELVES / THEIR-OWN
   https://www.youtube.com/watch?v=4zMWHsJlHGg OURSELVES / OUR-OWN
 
 group:
   more: +md:[TOMORROW](https://www.lifeprint.com/asl101/pages-signs/t/tomorrow.htm)
-
   https://www.youtube.com/watch?v=6gFOZMDptIk TOMORROW
   https://www.youtube.com/watch?v=E17VasimjWo EVERYDAY / DAILY / common
 
 group:
   more: +md:[WAIT](https://www.lifeprint.com/asl101/pages-signs/w/wait.htm)
-
   https://www.youtube.com/watch?v=YfwgS9ZsBVw WAIT
   https://www.youtube.com/watch?v=El-hYok08Qk WAIT-[long]
     trim: 14F-94F
+    tags: +extra
 
 group:
   more: +md:[WHEN](https://www.lifeprint.com/asl101/pages-signs/w/when.htm)
-
   https://www.youtube.com/watch?v=YWxvqP__qos WHEN
     tags: +first_100_signs
 
 group:
   more: +md:[YEAR](https://www.lifeprint.com/asl101/pages-signs/y/year.htm)
-
   https://www.youtube.com/watch?v=zTIJAgTai40 YEAR
     trim: 15F-83F
     tags: +first_100_signs

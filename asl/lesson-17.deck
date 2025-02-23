@@ -102,10 +102,12 @@ group:
   more: +md:[LUNCH](https://www.lifeprint.com/asl101/pages-signs/l/lunch.htm)
   https://www.youtube.com/watch?v=KCRdHBabpUw LUNCH / EAT NOON
     trim: 12F-61F
-  https://www.youtube.com/watch?v=HAKN3e77ud8 -> LUNCH / EAT 12-NOON
-    trim: 13F-59F
   https://www.youtube.com/watch?v=zl0_6LYNMlg LUNCH (initialized vversion)
     trim: 8F-45F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=HAKN3e77ud8 -> LUNCH / EAT 12-NOON
+    trim: 13F-59F
 
 group:
   more: +md:[MAYONNAISE](https://www.lifeprint.com/asl101/pages-signs/m/mayonnaise.htm)

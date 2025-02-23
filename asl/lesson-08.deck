@@ -87,20 +87,19 @@ group:
     trim: 21F-99F
 
 # Part of OFF, but we want the more note to be special.
-https://www.youtube.com/watch?v=vl1LG51Wd1c ->
-  OFF-[removed-or-separated-from]
-  more: +md:Be sure to read [OFF](https://www.lifeprint.com/asl101/pages-signs/o/off.htm)
+https://www.youtube.com/watch?v=vl1LG51Wd1c -> OFF-[removed-or-separated-from]
+  more: +md:⚠️ See [OFF](https://www.lifeprint.com/asl101/pages-signs/o/off.htm)
   trim: 21F-75F
 
 group:
-  more: +md:[ON](https://www.lifeprint.com/asl101/pages-signs/o/on.htm) and [LIGHTS](https://www.lifeprint.com/asl101/pages-signs/l/light.htm)
+  more: +md:[ON](https://www.lifeprint.com/asl101/pages-signs/o/on.htm) and
+    [LIGHTS](https://www.lifeprint.com/asl101/pages-signs/l/light.htm)
   https://www.youtube.com/watch?v=w0Sl6ta4Obo LIGHTS-ON / LIGHTS
     trim: 35F-115F
 
 # Part of ON, but we want the more note to be special.
-https://www.youtube.com/watch?v=e8hiRj3xDiw
-  ON / onto
-  more: +md:Be sure to read [ON](https://www.lifeprint.com/asl101/pages-signs/o/on.htm)
+https://www.youtube.com/watch?v=e8hiRj3xDiw ON / onto
+  more: +md:⚠️ See [ON](https://www.lifeprint.com/asl101/pages-signs/o/on.htm)
   trim: 15F-66F
 
 group:
@@ -128,10 +127,10 @@ group:
     tags: +first_100_signs
   https://www.youtube.com/watch?v=9Rcg3QJiClc -> SHIRT (two handed version)
     trim: 15F-61F
-  https://www.youtube.com/watch?v=i14EM0ZbtUY BLOUSE-SHIRT
-    trim: 12F-56F
 
   tags: +extra
+  https://www.youtube.com/watch?v=i14EM0ZbtUY BLOUSE-SHIRT
+    trim: 12F-56F
   https://www.youtube.com/watch?v=eQbb9sn3J1s TEE-SHIRT
     trim: 8F-66F
   https://www.youtube.com/watch?v=gW9D4eutcfc BUTTON-DOWN-SHIRT
@@ -170,10 +169,10 @@ group:
   https://www.youtube.com/watch?v=Yoi_OLX0IEs SHOES
     trim: 12F-82F
     tags: +first_100_signs
-  https://www.youtube.com/watch?v=A4RSlW_e10U SANDALS
-    trim: 10F-78F
 
   tags: +extra
+  https://www.youtube.com/watch?v=A4RSlW_e10U SANDALS
+    trim: 10F-78F
   https://www.youtube.com/watch?v=m3GGRM0ZTBY shoe laces / SHOE STRING
     trim: 5F-52F
   https://www.youtube.com/watch?v=ASwNClUOtn0 tie shoes / SHOE TIE

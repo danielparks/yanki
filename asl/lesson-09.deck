@@ -118,7 +118,6 @@ https://www.youtube.com/watch?v=iJ8TFRWJutE SHOWER
 
 group:
   more: +md:[SINK](https://www.lifeprint.com/asl101/pages-signs/s/sink.htm)
-
   https://www.youtube.com/watch?v=iZJAZYXj-Gw S-I-N-K
     trim: 11F-61F
 
@@ -130,7 +129,6 @@ group:
 
 group:
   more: +md:[STOVE](https://www.lifeprint.com/asl101/pages-signs/s/stove.htm)
-
   https://www.youtube.com/watch?v=c75leThE9AQ S-T-O-V-E
     trim: 11F-62F
 
@@ -147,7 +145,6 @@ https://www.youtube.com/watch?v=UJINxF1cSUA TABLE / DESK
 
 group:
   more: +md:[WINDOW](https://www.lifeprint.com/asl101/pages-signs/w/window.htm)
-
   https://www.youtube.com/watch?v=VqFX50Z9Y60 WINDOW
     trim: 10F-75F
   https://www.youtube.com/watch?v=C_e84lDOEoU OPEN-WINDOW
@@ -157,7 +154,6 @@ group:
 
 group:
   more: +md:[YESTERDAY](https://www.lifeprint.com/asl101/pages-signs/y/yesterday.htm)
-
   https://www.youtube.com/watch?v=BrSb83b9kbY YESTERDAY
     trim: 13F-72F
   https://www.youtube.com/watch?v=WaIrad_avQI -> YESTERDAY (initialized)
@@ -166,7 +162,6 @@ group:
 
 group:
   more: +md:[SAY](https://www.lifeprint.com/asl101/pages-signs/s/say.htm)
-
   https://www.youtube.com/watch?v=fka6bGd2TX8 SAY
     trim: 12F-49F
 
@@ -180,7 +175,11 @@ https://www.youtube.com/watch?v=6IXVVDel4lw TOOTHPASTE
 
 group:
   more: +md:[WITH (advanced)](https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm)
+  # Used in lesson 10 phrases
+  https://www.youtube.com/watch?v=PNp3dIAoFGA CHASE
+    trim: 11F-69F
 
+  tags: +extra
   https://www.youtube.com/watch?v=7Z1WMbq2Y6E AHEAD
     trim: 9F-77F
   https://www.youtube.com/watch?v=VoetY5cF1Oo BEHIND
@@ -193,8 +192,6 @@ group:
     trim: 4F-53F
   https://www.youtube.com/watch?v=P0g3SiRW__4 CATCH-UP
     trim: 6F-65F
-  https://www.youtube.com/watch?v=PNp3dIAoFGA CHASE
-    trim: 11F-69F
   https://www.youtube.com/watch?v=H37s1WoEGEs RACE / COMPETE
     trim: 7F-68F
   https://www.youtube.com/watch?v=Esuc74eXfMA UNDER / SUBORDINATE
