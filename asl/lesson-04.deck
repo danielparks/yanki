@@ -7,7 +7,6 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[ANGRY](https://www.lifeprint.com/asl101/pages-signs/a/angry.htm)
-
   https://www.youtube.com/watch?v=25cSn8yqYPs ANGRY
     trim: 19F-76F
 
@@ -17,19 +16,16 @@ group:
 
 group:
   more: +md:[AUNT](https://www.lifeprint.com/asl101/pages-signs/a/aunt.htm)
-
   https://www.youtube.com/watch?v=_c8v25YlVyY AUNT
     tags: +first_100_signs
 
 group:
   more: +md:[BABY](https://www.lifeprint.com/asl101/pages-signs/b/baby.htm)
-
   https://www.youtube.com/watch?v=ljYpx7ee9zg BABY
     tags: +first_100_signs
 
 group:
   more: +md:[BED](https://www.lifeprint.com/asl101/pages-signs/b/bed.htm)
-
   https://www.youtube.com/watch?v=12eeoE4uG_k BED (one handed)
     trim: 15F-70F
   https://www.youtube.com/watch?v=HA0RpgkXZn8 BED (two handed)
@@ -37,19 +33,16 @@ group:
 
 group:
   more: +md:[BEDROOM](https://www.lifeprint.com/asl101/pages-signs/b/bedroom.htm)
-
   https://www.youtube.com/watch?v=83WlTF0pTAE BEDROOM
     trim: 13F-74F
 
 group:
   more: +md:[BRUSH-TEETH](https://www.lifeprint.com/asl101/pages-signs/b/brushteeth.htm)
-
   https://www.youtube.com/watch?v=exx7eObiynQ BRUSH-TEETH
     tags: +first_100_signs
 
 group:
   more: +md:[CRY](https://www.lifeprint.com/asl101/pages-signs/c/cry.htm)
-
   https://www.youtube.com/watch?v=H6CQg4zRmlA CRY
     tags: +first_100_signs
 
@@ -58,29 +51,24 @@ group:
 
 group:
   more: +md:[DAUGHTER](https://www.lifeprint.com/asl101/pages-signs/d/daughter.htm)
-
   https://www.youtube.com/watch?v=hJD5uIn7ZHg DAUGHTER
 
 group:
   more: +md:[DON’T-WANT](https://www.lifeprint.com/asl101/pages-signs/d/dont-want.htm)
-
   https://www.youtube.com/watch?v=m0IIdSY4-tI don’t-WANT
     trim: 12F-78F
 
 group:
   more: +md:[EXCUSE](https://www.lifeprint.com/asl101/pages-signs/e/excuse.htm)
-
   https://www.youtube.com/watch?v=wgb7pcdTIy8 EXCUSE
     tags: +first_100_signs
 
 group:
   more: +md:[FEEL](https://www.lifeprint.com/asl101/pages-signs/f/feel.htm)
-
   https://www.youtube.com/watch?v=UxO5Q0fSqOw FEEL
 
 group:
   more: +md:[FRIEND](https://www.lifeprint.com/asl101/pages-signs/f/friend.htm)
-
   https://www.youtube.com/watch?v=6RRmIyhkMx0 FRIEND
   https://www.youtube.com/watch?v=FhNdhtl2TdQ BOYFRIEND (compound)
     trim: 20F-88F
@@ -97,14 +85,12 @@ group:
 
 group:
   more: +md:[HAPPY](https://www.lifeprint.com/asl101/pages-signs/h/happy.htm)
-
   https://www.youtube.com/watch?v=ZXHHO_DY6_A HAPPY
     trim: 13F-70F
     tags: +first_100_signs
 
 group:
   more: +md:[HELP](https://www.lifeprint.com/asl101/pages-signs/h/help.htm)
-
   https://www.youtube.com/watch?v=fj6Ums0JqNE HELP / assistance
     tags: +first_100_signs
 
@@ -113,56 +99,49 @@ group:
 
 group:
   more: +md:[HURT](https://www.lifeprint.com/asl101/pages-signs/h/hurt.htm)
-
   https://www.youtube.com/watch?v=xs4k_Qf3BSc HURT / pain / injury
     tags: +first_100_signs
+
+  tags: +extra
   https://www.youtube.com/watch?v=LHYJVE-Xb00
     HURT / pain / throbbing / aching (jabbing version)
 
 group:
   more: +md:[IF](https://www.lifeprint.com/asl101/pages-signs/i/if.htm)
-
   https://www.youtube.com/watch?v=M8CXHkOskvo IF / SUPPOSE
 
 group:
   more: +md:[IDEA](https://www.lifeprint.com/asl101/pages-signs/i/idea.htm)
-
   https://www.youtube.com/watch?v=mM752iAos2w IDEA
     trim: 17F-72F
 
 group:
   more: +md:[LOVE](https://www.lifeprint.com/asl101/pages-signs/l/love.htm)
-
   https://www.youtube.com/watch?v=lRIRPw5EdSU LOVE
     trim: 28F-75F
     tags: +first_100_signs
 
 group:
   more: +md:[ROOM](https://www.lifeprint.com/asl101/pages-signs/r/room.htm)
-
   https://www.youtube.com/watch?v=ByET2PW3OrQ ROOM / BOX
     trim: 25F-82F
 
 group:
   more: +md:[SAD](https://www.lifeprint.com/asl101/pages-signs/s/sad.htm)
-
   https://www.youtube.com/watch?v=zfkQYQhrZ6Q SAD
     tags: +first_100_signs
 
 group:
   more: +md:[SON](https://www.lifeprint.com/asl101/pages-signs/s/son.htm)
-
   https://www.youtube.com/watch?v=JtgGFe8HIFQ SON
 
 group:
   more: +md:[SORRY](https://www.lifeprint.com/asl101/pages-signs/s/sorry.htm)
-
   https://www.youtube.com/watch?v=jRHDjxWJma0 SORRY
     tags: +first_100_signs
 
 group:
   more: +md:[STOP](https://www.lifeprint.com/asl101/pages-signs/s/stop.htm)
-
   https://www.youtube.com/watch?v=A84uvLUmCVU STOP
     trim: 15F-78F
     tags: +first_100_signs
@@ -171,13 +150,11 @@ group:
 
 group:
   more: +md:[UNCLE](https://www.lifeprint.com/asl101/pages-signs/u/uncle.htm)
-
   https://www.youtube.com/watch?v=PqtMCA2lu9w UNCLE
     tags: +first_100_signs
 
 group:
   more: +md:[WASH](https://www.lifeprint.com/asl101/pages-signs/w/wash.htm)
-
   https://www.youtube.com/watch?v=Whiibgq84LY WASH
     tags: +first_100_signs
 
@@ -192,7 +169,6 @@ group:
 
 group:
   more: +md:[Classifier V](https://www.lifeprint.com/asl101/pages-signs/c/clv.htm)
-
   https://www.youtube.com/watch?v=B36qDOOtm20 WALK-TO (classifier V)
   https://www.youtube.com/watch?v=0mG8riLnMg4 TOSS AND TURN (classifier V)
   https://www.youtube.com/watch?v=XFfZVYvr7fs LIE DOWN (classifier V)

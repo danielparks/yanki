@@ -8,7 +8,6 @@ note_id: Lifeprint ASL {url} {clip}
 group:
   # HOUR is in lesson 12
   more: +md:[HALF-HOUR](https://www.lifeprint.com/asl101/pages-signs/h/half-hour.htm)
-
   https://www.youtube.com/watch?v=dhMoV3k8R8U HALF-HOUR (1-hand version)
     trim: 9F-60F
   https://www.youtube.com/watch?v=YBJ5rjfxgdc -> HALF-HOUR (B-hand version)
@@ -16,19 +15,16 @@ group:
 
 group:
   more: +md:[AFTER](https://www.lifeprint.com/asl101/pages-signs/a/after.htm)
-
   https://www.youtube.com/watch?v=AZqgw-USe2I OVER / ACROSS / AFTER
     trim: 6F-65F
 
 group:
   more: +md:[APPOINTMENT](https://www.lifeprint.com/asl101/pages-signs/a/appointment.htm)
-
   https://www.youtube.com/watch?v=N-Ka5PxfVkA APPOINTMENT / RESERVATION
     trim: 11F-66F
 
 group:
   more: +md:[BEFORE](https://www.lifeprint.com/asl101/pages-signs/b/before.htm)
-
   https://www.youtube.com/watch?v=lqow5S8tnMs BEFORE / PRIOR-to
     trim: 12F-63F
   https://www.youtube.com/watch?v=1dhDpb69eSM -> BEFORE / PRIOR-to
@@ -38,7 +34,7 @@ group:
 
 group:
   more: +md:[DO](https://www.lifeprint.com/asl101/pages-signs/d/do.htm)
-
+  tags: +extra
   https://www.youtube.com/watch?v=D__fueHfB0E
     DO / ACTION / BEHAVIOR (small circle version)
     trim: 4F-52F
@@ -52,7 +48,6 @@ group:
 
 group:
   more: +md:[END](https://www.lifeprint.com/asl101/pages-signs/e/end.htm)
-
   https://www.youtube.com/watch?v=SiRvPUToJvw END (straight movement version)
     trim: 18F-73F
   https://www.youtube.com/watch?v=lRBeEfuQmGM END (L-movement version)
@@ -63,7 +58,6 @@ group:
     SEVERAL are inflections of the same sign. Signing closer to the body with
     fewer fingers indicates _fewer_, and signing with an open body and more
     fingers indicates _more_.
-
   https://www.youtube.com/watch?v=jU6JOj4UucI FEW (3-hand version)
     trim: 10F-77F
   https://www.youtube.com/watch?v=LCkYr7H9sVY SEVERAL / FEW (4-hand version)
@@ -87,7 +81,6 @@ group:
 
 group:
   more: +md:[FIRST](https://www.lifeprint.com/asl101/pages-signs/f/first.htm)
-
   https://www.youtube.com/watch?v=tZ04_s30aXY
     FIRST / PRIMARY (thumb version)
     trim: 10F-70F
@@ -103,19 +96,16 @@ group:
 
 group:
   more: +md:[LAST](https://www.lifeprint.com/asl101/pages-signs/l/last.htm)
-
   https://www.youtube.com/watch?v=n5rMf-z3Qmc FINAL / LAST
     trim: 24F-90F
 
 group:
   more: +md:[LATE](https://www.lifeprint.com/asl101/pages-signs/l/late.htm)
-
   https://www.youtube.com/watch?v=9ul_1z23KLI LATE
     trim: 6F-43F
 
 group:
   more: +md:[LATER](https://www.lifeprint.com/asl101/pages-signs/l/later.htm)
-
   https://www.youtube.com/watch?v=4Md8yfrXzp8 LATER (one handed)
     trim: 47F-
 
@@ -124,7 +114,6 @@ group:
 
 group:
   more: +md:[LOOK](https://www.lifeprint.com/asl101/pages-signs/l/look.htm)
-
   https://www.youtube.com/watch?v=Pt_QBeW9xMg
     LOOK / LOOK-AT  (far-from-face version)
     trim: 17F-64F
@@ -132,28 +121,26 @@ group:
 
 group:
   more: +md:[MIDDLE](https://www.lifeprint.com/asl101/pages-signs/m/middle.htm)
-
   https://www.youtube.com/watch?v=dV6jdKRJTvc MIDDLE / CENTER
     trim: 12F-59F
+
+  tags: +extra
   https://www.youtube.com/watch?v=9xbR8Yk9vXg CENTER (bent hand version)
     trim: 7F-65F
   # No video for MIDPOINT.
 
 group:
   more: +md:[MIDNIGHT](https://www.lifeprint.com/asl101/pages-signs/m/midnight.htm)
-
   https://www.youtube.com/watch?v=p7CPi7lDY3c MIDNIGHT
     trim: 48F-112F
 
 group:
   more: +md:[MOST](https://www.lifeprint.com/asl101/pages-signs/m/most.htm)
-
   https://www.youtube.com/watch?v=nPntlOgjAxo MOST
     trim: 0-69F
 
 group:
   more: +md:[NEXT](https://www.lifeprint.com/asl101/pages-signs/n/next.htm)
-
   https://www.youtube.com/watch?v=U9LJw1dsPkM NEXT
     trim: 12F-68F
 
@@ -161,7 +148,6 @@ group:
 
 group:
   more: +md:[NOT-YET](https://www.lifeprint.com/asl101/pages-signs/n/not-yet.htm)
-
   https://www.youtube.com/watch?v=00H6TCCoIpU not-YET
     trim: 16F-61F
     more: +Note that the tongue goes over the lower teeth.
@@ -169,19 +155,16 @@ group:
 group:
   more: +md:[OFTEN](https://www.lifeprint.com/asl101/pages-signs/o/often.htm)
     can become “frequent” if signed faster and with an additional movement.
-
   https://www.youtube.com/watch?v=4dtwTr_w12I OFTEN
     trim: 3F-52F
 
 group:
   more: +md:[RECENT](https://www.lifeprint.com/asl101/pages-signs/r/recent.htm)
-
   https://www.youtube.com/watch?v=PBpeJcpk7t8 RECENT / RECENTLY
     trim: 8F-60F
 
 group:
   more: +md:[SEE](https://www.lifeprint.com/asl101/pages-signs/s/see.htm)
-
   https://www.youtube.com/watch?v=JytzcBQp8d4 LOOK / LOOK-AT (near face version)
     trim: 12F-51F
   https://www.youtube.com/watch?v=7XQiv-PxecU SEE / VISION
@@ -202,7 +185,6 @@ group:
 
 group:
   more: +md:[SOON](https://www.lifeprint.com/asl101/pages-signs/s/soon.htm)
-
   https://www.youtube.com/watch?v=ty0cXz3tYlM SOON (F-hand version)
     trim: 1F-50F
   https://www.youtube.com/watch?v=pkNaLLQKuUU SOON (H-hand version)

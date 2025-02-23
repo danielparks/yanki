@@ -7,13 +7,11 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[AIDE](https://www.lifeprint.com/asl101/pages-signs/a/aide.htm)
-
   https://www.youtube.com/watch?v=lGa3EU5ifHk AIDE / ASSISTANT
     trim: 17F-72F
 
 group:
   more: +md:[BABYSITTER](https://www.lifeprint.com/asl101/pages-signs/b/babysitter.htm)
-
   https://www.youtube.com/watch?v=1PsaWJIMdkQ BABY KEEP PERSON / babysitter
     trim: 11F-75F
   https://www.youtube.com/watch?v=xJ8vboGrbug -> BABY SIT / babysit
@@ -22,7 +20,6 @@ group:
 
 group:
   more: +md:[BOSS](https://www.lifeprint.com/asl101/pages-signs/b/boss.htm)
-
   https://www.youtube.com/watch?v=wlhbw8q_5yU BOSS / COACH
     trim: 11F-63F
 
@@ -41,7 +38,6 @@ group:
 
 group:
   more: +md:[FARM](https://www.lifeprint.com/asl101/pages-signs/f/farm.htm)
-
   https://www.youtube.com/watch?v=smPpqc0kwFE FARM (horizontal version)
     trim: 7F-56F
   # Doesn’t seem worthwhile to include FARM+PERSON / FARMER.
@@ -53,7 +49,6 @@ group:
 
 group:
   more: +md:[FIREFIGHTER](https://www.lifeprint.com/asl101/pages-signs/f/firefighter.htm)
-
   https://www.youtube.com/watch?v=m3XdUF24faE FIREFIGHTER (tap version)
     trim: 11F-66F
 
@@ -63,7 +58,6 @@ group:
 
 group:
   more: +md:[IN-LAW](https://www.lifeprint.com/asl101/pages-signs/i/in-law.htm)
-
   https://www.youtube.com/watch?v=qb4bHwxsNvs BROTHER+IN-LAW
     trim: 8F-69F
   https://www.youtube.com/watch?v=GvQfncDu49I SISTER+IN-LAW
@@ -75,13 +69,11 @@ group:
 
 group:
   more: +md:[LIBRARY](https://www.lifeprint.com/asl101/pages-signs/l/library.htm)
-
   https://www.youtube.com/watch?v=CSaOomMxWl4 LIBRARY
   # Doesn’t seem worthwhile to include LIBRARY+PERSON / LIBRARIAN.
 
 group:
   more: +md:[MAIN](https://www.lifeprint.com/asl101/pages-signs/m/main.htm)
-
   https://www.youtube.com/watch?v=XZDwagpGFUs
     academic-MAJOR / main / discipline / field / line of work / career
     trim: 9F-86F
@@ -94,7 +86,6 @@ group:
 
 group:
   more: +md:[NEIGHBOR](https://www.lifeprint.com/asl101/pages-signs/n/neighbor.htm)
-
   https://www.youtube.com/watch?v=6OjPyxcUncA NEIGHBOR
     trim: 14F-66F
   https://www.youtube.com/watch?v=fFprjIePuqw NEIGHBOR-[next one over]
@@ -102,7 +93,6 @@ group:
 
 group:
   more: +md:[PICTURE](https://www.lifeprint.com/asl101/pages-signs/p/picture.htm)
-
   https://www.youtube.com/watch?v=8_eI8t4exD8 PICTURE
     trim: 72F-223F
   https://www.youtube.com/watch?v=_rkpJ4Xtk9I take-a-PICTURE
@@ -112,25 +102,26 @@ group:
 
 group:
   more: +md:[POLICE](https://www.lifeprint.com/asl101/pages-signs/p/police.htm)
-
   https://www.youtube.com/watch?v=TyxYhCL1RSA
     POLICE / COP / person who wears a badge (modified C-hand version)
     trim: 16F-72F
+
+  tags: +extra
   https://www.youtube.com/watch?v=dNi8hVsgL6I ->
     POLICE / COP / person who wears a badge (C-hand version)
     trim: 18F-60F
 
 group:
   more: +md:[PRESIDENT](https://www.lifeprint.com/asl101/pages-signs/p/president.htm)
-
   https://www.youtube.com/watch?v=XuNvPyMBB4M PRESIDENT / superintendent
     trim: 8F-56F
+
+  tags: +extra
   https://www.youtube.com/watch?v=fuFTBiGGlD8 -> PRESIDENT / superintendent
     trim: 10F-55F
 
 group:
   more: +md:[PRINTER](https://www.lifeprint.com/asl101/pages-signs/p/printer.htm)
-
   https://www.youtube.com/watch?v=xXR8DCZkx0g PRINTER (device) / NEWSPAPER
     trim: 11F-58F
   https://www.youtube.com/watch?v=bU8-e-s6zog PRINT / publish
@@ -138,13 +129,11 @@ group:
 
 group:
   more: +md:[PROGRAM](https://www.lifeprint.com/asl101/pages-signs/p/program.htm)
-
   https://www.youtube.com/watch?v=QWPNcp9nirg PROGRAM (verb and noun)
     trim: 20F-101F
 
 group:
   more: +md:[SCIENTIST](https://www.lifeprint.com/asl101/pages-signs/s/scientist.htm)
-
   https://www.youtube.com/watch?v=ExlOozGYqvU SCIENCE (S-hand version)
     trim: 4F-57F
   https://www.youtube.com/watch?v=TcP83Utr_RI SCIENCE (A-hand version)
@@ -152,7 +141,6 @@ group:
 
 group:
   more: +md:[SECRETARY](https://www.lifeprint.com/asl101/pages-signs/s/secretary.htm)
-
   https://www.youtube.com/watch?v=U3lM2jSLNno SECRETARY (write version)
     trim: 9F-58F
   https://www.youtube.com/watch?v=7FvR0sUKA84 -> SECRETARY (K lips version)
@@ -164,17 +152,18 @@ group:
 
 group:
   more: +md:[SELF](https://www.lifeprint.com/asl101/pages-signs/s/self.htm)
-
   # Most of SELF was in lesson 6.
+  tags: +extra
   https://www.youtube.com/watch?v=DN1QXUwV7FI
     THINK SELF / up-to-you / as-you-wish (idiomatic)
     trim: 7F-55F
 
 group:
   more: +md:[STEPFATHER](https://www.lifeprint.com/asl101/pages-signs/s/stepfather.htm)
-
   https://www.youtube.com/watch?v=FMFaNWfWhXg STEPFATHER / SECOND+DAD
     trim: 8F-58F
+
+  tags: +extra
   https://www.youtube.com/watch?v=kz26sYBeHuo -> STEPFATHER (S-T-E-P version)
     trim: 11F-94F
   https://www.youtube.com/watch?v=oDMERDMxvxs ->
@@ -184,9 +173,10 @@ group:
 
 group:
   more: +md:[STEPMOTHER](https://www.lifeprint.com/asl101/pages-signs/s/stepmother.htm)
-
   https://www.youtube.com/watch?v=h5KnufbmVHw STEPMOTHER / SECOND+MOM
     trim: 13F-58F
+
+  tags: +extra
   https://www.youtube.com/watch?v=tbPcyObbkf0 -> STEPMOTHER (S-T-E-P version)
     trim: 8F-77F
   https://www.youtube.com/watch?v=KREUzfdOmKY ->
@@ -196,7 +186,6 @@ group:
 
 group:
   more: +md:[WAITER](https://www.lifeprint.com/asl101/pages-signs/w/waiter.htm)
-
   https://www.youtube.com/watch?v=2icFerNdwcA WAITER / SERVER (SERVE version)
     trim: 11F-82F
   https://www.youtube.com/watch?v=k6CKj7r4Rwk WAITER / CATERER (horns)
