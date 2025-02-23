@@ -7,6 +7,8 @@ note_id: Lifeprint ASL {url} {clip}
 https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
   trim: 9F-51F
 
+https://www.youtube.com/watch?v=hzlYOuTrIhA AMERICA
+
 https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
   trim: 18F-74F
 
@@ -674,6 +676,19 @@ group:
 # Can’t find ONCE, THRICE, FOUR-TIMES, etc.
 https://www.youtube.com/watch?v=Wwz4hcFIukw TWICE
   more: +md:[TWICE](https://www.lifeprint.com/asl101/pages-signs/t/twice.htm)
+
+# From lesson 15 video (https://www.youtube.com/watch?v=boRKuJiw30k)
+https://www.youtube.com/watch?v=8CEl2Rjsens U-S (United States)
+
+group:
+  more: +md:[PERCENT](https://www.lifeprint.com/asl101/pages-signs/p/percent.htm)
+  https://www.youtube.com/watch?v=HsBoHAZndpw PERCENT
+    trim: 16F-76F
+
+group:
+  more: +md:[HOW-MUCH](https://www.lifeprint.com/asl101/pages-signs/h/how-much.htm)
+  https://www.youtube.com/watch?v=SdIhlXzWo5U WORTH-HOW-MUCH
+    trim: 10F-51F
 
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm

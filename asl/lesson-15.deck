@@ -88,6 +88,8 @@ group:
   more: +md:[NEIGHBOR](https://www.lifeprint.com/asl101/pages-signs/n/neighbor.htm)
   https://www.youtube.com/watch?v=6OjPyxcUncA NEIGHBOR
     trim: 14F-66F
+
+  tags: +extra
   https://www.youtube.com/watch?v=fFprjIePuqw NEIGHBOR-[next one over]
     trim: 8F-64F
 
@@ -141,14 +143,16 @@ group:
 
 group:
   more: +md:[SECRETARY](https://www.lifeprint.com/asl101/pages-signs/s/secretary.htm)
-  https://www.youtube.com/watch?v=U3lM2jSLNno SECRETARY (write version)
-    trim: 9F-58F
-  https://www.youtube.com/watch?v=7FvR0sUKA84 -> SECRETARY (K lips version)
+  https://www.youtube.com/watch?v=7FvR0sUKA84 SECRETARY (K lips version)
     trim: 11F-62F
-  https://www.youtube.com/watch?v=D1Zl-7gp0Zs -> SECRETARY (U version)
-    trim: 10F-56F
   https://www.youtube.com/watch?v=ASCPx0sjuwM -> SECRETARY (K ear version)
     trim: 10F-74F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=D1Zl-7gp0Zs -> SECRETARY (U version)
+    trim: 10F-56F
+  https://www.youtube.com/watch?v=U3lM2jSLNno -> SECRETARY (write version)
+    trim: 9F-58F
 
 group:
   more: +md:[SELF](https://www.lifeprint.com/asl101/pages-signs/s/self.htm)
