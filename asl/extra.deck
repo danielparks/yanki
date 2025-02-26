@@ -540,18 +540,6 @@ group:
     trim: 8F-65F
 
 group:
-  more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
-  https://www.youtube.com/watch?v=0SxXfJAnBHk
-    WHATEVER / regardless / doesn’t matter / anyway / that’s not important
-    trim: 0-51F
-  https://www.youtube.com/watch?v=zXfNs1eO7i0
-    WHATEVER (L-hands version, sarcastic)
-    trim: 25F-93F
-  https://www.youtube.com/watch?v=2PtaPd6wT9c WHATEVER (joke, pinky version)
-    trim: 12F-
-    tags: +extra
-
-group:
   more: +md:[WHAT’S-UP](https://www.lifeprint.com/asl101/pages-signs/w/whats-up.htm)
   https://www.youtube.com/watch?v=Q6fYE2gn9mM WHAT’S-UP
 
@@ -693,6 +681,29 @@ group:
   more: +md:[HOW-MUCH](https://www.lifeprint.com/asl101/pages-signs/h/how-much.htm)
   https://www.youtube.com/watch?v=SdIhlXzWo5U WORTH-HOW-MUCH
     trim: 10F-51F
+
+# From lesson 16 video (https://www.youtube.com/watch?v=p_SC5CSzrLs)
+group:
+  more: +md:[DON’T-CARE](https://www.lifeprint.com/asl101/pages-signs/d/dont-care.htm)
+  https://www.youtube.com/watch?v=0dqyb1R51S4 DON’T-CARE
+    trim: 11F-65F
+
+group:
+  more: +md:[UGLY](https://www.lifeprint.com/asl101/pages-signs/u/ugly.htm)
+  https://www.youtube.com/watch?v=9lFtQ3an3Go UGLY
+    trim: 16F-77F
+
+group:
+  more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
+  https://www.youtube.com/watch?v=0SxXfJAnBHk
+    WHATEVER / regardless / doesn’t matter / anyway / that’s not important
+    trim: 0-51F
+  https://www.youtube.com/watch?v=zXfNs1eO7i0
+    WHATEVER (L-hands version, sarcastic)
+    trim: 25F-93F
+  https://www.youtube.com/watch?v=2PtaPd6wT9c WHATEVER (joke, pinky version)
+    trim: 12F-
+    tags: +extra
 
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm
