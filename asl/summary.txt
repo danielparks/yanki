@@ -654,6 +654,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=0aux6b4MDSQ @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=0aux6b4MDSQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/o/off.htm">OFF</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=0aux6b4MDSQ @0- TAGS: 'Lifeprint lesson_08 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=0aux6b4MDSQ @0- TEXT: 'POWER-OFF'
+Lifeprint ASL https://www.youtube.com/watch?v=0dqyb1R51S4 @0- MEDIA: "processed_youtube=0dqyb1R51S4_audio='strip'_clip=(0.3670333333333333, 2.168833333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=0dqyb1R51S4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dont-care.htm">DON’T-CARE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=0dqyb1R51S4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=0dqyb1R51S4 @0- TEXT: 'DON’T-CARE'
 Lifeprint ASL https://www.youtube.com/watch?v=0jDsZ7OFVb4 @0- MEDIA: "processed_youtube=0jDsZ7OFVb4_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=0jDsZ7OFVb4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<h3>What kind of soup do you like?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=0jDsZ7OFVb4 @0- TAGS: 'Lifeprint lesson_07 phrase'
@@ -1510,6 +1514,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=9keaZndfaDI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=9keaZndfaDI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/drink.htm">DRINK</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=9keaZndfaDI @0- TAGS: 'Lifeprint extra lesson_07 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=9keaZndfaDI @0- TEXT: 'DRINK-small-alcohol'
+Lifeprint ASL https://www.youtube.com/watch?v=9lFtQ3an3Go @0- MEDIA: "processed_youtube=9lFtQ3an3Go_audio='strip'_clip=(0.5338666666666667, 2.5692333333333335).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=9lFtQ3an3Go @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/u/ugly.htm">UGLY</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=9lFtQ3an3Go @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=9lFtQ3an3Go @0- TEXT: 'UGLY'
 Lifeprint ASL https://www.youtube.com/watch?v=9mlTPY3sd6E @0- MEDIA: "processed_youtube=9mlTPY3sd6E_audio='strip'_clip=(0.3670333333333333, 1.7684333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=9mlTPY3sd6E @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm">CLOTHES</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=9mlTPY3sd6E @0- TAGS: 'Lifeprint extra lesson_08 vocabulary'
