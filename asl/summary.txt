@@ -5306,10 +5306,6 @@ Lifeprint ASL https://www.youtube.com/watch?v=nHUxT-iHJwM @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=nHUxT-iHJwM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/practice.htm">PRACTICE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=nHUxT-iHJwM @0- TAGS: 'Lifeprint lesson_18 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=nHUxT-iHJwM @0- TEXT: 'PRACTICE'
-Lifeprint ASL https://www.youtube.com/watch?v=nIbYV_uDzUg @0- MEDIA: "processed_youtube=nIbYV_uDzUg_audio='strip'_clip=(0.4337666666666667, 1.5348666666666666).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=nIbYV_uDzUg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/bird.htm">BIRD</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=nIbYV_uDzUg @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=nIbYV_uDzUg @0- TEXT: 'TWEET (Twitter post)'
 Lifeprint ASL https://www.youtube.com/watch?v=nJwr-yWRdNQ @0- MEDIA: "processed_youtube=nJwr-yWRdNQ_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=nJwr-yWRdNQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/more.htm">MORE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=nJwr-yWRdNQ @0- TAGS: 'Lifeprint first_100_signs lesson_03 vocabulary'
@@ -6347,8 +6343,8 @@ Lifeprint ASL https://www.youtube.com/watch?v=yxXQywcA63o @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=yxXQywcA63o @0- TAGS: 'Lifeprint lesson_03 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=yxXQywcA63o @0- TEXT: 'YOU GO-to SCHOOL YOU?'
 Lifeprint ASL https://www.youtube.com/watch?v=yxlQDmsFo-g @0- MEDIA: "processed_youtube=yxlQDmsFo-g_audio='strip'_clip=(0.06673333333333334, 2.0687333333333333).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=yxlQDmsFo-g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/chicken.htm">CHICKEN</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=yxlQDmsFo-g @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=yxlQDmsFo-g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/chicken.htm">CHICKEN</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=yxlQDmsFo-g @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=yxlQDmsFo-g @0- TEXT: 'CHICKEN (old version — pecking in hand)'
 Lifeprint ASL https://www.youtube.com/watch?v=yzmCnmTZiO8 @0- MEDIA: "processed_youtube=yzmCnmTZiO8_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=yzmCnmTZiO8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<h3>Are you coming to school next week?</h3>\n'

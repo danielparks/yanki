@@ -14,15 +14,6 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=PYhh2tLc3QA FLY-[gliding-bird]
     trim: 6F-84F
-  https://www.youtube.com/watch?v=nIbYV_uDzUg TWEET (Twitter post)
-    trim: 13F-46F
-
-# Not really part of this lesson
-https://www.youtube.com/watch?v=yxlQDmsFo-g ->
-  CHICKEN (old version — pecking in hand)
-  trim: 2F-62F
-  more: +md:[CHICKEN](https://www.lifeprint.com/asl101/pages-signs/c/chicken.htm)
-  tags: +extra
 
 group:
   more: +md:[BOOK](https://www.lifeprint.com/asl101/pages-signs/b/book.htm)
