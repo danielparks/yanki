@@ -665,7 +665,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=0jDsZ7OFVb4 @0- TEXT: 'SOUP, YOU L
 Lifeprint ASL https://www.youtube.com/watch?v=0kwqwUJlso8 @0- MEDIA: "processed_youtube=0kwqwUJlso8_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=0kwqwUJlso8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<h3>Is your clothes dryer gas or electric?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=0kwqwUJlso8 @0- TAGS: 'Lifeprint lesson_09 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=0kwqwUJlso8 @0- TEXT: 'YOUR DRYER, G-A-S, [bodyshift] ELECTRIC WHICH?'
+Lifeprint ASL https://www.youtube.com/watch?v=0kwqwUJlso8 @0- TEXT: 'YOUR DRYER, G-A-S, [body-shift]-OR ELECTRIC WHICH?'
 Lifeprint ASL https://www.youtube.com/watch?v=0ld4vhLaLZk @0- MEDIA: "processed_youtube=0ld4vhLaLZk_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=0ld4vhLaLZk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<h3>Do you like building snowmen?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=0ld4vhLaLZk @0- TAGS: 'Lifeprint lesson_14 phrase'
@@ -1453,7 +1453,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=95AiB9DJaiI @0- TEXT: 'SURPRISE'
 Lifeprint ASL https://www.youtube.com/watch?v=95XUpcCDojM @0- MEDIA: "processed_youtube=95XUpcCDojM_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=95XUpcCDojM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<h3>Do you prefer cars or trucks?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=95XUpcCDojM @0- TAGS: 'Lifeprint lesson_18 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=95XUpcCDojM @0- TEXT: 'YOU PREFER CAR [bodyshift]-OR TRUCK?'
+Lifeprint ASL https://www.youtube.com/watch?v=95XUpcCDojM @0- TEXT: 'YOU PREFER CAR [body-shift]-OR TRUCK?'
 Lifeprint ASL https://www.youtube.com/watch?v=9G23AjmjyV4 @0- MEDIA: "processed_youtube=9G23AjmjyV4_audio='strip'_clip=(0.4337666666666667, 2.5358666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=9G23AjmjyV4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dresser.htm">DRESSER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=9G23AjmjyV4 @0- TAGS: 'Lifeprint lesson_09 vocabulary'
@@ -1841,7 +1841,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=CPp1UOM-olA @0- TEXT: 'STORE'
 Lifeprint ASL https://www.youtube.com/watch?v=CQVNd1cAYos @0- MEDIA: "processed_youtube=CQVNd1cAYos_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=CQVNd1cAYos @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<h3>Do you prefer apples or oranges?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=CQVNd1cAYos @0- TAGS: 'Lifeprint lesson_07 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=CQVNd1cAYos @0- TEXT: 'YOU FAVORITE-[prefer] APPLE [bodyshift-”or”] ORANGES?'
+Lifeprint ASL https://www.youtube.com/watch?v=CQVNd1cAYos @0- TEXT: 'YOU FAVORITE-[prefer] APPLE [body-shift]-OR ORANGES?'
 Lifeprint ASL https://www.youtube.com/watch?v=CRUMLda48J8 @0- MEDIA: "processed_youtube=CRUMLda48J8_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=CRUMLda48J8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=CRUMLda48J8 @0- TAGS: 'Lifeprint lesson_05 phrase'
@@ -2177,7 +2177,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=GUr6CFbZ2FM @0- TEXT: 'BUILD (laye
 Lifeprint ASL https://www.youtube.com/watch?v=G_uAbe15tE0 @0- MEDIA: "processed_youtube=G_uAbe15tE0_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=G_uAbe15tE0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<h3>Do you prefer hamburgers or hotdogs?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=G_uAbe15tE0 @0- TAGS: 'Lifeprint lesson_07 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=G_uAbe15tE0 @0- TEXT: 'YOU FAVORITE-[prefer], HAMBURGER [body-shift-OR] HOTDOG?'
+Lifeprint ASL https://www.youtube.com/watch?v=G_uAbe15tE0 @0- TEXT: 'YOU FAVORITE-[prefer], HAMBURGER [body-shift]-OR HOTDOG?'
 Lifeprint ASL https://www.youtube.com/watch?v=GbeC9TFuSX4 @0- MEDIA: "processed_youtube=GbeC9TFuSX4_audio='strip'_clip=(0.46713333333333334, 2.0020000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=GbeC9TFuSX4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/n/name.htm">NAME</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=GbeC9TFuSX4 @0- TAGS: 'Lifeprint lesson_01 vocabulary'
@@ -3693,7 +3693,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=XZDwagpGFUs @0- TEXT: 'academic-MA
 Lifeprint ASL https://www.youtube.com/watch?v=Xc4rGJmcziE @0- MEDIA: "processed_youtube=Xc4rGJmcziE_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Xc4rGJmcziE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<h3>Which would you rather have, pizza or a hamburger?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Xc4rGJmcziE @0- TAGS: 'Lifeprint lesson_08 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=Xc4rGJmcziE @0- TEXT: 'PIZZA bodyshift-OR HAMBURGER YOU FAVORITE-[prefer] WHICH?'
+Lifeprint ASL https://www.youtube.com/watch?v=Xc4rGJmcziE @0- TEXT: 'PIZZA [body-shift]-OR HAMBURGER YOU FAVORITE-[prefer] WHICH?'
 Lifeprint ASL https://www.youtube.com/watch?v=Xecxz2jXc1I @0- MEDIA: "processed_youtube=Xecxz2jXc1I_audio='strip'_clip=(0.6339666666666667, 2.9696333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Xecxz2jXc1I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/far.htm">FAR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Xecxz2jXc1I @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -4885,7 +4885,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=jMb31BaCz6M @0- TEXT: 'ONE MINUTE 
 Lifeprint ASL https://www.youtube.com/watch?v=jPgwBWbJAvo @0- MEDIA: "processed_youtube=jPgwBWbJAvo_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=jPgwBWbJAvo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<h3>If you go to church, do you wear pants or do you wear a dress?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=jPgwBWbJAvo @0- TAGS: 'Lifeprint lesson_08 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=jPgwBWbJAvo @0- TEXT: 'SUPPOSE YOU GO CHURCH, PANTS [bodyshift]-OR DRESS YOU WHICH?'
+Lifeprint ASL https://www.youtube.com/watch?v=jPgwBWbJAvo @0- TEXT: 'SUPPOSE YOU GO CHURCH, PANTS [body-shift]-OR DRESS YOU WHICH?'
 Lifeprint ASL https://www.youtube.com/watch?v=jQC2QdxW9u0 @0- MEDIA: "processed_youtube=jQC2QdxW9u0_audio='strip'_clip=(0.5338666666666667, 2.9362666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=jQC2QdxW9u0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/withadvanced.htm">WITH (advanced)</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=jQC2QdxW9u0 @0- TAGS: 'Lifeprint extra lesson_09 vocabulary'
