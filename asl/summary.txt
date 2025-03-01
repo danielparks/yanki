@@ -3237,7 +3237,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=RXX7T4-saPs @0- TEXT: 'PERSON / AG
 Lifeprint ASL https://www.youtube.com/watch?v=R_LgML9-Kug @0- MEDIA: "processed_youtube=R_LgML9-Kug_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=R_LgML9-Kug @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<h3>Do you have a motorcycle?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=R_LgML9-Kug @0- TAGS: 'Lifeprint lesson_18 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=R_LgML9-Kug @0- TEXT: 'MOTORCYCLE, HAVE YOU?'
+Lifeprint ASL https://www.youtube.com/watch?v=R_LgML9-Kug @0- TEXT: 'MOTORCYCLE, YOU HAVE?'
 Lifeprint ASL https://www.youtube.com/watch?v=Re4SA9-ETz8 @0- MEDIA: "processed_youtube=Re4SA9-ETz8_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Re4SA9-ETz8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<h3>What time did you wake up yesterday?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Re4SA9-ETz8 @0- TAGS: 'Lifeprint lesson_14 phrase'
