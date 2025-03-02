@@ -993,7 +993,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=4B3VtEF78lM @0- TEXT: 'GIRLFRIEND'
 Lifeprint ASL https://www.youtube.com/watch?v=4DIL1_gUeAo @0- MEDIA: "processed_youtube=4DIL1_gUeAo_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4DIL1_gUeAo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<h3>Are you Deaf or Hearing?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4DIL1_gUeAo @0- TAGS: 'Lifeprint lesson_13 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=4DIL1_gUeAo @0- TEXT: 'DEAF [bodyshift-"or"] HEARING YOU?'
+Lifeprint ASL https://www.youtube.com/watch?v=4DIL1_gUeAo @0- TEXT: 'DEAF [body-shift]-OR HEARING YOU?'
 Lifeprint ASL https://www.youtube.com/watch?v=4LPjUIU4VMg @0- MEDIA: "processed_youtube=4LPjUIU4VMg_audio='strip'_clip=(0.2, 1.96).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4LPjUIU4VMg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/live.htm">LIVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4LPjUIU4VMg @0- TAGS: 'Lifeprint lesson_02 vocabulary'
@@ -1117,7 +1117,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=5blPNuezesY @0- TEXT: 'SOUP, YOU K
 Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- MEDIA: "processed_youtube=5dsbpDoszc8_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<h3>Which do you like better, summer or winter?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- TAGS: 'Lifeprint lesson_14 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- TEXT: 'SUMMER [bodyshift]-OR WINTER, YOU LIKE BETTER WHICH?'
+Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- TEXT: 'SUMMER [body-shift]-OR WINTER, YOU LIKE BETTER WHICH?'
 Lifeprint ASL https://www.youtube.com/watch?v=5eIt4-SifYA @0- MEDIA: "processed_youtube=5eIt4-SifYA_audio='strip'_clip=(0.3003, 1.8018).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5eIt4-SifYA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hearing.htm">HEARING</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5eIt4-SifYA @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
@@ -2629,7 +2629,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=Kwvw-K6GYW8 @0- TEXT: 'BOOK'
 Lifeprint ASL https://www.youtube.com/watch?v=L-pmJCa9ltw @0- MEDIA: "processed_youtube=L-pmJCa9ltw_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=L-pmJCa9ltw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<h3>Who do you think makes a better driver, a woman or a man?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=L-pmJCa9ltw @0- TAGS: 'Lifeprint lesson_16 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=L-pmJCa9ltw @0- TEXT: 'MAN bodyshift-OR WOMAN, YOU THINK BETTER DRIVER WHO?'
+Lifeprint ASL https://www.youtube.com/watch?v=L-pmJCa9ltw @0- TEXT: 'MAN [body-shift]-OR WOMAN, YOU THINK BETTER DRIVER WHO?'
 Lifeprint ASL https://www.youtube.com/watch?v=L-ufbEVTJSk @0- MEDIA: "processed_youtube=L-ufbEVTJSk_audio='strip'_clip=(0.16, 1.64).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=L-ufbEVTJSk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wrong.htm">WRONG</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=L-ufbEVTJSk @0- TAGS: 'Lifeprint lesson_13 vocabulary'
