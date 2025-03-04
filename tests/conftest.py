@@ -1,5 +1,6 @@
 import io
 import os
+import logging
 from pathlib import Path
 import pytest
 from pytest_console_scripts import ScriptRunner, _StrOrPath, RunResult
@@ -51,25 +52,31 @@ class YankiRunner(ScriptRunner):
         check: bool = False,
         **options: Any,
     ) -> RunResult:
-        if env is None:
-            env = {}
+        old_level = logging.getLogger("yanki.parser").level
+        try:
+            logging.getLogger("yanki.parser").setLevel(logging.INFO)
 
-        # Make sure our overridden `open` is in $PATH
-        if "PATH" in env:
-            env["PATH"] = f"{self.bin_path}:{env['PATH']}"
-        else:
-            env["PATH"] = f"{self.bin_path}:{os.environ['PATH']}"
+            if env is None:
+                env = {}
 
-        return super().run(
-            ["yanki", "--cache", self.cache_path, *arguments],
-            print_result=print_result,
-            shell=shell,
-            cwd=cwd,
-            env=env,
-            stdin=stdin,
-            check=check,
-            **options,
-        )
+            # Make sure our overridden `open` is in $PATH
+            if "PATH" in env:
+                env["PATH"] = f"{self.bin_path}:{env['PATH']}"
+            else:
+                env["PATH"] = f"{self.bin_path}:{os.environ['PATH']}"
+
+            return super().run(
+                ["yanki", "--cache", self.cache_path, *arguments],
+                print_result=print_result,
+                shell=shell,
+                cwd=cwd,
+                env=env,
+                stdin=stdin,
+                check=check,
+                **options,
+            )
+        finally:
+            logging.getLogger("yanki.parser").setLevel(old_level)
 
 
 @pytest.fixture
