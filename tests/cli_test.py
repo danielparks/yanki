@@ -80,6 +80,8 @@ def test_yanki_update(yanki, reference_deck_path):
     assert result.stderr == ""
 
 
+# This doesn’t work without subprocess.
+@pytest.mark.script_launch_mode("subprocess")
 def test_yanki_serve_http(yanki, reference_deck_path):
     # Need to add result to an object to get it out of thread:
     results = []
