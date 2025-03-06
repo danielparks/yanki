@@ -2678,6 +2678,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=LJrnjok5unE @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=LJrnjok5unE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=LJrnjok5unE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=LJrnjok5unE @0- TEXT: 'OLD-17 / 17-year-old'
+Lifeprint ASL https://www.youtube.com/watch?v=LJzalFEVIDc @0- MEDIA: "processed_youtube=LJzalFEVIDc_audio='strip'_clip=(0.26693333333333336, 2.435766666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=LJzalFEVIDc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=LJzalFEVIDc @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=LJzalFEVIDc @0- TEXT: 'CONFUSED'
 Lifeprint ASL https://www.youtube.com/watch?v=LLGY5yaSLDk @0- MEDIA: "processed_youtube=LLGY5yaSLDk_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=LLGY5yaSLDk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/big.htm">BIG</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=LLGY5yaSLDk @0- TAGS: 'Lifeprint lesson_03 vocabulary'
