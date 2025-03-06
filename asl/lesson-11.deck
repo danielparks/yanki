@@ -167,25 +167,26 @@ group:
     trim: 7F-
     tags: +extra
 
-  group:
-    more: +md:[CHAT](https://www.lifeprint.com/asl101/pages-signs/c/chat.htm)
-    https://www.youtube.com/watch?v=6KdtmP3ymSI
-      CHAT-with
+group:
+  more: +md:[TALK](https://www.lifeprint.com/asl101/pages-signs/t/talk.htm),
+    [CHAT](https://www.lifeprint.com/asl101/pages-signs/c/chat.htm)
+  https://www.youtube.com/watch?v=6KdtmP3ymSI
+    CHAT-with
 
-      (signing or voiced, loose 5 hands, two hand movement version)
-      trim: 9F-57F
-    https://www.youtube.com/watch?v=F9Qw3X_9d5c
-      CHAT-with
+    (signing or voiced, loose 5 hands, two hand movement version)
+    trim: 9F-57F
+  https://www.youtube.com/watch?v=F9Qw3X_9d5c
+    CHAT-with
 
-      (signing or voiced, C-hands, two hand movement version)
-      trim: 11F-67F
+    (signing or voiced, C-hands, two hand movement version)
+    trim: 11F-67F
 
-    tags: +extra
-    https://www.youtube.com/watch?v=vv8D34vy3pY ->
-      CHAT-with
+  tags: +extra
+  https://www.youtube.com/watch?v=vv8D34vy3pY ->
+    CHAT-with
 
-      (signing or voiced, C-hands, one hand movement version)
-      trim: 8F-65F
+    (signing or voiced, C-hands, one hand movement version)
+    trim: 8F-65F
 
 group:
   more: +md:[THING](https://www.lifeprint.com/asl101/pages-signs/t/thing.htm)
