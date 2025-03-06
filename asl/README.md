@@ -1,10 +1,11 @@
 # ASL flashcards for Lifeprint.com ASLU lessons
 
-**If you are interested in learning American Sign Language, please see Dr. Bill
+> [!TIP]
+> If you are interested in learning American Sign Language, please see Dr. Bill
 Vicar’s [Lifeprint.com ASLU][LP]. These decks can help you, but they cannot
-replace the Lifeprint lessons and vocabulary pages.**
-
-**Plus, Lifeprint is full of Dr. Bill’s humor.**
+replace the Lifeprint lessons and vocabulary pages.
+>
+> Plus, Lifeprint is full of Dr. Bill’s humor.
 
 I made these from the lesson vocabulary lists on Lifeprint. I have tried to keep
 to the vocabulary relevant to the lesson, despite some of the vocabulary pages

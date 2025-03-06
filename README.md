@@ -31,11 +31,12 @@ The [`asl/`] directory contains example `.deck` files that can be used to build
 a deck for the vocabulary and phrases in each [Lifeprint.com ASLU][LP] lesson.
 See its [README] for information about how I chose which signs to include.
 
-**If you are interested in learning American Sign Language, please see Dr. Bill
+> [!TIP]
+> If you are interested in learning American Sign Language, please see Dr. Bill
 Vicar’s [Lifeprint.com ASLU][LP]. These decks can help you, but they cannot
-replace the Lifeprint lessons and vocabulary pages.**
-
-**Plus, Lifeprint is full of Dr. Bill’s humor.**
+replace the Lifeprint lessons and vocabulary pages.
+>
+> Plus, Lifeprint is full of Dr. Bill’s humor.
 
 [`asl/`]: asl#readme
 [README]: asl#readme
