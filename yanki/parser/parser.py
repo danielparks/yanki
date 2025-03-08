@@ -140,7 +140,7 @@ class Parser:
 
 
 class DeckParser(Parser):
-    # Supports notes, config, groups, "title:"
+    # Supports notes, config, groups, "title:", "version:"
     def __init__(self, deck):
         super().__init__(0, deck, NoteConfig())
         self.indent = ""
@@ -171,6 +171,8 @@ class GroupParser(SubParser):
     def parse_config(self, directive, rest):
         if directive == "title":
             self.line_error("Title cannot be set within group")
+        if directive == "version":
+            self.line_error("Version cannot be set within group")
         super().parse_config(directive, rest)
 
 
@@ -198,6 +200,8 @@ class NoteParser(SubParser):
     def parse_config(self, directive, rest):
         if directive == "title":
             self.line_error("Title cannot be set within note")
+        if directive == "version":
+            self.line_error("Version cannot be set within note")
         if directive == "group":
             self.line_error("Group cannot be started within note")
         super().parse_config(directive, rest)
@@ -245,6 +249,16 @@ class ConfigParser(SubParser):
             if "\n" in value:
                 self.parser_error("Title cannot have more than one line")
             self.deck.title = value
+            return
+
+        if self.directive == "version":
+            # We prevent the ConfigParser from being created with this directive
+            # in all parsers except DeckParser.
+            if value != "1":
+                self.parser_error(
+                    "This version of yanki only supports version 1 deck files "
+                    f"(found {value!r})"
+                )
             return
 
         try:
