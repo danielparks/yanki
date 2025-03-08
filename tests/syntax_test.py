@@ -34,6 +34,7 @@ def test_group():
     deck = parse_deck_dedent(
         """
         title: a
+        version: 1
         overlay_text: deck
         file:///one outer1
         group:
@@ -239,6 +240,36 @@ def test_note_parametrized(note_lines, parsed_text):
         (
             "title: a\n\tmore title",
             "Error in -, line 1: Title cannot have more than one line",
+        ),
+        (
+            "version: 2",
+            "Error in -, line 1: This version of yanki only supports version 1 "
+            "deck files (found '2')",
+        ),
+        (
+            "version:",
+            "Error in -, line 1: This version of yanki only supports version 1 "
+            "deck files (found '')",
+        ),
+        (
+            "title: a\ngroup:\n  title: one",
+            "Error in -, line 3: Title cannot be set within group",
+        ),
+        (
+            "title: a\ngroup:\n  version: 1",
+            "Error in -, line 3: Version cannot be set within group",
+        ),
+        (
+            "title: a\nfile:///foo note\n  title: one",
+            "Error in -, line 3: Title cannot be set within note",
+        ),
+        (
+            "title: a\nfile:///foo note\n  version: 1",
+            "Error in -, line 3: Version cannot be set within note",
+        ),
+        (
+            "title: a\nfile:///foo note\n  group:\n    foobar",
+            "Error in -, line 3: Group cannot be started within note",
         ),
     ],
 )
