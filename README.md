@@ -225,6 +225,26 @@ title: Really Cool Cards::subdeck 1
 note_id: Really Cool Cards {url} {clip}
 ```
 
+#### `slow` — Slow down or speed up part of the media
+
+Sometimes a video, or just a part of a video is too slow or too fast. The `slow`
+configuration allows you to fix that. The following slows down the video to half
+speed from 0.5 seconds to 1.0 seconds:
+
+```yaml
+slow: 0.5-1 *2
+```
+
+You can leave off one or both of the times to slow from the start or to the end
+of the video. For example, the following speeds up the end of the video
+(starting at the 60th frame) by twice:
+
+```yaml
+slow: 60F- *0.5
+```
+
+`slow` can only be applied to one part of a video (or audio track).
+
 #### Other configs
 
 These deserve better documentation, but here they are in short:
@@ -233,7 +253,6 @@ These deserve better documentation, but here they are in short:
   * `format`: The file extension of the media to generate (default: `mp4`)
   * `overlay_text`: Set overlay text to appear on the video
   * `tags`: Set tags for notes (divided by spaces)
-  * `slow`: Slow or speed a portion of the video
   * `trim`: Like clipping (`@time-time`), but doesn’t change the `note_id`
   * `audio`: `include` (default) or `strip` (remove from media)
   * `video`: `include` (default) or `strip` (remove from media)
