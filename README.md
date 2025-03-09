@@ -225,6 +225,19 @@ title: Really Cool Cards::subdeck 1
 note_id: Really Cool Cards {url} {clip}
 ```
 
+#### `crop` — Crop visual media
+
+Crop the media to a certain size in _width_:_height_ format. This can be an
+absolute pixel value, e.g. `300:500`, or it can be an expression based on `h`
+and/or `w`. For example, `crop: in_h:in_h` will crop the video to a square of
+the size of the input height.
+
+See `ffmpeg`’s [`crop` filter](https://ffmpeg.org/ffmpeg-filters.html#crop) for
+more possibilities.
+
+Note that Yanki always scales images and videos to be 500px tall while
+maintaining their aspect ratio. The scaling happens after cropping.
+
 #### `slow` — Slow down or speed up part of the media
 
 Sometimes a video, or just a part of a video is too slow or too fast. The `slow`
@@ -249,7 +262,6 @@ slow: 60F- *0.5
 
 These deserve better documentation, but here they are in short:
 
-  * `crop`: How to crop the video, if at all
   * `format`: The file extension of the media to generate (default: `mp4`)
   * `overlay_text`: Set overlay text to appear on the video
   * `tags`: Set tags for notes (divided by spaces)
