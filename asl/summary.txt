@@ -6122,6 +6122,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=wYxR1be1WfY @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=wYxR1be1WfY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/people.htm">PEOPLE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=wYxR1be1WfY @0- TAGS: 'Lifeprint lesson_11 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=wYxR1be1WfY @0- TEXT: 'PEOPLE (forward P version)'
+Lifeprint ASL https://www.youtube.com/watch?v=w_mzf_ZB2Lk @0- MEDIA: "processed_youtube=w_mzf_ZB2Lk_audio='strip'_clip=(0.46713333333333334, 2.2689333333333335).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=w_mzf_ZB2Lk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=w_mzf_ZB2Lk @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=w_mzf_ZB2Lk @0- TEXT: 'PREDICT / foresight / foresee'
 Lifeprint ASL https://www.youtube.com/watch?v=weXM5pqwL3g @0- MEDIA: "processed_youtube=weXM5pqwL3g_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=weXM5pqwL3g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/put.htm">PUT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=weXM5pqwL3g @0- TAGS: 'Lifeprint lesson_05 vocabulary'
