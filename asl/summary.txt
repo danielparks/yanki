@@ -586,6 +586,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=-eN5mw4tIjQ @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=-eN5mw4tIjQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<h3>Do you use deodorant?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=-eN5mw4tIjQ @0- TAGS: 'Lifeprint lesson_14 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=-eN5mw4tIjQ @0- TEXT: 'YOU DEODORANT YOU?'
+Lifeprint ASL https://www.youtube.com/watch?v=-sk9mV0Jwfk @0- MEDIA: "processed_youtube=-sk9mV0Jwfk_audio='strip'_clip=(0.5338666666666667, 2.3023000000000002).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=-sk9mV0Jwfk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm">COUNSEL</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=-sk9mV0Jwfk @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=-sk9mV0Jwfk @0- TEXT: 'INFLUENCE / advise / counsel (verb)'
 Lifeprint ASL https://www.youtube.com/watch?v=-xoJ_2O126Y @0- MEDIA: "processed_youtube=-xoJ_2O126Y_audio='strip'_clip=(0.4337666666666667, 2.5358666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=-xoJ_2O126Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/weather.htm">WEATHER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=-xoJ_2O126Y @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
@@ -3242,6 +3246,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=RUQyUdMJkws @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=RUQyUdMJkws @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sun.htm">SUN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=RUQyUdMJkws @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=RUQyUdMJkws @0- TEXT: 'SUN BEATING-DOWN'
+Lifeprint ASL https://www.youtube.com/watch?v=RUUusQIDEQw @0- MEDIA: "processed_youtube=RUUusQIDEQw_audio='strip'_clip=(0.4337666666666667, 2.6026000000000002).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=RUUusQIDEQw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm">COUNSEL</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=RUUusQIDEQw @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=RUUusQIDEQw @0- TEXT: 'COUNSELOR'
 Lifeprint ASL https://www.youtube.com/watch?v=RXX7T4-saPs @0- MEDIA: "processed_youtube=RXX7T4-saPs_audio='strip'_clip=(0.46713333333333334, 1.9686333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=RXX7T4-saPs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/person.htm">PERSON</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=RXX7T4-saPs @0- TAGS: 'Lifeprint lesson_11 vocabulary'
@@ -3526,6 +3534,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=V0FI60wvzpo @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=V0FI60wvzpo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/horse.htm">HORSE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=V0FI60wvzpo @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=V0FI60wvzpo @0- TEXT: 'HORSE T-R-A-I-L'
+Lifeprint ASL https://www.youtube.com/watch?v=V47VIesqbc8 @0- MEDIA: "processed_youtube=V47VIesqbc8_audio='strip'_clip=(0.5005000000000001, 2.3690333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=V47VIesqbc8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cause.htm">CAUSE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=V47VIesqbc8 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=V47VIesqbc8 @0- TEXT: 'CAUSE'
 Lifeprint ASL https://www.youtube.com/watch?v=V81liG2gQbo @0- MEDIA: "processed_youtube=V81liG2gQbo_audio='strip'_clip=(0.40040000000000003, 2.0353666666666665).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=V81liG2gQbo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/v/vacation.htm">VACATION</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=V81liG2gQbo @0- TAGS: 'Lifeprint lesson_14 vocabulary'
@@ -5326,6 +5338,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=nK4_8-U-Y9I @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=nK4_8-U-Y9I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson06.htm">lesson 6</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/y/yellow.htm">YELLOW</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=nK4_8-U-Y9I @0- TAGS: 'Lifeprint colors first_100_signs lesson_06 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=nK4_8-U-Y9I @0- TEXT: 'YELLOW'
+Lifeprint ASL https://www.youtube.com/watch?v=nM7SNWW7vx8 @0- MEDIA: "processed_youtube=nM7SNWW7vx8_audio='strip'_clip=(0.16683333333333333, 2.3690333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=nM7SNWW7vx8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm">COUNSEL</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=nM7SNWW7vx8 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=nM7SNWW7vx8 @0- TEXT: 'COUNSEL / advice / influence  (noun)'
 Lifeprint ASL https://www.youtube.com/watch?v=nN8-OhCTosE @0- MEDIA: "processed_youtube=nN8-OhCTosE_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=nN8-OhCTosE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/v/various.htm">VARIOUS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=nN8-OhCTosE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'

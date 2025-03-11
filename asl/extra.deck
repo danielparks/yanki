@@ -165,6 +165,11 @@ group:
   https://www.youtube.com/watch?v=JPrGWEvbmgE -> BUS (may be regional)
 
 group:
+  more: +md:[CAUSE](https://www.lifeprint.com/asl101/pages-signs/c/cause.htm)
+  https://www.youtube.com/watch?v=V47VIesqbc8 CAUSE
+    trim: 15F-71F
+
+group:
   more: +md:[CAREFUL](https://www.lifeprint.com/asl101/pages-signs/c/careful.htm)
   https://www.youtube.com/watch?v=GgjVnyBLmhg CAREFUL / CARE
   https://www.youtube.com/watch?v=GSjbYcneOzE TAKE-CARE
@@ -189,6 +194,17 @@ group:
     trim: 4F-54F
   https://www.youtube.com/watch?v=cg8PmdDrQ7Q -> CHRISTMAS (C tree twist in version)
     trim: 3F-
+
+group:
+  more: +md:[COUNSEL](https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm)
+  https://www.youtube.com/watch?v=nM7SNWW7vx8
+    COUNSEL / advice / influence  (noun)
+    trim: 5F-71F
+  https://www.youtube.com/watch?v=-sk9mV0Jwfk
+    INFLUENCE / advise / counsel (verb)
+    trim: 16F-69F
+  https://www.youtube.com/watch?v=RUUusQIDEQw COUNSELOR
+    trim: 13F-78F
 
 group:
   more: +md:[COUNTRY](https://www.lifeprint.com/asl101/pages-signs/c/country.htm)
