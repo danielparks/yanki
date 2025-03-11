@@ -68,6 +68,9 @@ https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
 https://www.youtube.com/watch?v=stafgiooHts LAZY
   trim: 13F-62F
 
+https://www.youtube.com/watch?v=HUVSYJSuzEk MOST TIME / usually
+  trim: 10F-80F
+
 https://www.youtube.com/watch?v=1o8VwwFYyrs
   MUFFIN / CUPCAKE / CAKE (palm version)
 
@@ -164,6 +167,11 @@ group:
   https://www.youtube.com/watch?v=GSjbYcneOzE TAKE-CARE
 
 group:
+  more: +md:[CHANCE](https://www.lifeprint.com/asl101/pages-signs/c/chance.htm)
+  https://www.youtube.com/watch?v=w8jjz_R6GaI CHANCE
+    trim: 13F-56F
+
+group:
   more: +md:[CHEAP](https://www.lifeprint.com/asl101/pages-signs/c/cheap.htm)
   https://www.youtube.com/watch?v=H-39q5BLM44 CHEAP / INEXPENSIVE
     trim: 7F-59F
@@ -220,6 +228,13 @@ group:
   https://www.youtube.com/watch?v=pHDIa-ao9BQ ->
     DEPRESSED / DEPRESSION / feeling down (flat hands version)
     trim: 13F-60F
+
+group:
+  more: +md:[DECIDE](https://www.lifeprint.com/asl101/pages-signs/d/decide.htm)
+  https://www.youtube.com/watch?v=r8gvnE0liOg DECIDE / DETERMINE (full version)
+    trim: 16F-91F
+  https://www.youtube.com/watch?v=xhEOnG_EPss DECIDE / DETERMINE (short version)
+    trim: 16F-66F
 
 group:
   more: +md:[DOLLAR](https://www.lifeprint.com/asl101/pages-signs/d/dollar.htm)
@@ -496,6 +511,12 @@ group:
   more: +md:[SURPRISE](https://www.lifeprint.com/asl101/pages-signs/s/surprise.htm)
   https://www.youtube.com/watch?v=95AiB9DJaiI SURPRISE
     trim: 3F-56F
+
+group:
+  more: +md:[TEND](https://www.lifeprint.com/asl101/pages-signs/t/tend.htm)
+  https://www.youtube.com/watch?v=3d6RuJNH9eE
+    trim: 13F-83F
+    TEND-to / usually / propensity / tends
 
 group:
   more: +md:[THAN](https://www.lifeprint.com/asl101/pages-signs/t/than.htm)
