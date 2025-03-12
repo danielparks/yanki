@@ -52,6 +52,9 @@ https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST
 
 https://www.youtube.com/watch?v=17gZsl0jClE GAME
 
+https://www.youtube.com/watch?v=LQmG9YP0Lhk GESTURES / gesturing
+  trim: 13F-72F
+
 https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
   trim: 3F-57F
   more: +md:[HAIR](https://www.lifeprint.com/asl101/pages-signs/h/hair.htm)
@@ -67,6 +70,9 @@ https://www.youtube.com/watch?v=ayvCDfDnMDI KISS-FIST / love it (idiom)
 
 https://www.youtube.com/watch?v=stafgiooHts LAZY
   trim: 13F-62F
+
+https://www.youtube.com/watch?v=JtpNUhhzqn0 LEAD / direction
+  trim: 7F-63F
 
 https://www.youtube.com/watch?v=HUVSYJSuzEk MOST TIME / usually
   trim: 10F-80F
@@ -95,6 +101,9 @@ https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
 https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
   trim: 8F-61F
   more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
+
+https://www.youtube.com/watch?v=kD8IproL1DA PLASTIC / FLEXIBLE
+  trim: 21F-74F
 
 https://www.youtube.com/watch?v=w_mzf_ZB2Lk PREDICT / foresight / foresee
   trim: 14F-68F
@@ -194,6 +203,11 @@ group:
     trim: 4F-54F
   https://www.youtube.com/watch?v=cg8PmdDrQ7Q -> CHRISTMAS (C tree twist in version)
     trim: 3F-
+
+group:
+  more: +md:[COMMUTE](https://www.lifeprint.com/asl101/pages-signs/c/commute.htm)
+  https://www.youtube.com/watch?v=jxWEfoH288I COMMUTE
+    trim: 14F-74F
 
 group:
   more: +md:[COUNSEL](https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm)
@@ -356,6 +370,20 @@ group:
   https://www.youtube.com/watch?v=AhwgtWiATWE HOMEWORK
 
 group:
+  more: +md:[HOSPITAL](https://www.lifeprint.com/asl101/pages-signs/h/hospital.htm)
+  https://www.youtube.com/watch?v=4E6_M9HIuZ0 HOSPITAL
+    trim: 25F-97F
+
+group:
+  more: +md:[ITALY](https://www.lifeprint.com/asl101/pages-signs/i/italy.htm)
+  https://www.youtube.com/watch?v=CFYyKuV10xo ITALY / ITALIAN (shape version)
+    trim: 12F-59F
+  # LP says this is legacy, but Handspeak says it’s current:
+  # https://www.handspeak.com/word/1165/
+  https://www.youtube.com/watch?v=guigN_Piy1g ITALY / ITALIAN (face version)
+    trim: 1F-62F
+
+group:
   more: +md:[JOB](https://www.lifeprint.com/asl101/pages-signs/j/job.htm)
   https://www.youtube.com/watch?v=42A3aALiSng #JOB
 
@@ -388,6 +416,16 @@ group:
   https://www.youtube.com/watch?v=Zv7n5RlK6W4 NEAR / CLOSE-by / CLOSE-to
   https://www.youtube.com/watch?v=nwYLaBzkSMw ->
     NEAR / CLOSE-by / CLOSE-to (pat hand version)
+
+group:
+  more: +md:[NEGATION](https://www.lifeprint.com/asl101/pages-signs/n/negation.htm)
+  # Used as DRAWBACK in person, see https://www.handspeak.com/word/10169/
+  https://www.youtube.com/watch?v=rFf-WYLmkmw NEGATIVE / MINUS / DRAWBACK
+    trim: 6F-72F
+  https://www.youtube.com/watch?v=SON3tJBp5tk DON’T / no more
+    trim: 6F-57F
+  https://www.youtube.com/watch?v=liDRahbOmNs NYB! / none of your business
+    trim: 3F-67F
 
 group:
   more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
@@ -448,6 +486,13 @@ group:
     trim: 30F-99F
 
 group:
+  more: +md:[SEMESTER](https://www.lifeprint.com/asl101/pages-signs/s/semester.htm)
+  https://www.youtube.com/watch?v=Ut0n-GrYwMA SEMESTER (one handed version)
+    trim: 9F-63F
+  https://www.youtube.com/watch?v=wYKVsxvf1IE -> SEMESTER (two handed version)
+    trim: 3F-48F
+
+group:
   more: +md:[SHOW](https://www.lifeprint.com/asl101/pages-signs/s/show.htm)
   https://www.youtube.com/watch?v=4vABNRuGfRw SHOW / display / represent
     trim: 8F-69F
@@ -474,6 +519,11 @@ group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
   https://www.youtube.com/watch?v=WY99FSoo6dI
     SINCE / UP-TO-NOW / have-been / so-far / all-along
+
+group:
+  more: +md:[SKILL](https://www.lifeprint.com/asl101/pages-signs/s/skill.htm)
+  https://www.youtube.com/watch?v=mVrTgE8edho SKILL / TALENT / adept / fluent
+  # See https://www.lifeprint.com/asl101/pages-signs/e/expert.htm for EXPERT
 
 group:
   more: +md:[SMART](https://www.lifeprint.com/asl101/pages-signs/s/smart.htm)
@@ -536,6 +586,11 @@ group:
   https://www.youtube.com/watch?v=3d6RuJNH9eE
     trim: 13F-83F
     TEND-to / usually / propensity / tends
+
+group:
+  more: +md:[TEXAS](https://www.lifeprint.com/asl101/pages-signs/t/texas.htm)
+  https://www.youtube.com/watch?v=YMdSm_OgAIo TEXAS
+    trim: 10F-55F
 
 group:
   more: +md:[THAN](https://www.lifeprint.com/asl101/pages-signs/t/than.htm)
