@@ -4089,7 +4089,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=_zPeOLUL8GY @0- TEXT: 'SUN (C-hand
 Lifeprint ASL https://www.youtube.com/watch?v=_zgfuzlhI9Q @0- MEDIA: "processed_youtube=_zgfuzlhI9Q_audio='strip'_clip=(0.8341666666666667, 3.069733333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=_zgfuzlhI9Q @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/light.htm">LIGHT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=_zgfuzlhI9Q @0- TAGS: 'Lifeprint extra lesson_09 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=_zgfuzlhI9Q @0- TEXT: 'LIGHT-WEIGHT'
+Lifeprint ASL https://www.youtube.com/watch?v=_zgfuzlhI9Q @0- TEXT: 'LIGHT-weight / LIGHT-colored\n\n(Not used for “unable to hold their alcohol.”)'
 Lifeprint ASL https://www.youtube.com/watch?v=a-COvvqJXe8 @0- MEDIA: "processed_youtube=a-COvvqJXe8_audio='strip'_clip=(0.3670333333333333, 2.0687333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=a-COvvqJXe8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/bug.htm">BUG</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=a-COvvqJXe8 @0- TAGS: 'Lifeprint first_100_signs lesson_10 vocabulary'
