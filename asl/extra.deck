@@ -232,6 +232,11 @@ group:
     trim: 5F-69F
 
 group:
+  more: +md:[CURIOUS](https://www.lifeprint.com/asl101/pages-signs/c/curious.htm)
+  https://www.youtube.com/watch?v=8bSKteXE0ds CURIOUS
+    trim: 2F-60F
+
+group:
   more: +md:[CUTE](https://www.lifeprint.com/asl101/pages-signs/c/cute.htm)
   https://www.youtube.com/watch?v=zEtSV7lXycY SUGAR / CUTE / CANDY
     trim: 17F-57F
@@ -240,6 +245,11 @@ group:
   more: +md:[DANGER](https://www.lifeprint.com/asl101/pages-signs/d/danger.htm)
   https://www.youtube.com/watch?v=MawcqSlNyCY DANGEROUS / DANGER
     trim: 3F-61F
+
+group:
+  more: +md:[DARK](https://www.lifeprint.com/asl101/pages-signs/d/dark.htm)
+  https://www.youtube.com/watch?v=CGLQEeEzo1s DARK
+    trim: 16F-86F
 
 group:
   more: +md:[DELICIOUS](https://www.lifeprint.com/asl101/pages-signs/d/delicious.htm)
@@ -468,6 +478,11 @@ group:
 group:
   more: +md:[PROUD](https://www.lifeprint.com/asl101/pages-signs/p/proud.htm)
   https://www.youtube.com/watch?v=v74BSmAB5Uk PRIDE / PROUD
+
+group:
+  more: +md:[REASON](https://www.lifeprint.com/asl101/pages-signs/r/reason.htm)
+  https://www.youtube.com/watch?v=sU2Tmrlns9c REASON / realize / rationale
+    trim: 17F-76F
 
 group:
   more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
