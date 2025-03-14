@@ -248,8 +248,15 @@ group:
 
 group:
   more: +md:[DARK](https://www.lifeprint.com/asl101/pages-signs/d/dark.htm)
-  https://www.youtube.com/watch?v=CGLQEeEzo1s DARK
+    (doesn’t cover some variants)
+  https://www.youtube.com/watch?v=CGLQEeEzo1s DARK (flat hands version)
     trim: 16F-86F
+  https://www.youtube.com/watch?v=7khmmGu70Uc -> DARK (claw hands version)
+    trim: 4F-70F
+  # I can’t find this DARK version on its own. This variant is shown on:
+  # https://www.handspeak.com/word/535/
+  https://www.youtube.com/watch?v=tqjREoNU730 DARK RED / burgundy
+    trim: 7F-70F
 
 group:
   more: +md:[DELICIOUS](https://www.lifeprint.com/asl101/pages-signs/d/delicious.htm)
