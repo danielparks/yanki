@@ -1926,6 +1926,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/grandpa.htm">GRANDPA</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- TAGS: 'Lifeprint lesson_02 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- TEXT: 'GRANDPA'
+Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- MEDIA: "processed_youtube=DAmZuOt9FnY_audio='strip'_clip=(0.26693333333333336, 2.2022).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/patience.htm">PATIENCE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- TEXT: 'PATIENCE / tolerate / bear / endure'
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- MEDIA: "processed_youtube=DEq4HlYPI1s_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- TAGS: 'Lifeprint lesson_03 phrase'
@@ -5658,6 +5662,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=qg-uh752pW0 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=qg-uh752pW0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/weather.htm">WEATHER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=qg-uh752pW0 @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=qg-uh752pW0 @0- TEXT: 'TORNADO / HURRICANE / TYPHOON'
+Lifeprint ASL https://www.youtube.com/watch?v=qnB7FWefQoQ @0- MEDIA: "processed_youtube=qnB7FWefQoQ_audio='strip'_clip=(0.26693333333333336, 1.8685333333333334).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=qnB7FWefQoQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/patience.htm">PATIENCE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=qnB7FWefQoQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=qnB7FWefQoQ @0- TEXT: 'impatient / NONE PATIENCE'
 Lifeprint ASL https://www.youtube.com/watch?v=qo15m6gbYEo @0- MEDIA: "processed_youtube=qo15m6gbYEo_audio='strip'_clip=(0.3003, 2.469133333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=qo15m6gbYEo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/leave.htm">LEAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=qo15m6gbYEo @0- TAGS: 'Lifeprint extra lesson_18 vocabulary'
