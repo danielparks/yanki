@@ -1926,10 +1926,6 @@ Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/grandpa.htm">GRANDPA</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- TAGS: 'Lifeprint lesson_02 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=D8OW3lFL_54 @0- TEXT: 'GRANDPA'
-Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- MEDIA: "processed_youtube=DAmZuOt9FnY_audio='strip'_clip=(0.26693333333333336, 2.2022).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/patience.htm">PATIENCE</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=DAmZuOt9FnY @0- TEXT: 'PATIENCE / tolerate / bear / endure'
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- MEDIA: "processed_youtube=DEq4HlYPI1s_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- TAGS: 'Lifeprint lesson_03 phrase'
@@ -2866,6 +2862,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=MoiessLRht4 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=MoiessLRht4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/breakfast.htm">BREAKFAST</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=MoiessLRht4 @0- TAGS: 'Lifeprint lesson_17 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=MoiessLRht4 @0- TEXT: 'BREAKFAST / EAT MORNING'
+Lifeprint ASL https://www.youtube.com/watch?v=MpYyzixvOOk @0- MEDIA: "processed_youtube=MpYyzixvOOk_audio='strip'_clip=(0.16683333333333333, 2.6693333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=MpYyzixvOOk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/patience.htm">PATIENCE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=MpYyzixvOOk @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=MpYyzixvOOk @0- TEXT: 'PATIENCE / tolerate / bear / endure'
 Lifeprint ASL https://www.youtube.com/watch?v=MrQpEWyELqo @0- MEDIA: "processed_youtube=MrQpEWyELqo_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=MrQpEWyELqo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/church.htm">CHURCH</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=MrQpEWyELqo @0- TAGS: 'Lifeprint first_100_signs lesson_05 vocabulary'
