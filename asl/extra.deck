@@ -162,6 +162,7 @@ group:
   https://www.youtube.com/watch?v=7gxOKAj-JZQ BORING / DRY / DULL / not-interesting
     trim: 7F-
   https://www.youtube.com/watch?v=PObXeUDqJ-o very-BORING (horns version)
+    trim: 4F-65F
 
 group:
   more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
@@ -171,7 +172,9 @@ group:
 group:
   more: +md:[BUS](https://www.lifeprint.com/asl101/pages-signs/b/bus.htm)
   https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
+    trim: 11F-52F
   https://www.youtube.com/watch?v=JPrGWEvbmgE -> BUS (may be regional)
+    trim: 8F-62F
 
 group:
   more: +md:[CAUSE](https://www.lifeprint.com/asl101/pages-signs/c/cause.htm)
@@ -181,7 +184,9 @@ group:
 group:
   more: +md:[CAREFUL](https://www.lifeprint.com/asl101/pages-signs/c/careful.htm)
   https://www.youtube.com/watch?v=GgjVnyBLmhg CAREFUL / CARE
+    trim: 4F-80F
   https://www.youtube.com/watch?v=GSjbYcneOzE TAKE-CARE
+    trim: 7F-62F
 
 group:
   more: +md:[CHANCE](https://www.lifeprint.com/asl101/pages-signs/c/chance.htm)
@@ -807,12 +812,15 @@ https://www.youtube.com/watch?v=yxlQDmsFo-g ->
   more: +md:[CHICKEN](https://www.lifeprint.com/asl101/pages-signs/c/chicken.htm)
 
 # From lesson 12 video (https://www.youtube.com/watch?v=jSbhpRD86JE)
-# Can’t find ONCE, THRICE, FOUR-TIMES, etc.
-https://www.youtube.com/watch?v=Wwz4hcFIukw TWICE
+group:
   more: +md:[TWICE](https://www.lifeprint.com/asl101/pages-signs/t/twice.htm)
+  # Can’t find ONCE, THRICE, FOUR-TIMES, etc.
+  https://www.youtube.com/watch?v=Wwz4hcFIukw TWICE
+    trim: 14F-59F
 
 # From lesson 15 video (https://www.youtube.com/watch?v=boRKuJiw30k)
 https://www.youtube.com/watch?v=8CEl2Rjsens U-S (United States)
+  trim: 18F-78F
 
 group:
   more: +md:[PERCENT](https://www.lifeprint.com/asl101/pages-signs/p/percent.htm)
@@ -866,18 +874,25 @@ group:
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm
 https://www.youtube.com/watch?v=_8BuYOIPeIs FORK (2 tines version)
+  trim: 13F-72F
   tags: +first_100_signs
 https://www.youtube.com/watch?v=47-oTgaEGIw KNIFE (H hands version)
+  trim: 20F-76F
   tags: +first_100_signs
 https://www.youtube.com/watch?v=rnb9FxPO7is PLEASE
+  trim: 12F-61F
   tags: +first_100_signs
 https://www.youtube.com/watch?v=orl2KrOMEIQ TALL (bent hand version)
+  trim: 17F-71F
   tags: +first_100_signs
 https://www.youtube.com/watch?v=TooM2jWw9CU SHORT (height)
+  trim: 17F-65F
   tags: +first_100_signs
 https://www.youtube.com/watch?v=ajIA0oBLMgM CENTS
+  trim: 10F-60F
   tags: +first_100_signs
 https://www.youtube.com/watch?v=AFByTjllk70 FINE / FEE / COST / PRICE / CHARGE
+  trim: 18F-82F
   tags: +first_100_signs
 https://www.youtube.com/watch?v=0sF9ZKAYAwo SHEEP / WOOL
   trim: 14F-68F
@@ -886,11 +901,16 @@ https://www.youtube.com/watch?v=0sF9ZKAYAwo SHEEP / WOOL
 
 # Related to first 100 signs
 https://www.youtube.com/watch?v=Ka8vriGAuWY PLACE
+  trim: 8F-78F
 https://www.youtube.com/watch?v=GcPs10m803Q TEMPERATURE (hand version)
+  trim: 0-68F
 https://www.youtube.com/watch?v=0Q8DzhYUabI TEMPERATURE (finger version)
+  trim: 11F-73F
 https://www.youtube.com/watch?v=W5uRhYqW8iw BRAVE / courage / HEALTH / heal
   trim: 84F-133F
 https://www.youtube.com/watch?v=8KQB5iZCuN8 AMOUNT
+  trim: 12F-57F
 https://www.youtube.com/watch?v=ZMQz2hoT5V4 MONEY
+  trim: 10F-63F
 https://www.youtube.com/watch?v=IyMuDawJZu0 ANIMAL
   trim: 22F-99F
