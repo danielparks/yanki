@@ -847,6 +847,22 @@ group:
     trim: 12F-
     tags: +extra
 
+# From lesson 17 video (https://www.youtube.com/watch?v=GGZRweOqFtc)
+group:
+  more: +md:[BREAD](https://www.lifeprint.com/asl101/pages-signs/b/bread.htm)
+  https://www.youtube.com/watch?v=uLTW-N6UY8E BREAD
+    trim: 13F-65F
+
+group:
+  more: +md:[CORN](https://www.lifeprint.com/asl101/pages-signs/c/corn.htm)
+  https://www.youtube.com/watch?v=-DYBrDwlwhw CORN
+    trim: 21F-80F
+
+group:
+  more: +md:[SPAGHETTI](https://www.lifeprint.com/asl101/pages-signs/s/spaghetti.htm)
+  https://www.youtube.com/watch?v=UMRY9wD37Yk SPAGHETTI / pasta / noodles
+    trim: 3F-64F
+
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm
 https://www.youtube.com/watch?v=_8BuYOIPeIs FORK (2 tines version)
