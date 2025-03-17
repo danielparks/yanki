@@ -341,6 +341,26 @@ group:
     trim: 12F-76F
 
 group:
+  more: +md:[EMPTY](https://www.lifeprint.com/asl101/pages-signs/e/empty.htm)
+  https://www.youtube.com/watch?v=HaB-QtL36VY EMPTY / available / naked / nude
+    trim: 11F-75F
+  https://www.youtube.com/watch?v=DkB6d_5RrIQ
+    SHOULDERS-empty / not my problem (idiom)
+    trim: 1F-44F
+  https://www.youtube.com/watch?v=LKSFVxJr5lE DESERTED / the place is empty
+    trim: 11F-76F
+  https://www.youtube.com/watch?v=h1hVip51Zyk EMPTY-street
+    trim: 19F-72F
+  https://www.youtube.com/watch?v=qSd1_GVKWpQ
+    EMPTY-location / spot is empty / it was gone
+    trim: 13F-62F
+  https://www.youtube.com/watch?v=Z_fgd8GrZSg gas-on-EMPTY (depictive)
+    trim: 44F-108F
+  https://www.youtube.com/watch?v=ZvW1ocG6Hwo
+    gas-on-EMPTY-or-nearly-so (depictive)
+    trim: 24F-88F
+
+group:
   more: +md:[ENGLISH](https://www.lifeprint.com/asl101/pages-signs/e/english.htm)
   https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH / ENGLAND
 
@@ -701,8 +721,6 @@ group:
 # From lesson 1 video (https://www.youtube.com/watch?v=DaMjr4AfYA0)
 https://www.youtube.com/watch?v=TdCu_nhXVno LESSON
   trim: 21F-72F
-https://www.youtube.com/watch?v=TVFEnWVgoII FORGOT / FORGET
-  trim: 9F-83F
 https://www.youtube.com/watch?v=-PNCpqJXy_A SECOND-item-of-two
   trim: 13F-62F
 https://www.youtube.com/watch?v=ZLN8GbGcxbw VOCABULARY
@@ -711,6 +729,13 @@ https://www.youtube.com/watch?v=ZJ80gGVl7yg REVIEW
   trim: 20F-93F
 https://www.youtube.com/watch?v=J8cuP-YSZIA DEAF-APPLAUSE / yay
   trim: 9F-
+
+group:
+  more: +md:[FORGET](https://www.lifeprint.com/asl101/pages-signs/f/forget.htm)
+  https://www.youtube.com/watch?v=TVFEnWVgoII FORGOT / FORGET
+    trim: 9F-83F
+  https://www.youtube.com/watch?v=n1bCjM8zeYA BLANK-MIND / FORGET / draw-a-blank
+    trim: 9F-46F
 
 # From lesson 2 video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 https://www.youtube.com/watch?v=yOq40lDCkcM NONE
@@ -870,6 +895,32 @@ group:
   more: +md:[SPAGHETTI](https://www.lifeprint.com/asl101/pages-signs/s/spaghetti.htm)
   https://www.youtube.com/watch?v=UMRY9wD37Yk SPAGHETTI / pasta / noodles
     trim: 3F-64F
+
+# From lesson 18 video (https://www.youtube.com/watch?v=iM2snVv2bEw)
+group:
+  more: +md:[OFFICE](https://www.lifeprint.com/asl101/pages-signs/o/office.htm)
+  https://www.youtube.com/watch?v=X0Qe7jHMtmg O-F-F-I-C-E
+    trim: 13F-68F
+  https://www.youtube.com/watch?v=U9VrfCdyVGw OFFICE (initialized version)
+    trim: 11F-64F
+
+https://www.youtube.com/watch?v=NyaG1U8eSOk RIVER
+  trim: 8F-61F
+  more: +md:[RIVER](https://www.lifeprint.com/asl101/pages-signs/r/.htm)
+
+group:
+  more: +md:[RUN](https://www.lifeprint.com/asl101/pages-signs/r/.htm)
+  https://www.youtube.com/watch?v=eLu4zVJhTqU RUN (vertical version)
+    trim: 4F-80F
+  https://www.youtube.com/watch?v=0msTKdOaGG0 RUN (horizontal version)
+    trim: 8F-65F
+  # Skipping other (linked) meanings.
+
+group:
+  more: +md:[VOMIT](https://www.lifeprint.com/asl101/pages-signs/v/vomit.htm)
+  https://www.youtube.com/watch?v=vezUCim_9-o
+    VOMIT / detest it / hate it / yuck / eww / gross (idiomatic)
+    trim: 18F-70F
 
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm
