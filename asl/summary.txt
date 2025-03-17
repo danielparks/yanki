@@ -1722,6 +1722,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=B36qDOOtm20 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=B36qDOOtm20 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clv.htm">Classifier V</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=B36qDOOtm20 @0- TAGS: 'Lifeprint lesson_04 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=B36qDOOtm20 @0- TEXT: 'WALK-TO (classifier V)'
+Lifeprint ASL https://www.youtube.com/watch?v=B3RdR9FrmU0 @0- MEDIA: "processed_youtube=B3RdR9FrmU0_audio='strip'_clip=(0.46713333333333334, 2.0687333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=B3RdR9FrmU0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/spell.htm">SPELL</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=B3RdR9FrmU0 @0- TAGS: 'Lifeprint extra lesson_02 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=B3RdR9FrmU0 @0- TEXT: 'SPELL (directional version)'
 Lifeprint ASL https://www.youtube.com/watch?v=B4H6sjJ4C-M @0- MEDIA: "processed_youtube=B4H6sjJ4C-M_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=B4H6sjJ4C-M @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=B4H6sjJ4C-M @0- TAGS: 'Lifeprint lesson_04 phrase'
