@@ -1222,6 +1222,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=6RRmIyhkMx0 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=6RRmIyhkMx0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/friend.htm">FRIEND</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6RRmIyhkMx0 @0- TAGS: 'Lifeprint lesson_04 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=6RRmIyhkMx0 @0- TEXT: 'FRIEND'
+Lifeprint ASL https://www.youtube.com/watch?v=6S9riIpP4go @0- MEDIA: "processed_youtube=6S9riIpP4go_audio='strip'_clip=(0.33366666666666667, 2.5025).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=6S9riIpP4go @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=6S9riIpP4go @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=6S9riIpP4go @0- TEXT: 'UNTIL'
 Lifeprint ASL https://www.youtube.com/watch?v=6VJ7PPwX3v8 @0- MEDIA: "processed_youtube=6VJ7PPwX3v8_audio='strip'_clip=(0.3670333333333333, 2.3690333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=6VJ7PPwX3v8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dollar.htm">DOLLAR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6VJ7PPwX3v8 @0- TAGS: 'Lifeprint extra extra-deck first_100_signs vocabulary'
