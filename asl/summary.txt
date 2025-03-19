@@ -1726,6 +1726,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=AxUJzzak-z0 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=AxUJzzak-z0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/microwave.htm">MICROWAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=AxUJzzak-z0 @0- TAGS: 'Lifeprint lesson_09 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=AxUJzzak-z0 @0- TEXT: 'MICROWAVE (3 fingers version)'
+Lifeprint ASL https://www.youtube.com/watch?v=B2UzqvVXn_Y @0- MEDIA: "processed_youtube=B2UzqvVXn_Y_audio='strip'_clip=(0.5005000000000001, 1.9019).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=B2UzqvVXn_Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=B2UzqvVXn_Y @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=B2UzqvVXn_Y @0- TEXT: 'RELIGION / RELIGIOUS (heart version)'
 Lifeprint ASL https://www.youtube.com/watch?v=B36qDOOtm20 @0- MEDIA: "processed_youtube=B36qDOOtm20_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=B36qDOOtm20 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clv.htm">Classifier V</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=B36qDOOtm20 @0- TAGS: 'Lifeprint lesson_04 vocabulary'
@@ -6498,6 +6502,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=yDqXf13m6PA @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=yDqXf13m6PA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/freeze.htm">FREEZE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=yDqXf13m6PA @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=yDqXf13m6PA @0- TEXT: 'BRAIN FREEZE / SHOCKED (idiom)'
+Lifeprint ASL https://www.youtube.com/watch?v=yEGrlfPhcbs @0- MEDIA: "processed_youtube=yEGrlfPhcbs_audio='strip'_clip=(0.40040000000000003, 2.2689333333333335).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=yEGrlfPhcbs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=yEGrlfPhcbs @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=yEGrlfPhcbs @0- TEXT: 'RELIGION / RELIGIOUS (fist version)'
 Lifeprint ASL https://www.youtube.com/watch?v=yFH1f6mgFwI @0- MEDIA: "processed_youtube=yFH1f6mgFwI_audio='strip'_clip=(0.4337666666666667, 3.2699333333333334).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=yFH1f6mgFwI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/move.htm">MOVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=yFH1f6mgFwI @0- TAGS: 'Lifeprint extra lesson_05 vocabulary'
