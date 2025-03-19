@@ -39,6 +39,9 @@ https://www.youtube.com/watch?v=LJzalFEVIDc CONFUSED
 https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
   trim: 8F-68F
 
+https://www.youtube.com/watch?v=S6zWnIw1_UQ COVID-19
+  trim: 23F-98F
+
 https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
   more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
 
@@ -62,6 +65,10 @@ https://www.youtube.com/watch?v=9j2d2WQsriY HAIR
 https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
   trim: 5F-78F
 
+https://www.youtube.com/watch?v=a5dE5ouT1dw
+  incremental-IMPROVE / improving bit by bit
+  trim: 23F-86F
+
 https://www.youtube.com/watch?v=NCvURDLrHNM KID / KIDS
   trim: 11F-72F
 
@@ -73,6 +80,9 @@ https://www.youtube.com/watch?v=stafgiooHts LAZY
 
 https://www.youtube.com/watch?v=JtpNUhhzqn0 LEAD / direction
   trim: 7F-63F
+
+https://www.youtube.com/watch?v=p-HVO2UU2HM MINOR (in school)
+  trim: 5F-
 
 https://www.youtube.com/watch?v=HUVSYJSuzEk MOST TIME / usually
   trim: 10F-80F
@@ -107,6 +117,9 @@ https://www.youtube.com/watch?v=kD8IproL1DA PLASTIC / FLEXIBLE
 
 https://www.youtube.com/watch?v=w_mzf_ZB2Lk PREDICT / foresight / foresee
   trim: 14F-68F
+
+https://www.youtube.com/watch?v=i4UcWymjcFY PROGRESS / PROCESS
+  trim: 5F-70F
 
 https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
   trim: 10F-59F
@@ -638,6 +651,11 @@ group:
   https://www.youtube.com/watch?v=SrzPozIawec
     SUCCESS / SUCCEED / accomplish / managed to
   https://www.youtube.com/watch?v=y-o6GhUKPbI PAH! / SUCCEED-finally
+
+group:
+  more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/.htm)
+  https://www.youtube.com/watch?v=zIPyWpDlY24 SUPPORT / LOYAL / SUSTAIN / pro-
+    trim: 5F-64F
 
 group:
   more: +md:[SURPRISE](https://www.lifeprint.com/asl101/pages-signs/s/surprise.htm)
