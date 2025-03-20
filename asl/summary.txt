@@ -1746,6 +1746,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=B59eweLn9L4 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=B59eweLn9L4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<h3>How many pairs of shoes do you have?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=B59eweLn9L4 @0- TAGS: 'Lifeprint lesson_08 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=B59eweLn9L4 @0- TEXT: 'SHOES, YOU HAVE HOW-MANY?'
+Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- MEDIA: "processed_youtube=B5oB0HgAxVo_audio='strip'_clip=(0.33366666666666667, 1.9352666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/guess.htm">GUESS</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- TEXT: 'GUESS / MISS-(fail)'
 Lifeprint ASL https://www.youtube.com/watch?v=B84UGJp2vg0 @0- MEDIA: "processed_youtube=B84UGJp2vg0_audio='strip'_clip=(0.7674333333333333, 2.769433333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=B84UGJp2vg0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/n/need.htm">NEED</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=B84UGJp2vg0 @0- TAGS: 'Lifeprint extra lesson_03 vocabulary'
