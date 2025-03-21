@@ -517,6 +517,7 @@ group:
 group:
   more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
   https://www.youtube.com/watch?v=nEwU553Q8tE OTHER
+    trim: 3F-69F
 
 group:
   more: +md:[PARTNER](https://www.lifeprint.com/asl101/pages-signs/p/partner.htm)
@@ -535,6 +536,7 @@ group:
 group:
   more: +md:[PARTY](https://www.lifeprint.com/asl101/pages-signs/p/party.htm)
   https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
+    trim: 6F-71F
   https://www.youtube.com/watch?v=xrrmogqk5MM PARTY (non-initialized, PLAY)
     trim: 10F-76F
   # No video for twisting P version.
@@ -566,10 +568,12 @@ group:
 group:
   more: +md:[POSSIBLE](https://www.lifeprint.com/asl101/pages-signs/p/possible.htm)
   https://www.youtube.com/watch?v=kPjFRjpaTm4 POSSIBLE / CAN
+    trim: 8F-79F
 
 group:
   more: +md:[PROUD](https://www.lifeprint.com/asl101/pages-signs/p/proud.htm)
   https://www.youtube.com/watch?v=v74BSmAB5Uk PRIDE / PROUD
+    trim: 13F-71F
 
 group:
   more: +md:[REASON](https://www.lifeprint.com/asl101/pages-signs/r/reason.htm)
@@ -626,10 +630,12 @@ group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
   https://www.youtube.com/watch?v=WY99FSoo6dI
     SINCE / UP-TO-NOW / have-been / so-far / all-along
+    trim: 14F-66F
 
 group:
   more: +md:[SKILL](https://www.lifeprint.com/asl101/pages-signs/s/skill.htm)
   https://www.youtube.com/watch?v=mVrTgE8edho SKILL / TALENT / adept / fluent
+    trim: 6F-71F
   # See https://www.lifeprint.com/asl101/pages-signs/e/expert.htm for EXPERT
 
 group:
@@ -648,9 +654,14 @@ group:
 
 group:
   more: +md:[SPANISH](https://www.lifeprint.com/asl101/pages-signs/s/spanish.htm)
-  https://www.youtube.com/watch?v=kBbDaJNNO6U SPANISH / SPAIN (single movement version)
+  https://www.youtube.com/watch?v=kBbDaJNNO6U
+    SPANISH / SPAIN (single movement version)
+    trim: 12F-77F
   https://www.youtube.com/watch?v=Cph1Vk3lFXk SPAIN (chest version)
-  https://www.youtube.com/watch?v=46OcU3kYyVQ SPAIN / SPANISH (double movement version)
+    trim: 14F-64F
+  https://www.youtube.com/watch?v=46OcU3kYyVQ
+    SPAIN / SPANISH (double movement version)
+    trim: 7F-
 
 group:
   more: +md:[START](https://www.lifeprint.com/asl101/pages-signs/s/start.htm)
@@ -681,7 +692,9 @@ group:
   more: +md:[SUCCEED](https://www.lifeprint.com/asl101/pages-signs/s/succeed.htm)
   https://www.youtube.com/watch?v=SrzPozIawec
     SUCCESS / SUCCEED / accomplish / managed to
+    trim: 16F-
   https://www.youtube.com/watch?v=y-o6GhUKPbI PAH! / SUCCEED-finally
+    trim: 25F-73F
 
 group:
   more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/support.htm)
@@ -696,8 +709,8 @@ group:
 group:
   more: +md:[TEND](https://www.lifeprint.com/asl101/pages-signs/t/tend.htm)
   https://www.youtube.com/watch?v=3d6RuJNH9eE
-    trim: 13F-83F
     TEND-to / usually / propensity / tends
+    trim: 13F-83F
 
 group:
   more: +md:[TEXAS](https://www.lifeprint.com/asl101/pages-signs/t/texas.htm)
