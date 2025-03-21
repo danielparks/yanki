@@ -12,6 +12,9 @@ https://www.youtube.com/watch?v=hzlYOuTrIhA AMERICA
 https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
   trim: 18F-74F
 
+https://www.youtube.com/watch?v=I7BfXB2oKyQ BRAG / BOAST
+  trim: 4F-65F
+
 https://www.youtube.com/watch?v=y7Jyiy6soRM BREAK (broken)
 https://www.youtube.com/watch?v=4Wvw0BFABwY BREAK / INTERMISSION
 
@@ -389,6 +392,11 @@ group:
   https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH / ENGLAND
 
 group:
+  more: +md:[EXAGGERATE](https://www.lifeprint.com/asl101/pages-signs/e/exaggerate.htm)
+  https://www.youtube.com/watch?v=PduuxeTaP1Y EXAGGERATE / going on and on
+    trim: 1F-
+
+group:
   more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
   https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
     trim: 26F-98F
@@ -547,6 +555,13 @@ group:
     trim: 0-44F
   https://www.youtube.com/watch?v=1PwaJzeQTuo IX-her PAY-him
     trim: 6F-66F
+
+group:
+  more: +md:[PLAN](https://www.lifeprint.com/asl101/pages-signs/p/plan.htm)
+  https://www.youtube.com/watch?v=yndCPGXCqwU PREPARE / PLAN
+    trim: 8F-62F
+  https://www.youtube.com/watch?v=hwpt8G2RYnI PLAN (noun or verb) / plan on
+    trim: 10F-58F
 
 group:
   more: +md:[POSSIBLE](https://www.lifeprint.com/asl101/pages-signs/p/possible.htm)
