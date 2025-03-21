@@ -7,29 +7,67 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 https://www.youtube.com/watch?v=FHPszRvL9pg YOU what-NAME?
+  more: +md:### What’s your name?
+
 https://www.youtube.com/watch?v=UyfRF3TeLPs YOUR NAME?
+  trim: 14F-64F
+  more: +md:### What’s your name?
+
 https://www.youtube.com/watch?v=zW8cpOVeKZ4 DEAF YOU?
+  more: +md:### Are you deaf?
+
 https://www.youtube.com/watch?v=xqKENRGkOUQ STUDENT YOU?
+  more: +md:### Are you a student?
+
 https://www.youtube.com/watch?v=0Kvv6FpF348 YOUR TEACHER what-NAME?
+  more: +md:### What’s your teacher’s name?
+
 https://www.youtube.com/watch?v=Th7pOg8YbCU YOUR TEACHER NAME WHAT?
+  more: +md:### What’s your teacher’s name?
+
 https://www.youtube.com/watch?v=OYvy_O_hhfw YOU UNDERSTAND [that-person]?
+  more: +md:### Do you understand that person?
+
 https://www.youtube.com/watch?v=wskcwTX27RU
   INDEX-[that-person] WHO?
   more: +md:### Who is that person?
 
 https://www.youtube.com/watch?v=l0nVGVuHHB8 AGAIN, NAME YOU?
+  more: +md:### What’s your name again?
+
 https://www.youtube.com/watch?v=wRUMbRLiN88
   STUDENT, [that-person]?
   more: +md:### Is that person a student?
 
 https://www.youtube.com/watch?v=gaMllIEuRl0 THIS YOUR?
+  more: +md:### Is this yours?
+
 https://www.youtube.com/watch?v=L9bEFz67m2k B-O-B WHERE?
+  more: +md:### Where’s Bob?
+
 https://www.youtube.com/watch?v=0QYYeAV0XjE NICE MEET-you
+  more: +md:### Nice to meet you.
+
 https://www.youtube.com/watch?v=cJhopOlxJJo YOU HEARING YOU?
+  more: +md:### Are you a hearing person?
+
 https://www.youtube.com/watch?v=C8r6B36p_nM ASL TEACHER YOU?
+  more: +md:### Are you an ASL teacher?
+
 https://www.youtube.com/watch?v=_rFeMKPrroE YOU LEARN SIGN WHERE?
+  more: +md:### Where did/do you learn sign language?
+
 https://www.youtube.com/watch?v=3RX4e1BM8bk YOU LEARN SIGN WHY?
+  more: +md:### Why did/do you learn sign language?
+
 https://www.youtube.com/watch?v=rTbZkRyLldo T-H-A-N-K-S how-SIGN?
+  more: +md:### How do you sign T-H-A-N-K-S?
+
 https://www.youtube.com/watch?v=du3-uujR4sQ [those-people] LEARN SIGN?
+  more: +md:### Are those people learning sign language?
+
 https://www.youtube.com/watch?v=hTHrZmSlPNo YOUR TEACHER, WHO?
+  more: +md:### Who is your teacher?
+
 https://www.youtube.com/watch?v=8cg8zrhEy0M YOU LIKE LEARN SIGN?
+  more: +md:### Do/did you like learning sign language?
