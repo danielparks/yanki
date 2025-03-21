@@ -4121,7 +4121,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=_CMXWiZJDPM @0- TEXT: 'JUMP (class
 Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- MEDIA: "processed_youtube=_Q-xqtQWkyA_audio='strip'_clip=(0.6339666666666667, 3.4034).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- TEXT: 'WONDER / THINK-about'
+Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- TEXT: 'WONDER / THINK-about (two handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=_QQODnTMuZg @0- MEDIA: "processed_youtube=_QQODnTMuZg_audio='strip'_clip=(0.8341666666666667, 2.5025).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=_QQODnTMuZg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=_QQODnTMuZg @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
