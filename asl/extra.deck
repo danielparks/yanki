@@ -157,11 +157,6 @@ https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
 # Groups represent Lifeprint pages with everything on them.
 
 group:
-  more: +md:[AFRAID](https://www.lifeprint.com/asl101/pages-signs/a/afraid.htm)
-  https://www.youtube.com/watch?v=OMEUC9FKU_k FEAR / AFRAID / SCARE
-    trim: 27F-82F
-
-group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
@@ -181,15 +176,6 @@ group:
     trim: 24F-82F
   https://www.youtube.com/watch?v=1n3eN9v8VV0 BIRTH-[arrive] DAY
     trim: 14F-94F
-
-group:
-  more: +md:[BORED](https://www.lifeprint.com/asl101/pages-signs/b/bored.htm)
-  https://www.youtube.com/watch?v=6_5BxE7yBEo BORED
-    trim: 11F-62F
-  https://www.youtube.com/watch?v=7gxOKAj-JZQ BORING / DRY / DULL / not-interesting
-    trim: 7F-
-  https://www.youtube.com/watch?v=PObXeUDqJ-o very-BORING (horns version)
-    trim: 4F-65F
 
 group:
   more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
@@ -425,11 +411,6 @@ group:
     trim: 45F-104F
 
 group:
-  more: +md:[FRIENDLY](https://www.lifeprint.com/asl101/pages-signs/f/friendly.htm)
-  https://www.youtube.com/watch?v=y2vzVSDM00k FRIENDLY
-    trim: 8F-
-
-group:
   more: +md:[FRUIT](https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm)
   https://www.youtube.com/watch?v=GF5UtlyLuyw FRUIT
     trim: 10F-78F
@@ -571,11 +552,6 @@ group:
     trim: 8F-79F
 
 group:
-  more: +md:[PROUD](https://www.lifeprint.com/asl101/pages-signs/p/proud.htm)
-  https://www.youtube.com/watch?v=v74BSmAB5Uk PRIDE / PROUD
-    trim: 13F-71F
-
-group:
   more: +md:[REASON](https://www.lifeprint.com/asl101/pages-signs/r/reason.htm)
   https://www.youtube.com/watch?v=sU2Tmrlns9c REASON / realize / rationale
     trim: 17F-76F
@@ -618,15 +594,6 @@ group:
     trim: 6F-57F
 
 group:
-  more: +md:[SILLY](https://www.lifeprint.com/asl101/pages-signs/s/silly.htm)
-  https://www.youtube.com/watch?v=4lVC2h-vul0 SILLY
-    trim: 6F-51F
-  https://www.youtube.com/watch?v=iGHjj_DXzkI RIDICULOUS
-    trim: 1F-35F
-  https://www.youtube.com/watch?v=LsMDCQMcMAE FRIVOLOUS / frivolity / silly-playing-around
-    trim: 28F-
-
-group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
   https://www.youtube.com/watch?v=WY99FSoo6dI
     SINCE / UP-TO-NOW / have-been / so-far / all-along
@@ -637,6 +604,10 @@ group:
   https://www.youtube.com/watch?v=mVrTgE8edho SKILL / TALENT / adept / fluent
     trim: 6F-71F
   # See https://www.lifeprint.com/asl101/pages-signs/e/expert.htm for EXPERT
+
+group:
+  more: +md:[SLEEPY](https://www.lifeprint.com/asl101/pages-signs/s/sleepy.htm)
+  https://www.youtube.com/watch?v=2LCp_ZNTwDA SLEEPY
 
 group:
   more: +md:[SMART](https://www.lifeprint.com/asl101/pages-signs/s/smart.htm)
@@ -713,11 +684,6 @@ group:
   more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/support.htm)
   https://www.youtube.com/watch?v=zIPyWpDlY24 SUPPORT / LOYAL / SUSTAIN / pro-
     trim: 5F-64F
-
-group:
-  more: +md:[SURPRISE](https://www.lifeprint.com/asl101/pages-signs/s/surprise.htm)
-  https://www.youtube.com/watch?v=95AiB9DJaiI SURPRISE
-    trim: 3F-56F
 
 group:
   more: +md:[TEND](https://www.lifeprint.com/asl101/pages-signs/t/tend.htm)
@@ -1032,8 +998,6 @@ https://www.youtube.com/watch?v=GcPs10m803Q TEMPERATURE (hand version)
   trim: 0-68F
 https://www.youtube.com/watch?v=0Q8DzhYUabI TEMPERATURE (finger version)
   trim: 11F-73F
-https://www.youtube.com/watch?v=W5uRhYqW8iw BRAVE / courage / HEALTH / heal
-  trim: 84F-133F
 https://www.youtube.com/watch?v=8KQB5iZCuN8 AMOUNT
   trim: 12F-57F
 https://www.youtube.com/watch?v=ZMQz2hoT5V4 MONEY
