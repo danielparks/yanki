@@ -1170,6 +1170,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>What type of people do you like?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- TAGS: 'Lifeprint lesson_11 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- TEXT: 'PEOPLE YOU LIKE WHAT-KIND?'
+Lifeprint ASL https://www.youtube.com/watch?v=5uPwZ-cRPWQ @0- MEDIA: "processed_youtube=5uPwZ-cRPWQ_audio='strip'_clip=(0.26666666666666666, 2.566666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=5uPwZ-cRPWQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/socialize.htm">SOCIALIZE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=5uPwZ-cRPWQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=5uPwZ-cRPWQ @0- TEXT: 'INTERACTION / socialize / social / mingle (5-hand version)'
 Lifeprint ASL https://www.youtube.com/watch?v=5w81eZ47WPQ @0- MEDIA: 'processed_youtube=5w81eZ47WPQ_b5940e7ce8a08a182b1e98b002974df8.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=5w81eZ47WPQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<h3>What time do you wake up during summer vacation?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5w81eZ47WPQ @0- TAGS: 'Lifeprint lesson_14 phrase'
@@ -1962,6 +1966,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=DGfm9blIRJs @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=DGfm9blIRJs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/shirt.htm">SHIRT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=DGfm9blIRJs @0- TAGS: 'Lifeprint extra lesson_08 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=DGfm9blIRJs @0- TEXT: 'LOGO-ON-SHIRT-[CL: bent-L]'
+Lifeprint ASL https://www.youtube.com/watch?v=DH6yQjlHRms @0- MEDIA: "processed_youtube=DH6yQjlHRms_audio='strip'_clip=(0.36703331403610334, 2.0520498921109414).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=DH6yQjlHRms @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/socialize.htm">SOCIALIZE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=DH6yQjlHRms @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=DH6yQjlHRms @0- TEXT: 'S-M / SOCIAL-MEDIA'
 Lifeprint ASL https://www.youtube.com/watch?v=DHl2-NT3mIM @0- MEDIA: "processed_youtube=DHl2-NT3mIM_audio='strip'_clip=(0.46713333333333334, 2.435766666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=DHl2-NT3mIM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/mom.htm">MOM</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=DHl2-NT3mIM @0- TAGS: 'Lifeprint first_100_signs lesson_02 vocabulary'
@@ -2390,6 +2398,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=HWTOUetDsOk @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=HWTOUetDsOk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/morning.htm">MORNING</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HWTOUetDsOk @0- TAGS: 'Lifeprint extra lesson_12 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=HWTOUetDsOk @0- TEXT: 'GOOD-MORNING (compound)'
+Lifeprint ASL https://www.youtube.com/watch?v=HWWRPpZJZCU @0- MEDIA: "processed_youtube=HWWRPpZJZCU_audio='strip'_clip=(0.32, 2.64).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=HWWRPpZJZCU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/socialize.htm">SOCIALIZE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=HWWRPpZJZCU @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=HWWRPpZJZCU @0- TEXT: 'ASSOCIATE / SOCIALIZE / EACH OTHER / ONE ANOTHER / HANG OUT WITH (open A-hand version)'
 Lifeprint ASL https://www.youtube.com/watch?v=HX-57T9JTwI @0- MEDIA: "processed_youtube=HX-57T9JTwI_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=HX-57T9JTwI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/worry.htm">WORRY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HX-57T9JTwI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -4990,6 +5002,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=iL5jc-qLVXc @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=iL5jc-qLVXc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<h3>Do you work? How many days of sick-leave do you get?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=iL5jc-qLVXc @0- TAGS: 'Lifeprint lesson_14 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=iL5jc-qLVXc @0- TEXT: 'WORK YOU? SICK DAY VACATION YOU CAN HOW-MANY?'
+Lifeprint ASL https://www.youtube.com/watch?v=iMQLPYkYAHc @0- MEDIA: "processed_youtube=iMQLPYkYAHc_audio='strip'_clip=(0.23356666666666667, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=iMQLPYkYAHc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/socialize.htm">SOCIALIZE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=iMQLPYkYAHc @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=iMQLPYkYAHc @0- TEXT: 'SOCIAL M-E-D-I-A'
 Lifeprint ASL https://www.youtube.com/watch?v=iQiveZHDWwo @0- MEDIA: "processed_youtube=iQiveZHDWwo_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=iQiveZHDWwo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson15.htm">lesson 15</a></p>\n<h3>Does you teacher have an aide?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=iQiveZHDWwo @0- TAGS: 'Lifeprint lesson_15 phrase'
