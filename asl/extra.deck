@@ -236,6 +236,11 @@ group:
     trim: 26F-72F
 
 group:
+  more: +md:[COMPARE](https://www.lifeprint.com/asl101/pages-signs/c/compare.htm)
+  https://www.youtube.com/watch?v=4OqSADr7ZtY COMPARE
+    trim: 8F-70F
+
+group:
   more: +md:[COUNSEL](https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm)
   https://www.youtube.com/watch?v=nM7SNWW7vx8
     COUNSEL / advice / influence  (noun)
@@ -480,6 +485,11 @@ group:
   https://www.youtube.com/watch?v=88xSMjuFPHA MEDICINE / MEDICAL / DRUG
 
 group:
+  more: +md:[MIRROR](https://www.lifeprint.com/asl101/pages-signs/m/mirror.htm)
+  https://www.youtube.com/watch?v=uRxfofBY88M MIRROR
+    trim: 6F-74F
+
+group:
   more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
   https://www.youtube.com/watch?v=Zv7n5RlK6W4 NEAR / CLOSE-by / CLOSE-to
   https://www.youtube.com/watch?v=nwYLaBzkSMw ->
@@ -573,11 +583,26 @@ group:
     trim: 30F-99F
 
 group:
+  more: +md:[SEEM](https://www.lifeprint.com/asl101/pages-signs/s/seem.htm)
+  https://www.youtube.com/watch?v=oaTwtikdiuE SEEM / apparantly (1 movement version)
+    trim: 2F-65F
+  https://www.youtube.com/watch?v=-NuU5ieFphQ SEEM / apparantly (2 movement version)
+    trim: 12F-92F
+
+group:
   more: +md:[SEMESTER](https://www.lifeprint.com/asl101/pages-signs/s/semester.htm)
   https://www.youtube.com/watch?v=Ut0n-GrYwMA SEMESTER (one handed version)
     trim: 9F-63F
   https://www.youtube.com/watch?v=wYKVsxvf1IE -> SEMESTER (two handed version)
     trim: 3F-48F
+
+group:
+  more: +md:[SEX](https://www.lifeprint.com/asl101/pages-signs/s/sex.htm)
+  https://www.youtube.com/watch?v=Y9YdryweTXo HOOK-UP / casual sex
+    trim: 14F-73F
+  # Originally SEXY. FIXME: extend last frame
+  https://www.youtube.com/watch?v=Wa129EIdzZs @29F-53F
+    SEX-gender / SEX-intercourse
 
 group:
   more: +md:[SHOW](https://www.lifeprint.com/asl101/pages-signs/s/show.htm)
