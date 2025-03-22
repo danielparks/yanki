@@ -558,6 +558,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=-LllUQJj1aM @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=-LllUQJj1aM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/here.htm">HERE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=-LllUQJj1aM @0- TAGS: 'Lifeprint lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=-LllUQJj1aM @0- TEXT: 'right-HERE'
+Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- MEDIA: "processed_youtube=-NuU5ieFphQ_audio='strip'_clip=(0.40040000000000003, 3.069733333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/seem.htm">SEEM</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- TEXT: 'SEEM / apparantly (2 movement version)'
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- MEDIA: "processed_youtube=-PNCpqJXy_A_audio='strip'_clip=(0.4337666666666667, 2.0687333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -1046,6 +1050,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=4NvSA9ovjcs @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=4NvSA9ovjcs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson15.htm">lesson 15</a></p>\n<h3>Do you use a babysitter?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4NvSA9ovjcs @0- TAGS: 'Lifeprint lesson_15 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=4NvSA9ovjcs @0- TEXT: 'YOU USE BABYSITTER?'
+Lifeprint ASL https://www.youtube.com/watch?v=4OqSADr7ZtY @0- MEDIA: "processed_youtube=4OqSADr7ZtY_audio='strip'_clip=(0.26693333333333336, 2.3356666666666666).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=4OqSADr7ZtY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/compare.htm">COMPARE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=4OqSADr7ZtY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=4OqSADr7ZtY @0- TEXT: 'COMPARE'
 Lifeprint ASL https://www.youtube.com/watch?v=4TwkHyVyt4A @0- MEDIA: "processed_youtube=4TwkHyVyt4A_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4TwkHyVyt4A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<h3>If you eat three hamburgers will you be full?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4TwkHyVyt4A @0- TAGS: 'Lifeprint lesson_07 phrase'
@@ -3770,6 +3778,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=WY99FSoo6dI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=WY99FSoo6dI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/since.htm">SINCE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=WY99FSoo6dI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=WY99FSoo6dI @0- TEXT: 'SINCE / UP-TO-NOW / have-been / so-far / all-along'
+Lifeprint ASL https://www.youtube.com/watch?v=Wa129EIdzZs @0.9676333333333333-1.7684333333333333 MEDIA: "processed_youtube=Wa129EIdzZs_audio='strip'_clip=(0.9676333333333333, 1.7684333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=Wa129EIdzZs @0.9676333333333333-1.7684333333333333 MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sex.htm">SEX</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Wa129EIdzZs @0.9676333333333333-1.7684333333333333 TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=Wa129EIdzZs @0.9676333333333333-1.7684333333333333 TEXT: 'SEX-gender / SEX-intercourse'
 Lifeprint ASL https://www.youtube.com/watch?v=WaIrad_avQI @0- MEDIA: "processed_youtube=WaIrad_avQI_audio='strip'_clip=(1.0010000000000001, 2.9696333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=WaIrad_avQI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/y/yesterday.htm">YESTERDAY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=WaIrad_avQI @0- TAGS: 'Lifeprint extra lesson_09 vocabulary'
@@ -3918,6 +3930,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=Y8QX1lAPwOs @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=Y8QX1lAPwOs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/city.htm">CITY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Y8QX1lAPwOs @0- TAGS: 'Lifeprint extra lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Y8QX1lAPwOs @0- TEXT: 'CITY (twisting version)'
+Lifeprint ASL https://www.youtube.com/watch?v=Y9YdryweTXo @0- MEDIA: "processed_youtube=Y9YdryweTXo_audio='strip'_clip=(0.46713333333333334, 2.435766666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=Y9YdryweTXo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sex.htm">SEX</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Y9YdryweTXo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=Y9YdryweTXo @0- TEXT: 'HOOK-UP / casual sex'
 Lifeprint ASL https://www.youtube.com/watch?v=YBJ5rjfxgdc @0- MEDIA: "processed_youtube=YBJ5rjfxgdc_audio='strip'_clip=(0.3003, 1.8685333333333334).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=YBJ5rjfxgdc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/half-hour.htm">HALF-HOUR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=YBJ5rjfxgdc @0- TAGS: 'Lifeprint lesson_16 vocabulary'
@@ -5670,6 +5686,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=oYYyWuK-V1o @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=oYYyWuK-V1o @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/weather.htm">WEATHER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=oYYyWuK-V1o @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=oYYyWuK-V1o @0- TEXT: 'BURN-up / go-up-in-FLAMES'
+Lifeprint ASL https://www.youtube.com/watch?v=oaTwtikdiuE @0- MEDIA: "processed_youtube=oaTwtikdiuE_audio='strip'_clip=(0.06673333333333334, 2.168833333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=oaTwtikdiuE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/seem.htm">SEEM</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=oaTwtikdiuE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=oaTwtikdiuE @0- TEXT: 'SEEM / apparantly (1 movement version)'
 Lifeprint ASL https://www.youtube.com/watch?v=ofL3HMkLDOc @0- MEDIA: "processed_youtube=ofL3HMkLDOc_audio='strip'_clip=(0.5839166359665281, 2.8862165149202674).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ofL3HMkLDOc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/deaf.htm">DEAF</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ofL3HMkLDOc @0- TAGS: 'Lifeprint lesson_01 vocabulary'
@@ -6246,6 +6266,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=uQyXeoaanbQ @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=uQyXeoaanbQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=uQyXeoaanbQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=uQyXeoaanbQ @0- TEXT: 'STEAL'
+Lifeprint ASL https://www.youtube.com/watch?v=uRxfofBY88M @0- MEDIA: "processed_youtube=uRxfofBY88M_audio='strip'_clip=(0.20020000000000002, 2.469133333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=uRxfofBY88M @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/mirror.htm">MIRROR</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=uRxfofBY88M @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=uRxfofBY88M @0- TEXT: 'MIRROR'
 Lifeprint ASL https://www.youtube.com/watch?v=uS1ZkzJh6r0 @0- MEDIA: "processed_youtube=uS1ZkzJh6r0_audio='strip'_clip=(1.3013000000000001, 2.9362666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=uS1ZkzJh6r0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/a/about.htm">ABOUT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=uS1ZkzJh6r0 @0- TAGS: 'Lifeprint lesson_11 vocabulary'
