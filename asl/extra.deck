@@ -87,6 +87,9 @@ https://www.youtube.com/watch?v=JtpNUhhzqn0 LEAD / direction
 https://www.youtube.com/watch?v=p-HVO2UU2HM MINOR (in school)
   trim: 5F-
 
+https://www.youtube.com/watch?v=OjAgN7Iy6Ps MIX
+  trim: 9F-68F
+
 https://www.youtube.com/watch?v=HUVSYJSuzEk MOST TIME / usually
   trim: 10F-80F
 
@@ -160,6 +163,13 @@ group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
+
+group:
+  more: +md:[BECAUSE](https://www.lifeprint.com/asl101/pages-signs/b/because.htm)
+  https://www.youtube.com/watch?v=y-VBTZIkHTI BECAUSE (X-hand version)
+    trim: 9F-53F
+  https://www.youtube.com/watch?v=JdtueGNX97k -> BECAUSE (A-hand version)
+    trim: 7F-51F
 
 group:
   more: +md:[BIRTH](https://www.lifeprint.com/asl101/pages-signs/b/birth.htm)
@@ -241,6 +251,14 @@ group:
     trim: 8F-70F
 
 group:
+  more: +md:[CONNECT](https://www.lifeprint.com/asl101/pages-signs/c/connect.htm)
+  https://www.youtube.com/watch?v=wEYVc7Z5kQA CONNECT / LINK / JOIN / BELONG
+    trim: 10F-60F
+  https://www.youtube.com/watch?v=kRmzoHZZiiA ->
+    CONNECT / LINK / JOIN (one hand still)
+    trim: 3F-54F
+
+group:
   more: +md:[COUNSEL](https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm)
   https://www.youtube.com/watch?v=nM7SNWW7vx8
     COUNSEL / advice / influence  (noun)
@@ -261,6 +279,11 @@ group:
     trim: 5F-76F
   https://www.youtube.com/watch?v=seKiOd6TxLw FOREIGN
     trim: 5F-69F
+
+group:
+  more: +md:[CULTURE](https://www.lifeprint.com/asl101/pages-signs/c/culture.htm)
+  https://www.youtube.com/watch?v=onk66POk4xU CULTURE / CULTURAL
+    trim: 16F-80F
 
 group:
   more: +md:[CURIOUS](https://www.lifeprint.com/asl101/pages-signs/c/curious.htm)
@@ -574,6 +597,18 @@ group:
   https://www.youtube.com/watch?v=su0Hg7jFJ0g
     RECOGNIZE / NOTICE / DETECT (directional)
     trim: 3F-62F
+
+group:
+  more: +md:[RELATIONSHIP](https://www.lifeprint.com/asl101/pages-signs/r/relationship.htm)
+  https://www.youtube.com/watch?v=53G8dTWlgMM
+    RELATIONSHIP / COOPERATE (back and forth version)
+    trim: 6F-66F
+  # These signs aren’t on the page. I’ve seen Dr Bill use this one in phrases:
+  https://www.youtube.com/watch?v=8bfb4_ZMcmk RELATIONSHIP (forward version)
+    trim: 5F-64F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=pIIaoLraYm8 -> RELATIONSHIP (initialized)
 
 group:
   more: +md:[REMEMBER](https://www.lifeprint.com/asl101/pages-signs/r/remember.htm)
