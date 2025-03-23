@@ -15,9 +15,6 @@ https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
 https://www.youtube.com/watch?v=I7BfXB2oKyQ BRAG / BOAST
   trim: 4F-65F
 
-https://www.youtube.com/watch?v=y7Jyiy6soRM BREAK (broken)
-https://www.youtube.com/watch?v=4Wvw0BFABwY BREAK / INTERMISSION
-
 https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY
 
 https://www.youtube.com/watch?v=TXgVQkDoMEc CAFETERIA / CAFÉ
@@ -198,6 +195,14 @@ group:
   more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
   https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
     trim: 31F-94F
+
+group:
+  more: +md:[BREAK](https://www.lifeprint.com/asl101/pages-signs/b/break.htm)
+  https://www.youtube.com/watch?v=y7Jyiy6soRM BREAK  / broken
+    trim: 28F-112F
+  https://www.youtube.com/watch?v=4Wvw0BFABwY
+    INTERMISSION / IN-BETWEEN / insert / in the middle of
+    trim: 17F-80F
 
 group:
   more: +md:[BUS](https://www.lifeprint.com/asl101/pages-signs/b/bus.htm)
@@ -574,6 +579,12 @@ group:
     trim: 5F-80F
   https://www.youtube.com/watch?v=qnB7FWefQoQ impatient / NONE PATIENCE
     trim: 8F-56F
+
+group:
+  more: +md:[PAUSE](https://www.lifeprint.com/asl101/pages-signs/p/pause.htm)
+  https://www.youtube.com/watch?v=RS8gp0O6vj0
+    PAUSE / suspend / take a break / hiatus / hold up
+    trim: 14F-75F
 
 group:
   more: +md:[PAY](https://www.lifeprint.com/asl101/pages-signs/p/pay.htm)
