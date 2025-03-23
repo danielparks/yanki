@@ -6450,6 +6450,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=vKE5vsfIhYk @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=vKE5vsfIhYk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson06.htm">lesson 6</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dictionary.htm">DICTIONARY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=vKE5vsfIhYk @0- TAGS: 'Lifeprint extra lesson_06 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=vKE5vsfIhYk @0- TEXT: 'DICTIONARY'
+Lifeprint ASL https://www.youtube.com/watch?v=vN9YMc4XGOw @0- MEDIA: "processed_youtube=vN9YMc4XGOw_audio='strip'_clip=(0.56, 2.48).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=vN9YMc4XGOw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/match.htm">MATCH</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=vN9YMc4XGOw @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=vN9YMc4XGOw @0- TEXT: 'MATCH / FIT / COMBINE'
 Lifeprint ASL https://www.youtube.com/watch?v=vWFF30NDQhA @0- MEDIA: "processed_youtube=vWFF30NDQhA_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=vWFF30NDQhA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>Do you have a new car?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=vWFF30NDQhA @0- TAGS: 'Lifeprint lesson_11 phrase'
