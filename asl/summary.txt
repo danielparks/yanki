@@ -978,6 +978,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=3d6RuJNH9eE @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=3d6RuJNH9eE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/tend.htm">TEND</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=3d6RuJNH9eE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=3d6RuJNH9eE @0- TEXT: 'TEND-to / usually / propensity / tends'
+Lifeprint ASL https://www.youtube.com/watch?v=3ggI2d3N4Ls @0- MEDIA: "processed_youtube=3ggI2d3N4Ls_audio='strip'_clip=(0.33366666666666667, 1.8351666666666666).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=3ggI2d3N4Ls @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/problem.htm">PROBLEM</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=3ggI2d3N4Ls @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=3ggI2d3N4Ls @0- TEXT: 'DIFFICULT / problem'
 Lifeprint ASL https://www.youtube.com/watch?v=3gjen_aN79M @0- MEDIA: "processed_youtube=3gjen_aN79M_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=3gjen_aN79M @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<h3>What type of pizza do you like?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=3gjen_aN79M @0- TAGS: 'Lifeprint lesson_07 phrase'
@@ -4734,6 +4738,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=eN_7uIu-iFE @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=eN_7uIu-iFE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson06.htm">lesson 6</a></p>\n<h3>Have you seen the movie Titanic?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=eN_7uIu-iFE @0- TAGS: 'Lifeprint lesson_06 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=eN_7uIu-iFE @0- TEXT: 'YOU FINISH WATCH MOVIE TITANIC?'
+Lifeprint ASL https://www.youtube.com/watch?v=eNutcT89QIQ @0- MEDIA: "processed_youtube=eNutcT89QIQ_audio='strip'_clip=(0.40040000000000003, 1.9019).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=eNutcT89QIQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/problem.htm">PROBLEM</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=eNutcT89QIQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=eNutcT89QIQ @0- TEXT: 'PROBLEM / difficulty'
 Lifeprint ASL https://www.youtube.com/watch?v=eO38PqJOak0 @0- MEDIA: "processed_youtube=eO38PqJOak0_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=eO38PqJOak0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>You never eat candy!?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=eO38PqJOak0 @0- TAGS: 'Lifeprint lesson_11 phrase'
