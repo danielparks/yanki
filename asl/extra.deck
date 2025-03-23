@@ -548,6 +548,11 @@ group:
     trim: 5F-55F
 
 group:
+  more: +md:[MATCH](https://www.lifeprint.com/asl101/pages-signs/m/match.htm)
+  https://www.youtube.com/watch?v=vN9YMc4XGOw MATCH / FIT / COMBINE
+    trim: 14F-62F
+
+group:
   more: +md:[PARTY](https://www.lifeprint.com/asl101/pages-signs/p/party.htm)
   https://www.youtube.com/watch?v=JpvQaOyVVEk PARTY (initialized)
     trim: 6F-71F
