@@ -4042,6 +4042,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=YMdSm_OgAIo @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=YMdSm_OgAIo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/texas.htm">TEXAS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=YMdSm_OgAIo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=YMdSm_OgAIo @0- TEXT: 'TEXAS'
+Lifeprint ASL https://www.youtube.com/watch?v=YTtX1te20w0 @0- MEDIA: "processed_youtube=YTtX1te20w0_audio='strip'_clip=(0.0, 2.5358666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=YTtX1te20w0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/care.htm">CARE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=YTtX1te20w0 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=YTtX1te20w0 @0- TEXT: 'CARE / concern'
 Lifeprint ASL https://www.youtube.com/watch?v=YUvtORMFccQ @0- MEDIA: "processed_youtube=YUvtORMFccQ_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=YUvtORMFccQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<h3>When did you graduate high school?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=YUvtORMFccQ @0- TAGS: 'Lifeprint lesson_13 phrase'
