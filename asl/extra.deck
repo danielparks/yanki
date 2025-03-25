@@ -4,9 +4,6 @@ tags: Lifeprint vocabulary extra extra-deck
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
-  trim: 9F-51F
-
 https://www.youtube.com/watch?v=hzlYOuTrIhA AMERICA
 
 https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
@@ -15,14 +12,8 @@ https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
 https://www.youtube.com/watch?v=I7BfXB2oKyQ BRAG / BOAST
   trim: 4F-65F
 
-https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY
-
 https://www.youtube.com/watch?v=TXgVQkDoMEc CAFETERIA / CAFÉ
   trim: 7F-
-
-https://www.youtube.com/watch?v=CBvbmM7dHaY CATEGORY / CLUSTER / section / group
-  trim: 7F-50F
-  more: md:[CLUSTER](https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm)
 
 https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
 
@@ -42,6 +33,7 @@ https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
 https://www.youtube.com/watch?v=S6zWnIw1_UQ COVID-19
   trim: 23F-98F
 
+# BUT is in lesson 11.
 https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
   more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
 
@@ -164,6 +156,13 @@ https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
 # Groups represent Lifeprint pages with everything on them.
 
 group:
+  more: +md:[ADD](https://www.lifeprint.com/asl101/pages-signs/a/add.htm)
+  https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
+    trim: 9F-51F
+  https://www.youtube.com/watch?v=15Kyw3b2f70 PLUS
+    trim: 12F-69F
+
+group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
@@ -212,6 +211,18 @@ group:
     trim: 8F-62F
 
 group:
+  more: +md:[BUSINESS](https://www.lifeprint.com/asl101/pages-signs/b/business.htm)
+  https://www.youtube.com/watch?v=7JaE8_Q3zW0 BUSINESS
+    trim: 25F-95F
+
+group:
+  more: +md:[BUSY](https://www.lifeprint.com/asl101/pages-signs/b/busy.htm)
+  https://www.youtube.com/watch?v=Uh4BW2tjS0k #BUSY
+    trim: 12F-60F
+  https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY (business version)
+    trim: 7F-60F
+
+group:
   more: +md:[CAUSE](https://www.lifeprint.com/asl101/pages-signs/c/cause.htm)
   https://www.youtube.com/watch?v=V47VIesqbc8 CAUSE
     trim: 15F-71F
@@ -248,6 +259,11 @@ group:
     trim: 4F-54F
   https://www.youtube.com/watch?v=cg8PmdDrQ7Q -> CHRISTMAS (C tree twist in version)
     trim: 3F-
+
+group:
+  more: md:[CLUSTER](https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm)
+  https://www.youtube.com/watch?v=CBvbmM7dHaY CATEGORY / CLUSTER / section / group
+    trim: 7F-50F
 
 group:
   more: +md:[COMMUTE](https://www.lifeprint.com/asl101/pages-signs/c/commute.htm)
