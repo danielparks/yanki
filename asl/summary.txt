@@ -3406,6 +3406,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=QmbOr-8K_Kw @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=QmbOr-8K_Kw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/stay.htm">STAY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=QmbOr-8K_Kw @0- TAGS: 'Lifeprint lesson_05 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=QmbOr-8K_Kw @0- TEXT: 'STAY'
+Lifeprint ASL https://www.youtube.com/watch?v=QptjrI9w0IQ @0- MEDIA: "processed_youtube=QptjrI9w0IQ_audio='strip'_clip=(0.33366666666666667, 2.2355666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=QptjrI9w0IQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/fox.htm">FOX</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=QptjrI9w0IQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=QptjrI9w0IQ @0- TEXT: 'FOX'
 Lifeprint ASL https://www.youtube.com/watch?v=Qq4J0wc3_nM @0- MEDIA: "processed_youtube=Qq4J0wc3_nM_audio='strip'_clip=(0.33366666666666667, 2.3690333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Qq4J0wc3_nM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/travel.htm">TRAVEL</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Qq4J0wc3_nM @0- TAGS: 'Lifeprint lesson_18 vocabulary'
