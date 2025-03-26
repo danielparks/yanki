@@ -2029,7 +2029,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=D8eeM75bKiA @0- TEXT: 'HOPE (R-han
 Lifeprint ASL https://www.youtube.com/watch?v=DAk2uwVR21I @0- MEDIA: "processed_youtube=DAk2uwVR21I_audio='strip'_clip=(0.46713333333333334, 1.9686333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=DAk2uwVR21I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson19.htm">lesson 19</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/brave.htm">BRAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=DAk2uwVR21I @0- TAGS: 'Lifeprint lesson_19 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=DAk2uwVR21I @0- TEXT: 'BRAVE / courage / HEALTH / heal'
+Lifeprint ASL https://www.youtube.com/watch?v=DAk2uwVR21I @0- TEXT: 'BRAVE / HEALTH / STRONG / courage / heal'
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- MEDIA: "processed_youtube=DEq4HlYPI1s_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=DEq4HlYPI1s @0- TAGS: 'Lifeprint lesson_03 phrase'
