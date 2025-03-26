@@ -3234,6 +3234,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=OlmnBxMJPh0 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=OlmnBxMJPh0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/habit.htm">HABIT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=OlmnBxMJPh0 @0- TAGS: 'Lifeprint extra lesson_12 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=OlmnBxMJPh0 @0- TEXT: 'accustomed-to'
+Lifeprint ASL https://www.youtube.com/watch?v=OnRLIFinilU @0- MEDIA: "processed_youtube=OnRLIFinilU_audio='strip'_clip=(0.3333333333333333, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=OnRLIFinilU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=OnRLIFinilU @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=OnRLIFinilU @0- TEXT: 'PERSONAL / personality'
 Lifeprint ASL https://www.youtube.com/watch?v=OrJZaf91g10 @0- MEDIA: "processed_youtube=OrJZaf91g10_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=OrJZaf91g10 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=OrJZaf91g10 @0- TAGS: 'Lifeprint lesson_03 phrase'
