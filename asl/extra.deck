@@ -5,6 +5,7 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 https://www.youtube.com/watch?v=hzlYOuTrIhA AMERICA
+  trim: 9F-75F
 
 https://www.youtube.com/watch?v=IMuM8KQH2pY BARELY / by-a-HAIR / That was close!
   trim: 18F-74F
@@ -16,13 +17,16 @@ https://www.youtube.com/watch?v=TXgVQkDoMEc CAFETERIA / CAFÉ
   trim: 7F-
 
 https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
+  trim: 11F-70F
 
 https://www.youtube.com/watch?v=1wk1W5GuGiI COFFEE
   trim: 13F-72F
 
 https://www.youtube.com/watch?v=MLbJdJzLHec COMMENT / MESSAGE
+  trim: 4F-54F
 
 https://www.youtube.com/watch?v=zy9ju0c_9oo COMPLEX / COMPLICATED
+  trim: 15F-66F
 
 https://www.youtube.com/watch?v=LJzalFEVIDc CONFUSED
   trim: 8F-73F
@@ -35,6 +39,7 @@ https://www.youtube.com/watch?v=S6zWnIw1_UQ COVID-19
 
 # BUT is in lesson 11.
 https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / VARIOUS
+  trim: 17F-70F
   more: +md:[DIFFERENT](https://www.lifeprint.com/asl101/pages-signs/d/different.htm)
 
 https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
@@ -534,7 +539,9 @@ group:
 group:
   more: +md:[LUCK](https://www.lifeprint.com/asl101/pages-signs/l/luck.htm)
   https://www.youtube.com/watch?v=xxKnfrh-tdE LUCK / LUCKY
+    trim: 10F-47F
   https://www.youtube.com/watch?v=i_Hkr9vkkz0 GOOD L-U-C-K
+    trim: 13F-54F
 
 group:
   more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
@@ -670,6 +677,7 @@ group:
 
   tags: +extra
   https://www.youtube.com/watch?v=pIIaoLraYm8 -> RELATIONSHIP (initialized)
+    trim: 11F-62F
 
 group:
   more: +md:[REMEMBER](https://www.lifeprint.com/asl101/pages-signs/r/remember.htm)
