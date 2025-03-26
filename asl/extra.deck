@@ -128,6 +128,9 @@ https://www.youtube.com/watch?v=OnRLIFinilU PERSONAL / personality
 https://www.youtube.com/watch?v=kD8IproL1DA PLASTIC / FLEXIBLE
   trim: 21F-74F
 
+https://www.youtube.com/watch?v=Ejyz4IJMBY8 POOR
+  trim: 6F-65F
+
 https://www.youtube.com/watch?v=w_mzf_ZB2Lk PREDICT / foresight / foresee
   trim: 14F-68F
 
@@ -141,6 +144,9 @@ https://www.youtube.com/watch?v=yEGrlfPhcbs RELIGION / RELIGIOUS (fist version)
 
 https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
   trim: 10F-59F
+
+https://www.youtube.com/watch?v=4Uz8apATGXI RICH / wealth / wealthy
+  trim: 7F-78F
 
 https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
   trim: 12F-65F
@@ -493,6 +499,13 @@ group:
   more: +md:[FOX](https://www.lifeprint.com/asl101/pages-signs/f/fox.htm)
   https://www.youtube.com/watch?v=QptjrI9w0IQ FOX
     trim: 10F-67F
+
+group:
+  more: +md:[FREE](https://www.lifeprint.com/asl101/pages-signs/f/free.htm)
+  https://www.youtube.com/watch?v=_OvXfc8_Ffo FREE
+    trim: 20F-80F
+  https://www.youtube.com/watch?v=L5nKRt8BfYk INDEPENDENT
+    trim: 21F-79F
 
 group:
   more: +md:[FRUIT](https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm)
