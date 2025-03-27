@@ -2302,6 +2302,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=GBMSdLL7mTY @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=GBMSdLL7mTY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/boat.htm">BOAT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=GBMSdLL7mTY @0- TAGS: 'Lifeprint extra lesson_18 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=GBMSdLL7mTY @0- TEXT: 'SAILBOAT / BOAT'
+Lifeprint ASL https://www.youtube.com/watch?v=GCfOK_1P62g @0- MEDIA: "processed_youtube=GCfOK_1P62g_audio='strip'_clip=(0.7340666666666666, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=GCfOK_1P62g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-layout/indexing.htm">INDEXING</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=GCfOK_1P62g @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=GCfOK_1P62g @0- TEXT: 'FEATURES (index list version), these, they (referenced things)'
 Lifeprint ASL https://www.youtube.com/watch?v=GF5UtlyLuyw @0- MEDIA: "processed_youtube=GF5UtlyLuyw_audio='strip'_clip=(0.33366666666666667, 2.6026000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=GF5UtlyLuyw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm">FRUIT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=GF5UtlyLuyw @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
