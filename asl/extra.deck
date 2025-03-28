@@ -601,7 +601,7 @@ group:
 group:
   more: +md:[MEDICINE](https://www.lifeprint.com/asl101/pages-signs/m/medicine.htm)
   https://www.youtube.com/watch?v=88xSMjuFPHA MEDICINE / MEDICAL / DRUG
-    trim 2F-69F
+    trim: 2F-69F
 
 group:
   more: +md:[MIRROR](https://www.lifeprint.com/asl101/pages-signs/m/mirror.htm)
@@ -611,7 +611,7 @@ group:
 group:
   more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
   https://www.youtube.com/watch?v=Zv7n5RlK6W4 NEAR / CLOSE-by / CLOSE-to
-    trim 7F-70F
+    trim: 7F-70F
   https://www.youtube.com/watch?v=nwYLaBzkSMw ->
     NEAR / CLOSE-by / CLOSE-to (pat hand version)
     trim: 9F-82F

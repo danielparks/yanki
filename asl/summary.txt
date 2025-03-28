@@ -1466,10 +1466,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=878nLVWZmFI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=878nLVWZmFI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sun.htm">SUN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=878nLVWZmFI @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=878nLVWZmFI @0- TEXT: 'SUNSET (C-hand version)'
-Lifeprint ASL https://www.youtube.com/watch?v=88xSMjuFPHA @0- MEDIA: "processed_youtube=88xSMjuFPHA_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=88xSMjuFPHA @0- MEDIA: "processed_youtube=88xSMjuFPHA_audio='strip'_clip=(0.06673333333333334, 2.3023000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=88xSMjuFPHA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/medicine.htm">MEDICINE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=88xSMjuFPHA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=88xSMjuFPHA @0- TEXT: 'MEDICINE / MEDICAL / DRUG\ntrim 2F-69F'
+Lifeprint ASL https://www.youtube.com/watch?v=88xSMjuFPHA @0- TEXT: 'MEDICINE / MEDICAL / DRUG'
 Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- MEDIA: "processed_youtube=8ABNk9pzVOc_audio='strip'_clip=(0.33366666666666667, 2.3023000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/have.htm">HAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- TAGS: 'Lifeprint lesson_02 vocabulary'
@@ -4406,10 +4406,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<h3>Do you work in the afternoon?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- TAGS: 'Lifeprint lesson_12 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- TEXT: 'AFTERNOON WORK YOU?'
-Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- MEDIA: "processed_youtube=Zv7n5RlK6W4_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- MEDIA: "processed_youtube=Zv7n5RlK6W4_audio='strip'_clip=(0.23356666666666667, 2.3356666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/n/near.htm">NEAR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- TEXT: 'NEAR / CLOSE-by / CLOSE-to\ntrim 7F-70F'
+Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- TEXT: 'NEAR / CLOSE-by / CLOSE-to'
 Lifeprint ASL https://www.youtube.com/watch?v=ZvW1ocG6Hwo @0- MEDIA: "processed_youtube=ZvW1ocG6Hwo_audio='strip'_clip=(0.8008000000000001, 2.9362666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ZvW1ocG6Hwo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/empty.htm">EMPTY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ZvW1ocG6Hwo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
