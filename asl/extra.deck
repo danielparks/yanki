@@ -601,7 +601,7 @@ group:
 group:
   more: +md:[MEDICINE](https://www.lifeprint.com/asl101/pages-signs/m/medicine.htm)
   https://www.youtube.com/watch?v=88xSMjuFPHA MEDICINE / MEDICAL / DRUG
-    trim 2F-69F
+    trim: 2F-69F
 
 group:
   more: +md:[MIRROR](https://www.lifeprint.com/asl101/pages-signs/m/mirror.htm)
@@ -611,7 +611,7 @@ group:
 group:
   more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
   https://www.youtube.com/watch?v=Zv7n5RlK6W4 NEAR / CLOSE-by / CLOSE-to
-    trim 7F-70F
+    trim: 7F-70F
   https://www.youtube.com/watch?v=nwYLaBzkSMw ->
     NEAR / CLOSE-by / CLOSE-to (pat hand version)
     trim: 9F-82F
@@ -1000,8 +1000,11 @@ https://www.youtube.com/watch?v=tgADS6Sg84o ROFL (Rolling On the Floor Laughing)
 
 # From lesson 5 video (https://www.youtube.com/watch?v=4MWPlmFX8sk)
 https://www.youtube.com/watch?v=pSPtgQM_ndg DEAD
+  trim: 14F-
 https://www.youtube.com/watch?v=sh1LBgeZNnM at symbol (@)
+  trim: 3F-64F
 https://www.youtube.com/watch?v=XGNaDcecMh0 DOT / period (index finger version)
+  trim: 15F-55F
 https://www.youtube.com/watch?v=FFVj-39E94c EVERYONE / EVERYBODY
   trim: 21F-90F
 
@@ -1018,23 +1021,34 @@ https://www.youtube.com/watch?v=OMC3x4UxQVQ
 
 # Related to lesson 6
 https://www.youtube.com/watch?v=r7sKUtZZDK4 OLD-1 / 1-year-old
+  trim: 11F-57F
 https://www.youtube.com/watch?v=SLYDB5KnHU4 OLD-4 / 4-year-old
+  trim: 12F-
 https://www.youtube.com/watch?v=LJrnjok5unE OLD-17 / 17-year-old
+  trim: 7F-
 
 # From lesson 6 story (https://www.youtube.com/watch?v=cDmQLqjn-EQ)
 https://www.youtube.com/watch?v=joS21m5GZf8 LIVING-ROOM ["L" – FORMAL/POLITE]
   trim: 10F-82F
 https://www.youtube.com/watch?v=ehLkCbu_ZnQ laugh ha ha
+  trim: 0-68F
 
 # From lesson 7 video (https://www.youtube.com/watch?v=kHg4wAOF4X0)
 https://www.youtube.com/watch?v=9yoJHvDfj-4 BOTH
+  trim: 0-64F
 https://www.youtube.com/watch?v=pYPZpBatN5c -> BOTH (C to S)
+  trim: 9F-57F
 https://www.youtube.com/watch?v=zMd-DsDftP8 VEGETABLE / VEGETARIAN
+  trim: 7F-56F
 https://www.youtube.com/watch?v=m5lfRYfXUIQ ->
   VEGETABLE / VEGETARIAN (twist version)
+  trim: 9F-74F
 https://www.youtube.com/watch?v=GnHH4QK3Ths -> V-E-G / VEGETABLE / VEGETARIAN
+  trim: 9F-73F
 https://www.youtube.com/watch?v=Ft6JlxIIEP4 TOMATO
+  trim: 11F-60F
 https://www.youtube.com/watch?v=CcLvZ5buj68 CLAM
+  trim: 4F-72F
 
 # Related to lesson 7 — food
 https://www.youtube.com/watch?v=mZVixrzz_MM MUSHROOM
