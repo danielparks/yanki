@@ -1886,6 +1886,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<h3>Do you think life is fair for all people?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- TAGS: 'Lifeprint lesson_12 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- TEXT: 'YOU THINK LIFE FAIR ALL PEOPLE?'
+Lifeprint ASL https://www.youtube.com/watch?v=BItTZ47uio4 @0- MEDIA: "processed_youtube=BItTZ47uio4_audio='strip'_clip=(0.05004999736855955, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=BItTZ47uio4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=BItTZ47uio4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=BItTZ47uio4 @0- TEXT: 'SPECIAL / except / unique'
 Lifeprint ASL https://www.youtube.com/watch?v=BJNPp6nnlPA @0- MEDIA: "processed_youtube=BJNPp6nnlPA_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=BJNPp6nnlPA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=BJNPp6nnlPA @0- TAGS: 'Lifeprint lesson_05 phrase'
