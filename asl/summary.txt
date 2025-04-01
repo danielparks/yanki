@@ -5510,6 +5510,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=j7rjBay5FIE @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=j7rjBay5FIE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson06.htm">lesson 6</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/past.htm">PAST</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=j7rjBay5FIE @0- TAGS: 'Lifeprint first_100_signs lesson_06 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=j7rjBay5FIE @0- TEXT: 'PAST / before now / previously / ago'
+Lifeprint ASL https://www.youtube.com/watch?v=jATmWcd1TkA @0- MEDIA: "processed_youtube=jATmWcd1TkA_audio='strip'_clip=(0.20020000000000002, 2.1021).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=jATmWcd1TkA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=jATmWcd1TkA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=jATmWcd1TkA @0- TEXT: 'GULLIBLE (idiomatic)'
 Lifeprint ASL https://www.youtube.com/watch?v=jH31aBCskRk @0- MEDIA: "processed_youtube=jH31aBCskRk_audio='strip'_clip=(0.16683333333333333, 2.1021).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=jH31aBCskRk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/ride.htm">RIDE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=jH31aBCskRk @0- TAGS: 'Lifeprint lesson_18 vocabulary'
