@@ -508,6 +508,11 @@ group:
     trim: 27F-92F
 
 group:
+  more: +md:[FALL-IN-LOVE](https://www.lifeprint.com/asl101/pages-signs/f/fallinlove.htm)
+  https://www.youtube.com/watch?v=4PE5u8lfxs4 FALL-IN-LOVE
+    trim: 10F-83F
+
+group:
   more: +md:[FAR](https://www.lifeprint.com/asl101/pages-signs/f/far.htm)
   https://www.youtube.com/watch?v=zVJ7-WuHsow FAR (A-hand version)
     trim: 12F-85F
@@ -1165,6 +1170,13 @@ group:
   https://www.youtube.com/watch?v=2PtaPd6wT9c WHATEVER (joke, pinky version)
     trim: 12F-
     tags: +extra
+
+group:
+  more: +md:[WIN](https://www.lifeprint.com/asl101/pages-signs/w/win.htm)
+  https://www.youtube.com/watch?v=Yqom91cTkZE WIN (5-claw version)
+    trim: 10F-61F
+  https://www.youtube.com/watch?v=wkk214uSk2s WIN (X-hand version)
+    trim: 15F-68F
 
 # From lesson 17 video (https://www.youtube.com/watch?v=GGZRweOqFtc)
 group:
