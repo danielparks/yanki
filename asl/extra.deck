@@ -137,6 +137,9 @@ https://www.youtube.com/watch?v=w_mzf_ZB2Lk PREDICT / foresight / foresee
 https://www.youtube.com/watch?v=i4UcWymjcFY PROGRESS / PROCESS
   trim: 5F-70F
 
+https://www.youtube.com/watch?v=sJHI_20qYDw PROJECT
+  trim: 6F-81F
+
 https://www.youtube.com/watch?v=B2UzqvVXn_Y RELIGION / RELIGIOUS (heart version)
   trim: 15F-57F
 https://www.youtube.com/watch?v=yEGrlfPhcbs RELIGION / RELIGIOUS (fist version)
@@ -147,6 +150,9 @@ https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
 
 https://www.youtube.com/watch?v=4Uz8apATGXI RICH / wealth / wealthy
   trim: 7F-78F
+
+https://www.youtube.com/watch?v=BItTZ47uio4 SPECIAL / except / unique
+  trim: 3F-
 
 https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
   trim: 12F-65F
@@ -164,6 +170,11 @@ https://www.youtube.com/watch?v=GCfOK_1P62g
 
 https://www.youtube.com/watch?v=eFsZ6FwpX8g TOP
   trim: 5F-73F
+
+https://www.youtube.com/watch?v=YG3jWemLj8A TOW (pull version)
+  trim: 33F-90F
+https://www.youtube.com/watch?v=YJCMWt3RQJA TOW (X-hand version)
+  trim: 10F-73F
 
 https://www.youtube.com/watch?v=6S9riIpP4go UNTIL
   trim: 10F-75F
@@ -191,6 +202,11 @@ group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
+
+group:
+  more: +md:[ARRIVE](https://www.lifeprint.com/asl101/pages-signs/a/arrive.htm)
+  https://www.youtube.com/watch?v=kgsXlwRNM6c ARRIVE
+    trim: 10F-68F
 
 group:
   more: +md:[BECAUSE](https://www.lifeprint.com/asl101/pages-signs/b/because.htm)
@@ -747,6 +763,11 @@ group:
     trim: 6F-66F
 
 group:
+  more: +md:[SEASON](https://www.lifeprint.com/asl101/pages-signs/s/season.htm)
+  https://www.youtube.com/watch?v=kdo-Tn7Klnc SEASON
+    trim: 9F-65F
+
+group:
   more: +md:[SEEM](https://www.lifeprint.com/asl101/pages-signs/s/seem.htm)
   https://www.youtube.com/watch?v=oaTwtikdiuE SEEM / apparantly (1 movement version)
     trim: 2F-65F
@@ -787,6 +808,15 @@ group:
   https://www.youtube.com/watch?v=WY99FSoo6dI
     SINCE / UP-TO-NOW / have-been / so-far / all-along
     trim: 14F-66F
+
+group:
+  more: +md:[SKATING](https://www.lifeprint.com/asl101/pages-signs/s/skating.htm)
+  https://www.youtube.com/watch?v=Xdskv36XPtI ROLLER-SKATE
+    trim: 29F-93F
+  https://www.youtube.com/watch?v=eMXVhj6bThw ICE-SKATE
+    trim: 10F-74F
+  https://www.youtube.com/watch?v=7yJl8tjBmSY ROLLER-BLADE
+    trim: 13F-64F
 
 group:
   more: +md:[SKILL](https://www.lifeprint.com/asl101/pages-signs/s/skill.htm)
