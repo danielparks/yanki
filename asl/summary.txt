@@ -5062,6 +5062,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=ehLkCbu_ZnQ @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=ehLkCbu_ZnQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ehLkCbu_ZnQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ehLkCbu_ZnQ @0- TEXT: 'laugh ha ha'
+Lifeprint ASL https://www.youtube.com/watch?v=eiDFIv7TBZ0 @0- MEDIA: "processed_youtube=eiDFIv7TBZ0_audio='strip'_clip=(0.33366666666666667, 2.0353666666666665).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=eiDFIv7TBZ0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/beach.htm">BEACH</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=eiDFIv7TBZ0 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=eiDFIv7TBZ0 @0- TEXT: 'BEACH'
 Lifeprint ASL https://www.youtube.com/watch?v=ejsrcVWMyHo @0- MEDIA: "processed_youtube=ejsrcVWMyHo_audio='strip'_clip=(0.0, 2.3023000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ejsrcVWMyHo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/family.htm">FAMILY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ejsrcVWMyHo @0- TAGS: 'Lifeprint extra lesson_03 vocabulary'
