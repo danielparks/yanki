@@ -284,6 +284,18 @@ group:
     trim: 15F-71F
 
 group:
+  more: +md:[CANCEL](https://www.lifeprint.com/asl101/pages-signs/c/cancel.htm)
+  https://www.youtube.com/watch?v=2bBkivd0a7s
+    CANCEL / criticize / grade / correct (verb)
+    trim: 5F-
+
+  tags: +extra
+  https://www.youtube.com/watch?v=aJK-1P-n8hg DISCRIMINATE / discrimination
+    trim: 9F-
+  https://www.youtube.com/watch?v=WFXHlJ2wWy0 PAY-OFF
+    trim: 1F-72F
+
+group:
   more: +md:[CARE](https://www.lifeprint.com/asl101/pages-signs/c/care.htm)
   https://www.youtube.com/watch?v=YTtX1te20w0 CARE / concern
     trim: 0-76F
@@ -357,6 +369,11 @@ group:
     trim: 16F-69F
   https://www.youtube.com/watch?v=RUUusQIDEQw COUNSELOR
     trim: 13F-78F
+
+group:
+  more: +md:[COUNT](https://www.lifeprint.com/asl101/pages-signs/c/count.htm)
+  https://www.youtube.com/watch?v=fYyFjRyF_QQ COUNT / accounting / track
+    trim: 0-46F
 
 group:
   more: +md:[COUNTRY](https://www.lifeprint.com/asl101/pages-signs/c/country.htm)
@@ -491,9 +508,19 @@ group:
     trim: 13F-58F
 
 group:
+  more: +md:[EXACT](https://www.lifeprint.com/asl101/pages-signs/e/exact.htm)
+  https://www.youtube.com/watch?v=qiIC-FeE-fg EXACT / precise
+    trim: 13F-78F
+
+group:
   more: +md:[EXAGGERATE](https://www.lifeprint.com/asl101/pages-signs/e/exaggerate.htm)
   https://www.youtube.com/watch?v=PduuxeTaP1Y EXAGGERATE / going on and on
     trim: 1F-
+
+group:
+  more: +md:[EXERCISE](https://www.lifeprint.com/asl101/pages-signs/e/exercise.htm)
+  https://www.youtube.com/watch?v=nf7FO5T3UO4 EXERCISE
+    trim: 11F-91F
 
 group:
   more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
@@ -675,6 +702,18 @@ group:
     trim: 5F-55F
 
 group:
+  more: +md:[PERFECT](https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm)
+  https://www.youtube.com/watch?v=HGIYIPaoFAc PERFECT (F-hands version)
+    trim: 1F-
+  https://www.youtube.com/watch?v=Na4qNZR3RWA -> PERFECT (single F-hand version)
+    trim: 8F-54F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=keOX5S1t_5Y ->
+    PERFECT (initialized English version)
+    trim: 31F-92F
+
+group:
   more: +md:[MATCH](https://www.lifeprint.com/asl101/pages-signs/m/match.htm)
   https://www.youtube.com/watch?v=vN9YMc4XGOw MATCH / FIT / COMBINE
     trim: 14F-62F
@@ -767,6 +806,11 @@ group:
     trim: 2F-65F
   https://www.youtube.com/watch?v=yabFLDVcEOM MEMORY / MEMORIZE
     trim: 30F-99F
+
+group:
+  more: +md:[RULE](https://www.lifeprint.com/asl101/pages-signs/r/rule.htm)
+  https://www.youtube.com/watch?v=VsF61oHPn_I RULE / regulation
+    trim: 0-46F
 
 group:
   more: +md:[SAVE](https://www.lifeprint.com/asl101/pages-signs/s/save.htm)
