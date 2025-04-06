@@ -1810,6 +1810,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=AlQ5uuZk0ps @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=AlQ5uuZk0ps @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/remember.htm">REMEMBER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=AlQ5uuZk0ps @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=AlQ5uuZk0ps @0- TEXT: 'REMEMBER'
+Lifeprint ASL https://www.youtube.com/watch?v=AmOkwl1sVDs @0- MEDIA: "processed_youtube=AmOkwl1sVDs_audio='strip'_clip=(0.4337666666666667, 2.5692333333333335).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=AmOkwl1sVDs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wedding.htm">WEDDING</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=AmOkwl1sVDs @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=AmOkwl1sVDs @0- TEXT: 'WEDDING / to-wed'
 Lifeprint ASL https://www.youtube.com/watch?v=AnZQ-HpcO7U @0- MEDIA: "processed_youtube=AnZQ-HpcO7U_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=AnZQ-HpcO7U @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=AnZQ-HpcO7U @0- TAGS: 'Lifeprint lesson_02 phrase'
@@ -2537,7 +2541,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=HGBcts4shKw @0- TEXT: 'BROWN / BEE
 Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- MEDIA: "processed_youtube=HGIYIPaoFAc_audio='strip'_clip=(0.03336666666666667, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- TEXT: 'PERFECT (F-hands version)'
+Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- TEXT: 'PERFECT (two F-hands version)'
 Lifeprint ASL https://www.youtube.com/watch?v=HMCWBdO-QVU @0- MEDIA: "processed_youtube=HMCWBdO-QVU_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=HMCWBdO-QVU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<h3>Do you want to go to Gallaudet University someday?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HMCWBdO-QVU @0- TAGS: 'Lifeprint lesson_08 phrase'
@@ -7362,6 +7366,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=zMd-DsDftP8 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=zMd-DsDftP8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=zMd-DsDftP8 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=zMd-DsDftP8 @0- TEXT: 'VEGETABLE / VEGETARIAN'
+Lifeprint ASL https://www.youtube.com/watch?v=zNUunK_nzQw @0- MEDIA: "processed_youtube=zNUunK_nzQw_audio='strip'_clip=(0.13346665964949214, 1.7183832429872112).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=zNUunK_nzQw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=zNUunK_nzQw @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=zNUunK_nzQw @0- TEXT: 'WASHINGTON'
 Lifeprint ASL https://www.youtube.com/watch?v=zQmNtjzbW5U @0- MEDIA: "processed_youtube=zQmNtjzbW5U_audio='strip'_clip=(0.10010000000000001, 1.8018).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=zQmNtjzbW5U @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson15.htm">lesson 15</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/main.htm">MAIN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=zQmNtjzbW5U @0- TAGS: 'Lifeprint extra lesson_15 vocabulary'
