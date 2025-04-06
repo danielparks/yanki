@@ -12,4 +12,4 @@ yanki list-notes -f '{note_id} MEDIA: {media_paths!r}
 | LC_COLLATE=C sort \
 >asl/summary.txt
 
-git --no-pager diff --word-diff-regex=. -U1 --color=always asl/summary.txt
+git --no-pager diff --no-ext-diff --word-diff-regex=. -U1 --color=always asl/summary.txt
