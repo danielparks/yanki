@@ -186,6 +186,9 @@ https://www.youtube.com/watch?v=lFSWuq0YurM
   VOICE-LOCK / keep-you-voice-off / no-talking (idiomatic)
   trim: 10F-71F
 
+https://www.youtube.com/watch?v=zNUunK_nzQw WASHINGTON
+  trim: 8F-103F
+
 https://www.youtube.com/watch?v=_Q-xqtQWkyA WONDER / THINK-about (two handed)
   trim: 19F-102F
 
@@ -703,7 +706,7 @@ group:
 
 group:
   more: +md:[PERFECT](https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm)
-  https://www.youtube.com/watch?v=HGIYIPaoFAc PERFECT (F-hands version)
+  https://www.youtube.com/watch?v=HGIYIPaoFAc PERFECT (two F-hands version)
     trim: 1F-
   https://www.youtube.com/watch?v=Na4qNZR3RWA -> PERFECT (single F-hand version)
     trim: 8F-54F
@@ -1026,6 +1029,11 @@ group:
     trim: 13F-62F
   https://www.youtube.com/watch?v=SWefjHHUouc VISIT-other-person
     trim: 18F-68F
+
+group:
+  more: +md:[WEDDING](https://www.lifeprint.com/asl101/pages-signs/w/wedding.htm)
+  https://www.youtube.com/watch?v=AmOkwl1sVDs WEDDING / to-wed
+    trim: 13F-77F
 
 group:
   more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
