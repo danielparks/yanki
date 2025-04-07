@@ -560,6 +560,13 @@ group:
     trim: 45F-104F
 
 group:
+  more: +md:[FIX](https://www.lifeprint.com/asl101/pages-signs/f/fix.htm)
+  https://www.youtube.com/watch?v=FL6MaUJmIkA #FIX
+    trim: 17F-68F
+  https://www.youtube.com/watch?v=9w-aLcgj16A FIX / repair
+    trim: 12F-64F
+
+group:
   more: +md:[FOX](https://www.lifeprint.com/asl101/pages-signs/f/fox.htm)
   https://www.youtube.com/watch?v=QptjrI9w0IQ FOX
     trim: 10F-67F
