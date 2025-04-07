@@ -94,6 +94,13 @@ def read_decks(files, options: VideoOptions, filter=DeckFilter()):
         yield Deck(spec, video_options=options)
 
 
+def read_decks_sorted(files, options: VideoOptions, filter=DeckFilter()):
+    """Read `Deck`s from `files` and return them sorted by title."""
+    return sorted(
+        read_decks(files, options, filter), key=lambda deck: deck.title
+    )
+
+
 async def read_final_decks_async(
     files, options: VideoOptions, filter=DeckFilter()
 ):
@@ -113,3 +120,10 @@ async def read_final_decks_async(
 def read_final_decks(files, options: VideoOptions, filter=DeckFilter()):
     """Read `FinalDeck`s from `files`."""
     return asyncio.run(read_final_decks_async(files, options, filter))
+
+
+def read_final_decks_sorted(files, options: VideoOptions, filter=DeckFilter()):
+    """Read `FinalDeck`s from `files` and return them sorted by title."""
+    return sorted(
+        read_final_decks(files, options, filter), key=lambda deck: deck.title
+    )

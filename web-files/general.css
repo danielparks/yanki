@@ -26,6 +26,6 @@ img, video {
   font-weight: normal;
 }
 
-.note_id td, .source td span {
+.note_id td, .source td span, .direction td span {
   font-weight: bold;
 }
