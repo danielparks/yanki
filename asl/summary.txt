@@ -6518,7 +6518,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=rIE6pSjWh6A @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=rIE6pSjWh6A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/from-now-on.htm">FROM-NOW-ON</a>\ncan also mean <a href="https://www.lifeprint.com/asl101/pages-signs/a/after.htm">AFTER</a>\nif the hand moves directly out.</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=rIE6pSjWh6A @0- TAGS: 'Lifeprint lesson_16 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=rIE6pSjWh6A @0- TEXT: 'AFTER / FROM-NOW-ON / FROM-THEN-ON'
-Lifeprint ASL https://www.youtube.com/watch?v=rKtYSjkBB84 @0- MEDIA: 'processed_youtube=rKtYSjkBB84_2966fc0872ae0c98ca1eff9e2c3b2f83.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=rKtYSjkBB84 @0- MEDIA: 'processed_youtube=rKtYSjkBB84_c419c662aba00426f1e12e56b4658b2d.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=rKtYSjkBB84 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<h3>Does your dad have blue eyes?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=rKtYSjkBB84 @0- TAGS: 'Lifeprint lesson_20 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=rKtYSjkBB84 @0- TEXT: 'YOUR DAD EYES BLUE?'
