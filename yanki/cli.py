@@ -21,7 +21,12 @@ import yt_dlp
 
 
 from yanki.errors import ExpectedError
-from yanki.filter import filter_options, read_decks, read_final_decks
+from yanki.filter import (
+    filter_options,
+    read_decks_sorted,
+    read_final_decks,
+    read_final_decks_sorted,
+)
 from yanki.html_out import htmlize_deck, generate_index_html, ensure_static_link
 from yanki.parser import find_invalid_format, NOTE_VARIABLES
 from yanki.anki import FINAL_NOTE_VARIABLES
@@ -219,7 +224,7 @@ def list_notes(options, decks, format, filter):
     """Print information about every note in the passed format."""
     if find_invalid_format(format, NOTE_VARIABLES) is None:
         # Don’t need FinalNotes
-        for deck in read_decks(decks, options, filter):
+        for deck in read_decks_sorted(decks, options, filter):
             for note in deck.notes():
                 ### FIXME document variables
                 print(format.format(**note.variables(deck_id=deck.id())))
@@ -227,7 +232,7 @@ def list_notes(options, decks, format, filter):
         if error := find_invalid_format(format, FINAL_NOTE_VARIABLES):
             sys.exit(f"Invalid variable in format: {error}")
 
-        for deck in read_final_decks(decks, options, filter):
+        for deck in read_final_decks_sorted(decks, options, filter):
             for note in deck.notes():
                 ### FIXME document variables
                 print(format.format(**note.variables()))
@@ -239,7 +244,7 @@ def list_notes(options, decks, format, filter):
 @click.pass_obj
 def to_html(options, decks, filter):
     """Display decks as HTML on stdout."""
-    for deck in read_final_decks(decks, options, filter):
+    for deck in read_final_decks_sorted(decks, options, filter):
         print(htmlize_deck(deck, path_prefix=options.cache_path))
 
 
@@ -282,7 +287,7 @@ def serve_http(options, decks, filter, do_open, bind, run_seconds):
 
     deck_links = []
     html_written = set()
-    for deck in read_final_decks(decks, options, filter):
+    for deck in read_final_decks_sorted(decks, options, filter):
         file_name = deck.title.replace("/", "--") + ".html"
         html_path = options.cache_path / file_name
         if html_path in html_written:

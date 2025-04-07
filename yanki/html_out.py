@@ -50,7 +50,7 @@ def htmlize_deck(deck, path_prefix=""):
       <body>
         <h1>{h(deck.title)}</h1>"""
 
-    for note in deck.notes():
+    for note in sorted(deck.notes(), key=lambda note: note.spec.line_number):
         if more_html := note.more_field().render_html(path_prefix):
             more_html = f'<div class="more">{more_html}</div>'
         output += f"""
@@ -59,6 +59,10 @@ def htmlize_deck(deck, path_prefix=""):
           {note.media_field().render_html(path_prefix)}
           {more_html}
           <table class="metadata">
+            <tr class="direction">
+              <th>Direction:</th>
+              <td>media <span>{h(note.spec.direction())}</span> text</td>
+            </tr>
             <tr class="note_id">
               <th>Note ID:</th>
               <td>{h(note.note_id)}</td>
