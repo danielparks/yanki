@@ -128,6 +128,9 @@ https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
 https://www.youtube.com/watch?v=OnRLIFinilU PERSONAL / personality
   trim: 10F-
 
+https://www.youtube.com/watch?v=r9o4nmyevkI PICKET (strike / protest version)
+  trim: 4F-62F
+
 https://www.youtube.com/watch?v=kD8IproL1DA PLASTIC / FLEXIBLE
   trim: 21F-74F
 
@@ -393,6 +396,11 @@ group:
     trim: 5F-76F
   https://www.youtube.com/watch?v=seKiOd6TxLw FOREIGN
     trim: 5F-69F
+
+group:
+  more: +md:[COMPLAIN](https://www.lifeprint.com/asl101/pages-signs/c/complain.htm)
+  https://www.youtube.com/watch?v=zbKRdkP4KWs COMPLAIN / object / protest
+    trim: 8F-54F
 
 group:
   more: +md:[CULTURE](https://www.lifeprint.com/asl101/pages-signs/c/culture.htm)
@@ -813,6 +821,11 @@ group:
   more: +md:[REASON](https://www.lifeprint.com/asl101/pages-signs/r/reason.htm)
   https://www.youtube.com/watch?v=sU2Tmrlns9c REASON / realize / rationale
     trim: 17F-76F
+
+group:
+  more: +md:[REBEL](https://www.lifeprint.com/asl101/pages-signs/r/rebel.htm)
+  https://www.youtube.com/watch?v=NzhYpb6dgfs REBEL / strike / protest / defiant
+    trim: 13F-70F
 
 group:
   more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)

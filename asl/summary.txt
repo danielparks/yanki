@@ -3358,6 +3358,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=Nz8zvtGUTPU @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=Nz8zvtGUTPU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/read.htm">READ</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Nz8zvtGUTPU @0- TAGS: 'Lifeprint lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Nz8zvtGUTPU @0- TEXT: 'READING'
+Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- MEDIA: "processed_youtube=NzhYpb6dgfs_audio='strip'_clip=(0.4337666666666667, 2.3356666666666666).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/rebel.htm">REBEL</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- TEXT: 'REBEL / strike / protest / defiant'
 Lifeprint ASL https://www.youtube.com/watch?v=O1kESRrCxXs @0- MEDIA: "processed_youtube=O1kESRrCxXs_audio='strip'_clip=(0.4337666666666667, 2.6693333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=O1kESRrCxXs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dirty.htm">DIRTY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=O1kESRrCxXs @0- TAGS: 'Lifeprint lesson_08 vocabulary'
@@ -6554,6 +6558,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=r8wxFtDjU5Y @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=r8wxFtDjU5Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/bathtub.htm">BATHTUB</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=r8wxFtDjU5Y @0- TAGS: 'Lifeprint first_100_signs lesson_09 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=r8wxFtDjU5Y @0- TEXT: 'BATH'
+Lifeprint ASL https://www.youtube.com/watch?v=r9o4nmyevkI @0- MEDIA: "processed_youtube=r9o4nmyevkI_audio='strip'_clip=(0.13346666666666668, 2.0687333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=r9o4nmyevkI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=r9o4nmyevkI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=r9o4nmyevkI @0- TEXT: 'PICKET (strike / protest version)'
 Lifeprint ASL https://www.youtube.com/watch?v=rB4oK27oniY @0- MEDIA: "processed_youtube=rB4oK27oniY_audio='strip'_clip=(0.3003, 2.0353666666666665).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=rB4oK27oniY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hair.htm">HAIR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=rB4oK27oniY @0- TAGS: 'Lifeprint extra lesson_20 vocabulary'
@@ -7554,6 +7562,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=z_MPz6HY1W4 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=z_MPz6HY1W4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/show.htm">SHOW</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=z_MPz6HY1W4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=z_MPz6HY1W4 @0- TEXT: 'SHOW-3rd-person'
+Lifeprint ASL https://www.youtube.com/watch?v=zbKRdkP4KWs @0- MEDIA: "processed_youtube=zbKRdkP4KWs_audio='strip'_clip=(0.26693333333333336, 1.8018).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=zbKRdkP4KWs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/complain.htm">COMPLAIN</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=zbKRdkP4KWs @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=zbKRdkP4KWs @0- TEXT: 'COMPLAIN / object / protest'
 Lifeprint ASL https://www.youtube.com/watch?v=zdMSWqZAzMQ @0- MEDIA: "processed_youtube=zdMSWqZAzMQ_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=zdMSWqZAzMQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/month.htm">MONTH</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=zdMSWqZAzMQ @0- TAGS: 'Lifeprint lesson_12 vocabulary'
