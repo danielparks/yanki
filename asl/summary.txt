@@ -2426,7 +2426,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=GF5UtlyLuyw @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=GF5UtlyLuyw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm">FRUIT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=GF5UtlyLuyw @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=GF5UtlyLuyw @0- TEXT: 'FRUIT'
-Lifeprint ASL https://www.youtube.com/watch?v=GFCWmAGad0o @0- MEDIA: "processed_youtube=GFCWmAGad0o_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=GFCWmAGad0o @0- MEDIA: 'processed_youtube=GFCWmAGad0o_c7d00fbd30e41442bd35b0d5dadf33f3.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=GFCWmAGad0o @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<h3>Which do you prefer, thick or thin crust pizza?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=GFCWmAGad0o @0- TAGS: 'Lifeprint lesson_20 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=GFCWmAGad0o @0- TEXT: 'PIZZA THIN-[crust], THICK-[crust], YOU FAVOR-[prefer] WHICH?'
@@ -2822,7 +2822,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/time.htm">TIME</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- TEXT: '8:30 AM'
-Lifeprint ASL https://www.youtube.com/watch?v=JKCbn8k968s @0- MEDIA: "processed_youtube=JKCbn8k968s_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=JKCbn8k968s @0- MEDIA: "processed_youtube=JKCbn8k968s_audio='strip'_clip=(0.26693333333333336, 1.9352666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=JKCbn8k968s @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/tuesday.htm">TUESDAY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=JKCbn8k968s @0- TAGS: 'Lifeprint lesson_12 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=JKCbn8k968s @0- TEXT: 'TUESDAY'
@@ -3898,7 +3898,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=TqmlL13jZoI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=TqmlL13jZoI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=TqmlL13jZoI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=TqmlL13jZoI @0- TEXT: 'STORY / MESSAGE'
-Lifeprint ASL https://www.youtube.com/watch?v=TtBKhQK2tis @0- MEDIA: "processed_youtube=TtBKhQK2tis_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=TtBKhQK2tis @0- MEDIA: "processed_youtube=TtBKhQK2tis_audio='strip'_clip=(0.7340666666666666, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=TtBKhQK2tis @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wednesday.htm">WEDNESDAY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=TtBKhQK2tis @0- TAGS: 'Lifeprint lesson_12 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=TtBKhQK2tis @0- TEXT: 'EVERY-WEDNESDAY'
@@ -4882,7 +4882,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=bpOcs-n-G0o @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=bpOcs-n-G0o @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>Why are you taking ASL?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=bpOcs-n-G0o @0- TAGS: 'Lifeprint lesson_11 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=bpOcs-n-G0o @0- TEXT: 'TAKE-UP ASL FOR-FOR?'
-Lifeprint ASL https://www.youtube.com/watch?v=btWz421kwLY @0- MEDIA: "processed_youtube=btWz421kwLY_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=btWz421kwLY @0- MEDIA: "processed_youtube=btWz421kwLY_audio='strip'_clip=(0.33366666666666667, 1.9019).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=btWz421kwLY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wednesday.htm">WEDNESDAY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=btWz421kwLY @0- TAGS: 'Lifeprint lesson_12 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=btWz421kwLY @0- TEXT: 'WEDNESDAY'
