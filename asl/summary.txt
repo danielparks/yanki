@@ -698,6 +698,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=0mG8riLnMg4 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=0mG8riLnMg4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clv.htm">Classifier V</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=0mG8riLnMg4 @0- TAGS: 'Lifeprint lesson_04 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=0mG8riLnMg4 @0- TEXT: 'TOSS AND TURN (classifier V)'
+Lifeprint ASL https://www.youtube.com/watch?v=0mM6JGIaKpA @0- MEDIA: "processed_youtube=0mM6JGIaKpA_audio='strip'_clip=(0.3003, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=0mM6JGIaKpA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wet.htm">WET</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=0mM6JGIaKpA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=0mM6JGIaKpA @0- TEXT: 'WET WIPES (butt version)'
 Lifeprint ASL https://www.youtube.com/watch?v=0msTKdOaGG0 @0- MEDIA: "processed_youtube=0msTKdOaGG0_audio='strip'_clip=(0.26693333333333336, 2.168833333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=0msTKdOaGG0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/run.htm">RUN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=0msTKdOaGG0 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -1190,6 +1194,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=5KkAKN27ygg @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=5KkAKN27ygg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm">CLOTHES</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5KkAKN27ygg @0- TAGS: 'Lifeprint extra lesson_08 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=5KkAKN27ygg @0- TEXT: 'TIE / NECKWARE'
+Lifeprint ASL https://www.youtube.com/watch?v=5Ns7zdDWcbg @0- MEDIA: "processed_youtube=5Ns7zdDWcbg_audio='strip'_clip=(0.3003, 2.0353666666666665).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=5Ns7zdDWcbg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wet.htm">WET</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=5Ns7zdDWcbg @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=5Ns7zdDWcbg @0- TEXT: 'unpleasantly-WET'
 Lifeprint ASL https://www.youtube.com/watch?v=5Qt1ewDRO98 @0- MEDIA: "processed_youtube=5Qt1ewDRO98_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5Qt1ewDRO98 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5Qt1ewDRO98 @0- TAGS: 'Lifeprint lesson_05 phrase'
@@ -2054,6 +2062,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=CGLQEeEzo1s @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=CGLQEeEzo1s @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dark.htm">DARK</a>\n(doesn’t cover some variants)</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=CGLQEeEzo1s @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=CGLQEeEzo1s @0- TEXT: 'DARK (flat hands version)'
+Lifeprint ASL https://www.youtube.com/watch?v=CJdxd1beyHQ @0- MEDIA: "processed_youtube=CJdxd1beyHQ_audio='strip'_clip=(0.16683333333333333, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=CJdxd1beyHQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wet.htm">WET</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=CJdxd1beyHQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=CJdxd1beyHQ @0- TEXT: 'WET WIPES (face version)'
 Lifeprint ASL https://www.youtube.com/watch?v=CPp1UOM-olA @0- MEDIA: "processed_youtube=CPp1UOM-olA_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=CPp1UOM-olA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/store.htm">STORE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=CPp1UOM-olA @0- TAGS: 'Lifeprint first_100_signs lesson_05 vocabulary'
@@ -4670,6 +4682,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=_xPghCaGRyA @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=_xPghCaGRyA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson19.htm">lesson 19</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/i/insult.htm">INSULT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=_xPghCaGRyA @0- TAGS: 'Lifeprint lesson_19 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=_xPghCaGRyA @0- TEXT: 'INSULT'
+Lifeprint ASL https://www.youtube.com/watch?v=_z11N9p0Xik @0- MEDIA: "processed_youtube=_z11N9p0Xik_audio='strip'_clip=(0.16683333333333333, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=_z11N9p0Xik @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wet.htm">WET</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=_z11N9p0Xik @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=_z11N9p0Xik @0- TEXT: 'WET W-I-P-E-S'
 Lifeprint ASL https://www.youtube.com/watch?v=_zPeOLUL8GY @0- MEDIA: "processed_youtube=_zPeOLUL8GY_audio='strip'_clip=(0.6339666666666667, 2.6026000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=_zPeOLUL8GY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sun.htm">SUN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=_zPeOLUL8GY @0- TAGS: 'Lifeprint lesson_14 vocabulary'
