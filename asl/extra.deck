@@ -128,6 +128,9 @@ https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
 https://www.youtube.com/watch?v=OnRLIFinilU PERSONAL / personality
   trim: 10F-
 
+https://www.youtube.com/watch?v=r9o4nmyevkI PICKET (strike / protest version)
+  trim: 4F-62F
+
 https://www.youtube.com/watch?v=kD8IproL1DA PLASTIC / FLEXIBLE
   trim: 21F-74F
 
@@ -282,6 +285,11 @@ group:
     trim: 7F-60F
 
 group:
+  more: +md:[CANADA](https://www.lifeprint.com/asl101/pages-signs/c/canada.htm)
+  https://www.youtube.com/watch?v=6wD5KHuM4xE CANADA
+    trim: 14F-62F
+
+group:
   more: +md:[CAUSE](https://www.lifeprint.com/asl101/pages-signs/c/cause.htm)
   https://www.youtube.com/watch?v=V47VIesqbc8 CAUSE
     trim: 15F-71F
@@ -388,6 +396,11 @@ group:
     trim: 5F-76F
   https://www.youtube.com/watch?v=seKiOd6TxLw FOREIGN
     trim: 5F-69F
+
+group:
+  more: +md:[COMPLAIN](https://www.lifeprint.com/asl101/pages-signs/c/complain.htm)
+  https://www.youtube.com/watch?v=zbKRdkP4KWs COMPLAIN / object / protest
+    trim: 8F-54F
 
 group:
   more: +md:[CULTURE](https://www.lifeprint.com/asl101/pages-signs/c/culture.htm)
@@ -584,6 +597,14 @@ group:
     trim: 10F-78F
 
 group:
+  more: +md:[GOVERNMENT](https://www.lifeprint.com/asl101/pages-signs/g/government.htm)
+  https://www.youtube.com/watch?v=nSyzaMR_9NU GOVERNMENT
+    trim: 11F-71F
+  https://www.youtube.com/watch?v=0yQUQMumegQ
+    PEA-BRAIN / stupid (G-hand version, idiomatic)
+    trim: 4F-53F
+
+group:
   more: +md:[GUESS](https://www.lifeprint.com/asl101/pages-signs/g/guess.htm)
   https://www.youtube.com/watch?v=B5oB0HgAxVo GUESS / MISS-(fail)
     trim: 10F-58F
@@ -668,6 +689,19 @@ group:
   more: +md:[MEDICINE](https://www.lifeprint.com/asl101/pages-signs/m/medicine.htm)
   https://www.youtube.com/watch?v=88xSMjuFPHA MEDICINE / MEDICAL / DRUG
     trim: 2F-69F
+
+group:
+  more: +md:[MEMBER](https://www.lifeprint.com/asl101/pages-signs/m/member.htm)
+  https://www.youtube.com/watch?v=D0p4WZk2tSE MEMBER
+    trim: 2F-47F
+  https://www.youtube.com/watch?v=HZXle1cM820 COMMITTEE / commission / congress
+    trim: 12F-55F
+  https://www.youtube.com/watch?v=PMEE-ikVncA FACULTY / staff
+    trim: 15F-66F
+  https://www.youtube.com/watch?v=G11HdoSzu_k STAFF
+    trim: 17F-73F
+  https://www.youtube.com/watch?v=sgnbq-xS0Ao SENATE
+    trim: 5F-63F
 
 group:
   more: +md:[MIRROR](https://www.lifeprint.com/asl101/pages-signs/m/mirror.htm)
@@ -787,6 +821,11 @@ group:
   more: +md:[REASON](https://www.lifeprint.com/asl101/pages-signs/r/reason.htm)
   https://www.youtube.com/watch?v=sU2Tmrlns9c REASON / realize / rationale
     trim: 17F-76F
+
+group:
+  more: +md:[REBEL](https://www.lifeprint.com/asl101/pages-signs/r/rebel.htm)
+  https://www.youtube.com/watch?v=NzhYpb6dgfs REBEL / strike / protest / defiant
+    trim: 13F-70F
 
 group:
   more: +md:[RECOGNIZE](https://www.lifeprint.com/asl101/pages-signs/r/recognize.htm)
@@ -1046,6 +1085,18 @@ group:
   more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
   https://www.youtube.com/watch?v=pNW4_GkXVhY WEIRD
     trim: 8F-65F
+
+group:
+  more: +md:[WET](https://www.lifeprint.com/asl101/pages-signs/w/wet.htm)
+  # No video for neutral WET.
+  https://www.youtube.com/watch?v=5Ns7zdDWcbg unpleasantly-WET
+    trim: 9F-61F
+  https://www.youtube.com/watch?v=0mM6JGIaKpA WET WIPES (butt version)
+    trim: 9F-
+  https://www.youtube.com/watch?v=CJdxd1beyHQ WET WIPES (face version)
+    trim: 5F-
+  https://www.youtube.com/watch?v=_z11N9p0Xik -> WET W-I-P-E-S
+    trim: 5F-
 
 group:
   more: +md:[WHAT’S-UP](https://www.lifeprint.com/asl101/pages-signs/w/whats-up.htm)

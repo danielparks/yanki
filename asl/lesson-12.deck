@@ -133,13 +133,16 @@ group:
 group:
   more: +md:[TUESDAY](https://www.lifeprint.com/asl101/pages-signs/t/tuesday.htm)
   https://www.youtube.com/watch?v=JKCbn8k968s TUESDAY
+    trim: 8F-58F
   https://www.youtube.com/watch?v=MWwg3ZYZCoE EVERY-TUESDAY
     trim: 37F-87F
 
 group:
   more: +md:[WEDNESDAY](https://www.lifeprint.com/asl101/pages-signs/w/wednesday.htm)
   https://www.youtube.com/watch?v=btWz421kwLY WEDNESDAY
+    trim: 10F-57F
   https://www.youtube.com/watch?v=TtBKhQK2tis EVERY-WEDNESDAY
+    trim: 22F-
 
 group:
   more: +md:[WEEK](https://www.lifeprint.com/asl101/pages-signs/w/week.htm)
