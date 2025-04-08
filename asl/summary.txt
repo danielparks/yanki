@@ -1366,6 +1366,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- MEDIA: 'processed_
 Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<h3>How often do you often eat grapes?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- TAGS: 'Lifeprint lesson_17 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=6vE-x3yBFa4 @0- TEXT: 'GRAPES, YOU EAT HOW OFTEN?'
+Lifeprint ASL https://www.youtube.com/watch?v=6wD5KHuM4xE @0- MEDIA: "processed_youtube=6wD5KHuM4xE_audio='strip'_clip=(0.46713333333333334, 2.0687333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=6wD5KHuM4xE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/canada.htm">CANADA</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=6wD5KHuM4xE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=6wD5KHuM4xE @0- TEXT: 'CANADA'
 Lifeprint ASL https://www.youtube.com/watch?v=6xuBeIf2s84 @0- MEDIA: "processed_youtube=6xuBeIf2s84_audio='strip'_clip=(0.64, 2.16).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=6xuBeIf2s84 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/time.htm">TIME</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6xuBeIf2s84 @0- TAGS: 'Lifeprint lesson_10 vocabulary'
