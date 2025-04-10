@@ -7,7 +7,7 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[A-LOT](https://www.lifeprint.com/asl101/pages-signs/a/a-lot.htm)
-  https://www.youtube.com/watch?v=KgU9qm6vXJ0 MUCH / A-LOT
+  https://www.youtube.com/watch?v=KgU9qm6vXJ0 MUCH / a lot
     trim: 12F-69F
 
 group:
@@ -27,7 +27,7 @@ group:
 
 group:
   more: +md:[BREAKFAST](https://www.lifeprint.com/asl101/pages-signs/b/breakfast.htm)
-  https://www.youtube.com/watch?v=MoiessLRht4 BREAKFAST / EAT MORNING
+  https://www.youtube.com/watch?v=MoiessLRht4 breakfast / EAT MORNING
     trim: 4F-57F
   https://www.youtube.com/watch?v=VXLG6ft7kno BREAKFAST (initialized version)
     trim: 9F-45F
@@ -36,20 +36,20 @@ group:
 
 group:
   more: +md:[DINNER](https://www.lifeprint.com/asl101/pages-signs/d/dinner.htm)
-  https://www.youtube.com/watch?v=X7UPEOYKzZs DINNER / EAT NIGHT
+  https://www.youtube.com/watch?v=X7UPEOYKzZs dinner / EAT NIGHT
     trim: 8F-57F
   https://www.youtube.com/watch?v=3GNtDPNQjts DINNER (initialized version)
     trim: 10F-52F
 
 group:
   more: +md:[DISH](https://www.lifeprint.com/asl101/pages-signs/d/dish.htm)
-  https://www.youtube.com/watch?v=kzuiLQ-ZCxI DISH / PLATE (square)
+  https://www.youtube.com/watch?v=kzuiLQ-ZCxI DISH / plate (square)
     trim: 8F-63F
-  https://www.youtube.com/watch?v=ZQsxcjnXOdk -> DISH / PLATE (rounded)
+  https://www.youtube.com/watch?v=ZQsxcjnXOdk -> DISH / plate (rounded)
     trim: 5F-53F
-  https://www.youtube.com/watch?v=S8wey-YGD9I -> DISH / PLATE (classifier LL)
+  https://www.youtube.com/watch?v=S8wey-YGD9I -> DISH / plate (classifier LL)
     trim: 3F-56F
-  https://www.youtube.com/watch?v=WcciABj5yCY -> DISH / PLATE (Y-hands)
+  https://www.youtube.com/watch?v=WcciABj5yCY -> DISH / plate (Y-hands)
     trim: 16F-56F
 
 group:
@@ -89,34 +89,34 @@ group:
   more: +md:[KETCHUP](https://www.lifeprint.com/asl101/pages-signs/k/ketchup.htm)
   https://www.youtube.com/watch?v=8pg6KkRCOis KETCHUP
     trim: 15F-74F
-  https://www.youtube.com/watch?v=GFtj4e_YPs0 CATSUP / CAT U-P (idiomatic, pun)
+  https://www.youtube.com/watch?v=GFtj4e_YPs0 catsup / CAT U-P (idiomatic, pun)
     trim: 7F-80F
   https://www.youtube.com/watch?v=iws8A_-o8sg ->
-    CATSUP / CAT UP (point version, idiomatic, pun)
+    catsup / CAT UP (point version, idiomatic, pun)
     trim: 13F-58F
   https://www.youtube.com/watch?v=NTVqfeGn2F4 ->
-    CATSUP / CAT UP (A-hand version, idiomatic, pun)
+    catsup / CAT UP (A-hand version, idiomatic, pun)
     trim: 10F-56F
 
 group:
   more: +md:[LUNCH](https://www.lifeprint.com/asl101/pages-signs/l/lunch.htm)
-  https://www.youtube.com/watch?v=KCRdHBabpUw LUNCH / EAT NOON
+  https://www.youtube.com/watch?v=KCRdHBabpUw lunch / EAT NOON
     trim: 12F-61F
   https://www.youtube.com/watch?v=zl0_6LYNMlg LUNCH (initialized vversion)
     trim: 8F-45F
 
   tags: +extra
-  https://www.youtube.com/watch?v=HAKN3e77ud8 -> LUNCH / EAT 12-NOON
+  https://www.youtube.com/watch?v=HAKN3e77ud8 -> lunch / EAT 12-NOON
     trim: 13F-59F
 
 group:
   more: +md:[MAYONNAISE](https://www.lifeprint.com/asl101/pages-signs/m/mayonnaise.htm)
-  https://www.youtube.com/watch?v=-8DfTPM5lqM MAYONNAISE / M-A-Y-O
+  https://www.youtube.com/watch?v=-8DfTPM5lqM mayonnaise / M-A-Y-O
     trim: 12F-78F
 
 group:
   more: +md:[MUSTARD](https://www.lifeprint.com/asl101/pages-signs/m/mustard.htm)
-  https://www.youtube.com/watch?v=Btq3oESoacI MUSTARD / M-R-D
+  https://www.youtube.com/watch?v=Btq3oESoacI mustard / M-R-D
     trim: 5F-64F
 
 group:
@@ -143,7 +143,7 @@ group:
 
 group:
   more: +md:[POP](https://www.lifeprint.com/asl101/pages-signs/p/pop.htm)
-  https://www.youtube.com/watch?v=I3lZvG43Z14 POP / SODA
+  https://www.youtube.com/watch?v=I3lZvG43Z14 POP / soda
     trim: 14F-79F
   # Most of the soda types don’t have videos, so I’m skipping them.
 

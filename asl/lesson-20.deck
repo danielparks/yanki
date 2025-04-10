@@ -7,7 +7,7 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[BUZZ-CUT](https://www.lifeprint.com/asl101/pages-signs/b/buzz.htm)
-  https://www.youtube.com/watch?v=BmeMoY2MLYo BUZZ-CUT / VERY-SHORT-HAIR (CL:G)
+  https://www.youtube.com/watch?v=BmeMoY2MLYo BUZZ-CUT / very short hair (CL:G)
     trim: 17F-65F
   https://www.youtube.com/watch?v=k4oPeY8_utk #BUZZ
     trim: 8F-68F
@@ -55,7 +55,7 @@ group:
   https://www.youtube.com/watch?v=w7gunLixOK8 CUTE / attractive / sexy / sugar
     trim: 12F-67F
   https://www.youtube.com/watch?v=zEtSV7lXycY
-    SUGAR / CANDY / CUTE (e.g. “cute baby”)
+    sugar / candy / CUTE (e.g. “cute baby”)
     trim: 17F-57F
 
 group:
@@ -66,7 +66,7 @@ group:
 group:
   more: +md:[FACE](https://www.lifeprint.com/asl101/pages-signs/f/face.htm)
   https://www.youtube.com/watch?v=8_GCUYb19w0
-    FACE / LOOKS / APPEARANCE (5-hand version)
+    FACE / looks / appearance (5-hand version)
     trim: 12F-61F
   https://www.youtube.com/watch?v=vToOzx3lsVQ FACE (index finger version)
     trim: 16F-75F
@@ -86,12 +86,12 @@ group:
   more: +md:[FAT](https://www.lifeprint.com/asl101/pages-signs/f/fat.htm)
   https://www.youtube.com/watch?v=c-hQ6hsu4mk F-A-T (substance)
     trim: 13F-64F
-  https://www.youtube.com/watch?v=6MACNEYz0v4 OBESE / FAT
+  https://www.youtube.com/watch?v=6MACNEYz0v4 obese / FAT
     trim: 11F-63F
 
 group:
   more: +md:[FOOL](https://www.lifeprint.com/asl101/pages-signs/f/fool.htm)
-  https://www.youtube.com/watch?v=dSl9LnDQv6A FOOL (verb) / FRAUD / PRANK / CON
+  https://www.youtube.com/watch?v=dSl9LnDQv6A FOOL (verb) / fraud / prank / con
     trim: 34F-
 
   # Not on page, but it seems very relevant.
@@ -122,7 +122,7 @@ group:
   # I wonder if it makes sense to trim this list of extra signs? It’s huge.
   tags: +extra
   https://www.youtube.com/watch?v=IMuM8KQH2pY
-    BARELY / by-a-HAIR / That was close!
+    barely / by-a-HAIR / That was close!
     trim: 18F-74F
   https://www.youtube.com/watch?v=1Eoce9oSNis LONG-CURLY-HAIR
     trim: 14F-73F
@@ -162,7 +162,7 @@ group:
     trim: 9F-61F
   https://www.youtube.com/watch?v=n2oJvWhQ0ts COMB-HAIR
     trim: 21F-85F
-  https://www.youtube.com/watch?v=ZQH7AJlf7Rg WASH-HAIR / SHAMPOO-hair
+  https://www.youtube.com/watch?v=ZQH7AJlf7Rg wash hair / SHAMPOO-hair
     trim: 15F-85F
   https://www.youtube.com/watch?v=p75JYKIFVUI ELASTIC-HAIR-BAND
     trim: 12F-88F
@@ -174,7 +174,7 @@ group:
 group:
   more: +md:[NORMAL](https://www.lifeprint.com/asl101/pages-signs/n/normal.htm)
   https://www.youtube.com/watch?v=yM7-396FwGk
-    NORMAL / STANDARD / natural / of course
+    NORMAL / standard / natural / of course
     trim: 44F-116F
 
 group:
@@ -194,12 +194,12 @@ group:
   https://www.youtube.com/watch?v=TooM2jWw9CU SHORT (height)
     trim: 17F-65F
     tags: +first_100_signs
-  https://www.youtube.com/watch?v=YfTrFCqaAks BRIEF / short duration / KNIFE
+  https://www.youtube.com/watch?v=YfTrFCqaAks BRIEF / short duration / knife
     trim: 3F-58F
 
 group:
   more: +md:[SKINNY](https://www.lifeprint.com/asl101/pages-signs/s/skinny.htm)
-  https://www.youtube.com/watch?v=FgcjZt-Ook4 SKINNY / THIN
+  https://www.youtube.com/watch?v=FgcjZt-Ook4 SKINNY
     trim: 15F-66F
 
 # STRONG was in lesson 19 as BRAVE.
@@ -235,5 +235,5 @@ group:
 
 group:
   more: +md:[WEAK](https://www.lifeprint.com/asl101/pages-signs/w/weak.htm)
-  https://www.youtube.com/watch?v=5Imr5_P1WuM WEAK / WIMP
+  https://www.youtube.com/watch?v=5Imr5_P1WuM WEAK / wimp
     trim: 11F-72F

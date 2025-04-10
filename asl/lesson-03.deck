@@ -14,7 +14,7 @@ group:
   more: +md:[ASK](https://www.lifeprint.com/asl101/pages-signs/a/ask.htm)
   https://www.youtube.com/watch?v=o2_DYu4TWcQ ASK-me
   https://www.youtube.com/watch?v=GtzG1RpF_E4 me-ASK-you
-  https://www.youtube.com/watch?v=-JLJeA_R9es REQUEST / ASK
+  https://www.youtube.com/watch?v=-JLJeA_R9es REQUEST / ask
     trim: 34F-84F
 
 group:
@@ -29,14 +29,14 @@ group:
 
 group:
   more: +md:[BIG](https://www.lifeprint.com/asl101/pages-signs/b/big.htm)
-  https://www.youtube.com/watch?v=TdQ0qHYQSvg LARGE / BIG
+  https://www.youtube.com/watch?v=TdQ0qHYQSvg LARGE / big
     trim: 16F-80F
     tags: +first_100_signs
   https://www.youtube.com/watch?v=LLGY5yaSLDk very-LARGE
 
 group:
   more: +md:[CITY](https://www.lifeprint.com/asl101/pages-signs/c/city.htm)
-  https://www.youtube.com/watch?v=e7Tz3OSQBQQ CITY / TOWN / COMMUNITY
+  https://www.youtube.com/watch?v=e7Tz3OSQBQQ CITY / town / community
 
   tags: +extra
   https://www.youtube.com/watch?v=Y8QX1lAPwOs -> CITY (twisting version)
@@ -70,7 +70,8 @@ group:
 
 group:
   more: +md:[FAVORITE](https://www.lifeprint.com/asl101/pages-signs/f/favorite.htm)
-  https://www.youtube.com/watch?v=fNKs28s0ONw FAVORITE / PREFER / rather / taste
+  https://www.youtube.com/watch?v=fNKs28s0ONw FAVORITE / prefer / rather / taste
+    trim: 7F-56F
 
 group:
   more: +md:[FINE](https://www.lifeprint.com/asl101/pages-signs/f/fine.htm)
@@ -79,7 +80,8 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=1p_XFIHeOeI POLITE
     trim: 16F-70F
-  https://www.youtube.com/watch?v=Tn1v02j3tv8 SWELL / COOL / NEAT / FINE
+  https://www.youtube.com/watch?v=Tn1v02j3tv8 COOL / swell / trendy / neat
+    trim: 24F-73F
 
 group:
   more: +md:[FROM](https://www.lifeprint.com/asl101/pages-signs/f/from.htm)
@@ -106,7 +108,7 @@ group:
     trim: 4F-46F
 
 group:
-  more: +md:[GOOD / BETTER / BEST](https://www.lifeprint.com/asl101/pages-signs/g/good-better-best.htm)
+  more: +md:[GOOD, BETTER, BEST](https://www.lifeprint.com/asl101/pages-signs/g/good-better-best.htm)
   https://www.youtube.com/watch?v=sQ_ABcs0n0A BETTER
     trim: 14F-70F
   https://www.youtube.com/watch?v=N0sg_yIVULo BEST
@@ -132,7 +134,8 @@ group:
 
 group:
   more: +md:[NEED](https://www.lifeprint.com/asl101/pages-signs/n/need.htm)
-  https://www.youtube.com/watch?v=Eo-vEE1gFxM NEED / MUST / SHOULD
+  https://www.youtube.com/watch?v=Eo-vEE1gFxM NEED / must / should
+    trim: 10F-
 
   tags: +extra
   https://www.youtube.com/watch?v=B84UGJp2vg0 SHOULD
@@ -162,12 +165,12 @@ group:
 
   tags: +extra
   https://www.youtube.com/watch?v=K0p8o9za-2c
-    THINKING / WONDER (finger circle version)
+    THINKING / considering (finger circle version)
     trim: 13F-79F
   https://www.youtube.com/watch?v=Gh3AcgvZGD4 ->
     THINKING / pondering (fingers fluttering version)
     trim: 0F-55F
-  https://www.youtube.com/watch?v=f11IOL70KME MULL OVER
+  https://www.youtube.com/watch?v=f11IOL70KME MULL-OVER
     trim: 6F-86F
   https://www.youtube.com/watch?v=IzTXn1s6JdQ SLIPPED-MIND
     trim: 165F-223F

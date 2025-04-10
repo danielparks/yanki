@@ -15,7 +15,7 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=pH4E8ruOcSY -> ABOUT (H-hands version)
     trim: 6F-67F
-  https://www.youtube.com/watch?v=1yxJYAfanIM QUOTE / TOPIC / SUBJECT
+  https://www.youtube.com/watch?v=1yxJYAfanIM QUOTE / topic / subject
     trim: 14F-56F
   https://www.youtube.com/watch?v=U70SGZbZ3D8 APPROXIMATELY
     trim: 12F-70F
@@ -36,7 +36,7 @@ group:
     trim: 9F-53F
 
   tags: +extra
-  https://www.youtube.com/watch?v=uO_1rvLwSsM BEHIND / in-the-BACK
+  https://www.youtube.com/watch?v=uO_1rvLwSsM in-the-BACK / behind
     trim: 16F-81F
   # Can’t find sign for back (body part).
 
@@ -68,7 +68,7 @@ group:
     SUMMON / call-upon / subpoena / draft into service
     trim: 16F-73F
   https://www.youtube.com/watch?v=s6OWH5zcXK4
-    SHOUT / YELL / call out
+    YELL / shout / call out
 
     (inflect for intensity)
     trim: 9F-48F
@@ -82,12 +82,12 @@ group:
   more: +md:[FOR](https://www.lifeprint.com/asl101/pages-signs/f/for.htm)
   https://www.youtube.com/watch?v=xAhjtGNnQVk FOR
     trim: 11F-71F
-  https://www.youtube.com/watch?v=7htIYky-fGc what-FOR? / FOR FOR?
+  https://www.youtube.com/watch?v=7htIYky-fGc FOR-FOR? / what for?
     trim: 15F-68F
 
 group:
   more: +md:[GREAT](https://www.lifeprint.com/asl101/pages-signs/g/great.htm)
-  https://www.youtube.com/watch?v=X67gLEcynIM GREAT / WONDERFUL
+  https://www.youtube.com/watch?v=X67gLEcynIM WONDERFUL / great
     trim: 8F-59F
 
 group:
@@ -155,13 +155,13 @@ group:
 group:
   more: +md:[TALK](https://www.lifeprint.com/asl101/pages-signs/t/talk.htm)
   https://www.youtube.com/watch?v=vB3APsM4FFQ @92F-135F
-    TALK / SPEAK
+    TALK / speak
 
     (with voice, tap version)
   https://www.youtube.com/watch?v=YZiJped3lLA TALK-with (likely with voice)
     trim: 7F-75F
   https://www.youtube.com/watch?v=0Nf8rl_IBXU
-    TALK / SPEAK / TALK-at-length
+    TALK / speak / talk at length
 
     (with voice, flutter version)
     trim: 7F-
