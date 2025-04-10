@@ -7,7 +7,7 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[BIRD](https://www.lifeprint.com/asl101/pages-signs/b/bird.htm)
-  https://www.youtube.com/watch?v=Pszo0ZVIcUA CHICKEN / BIRD
+  https://www.youtube.com/watch?v=Pszo0ZVIcUA BIRD / chicken
     trim: 10F-60F
     tags: +first_100_signs
 
@@ -100,7 +100,7 @@ group:
 group:
   more: +md:[KNOW](https://www.lifeprint.com/asl101/pages-signs/k/know.htm)
   # No video for just plain KNOW
-  https://www.youtube.com/watch?v=Ht2B0VzHFwQ FAMILIAR / KNOWLEDGE
+  https://www.youtube.com/watch?v=Ht2B0VzHFwQ FAMILIAR / knowledge
     trim: 9F-72F
     more: +KNOW would be a single movement.
   https://www.youtube.com/watch?v=MBzzJk_5WwY -> KNOW (casual version)
@@ -135,12 +135,12 @@ group:
     trim: 10F-68F
 
   tags: +extra
-  https://www.youtube.com/watch?v=OwtSP1QozuE ALSO / SAME (in-place version)
+  https://www.youtube.com/watch?v=OwtSP1QozuE ALSO / same (in-place version)
     trim: 7F-55F
-  https://www.youtube.com/watch?v=1N4DfFk01h8 ALSO / SAME (movement version)
+  https://www.youtube.com/watch?v=1N4DfFk01h8 ALSO / same (movement version)
     trim: 8F-64F
 
-https://www.youtube.com/watch?v=iXEkbLPuFYk SOME / PART / PARTIAL
+https://www.youtube.com/watch?v=iXEkbLPuFYk SOME / part / partial
   trim: 9F-55F
   more: +md:[SOME](https://www.lifeprint.com/asl101/pages-signs/s/some.htm)
 
@@ -153,7 +153,7 @@ group:
 
 group:
   more: +md:[TELL](https://www.lifeprint.com/asl101/pages-signs/t/tell.htm)
-  https://www.youtube.com/watch?v=SvfopPYaJJU TELL / TELL-you
+  https://www.youtube.com/watch?v=SvfopPYaJJU TELL / tell you
     trim: 7F-68F
   https://www.youtube.com/watch?v=Egu18UhNE6I TELL-me
     trim: 14F-52F

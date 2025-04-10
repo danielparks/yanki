@@ -84,9 +84,9 @@ group:
 
 group:
   more: +md:[FUTURE](https://www.lifeprint.com/asl101/pages-signs/f/future.htm)
-  https://www.youtube.com/watch?v=RMUZFdu6VtI FUTURE / WILL
+  https://www.youtube.com/watch?v=RMUZFdu6VtI FUTURE / will
     tags: +first_100_signs
-  https://www.youtube.com/watch?v=VHP823jOw8c SOMEDAY / eventually
+  https://www.youtube.com/watch?v=VHP823jOw8c FUTURE-someday / eventually
 
 group:
   more: +md:[LONG](https://www.lifeprint.com/asl101/pages-signs/l/long.htm)
@@ -96,8 +96,8 @@ group:
   more: +md:[NOW](https://www.lifeprint.com/asl101/pages-signs/n/now.htm)
   https://www.youtube.com/watch?v=g2j70neQ_lI NOW / current
     tags: +first_100_signs
-  https://www.youtube.com/watch?v=EtW1-NdM5qI TODAY (now-now)
-  https://www.youtube.com/watch?v=IlLRJ6jw4lY TODAY (now-day)
+  https://www.youtube.com/watch?v=EtW1-NdM5qI today / NOW + NOW
+  https://www.youtube.com/watch?v=IlLRJ6jw4lY today / NOW + DAY
 
 group:
   more: +md:[OLD](https://www.lifeprint.com/asl101/pages-signs/o/old.htm)
@@ -125,22 +125,22 @@ group:
 
 group:
   more: +md:[SELF](https://www.lifeprint.com/asl101/pages-signs/s/self.htm)
-  https://www.youtube.com/watch?v=NF_jrhLKWlY YOURSELF / SELF / YOUR-OWN
+  https://www.youtube.com/watch?v=NF_jrhLKWlY YOURSELF / SELF / your-own
     trim: 34F-84F
-  https://www.youtube.com/watch?v=TzNk3Yl2tMw MYSELF / MY-OWN
-  https://www.youtube.com/watch?v=RiypOflHvXQ ITSELF / ITS-OWN
-  https://www.youtube.com/watch?v=n5NIhFE3wy4 THEMSELVES / THEIR-OWN
-  https://www.youtube.com/watch?v=4zMWHsJlHGg OURSELVES / OUR-OWN
+  https://www.youtube.com/watch?v=TzNk3Yl2tMw MYSELF / my-own
+  https://www.youtube.com/watch?v=RiypOflHvXQ ITSELF / its-own
+  https://www.youtube.com/watch?v=n5NIhFE3wy4 THEMSELVES / their-own
+  https://www.youtube.com/watch?v=4zMWHsJlHGg OURSELVES / our-own
 
 group:
   more: +md:[TOMORROW](https://www.lifeprint.com/asl101/pages-signs/t/tomorrow.htm)
   https://www.youtube.com/watch?v=6gFOZMDptIk TOMORROW
-  https://www.youtube.com/watch?v=E17VasimjWo EVERYDAY / DAILY / common
+  https://www.youtube.com/watch?v=E17VasimjWo DAILY / everyday / common
 
 group:
   more: +md:[WAIT](https://www.lifeprint.com/asl101/pages-signs/w/wait.htm)
   https://www.youtube.com/watch?v=YfwgS9ZsBVw WAIT
-  https://www.youtube.com/watch?v=El-hYok08Qk WAIT-[long]
+  https://www.youtube.com/watch?v=El-hYok08Qk WAIT-long
     trim: 14F-94F
     tags: +extra
 

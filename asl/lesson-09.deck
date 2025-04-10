@@ -33,10 +33,10 @@ group:
     trim: 14F-79F
   https://www.youtube.com/watch?v=LEWPXaskrJk OPEN
     trim: 22F-77F
-  https://www.youtube.com/watch?v=adXm1AhwMBM CLOSE / CLOSED
+  https://www.youtube.com/watch?v=adXm1AhwMBM CLOSE / closed
     trim: 25F-85F
 
-https://www.youtube.com/watch?v=9G23AjmjyV4 DRESSER / DRAWER
+https://www.youtube.com/watch?v=9G23AjmjyV4 DRESSER / drawer
   trim: 13F-76F
   more: +md:[DRESSER](https://www.lifeprint.com/asl101/pages-signs/d/dresser.htm)
 
@@ -72,7 +72,7 @@ group:
     trim: 15F-79F
   https://www.youtube.com/watch?v=u6KL0UFbL5M KITCHEN (one-handed variation)
     trim: 6F-64F
-  https://www.youtube.com/watch?v=Xy0FCuz1KHw COOK / KITCHEN
+  https://www.youtube.com/watch?v=Xy0FCuz1KHw COOK / kitchen
     trim: 12F-70F
 
 group:
@@ -82,9 +82,9 @@ group:
   https://www.youtube.com/watch?v=u33E8wPkfyU FLASH-THE-LIGHTS
     trim: 11F-57F
   https://www.youtube.com/watch?v=aCIocBQ6ylU
-    LIGHT-device / LIGHT-bulb / LIGHT (general)
+    LIGHT-device / light bulb / light (general)
     trim: 9F-102F
-  https://www.youtube.com/watch?v=uKSJnAaaXBE BRIGHT / CLEAR / OBVIOUS
+  https://www.youtube.com/watch?v=uKSJnAaaXBE BRIGHT / clear / obvious
     trim: 10F-71F
 
   tags: +extra
@@ -94,7 +94,8 @@ group:
     trim: 37F-88F
   https://www.youtube.com/watch?v=C37R_Ix8-qs LIGHT-A-MATCH
     trim: 11F-72F
-  https://www.youtube.com/watch?v=lnbXEMxYdn4 AMBULANCE / LIGHTS-rotating-flashing
+  https://www.youtube.com/watch?v=lnbXEMxYdn4
+    LIGHTS-rotating-flashing / ambulance
     trim: 13F-86F
   https://www.youtube.com/watch?v=_zgfuzlhI9Q
     LIGHT-weight / LIGHT-colored
@@ -138,11 +139,11 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=3_2Zyn10sZI O-V-E-N
     trim: 22F-86F
-  https://www.youtube.com/watch?v=bf1X67Lhu6A OVEN / BAKING
+  https://www.youtube.com/watch?v=bf1X67Lhu6A OVEN / baking
   https://www.youtube.com/watch?v=Q0vD9t1u5bI BAKE
     trim: 14F-67F
 
-https://www.youtube.com/watch?v=UJINxF1cSUA TABLE / DESK
+https://www.youtube.com/watch?v=UJINxF1cSUA TABLE / desk
   trim: 11F-73F
   more: +md:[TABLE](https://www.lifeprint.com/asl101/pages-signs/t/table.htm)
 
@@ -197,7 +198,7 @@ group:
     trim: 6F-65F
   https://www.youtube.com/watch?v=H37s1WoEGEs RACE / COMPETE
     trim: 7F-68F
-  https://www.youtube.com/watch?v=Esuc74eXfMA UNDER / SUBORDINATE
+  https://www.youtube.com/watch?v=Esuc74eXfMA UNDER / subordinate
     trim: 16F-75F
-  https://www.youtube.com/watch?v=jQC2QdxW9u0 ABOVE / SUPERIOR
+  https://www.youtube.com/watch?v=jQC2QdxW9u0 ABOVE / superior
     trim: 16F-88F

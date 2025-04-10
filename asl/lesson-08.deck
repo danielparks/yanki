@@ -22,11 +22,11 @@ group:
 group:
   more: +md:[BASKET](https://www.lifeprint.com/asl101/pages-signs/b/basket.htm)
   https://www.youtube.com/watch?v=YvegBgfEEO4
-    BASKET (typical) / BOWL / tub / basin / sink
+    basket (typical) / bowl / tub / basin / sink (CL:C)
     trim: 17F-67F
-  https://www.youtube.com/watch?v=54ZibiGrHu8 tall-BASKET
+  https://www.youtube.com/watch?v=54ZibiGrHu8 tall basket (CL:C)
     trim: 8F-62F
-  https://www.youtube.com/watch?v=I6k9JY_aPTM BASKET-with-handle
+  https://www.youtube.com/watch?v=I6k9JY_aPTM basket with handle (CL:C)
     trim: 9F-90F
     tags: +extra
 
@@ -42,12 +42,12 @@ group:
 
 group:
   more: +md:[CHANGE](https://www.lifeprint.com/asl101/pages-signs/c/change.htm)
-  https://www.youtube.com/watch?v=lT0E7jGHIKY CHANGE-[verb]
+  https://www.youtube.com/watch?v=lT0E7jGHIKY CHANGE (verb)
     trim: 8F-72F
 
 group:
   more: +md:[COAT](https://www.lifeprint.com/asl101/pages-signs/c/coat.htm)
-  https://www.youtube.com/watch?v=HWMc-nzJ2MQ COAT / JACKET
+  https://www.youtube.com/watch?v=HWMc-nzJ2MQ COAT / jacket
     trim: 10F-65F
     tags: +first_100_signs
 
@@ -62,9 +62,9 @@ group:
 group:
   more: +md:[GLASSES](https://www.lifeprint.com/asl101/pages-signs/g/glasses.htm)
   https://www.youtube.com/watch?v=Z7mTRgU_Xqs
-    GLASSES / THOMAS GALLAUDET / GALLAUDET UNIVERSITY / Moses
+    GLASSES / Thomas Gallaudet / Gallaudet University / Moses
     trim: 10F-54F
-  https://www.youtube.com/watch?v=s52iaD1mxXU GOGGLES / GLASSES
+  https://www.youtube.com/watch?v=s52iaD1mxXU GOGGLES / glasses
     trim: 11F-65F
 
 group:
@@ -74,7 +74,7 @@ group:
 
 group:
   more: +md:[WASHING-MACHINE](https://www.lifeprint.com/asl101/pages-signs/w/washingmachine.htm)
-  https://www.youtube.com/watch?v=m8FIqLT7DcI LAUNDRY / WASHING-MACHINE
+  https://www.youtube.com/watch?v=m8FIqLT7DcI WASHING-MACHINE / laundry
     trim: 8F-58F
 
 group:
@@ -94,7 +94,7 @@ https://www.youtube.com/watch?v=vl1LG51Wd1c -> OFF-[removed-or-separated-from]
 group:
   more: +md:[ON](https://www.lifeprint.com/asl101/pages-signs/o/on.htm) and
     [LIGHTS](https://www.lifeprint.com/asl101/pages-signs/l/light.htm)
-  https://www.youtube.com/watch?v=w0Sl6ta4Obo LIGHTS-ON / LIGHTS
+  https://www.youtube.com/watch?v=w0Sl6ta4Obo LIGHTS-ON / lights
     trim: 35F-115F
 
 # Part of ON, but we want the more note to be special.
@@ -116,7 +116,7 @@ group:
 
 group:
   more: +md:[FIND](https://www.lifeprint.com/asl101/pages-signs/f/find.htm)
-  https://www.youtube.com/watch?v=2O5wVw-rlIs FIND / pick-up / discover
+  https://www.youtube.com/watch?v=2O5wVw-rlIs FIND / pick up / discover
     trim: 12F-87F
 
 group:
@@ -161,7 +161,7 @@ group:
     trim: 24F-98F
   https://www.youtube.com/watch?v=Yd8GXz_nrMA PLAID-SHIRT
     trim: 5F-
-  https://www.youtube.com/watch?v=DGfm9blIRJs LOGO-ON-SHIRT-[CL: bent-L]
+  https://www.youtube.com/watch?v=DGfm9blIRJs LOGO-ON-SHIRT (CL: bent-L)
     trim: 7F-62F
 
 group:
@@ -212,7 +212,7 @@ group:
 
 group:
   more: +md:[ZIP](https://www.lifeprint.com/asl101/pages-signs/z/zip.htm)
-  https://www.youtube.com/watch?v=8wuLrFkO-SU ZIPPER / ZIP-up
+  https://www.youtube.com/watch?v=8wuLrFkO-SU ZIP / zipper
     trim: 11F-64F
   https://www.youtube.com/watch?v=m9fxgSPo0s0 Z-I-P / zip code
     trim: 11F-60F
@@ -224,19 +224,19 @@ group:
   more: +md:[CLOTHES](https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm)
   https://www.youtube.com/watch?v=15czV0-SagI CLOTHES (two handed)
     trim: 11F-77F
-  https://www.youtube.com/watch?v=kDyFU6UL3qk DRESS / GOWN
+  https://www.youtube.com/watch?v=kDyFU6UL3qk DRESS / gown
     trim: 9F-71F
   https://www.youtube.com/watch?v=HPSGvj3-kwA SKIRT
     trim: 16F-75F
-  https://www.youtube.com/watch?v=I1KuGaQkOFs HANG-UP-[clothing]
+  https://www.youtube.com/watch?v=I1KuGaQkOFs HANG-UP-clothing
     trim: 14F-72F
 
   tags: +extra
-  https://www.youtube.com/watch?v=9mlTPY3sd6E GET-DRESSED / COSTUME
+  https://www.youtube.com/watch?v=9mlTPY3sd6E GET-DRESSED / costume
     trim: 11F-53F
   https://www.youtube.com/watch?v=qOFvjMNB65M CLOTHES FOLD PUT-away
     trim: 15F-93F
-  https://www.youtube.com/watch?v=QfqIDcay06E remove clothing / STRIP-[clothing]
+  https://www.youtube.com/watch?v=QfqIDcay06E remove clothing / STRIP-clothing
     trim: 13F-53F
   https://www.youtube.com/watch?v=MCT3su2--jA CLOTHES PIN
     trim: 27F-72F
@@ -244,7 +244,7 @@ group:
     trim: 8F-56F
   https://www.youtube.com/watch?v=D4b_EZhusLo LEATHER
     trim: 16F-54F
-  https://www.youtube.com/watch?v=5EgaD_yNExo CLOTH / FABRIC / MATERIAL
+  https://www.youtube.com/watch?v=5EgaD_yNExo CLOTH / fabric / material
     trim: 14F-74F
   https://www.youtube.com/watch?v=rceyLb6iPbc PADDED JACKET / PUFFY JACKET
     trim: 12F-67F

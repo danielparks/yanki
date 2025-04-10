@@ -9,23 +9,23 @@ group:
   more: +md:[AIRPLANE](https://www.lifeprint.com/asl101/pages-signs/a/airplane.htm)
   https://www.youtube.com/watch?v=eD5BTz7lR-o AIRPLANE
     trim: 0-60F
-  https://www.youtube.com/watch?v=u1pDng38AxE FLY / FLY-AIRPLANE
+  https://www.youtube.com/watch?v=u1pDng38AxE FLY / fly airplane
     trim: 24F-81F
 
 group:
   more: +md:[BICYCLE](https://www.lifeprint.com/asl101/pages-signs/b/bicycle.htm)
-  https://www.youtube.com/watch?v=8yjqcyk-xwY BIKE / BICYCLE
+  https://www.youtube.com/watch?v=8yjqcyk-xwY BICYCLE / bike
     trim: 0-142F
 
 group:
   more: +md:[BOAT](https://www.lifeprint.com/asl101/pages-signs/b/boat.htm)
-  https://www.youtube.com/watch?v=aDt-KNA-v04 SHIP / BOAT
+  https://www.youtube.com/watch?v=aDt-KNA-v04 BOAT / ship
     trim: 1F-69F
 
   tags: +extra
-  https://www.youtube.com/watch?v=GBMSdLL7mTY SAILBOAT / BOAT
+  https://www.youtube.com/watch?v=GBMSdLL7mTY sailboat / BOAT-with-sails
     trim: 5F-71F
-  https://www.youtube.com/watch?v=n6-cBztjHb0 SHIP-WITH-SAILS / BOAT
+  https://www.youtube.com/watch?v=n6-cBztjHb0 ship with sails / BOAT
     trim: 10F-86F
   https://www.youtube.com/watch?v=mEws8MNWC_w F-E-R-R-Y BOAT
     trim: 5F-97F
@@ -34,10 +34,10 @@ group:
 group:
   more: +md:[BUILD](https://www.lifeprint.com/asl101/pages-signs/b/build.htm)
   https://www.youtube.com/watch?v=Ytt6YIYV6qs
-    BUILD / CONSTRUCT (bent hand version)
+    BUILD / construct (bent hand version)
     trim: 11F-62F
   https://www.youtube.com/watch?v=_UAPcbyeN_I
-    BUILD / CONSTRUCT (H-hand version)
+    BUILD / construct (H-hand version)
     trim: 4F-57F
 
   tags: +extra
@@ -78,11 +78,11 @@ group:
     trim: 15F-60F
 
   tags: +extra
-  https://www.youtube.com/watch?v=b4bEDbnaGv4 FUNNY / COMEDY
+  https://www.youtube.com/watch?v=b4bEDbnaGv4 FUNNY / comedy
     trim: 16F-50F
   https://www.youtube.com/watch?v=P4vVkngSqwc HUMOR / humorous / funny / amusing
     trim: 9F-60F
-  https://www.youtube.com/watch?v=tGOLzJ2Hgdo JOKE / TEASE
+  https://www.youtube.com/watch?v=tGOLzJ2Hgdo JOKE / tease
     trim: 7F-64F
   https://www.youtube.com/watch?v=_8kwIE4_JAY MOCK / make fun of
     trim: 8F-62F
@@ -98,7 +98,7 @@ group:
   more: +md:[HELICOPTER](https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm)
   https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER (classifier 3)
     trim: 16F-78F
-  https://www.youtube.com/watch?v=FxcrY6piGv8 HELICOPTER / DRONE (classifier 1)
+  https://www.youtube.com/watch?v=FxcrY6piGv8 helicopter / DRONE (classifier 1)
     trim: 4F-65F
 
   tags: +extra
@@ -113,22 +113,22 @@ group:
 
 group:
   more: +md:[LEAVE](https://www.lifeprint.com/asl101/pages-signs/l/leave.htm)
-  https://www.youtube.com/watch?v=fn1PTkU1fGI LEAVE / GO-OUT
+  https://www.youtube.com/watch?v=fn1PTkU1fGI LEAVE / go out
     trim: 8F-67F
   https://www.youtube.com/watch?v=HMCubJnD-aE
-    ABANDON / LEAVE-BEHIND / LEFT-OVERS / REMAINING
+    ABANDON / leave behind / leftovers / remaining
     trim: 1F-59F
 
   tags: +extra
-  https://www.youtube.com/watch?v=ji9JOLaIj9I JAM / GET-OUT-OF-HERE / LEAVE
+  https://www.youtube.com/watch?v=ji9JOLaIj9I jam / get out of here / LEAVE
     trim: 12F-60F
-  https://www.youtube.com/watch?v=qo15m6gbYEo TAKE OFF / LEAVE
+  https://www.youtube.com/watch?v=qo15m6gbYEo TAKE-OFF / leave
     trim: 9F-74F
-  https://www.youtube.com/watch?v=84XYguYDLjs EXODUS / MASS-LEAVE
+  https://www.youtube.com/watch?v=84XYguYDLjs exodus / mass-LEAVE
     trim: 12F-82F
-  https://www.youtube.com/watch?v=shvegK_StOg -> EXODUS / MASS-LEAVE
+  https://www.youtube.com/watch?v=shvegK_StOg -> exodus / mass-LEAVE
     trim: 17F-92F
-  https://www.youtube.com/watch?v=3cMNYOqgCZA EVACUATE / FLEE
+  https://www.youtube.com/watch?v=3cMNYOqgCZA evacuate / flee / ESCAPE++ LEAVE
     trim: 11F-91F
   # ZOOM / LEAVE-QUICKLY is the same as TRAIN-GONE
 
@@ -155,7 +155,7 @@ group:
     trim: 13F-64F
   https://www.youtube.com/watch?v=jH31aBCskRk GET-in-[a-seat]
     trim: 5F-63F
-  https://www.youtube.com/watch?v=qAdpmlMPJ5s RIDER / PASSENGER
+  https://www.youtube.com/watch?v=qAdpmlMPJ5s RIDER / passenger
     trim: 11F-80F
   # No video for RIDE-on
 
@@ -169,7 +169,7 @@ group:
 
 group:
   more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
-  https://www.youtube.com/watch?v=uj4e7ldHVbY SEARCH / LOOK-FOR / SEEK
+  https://www.youtube.com/watch?v=uj4e7ldHVbY SEARCH / look for / seek
     trim: 2F-61F
 
 group:
@@ -189,12 +189,12 @@ group:
   https://www.youtube.com/watch?v=yne0A8Z7ijU TRAIN (vehicle)
     trim: 16F-70F
   https://www.youtube.com/watch?v=40Jn-HXFtIw
-    TRAIN-GONE (idiom) / ZOOM (L-G version) / LEAVE-QUICKLY
+    TRAIN-GONE (idiom) / ZOOM (L-G version) / leave quickly
     trim: 8F-63F
 
 group:
   more: +md:[TRAVEL](https://www.lifeprint.com/asl101/pages-signs/t/travel.htm)
-  https://www.youtube.com/watch?v=Qq4J0wc3_nM TOUR / TRAVEL
+  https://www.youtube.com/watch?v=Qq4J0wc3_nM TRAVEL / trip / journey / tour
     trim: 10F-71F
   https://www.youtube.com/watch?v=ZtG9hL7slCA TRAVEL-AROUND
     trim: 10F-74F

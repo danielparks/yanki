@@ -7,16 +7,16 @@ note_id: Lifeprint ASL {url} {clip}
 
 # Listed in lesson goals instead of the vocab list.
 https://www.youtube.com/watch?v=HVNMUR4iy1Y
-  public school / HEARING SCHOOL / SPEAKING SCHOOL
+  public school / hearing school / SPEAKING SCHOOL
   trim: 7F-75F
 
 group:
   more: +md:[ARTICLE](https://www.lifeprint.com/asl101/pages-signs/a/article.htm)
   https://www.youtube.com/watch?v=qrlFqLaaJSs
-    ARTICLE / CHAPTER / COLUMN / SECTION (C-hand)
+    ARTICLE / chapter / column / section (C-hand)
     trim: 35F-93F
   https://www.youtube.com/watch?v=Tp1ZQYFC71k ->
-    ARTICLE / CHAPTER / COLUMN / SECTION (L-claw)
+    ARTICLE / chapter / column / section (L-claw)
     trim: 13F-74F
   # Not all variations listed on page seem to have videos.
 
@@ -24,13 +24,13 @@ group:
   more: +md:[CLOSE-CAPTIONED](https://www.lifeprint.com/asl101/pages-signs/c/close-captioned.htm)
   https://www.youtube.com/watch?v=chpyf4VHajk CLOSED-CAPTION (CC version)
     trim: 7F-50F
-  https://www.youtube.com/watch?v=BhfF7LZY5GA CAPTIONS / SUBTITLES
+  https://www.youtube.com/watch?v=BhfF7LZY5GA CAPTIONING / subtitles
     trim: 13F-96F
   # Other variations at https://www.handspeak.com/word/3787/
 
 group:
   more: +md:[COLLEGE](https://www.lifeprint.com/asl101/pages-signs/c/college.htm)
-  https://www.youtube.com/watch?v=eXg-cfQuwwM COLLEGE / UNIVERSITY
+  https://www.youtube.com/watch?v=eXg-cfQuwwM COLLEGE / university
     trim: 11F-69F
   # Variation https://www.handspeak.com/word/418/
 
@@ -44,10 +44,10 @@ group:
 group:
   more: +md:[RESIDENTIAL-SCHOOL](https://www.lifeprint.com/asl101/pages-signs/r/residential-school.htm)
   https://www.youtube.com/watch?v=JA8Kr2vBYrY
-    RESIDENTIAL-SCHOOL / DEAF-SCHOOL / institute (i+i version)
+    RESIDENTIAL-SCHOOL / deaf school / institute (i+i version)
     trim: 8F-
   https://www.youtube.com/watch?v=zBzPzQHC-fY
-    RESIDENTIAL-SCHOOL / DEAF-SCHOOL / institute (i+s version)
+    RESIDENTIAL-SCHOOL / deaf school / institute (i+s version)
     trim: 28F-99F
 
 group:
@@ -65,7 +65,7 @@ group:
 group:
   more: +md:[FALSE](https://www.lifeprint.com/asl101/pages-signs/f/false.htm)
   https://www.youtube.com/watch?v=eZx4AGq-3P0
-    FALSE / FAKE / FOSTER / ARTIFICIAL / fiction (in context)
+    FALSE / fake / foster / artificial / fiction (in context)
     trim: 17F-56F
 
 # FLASH-THE-LIGHTS was in lesson 9.
@@ -80,7 +80,7 @@ group:
 
 group:
   more: +md:[HARD](https://www.lifeprint.com/asl101/pages-signs/h/hard.htm)
-  https://www.youtube.com/watch?v=RgGjl2y6dkM HARD / DIFFICULT
+  https://www.youtube.com/watch?v=RgGjl2y6dkM HARD
     trim: 9F-66F
 
 group:
@@ -111,7 +111,7 @@ group:
 group:
   more: +md:[NOTE](https://www.lifeprint.com/asl101/pages-signs/n/note.htm)
   https://www.youtube.com/watch?v=Um8GB14XWiM
-    to-DOCUMENT / to-NOTE / make-a-RECORD
+    NOTE / record / document (verb)
     trim: 30F-89F
   https://www.youtube.com/watch?v=w3gi-AsHG_Q make-a-MENTAL-NOTE / keep in mind
     trim: 9F-64F
@@ -119,22 +119,22 @@ group:
 
 group:
   more: +md:[RESEARCH](https://www.lifeprint.com/asl101/pages-signs/r/research.htm)
-  https://www.youtube.com/watch?v=f6JW_IbLybo INVESTIGATE / RESEARCH
+  https://www.youtube.com/watch?v=f6JW_IbLybo RESEARCH / investigate
     trim: 7F-59F
   # No video with just initialized version of RESEARCH
 
 group:
   more: +md:[SQUARE](https://www.lifeprint.com/asl101/pages-signs/s/square.htm)
-  https://www.youtube.com/watch?v=5Eyz4CYuaUc SQUARE / BOARD / SIGN / BILLBOARD
+  https://www.youtube.com/watch?v=5Eyz4CYuaUc SQUARE / board / sign / billboard
     trim: 15F-93F
 
 group:
   more: +md:[TEST](https://www.lifeprint.com/asl101/pages-signs/t/test.htm)
   https://www.youtube.com/watch?v=GtBVLsZBlC8
-    TEST / QUIZ / EXAM (1-x-5 version)
+    TEST / quiz / exam (1-x-5 version)
     trim: 19F-62F
   https://www.youtube.com/watch?v=pGFOzg6s7-g
-    TEST / QUIZ / EXAM (1-x-1-x version)
+    test / QUIZ / exam (1-x-1-x version)
     trim: 19F-62F
 
 group:
@@ -149,7 +149,7 @@ group:
     WRONG / inaccurate / an error / a mistake
     trim: 14F-60F
   https://www.youtube.com/watch?v=L-ufbEVTJSk
-    MISTAKE / make-a-MISTAKE / screw up
+    MISTAKE / make a mistake / screw up
     trim: 4F-41F
 
 # Not in vocab list, but used in phrases.

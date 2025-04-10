@@ -26,7 +26,7 @@ group:
     trim: 5F-57F
 
   tags: +extra
-  https://www.youtube.com/watch?v=5eIt4-SifYA AUDIO / SOUND / EAR / HEARING
+  https://www.youtube.com/watch?v=5eIt4-SifYA SOUND / audio / ear / hearing
     trim: 9F-54F
 
 group:
@@ -42,7 +42,7 @@ group:
 
 group:
   more: +md:[MEANING](https://www.lifeprint.com/asl101/pages-signs/m/meaning.htm)
-  https://www.youtube.com/watch?v=moMl2Po7R1o MEANING / PURPOSE
+  https://www.youtube.com/watch?v=moMl2Po7R1o MEANING / purpose
     trim: 12F-62F
 
 group:
@@ -59,7 +59,7 @@ group:
 
 group:
   more: +md:[NICE](https://www.lifeprint.com/asl101/pages-signs/n/nice.htm)
-  https://www.youtube.com/watch?v=2PeTh4Ym048 NICE / CLEAN
+  https://www.youtube.com/watch?v=2PeTh4Ym048 NICE / clean
     trim: 22F-92F
     tags: +first_100_signs
 
@@ -130,7 +130,7 @@ group:
 
 group:
   more: +md:[HUH](https://www.lifeprint.com/asl101/pages-signs/h/huh.htm)
-  https://www.youtube.com/watch?v=1udGGPLkA-Q WHAT? / HUH?
+  https://www.youtube.com/watch?v=1udGGPLkA-Q WHAT? / huh?
     trim: 12F-58F
     tags: +first_100_signs
 

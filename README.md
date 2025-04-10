@@ -145,7 +145,7 @@ else in the deck. Example:
 ```yaml
 group:
   more: +md:[FIRST](https://www.lifeprint.com/asl101/pages-signs/f/first.htm)
-  https://www.youtube.com/watch?v=tZ04_s30aXY FIRST / PRIMARY
+  https://www.youtube.com/watch?v=tZ04_s30aXY FIRST / primary
 
   tags: +extra
   https://www.youtube.com/watch?v=x9xgoFqsBkE FIRST-PLACE

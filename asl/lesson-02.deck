@@ -12,7 +12,7 @@ group:
     tags: +first_100_signs
 
   tags: +extra
-  https://www.youtube.com/watch?v=PQsbDNgV5mE LITTLE BOY
+  https://www.youtube.com/watch?v=PQsbDNgV5mE little boy / BOY + SHORT
     trim: 12F-63F
 
 group:
@@ -27,7 +27,7 @@ group:
 
   # From my ASL teacher
   tags: +Timo +extra
-  https://www.youtube.com/watch?v=7njIHQfii8o BROTHER [BOY + SAME]
+  https://www.youtube.com/watch?v=7njIHQfii8o brother / BOY + SAME
     trim: 15F-78F
 
 group:
@@ -64,7 +64,7 @@ group:
     tags: +first_100_signs
 
   tags: +extra
-  https://www.youtube.com/watch?v=gy6b1ePy9nc LITTLE GIRL
+  https://www.youtube.com/watch?v=gy6b1ePy9nc little girl / GIRL + SHORT
     trim: 1F-47F
 
 group:
@@ -110,9 +110,9 @@ group:
 
 group:
   more: +md:[HOW-MANY](https://www.lifeprint.com/asl101/pages-signs/h/how-many.htm)
-  https://www.youtube.com/watch?v=Lu7VJHlq0o0 how-MANY / how-MUCH (two hands)
+  https://www.youtube.com/watch?v=Lu7VJHlq0o0 HOW-MANY / how much (two hands)
     trim: 3F-57F
-  https://www.youtube.com/watch?v=z-BwDb6w7ws -> how-MANY / how-MUCH (one hand)
+  https://www.youtube.com/watch?v=z-BwDb6w7ws -> HOW-MANY / how much (one hand)
     trim: 14F-58F
 
 group:
@@ -125,7 +125,7 @@ group:
   more: +md:[LIVE](https://www.lifeprint.com/asl101/pages-signs/l/live.htm)
   https://www.youtube.com/watch?v=4LPjUIU4VMg LIVE / alive / survive
     trim: 5F-49F
-  https://www.youtube.com/watch?v=jJ7aBDd_TvI ADDRESS / LIFE
+  https://www.youtube.com/watch?v=jJ7aBDd_TvI ADDRESS / life
     trim: 9F-64F
 
 group:
@@ -152,7 +152,7 @@ group:
 group:
   more: +md:[SINGLE](https://www.lifeprint.com/asl101/pages-signs/s/single.htm)
   https://www.youtube.com/watch?v=QVPcK3bcFo0
-    SINGLE / SOMETHING / SOMEONE / ONLY
+    SINGLE / something / someone / only
     trim: 12F-75F
     tags: +first_100_signs
 
@@ -162,7 +162,7 @@ group:
 
 group:
   more: +md:[JUST](https://www.lifeprint.com/asl101/pages-signs/j/just.htm)
-  https://www.youtube.com/watch?v=2ikniviFkgo JUST / ONLY / merely
+  https://www.youtube.com/watch?v=2ikniviFkgo JUST / only / merely
     trim: 17F-81F
 
 group:
@@ -172,7 +172,7 @@ group:
 
   # From my ASL teacher
   tags: +Timo +extra
-  https://www.youtube.com/watch?v=aLQI0J28Orc SISTER [GIRL + SAME]
+  https://www.youtube.com/watch?v=aLQI0J28Orc sister / GIRL + SAME
     trim: 14F-75F
 
 group:
