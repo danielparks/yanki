@@ -2222,6 +2222,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=DsGksAjHME8 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=DsGksAjHME8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson19.htm">lesson 19</a></p>\n<h3>What do you take pride in?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=DsGksAjHME8 @0- TAGS: 'Lifeprint lesson_19 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=DsGksAjHME8 @0- TEXT: 'YOU PROUD ABOUT WHAT?'
+Lifeprint ASL https://www.youtube.com/watch?v=DtSZIk2f9JQ @0- MEDIA: "processed_youtube=DtSZIk2f9JQ_audio='strip'_clip=(0.23356665438661123, 2.0520498921109414).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=DtSZIk2f9JQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/y/yogurt.htm">YOGURT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=DtSZIk2f9JQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=DtSZIk2f9JQ @0- TEXT: 'Y-O-G-U-R-T'
 Lifeprint ASL https://www.youtube.com/watch?v=Du_wjrJh0Sw @0- MEDIA: "processed_youtube=Du_wjrJh0Sw_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Du_wjrJh0Sw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<h3>Do you wish you had your own helicopter?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Du_wjrJh0Sw @0- TAGS: 'Lifeprint lesson_18 phrase'
@@ -3026,6 +3030,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=L-ufbEVTJSk @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=L-ufbEVTJSk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/wrong.htm">WRONG</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=L-ufbEVTJSk @0- TAGS: 'Lifeprint lesson_13 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=L-ufbEVTJSk @0- TEXT: 'MISTAKE / make a mistake / screw up'
+Lifeprint ASL https://www.youtube.com/watch?v=L19gg5zK9V8 @0- MEDIA: "processed_youtube=L19gg5zK9V8_audio='strip'_clip=(0.5839166359665281, 2.4691332035156046).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=L19gg5zK9V8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/y/yogurt.htm">YOGURT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=L19gg5zK9V8 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=L19gg5zK9V8 @0- TEXT: 'YOGURT (thumb spoon version)'
 Lifeprint ASL https://www.youtube.com/watch?v=L1JBkF-jm5g @0- MEDIA: "processed_youtube=L1JBkF-jm5g_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=L1JBkF-jm5g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=L1JBkF-jm5g @0- TAGS: 'Lifeprint lesson_02 phrase'
@@ -6038,6 +6046,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=m8FIqLT7DcI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=m8FIqLT7DcI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/washingmachine.htm">WASHING-MACHINE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=m8FIqLT7DcI @0- TAGS: 'Lifeprint lesson_08 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=m8FIqLT7DcI @0- TEXT: 'WASHING-MACHINE / laundry'
+Lifeprint ASL https://www.youtube.com/watch?v=m9dmnfuewF0 @0- MEDIA: "processed_youtube=m9dmnfuewF0_audio='strip'_clip=(0.7340666666666666, 2.736066666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=m9dmnfuewF0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/y/yogurt.htm">YOGURT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=m9dmnfuewF0 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=m9dmnfuewF0 @0- TEXT: 'YOGURT (pinkie spoon version)'
 Lifeprint ASL https://www.youtube.com/watch?v=m9fxgSPo0s0 @0- MEDIA: "processed_youtube=m9fxgSPo0s0_audio='strip'_clip=(0.3670333333333333, 2.0020000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=m9fxgSPo0s0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/z/zip.htm">ZIP</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=m9fxgSPo0s0 @0- TAGS: 'Lifeprint lesson_08 vocabulary'
