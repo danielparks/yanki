@@ -7334,6 +7334,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=xpVL76kbtzo @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=xpVL76kbtzo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/weather.htm">WEATHER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=xpVL76kbtzo @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=xpVL76kbtzo @0- TEXT: 'STORM (swirl version)'
+Lifeprint ASL https://www.youtube.com/watch?v=xq2ZodH6gzk @0- MEDIA: "processed_youtube=xq2ZodH6gzk_audio='strip'_clip=(0.4337666666666667, 3.003).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=xq2ZodH6gzk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/q/quiet.htm">QUIET</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=xq2ZodH6gzk @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=xq2ZodH6gzk @0- TEXT: 'QUIET'
 Lifeprint ASL https://www.youtube.com/watch?v=xqKENRGkOUQ @0- MEDIA: "processed_youtube=xqKENRGkOUQ_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=xqKENRGkOUQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<h3>Are you a student?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=xqKENRGkOUQ @0- TAGS: 'Lifeprint lesson_01 phrase'
