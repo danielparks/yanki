@@ -46,6 +46,17 @@ class NoteSpec:
     def clip(self):
         return self._parse_clip()[0]
 
+    def clip_or_trim(self):
+        if self.config.trim is None:
+            return self.clip()  # Might be None, but that’s fine
+        elif self.clip() is None:
+            return self.config.trim
+        else:
+            self.error(
+                f"Clip ({self.provisional_clip_spec()!r}) is incompatible with "
+                "'trim:'."
+            )
+
     @functools.cache
     def _parse_clip(self):
         input = self._parse_video_url()[1]

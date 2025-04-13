@@ -129,8 +129,6 @@ class Note:
             video.video(self.spec.config.video)
             if self.spec.config.crop:
                 video.crop(self.spec.config.crop)
-            if self.spec.config.trim:
-                video.clip(self.spec.config.trim[0], self.spec.config.trim[1])
             if self.spec.config.format:
                 video.format(self.spec.config.format)
             if self.spec.config.slow:
@@ -141,19 +139,14 @@ class Note:
         except ValueError as error:
             self.spec.error(error)
 
-        if self.spec.clip() is not None:
-            if self.spec.config.trim is not None:
-                self.spec.error(
-                    f"Clip ({self.spec.provisional_clip_spec()!r}) is "
-                    "incompatible with 'trim:'."
-                )
-
-            if len(self.spec.clip()) == 1:
-                video.snapshot(self.spec.clip()[0])
-            elif len(self.spec.clip()) == 2:
-                video.clip(self.spec.clip()[0], self.spec.clip()[1])
+        clip = self.spec.clip_or_trim()
+        if clip is not None:
+            if len(clip) == 1:
+                video.snapshot(clip[0])
+            elif len(clip) == 2:
+                video.clip(clip[0], clip[1])
             else:
-                raise ValueError(f"Invalid clip: {self.spec.clip()!r}")
+                self.spec.error(f"Invalid clip: {clip!r}")
 
         return video
 
