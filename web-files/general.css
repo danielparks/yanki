@@ -22,10 +22,10 @@ img, video {
   text-align: left;
 }
 
-.metadata th {
+.metadata th, .metadata tr.direction td, .metadata tr.source td {
   font-weight: normal;
 }
 
-.note_id td, .source td span, .direction td span {
+.metadata td, .metadata td span {
   font-weight: bold;
 }

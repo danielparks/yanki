@@ -53,6 +53,11 @@ def htmlize_deck(deck, path_prefix=""):
     for note in sorted(deck.notes(), key=lambda note: note.spec.line_number):
         if more_html := note.more_field().render_html(path_prefix):
             more_html = f'<div class="more">{more_html}</div>'
+        if clip := note.spec.clip_or_trim():
+            clip_html = h("@" + "-".join([str(time) for time in clip]))
+        else:
+            clip_html = ""
+
         output += f"""
         <div class="note">
           <h3>{note.text_field().render_html(path_prefix)}</h3>
@@ -72,6 +77,13 @@ def htmlize_deck(deck, path_prefix=""):
               <td>
                 <span>{h(note.spec.source_path)}</span>
                 line <span>{h(str(note.spec.line_number))}</span>
+              </td>
+            </tr>
+            <tr class="media">
+              <th>Media:</th>
+              <td>
+                <a href="{h(note.spec.video_url())}">{h(note.spec.video_url())}</a>
+                {clip_html}
               </td>
             </tr>
           </table>
