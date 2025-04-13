@@ -3169,7 +3169,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=LqdaTGTGSM8 @0- TEXT: 'YOWL (loud 
 Lifeprint ASL https://www.youtube.com/watch?v=LsMDCQMcMAE @0- MEDIA: "processed_youtube=LsMDCQMcMAE_audio='strip'_clip=(0.9342666666666667, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=LsMDCQMcMAE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson19.htm">lesson 19</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/silly.htm">SILLY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=LsMDCQMcMAE @0- TAGS: 'Lifeprint extra lesson_19 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=LsMDCQMcMAE @0- TEXT: 'FRIVOLOUS / frivolity / silly-playing-around'
+Lifeprint ASL https://www.youtube.com/watch?v=LsMDCQMcMAE @0- TEXT: 'FRIVOLOUS / frivolity / silly playing around'
 Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- MEDIA: "processed_youtube=Lu7VJHlq0o0_audio='strip'_clip=(0.10010000000000001, 1.9019).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/how-many.htm">HOW-MANY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- TAGS: 'Lifeprint lesson_02 vocabulary'
