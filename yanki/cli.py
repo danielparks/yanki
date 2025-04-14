@@ -241,16 +241,30 @@ def list_notes(options, decks, format, filter):
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @filter_options
+@click.option(
+    "-F",
+    "--flash-cards/--no-flash-cards",
+    help="Render notes as flash cards.",
+)
 @click.pass_obj
-def to_html(options, decks, filter):
+def to_html(options, decks, filter, flash_cards):
     """Display decks as HTML on stdout."""
     for deck in read_final_decks_sorted(decks, options, filter):
-        print(htmlize_deck(deck, path_prefix=options.cache_path))
+        print(
+            htmlize_deck(
+                deck, path_prefix=options.cache_path, flash_cards=flash_cards
+            )
+        )
 
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @filter_options
+@click.option(
+    "-F",
+    "--flash-cards/--no-flash-cards",
+    help="Render notes as flash cards.",
+)
 @click.option(
     "-o",
     "--open/--no-open",
@@ -273,7 +287,7 @@ def to_html(options, decks, filter):
     " specified, the server will run until killed by a signal.",
 )
 @click.pass_obj
-def serve_http(options, decks, filter, do_open, bind, run_seconds):
+def serve_http(options, decks, filter, flash_cards, do_open, bind, run_seconds):
     """Serve HTML summary of deck on localhost:8000."""
     bind_parts = bind.split(":")
     if len(bind_parts) != 2:
@@ -297,7 +311,7 @@ def serve_http(options, decks, filter, do_open, bind, run_seconds):
         html_written.add(html_path)
 
         html_path.write_text(
-            htmlize_deck(deck, path_prefix=""),
+            htmlize_deck(deck, path_prefix="", flash_cards=flash_cards),
             encoding="utf_8",
         )
 

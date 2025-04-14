@@ -1,0 +1,18 @@
+.note {
+  display: none;
+}
+
+.note.question, .note.answer {
+  display: block;
+}
+
+.note.question.text > video,
+.note.question.text > img,
+.note.question.media > h3,
+.note.question > .more {
+  display: none;
+}
+
+.metadata {
+  display: none;
+}

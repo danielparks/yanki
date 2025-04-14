@@ -35,9 +35,17 @@ def generate_index_html(deck_links):
     ).lstrip()
 
 
-def htmlize_deck(deck, path_prefix=""):
+def htmlize_deck(deck, path_prefix="", flash_cards=False):
     if deck.title is None:
         sys.exit(f"Deck {deck.source_path!r} does not contain title")
+
+    if flash_cards:
+        flash_cards_html = f"""
+        <link rel="stylesheet" href="{static_url("flash-cards.css")}">
+        <script src="{static_url("flash-cards.js")}" async></script>
+        """
+    else:
+        flash_cards_html = ""
 
     output = f"""
     <!DOCTYPE html>
@@ -46,6 +54,7 @@ def htmlize_deck(deck, path_prefix=""):
         <title>{h(deck.title)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url("general.css")}">
+        {flash_cards_html}
       </head>
       <body>
         <h1>{h(deck.title)}</h1>"""
