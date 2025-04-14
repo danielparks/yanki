@@ -1110,6 +1110,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=4Uz8apATGXI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=4Uz8apATGXI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4Uz8apATGXI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=4Uz8apATGXI @0- TEXT: 'RICH / wealth / wealthy'
+Lifeprint ASL https://www.youtube.com/watch?v=4VnktIZsWoA @0- MEDIA: "processed_youtube=4VnktIZsWoA_audio='strip'_clip=(0.26693333333333336, 2.8361666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=4VnktIZsWoA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/gone.htm">GONE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=4VnktIZsWoA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=4VnktIZsWoA @0- TEXT: 'GONE / missing / absent / dead / extinct'
 Lifeprint ASL https://www.youtube.com/watch?v=4Wvw0BFABwY @0- MEDIA: "processed_youtube=4Wvw0BFABwY_audio='strip'_clip=(0.5672333333333334, 2.6693333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4Wvw0BFABwY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/break.htm">BREAK</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4Wvw0BFABwY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -1250,6 +1254,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>What type of people do you like?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- TAGS: 'Lifeprint lesson_11 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- TEXT: 'PEOPLE YOU LIKE WHAT-KIND?'
+Lifeprint ASL https://www.youtube.com/watch?v=5qypI7KSSJE @0- MEDIA: "processed_youtube=5qypI7KSSJE_audio='strip'_clip=(0.3670333333333333, 2.5025).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=5qypI7KSSJE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/a/absent.htm">ABSENT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=5qypI7KSSJE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=5qypI7KSSJE @0- TEXT: 'SKIP / absent / not do'
 Lifeprint ASL https://www.youtube.com/watch?v=5uPwZ-cRPWQ @0- MEDIA: "processed_youtube=5uPwZ-cRPWQ_audio='strip'_clip=(0.26666666666666666, 2.566666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5uPwZ-cRPWQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/socialize.htm">SOCIALIZE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5uPwZ-cRPWQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -4570,6 +4578,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<h3>Do you work in the afternoon?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- TAGS: 'Lifeprint lesson_12 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=ZtO-rWzxTqw @0- TEXT: 'AFTERNOON WORK YOU?'
+Lifeprint ASL https://www.youtube.com/watch?v=ZudmUxS5yAU @0- MEDIA: "processed_youtube=ZudmUxS5yAU_audio='strip'_clip=(0.13346666666666668, 1.6683333333333334).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=ZudmUxS5yAU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/gone.htm">GONE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=ZudmUxS5yAU @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=ZudmUxS5yAU @0- TEXT: 'DEPLETED / all gone / ran out [of] / used up'
 Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- MEDIA: "processed_youtube=Zv7n5RlK6W4_audio='strip'_clip=(0.23356666666666667, 2.3356666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/n/near.htm">NEAR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Zv7n5RlK6W4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'

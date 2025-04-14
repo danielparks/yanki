@@ -214,6 +214,11 @@ https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
 # Groups represent Lifeprint pages with everything on them.
 
 group:
+  more: +md:[ABSENT](https://www.lifeprint.com/asl101/pages-signs/a/absent.htm)
+  https://www.youtube.com/watch?v=5qypI7KSSJE SKIP / absent / not do
+    trim: 11F-75F
+
+group:
   more: +md:[ADD](https://www.lifeprint.com/asl101/pages-signs/a/add.htm)
   https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
     trim: 9F-51F
@@ -609,6 +614,15 @@ group:
   more: +md:[FRUIT](https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm)
   https://www.youtube.com/watch?v=GF5UtlyLuyw FRUIT
     trim: 10F-78F
+
+group:
+  more: +md:[GONE](https://www.lifeprint.com/asl101/pages-signs/g/gone.htm)
+  https://www.youtube.com/watch?v=4VnktIZsWoA
+    GONE / missing / absent / dead / extinct
+    trim: 8F-85F
+  https://www.youtube.com/watch?v=ZudmUxS5yAU
+    DEPLETED / all gone / ran out [of] / used up
+    trim: 4F-50F
 
 group:
   more: +md:[GOVERNMENT](https://www.lifeprint.com/asl101/pages-signs/g/government.htm)
