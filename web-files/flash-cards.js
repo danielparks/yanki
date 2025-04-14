@@ -66,11 +66,6 @@ window.addEventListener("load", (event) => {
     return;
   }
 
-  // List all cards to console.
-  cards.forEach(([direction, note]) => {
-    console.log(direction, query_text(note, "h3"));
-  });
-
   var current_index = 0;
   var [direction, current] = cards[current_index];
   current.classList.add("question", direction);
