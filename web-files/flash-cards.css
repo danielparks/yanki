@@ -1,16 +1,83 @@
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #999;
+}
+
+#controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  border-top: 2px solid #ccc;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#controls button {
+  display: block;
+  margin: 10px auto;
+  font-size: 24px;
+}
+
 .note {
   display: none;
 }
 
-.note.question, .note.answer {
-  display: block;
+.note > .media {
+  height: 300px;
+  padding: 25px 0;
 }
 
-.note.question.text > video,
-.note.question.text > img,
+.note > .more {
+  padding: 0 25px;
+}
+
+.note.question, .note.answer {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  min-height: 400px;
+  width: 600px;
+  text-align: center;
+  background: #eee;
+}
+
+.note.question.text > .media,
 .note.question.media > h3,
 .note.question > .more {
-  display: none;
+  visibility: hidden;
+}
+
+.note.media > h3 {
+  /* Needs to margin collapse with .more > p */
+  padding: 0;
+  margin: 25px;
+}
+
+.note.text > h3 {
+  /* Needs to fill space with white background */
+  padding: 25px;
+  margin: 0;
+}
+
+.note.media {
+  padding-top: 350px;
+  min-height: 50px;
+}
+
+.note.media > .media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.note.text > h3,
+.note.media > .media {
+  background: #fff;
 }
 
 .metadata {

@@ -54,11 +54,12 @@ function make_card_list(notes) {
 
 window.addEventListener("load", (event) => {
   var cards = make_card_list(document.querySelectorAll("div.note"));
-  var next_button = create("button", [ text("next") ]);
+  var next_button = create("button");
+  var status_div = create("div", [], {"id": "status"})
   var controls = create("div", [
-    text("Found " + cards.length + " cards"),
     next_button,
-  ], {"id": "controls"});
+    status_div,
+  ], { "id": "controls" });
 
   document.body.appendChild(controls);
 
@@ -69,19 +70,38 @@ window.addEventListener("load", (event) => {
   var current_index = 0;
   var [direction, current] = cards[current_index];
   current.classList.add("question", direction);
+  update_controls(true);
+
+  function update_controls(on_question) {
+    if ( on_question ) {
+      next_button.innerText = "Show answer";
+      status_div.innerText = "Completed " + current_index + " out of "
+        + cards.length + " cards.";
+    } else {
+      next_button.innerText = "Next card";
+    }
+  }
 
   next_button.addEventListener("click", (event) => {
     if ( !current.classList.replace("question", "answer") ) {
-      // Move to the next card.
+      // Show question of next card.
       current.classList.remove("answer", "text", "media");
       current_index++;
+
       if ( !cards[current_index] ) {
-        alert("All done.");
-      } else {
-        [direction, current] = cards[current_index];
-        current.classList.remove("answer", "text", "media");
-        current.classList.add("question", direction);
+        // Restart.
+        cards = make_card_list(document.querySelectorAll("div.note"));
+        current_index = 0;
       }
+
+      update_controls(true);
+
+      [direction, current] = cards[current_index];
+      current.classList.remove("answer", "text", "media");
+      current.classList.add("question", direction);
+    } else {
+      // Show answer of current card.
+      update_controls(false);
     }
   });
 });
