@@ -52,6 +52,16 @@ function make_card_list(notes) {
   return cards;
 }
 
+function play_video(container) {
+    container.querySelectorAll("video").forEach((video) => {
+      video.controls = false;
+      video.play();
+
+      video.addEventListener("mouseenter", () => { video.controls = true; });
+      video.addEventListener("mouseleave", () => { video.controls = false; });
+    });
+}
+
 window.addEventListener("load", (event) => {
   var cards = make_card_list(document.querySelectorAll("div.note"));
   var next_button = create("button");
@@ -79,6 +89,11 @@ window.addEventListener("load", (event) => {
     next_button.innerText = "Show answer";
     status_div.innerText = "Completed " + current_index + " out of "
       + cards.length + " cards.";
+
+    if ( direction == "media" ) {
+      play_video(current);
+    }
+
     showing_question = true;
   }
 
@@ -86,6 +101,11 @@ window.addEventListener("load", (event) => {
     next_button.innerText = "Next card";
     current.classList.remove("question");
     current.classList.add("answer");
+
+    if ( direction == "text" ) {
+      play_video(current);
+    }
+
     showing_question = false;
   }
 
