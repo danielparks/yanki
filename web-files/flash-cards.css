@@ -43,6 +43,13 @@ h1 {
   width: 600px;
   text-align: center;
   background: #eee;
+
+  /* Flash card to make it clear that it’s new. */
+  opacity: 1;
+  transition: opacity 0.3s;
+  @starting-style {
+    opacity: 0;
+  }
 }
 
 .note.question.text > .media,
