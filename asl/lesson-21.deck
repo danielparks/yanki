@@ -7,9 +7,17 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[ARMY](https://www.lifeprint.com/asl101/pages-signs/a/army.htm)
+  https://www.youtube.com/watch?v=bdWtODH9_5Y ARMY / military
+    trim: 13F-84F
 
 group:
   more: +md:[APPLY](https://www.lifeprint.com/asl101/pages-signs/a/apply.htm)
+  # See lesson 8 for SHIRT / apply.
+  https://www.youtube.com/watch?v=wxtuVlan9rg candidate / SHIRT-(apply) person
+    trim: 5F-64F
+  https://www.youtube.com/watch?v=HaLGrHjNu3s
+    APPLY-to / submit / application / applicable
+    trim: 14F-71F
 
 group:
   more: +md:[BUS](https://www.lifeprint.com/asl101/pages-signs/b/bus.htm)
@@ -24,43 +32,81 @@ group:
   https://www.youtube.com/watch?v=_c1W5VPKYc8
     MANAGE / control / reign / administer / manipulate
     trim: 27F-85F
-
-  # FIXME add MANAGE + PERSON?
+  https://www.youtube.com/watch?v=0ScBo3iRUhY
+    manager / moderator / administrator / MANAGE + PERSON
+    trim: 18F-101F
 
 group:
+  # Covers DANCER as well.
   more: +md:[DANCE](https://www.lifeprint.com/asl101/pages-signs/d/dance.htm)
+  https://www.youtube.com/watch?v=p3UKhedGeTA DANCE
+    trim: 9F-57F
+  https://www.youtube.com/watch?v=ENRlcym8Im0 dancer / DANCE + PERSON
+    trim: 10F-69F
 
-group:
-  more: +md:[DANCER](https://www.lifeprint.com/asl101/pages-signs/d/dancer.htm)
+  tags: +extra
+  https://www.youtube.com/watch?v=Y0ClTUVFhWE ballet / DANCE + TWIRL
+    trim: 14F-90F
 
 group:
   more: +md:[DENTIST](https://www.lifeprint.com/asl101/pages-signs/d/dentist.htm)
+  https://www.youtube.com/watch?v=Zx8scLXglQU dentist / TOOTH + PERSON
+    trim: 10F-54F
+  # Best video I could find for the A-hand version.
+  https://www.youtube.com/watch?v=WNoc9_QeuMQ @64F-86F DENTIST (A-hand version)
+  # Couldn’t find an initialized video.
 
 # FISH is in lesson 10. It covers FISHING as well.
 
 group:
   more: +md:[FIRE](https://www.lifeprint.com/asl101/pages-signs/f/fire.htm)
+  https://www.youtube.com/watch?v=IyHsll1L9Dw
+    FIRE-terminate / terminate / excommunicate (S-hand version)
+    trim: 1F-50F
+  https://www.youtube.com/watch?v=pWO_1CT3QWk
+    FIRE-terminate / terminate / excommunicate (index finger version)
+    trim: 9F-
 
-group:
-  more: +md:[FIREMAN](https://www.lifeprint.com/asl101/pages-signs/f/fireman.htm)
+  tags: +extra
+  https://www.youtube.com/watch?v=-xoJ_2O126Y FIRE / flames / burned up
+    trim: 13F-76F
+  https://www.youtube.com/watch?v=oYYyWuK-V1o BURN-up / go up in flames
+    trim: 13F-63F
+  # This was actually from WEATHER in lesson 14, but I moved it here because
+  # the WEATHER group had so many signs.
+  https://www.youtube.com/watch?v=0VYi0Xiky-I ->
+    FIRE / blazing / bonfire / inferno
+    trim: 10F-78F
 
-group:
-  more: +md:[FLY](https://www.lifeprint.com/asl101/pages-signs/f/fly.htm)
+# FIREMAN is in lesson 15 as FIREFIGHTER.
+# FLY is covered in lesson 18.
 
 group:
   more: +md:[PILOT](https://www.lifeprint.com/asl101/pages-signs/p/pilot.htm)
+  https://www.youtube.com/watch?v=K171vdOUI8Q pilot / AIRPLANE + PERSON
+    trim: 8F-66F
 
 group:
   more: +md:[HAIRCUT](https://www.lifeprint.com/asl101/pages-signs/h/haircut.htm)
+  https://www.youtube.com/watch?v=2ohA3iZZ3Cw HAIRCUT
+    trim: 13F-58F
 
 group:
   more: +md:[BARBER](https://www.lifeprint.com/asl101/pages-signs/b/barber.htm)
+  https://www.youtube.com/watch?v=Uxa8xGsuc7A barber / HAIRCUT + PERSON
+    trim: 7F-
 
 group:
-  more: +md:[HIRE](https://www.lifeprint.com/asl101/pages-signs/h/hire.htm)
+  more: +md:See [HIRE](https://www.lifeprint.com/asl101/pages-signs/h/hire.htm)
+    for nuance and how to use this sign directionally.
+  https://www.youtube.com/watch?v=eT0rrji4yU0 WELCOME / hire / invite
+    trim: 15F-56F
+  # No video for directional version.
 
 group:
   more: +md:[KEEP](https://www.lifeprint.com/asl101/pages-signs/k/keep.htm)
+  https://www.youtube.com/watch?v=e8ou8_mZFBA KEEP
+    trim: 7F-62F
 
 group:
   more: +md:[LAW](https://www.lifeprint.com/asl101/pages-signs/l/law.htm)
@@ -68,19 +114,25 @@ group:
     trim: 12F-63F
   https://www.youtube.com/watch?v=VsF61oHPn_I RULE / regulation
     trim: 0-46F
-  # FIXME add PRINCIPLE, etc.
+  https://www.youtube.com/watch?v=VRC7XhL2xV8 PRINCIPLE
+    trim: 11F-57F
 
 group:
   more: +md:[LAWYER](https://www.lifeprint.com/asl101/pages-signs/l/lawyer.htm)
+  https://www.youtube.com/watch?v=HiXttg6T8DA attorney / lawyer / LAW + PERSON
+    trim: 18F-73F
 
 group:
   more: +md:[LOAN](https://www.lifeprint.com/asl101/pages-signs/l/loan.htm)
+  https://www.youtube.com/watch?v=enWrF4cYU_A you-BORROW-from-me / lend / loan
+    trim: 11F-72F
+  https://www.youtube.com/watch?v=Tf15SM03BPs me-BORROW-from-you / lend / loan
+    trim: 15F-77F
+  https://www.youtube.com/watch?v=WbOvDul2n-E he-BORROW-from-her / lend / loan
+    trim: 16F-85F
 
 group:
   more: +md:[MAIL](https://www.lifeprint.com/asl101/pages-signs/m/mail.htm)
-
-group:
-  more: +md:[SEND](https://www.lifeprint.com/asl101/pages-signs/s/send.htm)
 
 group:
   more: +md:[PAINT](https://www.lifeprint.com/asl101/pages-signs/p/paint.htm)
