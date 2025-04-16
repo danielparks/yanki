@@ -846,6 +846,15 @@ group:
     trim: 10F-55F
 
 group:
+  more: +md:[READY](https://www.lifeprint.com/asl101/pages-signs/r/ready.htm)
+  https://www.youtube.com/watch?v=rc7mlqlvOss READY (out version)
+    trim: 17F-61F
+  https://www.youtube.com/watch?v=dZY1SDSZNR8
+    READY (connotation of prepared; sideways version)
+    trim: 6F-54F
+  # No video for everybody-READY?
+
+group:
   more: +md:[REASON](https://www.lifeprint.com/asl101/pages-signs/r/reason.htm)
   https://www.youtube.com/watch?v=sU2Tmrlns9c REASON / realize / rationale
     trim: 17F-76F

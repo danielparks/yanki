@@ -5102,6 +5102,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=dXEqaWSEztY @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=dXEqaWSEztY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sleep.htm">SLEEP</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=dXEqaWSEztY @0- TAGS: 'Lifeprint first_100_signs lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=dXEqaWSEztY @0- TEXT: 'SLEEP'
+Lifeprint ASL https://www.youtube.com/watch?v=dZY1SDSZNR8 @0- MEDIA: "processed_youtube=dZY1SDSZNR8_audio='strip'_clip=(0.20020000000000002, 1.8018).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=dZY1SDSZNR8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/ready.htm">READY</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=dZY1SDSZNR8 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=dZY1SDSZNR8 @0- TEXT: 'READY (connotation of prepared; sideways version)'
 Lifeprint ASL https://www.youtube.com/watch?v=dhMoV3k8R8U @0- MEDIA: "processed_youtube=dhMoV3k8R8U_audio='strip'_clip=(0.3003, 2.0020000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=dhMoV3k8R8U @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/half-hour.htm">HALF-HOUR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=dhMoV3k8R8U @0- TAGS: 'Lifeprint lesson_16 vocabulary'
@@ -6634,6 +6638,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=rTbZkRyLldo @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=rTbZkRyLldo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<h3>How do you sign T-H-A-N-K-S?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=rTbZkRyLldo @0- TAGS: 'Lifeprint lesson_01 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=rTbZkRyLldo @0- TEXT: 'T-H-A-N-K-S how-SIGN?'
+Lifeprint ASL https://www.youtube.com/watch?v=rc7mlqlvOss @0- MEDIA: "processed_youtube=rc7mlqlvOss_audio='strip'_clip=(0.5672333333333334, 2.0353666666666665).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=rc7mlqlvOss @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/ready.htm">READY</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=rc7mlqlvOss @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=rc7mlqlvOss @0- TEXT: 'READY (out version)'
 Lifeprint ASL https://www.youtube.com/watch?v=rceyLb6iPbc @0- MEDIA: "processed_youtube=rceyLb6iPbc_audio='strip'_clip=(0.40040000000000003, 2.2355666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=rceyLb6iPbc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm">CLOTHES</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=rceyLb6iPbc @0- TAGS: 'Lifeprint extra lesson_08 vocabulary'
