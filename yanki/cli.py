@@ -302,13 +302,16 @@ def serve_http(options, decks, filter, flash_cards, do_open, bind, run_seconds):
     deck_links = []
     html_written = set()
     for deck in read_final_decks_sorted(decks, options, filter):
-        file_name = deck.title.replace("/", "--") + ".html"
+        file_name = (
+            "deck_" + deck.title.replace("/", "--").replace(" ", "_") + ".html"
+        )
         html_path = options.cache_path / file_name
         if html_path in html_written:
             raise KeyError(
                 f"Duplicate path after munging deck title: {html_path}"
             )
-        html_written.add(html_path)
+        else:
+            html_written.add(html_path)
 
         html_path.write_text(
             htmlize_deck(deck, path_prefix="", flash_cards=flash_cards),

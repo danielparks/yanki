@@ -5,6 +5,10 @@ import sys
 import textwrap
 
 
+def deck_title_html(deck):
+    return h(" ❯ ".join(deck.title.split("::")))
+
+
 def generate_index_html(deck_links):
     output = f"""
     <!DOCTYPE html>
@@ -24,7 +28,7 @@ def generate_index_html(deck_links):
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
         output += f"""
-          <li><a href="./{h(file_name)}">{h(deck.title)}</a></li>"""
+          <li><a href="./{h(file_name)}">{deck_title_html(deck)}</a></li>"""
 
     return textwrap.dedent(
         output
@@ -51,13 +55,13 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
     <!DOCTYPE html>
     <html>
       <head>
-        <title>{h(deck.title)}</title>
+        <title>{deck_title_html(deck)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url("general.css")}">
         {flash_cards_html}
       </head>
       <body>
-        <h1>{h(deck.title)}</h1>"""
+        <h1>{deck_title_html(deck)}</h1>"""
 
     for note in sorted(deck.notes(), key=lambda note: note.spec.line_number):
         if more_html := note.more_field().render_html(path_prefix):
