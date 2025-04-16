@@ -63,22 +63,24 @@ function play_video(container) {
 }
 
 window.addEventListener("load", (event) => {
-  var cards = make_card_list(document.querySelectorAll("div.note"));
   var next_button = create("button");
   var status_div = create("div", [], {"id": "status"})
   var controls = create("div", [
     next_button,
     status_div,
   ], { "id": "controls" });
+  var finished_div = create("div",
+    [ text("Finished all cards!") ],
+    { "id": "finished" });
 
+  document.body.appendChild(finished_div);
   document.body.appendChild(controls);
 
-  if ( cards.length <= 0 ) {
-    return;
+  function restart() {
+    cards = make_card_list(document.querySelectorAll("div.note"));
+    current_index = 0;
+    finished_div.style.display = "none";
   }
-
-  var current_index = 0, showing_question, direction, current;
-  show_question();
 
   function show_question() {
      // direction is "text" or "media".
@@ -109,22 +111,41 @@ window.addEventListener("load", (event) => {
     showing_question = false;
   }
 
+  function show_finished() {
+    current.classList.remove("question", "answer", "text", "media");
+    next_button.innerText = "Restart";
+    status_div.innerText = "Completed " + current_index + " out of "
+      + cards.length + " cards.";
+    finished_div.style.display = "block";
+  }
+
+  var current_index = 0, showing_question, direction, current, cards;
+  restart();
+
+  if ( cards.length <= 0 ) {
+    return;
+  }
+
+  show_question();
+
   next_button.addEventListener("click", (event) => {
-    if ( showing_question ) {
+    if ( current_index >= cards.length ) {
+      // We ran out of cards!
+      restart();
+      show_question();
+    } else if ( showing_question ) {
       show_answer();
     } else {
-      // Hide card.
+      // Must be showing the answer, so hide the old card...
       current.classList.remove("answer", "text", "media");
 
-      // Switch to next card.
+      // ... and switch to the next card.
       current_index++;
-      if ( !cards[current_index] ) {
-        // Restart.
-        cards = make_card_list(document.querySelectorAll("div.note"));
-        current_index = 0;
+      if ( current_index >= cards.length ) {
+        show_finished();
+      } else {
+        show_question();
       }
-
-      show_question();
     }
   });
 });

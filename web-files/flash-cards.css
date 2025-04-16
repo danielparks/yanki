@@ -34,7 +34,7 @@ h1 {
   padding: 0 25px;
 }
 
-.note.question, .note.answer {
+.note.question, .note.answer, #finished {
   display: block;
   position: relative;
   margin: 0 auto;
@@ -50,6 +50,12 @@ h1 {
   @starting-style {
     opacity: 0;
   }
+}
+
+#finished {
+  display: none;
+  line-height: 400px;
+  font-size: 24px;
 }
 
 .note.question.text > .media,
