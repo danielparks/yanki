@@ -2702,10 +2702,6 @@ Lifeprint ASL https://www.youtube.com/watch?v=HgHv8pXg0Ls @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=HgHv8pXg0Ls @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson19.htm">lesson 19</a></p>\n<h3>Do you sometimes feel lonely?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HgHv8pXg0Ls @0- TAGS: 'Lifeprint lesson_19 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=HgHv8pXg0Ls @0- TEXT: 'YOU SOMETIMES FEEL LONELY YOU?'
-Lifeprint ASL https://www.youtube.com/watch?v=HiXttg6T8DA @0- MEDIA: "processed_youtube=HiXttg6T8DA_audio='strip'_clip=(0.6006, 2.435766666666667).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=HiXttg6T8DA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/lawyer.htm">LAWYER</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=HiXttg6T8DA @0- TAGS: 'Lifeprint lesson_21 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=HiXttg6T8DA @0- TEXT: 'attorney / lawyer / LAW + PERSON'
 Lifeprint ASL https://www.youtube.com/watch?v=HjD2eDJcGdw @0- MEDIA: "processed_youtube=HjD2eDJcGdw_audio='strip'_clip=(0.33366666666666667, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=HjD2eDJcGdw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hair.htm">HAIR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HjD2eDJcGdw @0- TAGS: 'Lifeprint extra lesson_20 vocabulary'
@@ -4646,6 +4642,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=ZvzKTn4qWfA @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=ZvzKTn4qWfA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sit.htm">SIT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ZvzKTn4qWfA @0- TAGS: 'Lifeprint lesson_05 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ZvzKTn4qWfA @0- TEXT: 'SIT'
+Lifeprint ASL https://www.youtube.com/watch?v=ZwNGiI0JDT8 @0- MEDIA: "processed_youtube=ZwNGiI0JDT8_audio='strip'_clip=(0.3670333333333333, 2.1021).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=ZwNGiI0JDT8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/lawyer.htm">LAWYER</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=ZwNGiI0JDT8 @0- TAGS: 'Lifeprint lesson_21 vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=ZwNGiI0JDT8 @0- TEXT: 'attorney / lawyer / LAW + PERSON'
 Lifeprint ASL https://www.youtube.com/watch?v=Zx8scLXglQU @0- MEDIA: "processed_youtube=Zx8scLXglQU_audio='strip'_clip=(0.33366666666666667, 1.8018).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Zx8scLXglQU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dentist.htm">DENTIST</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Zx8scLXglQU @0- TAGS: 'Lifeprint lesson_21 vocabulary'
