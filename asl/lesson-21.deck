@@ -133,36 +133,81 @@ group:
 
 group:
   more: +md:[MAIL](https://www.lifeprint.com/asl101/pages-signs/m/mail.htm)
+  https://www.youtube.com/watch?v=fLkoJvqUUi8 LETTER
+    trim: 8F-79F
+  https://www.youtube.com/watch?v=XhQcHieeX5U STAMP / postage
+    trim: 14F-59F
 
 group:
   more: +md:[PAINT](https://www.lifeprint.com/asl101/pages-signs/p/paint.htm)
+  https://www.youtube.com/watch?v=88lxeYGLZK8 PAINT
+    trim: 22F-70F
+  https://www.youtube.com/watch?v=WXDexpGu-zU PAINT (H-hand version)
+    trim: 11F-62F
+  https://www.youtube.com/watch?v=xYQ5-oJzL38 PAINTER
+    trim: 5F-
 
 group:
   more: +md:[PASTOR](https://www.lifeprint.com/asl101/pages-signs/p/pastor.htm)
+  https://www.youtube.com/watch?v=Ooz1VOeGp7Y PASTOR / minister
+    trim: 11F-
 
 group:
-  more: +md:[POST-OFFICE](https://www.lifeprint.com/asl101/pages-signs/p/post-office.htm)
+  more: +md:[post office](https://www.lifeprint.com/asl101/pages-signs/p/post-office.htm)
+  https://www.youtube.com/watch?v=ZyShbWR3Pjc P-O / post office
+    trim: 13F-52F
+  # Couldn’t find videos for LETTER + WORK + AGENT or LETTER + CARRY + AGENT.
 
 group:
   more: +md:[PREACH](https://www.lifeprint.com/asl101/pages-signs/p/preach.htm)
+  https://www.youtube.com/watch?v=YNJ9iodSyYw PREACH
+    trim: 6F-
+  https://www.youtube.com/watch?v=WYG78SOzDJk
+    PREACH + PERSON / preacher / missionary
+    trim: 9F-63F
+
+# Missionary is the same as preacher.
 
 group:
-  more: +md:[MISSIONARY](https://www.lifeprint.com/asl101/pages-signs/m/missionary.htm)
-
-group:
-  more: +md:[RESUME](https://www.lifeprint.com/asl101/pages-signs/r/resume.htm)
+  more: +md:[résumé](https://www.lifeprint.com/asl101/pages-signs/r/resume.htm)
+  https://www.youtube.com/watch?v=wWRdwIXZGMk
+    FORM / résumé / transcript (non-initialized version)
+    trim: 8F-75F
+  # No separate video for initialized résumé.
 
 group:
   more: +md:[SEND](https://www.lifeprint.com/asl101/pages-signs/s/send.htm)
+  https://www.youtube.com/watch?v=btjZ2F9BUAA SEND (back of hand version)
+    trim: 3F-61F
+  https://www.youtube.com/watch?v=6DwAEnM4ymc SEND / to mail (throw version)
+    trim: 8F-59F
 
 group:
-  more: +md:[SUPERVISOR](https://www.lifeprint.com/asl101/pages-signs/s/supervisor.htm)
+  more: +md:[supervisor](https://www.lifeprint.com/asl101/pages-signs/s/supervisor.htm)
+  https://www.youtube.com/watch?v=ZJ5i5Z5Mkmw SUPERVISE + PERSON / supervisor
+    trim: 7F-
+  # No separate video for just this version of SUPERVISE.
 
 group:
   more: +md:[TAKE-CARE-OF](https://www.lifeprint.com/asl101/pages-signs/t/take-care-of.htm)
+  https://www.youtube.com/watch?v=GSjbYcneOzE TAKE-CARE
+    trim: 7F-62F
+
+group:
+  # This isn’t in the vocabulary list, but the TAKE-CARE-OF page lists it as
+  # TAKE-CARE-OF. It isn’t listed that way in the videos, thought.
+  more: +md:[CAREFUL](https://www.lifeprint.com/asl101/pages-signs/c/careful.htm),
+    [TAKE-CARE-OF](https://www.lifeprint.com/asl101/pages-signs/t/take-care-of.htm)
+  https://www.youtube.com/watch?v=GgjVnyBLmhg CAREFUL / care / take care of
+    trim: 4F-80F
 
 group:
   more: +md:[WRENCH](https://www.lifeprint.com/asl101/pages-signs/w/wrench.htm)
+  https://www.youtube.com/watch?v=C0puRenXIdE WRENCH
+    trim: 19F-81F
 
 group:
   more: +md:[MECHANIC](https://www.lifeprint.com/asl101/pages-signs/m/mechanic.htm)
+  https://www.youtube.com/watch?v=I4qkYpadqtY
+    WRENCH + PERSON / mechanic / plumber
+    trim: 7F-66F

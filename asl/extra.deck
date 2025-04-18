@@ -323,13 +323,6 @@ group:
     trim: 0-76F
 
 group:
-  more: +md:[CAREFUL](https://www.lifeprint.com/asl101/pages-signs/c/careful.htm)
-  https://www.youtube.com/watch?v=GgjVnyBLmhg CAREFUL / care
-    trim: 4F-80F
-  https://www.youtube.com/watch?v=GSjbYcneOzE TAKE-CARE
-    trim: 7F-62F
-
-group:
   more: +md:[CHANCE](https://www.lifeprint.com/asl101/pages-signs/c/chance.htm)
   https://www.youtube.com/watch?v=w8jjz_R6GaI CHANCE
     trim: 13F-56F
