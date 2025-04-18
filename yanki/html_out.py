@@ -3,23 +3,48 @@ import os
 from pathlib import Path
 import sys
 import textwrap
+from yanki.utils import file_safe_name
 
 
-def deck_title_html(deck):
-    return h(" ❯ ".join(deck.title.split("::")))
+def title_html(title, add_links=True, final_link="deck"):
+    title = title.split("::")
+    if not add_links:
+        return h(" ❯ ".join(title))
+
+    parts = []
+    path = []
+    for part in title[:-1]:
+        path.append(part)
+        partial = file_safe_name("::".join(path))
+        parts.append(f'<a href="index_{h(partial)}.html">{h(part)}</a>')
+
+    if title[-1]:
+        if final_link is None:
+            parts.append(f"{h(title[-1])}")
+        else:
+            partial = file_safe_name("::".join(title))
+            parts.append(
+                f'<a href="{final_link}_{h(partial)}.html">{h(title[-1])}</a>'
+            )
+
+    return " ❯ ".join(parts)
 
 
-def generate_index_html(deck_links):
+def deck_title_html(deck, add_links=True, final_link="deck"):
+    return title_html(deck.title, add_links=add_links, final_link=final_link)
+
+
+def generate_index_html(deck_links, title="Decks"):
     output = f"""
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Decks</title>
+        <title>{title_html(title, False)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url("general.css")}">
       </head>
       <body>
-        <h1>Decks</h1>
+        <h1>{title_html(title, final_link=None)}</h1>
 
         <ol>"""
 
@@ -28,7 +53,7 @@ def generate_index_html(deck_links):
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
         output += f"""
-          <li><a href="./{h(file_name)}">{deck_title_html(deck)}</a></li>"""
+          <li>{deck_title_html(deck, final_link="deck")}</li>"""
 
     return textwrap.dedent(
         output
@@ -55,13 +80,13 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
     <!DOCTYPE html>
     <html>
       <head>
-        <title>{deck_title_html(deck)}</title>
+        <title>{deck_title_html(deck, False)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url("general.css")}">
         {flash_cards_html}
       </head>
       <body>
-        <h1>{deck_title_html(deck)}</h1>"""
+        <h1>{deck_title_html(deck, final_link=None)}</h1>"""
 
     for note in sorted(deck.notes(), key=lambda note: note.spec.line_number):
         if more_html := note.more_field().render_html(path_prefix):
