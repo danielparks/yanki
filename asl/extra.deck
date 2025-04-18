@@ -284,13 +284,6 @@ group:
     trim: 17F-80F
 
 group:
-  more: +md:[BUS](https://www.lifeprint.com/asl101/pages-signs/b/bus.htm)
-  https://www.youtube.com/watch?v=XG8R_eT_Tt8 B-U-S
-    trim: 11F-52F
-  https://www.youtube.com/watch?v=JPrGWEvbmgE -> BUS (may be regional)
-    trim: 8F-62F
-
-group:
   more: +md:[BUSINESS](https://www.lifeprint.com/asl101/pages-signs/b/business.htm)
   https://www.youtube.com/watch?v=7JaE8_Q3zW0 BUSINESS
     trim: 25F-95F
@@ -328,13 +321,6 @@ group:
   more: +md:[CARE](https://www.lifeprint.com/asl101/pages-signs/c/care.htm)
   https://www.youtube.com/watch?v=YTtX1te20w0 CARE / concern
     trim: 0-76F
-
-group:
-  more: +md:[CAREFUL](https://www.lifeprint.com/asl101/pages-signs/c/careful.htm)
-  https://www.youtube.com/watch?v=GgjVnyBLmhg CAREFUL / care
-    trim: 4F-80F
-  https://www.youtube.com/watch?v=GSjbYcneOzE TAKE-CARE
-    trim: 7F-62F
 
 group:
   more: +md:[CHANCE](https://www.lifeprint.com/asl101/pages-signs/c/chance.htm)
@@ -702,12 +688,6 @@ group:
     trim: 13F-54F
 
 group:
-  more: +md:[MANAGE](https://www.lifeprint.com/asl101/pages-signs/m/manage.htm)
-  https://www.youtube.com/watch?v=_c1W5VPKYc8
-    MANAGE / control / reign / administer / manipulate
-    trim: 27F-85F
-
-group:
   more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
   https://www.youtube.com/watch?v=7bCApb-yubw MAYBE / may / might
     trim: 15F-71F
@@ -898,11 +878,6 @@ group:
     trim: 2F-65F
   https://www.youtube.com/watch?v=yabFLDVcEOM MEMORIZE / memory
     trim: 30F-99F
-
-group:
-  more: +md:[RULE](https://www.lifeprint.com/asl101/pages-signs/r/rule.htm)
-  https://www.youtube.com/watch?v=VsF61oHPn_I RULE / regulation
-    trim: 0-46F
 
 group:
   more: +md:[SAVE](https://www.lifeprint.com/asl101/pages-signs/s/save.htm)
@@ -1410,7 +1385,8 @@ group:
   https://www.youtube.com/watch?v=egPSg8R1wUg FLUNK / fail class / F grade
     trim: 35F-116F
 
-https://www.youtube.com/watch?v=pOXoRgA0OKE resolve / SOLVE
+https://www.youtube.com/watch?v=pOXoRgA0OKE SOLVE / resolve / dissolve
+  # dissolve from lesson 21 video https://youtu.be/ey7sA3MesY0?t=554
   trim: 28F-75F
 
 group:
