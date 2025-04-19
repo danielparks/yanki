@@ -63,19 +63,6 @@ function play_video(container) {
 }
 
 window.addEventListener("load", (event) => {
-  var next_button = create("button");
-  var status_div = create("div", [], {"id": "status"})
-  var controls = create("div", [
-    next_button,
-    status_div,
-  ], { "id": "controls" });
-  var finished_div = create("div",
-    [ text("Finished all cards!") ],
-    { "id": "finished" });
-
-  document.body.appendChild(finished_div);
-  document.body.appendChild(controls);
-
   function restart() {
     cards = make_card_list(document.querySelectorAll("div.note"));
     current_index = 0;
@@ -119,16 +106,7 @@ window.addEventListener("load", (event) => {
     finished_div.style.display = "block";
   }
 
-  var current_index = 0, showing_question, direction, current, cards;
-  restart();
-
-  if ( cards.length <= 0 ) {
-    return;
-  }
-
-  show_question();
-
-  next_button.addEventListener("click", (event) => {
+  function next_button_click() {
     if ( current_index >= cards.length ) {
       // We ran out of cards!
       restart();
@@ -147,5 +125,29 @@ window.addEventListener("load", (event) => {
         show_question();
       }
     }
-  });
+  }
+
+  var next_button = create("button", []);
+  var status_div = create("div", [], { "id": "status "})
+  var controls = create("div", [
+    next_button,
+    status_div,
+  ], { "id": "controls" });
+  var finished_div = create("div",
+    [ text("Finished all cards!") ],
+    { "id": "finished" });
+
+  document.body.appendChild(finished_div);
+  document.body.appendChild(controls);
+
+  var current_index = 0, showing_question, direction, current, cards;
+  restart();
+
+  if ( cards.length <= 0 ) {
+    return;
+  }
+
+  show_question();
+
+  next_button.addEventListener("click", next_button_click);
 });
