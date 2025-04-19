@@ -4,6 +4,10 @@ h1 {
   color: #999;
 }
 
+h1 > a {
+  color: #a9c;
+}
+
 #controls {
   position: fixed;
   bottom: 0;
