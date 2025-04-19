@@ -1,5 +1,6 @@
 import click
 import asyncio
+from collections import defaultdict
 import colorlog
 import functools
 import genanki
@@ -31,7 +32,7 @@ from yanki.html_out import htmlize_deck, generate_index_html, ensure_static_link
 from yanki.parser import find_invalid_format, NOTE_VARIABLES
 from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
-from yanki.utils import add_trace_logging
+from yanki.utils import add_trace_logging, file_safe_name
 
 add_trace_logging()
 LOGGER = logging.getLogger(__name__)
@@ -241,16 +242,30 @@ def list_notes(options, decks, format, filter):
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @filter_options
+@click.option(
+    "-F",
+    "--flash-cards/--no-flash-cards",
+    help="Render notes as flash cards.",
+)
 @click.pass_obj
-def to_html(options, decks, filter):
+def to_html(options, decks, filter, flash_cards):
     """Display decks as HTML on stdout."""
     for deck in read_final_decks_sorted(decks, options, filter):
-        print(htmlize_deck(deck, path_prefix=options.cache_path))
+        print(
+            htmlize_deck(
+                deck, path_prefix=options.cache_path, flash_cards=flash_cards
+            )
+        )
 
 
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @filter_options
+@click.option(
+    "-F",
+    "--flash-cards/--no-flash-cards",
+    help="Render notes as flash cards.",
+)
 @click.option(
     "-o",
     "--open/--no-open",
@@ -273,7 +288,7 @@ def to_html(options, decks, filter):
     " specified, the server will run until killed by a signal.",
 )
 @click.pass_obj
-def serve_http(options, decks, filter, do_open, bind, run_seconds):
+def serve_http(options, decks, filter, flash_cards, do_open, bind, run_seconds):
     """Serve HTML summary of deck on localhost:8000."""
     bind_parts = bind.split(":")
     if len(bind_parts) != 2:
@@ -288,16 +303,17 @@ def serve_http(options, decks, filter, do_open, bind, run_seconds):
     deck_links = []
     html_written = set()
     for deck in read_final_decks_sorted(decks, options, filter):
-        file_name = deck.title.replace("/", "--") + ".html"
+        file_name = "deck_" + file_safe_name(deck.title) + ".html"
         html_path = options.cache_path / file_name
         if html_path in html_written:
             raise KeyError(
                 f"Duplicate path after munging deck title: {html_path}"
             )
-        html_written.add(html_path)
+        else:
+            html_written.add(html_path)
 
         html_path.write_text(
-            htmlize_deck(deck, path_prefix=""),
+            htmlize_deck(deck, path_prefix="", flash_cards=flash_cards),
             encoding="utf_8",
         )
 
@@ -307,6 +323,20 @@ def serve_http(options, decks, filter, do_open, bind, run_seconds):
     # this tool at once.
     index_path = options.cache_path / "index.html"
     index_path.write_text(generate_index_html(deck_links), encoding="utf_8")
+
+    indices = defaultdict(list)
+    for file_name, deck in deck_links:
+        title = deck.title.split("::")
+        for i in range(1, len(title) + 1):
+            partial = "::".join(title[:i])
+            indices[partial].append((file_name, deck))
+
+    for partial, deck_links in indices.items():
+        file_name = "index_" + file_safe_name(partial) + ".html"
+        index_path = options.cache_path / file_name
+        index_path.write_text(
+            generate_index_html(deck_links, partial), encoding="utf_8"
+        )
 
     # FIXME it would be great to just serve this directory as /static without
     # needing the symlink.

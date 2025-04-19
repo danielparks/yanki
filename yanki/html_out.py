@@ -3,19 +3,48 @@ import os
 from pathlib import Path
 import sys
 import textwrap
+from yanki.utils import file_safe_name
 
 
-def generate_index_html(deck_links):
+def title_html(title, add_links=True, final_link="deck"):
+    title = title.split("::")
+    if not add_links:
+        return h(" ❯ ".join(title))
+
+    parts = []
+    path = []
+    for part in title[:-1]:
+        path.append(part)
+        partial = file_safe_name("::".join(path))
+        parts.append(f'<a href="index_{h(partial)}.html">{h(part)}</a>')
+
+    if title[-1]:
+        if final_link is None:
+            parts.append(f"{h(title[-1])}")
+        else:
+            partial = file_safe_name("::".join(title))
+            parts.append(
+                f'<a href="{final_link}_{h(partial)}.html">{h(title[-1])}</a>'
+            )
+
+    return " ❯ ".join(parts)
+
+
+def deck_title_html(deck, add_links=True, final_link="deck"):
+    return title_html(deck.title, add_links=add_links, final_link=final_link)
+
+
+def generate_index_html(deck_links, title="Decks"):
     output = f"""
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Decks</title>
+        <title>{title_html(title, False)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url("general.css")}">
       </head>
       <body>
-        <h1>Decks</h1>
+        <h1>{title_html(title, final_link=None)}</h1>
 
         <ol>"""
 
@@ -24,7 +53,7 @@ def generate_index_html(deck_links):
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
         output += f"""
-          <li><a href="./{h(file_name)}">{h(deck.title)}</a></li>"""
+          <li>{deck_title_html(deck, final_link="deck")}</li>"""
 
     return textwrap.dedent(
         output
@@ -35,20 +64,29 @@ def generate_index_html(deck_links):
     ).lstrip()
 
 
-def htmlize_deck(deck, path_prefix=""):
+def htmlize_deck(deck, path_prefix="", flash_cards=False):
     if deck.title is None:
         sys.exit(f"Deck {deck.source_path!r} does not contain title")
+
+    if flash_cards:
+        flash_cards_html = f"""
+        <link rel="stylesheet" href="{static_url("flash-cards.css")}">
+        <script src="{static_url("flash-cards.js")}" async></script>
+        """
+    else:
+        flash_cards_html = ""
 
     output = f"""
     <!DOCTYPE html>
     <html>
       <head>
-        <title>{h(deck.title)}</title>
+        <title>{deck_title_html(deck, False)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url("general.css")}">
+        {flash_cards_html}
       </head>
       <body>
-        <h1>{h(deck.title)}</h1>"""
+        <h1>{deck_title_html(deck, final_link=None)}</h1>"""
 
     for note in sorted(deck.notes(), key=lambda note: note.spec.line_number):
         if more_html := note.more_field().render_html(path_prefix):
@@ -61,7 +99,9 @@ def htmlize_deck(deck, path_prefix=""):
         output += f"""
         <div class="note">
           <h3>{note.text_field().render_html(path_prefix)}</h3>
-          {note.media_field().render_html(path_prefix)}
+          <div class="media">
+              {note.media_field().render_html(path_prefix)}
+          </div>
           {more_html}
           <table class="metadata">
             <tr class="direction">

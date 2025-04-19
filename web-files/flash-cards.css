@@ -1,0 +1,136 @@
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #999;
+}
+
+h1 > a {
+  color: #a9c;
+}
+
+#controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  border-top: 2px solid #ccc;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#controls button {
+  display: block;
+  margin: 10px auto;
+  font-size: 24px;
+}
+
+.note {
+  display: none;
+}
+
+.note.question, .note.answer, #finished {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  min-height: 400px;
+  width: 600px;
+  text-align: center;
+  background: #eee;
+
+  /* Flash card to make it clear that it’s new. */
+  opacity: 1;
+  transition: opacity 0.3s;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+#finished {
+  display: none;
+  line-height: 400px;
+  font-size: 24px;
+}
+
+.note > .more {
+  padding: 0 25px;
+}
+
+.note.question > .more {
+  visibility: hidden;
+}
+
+.note > .media {
+  height: 300px;
+  padding: 25px 0;
+}
+
+.note.media > h3 {
+  /* Needs to margin collapse with .more > p */
+  padding: 0;
+  margin: 25px;
+}
+
+.note.text > h3 {
+  /* Needs to fill space with white background */
+  padding: 25px;
+  margin: 0;
+}
+
+.note.media {
+  padding-top: 350px;
+  min-height: 50px;
+}
+
+.note.media > .media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.note.text > h3,
+.note.media > .media {
+  background: #fff;
+}
+
+.metadata {
+  display: none;
+}
+
+/* Make question area bigger for text questions */
+.note.question.text > .media {
+  height: 0;
+  visibility: hidden;
+}
+
+.note.question.text > h3 {
+  padding: 175px 25px;
+}
+
+.note.answer.text > .media {
+  transition: height 0.1s;
+}
+
+.note.answer.text > h3 {
+  transition: padding 0.1s;
+}
+
+/* Make question area bigger for media questions */
+.note.question.media > .media {
+  padding: 50px 0;
+}
+
+.note.question.media > h3 {
+  padding: 0 25px;
+  visibility: hidden;
+}
+
+.note.answer.media > .media {
+  transition: padding 0.1s;
+}
+
+.note.answer.media > h3 {
+  transition: padding 0.1s;
+}

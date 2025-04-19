@@ -50,6 +50,11 @@ def file_not_empty(path):
     return os.path.exists(path) and os.stat(path).st_size > 0
 
 
+def file_safe_name(name):
+    """Sanitize a deck title into something safe for the file system."""
+    return name.replace("/", "--").replace(" ", "_")
+
+
 @contextlib.contextmanager
 def atomic_open(path, encoding="utf_8"):
     """
