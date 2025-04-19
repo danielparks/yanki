@@ -96,3 +96,37 @@ h1 {
 .metadata {
   display: none;
 }
+
+/* Make question area bigger for text questions */
+.note.question.text > .media {
+  height: 0;
+}
+
+.note.question.text > h3 {
+  padding: 175px 25px;
+}
+
+.note.answer.text > .media {
+  transition: height 0.1s;
+}
+
+.note.answer.text > h3 {
+  transition: padding 0.1s;
+}
+
+/* Make question area bigger for media questions */
+.note.question.media > .media {
+  padding: 50px 0;
+}
+
+.note.question.media > h3 {
+  padding: 0 25px;
+}
+
+.note.answer.media > .media {
+  transition: padding 0.1s;
+}
+
+.note.answer.media > h3 {
+  transition: padding 0.1s;
+}
