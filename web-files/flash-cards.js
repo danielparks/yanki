@@ -150,4 +150,10 @@ window.addEventListener("load", (event) => {
   show_question();
 
   next_button.addEventListener("click", next_button_click);
+  document.body.addEventListener("keyup", (event) => {
+    if ( event.key == " " ) {
+      next_button_click();
+      event.stopPropagation();
+    }
+  });
 });
