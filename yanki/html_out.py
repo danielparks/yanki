@@ -1,9 +1,65 @@
+from collections import defaultdict
 from html import escape as h
 import os
 from pathlib import Path
+import shutil
 import sys
 import textwrap
 from yanki.utils import file_safe_name
+
+
+def write_html(output_path, cache_path, decks, flash_cards=False):
+    """Write HTML version of decks to a path."""
+    deck_links = []
+    html_written = set()
+
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    for deck in decks:
+        file_name = "deck_" + file_safe_name(deck.title) + ".html"
+        html_path = output_path / file_name
+        if html_path in html_written:
+            raise KeyError(
+                f"Duplicate path after munging deck title: {html_path}"
+            )
+        else:
+            html_written.add(html_path)
+
+        html_path.write_text(
+            htmlize_deck(deck, path_prefix="", flash_cards=flash_cards),
+            encoding="utf_8",
+        )
+
+        if output_path != cache_path:
+            # Copy media to output.
+            for path in deck.media_paths():
+                shutil.copy2(path, output_path / os.path.basename(path))
+
+        deck_links.append((file_name, deck))
+
+    index_path = output_path / "index.html"
+    index_path.write_text(generate_index_html(deck_links), encoding="utf_8")
+
+    indices = defaultdict(list)
+    for file_name, deck in deck_links:
+        title = deck.title.split("::")
+        for i in range(1, len(title) + 1):
+            partial = "::".join(title[:i])
+            indices[partial].append((file_name, deck))
+
+    for partial, deck_links in indices.items():
+        file_name = "index_" + file_safe_name(partial) + ".html"
+        index_path = output_path / file_name
+        index_path.write_text(
+            generate_index_html(deck_links, partial), encoding="utf_8"
+        )
+
+    if output_path == cache_path:
+        ensure_static_link(output_path)
+    else:
+        shutil.copytree(
+            path_to_web_files(), output_path / "static", dirs_exist_ok=True
+        )
 
 
 def generate_index_html(deck_links, title="Decks"):
@@ -32,7 +88,8 @@ def generate_index_html(deck_links, title="Decks"):
         + """
         </ol>
       </body>
-    </html>"""
+    </html>
+    """
     ).lstrip()
 
 
@@ -60,7 +117,7 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
       <body>
         <h1>{deck_title_html(deck, final_link=None)}</h1>"""
 
-    for note in sorted(deck.notes(), key=lambda note: note.spec.line_number):
+    for note in deck.notes():
         if more_html := note.more_field().render_html(path_prefix):
             more_html = f'<div class="more">{more_html}</div>'
         if clip := note.spec.clip_or_trim():
@@ -105,7 +162,8 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
         output
         + """
       </body>
-    </html>"""
+    </html>
+    """
     ).lstrip()
 
 
@@ -165,4 +223,4 @@ def path_to_web_files() -> Path:
 
 def static_url(path) -> str:
     mtime = os.path.getmtime(path_to_web_files() / path)
-    return f"/static/{path}?{mtime}"
+    return f"static/{path}?{mtime}"

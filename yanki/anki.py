@@ -286,6 +286,11 @@ class FinalDeck:
             key=lambda n: n.spec.line_number,
         )
 
+    def media_paths(self):
+        """Return media paths used in this deck."""
+        for note in self.notes_by_id.values():
+            yield from note.media_paths()
+
     def save_to_package(self, package):
         deck = genanki.Deck(self.deck_id, self.title)
         LOGGER.debug(f"New deck [{self.deck_id}]: {self.title}")

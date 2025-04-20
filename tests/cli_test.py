@@ -1,9 +1,11 @@
+import html
 import inspect
 import io
 import os
 from pathlib import Path
 import psutil
 import pytest
+import re
 import shutil
 import signal
 import threading
@@ -121,13 +123,24 @@ def test_yanki_serve_http(yanki, reference_deck_path):
     assert "GET / HTTP" in result.stderr
 
 
-def test_yanki_to_html(yanki, reference_deck_path):
-    result = yanki.run("to-html", reference_deck_path)
+def test_yanki_to_html(yanki, reference_deck_path, tmp_path_factory):
+    output_path = tmp_path_factory.mktemp("output")
+    result = yanki.run("to-html", output_path, reference_deck_path)
     assert result.returncode == 0
     assert result.stderr == ""
-    assert result.stdout.startswith("<!DOCTYPE html>\n")
-    assert result.stdout.endswith("</html>\n")
-    assert result.stdout.count('<div class="note">') == 1
+    assert result.stdout == ""
+
+    index_html = (output_path / "index.html").read_text(encoding="utf_8")
+    assert index_html.startswith("<!DOCTYPE html>\n")
+    assert index_html.endswith("</html>\n")
+
+    matches = re.search(r'<a href="(deck_[^"]+)"', index_html)
+    assert matches is not None
+    deck_path = html.unescape(matches.group(1))
+    deck_html = (output_path / deck_path).read_text(encoding="utf_8")
+    assert deck_html.startswith("<!DOCTYPE html>\n")
+    assert deck_html.endswith("</html>\n")
+    assert deck_html.count('<div class="note">') == 1
 
 
 def test_yanki_list_notes(yanki, reference_deck_path):
