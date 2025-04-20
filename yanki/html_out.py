@@ -6,34 +6,6 @@ import textwrap
 from yanki.utils import file_safe_name
 
 
-def title_html(title, add_links=True, final_link="deck"):
-    title = title.split("::")
-    if not add_links:
-        return h(" ❯ ".join(title))
-
-    parts = []
-    path = []
-    for part in title[:-1]:
-        path.append(part)
-        partial = file_safe_name("::".join(path))
-        parts.append(f'<a href="index_{h(partial)}.html">{h(part)}</a>')
-
-    if title[-1]:
-        if final_link is None:
-            parts.append(f"{h(title[-1])}")
-        else:
-            partial = file_safe_name("::".join(title))
-            parts.append(
-                f'<a href="{final_link}_{h(partial)}.html">{h(title[-1])}</a>'
-            )
-
-    return " ❯ ".join(parts)
-
-
-def deck_title_html(deck, add_links=True, final_link="deck"):
-    return title_html(deck.title, add_links=add_links, final_link=final_link)
-
-
 def generate_index_html(deck_links, title="Decks"):
     output = f"""
     <!DOCTYPE html>
@@ -135,6 +107,34 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
       </body>
     </html>"""
     ).lstrip()
+
+
+def title_html(title, add_links=True, final_link="deck"):
+    title = title.split("::")
+    if not add_links:
+        return h(" ❯ ".join(title))
+
+    parts = []
+    path = []
+    for part in title[:-1]:
+        path.append(part)
+        partial = file_safe_name("::".join(path))
+        parts.append(f'<a href="index_{h(partial)}.html">{h(part)}</a>')
+
+    if title[-1]:
+        if final_link is None:
+            parts.append(f"{h(title[-1])}")
+        else:
+            partial = file_safe_name("::".join(title))
+            parts.append(
+                f'<a href="{final_link}_{h(partial)}.html">{h(title[-1])}</a>'
+            )
+
+    return " ❯ ".join(parts)
+
+
+def deck_title_html(deck, add_links=True, final_link="deck"):
+    return title_html(deck.title, add_links=add_links, final_link=final_link)
 
 
 def ensure_static_link(cache_path: Path):
