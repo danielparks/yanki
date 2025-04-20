@@ -55,6 +55,11 @@ h1 > a {
   font-size: 24px;
 }
 
+.note video, .note img {
+  display: block;
+  margin: 0 auto;
+}
+
 .note > .more {
   padding: 0 25px;
   background: #eee;
@@ -157,18 +162,16 @@ h1 > a {
   .note.answer,
   #finished {
     width: 100%;
-    border-left: none;
-    border-right: none;
   }
 
-  .note > .cards > .media {
-    height: auto;
+  .cards, .note > .more {
+    border: none;
+  }
+
+  .note.text-first.question > .cards > .media,
+  .note.text-first.answer > .cards > .media,
+  .note.media-first.question > .cards > .media,
+  .note.media-first.answer > .cards > .media {
     padding: 0;
-  }
-
-  .note > .cards > .media > video,
-  .note > .cards > .media > img {
-    width: 100%;
-    height: auto;
   }
 }

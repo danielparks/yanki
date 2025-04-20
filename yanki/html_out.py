@@ -168,6 +168,7 @@ def generate_index_html(deck_link_html, child_html, title_path):
           <head>
             <title>{title_html(title_path, add_links=False)}</title>
             <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="{static_url("general.css")}">
           </head>
           <body>
@@ -211,6 +212,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
       <head>
         <title>{title_html(title_path, add_links=False)}</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{static_url("general.css")}">
         {flash_cards_html}
       </head>
