@@ -81,7 +81,7 @@ def generate_index_html(deck_links, title="Decks"):
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
         output += f"""
-          <li>{deck_title_html(deck, final_link="deck")}</li>"""
+          <li>{deck_title_html(deck, final_link="deck", rm_prefix=title)}</li>"""
 
     return textwrap.dedent(
         output
@@ -167,10 +167,15 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
     ).lstrip()
 
 
-def title_html(title, add_links=True, final_link="deck"):
+def title_html(title, add_links=True, final_link="deck", rm_prefix=None):
+    if rm_prefix and title.startswith(rm_prefix):
+        rm_prefix = rm_prefix.count("::") + 1
+    else:
+        rm_prefix = 0
+
     title = title.split("::")
     if not add_links:
-        return h(" ❯ ".join(title))
+        return h(" ❯ ".join(title[rm_prefix:]))
 
     parts = []
     path = []
@@ -188,11 +193,16 @@ def title_html(title, add_links=True, final_link="deck"):
                 f'<a href="{final_link}_{h(partial)}.html">{h(title[-1])}</a>'
             )
 
-    return " ❯ ".join(parts)
+    return " ❯ ".join(parts[rm_prefix:])
 
 
-def deck_title_html(deck, add_links=True, final_link="deck"):
-    return title_html(deck.title, add_links=add_links, final_link=final_link)
+def deck_title_html(deck, add_links=True, final_link="deck", rm_prefix=None):
+    return title_html(
+        deck.title,
+        add_links=add_links,
+        final_link=final_link,
+        rm_prefix=rm_prefix,
+    )
 
 
 def ensure_static_link(cache_path: Path):
