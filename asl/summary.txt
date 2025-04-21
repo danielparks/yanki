@@ -3262,7 +3262,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=LugZXAFejys @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=LugZXAFejys @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<h3>Is your television close-captioned?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=LugZXAFejys @0- TAGS: 'Lifeprint lesson_13 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=LugZXAFejys @0- TEXT: 'YOUR TV CLOSE-CAPTIONED?'
-Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- MEDIA: "processed_youtube=LzPY8zNNLlo_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- MEDIA: 'processed_youtube=LzPY8zNNLlo_7bab8d079275e912de7d5355365325fb.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<h3>Why are most postal employees thin?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- TAGS: 'Lifeprint lesson_21 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- TEXT: 'MOST POST-OFFICE WORKER THIN, WHY?'
@@ -6645,7 +6645,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=pNW4_GkXVhY @0- TEXT: 'WEIRD'
 Lifeprint ASL https://www.youtube.com/watch?v=pOXoRgA0OKE @0- MEDIA: "processed_youtube=pOXoRgA0OKE_audio='strip'_clip=(0.9342666666666667, 2.5025).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=pOXoRgA0OKE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=pOXoRgA0OKE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=pOXoRgA0OKE @0- TEXT: 'SOLVE / resolve / dissolve\n# dissolve from lesson 21 video https://youtu.be/ey7sA3MesY0?t=554'
+Lifeprint ASL https://www.youtube.com/watch?v=pOXoRgA0OKE @0- TEXT: 'SOLVE / resolve / dissolve'
 Lifeprint ASL https://www.youtube.com/watch?v=pSPtgQM_ndg @0- MEDIA: "processed_youtube=pSPtgQM_ndg_audio='strip'_clip=(0.46713333333333334, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=pSPtgQM_ndg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=pSPtgQM_ndg @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
