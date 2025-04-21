@@ -4110,13 +4110,9 @@ Lifeprint ASL https://www.youtube.com/watch?v=UxO5Q0fSqOw @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=UxO5Q0fSqOw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/feel.htm">FEEL</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=UxO5Q0fSqOw @0- TAGS: 'Lifeprint lesson_04 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=UxO5Q0fSqOw @0- TEXT: 'FEEL'
-Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- MEDIA: "processed_youtube=Uxa8xGsuc7A_audio='strip'_clip=(0.23356666666666667, 2.135466666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- MEDIA: "processed_youtube=Uxa8xGsuc7A_audio='strip'_clip=(0.23356666666666667, None).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hair.htm">HAIR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/barber.htm">BARBER</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- TAGS: 'Lifeprint extra lesson_20 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- TAGS: 'Lifeprint lesson_21 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- TEXT: 'BARBER'
 Lifeprint ASL https://www.youtube.com/watch?v=Uxa8xGsuc7A @0- TEXT: 'barber / HAIRCUT + PERSON'
 Lifeprint ASL https://www.youtube.com/watch?v=UyfRF3TeLPs @0- MEDIA: 'processed_youtube=UyfRF3TeLPs_b87a9877c6b368903266da6a94a77ccf.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=UyfRF3TeLPs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<h3>What’s your name?</h3>\n'
