@@ -167,6 +167,15 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
     ).lstrip()
 
 
+def deck_title_html(deck, add_links=True, final_link="deck", rm_prefix=None):
+    return title_html(
+        deck.title,
+        add_links=add_links,
+        final_link=final_link,
+        rm_prefix=rm_prefix,
+    )
+
+
 def title_html(title, add_links=True, final_link="deck", rm_prefix=None):
     if rm_prefix and title.startswith(rm_prefix):
         rm_prefix = rm_prefix.count("::") + 1
@@ -194,15 +203,6 @@ def title_html(title, add_links=True, final_link="deck", rm_prefix=None):
             )
 
     return " ❯ ".join(parts[rm_prefix:])
-
-
-def deck_title_html(deck, add_links=True, final_link="deck", rm_prefix=None):
-    return title_html(
-        deck.title,
-        add_links=add_links,
-        final_link=final_link,
-        rm_prefix=rm_prefix,
-    )
 
 
 def ensure_static_link(cache_path: Path):
