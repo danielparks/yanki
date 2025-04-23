@@ -289,13 +289,6 @@ group:
     trim: 25F-95F
 
 group:
-  more: +md:[BUSY](https://www.lifeprint.com/asl101/pages-signs/b/busy.htm)
-  https://www.youtube.com/watch?v=Uh4BW2tjS0k #BUSY
-    trim: 12F-60F
-  https://www.youtube.com/watch?v=-dUe-nN4vkM BUSY (business version)
-    trim: 7F-60F
-
-group:
   more: +md:[CANADA](https://www.lifeprint.com/asl101/pages-signs/c/canada.htm)
   https://www.youtube.com/watch?v=6wD5KHuM4xE CANADA
     trim: 14F-62F
@@ -463,36 +456,6 @@ group:
     trim: 16F-66F
 
 group:
-  more: +md:[DOLLAR](https://www.lifeprint.com/asl101/pages-signs/d/dollar.htm)
-  https://www.youtube.com/watch?v=6VJ7PPwX3v8 DOLLAR
-    trim: 11F-71F
-    tags: +first_100_signs
-  https://www.youtube.com/watch?v=ai1UbD3sNpA -> DOLLAR (end of hand version)
-    trim: 6F-
-  https://www.youtube.com/watch?v=sh2rTfdHORE $1 (twist version)
-    trim: 6F-73F
-  https://www.youtube.com/watch?v=MarNwlwO55s $2 (twist version)
-    trim: 4F-61F
-  https://www.youtube.com/watch?v=I6V4qa3Cba8 $3 (twist version)
-    trim: 6F-73F
-  https://www.youtube.com/watch?v=Pho1TLBdTrI $4 (twist version)
-    trim: 5F-56F
-  https://www.youtube.com/watch?v=Nqh5E8Sy8sA $5 (twist version)
-    trim: 13F-56F
-  https://www.youtube.com/watch?v=4UAAwjWUSdI FIVE DOLLAR / $5
-    trim: 11F-61F
-  https://www.youtube.com/watch?v=9WFbxIVfthI $6 (twist version)
-    trim: 4F-66F
-  https://www.youtube.com/watch?v=aK_bbVxNgYQ $7 (twist version)
-    trim: 28F-91F
-  https://www.youtube.com/watch?v=gDJs3VGp8tw $8 (twist version)
-    trim: 7F-72F
-  https://www.youtube.com/watch?v=LnjDfEuBrmY $9 (twist version)
-    trim: 8F-69F
-  https://www.youtube.com/watch?v=yxQ0PDgcfoY TEN DOLLAR / $10
-    trim: 24F-85F
-
-group:
   more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
   https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
     trim: 13F-75F
@@ -596,13 +559,6 @@ group:
     trim: 10F-67F
 
 group:
-  more: +md:[FREE](https://www.lifeprint.com/asl101/pages-signs/f/free.htm)
-  https://www.youtube.com/watch?v=_OvXfc8_Ffo FREE
-    trim: 20F-80F
-  https://www.youtube.com/watch?v=L5nKRt8BfYk INDEPENDENT
-    trim: 21F-79F
-
-group:
   more: +md:[FRUIT](https://www.lifeprint.com/asl101/pages-signs/f/fruit.htm)
   https://www.youtube.com/watch?v=GF5UtlyLuyw FRUIT
     trim: 10F-78F
@@ -615,14 +571,6 @@ group:
   https://www.youtube.com/watch?v=ZudmUxS5yAU
     DEPLETED / all gone / ran out [of] / used up
     trim: 4F-50F
-
-group:
-  more: +md:[GOVERNMENT](https://www.lifeprint.com/asl101/pages-signs/g/government.htm)
-  https://www.youtube.com/watch?v=nSyzaMR_9NU GOVERNMENT
-    trim: 11F-71F
-  https://www.youtube.com/watch?v=0yQUQMumegQ
-    PEA-BRAIN / stupid (G-hand version, idiomatic)
-    trim: 4F-53F
 
 group:
   more: +md:[GUESS](https://www.lifeprint.com/asl101/pages-signs/g/guess.htm)
@@ -737,8 +685,6 @@ group:
     trim: 6F-72F
   https://www.youtube.com/watch?v=SON3tJBp5tk DON’T / no more
     trim: 6F-57F
-  https://www.youtube.com/watch?v=liDRahbOmNs NYB! / none of your business
-    trim: 3F-67F
 
 group:
   more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
@@ -912,20 +858,6 @@ group:
   # Originally SEXY. FIXME: extend last frame
   https://www.youtube.com/watch?v=Wa129EIdzZs @29F-53F
     SEX-gender / SEX-intercourse
-
-group:
-  more: +md:[SHOW](https://www.lifeprint.com/asl101/pages-signs/s/show.htm)
-  https://www.youtube.com/watch?v=4vABNRuGfRw SHOW / display / represent
-    trim: 8F-69F
-  https://www.youtube.com/watch?v=U48BpmXzSXk SHOW-me
-    trim: 7F-66F
-  https://www.youtube.com/watch?v=z_MPz6HY1W4 SHOW-3rd-person
-    trim: 3F-
-
-  tags: +extra
-  https://www.youtube.com/watch?v=UYkt4YgYcuE
-    SHOW-UP / appearance / appear / pop up / symptom
-    trim: 6F-57F
 
 group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
@@ -1347,13 +1279,6 @@ group:
     trim: 3F-64F
 
 # From lesson 18 video (https://www.youtube.com/watch?v=iM2snVv2bEw)
-group:
-  more: +md:[OFFICE](https://www.lifeprint.com/asl101/pages-signs/o/office.htm)
-  https://www.youtube.com/watch?v=X0Qe7jHMtmg O-F-F-I-C-E
-    trim: 13F-68F
-  https://www.youtube.com/watch?v=U9VrfCdyVGw OFFICE (initialized version)
-    trim: 11F-64F
-
 https://www.youtube.com/watch?v=NyaG1U8eSOk RIVER
   trim: 8F-61F
   more: +md:[RIVER](https://www.lifeprint.com/asl101/pages-signs/r/river.htm)
@@ -1414,12 +1339,6 @@ https://www.youtube.com/watch?v=47-oTgaEGIw KNIFE (H hands version)
 https://www.youtube.com/watch?v=rnb9FxPO7is PLEASE
   trim: 12F-61F
   tags: +first_100_signs
-https://www.youtube.com/watch?v=ajIA0oBLMgM CENTS
-  trim: 10F-60F
-  tags: +first_100_signs
-https://www.youtube.com/watch?v=AFByTjllk70 FINE / fee / cost / price / charge
-  trim: 18F-82F
-  tags: +first_100_signs
 https://www.youtube.com/watch?v=0sF9ZKAYAwo SHEEP / wool
   trim: 14F-68F
   tags: +first_100_signs
@@ -1434,7 +1353,5 @@ https://www.youtube.com/watch?v=0Q8DzhYUabI TEMPERATURE (finger version)
   trim: 11F-73F
 https://www.youtube.com/watch?v=8KQB5iZCuN8 AMOUNT
   trim: 12F-57F
-https://www.youtube.com/watch?v=ZMQz2hoT5V4 MONEY
-  trim: 10F-63F
 https://www.youtube.com/watch?v=IyMuDawJZu0 ANIMAL
   trim: 22F-99F
