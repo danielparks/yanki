@@ -227,9 +227,11 @@ def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
 
         output += f"""
         <div class="note">
-          <h3>{note.text_field().render_html(path_prefix)}</h3>
-          <div class="media">
+          <div class="cards">
+            <h3>{note.text_field().render_html(path_prefix)}</h3>
+            <div class="media">
               {note.media_field().render_html(path_prefix)}
+            </div>
           </div>
           {more_html}
           <table class="metadata">
