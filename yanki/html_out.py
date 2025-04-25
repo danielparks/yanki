@@ -1,99 +1,199 @@
-from collections import defaultdict
+from collections import OrderedDict
 from html import escape as h
 import os
 from pathlib import Path
 import shutil
 import sys
-import textwrap
 from yanki.utils import file_safe_name
+
+
+class DeckTree:
+    def __init__(self, name=None):
+        self.children = OrderedDict()
+        self.name = name
+        self.deck = None
+        self.deck_file_name = None
+        self.index_file_name = None
+
+    def __getitem__(self, key):
+        if key not in self.children:
+            self.children[key] = DeckTree(name=key)
+        return self.children[key]
+
+    def dig(self, path):
+        if len(path):
+            return self[path[0]].dig(path[1:])
+        else:
+            return self
 
 
 def write_html(output_path, cache_path, decks, flash_cards=False):
     """Write HTML version of decks to a path."""
-    deck_links = []
-    html_written = set()
-
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    for deck in decks:
-        file_name = "deck_" + file_safe_name(deck.title) + ".html"
-        html_path = output_path / file_name
-        if html_path in html_written:
-            raise KeyError(
-                f"Duplicate path after munging deck title: {html_path}"
-            )
-        else:
-            html_written.add(html_path)
-
-        html_path.write_text(
-            htmlize_deck(deck, path_prefix="", flash_cards=flash_cards),
-            encoding="utf_8",
-        )
-
-        if output_path != cache_path:
-            # Copy media to output.
-            for path in deck.media_paths():
-                shutil.copy2(path, output_path / os.path.basename(path))
-
-        deck_links.append((file_name, deck))
-
-    index_path = output_path / "index.html"
-    index_path.write_text(generate_index_html(deck_links), encoding="utf_8")
-
-    indices = defaultdict(list)
-    for file_name, deck in deck_links:
-        title = deck.title.split("::")
-        for i in range(1, len(title) + 1):
-            partial = "::".join(title[:i])
-            indices[partial].append((file_name, deck))
-
-    for partial, deck_links in indices.items():
-        file_name = "index_" + file_safe_name(partial) + ".html"
-        index_path = output_path / file_name
-        index_path.write_text(
-            generate_index_html(deck_links, partial), encoding="utf_8"
-        )
-
     if output_path == cache_path:
+        # Serving HTML from the cache; no need to copy media.
+        output_media_path = None
         ensure_static_link(output_path)
     else:
+        # Generating a fresh output directory; copy media.
+        output_path.mkdir(parents=True, exist_ok=True)
+        output_media_path = output_path
         shutil.copytree(
             path_to_web_files(), output_path / "static", dirs_exist_ok=True
         )
 
+    if len(decks) == 1:
+        # Special case: single deck goes in index.html
+        deck = decks[0]
+        if deck.title is None:
+            sys.exit(f"Deck {deck.source_path!r} does not contain title")
+        write_deck_files(
+            output_path / "index.html",
+            output_media_path,
+            deck,
+            [(name, None) for name in deck.title.split("::")],
+            flash_cards=flash_cards,
+        )
+        return
 
-def generate_index_html(deck_links, title="Decks"):
-    output = f"""
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>{title_html(title, False)}</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="{static_url("general.css")}">
-      </head>
-      <body>
-        <h1>{title_html(title, final_link=None)}</h1>
-
-        <ol>"""
-
-    for file_name, deck in deck_links:
+    # Figure out file names for decks.
+    decks_by_path = dict()
+    deck_tree = DeckTree()
+    for deck in decks:
         if deck.title is None:
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
-        output += f"""
-          <li>{deck_title_html(deck, final_link="deck", rm_prefix=title)}</li>"""
+        file_name = "deck_" + file_safe_name(deck.title) + ".html"
+        html_path = output_path / file_name
+        if html_path in decks_by_path:
+            raise KeyError(
+                f"Decks with titles {decks_by_path[html_path].title!r} and "
+                f"{deck.title!r} would both to write to file {html_path!r}"
+            )
+        decks_by_path[html_path] = deck
 
-    return textwrap.dedent(
-        output
-        + """
-        </ol>
-      </body>
-    </html>
-    """
-    ).lstrip()
+        title_parts = deck.title.split("::")
+        leaf = deck_tree.dig(title_parts)
+        leaf.deck_file_name = file_name
+        leaf.deck = deck
+
+    write_tree_indices(
+        deck_tree, output_path, output_media_path, flash_cards=flash_cards
+    )
 
 
-def htmlize_deck(deck, path_prefix="", flash_cards=False):
+def write_tree_indices(
+    tree, output_path, output_media_path, title_path=[], flash_cards=False
+):
+    if tree.deck_file_name is None and title_path == [] and tree.name is None:
+        # Anonymous root.
+        if len(tree.children) == 1:
+            # If there is exactly one child of the anonymous root, then skip it.
+            return write_tree_indices(
+                list(tree.children.values())[0],
+                output_path,
+                output_media_path,
+                flash_cards=flash_cards,
+            )
+        else:
+            # Anonymous root has zero or more than one child deck.
+            tree.name = "Decks"
+
+    if len(tree.children) == 0:
+        if tree.deck_file_name:
+            # A tree with a deck should have the same name as the deck.
+            assert tree.name is not None
+            write_deck_files(
+                output_path / tree.deck_file_name,
+                output_media_path,
+                tree.deck,
+                title_path + [(tree.name, tree.deck_file_name)],
+                flash_cards=flash_cards,
+            )
+            return f'<li><a href="{h(tree.deck_file_name)}">{h(tree.name)}</a></li>'
+        else:
+            return ""
+
+    # Has child decks. Must have a name.
+    assert tree.name is not None
+    if title_path == []:
+        tree.index_file_name = "index.html"
+    else:
+        title_names = [name for name, _ in title_path] + [tree.name]
+        tree.index_file_name = (
+            "index_" + file_safe_name("::".join(title_names)) + ".html"
+        )
+
+    # This rebinds the variable to a new value instead of changing the old
+    # title_path object like .append() or += would:
+    title_path = title_path + [(tree.name, tree.index_file_name)]
+
+    list_html = [
+        write_tree_indices(
+            child,
+            output_path,
+            output_media_path,
+            title_path,
+            flash_cards=flash_cards,
+        )
+        for child in tree.children.values()
+    ]
+    list_html = "<ol>\n      " + "\n      ".join(list_html) + "\n    </ol>"
+    title_html = f'<a href="{h(tree.index_file_name)}">{h(tree.name)}</a>'
+    if tree.deck_file_name:
+        write_deck_files(
+            output_path / tree.deck_file_name,
+            output_media_path,
+            tree.deck,
+            title_path + [("Deck", tree.deck_file_name)],
+            flash_cards=flash_cards,
+        )
+        deck_link = f'<a href="{h(tree.deck_file_name)}">Deck</a>'
+        title_html += f" ({deck_link})"
+    else:
+        deck_link = ""
+
+    (output_path / tree.index_file_name).write_text(
+        generate_index_html(deck_link, list_html, title_path), encoding="utf_8"
+    )
+    return f"""<li>
+        <h3>{title_html}</h3>
+        {list_html}
+      </li>"""
+
+
+def generate_index_html(deck_link_html, child_html, title_path):
+    return f"""
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>{title_html(title_path, add_links=False)}</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="{static_url("general.css")}">
+          </head>
+          <body>
+            <h1>{title_html(title_path, final_link=False)}</h1>
+            {deck_link_html}
+            {child_html}
+          </body>
+        </html>
+        """.replace("\n        ", "\n").lstrip()
+
+
+def write_deck_files(
+    html_path, output_media_path, deck, title_path, flash_cards=False
+):
+    html_path.write_text(
+        htmlize_deck(deck, title_path, path_prefix="", flash_cards=flash_cards),
+        encoding="utf_8",
+    )
+
+    # Copy media to output.
+    if output_media_path is not None:
+        for path in deck.media_paths():
+            shutil.copy2(path, output_media_path / os.path.basename(path))
+
+
+def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
     if deck.title is None:
         sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
@@ -109,13 +209,13 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
     <!DOCTYPE html>
     <html>
       <head>
-        <title>{deck_title_html(deck, False)}</title>
+        <title>{title_html(title_path, add_links=False)}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{static_url("general.css")}">
         {flash_cards_html}
       </head>
       <body>
-        <h1>{deck_title_html(deck, final_link=None)}</h1>"""
+        <h1>{title_html(title_path, final_link=False)}</h1>"""
 
     for note in deck.notes():
         if more_html := note.more_field().render_html(path_prefix):
@@ -158,51 +258,29 @@ def htmlize_deck(deck, path_prefix="", flash_cards=False):
           </table>
         </div>"""
 
-    return textwrap.dedent(
-        output
-        + """
+    return f"""{output}
       </body>
     </html>
-    """
-    ).lstrip()
+    """.replace("\n    ", "\n").lstrip()
 
 
-def title_html(title, add_links=True, final_link="deck", rm_prefix=None):
-    if rm_prefix and title.startswith(rm_prefix):
-        rm_prefix = rm_prefix.count("::") + 1
-    else:
-        rm_prefix = 0
-
-    title = title.split("::")
+def title_html(title_path, add_links=True, final_link=True):
+    if not title_path:
+        return ""
     if not add_links:
-        return h(" ❯ ".join(title[rm_prefix:]))
+        return h(" ❯ ".join([name for name, _ in title_path]))
 
-    parts = []
-    path = []
-    for part in title[:-1]:
-        path.append(part)
-        partial = file_safe_name("::".join(path))
-        parts.append(f'<a href="index_{h(partial)}.html">{h(part)}</a>')
+    html = [
+        f'<a href="{h(file_name)}">{h(name)}</a>' if file_name else h(name)
+        for name, file_name in title_path
+    ]
 
-    if title[-1]:
-        if final_link is None:
-            parts.append(f"{h(title[-1])}")
-        else:
-            partial = file_safe_name("::".join(title))
-            parts.append(
-                f'<a href="{final_link}_{h(partial)}.html">{h(title[-1])}</a>'
-            )
+    if not final_link:
+        # Replace final link with plain text.
+        name, _ = title_path[-1]
+        html[-1] = h(name)
 
-    return " ❯ ".join(parts[rm_prefix:])
-
-
-def deck_title_html(deck, add_links=True, final_link="deck", rm_prefix=None):
-    return title_html(
-        deck.title,
-        add_links=add_links,
-        final_link=final_link,
-        rm_prefix=rm_prefix,
-    )
+    return " ❯ ".join(html)
 
 
 def ensure_static_link(cache_path: Path):
