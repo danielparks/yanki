@@ -66,32 +66,32 @@ h1 > a {
   padding: 25px 0;
 }
 
-.note.media > h3 {
+.note.media-first > h3 {
   /* Needs to margin collapse with .more > p */
   padding: 0;
   margin: 25px;
 }
 
-.note.text > h3 {
+.note.text-first > h3 {
   /* Needs to fill space with white background */
   padding: 25px;
   margin: 0;
 }
 
-.note.media {
+.note.media-first {
   padding-top: 350px;
   min-height: 50px;
 }
 
-.note.media > .media {
+.note.media-first > .media {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 }
 
-.note.text > h3,
-.note.media > .media {
+.note.text-first > h3,
+.note.media-first > .media {
   background: #fff;
 }
 
@@ -100,37 +100,37 @@ h1 > a {
 }
 
 /* Make question area bigger for text questions */
-.note.question.text > .media {
+.note.question.text-first > .media {
   height: 0;
   visibility: hidden;
 }
 
-.note.question.text > h3 {
+.note.question.text-first > h3 {
   padding: 175px 25px;
 }
 
-.note.answer.text > .media {
+.note.answer.text-first > .media {
   transition: height 0.1s;
 }
 
-.note.answer.text > h3 {
+.note.answer.text-first > h3 {
   transition: padding 0.1s;
 }
 
 /* Make question area bigger for media questions */
-.note.question.media > .media {
+.note.question.media-first > .media {
   padding: 50px 0;
 }
 
-.note.question.media > h3 {
+.note.question.media-first > h3 {
   padding: 0 25px;
   visibility: hidden;
 }
 
-.note.answer.media > .media {
+.note.answer.media-first > .media {
   transition: padding 0.1s;
 }
 
-.note.answer.media > h3 {
+.note.answer.media-first > h3 {
   transition: padding 0.1s;
 }
