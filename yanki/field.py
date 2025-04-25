@@ -99,7 +99,7 @@ class VideoFragment(MediaFragment):
         return f"[sound:{self.anki_filename()}]"
 
     def render_html(self, base_path="."):
-        return f'<video controls src="{self.html_path_in_base(base_path)}"></video>'
+        return f'<video controls playsinline src="{self.html_path_in_base(base_path)}"></video>'
 
 
 class Field:
