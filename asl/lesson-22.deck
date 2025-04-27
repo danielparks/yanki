@@ -38,15 +38,27 @@ group:
   https://www.youtube.com/watch?v=AFByTjllk70 COST / fine / fee / price / charge
     trim: 18F-82F
     tags: +first_100_signs
-  # FIXME add VALUE / worth / cost https://www.youtube.com/watch?v=iMl2vq3f1IA
-  # Compare to WORTH-HOW-MUCH?
+
+  tags: +extra
+  https://www.youtube.com/watch?v=iMl2vq3f1IA WORTH / value / cost
+    trim: 4F-77F
 
 group:
   more: +md:[CENTS](https://www.lifeprint.com/asl101/pages-signs/c/cents.htm)
   https://www.youtube.com/watch?v=ajIA0oBLMgM CENTS
     trim: 10F-60F
     tags: +first_100_signs
-  # FIXME add variations
+  # No video for 50-CENTS or CENTS 50.
+  https://www.youtube.com/watch?v=ViMyWjx_qhU 25-CENTS
+    trim: 7F-53F
+  https://www.youtube.com/watch?v=mC6uTgUyW68 CENTS 25 / 25 cents
+    trim: 8F-56F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=JtQLCVSS2gE 5-CENTS
+    trim: 8F-55F
+  https://www.youtube.com/watch?v=WpZChp88fMo CENTS 10 / 10 cents
+    trim: 8F-56F
 
 group:
   more: +md:[DOLLAR](https://www.lifeprint.com/asl101/pages-signs/d/dollar.htm)
@@ -85,9 +97,15 @@ group:
 
 group:
   more: +md:[EARN](https://www.lifeprint.com/asl101/pages-signs/e/earn.htm)
+  https://www.youtube.com/watch?v=gRa4r8ePBHc EARN
+    trim: 36F-84F
 
 group:
   more: +md:[EARLY](https://www.lifeprint.com/asl101/pages-signs/e/early.htm)
+  https://www.youtube.com/watch?v=RSAwb_vK4hI EARLY
+    trim: 6F-53F
+  https://www.youtube.com/watch?v=roc7UVgDmj8 #EARLY
+    trim: 31F-93F
 
 group:
   more: +md:[FREE](https://www.lifeprint.com/asl101/pages-signs/f/free.htm)
@@ -122,12 +140,26 @@ group:
 
 group:
   more: +md:[PAY](https://www.lifeprint.com/asl101/pages-signs/p/pay.htm)
+  https://www.youtube.com/watch?v=WX0DTnUs2Ek PAY / pay you / payment
+    trim: 15F-75F
+  https://www.youtube.com/watch?v=aPmr-RX9kvM PAY-me
+    trim: 0-44F
+  https://www.youtube.com/watch?v=1PwaJzeQTuo IX PAY-ix
+    trim: 6F-66F
 
 group:
   more: +md:[RETIRE](https://www.lifeprint.com/asl101/pages-signs/r/retire.htm)
+  # No video for R-hand version.
+  https://www.youtube.com/watch?v=8q8IIX6A8HI RETIRE (L-hand version)
+    trim: 14F-76F
 
 group:
   more: +md:[REGISTER](https://www.lifeprint.com/asl101/pages-signs/r/register.htm)
+  https://www.youtube.com/watch?v=G8uOaYEdWTc REGISTER / registration
+    trim: 6F-
+  https://www.youtube.com/watch?v=Ybkli-mbp8I
+    SIGNATURE / sign up / contract / register
+    trim: 11F-68F
 
 group:
   more: +md:[SHOW](https://www.lifeprint.com/asl101/pages-signs/s/show.htm)
@@ -151,6 +183,11 @@ group:
 
 group:
   more: +md:[SUBSCRIBE](https://www.lifeprint.com/asl101/pages-signs/s/subscribe.htm)
+  https://www.youtube.com/watch?v=0CX-Oet5RCQ
+    SUBSCRIBE / receive money regularly / Supplemental Security Income (SSI)
+    trim: 11F-81F
 
 group:
   more: +md:[TELLER](https://www.lifeprint.com/asl101/pages-signs/t/teller.htm)
+  https://www.youtube.com/watch?v=Wk5Nvi3Sbus T-E-L-L-E-R / teller
+    trim: 8F-

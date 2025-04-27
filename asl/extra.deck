@@ -692,6 +692,11 @@ group:
     trim: 3F-69F
 
 group:
+  more: +md:[OWE](https://www.lifeprint.com/asl101/pages-signs/o/owe.htm)
+  https://www.youtube.com/watch?v=Ckgt9JH2o8c OWE / bill / debt / afford
+    trim: 13F-86F
+
+group:
   more: +md:[PARTNER](https://www.lifeprint.com/asl101/pages-signs/p/partner.htm)
   # Dr Bill does SHARE PERSON, but in class we were taught to just use SHARE.
   https://www.youtube.com/watch?v=3E2_HVDL9T8 SHARE / romantic partner
@@ -743,15 +748,6 @@ group:
   https://www.youtube.com/watch?v=RS8gp0O6vj0
     PAUSE / suspend / take a break / hiatus / hold up
     trim: 14F-75F
-
-group:
-  more: +md:[PAY](https://www.lifeprint.com/asl101/pages-signs/p/pay.htm)
-  https://www.youtube.com/watch?v=WX0DTnUs2Ek PAY / pay you / payment
-    trim: 15F-75F
-  https://www.youtube.com/watch?v=aPmr-RX9kvM PAY-me
-    trim: 0-44F
-  https://www.youtube.com/watch?v=1PwaJzeQTuo IX-her PAY-him
-    trim: 6F-66F
 
 group:
   more: +md:[PLAN](https://www.lifeprint.com/asl101/pages-signs/p/plan.htm)
@@ -1231,11 +1227,6 @@ group:
   more: +md:[PERCENT](https://www.lifeprint.com/asl101/pages-signs/p/percent.htm)
   https://www.youtube.com/watch?v=HsBoHAZndpw PERCENT
     trim: 16F-76F
-
-group:
-  more: +md:[HOW-MUCH](https://www.lifeprint.com/asl101/pages-signs/h/how-much.htm)
-  https://www.youtube.com/watch?v=SdIhlXzWo5U WORTH-HOW-MUCH
-    trim: 10F-51F
 
 # From lesson 16 video (https://www.youtube.com/watch?v=p_SC5CSzrLs)
 group:
