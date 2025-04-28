@@ -1,6 +1,12 @@
 import io
 
-from yanki.filter import DeckFilter, read_deck_specs
+from yanki.filter import (
+    DeckFilter,
+    read_deck_specs,
+    read_decks_sorted,
+    read_final_decks_sorted,
+)
+from yanki.video import VideoOptions
 
 REFERENCE_DECK = """
 title: a
@@ -50,3 +56,33 @@ def test_multiple_include():
 def test_multiple_exclude():
     assert "EF" == parse_deck(DeckFilter(exclude=["abc", "bcd"]))
     assert "E" == parse_deck(DeckFilter(include=["e"], exclude=["abc", "bcd"]))
+
+
+def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
+    decks = read_decks_sorted(
+        [
+            open(deck_2_path, "r", encoding="utf_8"),
+            open(deck_1_path, "r", encoding="utf_8"),
+        ],
+        VideoOptions(cache_path),
+        DeckFilter(),
+    )
+
+    assert len(decks) == 2
+    assert decks[0].title() == "Test::Reference deck"
+    assert decks[1].title() == "Test::Reference deck::2"
+
+
+def test_read_final_decks_sorted(deck_1_path, deck_2_path, cache_path):
+    decks = read_final_decks_sorted(
+        [
+            open(deck_2_path, "r", encoding="utf_8"),
+            open(deck_1_path, "r", encoding="utf_8"),
+        ],
+        VideoOptions(cache_path),
+        DeckFilter(),
+    )
+
+    assert len(decks) == 2
+    assert decks[0].title == "Test::Reference deck"
+    assert decks[1].title == "Test::Reference deck::2"
