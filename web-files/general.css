@@ -9,7 +9,7 @@ body {
 }
 
 img, video {
-  height: 300px;
+  max-height: 300px;
 }
 
 .metadata {
