@@ -4,30 +4,11 @@ import os
 from pathlib import Path
 import psutil
 import pytest
-import shutil
 import signal
 import threading
 import time
 import urllib.error
 from urllib.request import urlopen
-
-
-REFERENCE_URL = "file://first.png"
-REFERENCE_DECK = f"""
-title: Test::Reference deck
-
-{REFERENCE_URL} text
-  more: more
-"""
-
-
-@pytest.fixture(scope="session")
-def reference_deck_path(tmp_path_factory):
-    decks = tmp_path_factory.mktemp("decks")
-    shutil.copy("test-decks/good/media/first.png", decks / "first.png")
-    path = decks / "reference.deck"
-    path.write_text(REFERENCE_DECK, encoding="utf_8")
-    return path
 
 
 def local_tests():
@@ -62,18 +43,18 @@ def test_yanki_help(yanki):
     assert commands <= set(local_tests()), "Expected a test for every command"
 
 
-def test_yanki_build(yanki, reference_deck_path):
-    result = yanki.run("build", reference_deck_path)
+def test_yanki_build(yanki, deck_1_path):
+    result = yanki.run("build", deck_1_path)
     assert result.returncode == 0
     assert result.stdout == ""
     assert result.stderr == ""
-    assert reference_deck_path.with_suffix(".apkg").is_file()
+    assert deck_1_path.with_suffix(".apkg").is_file()
 
 
 # Fake `open` doesn’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
-def test_yanki_update(yanki, reference_deck_path):
-    result = yanki.run("update", reference_deck_path)
+def test_yanki_update(yanki, deck_1_path):
+    result = yanki.run("update", deck_1_path)
     assert result.returncode == 0
     assert result.stdout.endswith(".apkg\n")
     assert Path(result.stdout[:-1]).is_file()
@@ -82,13 +63,13 @@ def test_yanki_update(yanki, reference_deck_path):
 
 # This doesn’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
-def test_yanki_serve_http(yanki, reference_deck_path):
+def test_yanki_serve_http(yanki, deck_1_path):
     # Need to add result to an object to get it out of thread:
     results = []
 
     def run_yanki_serve_http():
         results.append(
-            yanki.run("serve-http", "--run-seconds", "5", reference_deck_path)
+            yanki.run("serve-http", "--run-seconds", "5", deck_1_path)
         )
 
     httpd = threading.Thread(target=run_yanki_serve_http)
@@ -121,9 +102,8 @@ def test_yanki_serve_http(yanki, reference_deck_path):
     assert "GET / HTTP" in result.stderr
 
 
-def test_yanki_to_html(yanki, reference_deck_path, tmp_path_factory):
-    output_path = tmp_path_factory.mktemp("output")
-    result = yanki.run("to-html", output_path, reference_deck_path)
+def test_yanki_to_html(yanki, deck_1_path, output_path):
+    result = yanki.run("to-html", output_path, deck_1_path)
     assert result.returncode == 0
     assert result.stderr == ""
     assert result.stdout == ""
@@ -135,16 +115,16 @@ def test_yanki_to_html(yanki, reference_deck_path, tmp_path_factory):
     assert "<img " in index_html
 
 
-def test_yanki_list_notes(yanki, reference_deck_path):
-    result = yanki.run("list-notes", "-f", "{url}", reference_deck_path)
+def test_yanki_list_notes(yanki, deck_1_path):
+    result = yanki.run("list-notes", "-f", "{url}", deck_1_path)
     assert result.returncode == 0
-    assert result.stdout == f"{REFERENCE_URL}\n"
+    assert result.stdout == "file://first.png\n"
     assert result.stderr == ""
 
 
-def test_yanki_list_final_notes(yanki, reference_deck_path, cache_path):
+def test_yanki_list_final_notes(yanki, deck_1_path, cache_path):
     """Check that list-notes can list notes after being processed."""
-    result = yanki.run("list-notes", "-f", "{media_paths}", reference_deck_path)
+    result = yanki.run("list-notes", "-f", "{media_paths}", deck_1_path)
     assert result.returncode == 0
     assert result.stdout.startswith(f"{cache_path}/processed_file\\=||")
     assert result.stderr == ""
@@ -156,10 +136,8 @@ def test_yanki_list_final_notes(yanki, reference_deck_path, cache_path):
 
 # Fake `open` doesn’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
-def test_yanki_open_videos(yanki, reference_deck_path, cache_path):
-    result = yanki.run(
-        "open-videos", f"file://{reference_deck_path.parent}/first.png"
-    )
+def test_yanki_open_videos(yanki, deck_1_path, cache_path):
+    result = yanki.run("open-videos", f"file://{deck_1_path.parent}/first.png")
     assert result.returncode == 0
     assert result.stdout.startswith(f"{cache_path}/processed_file\\=||")
     assert result.stderr == ""
@@ -167,10 +145,10 @@ def test_yanki_open_videos(yanki, reference_deck_path, cache_path):
 
 # input and fake `open` don’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
-def test_yanki_open_videos_from_file(yanki, reference_deck_path, cache_path):
+def test_yanki_open_videos_from_file(yanki, deck_1_path, cache_path):
     result = yanki.run(
         "open-videos-from-file",
-        stdin=io.StringIO(f"file://{reference_deck_path.parent}/first.png\n"),
+        stdin=io.StringIO(f"file://{deck_1_path.parent}/first.png\n"),
     )
     assert result.returncode == 0
     assert result.stdout.startswith(f"{cache_path}/processed_file\\=||")

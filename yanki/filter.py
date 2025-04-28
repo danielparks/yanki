@@ -97,7 +97,7 @@ def read_decks(files, options: VideoOptions, filter=DeckFilter()):
 def read_decks_sorted(files, options: VideoOptions, filter=DeckFilter()):
     """Read `Deck`s from `files` and return them sorted by title."""
     return sorted(
-        read_decks(files, options, filter), key=lambda deck: deck.title
+        read_decks(files, options, filter), key=lambda deck: deck.title()
     )
 
 
