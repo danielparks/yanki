@@ -5,6 +5,7 @@ from pathlib import Path
 import pytest
 from pytest_console_scripts import ScriptRunner, _StrOrPath, RunResult
 from typing import Any
+import shutil
 
 
 @pytest.fixture(scope="session")
@@ -21,8 +22,46 @@ def bin_path(tmp_path_factory):
 
 
 @pytest.fixture(scope="session")
+def output_path(tmp_path_factory):
+    return tmp_path_factory.mktemp("output")
+
+
+@pytest.fixture(scope="session")
 def cache_path(tmp_path_factory):
     return tmp_path_factory.mktemp("cache")
+
+
+@pytest.fixture(scope="session")
+def decks_path(tmp_path_factory):
+    return tmp_path_factory.mktemp("decks")
+
+
+REFERENCE_DECK_1 = """
+title: Test::Reference deck
+file://first.png text
+"""
+
+
+@pytest.fixture(scope="session")
+def deck_1_path(decks_path):
+    shutil.copy("test-decks/good/media/first.png", decks_path / "first.png")
+    path = decks_path / "reference_1.deck"
+    path.write_text(REFERENCE_DECK_1, encoding="utf_8")
+    return path
+
+
+REFERENCE_DECK_2 = """
+title: Test::Reference deck::2
+file://second.png second text
+"""
+
+
+@pytest.fixture(scope="session")
+def deck_2_path(decks_path):
+    shutil.copy("test-decks/good/media/second.png", decks_path / "second.png")
+    path = decks_path / "reference_2.deck"
+    path.write_text(REFERENCE_DECK_2, encoding="utf_8")
+    return path
 
 
 class YankiRunner(ScriptRunner):
