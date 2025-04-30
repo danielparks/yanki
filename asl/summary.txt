@@ -3469,7 +3469,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=Nqh5E8Sy8sA @0- TEXT: '$5 (twist v
 Lifeprint ASL https://www.youtube.com/watch?v=Nse4SZ3Go3Q @0- MEDIA: "processed_youtube=Nse4SZ3Go3Q_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Nse4SZ3Go3Q @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<h3>Is your ASL book thick?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Nse4SZ3Go3Q @0- TAGS: 'Lifeprint lesson_20 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=Nse4SZ3Go3Q @0- TEXT: 'YOUR ASL BOOK CL:C-[thick] QM-WIG?'
+Lifeprint ASL https://www.youtube.com/watch?v=Nse4SZ3Go3Q @0- TEXT: 'YOUR ASL BOOK CL:C-[thick] QM-wig?'
 Lifeprint ASL https://www.youtube.com/watch?v=NuXm0_3x6n8 @0- MEDIA: "processed_youtube=NuXm0_3x6n8_audio='strip'_clip=(0.3003, 2.135466666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=NuXm0_3x6n8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dryer.htm">DRYER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=NuXm0_3x6n8 @0- TAGS: 'Lifeprint lesson_09 vocabulary'
@@ -6119,7 +6119,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=kRmzoHZZiiA @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=kRmzoHZZiiA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=kRmzoHZZiiA @0- TEXT: 'CONNECT / link / join (one hand still)'
 Lifeprint ASL https://www.youtube.com/watch?v=kS2VaLVITiw @0- MEDIA: "processed_youtube=kS2VaLVITiw_audio='strip'_clip=(0.46713333333333334, 2.3023000000000002).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=kS2VaLVITiw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/q/qm-wig.htm">QM-WIG</a>\n(QM-WIG is not actually covered in lesson, but it comes up in the phrases.)</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=kS2VaLVITiw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/q/qm-wig.htm">QM-wig</a>\n(QM-wig is not actually covered in lesson, but it comes up in the phrases.)</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=kS2VaLVITiw @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=kS2VaLVITiw @0- TEXT: 'QM-wig / question'
 Lifeprint ASL https://www.youtube.com/watch?v=kXx0x4EB8G8 @0- MEDIA: "processed_youtube=kXx0x4EB8G8_audio='strip'_clip=(0.5, 2.1666666666666665).mp4"
