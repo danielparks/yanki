@@ -30,14 +30,14 @@ function query_text(element, query) {
 function note_direction(note) {
   const direction = query_text(note, ".metadata .direction > td > span");
   if ( direction == "<->" ) {
-    return ["media", "text"];
+    return ["media-first", "text-first"];
   } else if ( direction == "->" ) {
-    return ["media"];
+    return ["media-first"];
   } else if ( direction == "<-" ) {
-    return ["text"];
+    return ["text-first"];
   } else {
     console.error("Unknown direction for note", direction);
-    return ["media", "text"];
+    return ["media-first", "text-first"];
   }
 }
 
@@ -70,16 +70,16 @@ window.addEventListener("load", (event) => {
   }
 
   function show_question() {
-     // direction is "text" or "media".
+     // direction is "text-first" or "media-first".
     [direction, current] = cards[current_index];
-    current.classList.remove("answer", "text", "media");
+    current.classList.remove("answer", "text-first", "media-first");
     current.classList.add("question", direction);
 
     next_button.innerText = "Show answer";
     status_div.innerText = "Completed " + current_index + " out of "
       + cards.length + " cards.";
 
-    if ( direction == "media" ) {
+    if ( direction == "media-first" ) {
       play_video(current);
     }
 
@@ -91,7 +91,7 @@ window.addEventListener("load", (event) => {
     current.classList.remove("question");
     current.classList.add("answer");
 
-    if ( direction == "text" ) {
+    if ( direction == "text-first" ) {
       play_video(current);
     }
 
@@ -99,7 +99,7 @@ window.addEventListener("load", (event) => {
   }
 
   function show_finished() {
-    current.classList.remove("question", "answer", "text", "media");
+    current.classList.remove("question", "answer", "text-first", "media-first");
     next_button.innerText = "Restart";
     status_div.innerText = "Completed " + current_index + " out of "
       + cards.length + " cards.";
@@ -115,7 +115,7 @@ window.addEventListener("load", (event) => {
       show_answer();
     } else {
       // Must be showing the answer, so hide the old card...
-      current.classList.remove("answer", "text", "media");
+      current.classList.remove("answer", "text-first", "media-first");
 
       // ... and switch to the next card.
       current_index++;

@@ -168,6 +168,7 @@ def generate_index_html(deck_link_html, child_html, title_path):
           <head>
             <title>{title_html(title_path, add_links=False)}</title>
             <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="{static_url("general.css")}">
           </head>
           <body>
@@ -190,7 +191,10 @@ def write_deck_files(
     # Copy media to output.
     if output_media_path is not None:
         for path in deck.media_paths():
-            shutil.copy2(path, output_media_path / os.path.basename(path))
+            output_path = output_media_path / os.path.basename(path)
+            shutil.copy2(path, output_path)
+            # Make sure media is accessible by the web server.
+            output_path.chmod(0o644)
 
 
 def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
@@ -211,6 +215,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
       <head>
         <title>{title_html(title_path, add_links=False)}</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{static_url("general.css")}">
         {flash_cards_html}
       </head>
@@ -227,9 +232,11 @@ def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
 
         output += f"""
         <div class="note">
-          <h3>{note.text_field().render_html(path_prefix)}</h3>
-          <div class="media">
+          <div class="cards">
+            <h3>{note.text_field().render_html(path_prefix)}</h3>
+            <div class="media">
               {note.media_field().render_html(path_prefix)}
+            </div>
           </div>
           {more_html}
           <table class="metadata">

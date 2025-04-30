@@ -1,3 +1,7 @@
+body {
+  margin-bottom: 112px; /* #controls height + 10px */
+}
+
 h1 {
   font-size: 24px;
   text-align: center;
@@ -33,11 +37,9 @@ h1 > a {
   display: block;
   position: relative;
   margin: 0 auto;
-  border: 1px solid #eee;
   min-height: 400px;
   width: 600px;
   text-align: center;
-  background: #eee;
 
   /* Flash card to make it clear that it’s new. */
   opacity: 1;
@@ -53,45 +55,51 @@ h1 > a {
   font-size: 24px;
 }
 
+.note video, .note img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .note > .more {
   padding: 0 25px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-top: none;
+  overflow: hidden; /* Contain margins */
+  min-height: 1em; /* If empty, we need to maintain margin for answer */
 }
 
 .note.question > .more {
   visibility: hidden;
 }
 
-.note > .media {
-  height: 300px;
-  padding: 25px 0;
+.cards {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  background: #eee;
 }
 
-.note.media > h3 {
-  /* Needs to margin collapse with .more > p */
-  padding: 0;
-  margin: 25px;
+.note.media-first > .cards {
+  flex-direction: column-reverse;
 }
 
-.note.text > h3 {
-  /* Needs to fill space with white background */
-  padding: 25px;
+.note.answer > .cards {
+  border-bottom: none;
+}
+
+.cards > h3 {
   margin: 0;
 }
 
-.note.media {
-  padding-top: 350px;
-  min-height: 50px;
+.cards > .media {
+  /* Don’t display scroll bars on page if this hangs off the end when hidden: */
+  overflow: hidden;
 }
 
-.note.media > .media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.note.text > h3,
-.note.media > .media {
+.note.text-first > .cards > h3,
+.note.media-first > .cards > .media {
   background: #fff;
 }
 
@@ -100,37 +108,71 @@ h1 > a {
 }
 
 /* Make question area bigger for text questions */
-.note.question.text > .media {
+.note.text-first.question > .cards > h3 {
+  padding: 200px 25px;
+}
+
+.note.text-first.question > .cards > .media {
   height: 0;
+  padding: 0;
   visibility: hidden;
 }
 
-.note.question.text > h3 {
-  padding: 175px 25px;
+.note.text-first.answer > .cards > h3 {
+  padding: 25px;
+  transition: padding 0.1s;
 }
 
-.note.answer.text > .media {
+.note.text-first.answer > .cards > .media {
+  padding: 25px 0;
+  padding-bottom: calc(25px - 1em);
   transition: height 0.1s;
-}
-
-.note.answer.text > h3 {
   transition: padding 0.1s;
 }
 
 /* Make question area bigger for media questions */
-.note.question.media > .media {
+.note.media-first.question > .cards > .media {
   padding: 50px 0;
 }
 
-.note.question.media > h3 {
-  padding: 0 25px;
+.note.media-first.question > .cards > h3 {
+  padding: 0;
+  height: 0;
   visibility: hidden;
 }
 
-.note.answer.media > .media {
+.note.media-first.answer > .cards > .media {
+  padding: 25px 0;
   transition: padding 0.1s;
 }
 
-.note.answer.media > h3 {
+.note.media-first.answer > .cards > h3 {
+  padding: 25px;
+  padding-bottom: calc(25px - 1em);
+  transition: height 0.1s;
   transition: padding 0.1s;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .note.question,
+  .note.answer,
+  #finished {
+    width: 100%;
+  }
+
+  .cards, .note > .more {
+    border: none;
+  }
+
+  .note.text-first.question > .cards > .media,
+  .note.text-first.answer > .cards > .media,
+  .note.media-first.question > .cards > .media,
+  .note.media-first.answer > .cards > .media {
+    padding: 0;
+  }
 }
