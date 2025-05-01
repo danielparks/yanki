@@ -6,12 +6,6 @@ tags: Lifeprint lesson_22 phrase
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
-tags: +extra
-https://www.youtube.com/watch?v=MCX03LE9rZM YOUR C-A-R NOW WORTH?
-  trim: 14F-188F
-  more: +md:### How much is your car worth now?
-    (See [COST](https://www.lifeprint.com/asl101/pages-signs/c/cost.htm))
-
 https://www.youtube.com/watch?v=hhnl5JsWGuc
   YOUR MONEY, YOU KEEP WHERE?
   more: +md:### Where do you keep your money?
@@ -108,3 +102,9 @@ https://www.youtube.com/watch?v=NabPIynENVA
 https://www.youtube.com/watch?v=cTmJgQT5O7c
   YOU EARN MONEY HOW?
   more: +md:### How do you earn money?
+
+tags: +extra
+https://www.youtube.com/watch?v=MCX03LE9rZM YOUR C-A-R NOW WORTH?
+  trim: 14F-188F
+  more: +md:### How much is your car worth now?
+    (See [COST](https://www.lifeprint.com/asl101/pages-signs/c/cost.htm))
