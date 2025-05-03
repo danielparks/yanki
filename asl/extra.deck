@@ -13,9 +13,6 @@ https://www.youtube.com/watch?v=V9xGHj_OsnU FASCINATED / attract / attraction
 https://www.youtube.com/watch?v=I7BfXB2oKyQ BRAG / boast
   trim: 4F-65F
 
-https://www.youtube.com/watch?v=TXgVQkDoMEc CAFETERIA / café
-  trim: 7F-
-
 https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
   trim: 11F-70F
 
@@ -114,9 +111,6 @@ https://www.youtube.com/watch?v=AjTT29zx3SQ nickname
 https://www.youtube.com/watch?v=zhCTyufusjs NOTHING / nuthin (casual)
   trim: 9F-50F
 
-https://www.youtube.com/watch?v=ClNyMzf07dQ NUMBER
-  trim: 13F-76F
-
 https://www.youtube.com/watch?v=6Yx7NEqOvHo NURSE
   trim: 11F-87F
 
@@ -129,10 +123,6 @@ https://www.youtube.com/watch?v=ZHo1AKNIvBY OREGON
 
 https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
   trim: 7F-
-
-https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
-  trim: 8F-61F
-  more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
 
 https://www.youtube.com/watch?v=OnRLIFinilU PERSONAL / personality
   trim: 10F-
@@ -163,9 +153,6 @@ https://www.youtube.com/watch?v=B2UzqvVXn_Y RELIGION / religious (heart version)
   trim: 15F-57F
 https://www.youtube.com/watch?v=yEGrlfPhcbs RELIGION / religious (fist version)
   trim: 12F-68F
-
-https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
-  trim: 10F-59F
 
 https://www.youtube.com/watch?v=4Uz8apATGXI RICH / wealth / wealthy
   trim: 7F-78F
@@ -217,13 +204,6 @@ group:
   more: +md:[ABSENT](https://www.lifeprint.com/asl101/pages-signs/a/absent.htm)
   https://www.youtube.com/watch?v=5qypI7KSSJE SKIP / absent / not do
     trim: 11F-75F
-
-group:
-  more: +md:[ADD](https://www.lifeprint.com/asl101/pages-signs/a/add.htm)
-  https://www.youtube.com/watch?v=UW8kPYNv55A ADD-to / additional / extra / bonus
-    trim: 9F-51F
-  https://www.youtube.com/watch?v=15Kyw3b2f70 PLUS
-    trim: 12F-69F
 
 group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
@@ -462,6 +442,11 @@ group:
   # Don’t really need two-handed variation. STUBBORN has it’s own page.
 
 group:
+  more: +md:[DON’T](https://www.lifeprint.com/asl101/pages-signs/d/dont.htm)
+  https://www.youtube.com/watch?v=SON3tJBp5tk DON’T / no more
+    trim: 6F-57F
+
+group:
   more: +md:[EITHER](https://www.lifeprint.com/asl101/pages-signs/e/either.htm)
   https://www.youtube.com/watch?v=uLoKdhE7rYU EITHER
     trim: 12F-76F
@@ -485,11 +470,6 @@ group:
   https://www.youtube.com/watch?v=ZvW1ocG6Hwo
     gas-on-EMPTY-or-nearly-so (depictive)
     trim: 24F-88F
-
-group:
-  more: +md:[ENGLISH](https://www.lifeprint.com/asl101/pages-signs/e/english.htm)
-  https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH / England
-    trim: 13F-58F
 
 group:
   more: +md:[EXACT](https://www.lifeprint.com/asl101/pages-signs/e/exact.htm)
@@ -520,11 +500,6 @@ group:
   more: +md:[EXPERIENCE](https://www.lifeprint.com/asl101/pages-signs/e/experience.htm)
   https://www.youtube.com/watch?v=m03M4FcaC9Q EXPERIENCE
     trim: 6F-71F
-
-group:
-  more: +md:[EXPLAIN](https://www.lifeprint.com/asl101/pages-signs/e/explain.htm)
-  https://www.youtube.com/watch?v=2Na_TOtHw2E EXPLAIN / describe / instructions
-    trim: 27F-92F
 
 group:
   more: +md:[DURING](https://www.lifeprint.com/asl101/pages-signs/d/during.htm)
@@ -677,14 +652,6 @@ group:
   https://www.youtube.com/watch?v=nwYLaBzkSMw ->
     NEAR / close by / close to (pat hand version)
     trim: 9F-82F
-
-group:
-  more: +md:[NEGATION](https://www.lifeprint.com/asl101/pages-signs/n/negation.htm)
-  # Used as DRAWBACK in person, see https://www.handspeak.com/word/10169/
-  https://www.youtube.com/watch?v=rFf-WYLmkmw NEGATIVE / minus / drawback
-    trim: 6F-72F
-  https://www.youtube.com/watch?v=SON3tJBp5tk DON’T / no more
-    trim: 6F-57F
 
 group:
   more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
@@ -940,11 +907,6 @@ group:
     trim: 13F-68F
 
 group:
-  more: +md:[STUDY](https://www.lifeprint.com/asl101/pages-signs/s/study.htm)
-  https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
-    trim: 16F-76F
-
-group:
   more: +md:[SUCCEED](https://www.lifeprint.com/asl101/pages-signs/s/succeed.htm)
   https://www.youtube.com/watch?v=SrzPozIawec
     SUCCESS / succeed / accomplish / managed to
@@ -1190,11 +1152,6 @@ https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
   more: +md:[COMFORTABLE](https://www.lifeprint.com/asl101/pages-signs/c/comfortable.htm)
 
 # From lesson 9 video (https://www.youtube.com/watch?v=6bsTw2ouTpQ)
-https://www.youtube.com/watch?v=DyYb5Y2efP4 APARTMENT
-  trim: 8F-72F
-  more: +md:# A-P-T
-  more: +md:[APARTMENT](https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm)
-
 group:
   more: +md:[THAT](https://www.lifeprint.com/asl101/pages-signs/t/that.htm)
   https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one handed)
@@ -1292,13 +1249,6 @@ group:
   https://www.youtube.com/watch?v=dAHlrIfokgI ACHEIVE / accomplish / acheivement
     trim: 37F-100F
 
-group:
-  more: +md:[FAIL](https://www.lifeprint.com/asl101/pages-signs/f/fail.htm)
-  https://www.youtube.com/watch?v=H0M84NM6rw8 FAIL (general version)
-    trim: 38F-102F
-  https://www.youtube.com/watch?v=egPSg8R1wUg FLUNK / fail class / F grade
-    trim: 35F-116F
-
 # dissolve: from lesson 21 video https://youtu.be/ey7sA3MesY0?t=554
 https://www.youtube.com/watch?v=pOXoRgA0OKE SOLVE / resolve / dissolve
   trim: 28F-75F
@@ -1307,15 +1257,6 @@ group:
   more: +md:[SHY](https://www.lifeprint.com/asl101/pages-signs/s/shy.htm)
   https://www.youtube.com/watch?v=O7dBt1V2b3Q SHY
     trim: 3F-67F
-
-group:
-  more: +md:[WORSE](https://www.lifeprint.com/asl101/pages-signs/w/worse.htm)
-  https://www.youtube.com/watch?v=fYPnhuf60B8 WORSE / worst (marked version)
-    trim: 11F-
-  https://www.youtube.com/watch?v=V1zJWMvuAy0 MULTIPLY / times (unmarked WORSE)
-    trim: 7F-
-  https://www.youtube.com/watch?v=xmAcKkPWGUE FIGURE-OUT
-    trim: 17F-71F
 
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm
