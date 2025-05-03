@@ -3667,8 +3667,8 @@ Lifeprint ASL https://www.youtube.com/watch?v=PJs5VaRTMak @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=PJs5VaRTMak @0- TAGS: 'Lifeprint lesson_12 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=PJs5VaRTMak @0- TEXT: 'THURSDAY-[H-version]'
 Lifeprint ASL https://www.youtube.com/watch?v=PKKSio0w4ao @0- MEDIA: "processed_youtube=PKKSio0w4ao_audio='strip'_clip=(0.13346666666666668, 2.3023000000000002).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=PKKSio0w4ao @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/than.htm">THAN</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=PKKSio0w4ao @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=PKKSio0w4ao @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson22.htm">lesson 22</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/more-than.htm">MORE-THAN</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=PKKSio0w4ao @0- TAGS: 'Lifeprint lesson_22 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=PKKSio0w4ao @0- TEXT: 'MORE-THAN / above'
 Lifeprint ASL https://www.youtube.com/watch?v=PMEE-ikVncA @0- MEDIA: "processed_youtube=PMEE-ikVncA_audio='strip'_clip=(0.5005000000000001, 2.2022).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=PMEE-ikVncA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/member.htm">MEMBER</a></p>\n'
