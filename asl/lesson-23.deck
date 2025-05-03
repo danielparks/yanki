@@ -6,6 +6,14 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
+  more: +md:[Classifier 4](https://lifeprint.com/asl101/pages-signs/c/cl4.htm)
+  https://www.youtube.com/watch?v=lrHDyp19VS8 a line of people (CL:4)
+    trim: 17F-79F
+  https://www.youtube.com/watch?v=lIPIfCi907o LEAK-ceiling (CL:4)
+    trim: 21F-69F
+  # I’m not sure how well the other videos on the page demonstrate CL:4.
+
+group:
   more: +md:[ADD](https://www.lifeprint.com/asl101/pages-signs/a/add.htm),
     [PLUS](https://www.lifeprint.com/asl101/pages-signs/p/plus.htm)
   https://www.youtube.com/watch?v=UW8kPYNv55A
@@ -15,7 +23,9 @@ group:
     trim: 12F-69F
 
 group:
-  more: +md:[ALTOGETHER](https://www.lifeprint.com/asl101/pages-signs/a/altogether.htm)
+  more: +md:[altogether](https://www.lifeprint.com/asl101/pages-signs/a/altogether.htm)
+  https://www.youtube.com/watch?v=zSGxsfWqEuE TOTAL / sum / altogether
+    trim: 6F-
 
 group:
   more: +md:[apartment](https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm)
@@ -34,9 +44,14 @@ group:
 
 group:
   more: +md:[DORM](https://www.lifeprint.com/asl101/pages-signs/d/dorm.htm)
+  https://www.youtube.com/watch?v=0Jv0eD-mEfM DORM
+    trim: 13F-58F
 
 group:
   more: +md:[DIVIDE](https://www.lifeprint.com/asl101/pages-signs/d/divide.htm)
+  https://www.youtube.com/watch?v=uppo_DVyQ7w DIVIDE
+    trim: 8F-62F
+  # Skipping specialized math version of divide.
 
 group:
   more: +md:[EXPLAIN](https://www.lifeprint.com/asl101/pages-signs/e/explain.htm)
@@ -50,6 +65,13 @@ group:
 
 group:
   more: +md:[FRESHMAN](https://www.lifeprint.com/asl101/pages-signs/f/freshman.htm)
+  https://www.youtube.com/watch?v=s1eAjTGplM4 FRESHMAN-year
+    trim: 18F-89F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=sYgnTw77hk8
+    RAT (initialized version) / rodent / freshman (slang)
+    trim: 13F-61F
 
 group:
   more: +md:[FAIL](https://www.lifeprint.com/asl101/pages-signs/f/fail.htm),
@@ -62,9 +84,22 @@ group:
 
 group:
   more: +md:[JUNIOR](https://www.lifeprint.com/asl101/pages-signs/j/junior.htm)
+  https://www.youtube.com/watch?v=ug8axNvh-zw JUNIOR-year
+    trim: 18F-89F
+  https://www.youtube.com/watch?v=XTlb5BoyCJE J-R / junior year
+    trim: 9F-61F
 
 group:
   more: +md:[MATH](https://www.lifeprint.com/asl101/pages-signs/m/math.htm)
+  https://www.youtube.com/watch?v=QFcBzZ1pPLg MATH
+    trim: 33F-103F
+  https://www.youtube.com/watch?v=st2jLkvVAI0 ALGEBRA
+    trim: 6F-67F
+  https://www.youtube.com/watch?v=s_AX4L_jweQ CALCULUS
+    trim: 8F-
+  https://www.youtube.com/watch?v=6ixIKj8Bjks T-R-I-G / trigonometry
+    trim: 7F-
+  # No individual video for GEOMETRY or T-hand version of TRIGONOMETRY.
 
 group:
   more: +md:[NUMBER](https://www.lifeprint.com/asl101/pages-signs/n/number.htm)
@@ -73,6 +108,11 @@ group:
 
 group:
   more: +md:[POST](https://www.lifeprint.com/asl101/pages-signs/p/post.htm)
+  https://www.youtube.com/watch?v=Vr_huYCjj6M POST-to-social-media
+    trim: 33F-78F
+  https://www.youtube.com/watch?v=XpYJGN2qqCI
+    POST-physically / tack up / put up flyers
+    trim: 10F-67F
 
 group:
   more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
@@ -86,13 +126,20 @@ group:
 
 group:
   more: +md:[SOPHOMORE](https://www.lifeprint.com/asl101/pages-signs/s/sophomore.htm)
+  https://www.youtube.com/watch?v=_xaSelvZoDs SOPHOMORE-year
+    trim: 7F-53F
 
 group:
   more: +md:[SENIOR](https://www.lifeprint.com/asl101/pages-signs/s/senior.htm)
+  https://www.youtube.com/watch?v=y1HjpS06Ufw SENIOR-year
+    trim: 13F-77F
 
 group:
   more: +md:[TAKE-AWAY](https://www.lifeprint.com/asl101/pages-signs/t/takeaway.htm)
-  # Used as DRAWBACK in person, see https://www.handspeak.com/word/10169/
+  https://www.youtube.com/watch?v=ddRNmsKoSac
+    TAKE-AWAY / subtract / deduct from / minus
+    trim: 9F-60F
+  # Used as “drawback” in person, see https://www.handspeak.com/word/10169/
   https://www.youtube.com/watch?v=rFf-WYLmkmw NEGATIVE / minus / drawback
     trim: 6F-72F
 
