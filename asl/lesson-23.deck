@@ -6,20 +6,31 @@ audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
 group:
-  more: +md:[ADD](https://www.lifeprint.com/asl101/pages-signs/a/add.htm)
+  more: +md:[ADD](https://www.lifeprint.com/asl101/pages-signs/a/add.htm),
+    [PLUS](https://www.lifeprint.com/asl101/pages-signs/p/plus.htm)
+  https://www.youtube.com/watch?v=UW8kPYNv55A
+    ADD-to / additional / extra / bonus
+    trim: 9F-51F
+  https://www.youtube.com/watch?v=15Kyw3b2f70 PLUS
+    trim: 12F-69F
 
 group:
   more: +md:[ALTOGETHER](https://www.lifeprint.com/asl101/pages-signs/a/altogether.htm)
 
 group:
-  more: +md:[APARTMENT](https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm)
+  more: +md:[apartment](https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm)
+  https://www.youtube.com/watch?v=DyYb5Y2efP4 apartment / A-P-T
+    trim: 8F-72F
 
-group:
-  more: +md:[BOOKSTORE](https://www.lifeprint.com/asl101/pages-signs/b/bookstore.htm)
+# BOOKSTORE was in lesson 10.
 
 group:
   more: +md:[CAFETERIA](https://www.lifeprint.com/asl101/pages-signs/c/cafeteria.htm),
     [RESTAURANT](https://www.lifeprint.com/asl101/pages-signs/r/restaurant.htm)
+  https://www.youtube.com/watch?v=TXgVQkDoMEc CAFETERIA / café
+    trim: 7F-
+  https://www.youtube.com/watch?v=AAA7dpfXuKs RESTAURANT
+    trim: 10F-59F
 
 group:
   more: +md:[DORM](https://www.lifeprint.com/asl101/pages-signs/d/dorm.htm)
@@ -29,18 +40,25 @@ group:
 
 group:
   more: +md:[EXPLAIN](https://www.lifeprint.com/asl101/pages-signs/e/explain.htm)
+  https://www.youtube.com/watch?v=2Na_TOtHw2E EXPLAIN / describe / instructions
+    trim: 27F-92F
 
 group:
   more: +md:[ENGLISH](https://www.lifeprint.com/asl101/pages-signs/e/english.htm)
+  https://www.youtube.com/watch?v=w5Nl4IRS450 ENGLISH / England
+    trim: 13F-58F
 
 group:
   more: +md:[FRESHMAN](https://www.lifeprint.com/asl101/pages-signs/f/freshman.htm)
 
 group:
-  more: +md:[FLUNK](https://www.lifeprint.com/asl101/pages-signs/f/flunk.htm)
-
-group:
-  more: +md:[FAIL](https://www.lifeprint.com/asl101/pages-signs/f/fail.htm)
+  more: +md:[FAIL](https://www.lifeprint.com/asl101/pages-signs/f/fail.htm),
+    [FLUNK](https://www.lifeprint.com/asl101/pages-signs/f/flunk.htm)
+  https://www.youtube.com/watch?v=H0M84NM6rw8 FAIL (general version)
+    trim: 38F-102F
+  https://www.youtube.com/watch?v=egPSg8R1wUg FLUNK / fail class / F grade
+    trim: 35F-116F
+  # LOSE-competition was in lesson 18.
 
 group:
   more: +md:[JUNIOR](https://www.lifeprint.com/asl101/pages-signs/j/junior.htm)
@@ -50,18 +68,21 @@ group:
 
 group:
   more: +md:[NUMBER](https://www.lifeprint.com/asl101/pages-signs/n/number.htm)
+  https://www.youtube.com/watch?v=ClNyMzf07dQ NUMBER
+    trim: 13F-76F
 
 group:
   more: +md:[POST](https://www.lifeprint.com/asl101/pages-signs/p/post.htm)
 
 group:
-  more: +md:[PLUS](https://www.lifeprint.com/asl101/pages-signs/p/plus.htm)
-
-group:
   more: +md:[PASS](https://www.lifeprint.com/asl101/pages-signs/p/pass.htm)
+  https://www.youtube.com/watch?v=PW2xc3rSnRQ PASS
+    trim: 8F-61F
 
 group:
   more: +md:[STUDY](https://www.lifeprint.com/asl101/pages-signs/s/study.htm)
+  https://www.youtube.com/watch?v=T0b3hn1skVQ STUDY
+    trim: 16F-76F
 
 group:
   more: +md:[SOPHOMORE](https://www.lifeprint.com/asl101/pages-signs/s/sophomore.htm)
@@ -71,6 +92,16 @@ group:
 
 group:
   more: +md:[TAKE-AWAY](https://www.lifeprint.com/asl101/pages-signs/t/takeaway.htm)
+  # Used as DRAWBACK in person, see https://www.handspeak.com/word/10169/
+  https://www.youtube.com/watch?v=rFf-WYLmkmw NEGATIVE / minus / drawback
+    trim: 6F-72F
 
 group:
   more: +md:[WORSE](https://www.lifeprint.com/asl101/pages-signs/w/worse.htm)
+  https://www.youtube.com/watch?v=fYPnhuf60B8 WORSE / worst (marked version)
+    trim: 11F-
+  https://www.youtube.com/watch?v=V1zJWMvuAy0 MULTIPLY / times (unmarked WORSE)
+    trim: 7F-
+  https://www.youtube.com/watch?v=xmAcKkPWGUE FIGURE-OUT
+    trim: 17F-71F
+
