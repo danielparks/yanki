@@ -42,9 +42,6 @@ https://www.youtube.com/watch?v=dT8Qpx0ty5o DIFFERENT DIFFERENT / various
 https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
   trim: 9F-61F
 
-https://www.youtube.com/watch?v=XVgP90cND4M ENOUGH / sufficient
-  trim: 6F-78F
-
 https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST
   trim: 4F-55F
 
@@ -75,10 +72,6 @@ https://www.youtube.com/watch?v=D8eeM75bKiA HOPE (R-hands version)
 
 https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
   trim: 5F-78F
-
-https://www.youtube.com/watch?v=a5dE5ouT1dw
-  incremental-IMPROVE / improving bit by bit
-  trim: 23F-86F
 
 https://www.youtube.com/watch?v=NCvURDLrHNM KID / kids
   trim: 11F-72F
@@ -502,12 +495,6 @@ group:
     trim: 6F-71F
 
 group:
-  more: +md:[DURING](https://www.lifeprint.com/asl101/pages-signs/d/during.htm)
-  https://www.youtube.com/watch?v=fNCSWnHOCgI
-    DURING / while / meanwhile / parallel / alongside
-    trim: 10F-69F
-
-group:
   more: +md:[FALL-IN-LOVE](https://www.lifeprint.com/asl101/pages-signs/f/fallinlove.htm)
   https://www.youtube.com/watch?v=4PE5u8lfxs4 FALL-IN-LOVE
     trim: 10F-83F
@@ -657,11 +644,6 @@ group:
   https://www.youtube.com/watch?v=nwYLaBzkSMw ->
     NEAR / close by / close to (pat hand version)
     trim: 9F-82F
-
-group:
-  more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
-  https://www.youtube.com/watch?v=nEwU553Q8tE OTHER
-    trim: 3F-69F
 
 group:
   more: +md:[OWE](https://www.lifeprint.com/asl101/pages-signs/o/owe.htm)
@@ -902,22 +884,9 @@ group:
     trim: 12F-71F
 
 group:
-  more: +md:[STRANGE](https://www.lifeprint.com/asl101/pages-signs/s/strange.htm)
-  https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
-    trim: 4F-60F
-
-group:
   more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
   https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
     trim: 13F-68F
-
-group:
-  more: +md:[SUCCEED](https://www.lifeprint.com/asl101/pages-signs/s/succeed.htm)
-  https://www.youtube.com/watch?v=SrzPozIawec
-    SUCCESS / succeed / accomplish / managed to
-    trim: 16F-
-  https://www.youtube.com/watch?v=y-o6GhUKPbI PAH! / succeed finally
-    trim: 25F-73F
 
 group:
   more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/support.htm)
@@ -936,32 +905,10 @@ group:
     trim: 10F-55F
 
 group:
-  more: +md:[THAN](https://www.lifeprint.com/asl101/pages-signs/t/than.htm)
-  https://www.youtube.com/watch?v=tJEiWP-t7vM THAN
-    trim: 9F-
-  https://www.youtube.com/watch?v=k1gbEtvnv_U LESS-THAN / below
-    trim: 8F-55F
-  https://www.youtube.com/watch?v=4cXuJHTunR0 LESS
-    trim: 16F-65F
-  https://www.youtube.com/watch?v=GoWQcHeKxbs LIMIT / contain
-    trim: 10F-67F
-  https://www.youtube.com/watch?v=Z9GwJUmZijE MAXIMUM / up to
-    trim: 9F-70F
-  # Not the same sign as the page says, but it matches handspeak.com:
-  https://www.youtube.com/watch?v=XUQ5dC95Euk MINIMUM / at least
-    trim: 4F-57F
-
-group:
   more: +md:[THEATER](https://www.lifeprint.com/asl101/pages-signs/t/theater.htm)
   https://www.youtube.com/watch?v=ZaxcUQkJ2a4
     THEATER / act / drama / play / show
     trim: 14F-75F
-
-group:
-  more: +md:[TOO-MUCH](https://www.lifeprint.com/asl101/pages-signs/t/too-much.htm)
-    (see also [TOO](https://www.lifeprint.com/asl101/pages-signs/t/too.htm))
-  https://www.youtube.com/watch?v=eulS8NwDgVo TOO-MUCH
-    trim: 9F-64F
 
 group:
   more: +md:[TRY](https://www.lifeprint.com/asl101/pages-signs/t/try.htm)
@@ -1024,11 +971,6 @@ group:
   more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
   https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
     trim: 23F-
-
-group:
-  more: +md:[WORRY](https://www.lifeprint.com/asl101/pages-signs/w/worry.htm)
-  https://www.youtube.com/watch?v=HX-57T9JTwI WORRY
-    trim: 10F-80F
 
 group:
   more: +md:[YOGURT](https://www.lifeprint.com/asl101/pages-signs/y/yogurt.htm)
@@ -1101,11 +1043,6 @@ https://www.youtube.com/watch?v=nrmuwGd7wMA TEXT-[verb-form/texted]
   trim: 15F-55F
 https://www.youtube.com/watch?v=_QQODnTMuZg TEXTING
   trim: 25F-75F
-https://www.youtube.com/watch?v=ZN_y94vSCcc say-NO-to-me
-  trim: 13F-58F
-https://www.youtube.com/watch?v=OMC3x4UxQVQ
-  [one-person]-SAY-NO-TO-[other-person]
-  trim: 13F-61F
 
 # Related to lesson 6
 https://www.youtube.com/watch?v=r7sKUtZZDK4 OLD-1 / 1-year-old
@@ -1262,6 +1199,23 @@ group:
   more: +md:[SHY](https://www.lifeprint.com/asl101/pages-signs/s/shy.htm)
   https://www.youtube.com/watch?v=O7dBt1V2b3Q SHY
     trim: 3F-67F
+
+# From lesson 24 video (https://www.youtube.com/watch?v=Z32sSxAW2gw)
+group:
+  more: +md:[ANGEL](https://www.lifeprint.com/asl101/pages-signs/a/angel.htm)
+  https://www.youtube.com/watch?v=MRKKCkGXUag ANGEL
+    trim: 13F-54F
+
+group:
+  more: +md:[ANSWER](https://www.lifeprint.com/asl101/pages-signs/a/answer.htm)
+  https://www.youtube.com/watch?v=3ek2F_YThm4 ANSWER / order / report / respond
+    trim: 6F-53F
+
+group:
+  more: +md:[STUCK](https://www.lifeprint.com/asl101/pages-signs/s/stuck.htm)
+  https://www.youtube.com/watch?v=XqpsPBnD-Qg
+    STUCK / trapped / victim / unwanted pregnancy
+    trim: 16F-60F
 
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm
