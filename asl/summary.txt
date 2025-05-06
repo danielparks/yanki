@@ -1050,7 +1050,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=3cMNYOqgCZA @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=3cMNYOqgCZA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/leave.htm">LEAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=3cMNYOqgCZA @0- TAGS: 'Lifeprint extra lesson_18 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=3cMNYOqgCZA @0- TEXT: 'evacuate / flee / ESCAPE++ LEAVE'
-Lifeprint ASL https://www.youtube.com/watch?v=3cdkvRyKtgU @0- MEDIA: "processed_youtube=3cdkvRyKtgU_audio='strip'_clip=(1.1011, 3.7370666666666668).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=3cdkvRyKtgU @0- MEDIA: 'processed_youtube=3cdkvRyKtgU_06c737ea147707f2519f6c2bac011f92.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=3cdkvRyKtgU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/time.htm">TIME</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=3cdkvRyKtgU @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=3cdkvRyKtgU @0- TEXT: '2:37 PM'
@@ -3034,7 +3034,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=JFuewx99kL0 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=JFuewx99kL0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/thick.htm">THICK</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=JFuewx99kL0 @0- TAGS: 'Lifeprint lesson_20 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=JFuewx99kL0 @0- TEXT: 'THICK (cheek version)'
-Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- MEDIA: "processed_youtube=JJo858HQCkg_audio='strip'_clip=(1.4347666666666667, 3.7370666666666668).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- MEDIA: 'processed_youtube=JJo858HQCkg_e3b7b871e89e6f8ac7d21ad73ddd3a35.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/time.htm">TIME</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=JJo858HQCkg @0- TEXT: '8:30 AM'
@@ -7406,7 +7406,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=smPpqc0kwFE @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=smPpqc0kwFE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson15.htm">lesson 15</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/farm.htm">FARM</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=smPpqc0kwFE @0- TAGS: 'Lifeprint lesson_15 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=smPpqc0kwFE @0- TEXT: 'FARM (horizontal version)'
-Lifeprint ASL https://www.youtube.com/watch?v=sn5x4bbjbHk @0- MEDIA: "processed_youtube=sn5x4bbjbHk_audio='strip'_clip=(0.8675333333333334, 3.5035000000000003).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=sn5x4bbjbHk @0- MEDIA: 'processed_youtube=sn5x4bbjbHk_8932a3cfc9d66d3d87f19f4947c1cba7.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=sn5x4bbjbHk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/time.htm">TIME</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=sn5x4bbjbHk @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=sn5x4bbjbHk @0- TEXT: '2:19 AM'
