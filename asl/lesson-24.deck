@@ -7,9 +7,25 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[Classifier 5](https://lifeprint.com/asl101/pages-signs/c/cl5.htm)
+  # I’m not sure how many videos from this page to include — Dr Bill implies
+  # they are examples of Cl:5, but they seem more like CL:5 depictive signing
+  # that turned into real signs.
+  https://www.youtube.com/watch?v=lZ1pYiKLbdI
+    SCADS-of / mass of people, animals, or things (CL:5-claw)
+    trim: 10F-68F
+  https://www.youtube.com/watch?v=zIbjmNGrRNo PIANO / play piano (CL:5-claw)
+    trim: 9F-91F
+  https://www.youtube.com/watch?v=WlGF00cLjhM LEAF (CL:5)
+    trim: 16F-84F
+  https://www.youtube.com/watch?v=MpQR7sBZRrE TRAFFIC / in traffic (CL:5)
+    trim: 1F-57F
+  https://www.youtube.com/watch?v=xPwWoeXvL0c steam / WATER + CL:5
+    trim: 16F-94F
 
 group:
   more: +md:[ACCEPT](https://www.lifeprint.com/asl101/pages-signs/a/accept.htm)
+  https://www.youtube.com/watch?v=pHBb2dnUoEY ACCEPT
+    trim: 22F-73F
 
 group:
   more: +md:[DURING](https://www.lifeprint.com/asl101/pages-signs/d/during.htm)
@@ -19,12 +35,35 @@ group:
 
 group:
   more: +md:[DON’T-MIND](https://www.lifeprint.com/asl101/pages-signs/d/dontmind.htm)
+  https://www.youtube.com/watch?v=DvhWBrcn368 you-MIND?
+    trim: 5F-47F
+  https://www.youtube.com/watch?v=WB6-0ugJwT8 DON’T-MIND
+    trim: 12F-71F
 
 group:
   more: +md:[DECREASE](https://www.lifeprint.com/asl101/pages-signs/d/decrease.htm)
+  # FIXME could I trim the black bars off this?
+  https://www.youtube.com/watch?v=SYgjCBtyolY
+    DECREASE / lose weight / a cut in pay / go down
+    trim: 11F-94F
 
 group:
   more: +md:[DECLINE](https://www.lifeprint.com/asl101/pages-signs/d/decline.htm)
+  https://www.youtube.com/watch?v=apyYY0BOgL8
+    DECLINE / deteriorate / regress / go down hill
+    trim: 11F-72F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=CBdtfQg85bY THUMBS-DOWN / turn down / decline
+    trim: 16F-58F
+  https://www.youtube.com/watch?v=ZN_y94vSCcc say-NO-to-me
+    trim: 13F-58F
+  https://www.youtube.com/watch?v=OMC3x4UxQVQ
+    [one-person]-SAY-NO-TO-[other-person]
+    trim: 13F-61F
+  https://www.youtube.com/watch?v=5-p4gFMIdFk
+    DETERIORATE (A-hand version) / drown / sink / lose (e.g. hearing)
+    trim: 8F-68F
 
 group:
   more: +md:[ENOUGH](https://www.lifeprint.com/asl101/pages-signs/e/enough.htm)
@@ -36,14 +75,19 @@ group:
 
 group:
   more: +md:[HOW-MUCH](https://www.lifeprint.com/asl101/pages-signs/h/how-much.htm)
+  https://www.youtube.com/watch?v=z-BwDb6w7ws HOW-MUCH (one hand version)
+    trim: 14F-58F
 
 group:
   more: +md:[INCREASE](https://www.lifeprint.com/asl101/pages-signs/i/increase.htm)
+  https://www.youtube.com/watch?v=J_FPS7U_bbU
+    INCREASE / get a raise / gain weight / go up
+    trim: 13F-74F
 
 group:
   more: +md:[IMPROVE](https://www.lifeprint.com/asl101/pages-signs/i/improve.htm)
-
-  #### FIXME
+  https://www.youtube.com/watch?v=1ZI5ua7TMh4 IMPROVE
+    trim: 3F-57F
 
   tags: +extra
   # Not on the page, but it’s in the lesson video.
@@ -53,10 +97,16 @@ group:
 
 group:
   more: +md:[MISCHIEVOUS](https://www.lifeprint.com/asl101/pages-signs/m/mischievous.htm)
+  https://www.youtube.com/watch?v=Z9ZnJ5w17F0 MISCHIEVOUS
+    trim: 8F-71F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=ynfXfH4d0kU DEVIL / Satan / evil
+    trim: 11F-58F
 
 group:
   more: +md:[OTHER](https://www.lifeprint.com/asl101/pages-signs/o/other.htm)
-  https://www.youtube.com/watch?v=nEwU553Q8tE OTHER
+  https://www.youtube.com/watch?v=nEwU553Q8tE OTHER / else
     trim: 3F-69F
 
 group:
@@ -72,8 +122,7 @@ group:
   https://www.youtube.com/watch?v=mNf3_buUHm8 STRANGE
     trim: 4F-60F
 
-group:
-  more: +md:[SHUT](https://www.lifeprint.com/asl101/pages-signs/s/shut.htm)
+# SHUT is covered by OFF in lesson 8.
 
 group:
   more: +md:[THAN](https://www.lifeprint.com/asl101/pages-signs/t/than.htm)
