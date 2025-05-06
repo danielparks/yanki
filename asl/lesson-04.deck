@@ -165,13 +165,13 @@ group:
 
 group:
   more: +md:[Classifier V](https://www.lifeprint.com/asl101/pages-signs/c/clv.htm)
-  https://www.youtube.com/watch?v=B36qDOOtm20 WALK-TO (classifier V)
-  https://www.youtube.com/watch?v=0mG8riLnMg4 TOSS AND TURN (classifier V)
-  https://www.youtube.com/watch?v=XFfZVYvr7fs LIE DOWN (classifier V)
-  https://www.youtube.com/watch?v=gLrSY9yPNh4 GET-UP (classifier V)
+  https://www.youtube.com/watch?v=B36qDOOtm20 WALK-TO (CL:V)
+  https://www.youtube.com/watch?v=0mG8riLnMg4 TOSS AND TURN (CL:V)
+  https://www.youtube.com/watch?v=XFfZVYvr7fs LIE DOWN (CL:V)
+  https://www.youtube.com/watch?v=gLrSY9yPNh4 GET-UP (CL:V)
 
   tags: +extra
   # STAND is covered in lesson 5.
-  https://www.youtube.com/watch?v=RPIAjkVh1PU GET-UP (classifier bent-V)
-  https://www.youtube.com/watch?v=_CMXWiZJDPM JUMP (classifier V)
-  https://www.youtube.com/watch?v=rsiLP7wwn2w DIVE (classifier V)
+  https://www.youtube.com/watch?v=RPIAjkVh1PU GET-UP (CL:bent-V)
+  https://www.youtube.com/watch?v=_CMXWiZJDPM JUMP (CL:V)
+  https://www.youtube.com/watch?v=rsiLP7wwn2w DIVE (CL:V)
