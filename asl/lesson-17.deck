@@ -47,7 +47,7 @@ group:
     trim: 8F-63F
   https://www.youtube.com/watch?v=ZQsxcjnXOdk -> DISH / plate (rounded)
     trim: 5F-53F
-  https://www.youtube.com/watch?v=S8wey-YGD9I -> DISH / plate (classifier LL)
+  https://www.youtube.com/watch?v=S8wey-YGD9I -> DISH / plate (CL:LL)
     trim: 3F-56F
   https://www.youtube.com/watch?v=WcciABj5yCY -> DISH / plate (Y-hands)
     trim: 16F-56F

@@ -53,7 +53,7 @@ group:
 
 group:
   more: +md:[CRASH](https://www.lifeprint.com/asl101/pages-signs/c/crash.htm)
-  https://www.youtube.com/watch?v=G3z4RviEFLs car-CRASH (classifier 3)
+  https://www.youtube.com/watch?v=G3z4RviEFLs car-CRASH (CL:3)
     trim: 4F-65F
   https://www.youtube.com/watch?v=qKjTQ7pkclk -> car-CRASH (5-hand version)
     trim: 12F-79F
@@ -62,7 +62,7 @@ group:
   more: +md:[ELEVATOR](https://www.lifeprint.com/asl101/pages-signs/e/elevator.htm)
   https://www.youtube.com/watch?v=ztBZaV2yoxs ELEVATOR (E-hand version)
     trim: 14F-64F
-  https://www.youtube.com/watch?v=JdQtf0sl5KI ELEVATOR (Classifier V version)
+  https://www.youtube.com/watch?v=JdQtf0sl5KI ELEVATOR (CL:V version)
     trim: 17F-73F
 
 # ENJOY is in lesson 14.
@@ -96,13 +96,13 @@ group:
 
 group:
   more: +md:[HELICOPTER](https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm)
-  https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER (classifier 3)
+  https://www.youtube.com/watch?v=hdiSoTueeN0 HELICOPTER (CL:3)
     trim: 16F-78F
-  https://www.youtube.com/watch?v=FxcrY6piGv8 helicopter / DRONE (classifier 1)
+  https://www.youtube.com/watch?v=FxcrY6piGv8 helicopter / DRONE (CL:1)
     trim: 4F-65F
 
   tags: +extra
-  https://www.youtube.com/watch?v=2WBXjTIMk4c HELICOPTER-fly-away (classifier 3)
+  https://www.youtube.com/watch?v=2WBXjTIMk4c HELICOPTER-fly-away (CL:3)
     trim: 8F-
 
 group:
