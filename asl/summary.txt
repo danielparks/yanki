@@ -4098,7 +4098,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=SWefjHHUouc @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=SWefjHHUouc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/v/visit.htm">VISIT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=SWefjHHUouc @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=SWefjHHUouc @0- TEXT: 'VISIT-other-person'
-Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- MEDIA: "processed_youtube=SYgjCBtyolY_audio='strip'_clip=(0.3670333333333333, 3.1364666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- MEDIA: 'processed_youtube=SYgjCBtyolY_dd254b040260659a66a83cb06bf9de15.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson24.htm">lesson 24</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/decrease.htm">DECREASE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- TAGS: 'Lifeprint lesson_24 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- TEXT: 'DECREASE / lose weight / a cut in pay / go down'
