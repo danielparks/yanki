@@ -549,7 +549,7 @@ group:
 
 group:
   more: +md:[GUESS](https://www.lifeprint.com/asl101/pages-signs/g/guess.htm)
-  https://www.youtube.com/watch?v=B5oB0HgAxVo GUESS / miss (miss as in fail)
+  https://www.youtube.com/watch?v=B5oB0HgAxVo GUESS / miss (e.g. fail to catch)
     trim: 10F-58F
 
 group:
@@ -644,6 +644,11 @@ group:
   more: +md:[MIRROR](https://www.lifeprint.com/asl101/pages-signs/m/mirror.htm)
   https://www.youtube.com/watch?v=uRxfofBY88M MIRROR
     trim: 6F-74F
+
+group:
+  more: +md:[MISS](https://www.lifeprint.com/asl101/pages-signs/m/miss.htm)
+  https://www.youtube.com/watch?v=ZT-SHd3kPaA MISS (emotion)
+    trim: 8F-58F
 
 group:
   more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
