@@ -179,12 +179,16 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=Bs-g8nPWjZ4 PUNCTUAL / ON-TIME / SHARP
     trim: 8F-46F
+  # Crop off horizontal black bars.
   https://www.youtube.com/watch?v=sn5x4bbjbHk 2:19 AM
     trim: 26F-105F
+    crop: in_w:in_h*0.84
   https://www.youtube.com/watch?v=JJo858HQCkg 8:30 AM
     trim: 43F-112F
+    crop: in_w:in_h*0.84
   https://www.youtube.com/watch?v=3cdkvRyKtgU 2:37 PM
     trim: 33F-112F
+    crop: in_w:in_h*0.84
 
 https://www.youtube.com/watch?v=bloIqtYN8fI
   TRUE / authentic / real / sure / indeed
