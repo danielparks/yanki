@@ -1285,7 +1285,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=5at1_2gIhfg @0- TEXT: 'YOUR GRANDP
 Lifeprint ASL https://www.youtube.com/watch?v=5blPNuezesY @0- MEDIA: "processed_youtube=5blPNuezesY_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5blPNuezesY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>Do you know how to make soup?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5blPNuezesY @0- TAGS: 'Lifeprint lesson_11 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=5blPNuezesY @0- TEXT: 'SOUP, YOU KNOW HOW MAKE?'
+Lifeprint ASL https://www.youtube.com/watch?v=5blPNuezesY @0- TEXT: 'SOUP, YOU KNOW HOW MAKE YOU?'
 Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- MEDIA: "processed_youtube=5dsbpDoszc8_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<h3>Which do you like better, summer or winter?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5dsbpDoszc8 @0- TAGS: 'Lifeprint lesson_14 phrase'
