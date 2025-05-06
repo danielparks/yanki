@@ -1981,7 +1981,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=B59eweLn9L4 @0- TEXT: 'SHOES, YOU 
 Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- MEDIA: "processed_youtube=B5oB0HgAxVo_audio='strip'_clip=(0.33366666666666667, 1.9352666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/guess.htm">GUESS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- TEXT: 'GUESS / miss (miss as in fail)'
+Lifeprint ASL https://www.youtube.com/watch?v=B5oB0HgAxVo @0- TEXT: 'GUESS / miss (e.g. fail to catch)'
 Lifeprint ASL https://www.youtube.com/watch?v=B6XFueApI3E @0.5005000000000001-1.0343666666666667 MEDIA: "processed_youtube=B6XFueApI3E_audio='strip'_clip=(0.5005000000000001, 1.0343666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=B6XFueApI3E @0.5005000000000001-1.0343666666666667 MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson19.htm">lesson 19</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/lonely.htm">LONELY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=B6XFueApI3E @0.5005000000000001-1.0343666666666667 TAGS: 'Lifeprint extra lesson_19 vocabulary'
@@ -4846,6 +4846,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=ZQsxcjnXOdk @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=ZQsxcjnXOdk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dish.htm">DISH</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ZQsxcjnXOdk @0- TAGS: 'Lifeprint lesson_17 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ZQsxcjnXOdk @0- TEXT: 'DISH / plate (rounded)'
+Lifeprint ASL https://www.youtube.com/watch?v=ZT-SHd3kPaA @0- MEDIA: "processed_youtube=ZT-SHd3kPaA_audio='strip'_clip=(0.26693333333333336, 1.9352666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=ZT-SHd3kPaA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/miss.htm">MISS</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=ZT-SHd3kPaA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=ZT-SHd3kPaA @0- TEXT: 'MISS (emotion)'
 Lifeprint ASL https://www.youtube.com/watch?v=ZXHHO_DY6_A @0- MEDIA: "processed_youtube=ZXHHO_DY6_A_audio='strip'_clip=(0.4337666666666667, 2.3356666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ZXHHO_DY6_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/happy.htm">HAPPY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ZXHHO_DY6_A @0- TAGS: 'Lifeprint first_100_signs lesson_04 vocabulary'
