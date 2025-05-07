@@ -1038,6 +1038,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=3RZWpOWlIaA @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=3RZWpOWlIaA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=3RZWpOWlIaA @0- TAGS: 'Lifeprint lesson_02 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=3RZWpOWlIaA @0- TEXT: 'YOU DIVORCE-[initialized] YOU?'
+Lifeprint ASL https://www.youtube.com/watch?v=3U4DPUagyio @0- MEDIA: "processed_youtube=3U4DPUagyio_audio='strip'_clip=(0.3003, 2.4024).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=3U4DPUagyio @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/pressure.htm">PRESSURE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=3U4DPUagyio @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=3U4DPUagyio @0- TEXT: 'OPPRESS / opression / to stress / to pressure'
 Lifeprint ASL https://www.youtube.com/watch?v=3_2Zyn10sZI @0- MEDIA: "processed_youtube=3_2Zyn10sZI_audio='strip'_clip=(0.7340666666666666, 2.8695333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=3_2Zyn10sZI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/stove.htm">STOVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=3_2Zyn10sZI @0- TAGS: 'Lifeprint extra lesson_09 vocabulary'
@@ -2838,6 +2842,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=HaB-QtL36VY @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=HaB-QtL36VY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/empty.htm">EMPTY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HaB-QtL36VY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=HaB-QtL36VY @0- TEXT: 'EMPTY / available / naked / nude'
+Lifeprint ASL https://www.youtube.com/watch?v=HaDbpvqx4FE @0- MEDIA: "processed_youtube=HaDbpvqx4FE_audio='strip'_clip=(0.26693333333333336, 2.1021).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=HaDbpvqx4FE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=HaDbpvqx4FE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=HaDbpvqx4FE @0- TEXT: 'POWER / powerful'
 Lifeprint ASL https://www.youtube.com/watch?v=HaLGrHjNu3s @0- MEDIA: "processed_youtube=HaLGrHjNu3s_audio='strip'_clip=(0.46713333333333334, 2.3690333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=HaLGrHjNu3s @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/a/apply.htm">APPLY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HaLGrHjNu3s @0- TAGS: 'Lifeprint lesson_21 vocabulary'
@@ -4102,6 +4110,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- MEDIA: 'processed_
 Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson24.htm">lesson 24</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/decrease.htm">DECREASE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- TAGS: 'Lifeprint lesson_24 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=SYgjCBtyolY @0- TEXT: 'DECREASE / lose weight / a cut in pay / go down'
+Lifeprint ASL https://www.youtube.com/watch?v=Sc0gDY54Tuk @0- MEDIA: "processed_youtube=Sc0gDY54Tuk_audio='strip'_clip=(0.20020000000000002, 2.435766666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=Sc0gDY54Tuk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/pressure.htm">PRESSURE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Sc0gDY54Tuk @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=Sc0gDY54Tuk @0- TEXT: 'PRESSURE / stress / tension'
 Lifeprint ASL https://www.youtube.com/watch?v=SgUwD_atMHo @0- MEDIA: "processed_youtube=SgUwD_atMHo_audio='strip'_clip=(0.3670333333333333, 2.5358666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=SgUwD_atMHo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/delicious.htm">DELICIOUS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=SgUwD_atMHo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -4437,7 +4449,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=VbnAR51lMaA @0- TEXT: 'PEA-BRAIN /
 Lifeprint ASL https://www.youtube.com/watch?v=VeEJdqN3-SA @0- MEDIA: "processed_youtube=VeEJdqN3-SA_audio='strip'_clip=(0.16683333333333333, 2.135466666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=VeEJdqN3-SA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=VeEJdqN3-SA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=VeEJdqN3-SA @0- TEXT: 'HOPE (formal version)'
+Lifeprint ASL https://www.youtube.com/watch?v=VeEJdqN3-SA @0- TEXT: 'HOPE / expect / anticipate (formal version)'
 Lifeprint ASL https://www.youtube.com/watch?v=ViMyWjx_qhU @0- MEDIA: "processed_youtube=ViMyWjx_qhU_audio='strip'_clip=(0.23356666666666667, 1.7684333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ViMyWjx_qhU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson22.htm">lesson 22</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cents.htm">CENTS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ViMyWjx_qhU @0- TAGS: 'Lifeprint lesson_22 vocabulary'
@@ -5213,7 +5225,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=aNilWTBIl0g @0- TEXT: 'PINK'
 Lifeprint ASL https://www.youtube.com/watch?v=aOyZk0caisk @0- MEDIA: "processed_youtube=aOyZk0caisk_audio='strip'_clip=(0.9676333333333333, 2.736066666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=aOyZk0caisk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=aOyZk0caisk @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=aOyZk0caisk @0- TEXT: 'HOPE (casual version)'
+Lifeprint ASL https://www.youtube.com/watch?v=aOyZk0caisk @0- TEXT: 'HOPE / expect / anticipate (casual version)'
 Lifeprint ASL https://www.youtube.com/watch?v=aPmr-RX9kvM @0- MEDIA: "processed_youtube=aPmr-RX9kvM_audio='strip'_clip=(0.0, 1.4681333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=aPmr-RX9kvM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson22.htm">lesson 22</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/pay.htm">PAY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=aPmr-RX9kvM @0- TAGS: 'Lifeprint lesson_22 vocabulary'
@@ -7666,6 +7678,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=uppo_DVyQ7w @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=uppo_DVyQ7w @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson23.htm">lesson 23</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/divide.htm">DIVIDE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=uppo_DVyQ7w @0- TAGS: 'Lifeprint lesson_23 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=uppo_DVyQ7w @0- TEXT: 'DIVIDE'
+Lifeprint ASL https://www.youtube.com/watch?v=urAudhimoUY @0- MEDIA: "processed_youtube=urAudhimoUY_audio='strip'_clip=(0.3003, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=urAudhimoUY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/schedule.htm">SCHEDULE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=urAudhimoUY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=urAudhimoUY @0- TEXT: 'SCHEDULE / chart / graph'
 Lifeprint ASL https://www.youtube.com/watch?v=utAS6HfhNuQ @0- MEDIA: "processed_youtube=utAS6HfhNuQ_audio='strip'_clip=(0.0, 2.3356666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=utAS6HfhNuQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/come.htm">COME</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=utAS6HfhNuQ @0- TAGS: 'Lifeprint first_100_signs lesson_03 vocabulary'
