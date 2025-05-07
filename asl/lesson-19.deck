@@ -32,8 +32,10 @@ group:
 
 group:
   more: +md:[EMBARRASSED](https://www.lifeprint.com/asl101/pages-signs/e/embarrassed.htm)
+  # Crop off horizontal black bars.
   https://www.youtube.com/watch?v=k8D2AzVJlVI EMBARRASSED
     trim: 10F-67F
+    crop: in_w:in_h*0.84
 
   tags: +extra
   https://www.youtube.com/watch?v=ekHp_oJtklI

@@ -514,7 +514,7 @@ Lifeprint ASL 9th MEDIA: 'processed_youtube=MtjJZnbk9GA_fbcefb16b526897fcbc5685c
 Lifeprint ASL 9th MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/pages-signs/n/numbersordianlandcardinal.htm">Cardinal and Ordinal numbers</a></p>\n'
 Lifeprint ASL 9th TAGS: 'Lifeprint numbers::ordinal::1-9'
 Lifeprint ASL 9th TEXT: '9th'
-Lifeprint ASL https://lifeprint.com/asl101/videos/you-think-asl-teacher-earn-too-much.mp4 @0- MEDIA: "processed_https\\=||lifeprint.com|asl101|videos|you-think-asl-teacher-earn-too-much.mp4_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://lifeprint.com/asl101/videos/you-think-asl-teacher-earn-too-much.mp4 @0- MEDIA: 'processed_https\\=||lifeprint.com|asl101|videos|you-think-asl-teacher-earn-too-much.mp4_d9b34d057b1e5141d672e405a364d1ed.mp4'
 Lifeprint ASL https://lifeprint.com/asl101/videos/you-think-asl-teacher-earn-too-much.mp4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson24.htm">lesson 24</a></p>\n<h3>Do you think ASL teachers earn too much?</h3>\n'
 Lifeprint ASL https://lifeprint.com/asl101/videos/you-think-asl-teacher-earn-too-much.mp4 @0- TAGS: 'Lifeprint lesson_24 phrase'
 Lifeprint ASL https://lifeprint.com/asl101/videos/you-think-asl-teacher-earn-too-much.mp4 @0- TEXT: 'YOU THINK ASL TEACHER EARN TOO-MUCH?'
@@ -6398,7 +6398,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=k6CKj7r4Rwk @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=k6CKj7r4Rwk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson15.htm">lesson 15</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/waiter.htm">WAITER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=k6CKj7r4Rwk @0- TAGS: 'Lifeprint lesson_15 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=k6CKj7r4Rwk @0- TEXT: 'CATERER / waiter (horns)'
-Lifeprint ASL https://www.youtube.com/watch?v=k8D2AzVJlVI @0- MEDIA: "processed_youtube=k8D2AzVJlVI_audio='strip'_clip=(0.33366666666666667, 2.2355666666666667).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=k8D2AzVJlVI @0- MEDIA: 'processed_youtube=k8D2AzVJlVI_f9fb8456850a62f706382dfd369716e3.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=k8D2AzVJlVI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson19.htm">lesson 19</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/embarrassed.htm">EMBARRASSED</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=k8D2AzVJlVI @0- TAGS: 'Lifeprint lesson_19 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=k8D2AzVJlVI @0- TEXT: 'EMBARRASSED'
