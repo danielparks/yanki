@@ -63,12 +63,18 @@ https://www.youtube.com/watch?v=jATmWcd1TkA GULLIBLE (idiomatic)
 https://www.youtube.com/watch?v=fRwF6AVi17I HANDSOME
   trim: 16F-63F
 
-https://www.youtube.com/watch?v=aOyZk0caisk HOPE (casual version)
-  trim: 29F-82F
-https://www.youtube.com/watch?v=VeEJdqN3-SA HOPE (formal version)
-  trim: 5F-64F
-https://www.youtube.com/watch?v=D8eeM75bKiA HOPE (R-hands version)
-  trim: 4F-
+group:
+  # Handspeak makes a distinction that Dr Bill does not seem to:
+  # EXPECT: https://www.handspeak.com/word/2551/
+  # HOPE: https://www.handspeak.com/word/1052/
+  https://www.youtube.com/watch?v=aOyZk0caisk
+    HOPE / expect / anticipate (casual version)
+    trim: 29F-82F
+  https://www.youtube.com/watch?v=VeEJdqN3-SA
+    HOPE / expect / anticipate (formal version)
+    trim: 5F-64F
+  https://www.youtube.com/watch?v=D8eeM75bKiA HOPE (R-hands version)
+    trim: 4F-
 
 https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
   trim: 5F-78F
@@ -128,6 +134,9 @@ https://www.youtube.com/watch?v=kD8IproL1DA plastic / FLEXIBLE
 
 https://www.youtube.com/watch?v=Ejyz4IJMBY8 POOR
   trim: 6F-65F
+
+https://www.youtube.com/watch?v=HaDbpvqx4FE POWER / powerful
+  trim: 8F-63F
 
 https://www.youtube.com/watch?v=w_mzf_ZB2Lk PREDICT / foresight / foresee
   trim: 14F-68F
@@ -721,6 +730,14 @@ group:
     trim: 16F-75F
 
 group:
+  more: +md:[PRESSURE](https://www.lifeprint.com/asl101/pages-signs/p/pressure.htm)
+  https://www.youtube.com/watch?v=Sc0gDY54Tuk PRESSURE / stress / tension
+    trim: 6F-73F
+  https://www.youtube.com/watch?v=3U4DPUagyio
+    OPPRESS / opression / to stress / to pressure
+    trim: 9F-72F
+
+group:
   more: +md:[PROBLEM](https://www.lifeprint.com/asl101/pages-signs/p/problem.htm)
   https://www.youtube.com/watch?v=eNutcT89QIQ PROBLEM / difficulty
     trim: 12F-57F
@@ -781,6 +798,12 @@ group:
     trim: 9F-58F
   https://www.youtube.com/watch?v=yYGGHFP2MRs SAVE / safe / saved
     trim: 6F-66F
+
+group:
+  more: +md:[SCHEDULE](https://www.lifeprint.com/asl101/pages-signs/s/schedule.htm)
+  https://www.youtube.com/watch?v=urAudhimoUY SCHEDULE / chart / graph
+    trim: 9F-
+  # Can’t find one handed version of CHART / graph video
 
 group:
   more: +md:[SEASON](https://www.lifeprint.com/asl101/pages-signs/s/season.htm)
