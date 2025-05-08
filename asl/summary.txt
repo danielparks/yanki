@@ -773,7 +773,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=11ORsvXfqpM @0- TEXT: 'YOUR SUPERV
 Lifeprint ASL https://www.youtube.com/watch?v=12eeoE4uG_k @0- MEDIA: "processed_youtube=12eeoE4uG_k_audio='strip'_clip=(0.5005000000000001, 2.3356666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=12eeoE4uG_k @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/bed.htm">BED</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=12eeoE4uG_k @0- TAGS: 'Lifeprint lesson_04 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=12eeoE4uG_k @0- TEXT: 'BED (one handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=12eeoE4uG_k @0- TEXT: 'BED (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=15Kyw3b2f70 @0- MEDIA: "processed_youtube=15Kyw3b2f70_audio='strip'_clip=(0.40040000000000003, 2.3023000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=15Kyw3b2f70 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson23.htm">lesson 23</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/a/add.htm">ADD</a>,\n<a href="https://www.lifeprint.com/asl101/pages-signs/p/plus.htm">PLUS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=15Kyw3b2f70 @0- TAGS: 'Lifeprint lesson_23 vocabulary'
@@ -781,7 +781,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=15Kyw3b2f70 @0- TEXT: 'PLUS'
 Lifeprint ASL https://www.youtube.com/watch?v=15czV0-SagI @0- MEDIA: "processed_youtube=15czV0-SagI_audio='strip'_clip=(0.3670333333333333, 2.5692333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=15czV0-SagI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm">CLOTHES</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=15czV0-SagI @0- TAGS: 'Lifeprint lesson_08 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=15czV0-SagI @0- TEXT: 'CLOTHES (two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=15czV0-SagI @0- TEXT: 'CLOTHES (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=16IrDecIl_k @0- MEDIA: "processed_youtube=16IrDecIl_k_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=16IrDecIl_k @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson15.htm">lesson 15</a></p>\n<h3>What is the sign for “scientist?”</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=16IrDecIl_k @0- TAGS: 'Lifeprint lesson_15 phrase'
@@ -1137,7 +1137,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=4MVeZA49PNk @0- TEXT: 'RAIN-HARD'
 Lifeprint ASL https://www.youtube.com/watch?v=4Md8yfrXzp8 @0- MEDIA: "processed_youtube=4Md8yfrXzp8_audio='strip'_clip=(1.5682333333333334, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4Md8yfrXzp8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/later.htm">LATER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4Md8yfrXzp8 @0- TAGS: 'Lifeprint lesson_16 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=4Md8yfrXzp8 @0- TEXT: 'LATER (one handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=4Md8yfrXzp8 @0- TEXT: 'LATER (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=4Mv3bZYVhT4 @0- MEDIA: "processed_youtube=4Mv3bZYVhT4_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4Mv3bZYVhT4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<h3>Do you like ketchup on your eggs?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4Mv3bZYVhT4 @0- TAGS: 'Lifeprint lesson_17 phrase'
@@ -1217,7 +1217,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=4vABNRuGfRw @0- TEXT: 'SHOW / disp
 Lifeprint ASL https://www.youtube.com/watch?v=4xwu8BWdfus @0- MEDIA: "processed_youtube=4xwu8BWdfus_audio='strip'_clip=(0.26693333333333336, 2.2355666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4xwu8BWdfus @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/child.htm">CHILD</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4xwu8BWdfus @0- TAGS: 'Lifeprint lesson_02 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=4xwu8BWdfus @0- TEXT: 'CHILDREN (one hand)'
+Lifeprint ASL https://www.youtube.com/watch?v=4xwu8BWdfus @0- TEXT: 'CHILDREN (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=4yKyCDC-Tdc @0- MEDIA: "processed_youtube=4yKyCDC-Tdc_audio='strip'_clip=(0.5005000000000001, 2.2022).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=4yKyCDC-Tdc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/banana.htm">BANANA</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=4yKyCDC-Tdc @0- TAGS: 'Lifeprint lesson_17 vocabulary'
@@ -1317,7 +1317,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=5kmIFjhWwyM @0- TEXT: 'last-YEAR T
 Lifeprint ASL https://www.youtube.com/watch?v=5ldQgko88Ms @0- MEDIA: "processed_youtube=5ldQgko88Ms_audio='strip'_clip=(0.40040000000000003, 2.0687333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5ldQgko88Ms @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/child.htm">CHILD</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5ldQgko88Ms @0- TAGS: 'Lifeprint lesson_02 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=5ldQgko88Ms @0- TEXT: 'CHILDREN (two hands)'
+Lifeprint ASL https://www.youtube.com/watch?v=5ldQgko88Ms @0- TEXT: 'CHILDREN (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- MEDIA: "processed_youtube=5lhQHdin_5g_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>What type of people do you like?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=5lhQHdin_5g @0- TAGS: 'Lifeprint lesson_11 phrase'
@@ -1441,7 +1441,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=6gFOZMDptIk @0- TEXT: 'TOMORROW'
 Lifeprint ASL https://www.youtube.com/watch?v=6h0sXdprq8I @0- MEDIA: "processed_youtube=6h0sXdprq8I_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=6h0sXdprq8I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/week.htm">WEEK</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6h0sXdprq8I @0- TAGS: 'Lifeprint lesson_12 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=6h0sXdprq8I @0- TEXT: 'NEXT-WEEK (two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=6h0sXdprq8I @0- TEXT: 'NEXT-WEEK (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=6i1516QNfaY @0- MEDIA: "processed_youtube=6i1516QNfaY_audio='strip'_clip=(0.5005000000000001, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=6i1516QNfaY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/garage.htm">GARAGE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=6i1516QNfaY @0- TAGS: 'Lifeprint lesson_09 vocabulary'
@@ -1613,7 +1613,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=88xSMjuFPHA @0- TEXT: 'MEDICINE / 
 Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- MEDIA: "processed_youtube=8ABNk9pzVOc_audio='strip'_clip=(0.33366666666666667, 2.3023000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/have.htm">HAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- TAGS: 'Lifeprint lesson_02 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- TEXT: 'HAVE / possess / contains / exists / there is (one handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=8ABNk9pzVOc @0- TEXT: 'HAVE / possess / contains / exists / there is (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=8Bm2uG-suEA @0- MEDIA: "processed_youtube=8Bm2uG-suEA_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=8Bm2uG-suEA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson05.htm">lesson 5</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/i/internet.htm">INTERNET</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=8Bm2uG-suEA @0- TAGS: 'Lifeprint extra lesson_05 vocabulary'
@@ -1773,7 +1773,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=9RHMYAH9WJg @0- TEXT: 'TEACHER LIG
 Lifeprint ASL https://www.youtube.com/watch?v=9Rcg3QJiClc @0- MEDIA: "processed_youtube=9Rcg3QJiClc_audio='strip'_clip=(0.5005000000000001, 2.0353666666666665).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=9Rcg3QJiClc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/shirt.htm">SHIRT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=9Rcg3QJiClc @0- TAGS: 'Lifeprint lesson_08 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=9Rcg3QJiClc @0- TEXT: 'SHIRT (two handed version)'
+Lifeprint ASL https://www.youtube.com/watch?v=9Rcg3QJiClc @0- TEXT: 'SHIRT (two-handed version)'
 Lifeprint ASL https://www.youtube.com/watch?v=9SMHSwdQUwE @0- MEDIA: "processed_youtube=9SMHSwdQUwE_audio='strip'_clip=(0.13346666666666668, 1.6349666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=9SMHSwdQUwE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm">CHRISTMAS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=9SMHSwdQUwE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -2597,7 +2597,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=G3z4RviEFLs @0- TEXT: 'car-CRASH (
 Lifeprint ASL https://www.youtube.com/watch?v=G4HZ1OaQHpI @0- MEDIA: "processed_youtube=G4HZ1OaQHpI_audio='strip'_clip=(0.13346666666666668, 1.8685333333333334).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=G4HZ1OaQHpI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/that.htm">THAT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=G4HZ1OaQHpI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=G4HZ1OaQHpI @0- TEXT: 'THAT (non-specific, one handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=G4HZ1OaQHpI @0- TEXT: 'THAT (non-specific, one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=G4aFaJtzQGk @0- MEDIA: "processed_youtube=G4aFaJtzQGk_audio='strip'_clip=(0.23356666666666667, 2.5358666666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=G4aFaJtzQGk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sunrise.htm">SUNRISE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=G4aFaJtzQGk @0- TAGS: 'Lifeprint lesson_14 vocabulary'
@@ -2757,7 +2757,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=H8frIh9Lb_A @0- TEXT: 'all-TOGETHE
 Lifeprint ASL https://www.youtube.com/watch?v=HA0RpgkXZn8 @0- MEDIA: "processed_youtube=HA0RpgkXZn8_audio='strip'_clip=(1.0343666666666667, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=HA0RpgkXZn8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/bed.htm">BED</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HA0RpgkXZn8 @0- TAGS: 'Lifeprint lesson_04 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=HA0RpgkXZn8 @0- TEXT: 'BED (two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=HA0RpgkXZn8 @0- TEXT: 'BED (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=HAKN3e77ud8 @0- MEDIA: "processed_youtube=HAKN3e77ud8_audio='strip'_clip=(0.4337666666666667, 1.9686333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=HAKN3e77ud8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/lunch.htm">LUNCH</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HAKN3e77ud8 @0- TAGS: 'Lifeprint extra lesson_17 vocabulary'
@@ -3001,7 +3001,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=IojzwXI4q9s @0- TEXT: 'EAT FINISH,
 Lifeprint ASL https://www.youtube.com/watch?v=IujovunU_X8 @0- MEDIA: "processed_youtube=IujovunU_X8_audio='strip'_clip=(0.0, 2.0020000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=IujovunU_X8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/that.htm">THAT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=IujovunU_X8 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=IujovunU_X8 @0- TEXT: 'THAT (non-specific, two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=IujovunU_X8 @0- TEXT: 'THAT (non-specific, two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=IvRwNLNR4_w @0- MEDIA: "processed_youtube=IvRwNLNR4_w_audio='strip'_clip=(0.13346666666666668, 1.5682333333333334).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=IvRwNLNR4_w @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/thankyou.htm">THANK-YOU</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=IvRwNLNR4_w @0- TAGS: 'Lifeprint first_100_signs lesson_01 vocabulary'
@@ -3193,7 +3193,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=KF7M_6Lk66M @0- TEXT: 'GOODY-GOODY
 Lifeprint ASL https://www.youtube.com/watch?v=KLvLH7I80G0 @0- MEDIA: "processed_youtube=KLvLH7I80G0_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=KLvLH7I80G0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/good.htm">GOOD</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=KLvLH7I80G0 @0- TAGS: 'Lifeprint lesson_03 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=KLvLH7I80G0 @0- TEXT: 'GOOD (single hand)'
+Lifeprint ASL https://www.youtube.com/watch?v=KLvLH7I80G0 @0- TEXT: 'GOOD (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=KOKG7jy8Loo @0- MEDIA: "processed_youtube=KOKG7jy8Loo_audio='strip'_clip=(0.4337666666666667, 2.3356666666666666).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=KOKG7jy8Loo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/light.htm">LIGHT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=KOKG7jy8Loo @0- TAGS: 'Lifeprint extra lesson_09 vocabulary'
@@ -3405,7 +3405,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=LsMDCQMcMAE @0- TEXT: 'FRIVOLOUS /
 Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- MEDIA: "processed_youtube=Lu7VJHlq0o0_audio='strip'_clip=(0.10010000000000001, 1.9019).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/how-many.htm">HOW-MANY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- TAGS: 'Lifeprint lesson_02 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- TEXT: 'HOW-MANY / how much (two hands)'
+Lifeprint ASL https://www.youtube.com/watch?v=Lu7VJHlq0o0 @0- TEXT: 'HOW-MANY / how much (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=LugZXAFejys @0- MEDIA: "processed_youtube=LugZXAFejys_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=LugZXAFejys @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<h3>Is your television close-captioned?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=LugZXAFejys @0- TAGS: 'Lifeprint lesson_13 phrase'
@@ -3577,7 +3577,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- TEXT: 'CONTEXT'
 Lifeprint ASL https://www.youtube.com/watch?v=NYjk6-dXb40 @0- MEDIA: "processed_youtube=NYjk6-dXb40_audio='strip'_clip=(0.4337666666666667, 2.5025).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=NYjk6-dXb40 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm">DONKEY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=NYjk6-dXb40 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=NYjk6-dXb40 @0- TEXT: 'DONKEY (one handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=NYjk6-dXb40 @0- TEXT: 'DONKEY (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=NZ68mfHiZa8 @0- MEDIA: "processed_youtube=NZ68mfHiZa8_audio='strip'_clip=(0.46713333333333334, 2.168833333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=NZ68mfHiZa8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/grapes.htm">GRAPES</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=NZ68mfHiZa8 @0- TAGS: 'Lifeprint lesson_17 vocabulary'
@@ -3693,7 +3693,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=OYvy_O_hhfw @0- TEXT: 'YOU UNDERST
 Lifeprint ASL https://www.youtube.com/watch?v=OZKNIcIFqvU @0- MEDIA: "processed_youtube=OZKNIcIFqvU_audio='strip'_clip=(0.13346666666666668, 1.9019).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=OZKNIcIFqvU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson02.htm">lesson 2</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/have.htm">HAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=OZKNIcIFqvU @0- TAGS: 'Lifeprint lesson_02 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=OZKNIcIFqvU @0- TEXT: 'HAVE / possess / contains / exists / there is (two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=OZKNIcIFqvU @0- TEXT: 'HAVE / possess / contains / exists / there is (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=OZWPWEgagtU @0- MEDIA: "processed_youtube=OZWPWEgagtU_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=OZWPWEgagtU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<h3>When do you change clothes?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=OZWPWEgagtU @0- TAGS: 'Lifeprint lesson_08 phrase'
@@ -4373,7 +4373,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=Uo_AUbP0O9g @0- TEXT: 'ENJOY / app
 Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- MEDIA: "processed_youtube=Ut0n-GrYwMA_audio='strip'_clip=(0.3003, 2.1021).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/semester.htm">SEMESTER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- TEXT: 'SEMESTER (one handed version)'
+Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- TEXT: 'SEMESTER (one-handed version)'
 Lifeprint ASL https://www.youtube.com/watch?v=UxO5Q0fSqOw @0- MEDIA: "processed_youtube=UxO5Q0fSqOw_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=UxO5Q0fSqOw @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/feel.htm">FEEL</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=UxO5Q0fSqOw @0- TAGS: 'Lifeprint lesson_04 vocabulary'
@@ -4609,7 +4609,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=X0Qe7jHMtmg @0- TEXT: 'O-F-F-I-C-E
 Lifeprint ASL https://www.youtube.com/watch?v=X4003aEoiWo @0- MEDIA: "processed_youtube=X4003aEoiWo_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=X4003aEoiWo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/later.htm">LATER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=X4003aEoiWo @0- TAGS: 'Lifeprint extra lesson_16 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=X4003aEoiWo @0- TEXT: 'LATER (two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=X4003aEoiWo @0- TEXT: 'LATER (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=X67gLEcynIM @0- MEDIA: "processed_youtube=X67gLEcynIM_audio='strip'_clip=(0.26693333333333336, 1.9686333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=X67gLEcynIM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/great.htm">GREAT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=X67gLEcynIM @0- TAGS: 'Lifeprint lesson_11 vocabulary'
@@ -5073,7 +5073,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=_OvXfc8_Ffo @0- TEXT: 'FREE'
 Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- MEDIA: "processed_youtube=_Q-xqtQWkyA_audio='strip'_clip=(0.6339666666666667, 3.4034).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- TEXT: 'WONDER / think about (two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=_Q-xqtQWkyA @0- TEXT: 'WONDER / think about (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=_QQODnTMuZg @0- MEDIA: "processed_youtube=_QQODnTMuZg_audio='strip'_clip=(0.8341666666666667, 2.5025).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=_QQODnTMuZg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=_QQODnTMuZg @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
@@ -5341,7 +5341,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=bZBbibh5jeQ @0- TEXT: 'SURPRISE TE
 Lifeprint ASL https://www.youtube.com/watch?v=b_1ARTmynPQ @0- MEDIA: "processed_youtube=b_1ARTmynPQ_audio='strip'_clip=(0.26693333333333336, 2.0353666666666665).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=b_1ARTmynPQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=b_1ARTmynPQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=b_1ARTmynPQ @0- TEXT: 'nobody / NO ONE (two handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=b_1ARTmynPQ @0- TEXT: 'nobody / NO ONE (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=b_qv-0Jbqn0 @0- MEDIA: "processed_youtube=b_qv-0Jbqn0_audio='strip'_clip=(0.46713333333333334, 2.0687333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=b_qv-0Jbqn0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/n/nice.htm">NICE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=b_qv-0Jbqn0 @0- TAGS: 'Lifeprint extra lesson_01 vocabulary'
@@ -5397,7 +5397,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=bmy6YRYlW0Y @0- TEXT: 'SUNDAY (pre
 Lifeprint ASL https://www.youtube.com/watch?v=bnkOMzdwYgY @0- MEDIA: "processed_youtube=bnkOMzdwYgY_audio='strip'_clip=(0.3670333333333333, 2.469133333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=bnkOMzdwYgY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=bnkOMzdwYgY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=bnkOMzdwYgY @0- TEXT: 'nobody / NO ONE (one handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=bnkOMzdwYgY @0- TEXT: 'nobody / NO ONE (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=bpOcs-n-G0o @0- MEDIA: "processed_youtube=bpOcs-n-G0o_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=bpOcs-n-G0o @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>Why are you taking ASL?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=bpOcs-n-G0o @0- TAGS: 'Lifeprint lesson_11 phrase'
@@ -6141,7 +6141,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=hkecqnDiaJo @0- TEXT: 'YOUR HOUSE,
 Lifeprint ASL https://www.youtube.com/watch?v=hlmVYpLfaT0 @0- MEDIA: "processed_youtube=hlmVYpLfaT0_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=hlmVYpLfaT0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/week.htm">WEEK</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=hlmVYpLfaT0 @0- TAGS: 'Lifeprint extra lesson_12 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=hlmVYpLfaT0 @0- TEXT: 'NEXT-WEEK (one handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=hlmVYpLfaT0 @0- TEXT: 'NEXT-WEEK (one-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=hoSlRUAK9n0 @0- MEDIA: "processed_youtube=hoSlRUAK9n0_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=hoSlRUAK9n0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson13.htm">lesson 13</a></p>\n<h3>When did you / or will you graduate from college?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=hoSlRUAK9n0 @0- TAGS: 'Lifeprint lesson_13 phrase'
@@ -7501,7 +7501,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=tSEu8Asd9e0 @0- TEXT: 'B-E-E-R'
 Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- MEDIA: "processed_youtube=tTDXplV6TKA_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/g/good.htm">GOOD</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- TAGS: 'Lifeprint first_100_signs lesson_03 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- TEXT: 'GOOD (two hands)'
+Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- TEXT: 'GOOD (two-handed)'
 Lifeprint ASL https://www.youtube.com/watch?v=tXd06Sqi-60 @0- MEDIA: "processed_youtube=tXd06Sqi-60_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=tXd06Sqi-60 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<h3>Do you like to eat green apples?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=tXd06Sqi-60 @0- TAGS: 'Lifeprint lesson_07 phrase'
@@ -7885,7 +7885,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=wWRdwIXZGMk @0- TEXT: 'FORM / rés
 Lifeprint ASL https://www.youtube.com/watch?v=wYKVsxvf1IE @0- MEDIA: "processed_youtube=wYKVsxvf1IE_audio='strip'_clip=(0.10010000000000001, 1.6016000000000001).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=wYKVsxvf1IE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/semester.htm">SEMESTER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=wYKVsxvf1IE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=wYKVsxvf1IE @0- TEXT: 'SEMESTER (two handed version)'
+Lifeprint ASL https://www.youtube.com/watch?v=wYKVsxvf1IE @0- TEXT: 'SEMESTER (two-handed version)'
 Lifeprint ASL https://www.youtube.com/watch?v=wYni2mbSABs @0- MEDIA: "processed_youtube=wYni2mbSABs_audio='strip'_clip=(0.16683333333333333, 2.0353666666666665).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=wYni2mbSABs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/lose.htm">LOSE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=wYni2mbSABs @0- TAGS: 'Lifeprint lesson_18 vocabulary'
@@ -8025,7 +8025,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=xYtFD9E-ljA @0- TEXT: 'TRAVEL-AROU
 Lifeprint ASL https://www.youtube.com/watch?v=x_exlrQf0_I @0- MEDIA: "processed_youtube=x_exlrQf0_I_audio='strip'_clip=(0.26693333333333336, 1.8685333333333334).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=x_exlrQf0_I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/clothes.htm">CLOTHES</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=x_exlrQf0_I @0- TAGS: 'Lifeprint extra lesson_08 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=x_exlrQf0_I @0- TEXT: 'CLOTHES PIN (two handed version)'
+Lifeprint ASL https://www.youtube.com/watch?v=x_exlrQf0_I @0- TEXT: 'CLOTHES PIN (two-handed version)'
 Lifeprint ASL https://www.youtube.com/watch?v=xauWp5DgUvE @0- MEDIA: "processed_youtube=xauWp5DgUvE_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=xauWp5DgUvE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>Do you like to learn new things?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=xauWp5DgUvE @0- TAGS: 'Lifeprint lesson_11 phrase'
