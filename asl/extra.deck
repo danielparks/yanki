@@ -194,7 +194,7 @@ https://www.youtube.com/watch?v=lFSWuq0YurM
 https://www.youtube.com/watch?v=zNUunK_nzQw WASHINGTON
   trim: 8F-103F
 
-https://www.youtube.com/watch?v=_Q-xqtQWkyA WONDER / think about (two handed)
+https://www.youtube.com/watch?v=_Q-xqtQWkyA WONDER / think about (two-handed)
   trim: 19F-102F
 
 https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
@@ -439,7 +439,7 @@ group:
 
 group:
   more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
-  https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one handed)
+  https://www.youtube.com/watch?v=NYjk6-dXb40 DONKEY (one-handed)
     trim: 13F-75F
   # Don’t really need two-handed variation. STUBBORN has it’s own page.
 
@@ -803,7 +803,7 @@ group:
   more: +md:[SCHEDULE](https://www.lifeprint.com/asl101/pages-signs/s/schedule.htm)
   https://www.youtube.com/watch?v=urAudhimoUY SCHEDULE / chart / graph
     trim: 9F-
-  # Can’t find one handed version of CHART / graph video
+  # Can’t find one-handed version of CHART / graph video
 
 group:
   more: +md:[SEASON](https://www.lifeprint.com/asl101/pages-signs/s/season.htm)
@@ -819,9 +819,9 @@ group:
 
 group:
   more: +md:[SEMESTER](https://www.lifeprint.com/asl101/pages-signs/s/semester.htm)
-  https://www.youtube.com/watch?v=Ut0n-GrYwMA SEMESTER (one handed version)
+  https://www.youtube.com/watch?v=Ut0n-GrYwMA SEMESTER (one-handed version)
     trim: 9F-63F
-  https://www.youtube.com/watch?v=wYKVsxvf1IE -> SEMESTER (two handed version)
+  https://www.youtube.com/watch?v=wYKVsxvf1IE -> SEMESTER (two-handed version)
     trim: 3F-48F
 
 group:
@@ -1044,9 +1044,9 @@ https://www.youtube.com/watch?v=5UnUWDYxfv0 CORRECT / right / accurate
 https://www.youtube.com/watch?v=BV6mXa4Gp58 @98F-150F TEACH-ME (directional)
 
 # From lesson 4 video (https://www.youtube.com/watch?v=JVTsQBVL0eA)
-https://www.youtube.com/watch?v=b_1ARTmynPQ nobody / NO ONE (two handed)
+https://www.youtube.com/watch?v=b_1ARTmynPQ nobody / NO ONE (two-handed)
   trim: 8F-61F
-https://www.youtube.com/watch?v=bnkOMzdwYgY nobody / NO ONE (one handed)
+https://www.youtube.com/watch?v=bnkOMzdwYgY nobody / NO ONE (one-handed)
   trim: 11F-74F
 https://www.youtube.com/watch?v=tgADS6Sg84o ROFL (Rolling On the Floor Laughing)
   trim: 11F-79F
@@ -1119,11 +1119,11 @@ https://www.youtube.com/watch?v=Yx5t_1SvVWs COMFORTABLE
 # From lesson 9 video (https://www.youtube.com/watch?v=6bsTw2ouTpQ)
 group:
   more: +md:[THAT](https://www.lifeprint.com/asl101/pages-signs/t/that.htm)
-  https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one handed)
+  https://www.youtube.com/watch?v=G4HZ1OaQHpI THAT (non-specific, one-handed)
     trim: 4F-56F
   https://www.youtube.com/watch?v=tNas8PN6pIQ THAT (specific, Y-hand)
     trim: 12F-51F
-  https://www.youtube.com/watch?v=IujovunU_X8 THAT (non-specific, two handed)
+  https://www.youtube.com/watch?v=IujovunU_X8 THAT (non-specific, two-handed)
     trim: 0-60F
 
 # Related to lesson 10
