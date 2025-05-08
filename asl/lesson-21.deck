@@ -123,12 +123,15 @@ group:
     trim: 11F-63F
 
 group:
-  more: +md:[LOAN](https://www.lifeprint.com/asl101/pages-signs/l/loan.htm)
-  https://www.youtube.com/watch?v=enWrF4cYU_A you-BORROW-from-me / lend / loan
+  more: +md:[loan](https://www.lifeprint.com/asl101/pages-signs/l/loan.htm)
+  https://www.youtube.com/watch?v=enWrF4cYU_A
+    you-BORROW-from-me / I lend to you / loan
     trim: 11F-72F
-  https://www.youtube.com/watch?v=Tf15SM03BPs me-BORROW-from-you / lend / loan
+  https://www.youtube.com/watch?v=Tf15SM03BPs
+    me-BORROW-from-you / you lend to me / loan
     trim: 15F-77F
-  https://www.youtube.com/watch?v=WbOvDul2n-E he-BORROW-from-her / lend / loan
+  https://www.youtube.com/watch?v=WbOvDul2n-E
+    he-BORROW-from-her / she lends to him / loan
     trim: 16F-85F
 
 group:

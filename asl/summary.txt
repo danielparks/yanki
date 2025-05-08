@@ -4211,9 +4211,9 @@ Lifeprint ASL https://www.youtube.com/watch?v=TdQ0qHYQSvg @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=TdQ0qHYQSvg @0- TAGS: 'Lifeprint first_100_signs lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=TdQ0qHYQSvg @0- TEXT: 'LARGE / big'
 Lifeprint ASL https://www.youtube.com/watch?v=Tf15SM03BPs @0- MEDIA: "processed_youtube=Tf15SM03BPs_audio='strip'_clip=(0.5005000000000001, 2.5692333333333335).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=Tf15SM03BPs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/loan.htm">LOAN</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Tf15SM03BPs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/loan.htm">loan</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Tf15SM03BPs @0- TAGS: 'Lifeprint lesson_21 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=Tf15SM03BPs @0- TEXT: 'me-BORROW-from-you / lend / loan'
+Lifeprint ASL https://www.youtube.com/watch?v=Tf15SM03BPs @0- TEXT: 'me-BORROW-from-you / you lend to me / loan'
 Lifeprint ASL https://www.youtube.com/watch?v=Th7pOg8YbCU @0- MEDIA: "processed_youtube=Th7pOg8YbCU_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Th7pOg8YbCU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<h3>What’s your teacher’s name?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Th7pOg8YbCU @0- TAGS: 'Lifeprint lesson_01 phrase'
@@ -4543,9 +4543,9 @@ Lifeprint ASL https://www.youtube.com/watch?v=WaIrad_avQI @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=WaIrad_avQI @0- TAGS: 'Lifeprint extra lesson_09 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=WaIrad_avQI @0- TEXT: 'YESTERDAY (initialized)'
 Lifeprint ASL https://www.youtube.com/watch?v=WbOvDul2n-E @0- MEDIA: "processed_youtube=WbOvDul2n-E_audio='strip'_clip=(0.5338666666666667, 2.8361666666666667).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=WbOvDul2n-E @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/loan.htm">LOAN</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=WbOvDul2n-E @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/loan.htm">loan</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=WbOvDul2n-E @0- TAGS: 'Lifeprint lesson_21 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=WbOvDul2n-E @0- TEXT: 'he-BORROW-from-her / lend / loan'
+Lifeprint ASL https://www.youtube.com/watch?v=WbOvDul2n-E @0- TEXT: 'he-BORROW-from-her / she lends to him / loan'
 Lifeprint ASL https://www.youtube.com/watch?v=WcciABj5yCY @0- MEDIA: "processed_youtube=WcciABj5yCY_audio='strip'_clip=(0.64, 2.24).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=WcciABj5yCY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson17.htm">lesson 17</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dish.htm">DISH</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=WcciABj5yCY @0- TAGS: 'Lifeprint lesson_17 vocabulary'
@@ -5763,9 +5763,9 @@ Lifeprint ASL https://www.youtube.com/watch?v=em0EHJsuZ9w @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=em0EHJsuZ9w @0- TAGS: 'Lifeprint extra lesson_05 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=em0EHJsuZ9w @0- TEXT: 'MOVE-here'
 Lifeprint ASL https://www.youtube.com/watch?v=enWrF4cYU_A @0- MEDIA: "processed_youtube=enWrF4cYU_A_audio='strip'_clip=(0.3670333333333333, 2.4024).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=enWrF4cYU_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/loan.htm">LOAN</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=enWrF4cYU_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/loan.htm">loan</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=enWrF4cYU_A @0- TAGS: 'Lifeprint lesson_21 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=enWrF4cYU_A @0- TEXT: 'you-BORROW-from-me / lend / loan'
+Lifeprint ASL https://www.youtube.com/watch?v=enWrF4cYU_A @0- TEXT: 'you-BORROW-from-me / I lend to you / loan'
 Lifeprint ASL https://www.youtube.com/watch?v=ennG1UnqhjM @0- MEDIA: "processed_youtube=ennG1UnqhjM_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ennG1UnqhjM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<h3>Would you rather have pizza or a hamburger?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ennG1UnqhjM @0- TAGS: 'Lifeprint lesson_11 phrase'
