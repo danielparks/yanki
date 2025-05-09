@@ -7,6 +7,10 @@ note_id: Lifeprint ASL {url} {clip}
 https://www.youtube.com/watch?v=hzlYOuTrIhA AMERICA
   trim: 9F-75F
 
+https://www.youtube.com/watch?v=e3UTQaDloZ4
+  AVAIL / grab opportunity / take advantage of (positive connotation)
+  trim: 4F-57F
+
 https://www.youtube.com/watch?v=I7BfXB2oKyQ BRAG / boast
   trim: 4F-65F
 
@@ -211,6 +215,11 @@ group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
+
+group:
+  more: +md:[ARGUE](https://www.lifeprint.com/asl101/pages-signs/a/argue.htm)
+  https://www.youtube.com/watch?v=8Z3hSIy8rv0 ARGUE
+    trim: 9F-67F
 
 group:
   more: +md:[ARRIVE](https://www.lifeprint.com/asl101/pages-signs/a/arrive.htm)
@@ -563,6 +572,11 @@ group:
     trim: 4F-65F
 
 group:
+  more: +md:[HIDE](https://www.lifeprint.com/asl101/pages-signs/h/hide.htm)
+  https://www.youtube.com/watch?v=yZ8Uwt2-21o HIDE
+    trim: 16F-77F
+
+group:
   more: +md:[HOMEWORK](https://www.lifeprint.com/asl101/pages-signs/h/homework.htm)
   https://www.youtube.com/watch?v=AhwgtWiATWE HOMEWORK
     trim: 9F-75F
@@ -622,6 +636,11 @@ group:
   more: +md:[MEDICINE](https://www.lifeprint.com/asl101/pages-signs/m/medicine.htm)
   https://www.youtube.com/watch?v=88xSMjuFPHA MEDICINE / medical / drug
     trim: 2F-69F
+
+group:
+  more: +md:[MEETING](https://www.lifeprint.com/asl101/pages-signs/m/meeting.htm)
+  https://www.youtube.com/watch?v=eE54fUNJYj4 MEETING / session
+    trim: 11F-
 
 group:
   more: +md:[MEMBER](https://www.lifeprint.com/asl101/pages-signs/m/member.htm)
@@ -791,6 +810,11 @@ group:
     trim: 2F-65F
   https://www.youtube.com/watch?v=yabFLDVcEOM MEMORIZE / memory
     trim: 30F-99F
+
+group:
+  more: +md:[RUDE](https://www.lifeprint.com/asl101/pages-signs/r/rude.htm)
+  https://www.youtube.com/watch?v=hlOPlBd6F5Q RUDE
+    trim: 6F-57F
 
 group:
   more: +md:[SAVE](https://www.lifeprint.com/asl101/pages-signs/s/save.htm)
