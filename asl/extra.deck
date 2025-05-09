@@ -46,9 +46,6 @@ https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
 https://www.youtube.com/watch?v=V9xGHj_OsnU FASCINATED / attract / attraction
   trim: 33F-86F
 
-https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST
-  trim: 4F-55F
-
 https://www.youtube.com/watch?v=8WwxmvrQ_uw FILM / video record
   trim: 31F-145F
 
@@ -200,9 +197,6 @@ https://www.youtube.com/watch?v=zNUunK_nzQw WASHINGTON
 
 https://www.youtube.com/watch?v=_Q-xqtQWkyA WONDER / think about (two-handed)
   trim: 19F-102F
-
-https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
-  trim: 24F-60F
 
 # Groups represent Lifeprint pages with everything on them.
 
@@ -483,11 +477,6 @@ group:
     trim: 24F-88F
 
 group:
-  more: +md:[EXACT](https://www.lifeprint.com/asl101/pages-signs/e/exact.htm)
-  https://www.youtube.com/watch?v=qiIC-FeE-fg EXACT / precise
-    trim: 13F-78F
-
-group:
   more: +md:[EXAGGERATE](https://www.lifeprint.com/asl101/pages-signs/e/exaggerate.htm)
   https://www.youtube.com/watch?v=PduuxeTaP1Y EXAGGERATE / going on and on
     trim: 1F-
@@ -516,15 +505,6 @@ group:
   more: +md:[FALL-IN-LOVE](https://www.lifeprint.com/asl101/pages-signs/f/fallinlove.htm)
   https://www.youtube.com/watch?v=4PE5u8lfxs4 FALL-IN-LOVE
     trim: 10F-83F
-
-group:
-  more: +md:[FAR](https://www.lifeprint.com/asl101/pages-signs/f/far.htm)
-  https://www.youtube.com/watch?v=zVJ7-WuHsow FAR (A-hand version)
-    trim: 12F-85F
-  https://www.youtube.com/watch?v=Xecxz2jXc1I FAR-away (CL:1)
-    trim: 19F-89F
-  https://www.youtube.com/watch?v=e6xOK0LXSjc NOT-FAR / close
-    trim: 45F-104F
 
 group:
   more: +md:[FIX](https://www.lifeprint.com/asl101/pages-signs/f/fix.htm)
@@ -666,14 +646,6 @@ group:
     trim: 8F-58F
 
 group:
-  more: +md:[NEAR](https://www.lifeprint.com/asl101/pages-signs/n/near.htm)
-  https://www.youtube.com/watch?v=Zv7n5RlK6W4 NEAR / close by / close to
-    trim: 7F-70F
-  https://www.youtube.com/watch?v=nwYLaBzkSMw ->
-    NEAR / close by / close to (pat hand version)
-    trim: 9F-82F
-
-group:
   more: +md:[OWE](https://www.lifeprint.com/asl101/pages-signs/o/owe.htm)
   https://www.youtube.com/watch?v=Ckgt9JH2o8c OWE / bill / debt / afford
     trim: 13F-86F
@@ -691,18 +663,6 @@ group:
     trim: 10F-55F
   https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
     trim: 5F-55F
-
-group:
-  more: +md:[PERFECT](https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm)
-  https://www.youtube.com/watch?v=HGIYIPaoFAc PERFECT (two F-hands version)
-    trim: 1F-
-  https://www.youtube.com/watch?v=Na4qNZR3RWA -> PERFECT (single F-hand version)
-    trim: 8F-54F
-
-  tags: +extra
-  https://www.youtube.com/watch?v=keOX5S1t_5Y ->
-    PERFECT (initialized English version)
-    trim: 31F-92F
 
 group:
   more: +md:[MATCH](https://www.lifeprint.com/asl101/pages-signs/m/match.htm)
@@ -855,12 +815,6 @@ group:
   # Originally SEXY. FIXME: extend last frame
   https://www.youtube.com/watch?v=Wa129EIdzZs @29F-53F
     SEX-gender / SEX-intercourse
-
-group:
-  more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
-  https://www.youtube.com/watch?v=WY99FSoo6dI
-    SINCE / usually / up to now / have been / so far / all along
-    trim: 14F-66F
 
 group:
   more: +md:[SKATING](https://www.lifeprint.com/asl101/pages-signs/s/skating.htm)
