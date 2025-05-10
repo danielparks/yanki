@@ -6258,7 +6258,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=i_Hkr9vkkz0 @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=i_Hkr9vkkz0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/luck.htm">LUCK</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=i_Hkr9vkkz0 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=i_Hkr9vkkz0 @0- TEXT: 'GOOD L-U-C-K'
-Lifeprint ASL https://www.youtube.com/watch?v=ieKZdvIm58g @0- MEDIA: "processed_youtube=ieKZdvIm58g_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=ieKZdvIm58g @0- MEDIA: 'processed_youtube=ieKZdvIm58g_326b3c6dee36072528e0ccebd2f43489.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=ieKZdvIm58g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson23.htm">lesson 23</a></p>\n<h3>Did you study all night before the test?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ieKZdvIm58g @0- TAGS: 'Lifeprint lesson_23 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=ieKZdvIm58g @0- TEXT: 'BEFORE-[prior-to] TEST, YOU STUDY ALL-NIGHT?'
@@ -7014,7 +7014,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=p75JYKIFVUI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=p75JYKIFVUI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hair.htm">HAIR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=p75JYKIFVUI @0- TAGS: 'Lifeprint extra lesson_20 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=p75JYKIFVUI @0- TEXT: 'ELASTIC-HAIR-BAND'
-Lifeprint ASL https://www.youtube.com/watch?v=p7CPi7lDY3c @0- MEDIA: "processed_youtube=p7CPi7lDY3c_audio='strip'_clip=(1.6016000000000001, 3.7370666666666668).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=p7CPi7lDY3c @0- MEDIA: 'processed_youtube=p7CPi7lDY3c_d763087dc91a98cf12cf65fb19a15c5e.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=p7CPi7lDY3c @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/midnight.htm">MIDNIGHT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=p7CPi7lDY3c @0- TAGS: 'Lifeprint lesson_16 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=p7CPi7lDY3c @0- TEXT: 'MIDNIGHT'
@@ -8206,7 +8206,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=ygSdMz0TnYI @0- MEDIA: "processed_
 Lifeprint ASL https://www.youtube.com/watch?v=ygSdMz0TnYI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/country.htm">COUNTRY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ygSdMz0TnYI @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ygSdMz0TnYI @0- TEXT: 'COUNTRY / rural / county (flat hand version)'
-Lifeprint ASL https://www.youtube.com/watch?v=yhP_NhVV-FE @0- MEDIA: "processed_youtube=yhP_NhVV-FE_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=yhP_NhVV-FE @0- MEDIA: 'processed_youtube=yhP_NhVV-FE_6a359c481cb0d696fe29b0efb858e39d.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=yhP_NhVV-FE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson23.htm">lesson 23</a></p>\n<h3>Did you study all night before the test?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=yhP_NhVV-FE @0- TAGS: 'Lifeprint lesson_23 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=yhP_NhVV-FE @0- TEXT: 'BEFORE-[prior-to] TEST, YOU STUDY ALL-NIGHT?'
