@@ -133,6 +133,7 @@ group:
   more: +md:[MIDNIGHT](https://www.lifeprint.com/asl101/pages-signs/m/midnight.htm)
   https://www.youtube.com/watch?v=p7CPi7lDY3c MIDNIGHT
     trim: 48F-112F
+    crop: in_w:in_h*0.84
 
 group:
   more: +md:[MOST](https://www.lifeprint.com/asl101/pages-signs/m/most.htm)
