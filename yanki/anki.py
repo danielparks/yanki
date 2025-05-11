@@ -99,9 +99,9 @@ class Note:
         media_path = await video.processed_video_async()
 
         if video.is_still() or video.output_ext() == "gif":
-            media_fragment = ImageFragment(media_path)
+            media_fragment = ImageFragment(media_path, video)
         else:
-            media_fragment = VideoFragment(media_path)
+            media_fragment = VideoFragment(media_path, video)
 
         note_id = self.note_id(deck_id)
         return FinalNote(
@@ -191,6 +191,7 @@ EXTRA_FINAL_NOTE_VARIABLES = frozenset(
     [
         "note_id",
         "media_paths",
+        "video_parameters",
     ]
 )
 
@@ -214,10 +215,13 @@ class FinalNote:
     video: Video
     logger: logging.Logger
 
+    def media(self):
+        for field in self.content_fields():
+            yield from field.media()
+
     def media_paths(self):
         for field in self.content_fields():
-            for path in field.media_paths():
-                yield path
+            yield from field.media_paths()
 
     def content_fields(self):
         return [self.text_field(), self.more_field(), self.media_field()]
@@ -240,6 +244,9 @@ class FinalNote:
             "media": f"{self.spec.video_url()} {self.clip_spec}",
             "text": self.text,
             "media_paths": " ".join(self.media_paths()),
+            "video_parameters": " / ".join(
+                [" ".join(media.parameters_list()) for media in self.media()]
+            ),
         }
 
     def genanki_note(self):

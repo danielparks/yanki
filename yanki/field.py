@@ -46,6 +46,9 @@ class Fragment:
     def __init__(self, raw):
         self.raw = raw
 
+    def media(self):
+        return []
+
     def media_paths(self):
         return []
 
@@ -63,8 +66,9 @@ class Fragment:
 
 
 class MediaFragment(Fragment):
-    def __init__(self, path):
+    def __init__(self, path, media):
         self.path = path
+        self._media = media
 
     def path_in_base(self, base_path):
         return os.path.join(base_path, os.path.basename(self.path))
@@ -81,6 +85,9 @@ class MediaFragment(Fragment):
         return html.escape(
             quote(self.path_in_base(base_path), encoding="utf_8")
         )
+
+    def media(self):
+        return [self._media]
 
     def media_paths(self):
         return [str(self.path)]
@@ -108,6 +115,10 @@ class Field:
 
     def add_fragment(self, fragment: Fragment):
         self.fragments.append(fragment)
+
+    def media(self):
+        for fragment in self.fragments:
+            yield from fragment.media()
 
     def media_paths(self):
         for fragment in self.fragments:
