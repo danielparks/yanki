@@ -160,7 +160,7 @@ class Video:
         return self.cached(f"ffprobe_raw_{self.id}.json")
 
     def processed_video_cache_path(self, prefix="processed_"):
-        parameters = "_".join(self.parameters())
+        parameters = "_".join(self.parameters_list())
 
         if len(parameters) > 60 or chars_in(FILENAME_ILLEGAL_CHARS, parameters):
             parameters = hashlib.blake2b(
@@ -440,19 +440,21 @@ class Video:
         return self.output_options
 
     def parameters(self):
-        """Get parameters for producing the video."""
-        parameters = [
-            f"{key}={value!r}" for key, value in self._parameters.items()
-        ]
+        """Get parameters for producing the video as a dict."""
+        parameters = self._parameters.copy()
 
         if self._crop is not None:
-            parameters.append(f"crop={self._crop!r}")
+            parameters["crop"] = self._crop
         if self._overlay_text != "":
-            parameters.append(f"overlay_text={self._overlay_text!r}")
+            parameters["overlay_text"] = self._overlay_text
         if self._slow is not None:
-            parameters.append(f"slow={self._slow!r}")
+            parameters["slow"] = self._slow
 
         return parameters
+
+    def parameters_list(self):
+        """Get parameters for producing the video as list[str]."""
+        return [f"{key}={value!r}" for key, value in self.parameters().items()]
 
     def processed_video(self):
         output_path = self.processed_video_cache_path()
@@ -469,7 +471,7 @@ class Video:
         # Only reprocess once per run.
         self.reprocess = False
 
-        parameters = " ".join(self.parameters())
+        parameters = " ".join(self.parameters_list())
         self.logger.info(f"processing with ({parameters}) to {output_path}")
 
         stream = ffmpeg.input(
