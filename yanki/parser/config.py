@@ -52,7 +52,7 @@ def note_config_directives():
 
 @dataclasses.dataclass()
 class NoteConfig:
-    crop: str = ""
+    crop: str = "auto"
     format: str = ""
     more: Field = field(default_factory=Field)
     overlay_text: str = ""

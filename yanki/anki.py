@@ -111,7 +111,7 @@ class Note:
             text=self.text(),
             spec=self.spec,
             clip_spec=self.clip_spec(),
-            video=video,
+            video=await video.finalize_async(),
             logger=logging.getLogger(f"FinalNote[{note_id}]"),
         )
 
