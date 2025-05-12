@@ -9823,7 +9823,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- PARAMETER: clip=(0.3003, 2.168833333333333)
 Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- TEXT: 'SEASON'
+Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- TEXT: 'SEASON (time of year)'
 Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- MEDIA: "processed_youtube=keOX5S1t_5Y_audio='strip'_clip=(1.0343666666666667, 3.069733333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- PARAMETER: audio='strip'
