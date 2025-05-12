@@ -7,9 +7,15 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[AREA](https://www.lifeprint.com/asl101/pages-signs/a/area.htm)
+  https://www.youtube.com/watch?v=-YzELllSB9o AREA / place (5-hand version)
+    trim: 1F-66F
+  https://www.youtube.com/watch?v=lxuXlteq-cI AREA / place (A-hand version)
+    trim: 13F-84F
 
 group:
   more: +md:[BRING](https://www.lifeprint.com/asl101/pages-signs/b/bring.htm)
+  https://www.youtube.com/watch?v=Sm94OknTMI8 BRING / carry
+    trim: 9F-64F
 
 # COME was in lesson 3.
 # DON’T-MIND was in lesson 24.
@@ -31,6 +37,8 @@ group:
 
 group:
   more: +md:[EAST](https://www.lifeprint.com/asl101/pages-signs/e/east.htm)
+  https://www.youtube.com/watch?v=tGKOaKI-CLE EAST
+    trim: 16F-59F
 
 group:
   more: +md:[FAR](https://www.lifeprint.com/asl101/pages-signs/f/far.htm)
@@ -43,15 +51,24 @@ group:
 
 group:
   more: +md:[FAST](https://www.lifeprint.com/asl101/pages-signs/f/fast.htm)
-  # FIXME add more
-  https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST
+  https://www.youtube.com/watch?v=pBzgV-u6WS8 FAST-speed
     trim: 4F-55F
+  https://www.youtube.com/watch?v=bqvkqEi9vh8 QUICK / sudden / immediate
+    trim: 9F-64F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=bDQHMYfmZ3M very-FAST-speed (5-hand version)
+    trim: 9F-80F
 
 group:
   more: +md:[FIELD](https://www.lifeprint.com/asl101/pages-signs/f/field.htm)
+  https://www.youtube.com/watch?v=XqIgUWdBxz8 FIELD / out there / area of land
+    trim: 17F-78F
 
 group:
   more: +md:[FRONT](https://www.lifeprint.com/asl101/pages-signs/f/front.htm)
+  https://www.youtube.com/watch?v=AfllUu7itMA FRONT
+    trim: 36F-89F
 
 # GO was in lesson 3.
 
@@ -73,6 +90,8 @@ group:
 
 group:
   more: +md:[NORTH](https://www.lifeprint.com/asl101/pages-signs/n/north.htm)
+  https://www.youtube.com/watch?v=mLWGFVIVUXY NORTH
+    trim: 21F-76F
 
 group:
   more: +md:[PARKING-LOT](https://www.lifeprint.com/asl101/pages-signs/p/parking-lot.htm)
@@ -84,6 +103,15 @@ group:
 
 group:
   more: +md:[SOUTH](https://www.lifeprint.com/asl101/pages-signs/s/south.htm)
+  https://www.youtube.com/watch?v=Of670lCy0dI SOUTH (palm down version)
+    trim: 14F-65F
+  https://www.youtube.com/watch?v=SaBd7wv9_0k SOUTH (palm in version)
+    trim: 16F-66F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=jluBmwvfPyE South America
+    trim: 12F-93F
+  # Skipping South Dakota and South Carolina
 
 group:
   more: +md:[SINCE](https://www.lifeprint.com/asl101/pages-signs/s/since.htm)
@@ -93,9 +121,23 @@ group:
 
 group:
   more: +md:[WEST](https://www.lifeprint.com/asl101/pages-signs/w/west.htm)
+  https://www.youtube.com/watch?v=i5hZZy5Sl_A WEST
+    trim: 22F-
 
 group:
   more: +md:[WOW](https://www.lifeprint.com/asl101/pages-signs/w/wow.htm)
-  # FIXME add more
   https://www.youtube.com/watch?v=fQOxwOW0qbw WOW
     trim: 24F-60F
+
+  tags: +extra
+  # No video for pun version with mouth as O.
+  https://www.youtube.com/watch?v=AFkX2O2Vnno #WOW
+    trim: 4F-57F
+  https://www.youtube.com/watch?v=lV9GBHs_Mfs WOAH! / oh wow! (Y-hand version)
+    trim: 7F-60F
+
+group:
+  # The lesson page list this as review, but it wasn't in the previous lessons.
+  more: +md:[THEREABOUTS](https://www.lifeprint.com/asl101/pages-signs/t/thereabouts.htm)
+  https://www.lifeprint.com/asl101/videos/thereabouts-area.mp4 THEREABOUTS
+    trim: 33F-80F
