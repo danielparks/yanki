@@ -33,7 +33,7 @@ group:
     MANAGE / control / reign / administer / manipulate
     trim: 27F-85F
   https://www.youtube.com/watch?v=0ScBo3iRUhY
-    manager / moderator / administrator / MANAGE + PERSON
+    MANAGER / moderator / administrator / MANAGE + PERSON
     trim: 18F-101F
 
 group:
@@ -41,7 +41,7 @@ group:
   more: +md:[DANCE](https://www.lifeprint.com/asl101/pages-signs/d/dance.htm)
   https://www.youtube.com/watch?v=p3UKhedGeTA DANCE
     trim: 9F-57F
-  https://www.youtube.com/watch?v=ENRlcym8Im0 dancer / DANCE + PERSON
+  https://www.youtube.com/watch?v=ENRlcym8Im0 DANCER / DANCE + PERSON
     trim: 10F-69F
 
   tags: +extra
@@ -50,7 +50,7 @@ group:
 
 group:
   more: +md:[DENTIST](https://www.lifeprint.com/asl101/pages-signs/d/dentist.htm)
-  https://www.youtube.com/watch?v=Zx8scLXglQU dentist / TOOTH + PERSON
+  https://www.youtube.com/watch?v=Zx8scLXglQU DENTIST / TOOTH + PERSON
     trim: 10F-54F
   # Best video I could find for the A-hand version.
   https://www.youtube.com/watch?v=WNoc9_QeuMQ @64F-86F DENTIST (A-hand version)
@@ -83,7 +83,7 @@ group:
 
 group:
   more: +md:[PILOT](https://www.lifeprint.com/asl101/pages-signs/p/pilot.htm)
-  https://www.youtube.com/watch?v=K171vdOUI8Q pilot / AIRPLANE + PERSON
+  https://www.youtube.com/watch?v=K171vdOUI8Q PILOT / AIRPLANE + PERSON
     trim: 8F-66F
 
 group:
@@ -93,7 +93,7 @@ group:
 
 group:
   more: +md:[BARBER](https://www.lifeprint.com/asl101/pages-signs/b/barber.htm)
-  https://www.youtube.com/watch?v=Uxa8xGsuc7A barber / HAIRCUT + PERSON
+  https://www.youtube.com/watch?v=Uxa8xGsuc7A BARBER / HAIRCUT + PERSON
     trim: 7F-
 
 group:
@@ -166,7 +166,7 @@ group:
   https://www.youtube.com/watch?v=YNJ9iodSyYw PREACH
     trim: 6F-
   https://www.youtube.com/watch?v=WYG78SOzDJk
-    PREACH + PERSON / preacher / missionary
+    PREACH + PERSON / preacher / MISSIONARY
     trim: 9F-63F
 
 # Missionary is the same as preacher.
@@ -187,7 +187,7 @@ group:
 
 group:
   more: +md:[supervisor](https://www.lifeprint.com/asl101/pages-signs/s/supervisor.htm)
-  https://www.youtube.com/watch?v=ZJ5i5Z5Mkmw SUPERVISE + PERSON / supervisor
+  https://www.youtube.com/watch?v=ZJ5i5Z5Mkmw SUPERVISE + PERSON / SUPERVISOR
     trim: 7F-
   # No separate video for just this version of SUPERVISE.
 
@@ -212,5 +212,5 @@ group:
 group:
   more: +md:[MECHANIC](https://www.lifeprint.com/asl101/pages-signs/m/mechanic.htm)
   https://www.youtube.com/watch?v=I4qkYpadqtY
-    WRENCH + PERSON / mechanic / plumber
+    WRENCH + PERSON / MECHANIC / plumber
     trim: 7F-66F
