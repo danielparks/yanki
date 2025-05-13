@@ -74,9 +74,13 @@ group:
 
 group:
   more: +md:[HURRY](https://www.lifeprint.com/asl101/pages-signs/h/hurry.htm)
+  https://www.youtube.com/watch?v=ry4gjRbNLws HURRY
+    trim: 18F-68F
 
 group:
   more: +md:[LEFT](https://www.lifeprint.com/asl101/pages-signs/l/left.htm)
+  https://www.youtube.com/watch?v=tBXh9RPeKlI LEFT-direction
+    trim: 17F-72F
 
 # MOVE was in lesson 5.
 
@@ -95,11 +99,19 @@ group:
 
 group:
   more: +md:[PARKING-LOT](https://www.lifeprint.com/asl101/pages-signs/p/parking-lot.htm)
+  https://www.youtube.com/watch?v=mhEv-1ErcEM PARKING-LOT
+    trim: 27F-
 
 # PLAY was in lesson 5.
 
 group:
   more: +md:[RIGHT](https://www.lifeprint.com/asl101/pages-signs/r/right.htm)
+  https://www.youtube.com/watch?v=mxX9mVMl8O4 RIGHT-direction
+    trim: 8F-56F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=83c6pAJd4D0 ALRIGHT / [legal] rights
+    trim: 18F-60F
 
 group:
   more: +md:[SOUTH](https://www.lifeprint.com/asl101/pages-signs/s/south.htm)
