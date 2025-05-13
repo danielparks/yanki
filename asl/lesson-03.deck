@@ -10,10 +10,8 @@ group:
   # Crop black line off bottom.
   https://www.youtube.com/watch?v=n1PjPqcHswk #ALL
     trim: 16F-63F
-    crop: in_w:in_h-2
   https://www.youtube.com/watch?v=BEfH2a6OfRA ALL / whole / entire
     trim: 19F-75F
-    crop: in_w:in_h-2
 
 group:
   more: +md:[ASK](https://www.lifeprint.com/asl101/pages-signs/a/ask.htm)
@@ -39,13 +37,11 @@ group:
     tags: +first_100_signs
   https://www.youtube.com/watch?v=LLGY5yaSLDk very-LARGE
     trim: 20F-78F
-    crop: in_w:in_h-2
 
 group:
   more: +md:[CITY](https://www.lifeprint.com/asl101/pages-signs/c/city.htm)
   https://www.youtube.com/watch?v=e7Tz3OSQBQQ CITY / town / community
     trim: 3F-48F
-    crop: in_w:in_h-2
 
   tags: +extra
   https://www.youtube.com/watch?v=Y8QX1lAPwOs -> CITY (twisting version)
@@ -132,7 +128,6 @@ group:
   more: +md:[HOUSE](https://www.lifeprint.com/asl101/pages-signs/h/house.htm)
   https://www.youtube.com/watch?v=lBSZYk72vmY HOUSE
     trim: 13F-68F
-    crop: in_w:in_h-2
 
 group:
   more: +md:[MORE](https://www.lifeprint.com/asl101/pages-signs/m/more.htm)
@@ -165,7 +160,6 @@ group:
   more: +md:[SMALL](https://www.lifeprint.com/asl101/pages-signs/s/small.htm)
   https://www.youtube.com/watch?v=RKnUlZ8bOzs SMALL
     trim: 8F-71F
-    crop: in_w:in_h-2
     tags: +first_100_signs
 
   tags: +extra

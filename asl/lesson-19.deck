@@ -35,7 +35,6 @@ group:
   # Crop off horizontal black bars.
   https://www.youtube.com/watch?v=k8D2AzVJlVI EMBARRASSED
     trim: 10F-67F
-    crop: in_w:in_h*0.84
 
   tags: +extra
   https://www.youtube.com/watch?v=ekHp_oJtklI
