@@ -12159,12 +12159,6 @@ Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- TAGS: 'Lifeprint lesson_01 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- TEXT: 'STUDENT, [that-person]?'
-Lifeprint ASL https://www.youtube.com/watch?v=wSj0zfdppNc @0- MEDIA: "processed_youtube=wSj0zfdppNc_audio='strip'_overlay_text='Phrase'.mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=wSj0zfdppNc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<h3>Do you like to play basketball?</h3>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=wSj0zfdppNc @0- PARAMETER: audio='strip'
-Lifeprint ASL https://www.youtube.com/watch?v=wSj0zfdppNc @0- PARAMETER: overlay_text='Phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=wSj0zfdppNc @0- TAGS: 'Lifeprint extra lesson_25 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=wSj0zfdppNc @0- TEXT: 'BASKETBALL, YOU LIKE PLAY?'
 Lifeprint ASL https://www.youtube.com/watch?v=wTNv94AY-yE @0- MEDIA: "processed_youtube=wTNv94AY-yE_audio='strip'_clip=(0.5338666666666667, 2.6026000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=wTNv94AY-yE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson01.htm">lesson 1</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/a/again.htm">AGAIN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=wTNv94AY-yE @0- PARAMETER: audio='strip'
