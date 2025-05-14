@@ -82,6 +82,11 @@ group:
   https://www.youtube.com/watch?v=tBXh9RPeKlI LEFT-direction
     trim: 17F-72F
 
+  tags: +extra
+  # From lesson video (https://youtu.be/EMaR5_kQNqg?t=1223)
+  https://www.youtube.com/watch?v=nrynGpYPKTQ left-SIDE / on the left
+    trim: 16F-55F
+
 # MOVE was in lesson 5.
 
 group:
@@ -112,6 +117,9 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=83c6pAJd4D0 ALRIGHT / [legal] rights
     trim: 18F-60F
+  # From lesson video (https://youtu.be/EMaR5_kQNqg?t=1275)
+  https://www.youtube.com/watch?v=LrbE9x3BK4Q right-SIDE / on the right
+    trim: 19F-52F
 
 group:
   more: +md:[SOUTH](https://www.lifeprint.com/asl101/pages-signs/s/south.htm)
