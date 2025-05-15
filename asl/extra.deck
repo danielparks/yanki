@@ -502,6 +502,13 @@ group:
     trim: 6F-71F
 
 group:
+  more: +md:[FANCY](https://www.lifeprint.com/asl101/pages-signs/f/fancy.htm)
+  https://www.youtube.com/watch?v=XfGTE4a91QE FANCY / stylish / luxury
+    trim: 2F-61F
+    more: +md:This is a larger movement than
+      [POLITE](https://www.lifeprint.com/asl101/pages-signs/p/polite.htm).
+
+group:
   more: +md:[FALL-IN-LOVE](https://www.lifeprint.com/asl101/pages-signs/f/fallinlove.htm)
   https://www.youtube.com/watch?v=4PE5u8lfxs4 FALL-IN-LOVE
     trim: 10F-83F

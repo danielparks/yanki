@@ -7327,6 +7327,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=Xecxz2jXc1I @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=Xecxz2jXc1I @0- PARAMETER: clip=(0.6339666666666667, 2.9696333333333333)
 Lifeprint ASL https://www.youtube.com/watch?v=Xecxz2jXc1I @0- TAGS: 'Lifeprint lesson_25 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Xecxz2jXc1I @0- TEXT: 'FAR-away (CL:1)'
+Lifeprint ASL https://www.youtube.com/watch?v=XfGTE4a91QE @0- MEDIA: "processed_youtube=XfGTE4a91QE_audio='strip'_clip=(0.06673333333333334, 2.0353666666666665).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=XfGTE4a91QE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/fancy.htm">FANCY</a></p>\n<p>This is a larger movement than\n<a href="https://www.lifeprint.com/asl101/pages-signs/p/polite.htm">POLITE</a>.</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=XfGTE4a91QE @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=XfGTE4a91QE @0- PARAMETER: clip=(0.06673333333333334, 2.0353666666666665)
+Lifeprint ASL https://www.youtube.com/watch?v=XfGTE4a91QE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=XfGTE4a91QE @0- TEXT: 'FANCY / stylish / luxury'
 Lifeprint ASL https://www.youtube.com/watch?v=Xg1JcqTrH-0 @0- MEDIA: "processed_youtube=Xg1JcqTrH-0_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=Xg1JcqTrH-0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson22.htm">lesson 22</a></p>\n<h3>What costs 25 cents?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Xg1JcqTrH-0 @0- PARAMETER: audio='strip'
