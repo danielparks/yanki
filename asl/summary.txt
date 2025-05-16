@@ -6246,9 +6246,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=R4w0Oem6GQM @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=R4w0Oem6GQM @0- PARAMETER: clip=(0.3, 2.3)
 Lifeprint ASL https://www.youtube.com/watch?v=R4w0Oem6GQM @0- TAGS: 'Lifeprint extra lesson_08 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=R4w0Oem6GQM @0- TEXT: 'FRILLY-SHIRT'
-Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- MEDIA: "processed_youtube=R8pJg8rW3AE_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- MEDIA: 'processed_youtube=R8pJg8rW3AE_6ade39ec8711a075a52ad6870535b8dc.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<h3>Do you want to go to the movies?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- PARAMETER: clip=(0.13346666666666668, 3.8371666666666666)
 Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- TAGS: 'Lifeprint lesson_25 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=R8pJg8rW3AE @0- TEXT: 'WANT GO MOVIE YOU?'
@@ -10835,9 +10836,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=oz63G93uNGk @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=oz63G93uNGk @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=oz63G93uNGk @0- TAGS: 'Lifeprint first_100_signs lesson_05 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=oz63G93uNGk @0- TEXT: 'OUT'
-Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- MEDIA: "processed_youtube=ozKTqiWO6Kc_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- MEDIA: 'processed_youtube=ozKTqiWO6Kc_41bf7ccdb4a061741f1074bfc82707cd.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<h3>How many times have you moved?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- PARAMETER: clip=(2.0353666666666665, 8.141466666666666)
 Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- TAGS: 'Lifeprint lesson_25 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=ozKTqiWO6Kc @0- TEXT: 'UP-TO-NOW, YOU MOVE HOW-MANY TIME?'
