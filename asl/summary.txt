@@ -8534,6 +8534,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=cNyi0VgluXo @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=cNyi0VgluXo @0- PARAMETER: clip=(0.3003, 1.8018)
 Lifeprint ASL https://www.youtube.com/watch?v=cNyi0VgluXo @0- TAGS: 'Lifeprint lesson_12 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=cNyi0VgluXo @0- TEXT: 'MINUTE / second (on hand)'
+Lifeprint ASL https://www.youtube.com/watch?v=cQ9u2KmAJto @0- MEDIA: "processed_youtube=cQ9u2KmAJto_audio='strip'_clip=(0.33366666666666667, 2.2689333333333335).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=cQ9u2KmAJto @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=cQ9u2KmAJto @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=cQ9u2KmAJto @0- PARAMETER: clip=(0.33366666666666667, 2.2689333333333335)
+Lifeprint ASL https://www.youtube.com/watch?v=cQ9u2KmAJto @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=cQ9u2KmAJto @0- TEXT: 'BRAKE (2 flat hands, left hand moves version)'
 Lifeprint ASL https://www.youtube.com/watch?v=cR_LChBwkOY @0- MEDIA: 'processed_youtube=cR_LChBwkOY_7555f66746b16307fcaab4a7c42fd6d6.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=cR_LChBwkOY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<h3>Do you think children should change their underwear everyday?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=cR_LChBwkOY @0- PARAMETER: audio='strip'
