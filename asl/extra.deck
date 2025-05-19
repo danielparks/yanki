@@ -18,6 +18,10 @@ https://www.youtube.com/watch?v=cQ9u2KmAJto
   BRAKE (2 flat hands, left hand moves version)
   trim: 10F-68F
 
+https://www.youtube.com/watch?v=1o8VwwFYyrs
+  muffin / cupcake / CAKE (palm version)
+  trim: 7F-60F
+
 https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
   trim: 11F-70F
 
@@ -49,6 +53,11 @@ https://www.youtube.com/watch?v=vsHQPGsdQuQ DISTRACT (F-hands version)
 
 https://www.youtube.com/watch?v=V9xGHj_OsnU FASCINATED / attract / attraction
   trim: 33F-86F
+
+https://www.youtube.com/watch?v=GCfOK_1P62g
+  FEATURES (index list version), these, they (referenced things)
+  trim: 22F-
+  more: +md:[INDEXING](https://www.lifeprint.com/asl101/pages-layout/indexing.htm)
 
 https://www.youtube.com/watch?v=8WwxmvrQ_uw FILM / video record
   trim: 31F-145F
@@ -104,10 +113,6 @@ https://www.youtube.com/watch?v=OjAgN7Iy6Ps MIX
 
 https://www.youtube.com/watch?v=HUVSYJSuzEk MOST TIME / usually
   trim: 10F-80F
-
-https://www.youtube.com/watch?v=1o8VwwFYyrs
-  muffin / cupcake / CAKE (palm version)
-  trim: 7F-60F
 
 https://www.youtube.com/watch?v=AjTT29zx3SQ nickname
   trim: 12F-54F
@@ -175,11 +180,6 @@ https://www.youtube.com/watch?v=H2vcSP2PRxU STEEP / ground going up
 
 https://www.youtube.com/watch?v=TqmlL13jZoI STORY / message
   trim: 15F-
-
-https://www.youtube.com/watch?v=GCfOK_1P62g
-  FEATURES (index list version), these, they (referenced things)
-  trim: 22F-
-  more: +md:[INDEXING](https://www.lifeprint.com/asl101/pages-layout/indexing.htm)
 
 https://www.youtube.com/watch?v=eFsZ6FwpX8g TOP
   trim: 5F-73F
@@ -350,6 +350,11 @@ group:
     trim: 8F-70F
 
 group:
+  more: +md:[COMPLAIN](https://www.lifeprint.com/asl101/pages-signs/c/complain.htm)
+  https://www.youtube.com/watch?v=zbKRdkP4KWs COMPLAIN / object / protest
+    trim: 8F-54F
+
+group:
   more: +md:[CONNECT](https://www.lifeprint.com/asl101/pages-signs/c/connect.htm)
   https://www.youtube.com/watch?v=wEYVc7Z5kQA CONNECT / link / join / belong
     trim: 10F-60F
@@ -385,11 +390,6 @@ group:
     trim: 5F-69F
 
 group:
-  more: +md:[COMPLAIN](https://www.lifeprint.com/asl101/pages-signs/c/complain.htm)
-  https://www.youtube.com/watch?v=zbKRdkP4KWs COMPLAIN / object / protest
-    trim: 8F-54F
-
-group:
   more: +md:[CULTURE](https://www.lifeprint.com/asl101/pages-signs/c/culture.htm)
   https://www.youtube.com/watch?v=onk66POk4xU CULTURE / cultural
     trim: 16F-80F
@@ -417,6 +417,13 @@ group:
     trim: 7F-70F
 
 group:
+  more: +md:[DECIDE](https://www.lifeprint.com/asl101/pages-signs/d/decide.htm)
+  https://www.youtube.com/watch?v=r8gvnE0liOg DECIDE / determine (full version)
+    trim: 16F-91F
+  https://www.youtube.com/watch?v=xhEOnG_EPss DECIDE / determine (short version)
+    trim: 16F-66F
+
+group:
   more: +md:[DELICIOUS](https://www.lifeprint.com/asl101/pages-signs/d/delicious.htm)
   https://www.youtube.com/watch?v=jHACe_ba-tc DELICIOUS (snap version)
     trim: 11F-58F
@@ -436,13 +443,6 @@ group:
   https://www.youtube.com/watch?v=pHDIa-ao9BQ ->
     DEPRESSED / depression / feeling down (flat hands version)
     trim: 13F-60F
-
-group:
-  more: +md:[DECIDE](https://www.lifeprint.com/asl101/pages-signs/d/decide.htm)
-  https://www.youtube.com/watch?v=r8gvnE0liOg DECIDE / determine (full version)
-    trim: 16F-91F
-  https://www.youtube.com/watch?v=xhEOnG_EPss DECIDE / determine (short version)
-    trim: 16F-66F
 
 group:
   more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)
@@ -486,14 +486,14 @@ group:
     trim: 1F-
 
 group:
-  more: +md:[EXERCISE](https://www.lifeprint.com/asl101/pages-signs/e/exercise.htm)
-  https://www.youtube.com/watch?v=nf7FO5T3UO4 EXERCISE
-    trim: 11F-91F
-
-group:
   more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
   https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
     trim: 26F-98F
+
+group:
+  more: +md:[EXERCISE](https://www.lifeprint.com/asl101/pages-signs/e/exercise.htm)
+  https://www.youtube.com/watch?v=nf7FO5T3UO4 EXERCISE
+    trim: 11F-91F
 
 group:
   more: +md:[EXPENSIVE](https://www.lifeprint.com/asl101/pages-signs/e/expensive.htm)
@@ -544,17 +544,17 @@ group:
     trim: 4F-50F
 
 group:
-  more: +md:[GUESS](https://www.lifeprint.com/asl101/pages-signs/g/guess.htm)
-  https://www.youtube.com/watch?v=B5oB0HgAxVo GUESS / miss (e.g. fail to catch)
-    trim: 10F-58F
-
-group:
   more: +md:[GROW](https://www.lifeprint.com/asl101/pages-signs/g/grow.htm)
   # GROW is in lesson 14 under SPRING
   https://www.youtube.com/watch?v=K06cSaDx4BM GROW-large
     trim: 41F-109F
   https://www.youtube.com/watch?v=FE1X19IEu0E SPROUT
     trim: 6F-
+
+group:
+  more: +md:[GUESS](https://www.lifeprint.com/asl101/pages-signs/g/guess.htm)
+  https://www.youtube.com/watch?v=B5oB0HgAxVo GUESS / miss (e.g. fail to catch)
+    trim: 10F-58F
 
 group:
   more: +md:[HAPPEN](https://www.lifeprint.com/asl101/pages-signs/h/happen.htm)
@@ -610,6 +610,11 @@ group:
     trim: 10F-47F
   https://www.youtube.com/watch?v=i_Hkr9vkkz0 GOOD L-U-C-K
     trim: 13F-54F
+
+group:
+  more: +md:[MATCH](https://www.lifeprint.com/asl101/pages-signs/m/match.htm)
+  https://www.youtube.com/watch?v=vN9YMc4XGOw MATCH / fit / combine
+    trim: 14F-62F
 
 group:
   more: +md:[MAYBE](https://www.lifeprint.com/asl101/pages-signs/m/maybe.htm)
@@ -674,11 +679,6 @@ group:
     trim: 10F-55F
   https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
     trim: 5F-55F
-
-group:
-  more: +md:[MATCH](https://www.lifeprint.com/asl101/pages-signs/m/match.htm)
-  https://www.youtube.com/watch?v=vN9YMc4XGOw MATCH / fit / combine
-    trim: 14F-62F
 
 group:
   more: +md:[PARTY](https://www.lifeprint.com/asl101/pages-signs/p/party.htm)
