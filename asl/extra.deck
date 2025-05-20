@@ -189,6 +189,9 @@ https://www.youtube.com/watch?v=YG3jWemLj8A TOW (pull version)
 https://www.youtube.com/watch?v=YJCMWt3RQJA TOW (X-hand version)
   trim: 10F-73F
 
+https://www.youtube.com/watch?v=ZNs1MRQJG7E TRAUMA / scarred heart and mind
+  trim: 11F-84F
+
 https://www.youtube.com/watch?v=6S9riIpP4go UNTIL
   trim: 10F-75F
 
@@ -834,6 +837,11 @@ group:
     trim: 3F-48F
 
 group:
+  more: +md:[SENTENCE](https://www.lifeprint.com/asl101/pages-signs/s/sentence.htm)
+  https://www.youtube.com/watch?v=Gm513X-UNwo SENTENCE / phrase
+    trim: 16F-78F
+
+group:
   more: +md:[SEX](https://www.lifeprint.com/asl101/pages-signs/s/sex.htm)
   https://www.youtube.com/watch?v=Y9YdryweTXo HOOK-UP / casual sex
     trim: 14F-73F
@@ -918,6 +926,11 @@ group:
   more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/support.htm)
   https://www.youtube.com/watch?v=zIPyWpDlY24 SUPPORT / loyal / sustain / pro-
     trim: 5F-64F
+
+group:
+  more: +md:[TEMPTATION](https://www.lifeprint.com/asl101/pages-signs/t/temptation.htm)
+  https://www.youtube.com/watch?v=Fwkvle1lK2g TEMPTATION
+    trim: 14F-96F
 
 group:
   more: +md:[TEND](https://www.lifeprint.com/asl101/pages-signs/t/tend.htm)
