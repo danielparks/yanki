@@ -4122,6 +4122,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=Ft6JlxIIEP4 @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=Ft6JlxIIEP4 @0- PARAMETER: clip=(0.3670333333333333, 2.0020000000000002)
 Lifeprint ASL https://www.youtube.com/watch?v=Ft6JlxIIEP4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Ft6JlxIIEP4 @0- TEXT: 'TOMATO'
+Lifeprint ASL https://www.youtube.com/watch?v=Fwkvle1lK2g @0- MEDIA: "processed_youtube=Fwkvle1lK2g_audio='strip'_clip=(0.46713333333333334, 3.2032000000000003).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=Fwkvle1lK2g @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/temptation.htm">TEMPTATION</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Fwkvle1lK2g @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=Fwkvle1lK2g @0- PARAMETER: clip=(0.46713333333333334, 3.2032000000000003)
+Lifeprint ASL https://www.youtube.com/watch?v=Fwkvle1lK2g @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=Fwkvle1lK2g @0- TEXT: 'TEMPTATION'
 Lifeprint ASL https://www.youtube.com/watch?v=FxcrY6piGv8 @0- MEDIA: "processed_youtube=FxcrY6piGv8_audio='strip'_clip=(0.13346666666666668, 2.168833333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=FxcrY6piGv8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/helicopter.htm">HELICOPTER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=FxcrY6piGv8 @0- PARAMETER: audio='strip'
@@ -4295,6 +4301,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=Gism7nejsNc @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=Gism7nejsNc @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=Gism7nejsNc @0- TAGS: 'Lifeprint lesson_12 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=Gism7nejsNc @0- TEXT: 'HABIT ANY YOU? WHAT-huh?'
+Lifeprint ASL https://www.youtube.com/watch?v=Gm513X-UNwo @0- MEDIA: "processed_youtube=Gm513X-UNwo_audio='strip'_clip=(0.5338666666666667, 2.6026000000000002).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=Gm513X-UNwo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sentence.htm">SENTENCE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Gm513X-UNwo @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=Gm513X-UNwo @0- PARAMETER: clip=(0.5338666666666667, 2.6026000000000002)
+Lifeprint ASL https://www.youtube.com/watch?v=Gm513X-UNwo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=Gm513X-UNwo @0- TEXT: 'SENTENCE / phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=GnHH4QK3Ths @0- MEDIA: "processed_youtube=GnHH4QK3Ths_audio='strip'_clip=(0.3003, 2.435766666666667).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=GnHH4QK3Ths @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=GnHH4QK3Ths @0- PARAMETER: audio='strip'
@@ -7725,6 +7737,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=ZN_y94vSCcc @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=ZN_y94vSCcc @0- PARAMETER: clip=(0.4337666666666667, 1.9352666666666667)
 Lifeprint ASL https://www.youtube.com/watch?v=ZN_y94vSCcc @0- TAGS: 'Lifeprint extra lesson_24 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=ZN_y94vSCcc @0- TEXT: 'say-NO-to-me'
+Lifeprint ASL https://www.youtube.com/watch?v=ZNs1MRQJG7E @0- MEDIA: "processed_youtube=ZNs1MRQJG7E_audio='strip'_clip=(0.3670333333333333, 2.8028).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=ZNs1MRQJG7E @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=ZNs1MRQJG7E @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=ZNs1MRQJG7E @0- PARAMETER: clip=(0.3670333333333333, 2.8028)
+Lifeprint ASL https://www.youtube.com/watch?v=ZNs1MRQJG7E @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=ZNs1MRQJG7E @0- TEXT: 'TRAUMA / scarred heart and mind'
 Lifeprint ASL https://www.youtube.com/watch?v=ZPitchcahPQ @0- MEDIA: "processed_youtube=ZPitchcahPQ_audio='strip'_clip=(0.6339666666666667, None).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ZPitchcahPQ @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/people.htm">PEOPLE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ZPitchcahPQ @0- PARAMETER: audio='strip'
