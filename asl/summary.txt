@@ -4181,6 +4181,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=G8uOaYEdWTc @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=G8uOaYEdWTc @0- PARAMETER: clip=(0.20020000000000002, None)
 Lifeprint ASL https://www.youtube.com/watch?v=G8uOaYEdWTc @0- TAGS: 'Lifeprint lesson_22 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=G8uOaYEdWTc @0- TEXT: 'REGISTER / registration'
+Lifeprint ASL https://www.youtube.com/watch?v=G9CUB39sYEo @0- MEDIA: "processed_youtube=G9CUB39sYEo_audio='strip'_clip=(0.23356666666666667, None).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=G9CUB39sYEo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cheat.htm">CHEAT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=G9CUB39sYEo @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=G9CUB39sYEo @0- PARAMETER: clip=(0.23356666666666667, None)
+Lifeprint ASL https://www.youtube.com/watch?v=G9CUB39sYEo @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=G9CUB39sYEo @0- TEXT: 'CHEAT (straddle the fence version)'
 Lifeprint ASL https://www.youtube.com/watch?v=GBMSdLL7mTY @0- MEDIA: "processed_youtube=GBMSdLL7mTY_audio='strip'_clip=(0.16683333333333333, 2.3690333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=GBMSdLL7mTY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/boat.htm">BOAT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=GBMSdLL7mTY @0- PARAMETER: audio='strip'
@@ -5413,6 +5419,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=LzbVyRp_8Bg @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=LzbVyRp_8Bg @0- PARAMETER: clip=(0.13346666666666668, 1.9019)
 Lifeprint ASL https://www.youtube.com/watch?v=LzbVyRp_8Bg @0- TAGS: 'Lifeprint extra lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=LzbVyRp_8Bg @0- TEXT: 'CAT (8 hand version)'
+Lifeprint ASL https://www.youtube.com/watch?v=M-YTVGOSvqA @0- MEDIA: "processed_youtube=M-YTVGOSvqA_audio='strip'_clip=(0.4337666666666667, 2.5692333333333335).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=M-YTVGOSvqA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cheat.htm">CHEAT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=M-YTVGOSvqA @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=M-YTVGOSvqA @0- PARAMETER: clip=(0.4337666666666667, 2.5692333333333335)
+Lifeprint ASL https://www.youtube.com/watch?v=M-YTVGOSvqA @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=M-YTVGOSvqA @0- TEXT: 'CHEAT (1-hand version)'
 Lifeprint ASL https://www.youtube.com/watch?v=M4kXcwEGCAg @0- MEDIA: "processed_youtube=M4kXcwEGCAg_audio='strip'_clip=(0.20020000000000002, 2.168833333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=M4kXcwEGCAg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson11.htm">lesson 11</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/people.htm">PEOPLE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=M4kXcwEGCAg @0- PARAMETER: audio='strip'
@@ -9459,6 +9471,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=hFWyucf_ePY @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=hFWyucf_ePY @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=hFWyucf_ePY @0- TAGS: 'Lifeprint lesson_10 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=hFWyucf_ePY @0- TEXT: 'YOU THINK COW GOOD PET?'
+Lifeprint ASL https://www.youtube.com/watch?v=hIKTWc-9yKg @0- MEDIA: "processed_youtube=hIKTWc-9yKg_audio='strip'_clip=(0.33366666666666667, 2.6693333333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=hIKTWc-9yKg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cheat.htm">CHEAT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=hIKTWc-9yKg @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=hIKTWc-9yKg @0- PARAMETER: clip=(0.33366666666666667, 2.6693333333333333)
+Lifeprint ASL https://www.youtube.com/watch?v=hIKTWc-9yKg @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=hIKTWc-9yKg @0- TEXT: 'CHEAT (horns version)'
 Lifeprint ASL https://www.youtube.com/watch?v=hJD5uIn7ZHg @0- MEDIA: "processed_youtube=hJD5uIn7ZHg_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=hJD5uIn7ZHg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson04.htm">lesson 4</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/daughter.htm">DAUGHTER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=hJD5uIn7ZHg @0- PARAMETER: audio='strip'
