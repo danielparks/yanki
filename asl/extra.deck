@@ -240,6 +240,17 @@ group:
     trim: 7F-51F
 
 group:
+  more: +md:[CHEAT](https://www.lifeprint.com/asl101/pages-signs/c/cheat.htm)
+  # These aren’t exactly the same as what’s on the page, but the first version
+  # is what I’ve see in real life.
+  https://www.youtube.com/watch?v=hIKTWc-9yKg CHEAT (horns version)
+    trim: 10F-80F
+  https://www.youtube.com/watch?v=M-YTVGOSvqA CHEAT (1-hand version)
+    trim: 13F-77F
+  https://www.youtube.com/watch?v=G9CUB39sYEo CHEAT (straddle the fence version)
+    trim: 7F-
+
+group:
   more: +md:[BERRY](https://www.lifeprint.com/asl101/pages-signs/b/berry.htm)
   https://www.youtube.com/watch?v=rLUHPaGzXp8 STRAWBERRY / BERRY
     trim: 13F-62F
