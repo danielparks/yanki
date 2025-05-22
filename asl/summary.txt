@@ -1377,6 +1377,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=0zRYKjeOM-4 @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=0zRYKjeOM-4 @0- PARAMETER: clip=(0.3670333333333333, 2.5692333333333335)
 Lifeprint ASL https://www.youtube.com/watch?v=0zRYKjeOM-4 @0- TAGS: 'Lifeprint first_100_signs lesson_02 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=0zRYKjeOM-4 @0- TEXT: 'MARRIAGE / marry'
+Lifeprint ASL https://www.youtube.com/watch?v=0zSHZngEFRU @0- MEDIA: "processed_youtube=0zSHZngEFRU_audio='strip'_clip=(0.20020000000000002, 2.168833333333333).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=0zSHZngEFRU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/satisfy.htm">SATISFY</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=0zSHZngEFRU @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=0zSHZngEFRU @0- PARAMETER: clip=(0.20020000000000002, 2.168833333333333)
+Lifeprint ASL https://www.youtube.com/watch?v=0zSHZngEFRU @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=0zSHZngEFRU @0- TEXT: 'SATISFY'
 Lifeprint ASL https://www.youtube.com/watch?v=10HFEXWltKk @0- MEDIA: 'processed_youtube=10HFEXWltKk_cecc7eb410c5866788e456977497e08e.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=10HFEXWltKk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<h3>What kind of toothpaste do you use?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=10HFEXWltKk @0- PARAMETER: audio='strip'
@@ -11125,6 +11131,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=q2rGWWhPBFQ @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=q2rGWWhPBFQ @0- PARAMETER: clip=(0.4337666666666667, 2.8361666666666667)
 Lifeprint ASL https://www.youtube.com/watch?v=q2rGWWhPBFQ @0- TAGS: 'Lifeprint lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=q2rGWWhPBFQ @0- TEXT: 'STROLL (CL:1)'
+Lifeprint ASL https://www.youtube.com/watch?v=q3ZqmbDJhao @0- MEDIA: "processed_youtube=q3ZqmbDJhao_audio='strip'_clip=(0.3003, 2.0020000000000002).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=q3ZqmbDJhao @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/frugal.htm">FRUGAL</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=q3ZqmbDJhao @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=q3ZqmbDJhao @0- PARAMETER: clip=(0.3003, 2.0020000000000002)
+Lifeprint ASL https://www.youtube.com/watch?v=q3ZqmbDJhao @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=q3ZqmbDJhao @0- TEXT: 'FRUGAL / just getting by'
 Lifeprint ASL https://www.youtube.com/watch?v=qAdpmlMPJ5s @0- MEDIA: "processed_youtube=qAdpmlMPJ5s_audio='strip'_clip=(0.36666666666666664, 2.6666666666666665).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=qAdpmlMPJ5s @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/ride.htm">RIDE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=qAdpmlMPJ5s @0- PARAMETER: audio='strip'
