@@ -200,6 +200,11 @@ window.addEventListener("load", (event) => {
     }
   }
 
+  const valid_directions = {
+    "both": true,
+    "text-first": true,
+    "media-first": true,
+  };
   var next_button = create("button", []);
   var direction_select = create("select", [
     create("option", [text("Mix of text and media first")], { "value": "both" }),
@@ -215,6 +220,17 @@ window.addEventListener("load", (event) => {
   var finished_div = create("div",
     [ text("Finished all cards!") ],
     { "id": "finished" });
+
+  // Check which direction we should show the cards in.
+  if ( window.location.hash ) {
+    const parameters = window.location.hash.slice(1).split(":");
+    if ( parameters.length > 0 ) {
+      if ( valid_directions[parameters[0]] ) {
+        direction_select.value = parameters[0];
+      }
+      // For now, ignore other parameters.
+    }
+  }
 
   document.body.appendChild(finished_div);
   document.body.appendChild(controls);
