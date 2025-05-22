@@ -6426,9 +6426,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=SDTlfgtJKlI @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=SDTlfgtJKlI @0- PARAMETER: clip=(0.5666666666666667, 2.8333333333333335)
 Lifeprint ASL https://www.youtube.com/watch?v=SDTlfgtJKlI @0- TAGS: 'Lifeprint lesson_09 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=SDTlfgtJKlI @0- TEXT: 'OPEN-DOOR'
-Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- MEDIA: "processed_youtube=SDnFN2Bsc-w_audio='strip'_overlay_text='Phrase'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- MEDIA: 'processed_youtube=SDnFN2Bsc-w_bf88f4c4a88769ddd5a1cdf8b162bdd0.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson24.htm">lesson 24</a></p>\n<h3>How much orange juice is there left in your fridge?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- PARAMETER: clip=(0.13346666666666668, 6.973633333333334)
 Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- TAGS: 'Lifeprint lesson_24 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=SDnFN2Bsc-w @0- TEXT: 'YOUR REFRIGERATOR, ORANGE-"J" LEAVE-[remaining] HOW-MUCH-[volume]?'
