@@ -77,6 +77,9 @@ https://www.youtube.com/watch?v=jATmWcd1TkA GULLIBLE (idiomatic)
 https://www.youtube.com/watch?v=fRwF6AVi17I HANDSOME
   trim: 16F-63F
 
+https://www.youtube.com/watch?v=S5Xkm-qaEQI HATE
+  trim: 11F-56F
+
 group:
   # Handspeak makes a distinction that Dr Bill does not seem to:
   # EXPECT: https://www.handspeak.com/word/2551/
@@ -272,6 +275,14 @@ group:
     trim: 24F-82F
   https://www.youtube.com/watch?v=1n3eN9v8VV0 BIRTH-[arrive] DAY
     trim: 14F-94F
+
+group:
+  more: +md:[BLOOD](https://www.lifeprint.com/asl101/pages-signs/b/blood.htm)
+  https://www.youtube.com/watch?v=xiqROSdoIhM BLOOD / RED + TRICKLE-DOWN
+    trim: 4F-
+  # No video for DRAW-BLOOD on its own, but:
+  https://www.youtube.com/watch?v=anbTVZEPojo @77F-117F DRAW-BLOOD
+  # No video for special BLOOD-PRESSURE sign.
 
 group:
   more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
@@ -470,6 +481,11 @@ group:
     trim: 6F-57F
 
 group:
+  more: +md:[DREAM](https://www.lifeprint.com/asl101/pages-signs/d/dream.htm)
+  https://www.youtube.com/watch?v=PQ6tYj9tCQs DREAM
+    trim: 16F-74F
+
+group:
   more: +md:[EITHER](https://www.lifeprint.com/asl101/pages-signs/e/either.htm)
   https://www.youtube.com/watch?v=uLoKdhE7rYU EITHER
     trim: 12F-76F
@@ -503,6 +519,11 @@ group:
   more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
   https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
     trim: 26F-98F
+
+group:
+  more: +md:[EXCITED](https://www.lifeprint.com/asl101/pages-signs/e/excited.htm)
+  https://www.youtube.com/watch?v=7jVM-HlaCUQ EXCITED
+    trim: 14F-71F
 
 group:
   more: +md:[EXERCISE](https://www.lifeprint.com/asl101/pages-signs/e/exercise.htm)
