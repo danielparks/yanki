@@ -175,6 +175,9 @@ https://www.youtube.com/watch?v=4Uz8apATGXI RICH / wealth / wealthy
 https://www.youtube.com/watch?v=BItTZ47uio4 SPECIAL / except / unique
   trim: 3F-
 
+https://www.youtube.com/watch?v=jWNyY7bgQ_s STATE
+  more: +md:[STATE](https://www.lifeprint.com/asl101/pages-signs/s/state.htm)
+
 https://www.youtube.com/watch?v=uQyXeoaanbQ STEAL
   trim: 12F-65F
 
@@ -194,6 +197,9 @@ https://www.youtube.com/watch?v=YJCMWt3RQJA TOW (X-hand version)
 
 https://www.youtube.com/watch?v=ZNs1MRQJG7E TRAUMA / scarred heart and mind
   trim: 11F-84F
+
+https://www.youtube.com/watch?v=vNqYEX66ekg TRUST / confidence
+  trim: 38F-92F
 
 https://www.youtube.com/watch?v=6S9riIpP4go UNTIL
   trim: 10F-75F
@@ -243,6 +249,10 @@ group:
     trim: 7F-51F
 
 group:
+  more: +md:[BELIEVE](https://www.lifeprint.com/asl101/pages-signs/b/believe.htm)
+  https://www.youtube.com/watch?v=XVEPT0LvK7Y BELIEVE / THINK + MARRY
+
+group:
   more: +md:[CHEAT](https://www.lifeprint.com/asl101/pages-signs/c/cheat.htm)
   # These aren’t exactly the same as what’s on the page, but the first version
   # is what I’ve see in real life.
@@ -252,6 +262,13 @@ group:
     trim: 13F-77F
   https://www.youtube.com/watch?v=G9CUB39sYEo CHEAT (straddle the fence version)
     trim: 7F-
+
+group:
+  more: +md:[BEE](https://www.lifeprint.com/asl101/pages-signs/b/bee.htm)
+  https://www.youtube.com/watch?v=S713PTJEjV0 BEE
+
+  tags: +extra
+  https://www.youtube.com/watch?v=4BNveTUpjj4 HONEY BEE
 
 group:
   more: +md:[BERRY](https://www.lifeprint.com/asl101/pages-signs/b/berry.htm)
@@ -378,6 +395,10 @@ group:
   more: +md:[COMPLAIN](https://www.lifeprint.com/asl101/pages-signs/c/complain.htm)
   https://www.youtube.com/watch?v=zbKRdkP4KWs COMPLAIN / object / protest
     trim: 8F-54F
+
+group:
+  more: +md:[CONGRATULATIONS](https://www.lifeprint.com/asl101/pages-signs/c/congratulations.htm)
+  https://www.youtube.com/watch?v=C0HCP1b8zJk CONGRATULATIONS
 
 group:
   more: +md:[CONNECT](https://www.lifeprint.com/asl101/pages-signs/c/connect.htm)
@@ -575,6 +596,15 @@ group:
     trim: 10F-78F
 
 group:
+  more: +md:[GHOST](https://www.lifeprint.com/asl101/pages-signs/g/ghost.htm)
+  https://www.youtube.com/watch?v=AOhXN8awg1E GHOST / spirit / haunted
+
+group:
+  more: +md:[GOAT](https://www.lifeprint.com/asl101/pages-signs/g/goat.htm)
+  https://www.youtube.com/watch?v=zJpXgMAurSs GOAT
+    trim: 8F-75F
+
+group:
   more: +md:[GONE](https://www.lifeprint.com/asl101/pages-signs/g/gone.htm)
   https://www.youtube.com/watch?v=4VnktIZsWoA
     GONE / missing / absent / dead / extinct
@@ -627,6 +657,11 @@ group:
     trim: 1F-62F
 
 group:
+  more: +md:[KILL](https://www.lifeprint.com/asl101/pages-signs/k/kill.htm)
+  https://www.youtube.com/watch?v=cC59C9Vm5ig KILL
+    trim: 4F-51F
+
+group:
   more: +md:[JOB](https://www.lifeprint.com/asl101/pages-signs/j/job.htm)
   https://www.youtube.com/watch?v=42A3aALiSng #JOB
     trim: 8F - 73F
@@ -638,6 +673,12 @@ group:
   https://www.youtube.com/watch?v=NmhXdx3epK8 -> LIE / fib
     trim: 7F-57F
   # No video for LIAR or LIE version 3.
+
+group:
+  more: +md:[LOCAL](https://www.lifeprint.com/asl101/pages-signs/l/local.htm)
+  https://www.youtube.com/watch?v=JUGHgwSwKkI
+    LOCAL / regional / in the immediate vicinity
+    trim: 25F-86F
 
 group:
   more: +md:[LOUSY](https://www.lifeprint.com/asl101/pages-signs/l/lousy.htm)
@@ -1052,6 +1093,11 @@ group:
   more: +md:[WITHOUT](https://www.lifeprint.com/asl101/pages-signs/w/without.htm)
   https://www.youtube.com/watch?v=PkFQGB49Nuc WITHOUT
     trim: 23F-
+
+group:
+  more: +md:[WOOD](https://www.lifeprint.com/asl101/pages-signs/w/wood.htm)
+  https://www.youtube.com/watch?v=Jl02T1KXfBc WOOD
+    trim: 17F-72F
 
 group:
   more: +md:[YOGURT](https://www.lifeprint.com/asl101/pages-signs/y/yogurt.htm)
