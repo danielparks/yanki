@@ -1003,6 +1003,12 @@ Lifeprint ASL https://www.lifeprint.com/asl101/videos/parking-lot-supervisors-ea
 Lifeprint ASL https://www.lifeprint.com/asl101/videos/parking-lot-supervisors-earn-a-lot.mp4 @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.lifeprint.com/asl101/videos/parking-lot-supervisors-earn-a-lot.mp4 @0- TAGS: 'Lifeprint lesson_25 phrase'
 Lifeprint ASL https://www.lifeprint.com/asl101/videos/parking-lot-supervisors-earn-a-lot.mp4 @0- TEXT: 'PARKING-LOT SUPERVISOR EARN A-LOT?'
+Lifeprint ASL https://www.lifeprint.com/asl101/videos/simple_flash.mp4 @0- MEDIA: "processed_https\\=||www.lifeprint.com|asl101|videos|simple_flash.mp4_audio='strip'_clip=(0.033366700033366704, None).mp4"
+Lifeprint ASL https://www.lifeprint.com/asl101/videos/simple_flash.mp4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/simple.htm">SIMPLE</a></p>\n'
+Lifeprint ASL https://www.lifeprint.com/asl101/videos/simple_flash.mp4 @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.lifeprint.com/asl101/videos/simple_flash.mp4 @0- PARAMETER: clip=(0.033366700033366704, None)
+Lifeprint ASL https://www.lifeprint.com/asl101/videos/simple_flash.mp4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.lifeprint.com/asl101/videos/simple_flash.mp4 @0- TEXT: 'SIMPLE'
 Lifeprint ASL https://www.lifeprint.com/asl101/videos/thereabouts-area.mp4 @0- MEDIA: "processed_https\\=||www.lifeprint.com|asl101|videos|thereabouts-area.mp4_audio='strip'_clip=(1.1011011011011012, 2.6693360026693362).mp4"
 Lifeprint ASL https://www.lifeprint.com/asl101/videos/thereabouts-area.mp4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/t/thereabouts.htm">THEREABOUTS</a></p>\n'
 Lifeprint ASL https://www.lifeprint.com/asl101/videos/thereabouts-area.mp4 @0- PARAMETER: audio='strip'
@@ -1085,6 +1091,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- PARAMETER: clip=(0.40040000000000003, 3.069733333333333)
 Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=-NuU5ieFphQ @0- TEXT: 'SEEM / apparantly (2 movement version)'
+Lifeprint ASL https://www.youtube.com/watch?v=-OYTTmF4m8M @0- MEDIA: "processed_youtube=-OYTTmF4m8M_audio='strip'_clip=(0.4337666666666667, 2.8695333333333335).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=-OYTTmF4m8M @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/song.htm">SONG</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=-OYTTmF4m8M @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=-OYTTmF4m8M @0- PARAMETER: clip=(0.4337666666666667, 2.8695333333333335)
+Lifeprint ASL https://www.youtube.com/watch?v=-OYTTmF4m8M @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=-OYTTmF4m8M @0- TEXT: 'MUSIC / sing / song'
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- MEDIA: "processed_youtube=-PNCpqJXy_A_audio='strip'_clip=(0.4337666666666667, 2.0687333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=-PNCpqJXy_A @0- PARAMETER: audio='strip'
@@ -2510,6 +2522,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=7HGvACf7eKU @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=7HGvACf7eKU @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=7HGvACf7eKU @0- TAGS: 'Lifeprint lesson_20 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=7HGvACf7eKU @0- TEXT: 'YOU LIKE FOOL PEOPLE?'
+Lifeprint ASL https://www.youtube.com/watch?v=7I76cfbglQE @0- MEDIA: "processed_youtube=7I76cfbglQE_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=7I76cfbglQE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hear.htm">HEAR</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=7I76cfbglQE @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=7I76cfbglQE @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=7I76cfbglQE @0- TEXT: 'LISTEN (3-hand version)'
 Lifeprint ASL https://www.youtube.com/watch?v=7JaE8_Q3zW0 @0- MEDIA: "processed_youtube=7JaE8_Q3zW0_audio='strip'_clip=(0.8341666666666667, 3.1698333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=7JaE8_Q3zW0 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/b/business.htm">BUSINESS</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=7JaE8_Q3zW0 @0- PARAMETER: audio='strip'
@@ -2907,6 +2924,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=9G9uH6H-klQ @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=9G9uH6H-klQ @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=9G9uH6H-klQ @0- TAGS: 'Lifeprint lesson_14 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=9G9uH6H-klQ @0- TEXT: 'COLD WEATHER-[non-initialized], YOU LIKE?'
+Lifeprint ASL https://www.youtube.com/watch?v=9HK6J9Hbt8o @0- MEDIA: "processed_youtube=9HK6J9Hbt8o_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=9HK6J9Hbt8o @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/head.htm">HEAD</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=9HK6J9Hbt8o @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=9HK6J9Hbt8o @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=9HK6J9Hbt8o @0- TEXT: 'HEAD (the body part)'
 Lifeprint ASL https://www.youtube.com/watch?v=9JzidNeA5iA @0- MEDIA: "processed_youtube=9JzidNeA5iA_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=9JzidNeA5iA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson09.htm">lesson 9</a></p>\n<h3>What color is that table?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=9JzidNeA5iA @0- PARAMETER: audio='strip'
@@ -5903,6 +5925,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=Of670lCy0dI @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=Of670lCy0dI @0- PARAMETER: clip=(0.46713333333333334, 2.168833333333333)
 Lifeprint ASL https://www.youtube.com/watch?v=Of670lCy0dI @0- TAGS: 'Lifeprint lesson_25 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Of670lCy0dI @0- TEXT: 'SOUTH (palm down version)'
+Lifeprint ASL https://www.youtube.com/watch?v=Oi6KM2rmbq4 @0- MEDIA: "processed_youtube=Oi6KM2rmbq4_audio='strip'_clip=(0.68, 2.52).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=Oi6KM2rmbq4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/a/against.htm">AGAINST</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Oi6KM2rmbq4 @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=Oi6KM2rmbq4 @0- PARAMETER: clip=(0.68, 2.52)
+Lifeprint ASL https://www.youtube.com/watch?v=Oi6KM2rmbq4 @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=Oi6KM2rmbq4 @0- TEXT: 'AGAINST / opposed / anti-'
 Lifeprint ASL https://www.youtube.com/watch?v=OjAgN7Iy6Ps @0- MEDIA: "processed_youtube=OjAgN7Iy6Ps_audio='strip'_clip=(0.3003, 2.2689333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=OjAgN7Iy6Ps @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=OjAgN7Iy6Ps @0- PARAMETER: audio='strip'
@@ -7264,6 +7292,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=WrkXE5l6udM @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=WrkXE5l6udM @0- PARAMETER: clip=(0.26693333333333336, 2.435766666666667)
 Lifeprint ASL https://www.youtube.com/watch?v=WrkXE5l6udM @0- TAGS: 'Lifeprint colors first_100_signs lesson_06 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=WrkXE5l6udM @0- TEXT: 'GREEN'
+Lifeprint ASL https://www.youtube.com/watch?v=WvPr7_NFKgU @0- MEDIA: "processed_youtube=WvPr7_NFKgU_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=WvPr7_NFKgU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hear.htm">HEAR</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=WvPr7_NFKgU @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=WvPr7_NFKgU @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=WvPr7_NFKgU @0- TEXT: 'LISTEN (C-hand version)'
 Lifeprint ASL https://www.youtube.com/watch?v=WwCJMduRxzU @0- MEDIA: "processed_youtube=WwCJMduRxzU_audio='strip'_clip=(0.3003, 2.6693333333333333).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=WwCJMduRxzU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/postpone.htm">POSTPONE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=WwCJMduRxzU @0- PARAMETER: audio='strip'
