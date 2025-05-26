@@ -222,6 +222,11 @@ group:
     trim: 11F-75F
 
 group:
+  more: +md:[AGAINST](https://www.lifeprint.com/asl101/pages-signs/a/against.htm)
+  https://www.youtube.com/watch?v=Oi6KM2rmbq4 AGAINST / opposed / anti-
+    trim: 17F-63F
+
+group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
@@ -633,6 +638,16 @@ group:
     trim: 4F-65F
 
 group:
+  more: +md:[HEAD](https://www.lifeprint.com/asl101/pages-signs/h/head.htm)
+  https://www.youtube.com/watch?v=9HK6J9Hbt8o HEAD (the body part)
+
+group:
+  more: +md:[HEAR](https://www.lifeprint.com/asl101/pages-signs/h/hear.htm)
+  https://www.youtube.com/watch?v=7I76cfbglQE LISTEN (3-hand version)
+  https://www.youtube.com/watch?v=WvPr7_NFKgU LISTEN (C-hand version)
+  # No video for EAVESDROP.
+
+group:
   more: +md:[HIDE](https://www.lifeprint.com/asl101/pages-signs/h/hide.htm)
   https://www.youtube.com/watch?v=yZ8Uwt2-21o HIDE
     trim: 16F-77F
@@ -933,6 +948,11 @@ group:
     SEX-gender / SEX-intercourse
 
 group:
+  more: +md:[SIMPLE](https://www.lifeprint.com/asl101/pages-signs/s/simple.htm)
+  https://www.lifeprint.com/asl101/videos/simple_flash.mp4 SIMPLE
+    trim: 1F-
+
+group:
   more: +md:[SKATING](https://www.lifeprint.com/asl101/pages-signs/s/skating.htm)
   https://www.youtube.com/watch?v=Xdskv36XPtI ROLLER-SKATE
     trim: 29F-93F
@@ -978,6 +998,11 @@ group:
     trim: 7F-
   https://www.youtube.com/watch?v=DH6yQjlHRms S-M / social media
     trim: 22F-123F
+
+group:
+  more: +md:[SONG](https://www.lifeprint.com/asl101/pages-signs/s/song.htm)
+  https://www.youtube.com/watch?v=-OYTTmF4m8M MUSIC / sing / song
+    trim: 13F-86F
 
 group:
   more: +md:[SPANISH](https://www.lifeprint.com/asl101/pages-signs/s/spanish.htm)
