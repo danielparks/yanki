@@ -100,6 +100,16 @@ group:
 https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
   trim: 5F-78F
 
+https://www.youtube.com/watch?v=ENi_VqAVIfs
+  IMPROV / spontaneous / impulse / unrehearsed / impromptu
+
+group:
+  # No page for KICK
+  https://www.youtube.com/watch?v=lv0YZCA6sZY
+    KICK / kick-off / kick out / banish (flick version)
+  https://www.youtube.com/watch?v=im5u802dIsQ
+    KICK / kick-off / kick out / boot up (B-hands version)
+
 https://www.youtube.com/watch?v=NCvURDLrHNM KID / kids
   trim: 11F-72F
 
@@ -571,6 +581,12 @@ group:
     trim: 6F-71F
 
 group:
+  more: +md:[EXPRESS](https://www.lifeprint.com/asl101/pages-signs/e/express.htm)
+  https://www.youtube.com/watch?v=QccFX_cxxls
+    EXPRESS / poetry / poem (two-handed version)
+  # See also POETRY group.
+
+group:
   more: +md:[FANCY](https://www.lifeprint.com/asl101/pages-signs/f/fancy.htm)
   https://www.youtube.com/watch?v=XfGTE4a91QE FANCY / stylish / luxury
     trim: 2F-61F
@@ -712,6 +728,11 @@ group:
     trim: 13F-54F
 
 group:
+  more: +md:[magnet](https://www.lifeprint.com/asl101/pages-signs/m/magnet.htm)
+  https://www.youtube.com/watch?v=fIUs6PiH3eE
+    STICK-TO / magnetic / attach to side of
+
+group:
   more: +md:[MATCH](https://www.lifeprint.com/asl101/pages-signs/m/match.htm)
   https://www.youtube.com/watch?v=vN9YMc4XGOw MATCH / fit / combine
     trim: 14F-62F
@@ -808,6 +829,18 @@ group:
     trim: 8F-62F
   https://www.youtube.com/watch?v=hwpt8G2RYnI PLAN (noun or verb) / plan on
     trim: 10F-58F
+
+group:
+  more: +md:[POETRY](https://www.lifeprint.com/asl101/pages-signs/p/poetry.htm)
+  https://www.youtube.com/watch?v=E0K_yuWcG_M
+    POETRY / poem / express (S-hand version)
+
+  tags: +extra
+  https://www.youtube.com/watch?v=dd-oCd7XOPc ->
+    POETRY / poem (P-hand version, legacy)
+  https://www.youtube.com/watch?v=9p26Lngg7Mg ->
+    POETRY / poem (S-hand thumb to chest version)
+  # See also EXPRESS group.
 
 group:
   more: +md:[POSSIBLE](https://www.lifeprint.com/asl101/pages-signs/p/possible.htm)
@@ -995,6 +1028,12 @@ group:
     trim: 18F-68F
   https://www.youtube.com/watch?v=vnon88Fjhsg COMMON-SENSE
     trim: 9F-56F
+
+group:
+  more: +md:[SOCCER](https://www.lifeprint.com/asl101/pages-signs/s/soccer.htm)
+  https://www.youtube.com/watch?v=IWB--Bye4xE SOCCER (B-hands version)
+  https://www.youtube.com/watch?v=mxirGErjjdI ->
+    SOCCER (S-hand version, possibly regional)
 
 group:
   more: +md:[SOCIALIZE](https://www.lifeprint.com/asl101/pages-signs/s/socialize.htm)
