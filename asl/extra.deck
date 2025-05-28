@@ -147,6 +147,14 @@ https://www.youtube.com/watch?v=EKop7phm0Hs OPPOSITE / allergy
 https://www.youtube.com/watch?v=ZHo1AKNIvBY OREGON
   trim: 5F-
 
+group:
+  # No page for ORGASM.
+  # No video for ORGASM (5-hand version).
+  https://www.youtube.com/watch?v=hQoSkXv3bgg ORGASM (3-hand nose version)
+    more: +Dr. Bill recommends a 5-hand instead of a 3-hand.
+  https://www.youtube.com/watch?v=HOMvEJdABmE
+    ORGASM (Double 3-hand chest version)
+
 https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
   trim: 7F-
 
@@ -683,6 +691,11 @@ group:
     trim: 25F-97F
 
 group:
+  more: +md:[INVOLVED](https://www.lifeprint.com/asl101/pages-signs/i/involved.htm)
+  https://www.youtube.com/watch?v=t95pTPofueI INVOLVE / include / comprise
+    trim: 9F-68F
+
+group:
   more: +md:[ITALY](https://www.lifeprint.com/asl101/pages-signs/i/italy.htm)
   https://www.youtube.com/watch?v=CFYyKuV10xo ITALY / Italian (shape version)
     trim: 12F-59F
@@ -1105,6 +1118,12 @@ group:
   https://www.youtube.com/watch?v=ZaxcUQkJ2a4
     THEATER / act / drama / play / show
     trim: 14F-75F
+
+group:
+  more: +md:[TROUBLE](https://www.lifeprint.com/asl101/pages-signs/t/trouble.htm)
+  https://www.youtube.com/watch?v=gR3ynn_BaHo
+    TROUBLE / tribulation / adversity / woe / travails
+    trim: 20F-83F
 
 group:
   more: +md:[TRY](https://www.lifeprint.com/asl101/pages-signs/t/try.htm)
