@@ -11295,11 +11295,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=pYPZpBatN5c @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=pYPZpBatN5c @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=pYPZpBatN5c @0- TEXT: 'BOTH (C to S)'
 Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- MEDIA: "processed_youtube=pe5QrmqOZbk_audio='strip'_overlay_text='Phrase'.mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<h3>Where should we put dirty clothes?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- TAGS: 'Lifeprint lesson_08 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- TEXT: 'CLOTHES DIRTY, SHOULD PUT WHERE?\n\n(Where should we put dirty clothes?'
+Lifeprint ASL https://www.youtube.com/watch?v=pe5QrmqOZbk @0- TEXT: 'CLOTHES DIRTY, SHOULD PUT WHERE?'
 Lifeprint ASL https://www.youtube.com/watch?v=pkNaLLQKuUU @0- MEDIA: "processed_youtube=pkNaLLQKuUU_audio='strip'_clip=(0.5005000000000001, 2.3023000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=pkNaLLQKuUU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/soon.htm">SOON</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=pkNaLLQKuUU @0- PARAMETER: audio='strip'
