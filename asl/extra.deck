@@ -264,6 +264,10 @@ group:
     trim: 10F-68F
 
 group:
+  more: +md:[AWKWARD](https://www.lifeprint.com/asl101/pages-signs/a/awkward.htm)
+  https://www.youtube.com/watch?v=JlKhON_Ta2k AWKWARD
+
+group:
   more: +md:[BEACH](https://www.lifeprint.com/asl101/pages-signs/b/beach.htm)
   https://www.youtube.com/watch?v=eiDFIv7TBZ0 BEACH
     trim: 10F-61F
@@ -332,6 +336,14 @@ group:
   more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
   https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
     trim: 31F-94F
+
+group:
+  more: +md:[BOTHER](https://www.lifeprint.com/asl101/pages-signs/b/bother.htm)
+  https://www.youtube.com/watch?v=QXhyP0rk1sM
+    BOTHER / annoy / harass / harassment
+  tags: +extra
+  https://www.youtube.com/watch?v=MSreZZ-T8PI I-BOTHER-you
+  https://www.youtube.com/watch?v=bI-F9T5tV44 BOTHER-me / annoy me
 
 group:
   more: +md:[BREAK](https://www.lifeprint.com/asl101/pages-signs/b/break.htm)
@@ -434,6 +446,11 @@ group:
   https://www.youtube.com/watch?v=kRmzoHZZiiA ->
     CONNECT / link / join (one hand still)
     trim: 3F-54F
+
+group:
+  more: +md:[CONTINUE](https://www.lifeprint.com/asl101/pages-signs/c/continue.htm)
+  https://www.youtube.com/watch?v=46g8DWLaj70 CONTINUE / ongoing / permanent
+  https://www.youtube.com/watch?v=b8nlVMjXyx4 permanent / CONTINUE!
 
 group:
   more: +md:[COUNSEL](https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm)
@@ -691,6 +708,23 @@ group:
     trim: 25F-97F
 
 group:
+  more: +md:[HUMBLE](https://www.lifeprint.com/asl101/pages-signs/h/humble.htm)
+  https://www.youtube.com/watch?v=q7GZV06uA-4 HUMBLE (behind hand version)
+  # Not on page, but I’ve seen this in real life:
+  https://www.youtube.com/watch?v=55lP-QCDOzE -> HUMBLE (under hand version)
+    trim: 20F-75F
+
+group:
+  more: +md:[INTERRUPT](https://www.lifeprint.com/asl101/pages-signs/i/interrupt.htm)
+  https://www.youtube.com/watch?v=vG-j0DWNBQs INTERRUPT
+
+group:
+  more: +md:[INVENT](https://www.lifeprint.com/asl101/pages-signs/i/invent.htm)
+  https://www.youtube.com/watch?v=1llaGcTiEA8 INVENT / creative / dream up
+  # Can't find video for two handed version of this sign that I saw in real
+  # life, and appears on https://www.handspeak.com/word/510/.
+
+group:
   more: +md:[INVOLVED](https://www.lifeprint.com/asl101/pages-signs/i/involved.htm)
   https://www.youtube.com/watch?v=t95pTPofueI INVOLVE / include / comprise
     trim: 9F-68F
@@ -799,6 +833,10 @@ group:
   more: +md:[OWE](https://www.lifeprint.com/asl101/pages-signs/o/owe.htm)
   https://www.youtube.com/watch?v=Ckgt9JH2o8c OWE / bill / debt / afford
     trim: 13F-86F
+
+group:
+  more: +md:[OWN](https://www.lifeprint.com/asl101/pages-signs/o/own.htm)
+  https://www.youtube.com/watch?v=Rxf0xjZoo5c OWN / owned
 
 group:
   more: +md:[PARTNER](https://www.lifeprint.com/asl101/pages-signs/p/partner.htm)
@@ -1096,6 +1134,13 @@ group:
   more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/support.htm)
   https://www.youtube.com/watch?v=zIPyWpDlY24 SUPPORT / loyal / sustain / pro-
     trim: 5F-64F
+
+group:
+  more: +md:[SYMPATHY](https://www.lifeprint.com/asl101/pages-signs/s/sympathy.htm)
+  https://www.youtube.com/watch?v=gSJU2w9CLfs
+    SYMPATHY / compassion / grace / pity / poor thing (one-handed version)
+  https://www.youtube.com/watch?v=RL1sZpudZrc
+    SYMPATHY / compassion / grace / pity / poor thing (two-handed version)
 
 group:
   more: +md:[TEMPTATION](https://www.lifeprint.com/asl101/pages-signs/t/temptation.htm)
