@@ -6437,9 +6437,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=RKnUlZ8bOzs @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=RKnUlZ8bOzs @0- PARAMETER: crop='in_w:in_h-2'
 Lifeprint ASL https://www.youtube.com/watch?v=RKnUlZ8bOzs @0- TAGS: 'Lifeprint first_100_signs lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=RKnUlZ8bOzs @0- TEXT: 'SMALL'
-Lifeprint ASL https://www.youtube.com/watch?v=RL1sZpudZrc @0- MEDIA: "processed_youtube=RL1sZpudZrc_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=RL1sZpudZrc @0- MEDIA: "processed_youtube=RL1sZpudZrc_audio='strip'_clip=(2.5025, 4.871533333333334).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=RL1sZpudZrc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sympathy.htm">SYMPATHY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=RL1sZpudZrc @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=RL1sZpudZrc @0- PARAMETER: clip=(2.5025, 4.871533333333334)
 Lifeprint ASL https://www.youtube.com/watch?v=RL1sZpudZrc @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=RL1sZpudZrc @0- TEXT: 'SYMPATHY / compassion / grace / pity / poor thing (two-handed version)'
 Lifeprint ASL https://www.youtube.com/watch?v=RMUZFdu6VtI @0- MEDIA: "processed_youtube=RMUZFdu6VtI_audio='strip'.mp4"
