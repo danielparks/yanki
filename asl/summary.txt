@@ -1722,7 +1722,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=2edo5toy_Xo @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=2edo5toy_Xo @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=2edo5toy_Xo @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=2edo5toy_Xo @0- TAGS: 'Lifeprint lesson_25 phrase'
-Lifeprint ASL https://www.youtube.com/watch?v=2edo5toy_Xo @0- TEXT: 'YOU LIKE GO PLAY-FIELD?'
+Lifeprint ASL https://www.youtube.com/watch?v=2edo5toy_Xo @0- TEXT: 'YOU LIKE GO PLAY + FIELD?'
 Lifeprint ASL https://www.youtube.com/watch?v=2gbsdeyY8xo @0- MEDIA: 'processed_youtube=2gbsdeyY8xo_5e0a543580b19d15834f46a83d25ba1e.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=2gbsdeyY8xo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<h3>Who runs your house?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=2gbsdeyY8xo @0- PARAMETER: audio='strip'
