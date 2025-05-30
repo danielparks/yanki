@@ -280,26 +280,15 @@ group:
     trim: 7F-51F
 
 group:
-  more: +md:[BELIEVE](https://www.lifeprint.com/asl101/pages-signs/b/believe.htm)
-  https://www.youtube.com/watch?v=XVEPT0LvK7Y BELIEVE / THINK + MARRY
-
-group:
-  more: +md:[CHEAT](https://www.lifeprint.com/asl101/pages-signs/c/cheat.htm)
-  # These aren’t exactly the same as what’s on the page, but the first version
-  # is what I’ve see in real life.
-  https://www.youtube.com/watch?v=hIKTWc-9yKg CHEAT (horns version)
-    trim: 10F-80F
-  https://www.youtube.com/watch?v=M-YTVGOSvqA CHEAT (1-hand version)
-    trim: 13F-77F
-  https://www.youtube.com/watch?v=G9CUB39sYEo CHEAT (straddle the fence version)
-    trim: 7F-
-
-group:
   more: +md:[BEE](https://www.lifeprint.com/asl101/pages-signs/b/bee.htm)
   https://www.youtube.com/watch?v=S713PTJEjV0 BEE
 
   tags: +extra
   https://www.youtube.com/watch?v=4BNveTUpjj4 HONEY BEE
+
+group:
+  more: +md:[BELIEVE](https://www.lifeprint.com/asl101/pages-signs/b/believe.htm)
+  https://www.youtube.com/watch?v=XVEPT0LvK7Y BELIEVE / THINK + MARRY
 
 group:
   more: +md:[BERRY](https://www.lifeprint.com/asl101/pages-signs/b/berry.htm)
@@ -333,17 +322,17 @@ group:
   # No video for special BLOOD-PRESSURE sign.
 
 group:
-  more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
-  https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
-    trim: 31F-94F
-
-group:
   more: +md:[BOTHER](https://www.lifeprint.com/asl101/pages-signs/b/bother.htm)
   https://www.youtube.com/watch?v=QXhyP0rk1sM
     BOTHER / annoy / harass / harassment
   tags: +extra
   https://www.youtube.com/watch?v=MSreZZ-T8PI I-BOTHER-you
   https://www.youtube.com/watch?v=bI-F9T5tV44 BOTHER-me / annoy me
+
+group:
+  more: +md:[BOTTLE](https://www.lifeprint.com/asl101/pages-signs/b/bottle.htm)
+  https://www.youtube.com/watch?v=6-QzwzJ-tio BOTTLE
+    trim: 31F-94F
 
 group:
   more: +md:[BREAK](https://www.lifeprint.com/asl101/pages-signs/b/break.htm)
@@ -364,11 +353,6 @@ group:
     trim: 14F-62F
 
 group:
-  more: +md:[CAUSE](https://www.lifeprint.com/asl101/pages-signs/c/cause.htm)
-  https://www.youtube.com/watch?v=V47VIesqbc8 CAUSE
-    trim: 15F-71F
-
-group:
   more: +md:[CANCEL](https://www.lifeprint.com/asl101/pages-signs/c/cancel.htm)
   https://www.youtube.com/watch?v=2bBkivd0a7s
     CANCEL / criticize / grade / correct (verb)
@@ -386,6 +370,11 @@ group:
     trim: 0-76F
 
 group:
+  more: +md:[CAUSE](https://www.lifeprint.com/asl101/pages-signs/c/cause.htm)
+  https://www.youtube.com/watch?v=V47VIesqbc8 CAUSE
+    trim: 15F-71F
+
+group:
   more: +md:[CHANCE](https://www.lifeprint.com/asl101/pages-signs/c/chance.htm)
   https://www.youtube.com/watch?v=w8jjz_R6GaI CHANCE
     trim: 13F-56F
@@ -394,6 +383,17 @@ group:
   more: +md:[CHEAP](https://www.lifeprint.com/asl101/pages-signs/c/cheap.htm)
   https://www.youtube.com/watch?v=H-39q5BLM44 CHEAP / inexpensive
     trim: 7F-59F
+
+group:
+  more: +md:[CHEAT](https://www.lifeprint.com/asl101/pages-signs/c/cheat.htm)
+  # These aren’t exactly the same as what’s on the page, but the first version
+  # is what I’ve see in real life.
+  https://www.youtube.com/watch?v=hIKTWc-9yKg CHEAT (horns version)
+    trim: 10F-80F
+  https://www.youtube.com/watch?v=M-YTVGOSvqA CHEAT (1-hand version)
+    trim: 13F-77F
+  https://www.youtube.com/watch?v=G9CUB39sYEo CHEAT (straddle the fence version)
+    trim: 7F-
 
 group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
@@ -407,7 +407,7 @@ group:
     trim: 3F-
 
 group:
-  more: md:[CLUSTER](https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm)
+  more: +md:[CLUSTER](https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm)
   https://www.youtube.com/watch?v=CBvbmM7dHaY
     CLUSTER / category / section / group
     trim: 7F-50F
@@ -416,14 +416,6 @@ group:
   more: +md:[COMMUTE](https://www.lifeprint.com/asl101/pages-signs/c/commute.htm)
   https://www.youtube.com/watch?v=jxWEfoH288I COMMUTE
     trim: 14F-74F
-
-group:
-  more: +md:[COOL](https://www.lifeprint.com/asl101/pages-signs/c/cool2.htm)
-  # Skipping joke sign. SWELL is in lesson 3.
-  https://www.youtube.com/watch?v=1HGp_qG2CgU C-O-O-L
-    trim: 14F-61F
-  https://www.youtube.com/watch?v=pH3DDpGQe_E COOL / neat / hip / trendy
-    trim: 26F-72F
 
 group:
   more: +md:[COMPARE](https://www.lifeprint.com/asl101/pages-signs/c/compare.htm)
@@ -451,6 +443,14 @@ group:
   more: +md:[CONTINUE](https://www.lifeprint.com/asl101/pages-signs/c/continue.htm)
   https://www.youtube.com/watch?v=46g8DWLaj70 CONTINUE / ongoing / permanent
   https://www.youtube.com/watch?v=b8nlVMjXyx4 permanent / CONTINUE!
+
+group:
+  more: +md:[COOL](https://www.lifeprint.com/asl101/pages-signs/c/cool2.htm)
+  # Skipping joke sign. SWELL is in lesson 3.
+  https://www.youtube.com/watch?v=1HGp_qG2CgU C-O-O-L
+    trim: 14F-61F
+  https://www.youtube.com/watch?v=pH3DDpGQe_E COOL / neat / hip / trendy
+    trim: 26F-72F
 
 group:
   more: +md:[COUNSEL](https://www.lifeprint.com/asl101/pages-signs/c/counsel.htm)
@@ -612,16 +612,16 @@ group:
   # See also POETRY group.
 
 group:
+  more: +md:[FALL-IN-LOVE](https://www.lifeprint.com/asl101/pages-signs/f/fallinlove.htm)
+  https://www.youtube.com/watch?v=4PE5u8lfxs4 FALL-IN-LOVE
+    trim: 10F-83F
+
+group:
   more: +md:[FANCY](https://www.lifeprint.com/asl101/pages-signs/f/fancy.htm)
   https://www.youtube.com/watch?v=XfGTE4a91QE FANCY / stylish / luxury
     trim: 2F-61F
     more: +md:This is a larger movement than
       [POLITE](https://www.lifeprint.com/asl101/pages-signs/p/polite.htm).
-
-group:
-  more: +md:[FALL-IN-LOVE](https://www.lifeprint.com/asl101/pages-signs/f/fallinlove.htm)
-  https://www.youtube.com/watch?v=4PE5u8lfxs4 FALL-IN-LOVE
-    trim: 10F-83F
 
 group:
   more: +md:[FIX](https://www.lifeprint.com/asl101/pages-signs/f/fix.htm)
@@ -739,14 +739,14 @@ group:
     trim: 1F-62F
 
 group:
-  more: +md:[KILL](https://www.lifeprint.com/asl101/pages-signs/k/kill.htm)
-  https://www.youtube.com/watch?v=cC59C9Vm5ig KILL
-    trim: 4F-51F
-
-group:
   more: +md:[JOB](https://www.lifeprint.com/asl101/pages-signs/j/job.htm)
   https://www.youtube.com/watch?v=42A3aALiSng #JOB
     trim: 8F - 73F
+
+group:
+  more: +md:[KILL](https://www.lifeprint.com/asl101/pages-signs/k/kill.htm)
+  https://www.youtube.com/watch?v=cC59C9Vm5ig KILL
+    trim: 4F-51F
 
 group:
   more: +md:[LIE](https://www.lifeprint.com/asl101/pages-signs/l/lie.htm)

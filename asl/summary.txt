@@ -3598,7 +3598,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=CBdtfQg85bY @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=CBdtfQg85bY @0- TAGS: 'Lifeprint extra lesson_24 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=CBdtfQg85bY @0- TEXT: 'THUMBS-DOWN / turn down / decline'
 Lifeprint ASL https://www.youtube.com/watch?v=CBvbmM7dHaY @0- MEDIA: "processed_youtube=CBvbmM7dHaY_audio='strip'_clip=(0.28, 2.0).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=CBvbmM7dHaY @0- MORE: '<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm">CLUSTER</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=CBvbmM7dHaY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cluster.htm">CLUSTER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=CBvbmM7dHaY @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=CBvbmM7dHaY @0- PARAMETER: clip=(0.28, 2.0)
 Lifeprint ASL https://www.youtube.com/watch?v=CBvbmM7dHaY @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
