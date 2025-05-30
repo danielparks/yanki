@@ -4530,7 +4530,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=HGBcts4shKw @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=HGBcts4shKw @0- TAGS: 'Lifeprint colors first_100_signs lesson_06 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=HGBcts4shKw @0- TEXT: 'BROWN / BEER'
 Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- MEDIA: "processed_youtube=HGIYIPaoFAc_audio='strip'_clip=(0.03336666666666667, None).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand +md:<a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand <a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- PARAMETER: clip=(0.03336666666666667, None)
 Lifeprint ASL https://www.youtube.com/watch?v=HGIYIPaoFAc @0- TAGS: 'Lifeprint lesson_25 vocabulary'
@@ -5781,7 +5781,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=NZ68mfHiZa8 @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=NZ68mfHiZa8 @0- TAGS: 'Lifeprint lesson_17 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=NZ68mfHiZa8 @0- TEXT: 'GRAPES'
 Lifeprint ASL https://www.youtube.com/watch?v=Na4qNZR3RWA @0- MEDIA: "processed_youtube=Na4qNZR3RWA_audio='strip'_clip=(0.26693333333333336, 1.8018).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=Na4qNZR3RWA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand +md:<a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=Na4qNZR3RWA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand <a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Na4qNZR3RWA @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=Na4qNZR3RWA @0- PARAMETER: clip=(0.26693333333333336, 1.8018)
 Lifeprint ASL https://www.youtube.com/watch?v=Na4qNZR3RWA @0- TAGS: 'Lifeprint lesson_25 vocabulary'
@@ -10316,7 +10316,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=kdo-Tn7Klnc @0- TEXT: 'SEASON (time of year)'
 Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- MEDIA: "processed_youtube=keOX5S1t_5Y_audio='strip'_clip=(1.0343666666666667, 3.069733333333333).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand +md:<a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand <a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- PARAMETER: clip=(1.0343666666666667, 3.069733333333333)
 Lifeprint ASL https://www.youtube.com/watch?v=keOX5S1t_5Y @0- TAGS: 'Lifeprint extra lesson_25 vocabulary'
@@ -11443,7 +11443,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=qg-uh752pW0 @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=qg-uh752pW0 @0- TAGS: 'Lifeprint extra lesson_14 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=qg-uh752pW0 @0- TEXT: 'TORNADO / HURRICANE / typhoon'
 Lifeprint ASL https://www.youtube.com/watch?v=qiIC-FeE-fg @0- MEDIA: "processed_youtube=qiIC-FeE-fg_audio='strip'_clip=(0.4337666666666667, 2.6026000000000002).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=qiIC-FeE-fg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand +md:<a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=qiIC-FeE-fg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson25.htm">lesson 25</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/exact.htm">EXACT</a>\nand <a href="https://www.lifeprint.com/asl101/pages-signs/p/perfect.htm">PERFECT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=qiIC-FeE-fg @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=qiIC-FeE-fg @0- PARAMETER: clip=(0.4337666666666667, 2.6026000000000002)
 Lifeprint ASL https://www.youtube.com/watch?v=qiIC-FeE-fg @0- TAGS: 'Lifeprint lesson_25 vocabulary'
