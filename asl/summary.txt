@@ -3018,6 +3018,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=9g3grX5iaXc @0- PARAMETER: clip=(1
 Lifeprint ASL https://www.youtube.com/watch?v=9g3grX5iaXc @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=9g3grX5iaXc @0- TAGS: 'Lifeprint lesson_17 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=9g3grX5iaXc @0- TEXT: 'WATER, MILK, POP, BEER, YOU PREFER DRINK WHICH?'
+Lifeprint ASL https://www.youtube.com/watch?v=9i2HyGu89gk @0- MEDIA: "processed_youtube=9i2HyGu89gk_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=9i2HyGu89gk @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/enter.htm">ENTER</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=9i2HyGu89gk @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=9i2HyGu89gk @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=9i2HyGu89gk @0- TEXT: 'access / ENTER ENTER'
 Lifeprint ASL https://www.youtube.com/watch?v=9j2d2WQsriY @0- MEDIA: "processed_youtube=9j2d2WQsriY_audio='strip'_clip=(0.10010000000000001, 1.9019).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=9j2d2WQsriY @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson20.htm">lesson 20</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/h/hair.htm">HAIR</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=9j2d2WQsriY @0- PARAMETER: audio='strip'
@@ -6011,6 +6016,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=Ooz1VOeGp7Y @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=Ooz1VOeGp7Y @0- PARAMETER: clip=(0.3670333333333333, None)
 Lifeprint ASL https://www.youtube.com/watch?v=Ooz1VOeGp7Y @0- TAGS: 'Lifeprint lesson_21 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Ooz1VOeGp7Y @0- TEXT: 'PASTOR / minister'
+Lifeprint ASL https://www.youtube.com/watch?v=OpIL52odnrM @0- MEDIA: "processed_youtube=OpIL52odnrM_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=OpIL52odnrM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/e/enter.htm">ENTER</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=OpIL52odnrM @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=OpIL52odnrM @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=OpIL52odnrM @0- TEXT: 'ENTER / entrance / access'
 Lifeprint ASL https://www.youtube.com/watch?v=OrJZaf91g10 @0- MEDIA: "processed_youtube=OrJZaf91g10_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=OrJZaf91g10 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=OrJZaf91g10 @0- PARAMETER: audio='strip'
