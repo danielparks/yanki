@@ -11,6 +11,8 @@ https://www.youtube.com/watch?v=e3UTQaDloZ4
   AVAIL / grab opportunity / take advantage of (positive connotation)
   trim: 4F-57F
 
+https://www.youtube.com/watch?v=gH93-Vq0Wjo BING!
+
 https://www.youtube.com/watch?v=I7BfXB2oKyQ BRAG / boast
   trim: 4F-65F
 
@@ -193,6 +195,9 @@ https://www.youtube.com/watch?v=yEGrlfPhcbs RELIGION / religious (fist version)
 
 https://www.youtube.com/watch?v=4Uz8apATGXI RICH / wealth / wealthy
   trim: 7F-78F
+
+https://www.youtube.com/watch?v=x-08NZhEKAc SITUATION / scene / status
+  trim: 9F-68F
 
 https://www.youtube.com/watch?v=BItTZ47uio4 SPECIAL / except / unique
   trim: 3F-
@@ -556,6 +561,14 @@ group:
     trim: 12F-76F
 
 group:
+  more: +md:[EMOTION](https://www.lifeprint.com/asl101/pages-signs/e/emotion.htm)
+  https://www.youtube.com/watch?v=FPKZi3o3IwY EMOTION
+
+  tags: +extra
+  https://www.youtube.com/watch?v=uRjmWutWFWI ASSERTIVE
+  https://www.youtube.com/watch?v=s9h3l2yZ-DM AGGRESSIVE
+
+group:
   more: +md:[EMPTY](https://www.lifeprint.com/asl101/pages-signs/e/empty.htm)
   https://www.youtube.com/watch?v=HaB-QtL36VY EMPTY / available / naked / nude
     trim: 11F-75F
@@ -768,6 +781,10 @@ group:
     trim: 25F-86F
 
 group:
+  more: +md:[LOUD](https://www.lifeprint.com/asl101/pages-signs/l/loud.htm)
+  https://www.youtube.com/watch?v=oJXUGrQFYGY LOUD
+
+group:
   more: +md:[LOUSY](https://www.lifeprint.com/asl101/pages-signs/l/lousy.htm)
   https://www.youtube.com/watch?v=6CtpIW3fQtw LOUSY
     trim: 8F-62F
@@ -842,6 +859,10 @@ group:
 group:
   more: +md:[OWN](https://www.lifeprint.com/asl101/pages-signs/o/own.htm)
   https://www.youtube.com/watch?v=Rxf0xjZoo5c OWN / owned
+
+group:
+  more: +md:[NOISE](https://www.lifeprint.com/asl101/pages-signs/n/noise.htm)
+  https://www.youtube.com/watch?v=yAtOFiUQ13M NOISY
 
 group:
   more: +md:[PARTNER](https://www.lifeprint.com/asl101/pages-signs/p/partner.htm)
@@ -1147,6 +1168,13 @@ group:
   https://www.youtube.com/watch?v=RL1sZpudZrc
     SYMPATHY / compassion / grace / pity / poor thing (two-handed version)
     trim: 75F-146F
+
+group:
+  more: +md:[take-TURNs](https://www.lifeprint.com/asl101/pages-signs/t/take-turns.htm)
+  https://www.youtube.com/watch?v=zwbthP2Ue58 your-TURN
+  https://www.youtube.com/watch?v=8eR0G7MUdJA my-TURN
+  https://www.youtube.com/watch?v=oMTDF7FjVeA take-TURNs-[you and I]
+  https://www.youtube.com/watch?v=BjrFj181WV4 take-TURNs-[circle group]
 
 group:
   more: +md:[TEMPTATION](https://www.lifeprint.com/asl101/pages-signs/t/temptation.htm)
