@@ -4852,6 +4852,12 @@ Lifeprint ASL https://www.youtube.com/watch?v=IWzY7FwOxss @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=IWzY7FwOxss @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=IWzY7FwOxss @0- TAGS: 'Lifeprint lesson_16 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=IWzY7FwOxss @0- TEXT: 'YOUR FAMILY, COOK MOST WHO?'
+Lifeprint ASL https://www.youtube.com/watch?v=I_QDeKcyvns @0- MEDIA: "processed_youtube=I_QDeKcyvns_audio='strip'_clip=(1.0010000000000001, 3.4034).mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=I_QDeKcyvns @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cochlear.htm">cochlear implant</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=I_QDeKcyvns @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=I_QDeKcyvns @0- PARAMETER: clip=(1.0010000000000001, 3.4034)
+Lifeprint ASL https://www.youtube.com/watch?v=I_QDeKcyvns @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=I_QDeKcyvns @0- TEXT: 'COCHLEAR-IMPLANT (bent V version)'
 Lifeprint ASL https://www.youtube.com/watch?v=IbpJtH_QssM @0- MEDIA: "processed_youtube=IbpJtH_QssM_audio='strip'_clip=(0.3003, 2.2689333333333335).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=IbpJtH_QssM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dog.htm">DOG</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=IbpJtH_QssM @0- PARAMETER: audio='strip'
@@ -10911,6 +10917,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=nDbGGrpRbzU @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=nDbGGrpRbzU @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=nDbGGrpRbzU @0- TAGS: 'Lifeprint lesson_20 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=nDbGGrpRbzU @0- TEXT: 'YOU EAT A-LOT, REGULAR, WHICH?'
+Lifeprint ASL https://www.youtube.com/watch?v=nE4bHwlVzqM @0- MEDIA: "processed_youtube=nE4bHwlVzqM_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=nE4bHwlVzqM @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cochlear.htm">cochlear implant</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=nE4bHwlVzqM @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=nE4bHwlVzqM @0- TAGS: 'Lifeprint extra extra-deck vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=nE4bHwlVzqM @0- TEXT: 'C-I / cochlear implant'
 Lifeprint ASL https://www.youtube.com/watch?v=nEGhuagav-w @0- MEDIA: "processed_youtube=nEGhuagav-w_audio='strip'_clip=(0.10010000000000001, 2.3023000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=nEGhuagav-w @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/from-now-on.htm">FROM-NOW-ON</a>\ncan also mean <a href="https://www.lifeprint.com/asl101/pages-signs/a/after.htm">AFTER</a>\nif the hand moves directly out.</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=nEGhuagav-w @0- PARAMETER: audio='strip'
