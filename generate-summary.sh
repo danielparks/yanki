@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -e -o pipefail
 
 cache_prefix=${YANKI_CACHE:-$HOME/.cache/yanki/}
 
