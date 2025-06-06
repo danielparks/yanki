@@ -86,6 +86,12 @@ https://www.youtube.com/watch?v=bul0cjvDEEE HAT
 https://www.youtube.com/watch?v=S5Xkm-qaEQI HATE
   trim: 11F-56F
 
+https://www.youtube.com/watch?v=MRrSl8ualaI
+  HONEST / honesty / truth (single movement version)
+https://www.youtube.com/watch?v=cUl4QxfIeg8
+  HONEST / authentic (double movement version)
+https://www.youtube.com/watch?v=It4pQoTx0ys TRUTH / TRUE + HONEST
+
 group:
   # Handspeak makes a distinction that Dr Bill does not seem to:
   # EXPECT: https://www.handspeak.com/word/2551/
@@ -914,6 +920,11 @@ group:
     trim: 10F-58F
 
 group:
+  more: +md:[play cards](https://www.lifeprint.com/asl101/pages-signs/p/play-cards.htm)
+  https://www.youtube.com/watch?v=T3jyHxtckAw play-CARDS / deal cards
+  https://www.youtube.com/watch?v=R21j8UqGNjo CARD / rectangle
+
+group:
   more: +md:[POETRY](https://www.lifeprint.com/asl101/pages-signs/p/poetry.htm)
   https://www.youtube.com/watch?v=E0K_yuWcG_M
     POETRY / poem / express (S-hand version)
@@ -1064,6 +1075,12 @@ group:
   more: +md:[SENTENCE](https://www.lifeprint.com/asl101/pages-signs/s/sentence.htm)
   https://www.youtube.com/watch?v=Gm513X-UNwo SENTENCE / phrase
     trim: 16F-78F
+
+group:
+  more: +md:[SERIOUS](https://www.lifeprint.com/asl101/pages-signs/s/serious.htm)
+  https://www.youtube.com/watch?v=_tg9sx-brv8 SERIOUS / severe / sour / bitter
+  # The page doesn’t show the inflection:
+  https://www.youtube.com/watch?v=nzlddranfwk sour / bitter / severe / SERIOUS
 
 group:
   more: +md:[SEX](https://www.lifeprint.com/asl101/pages-signs/s/sex.htm)
