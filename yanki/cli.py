@@ -208,7 +208,15 @@ def update(options, decks, filter):
         open_in_app([file.name])
 
 
-@cli.command()
+class ListNotesCommand(click.Command):
+    def format_help_text(self, ctx, formatter):
+        super().format_help_text(ctx, formatter)
+        formatter.write("\n  Valid format variables:\n")
+        for var in sorted(FINAL_NOTE_VARIABLES):
+            formatter.write(f"    * {{{var}}}\n")
+
+
+@cli.command(cls=ListNotesCommand)
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @filter_options
 @click.option(
