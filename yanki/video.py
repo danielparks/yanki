@@ -34,10 +34,20 @@ class BadURL(ExpectedError):
 
 
 class FFmpegError(RuntimeError):
-    def __init__(self, command, stderr, exit_code):
-        super(FFmpegError, self).__init__("Error running ffmpeg")
-        self.add_note(f"Command run: {shlex.join(command)}")
+    def __init__(
+        self,
+        command="ffmpeg",
+        command_line=None,
+        stdout=None,
+        stderr=None,
+        exit_code=None,
+    ):
+        super(FFmpegError, self).__init__(f"Error running {command}")
         self.command = command
+        if command_line:
+            self.add_note(f"Command run: {shlex.join(command_line)}")
+        self.command_line = command_line
+        self.stdout = stdout
         self.stderr = stderr
         self.exit_code = exit_code
 
@@ -212,7 +222,12 @@ class Video:
 
     def refresh_raw_metadata(self):
         self.logger.debug(f"refresh raw metadata: {self.raw_video()}")
-        self._raw_metadata = ffmpeg.probe(self.raw_video())
+        try:
+            self._raw_metadata = ffmpeg.probe(self.raw_video())
+        except ffmpeg.Error as error:
+            raise FFmpegError(
+                command="ffprobe", stdout=error.stdout, stderr=error.stderr
+            )
 
         with atomic_open(self.raw_metadata_cache_path()) as file:
             json.dump(self._raw_metadata, file)
@@ -254,7 +269,7 @@ class Video:
 
                 return fps
 
-        raise RuntimeError(f"Could not get FPS for video: {self.raw_video()}")
+        raise BadURL(f"Could not get FPS for media URL {self.url!r}")
 
     # Expects spec without whitespace
     def time_to_seconds(self, spec, on_none=None):
@@ -414,6 +429,9 @@ class Video:
         except NotFileURL:
             pass
 
+        if "ext" not in self.info():
+            raise BadURL(f"Invalid media URL {self.url!r}")
+
         path = self.raw_video_cache_path()
         if path.exists() and path.stat().st_size > 0:
             # Already cached, and we can’t check if it’s out of date.
@@ -542,7 +560,11 @@ class Video:
             stdout, stderr = await process.communicate()
 
         if process.returncode:
-            raise FFmpegError(command, stderr, process.returncode)
+            raise FFmpegError(
+                command_line=command,
+                stderr=stderr,
+                exit_code=process.returncode,
+            )
 
     # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
     def _try_apply_slow(self, streams):

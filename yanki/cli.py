@@ -61,13 +61,18 @@ def main():
 
         for error in find_errors(group):
             if log_debug:
+                if error.stdout is not None:
+                    sys.stderr.write("STDOUT:\n")
+                    sys.stderr.buffer.write(error.stdout)
+                    sys.stderr.write("\n")
+                sys.stderr.write("STDERR:\n")
                 sys.stderr.buffer.write(error.stderr)
                 sys.stderr.write("\n")
                 traceback.print_exception(error, file=sys.stderr)
             else:
                 # FFmpeg errors contain a bytestring of ffmpeg’s output.
                 sys.stderr.buffer.write(error.stderr)
-                print("\nError in ffmpeg. See above.", file=sys.stderr)
+                sys.stderr.write(f"\nError in {error.command}. See above.\n")
     except* ExpectedError as group:
         exit_code = 1
         for error in find_errors(group):
