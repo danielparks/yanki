@@ -35,9 +35,9 @@ repos:
         stages: [pre-commit, pre-merge-commit]
         require_serial: true
       - id: check-asl.sh
-        name: check-asl.sh asl/*.deck
+        name: check-asl.sh
         language: system
-        entry: ./check-asl.sh asl/*.deck
+        entry: ./check-asl.sh
         files: asl/.*\.deck
         pass_filenames: false
         types: [file]

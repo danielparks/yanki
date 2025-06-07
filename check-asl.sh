@@ -5,7 +5,7 @@ set -e -o pipefail
 result=0
 
 # FIXME this should really be built into yanki
-output=$(yanki list-notes -f '{note_id}' "$@" | sort | uniq -d)
+output=$(yanki list-notes -f '{note_id}' asl/*.deck | sort | uniq -d)
 if [[ ! -z "$output" ]] ; then
   echo 'Found duplicate note:'
   echo
@@ -14,8 +14,8 @@ if [[ ! -z "$output" ]] ; then
 fi
 
 output=$(
-  yanki list-notes -f '{url} {source_path} {line_number}' "$@" \
-  | grep '^http.*lifeprint.*\.htm'
+  yanki list-notes -f '{url} {source_path} {line_number}' asl/*.deck \
+  | grep '^http.*lifeprint.*\.htm' || true
 )
 if [[ ! -z "$output" ]] ; then
   if [[ $result = 1 ]] ; then echo ; fi
@@ -24,3 +24,5 @@ if [[ ! -z "$output" ]] ; then
   echo $output
   result=1
 fi
+
+exit $result

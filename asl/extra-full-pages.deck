@@ -214,6 +214,17 @@ group:
     trim: 3F-54F
 
 group:
+  more: +md:[CONTEXT](https://www.lifeprint.com/asl101/pages-signs/c/context.htm)
+  https://www.youtube.com/watch?v=NXBAUjxzhWs CONTEXT
+    trim: 8F-68F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=bmndI0PUlcE
+    ENVIRONMENT / surround / the circumstances / the situation
+  https://www.youtube.com/watch?v=tW3KpoL5Rb8
+    SURROUNDINGS / context / environment / the ether / the force
+
+group:
   more: +md:[CONTINUE](https://www.lifeprint.com/asl101/pages-signs/c/continue.htm)
   https://www.youtube.com/watch?v=46g8DWLaj70 CONTINUE / ongoing / permanent
   https://www.youtube.com/watch?v=b8nlVMjXyx4 permanent / CONTINUE!
@@ -307,6 +318,10 @@ group:
   https://www.youtube.com/watch?v=pHDIa-ao9BQ ->
     DEPRESSED / depression / feeling down (flat hands version)
     trim: 13F-60F
+
+group:
+  more: +md:[DESSERT](https://www.lifeprint.com/asl101/pages-signs/d/dessert.htm)
+  https://www.youtube.com/watch?v=ji-uuujQ4Y4 DESSERT
 
 group:
   more: +md:[DONKEY](https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm)

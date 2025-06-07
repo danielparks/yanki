@@ -5799,10 +5799,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=NTVqfeGn2F4 @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=NTVqfeGn2F4 @0- TAGS: 'Lifeprint lesson_17 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=NTVqfeGn2F4 @0- TEXT: 'catsup / CAT UP (A-hand version, idiomatic, pun)'
 Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- MEDIA: "processed_youtube=NXBAUjxzhWs_audio='strip'_clip=(0.32, 2.72).mp4"
-Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/context.htm">CONTEXT</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- PARAMETER: clip=(0.32, 2.72)
-Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- TAGS: 'Lifeprint extra extra-deck extra-deck-miscellaneous vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- TEXT: 'CONTEXT'
 Lifeprint ASL https://www.youtube.com/watch?v=NYjk6-dXb40 @0- MEDIA: "processed_youtube=NYjk6-dXb40_audio='strip'_clip=(0.4337666666666667, 2.5025).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=NYjk6-dXb40 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/donkey.htm">DONKEY</a></p>\n'
@@ -8663,6 +8663,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=bloIqtYN8fI @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=bloIqtYN8fI @0- PARAMETER: clip=(0.10010000000000001, 1.6349666666666667)
 Lifeprint ASL https://www.youtube.com/watch?v=bloIqtYN8fI @0- TAGS: 'Lifeprint lesson_10 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=bloIqtYN8fI @0- TEXT: 'TRUE / authentic / real / sure / indeed'
+Lifeprint ASL https://www.youtube.com/watch?v=bmndI0PUlcE @0- MEDIA: "processed_youtube=bmndI0PUlcE_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=bmndI0PUlcE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/context.htm">CONTEXT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=bmndI0PUlcE @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=bmndI0PUlcE @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=bmndI0PUlcE @0- TEXT: 'ENVIRONMENT / surround / the circumstances / the situation'
 Lifeprint ASL https://www.youtube.com/watch?v=bmy6YRYlW0Y @0- MEDIA: "processed_youtube=bmy6YRYlW0Y_audio='strip'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=bmy6YRYlW0Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/sunday.htm">SUNDAY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=bmy6YRYlW0Y @0- PARAMETER: audio='strip'
@@ -10202,6 +10207,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=jhbbgBo8UNM @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=jhbbgBo8UNM @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=jhbbgBo8UNM @0- TAGS: 'Lifeprint lesson_08 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=jhbbgBo8UNM @0- TEXT: 'BACKPACK, YOU HAVE?'
+Lifeprint ASL https://www.youtube.com/watch?v=ji-uuujQ4Y4 @0- MEDIA: "processed_youtube=ji-uuujQ4Y4_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=ji-uuujQ4Y4 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dessert.htm">DESSERT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=ji-uuujQ4Y4 @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=ji-uuujQ4Y4 @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=ji-uuujQ4Y4 @0- TEXT: 'DESSERT'
 Lifeprint ASL https://www.youtube.com/watch?v=ji9JOLaIj9I @0- MEDIA: "processed_youtube=ji9JOLaIj9I_audio='strip'_clip=(0.40040000000000003, 2.0020000000000002).mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=ji9JOLaIj9I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson18.htm">lesson 18</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/l/leave.htm">LEAVE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=ji9JOLaIj9I @0- PARAMETER: audio='strip'
@@ -12048,6 +12058,11 @@ Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- TAGS: 'Lifeprint first_100_signs lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=tTDXplV6TKA @0- TEXT: 'GOOD (two-handed)'
+Lifeprint ASL https://www.youtube.com/watch?v=tW3KpoL5Rb8 @0- MEDIA: "processed_youtube=tW3KpoL5Rb8_audio='strip'.mp4"
+Lifeprint ASL https://www.youtube.com/watch?v=tW3KpoL5Rb8 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/context.htm">CONTEXT</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=tW3KpoL5Rb8 @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=tW3KpoL5Rb8 @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=tW3KpoL5Rb8 @0- TEXT: 'SURROUNDINGS / context / environment / the ether / the force'
 Lifeprint ASL https://www.youtube.com/watch?v=tXd06Sqi-60 @0- MEDIA: "processed_youtube=tXd06Sqi-60_audio='strip'_overlay_text='Phrase'.mp4"
 Lifeprint ASL https://www.youtube.com/watch?v=tXd06Sqi-60 @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson07.htm">lesson 7</a></p>\n<h3>Do you like to eat green apples?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=tXd06Sqi-60 @0- PARAMETER: audio='strip'
