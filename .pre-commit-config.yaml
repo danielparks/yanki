@@ -34,10 +34,10 @@ repos:
         types: [file]
         stages: [pre-commit, pre-merge-commit]
         require_serial: true
-      - id: find-duplicates.sh
-        name: find-duplicates.sh asl/*.deck
+      - id: check-asl.sh
+        name: check-asl.sh asl/*.deck
         language: system
-        entry: ./find-duplicates.sh asl/*.deck
+        entry: ./check-asl.sh asl/*.deck
         files: asl/.*\.deck
         pass_filenames: false
         types: [file]
