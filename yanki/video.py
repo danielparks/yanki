@@ -144,8 +144,9 @@ class Video:
 
         self.id = url_to_id(url)
         if invalid := chars_in(FILENAME_ILLEGAL_CHARS, self.id):
+            invalid = "".join(invalid)
             raise BadURL(
-                f"Invalid characters ({''.join(invalid)}) in video ID: {self.id!r}"
+                f"Invalid characters ({invalid}) in video ID: {self.id!r}"
             )
 
         self._raw_metadata = None
@@ -249,9 +250,9 @@ class Video:
                     self._raw_metadata = json.load(file)
                     return get_key_path(self._raw_metadata, key_path)
         except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):
-            # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have the
-            # key path. We use `pass` here to avoid adding this exception to the
-            # context of new exceptions.
+            # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
+            # the key path. We use `pass` here to avoid adding this exception to
+            # the context of new exceptions.
             pass
 
         return get_key_path(self.refresh_raw_metadata(), key_path)

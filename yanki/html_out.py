@@ -109,7 +109,10 @@ def write_tree_indices(
                 title_path + [(tree.name, tree.deck_file_name)],
                 flash_cards=flash_cards,
             )
-            return f'<li><a href="{h(tree.deck_file_name)}">{h(tree.name)}</a></li>'
+            return (
+                f'<li><a href="{h(tree.deck_file_name)}">{h(tree.name)}'
+                "</a></li>"
+            )
         else:
             return ""
 

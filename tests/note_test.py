@@ -27,5 +27,5 @@ def test_note_variables(cache_path):
 
 
 def test_final_note_variables(cache_path):
-    note = asyncio.run(example_note(cache_path).finalize(deck_id=1))
+    note = asyncio.run(example_note(cache_path).finalize_async(deck_id=1))
     assert set(note.variables().keys()) == FINAL_NOTE_VARIABLES
