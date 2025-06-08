@@ -106,13 +106,13 @@ async def read_final_decks_async(
 ):
     """Read `FinalDeck`s from `files` (async)."""
 
-    async def finalize_deck(collection, deck):
-        collection.append(await deck.finalize())
+    async def finalize_deck_async(collection, deck):
+        collection.append(await deck.finalize_async())
 
     final_decks = []
     async with asyncio.TaskGroup() as group:
         for deck in read_decks(files, options, filter):
-            group.create_task(finalize_deck(final_decks, deck))
+            group.create_task(finalize_deck_async(final_decks, deck))
 
     return final_decks
 

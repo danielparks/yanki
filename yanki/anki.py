@@ -94,7 +94,7 @@ class Note:
             f"Note[{self.spec.provisional_note_id()}]"
         )
 
-    async def finalize(self, deck_id):
+    async def finalize_async(self, deck_id):
         video = self.video()
         media_path = await video.processed_video_async()
 
@@ -340,15 +340,17 @@ class Deck:
         for note_spec in spec.note_specs:
             self.add_note(Note(note_spec, video_options=video_options))
 
-    async def finalize(self):
-        async def finalize_note(collection, note, deck_id):
-            final_note = await note.finalize(deck_id)
+    async def finalize_async(self):
+        async def finalize_note_async(collection, note, deck_id):
+            final_note = await note.finalize_async(deck_id)
             collection[final_note.note_id] = final_note
 
         final_notes = dict()
         async with asyncio.TaskGroup() as group:
             for note in self.notes():
-                group.create_task(finalize_note(final_notes, note, self.id()))
+                group.create_task(
+                    finalize_note_async(final_notes, note, self.id())
+                )
 
         return FinalDeck(
             deck_id=self.id(),
