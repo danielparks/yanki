@@ -208,9 +208,9 @@ class Video:
             with self.info_cache_path().open("r", encoding="utf_8") as file:
                 return json.load(file)
         except FileNotFoundError:
-            # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
-            # the key path. We use `pass` here to avoid adding this exception to
-            # the context of new exceptions.
+            # Either the file wasn’t found or it wasn’t valid JSON. We use
+            # `pass` here to avoid adding this exception to the context of new
+            # exceptions.
             pass
 
         info = self._download_info()
