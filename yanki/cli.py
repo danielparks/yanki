@@ -149,7 +149,8 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     handler = colorlog.StreamHandler()
     handler.setFormatter(
         colorlog.ColoredFormatter(
-            "%(log_color)s%(levelname)s%(reset)s %(light_cyan)s%(name)s:%(reset)s %(message)s",
+            "%(log_color)s%(levelname)s%(reset)s "
+            "%(light_cyan)s%(name)s:%(reset)s %(message)s",
             log_colors={
                 "TRACE": "bold_purple",
                 "DEBUG": "bold_white",
