@@ -164,14 +164,17 @@ class Video:
     def info_cache_path(self):
         return self.cached(f"info_{self.id}.json")
 
+    def more_info_cache_path(self):
+        return self.cached(f"more_info_{self.id}.json")
+
     def raw_video_cache_path(self):
         return self.cached("raw_" + self.id + "." + self.info()["ext"])
 
     def raw_metadata_cache_path(self):
         return self.cached(f"ffprobe_raw_{self.id}.json")
 
-    def processed_video_cache_path(self, prefix="processed_"):
-        parameters = "_".join(self.parameters_list())
+    async def processed_video_cache_path_async(self, prefix="processed_"):
+        parameters = "_".join(await self.parameters_list_async())
 
         if len(parameters) > 60 or chars_in(FILENAME_ILLEGAL_CHARS, parameters):
             parameters = hashlib.blake2b(
@@ -305,6 +308,54 @@ class Video:
 
         return sign * sum
 
+    async def cropdetect_async(self):
+        """Detect black borders to crop."""
+        if not self.wants_video():
+            return None
+
+        (_, err) = await self.run_async(
+            ffmpeg.input(str(self.raw_video()), **self.ffmpeg_input_options())[
+                "v"
+            ]
+            .filter("cropdetect")
+            .output("-", format="null")
+        )
+
+        last_crop = None
+        for line in err.split(b"\n"):
+            if line.startswith(b"[Parsed_cropdetect"):
+                # FIXME figure out largest crop
+                last_crop = line.split()[-1].rstrip()
+        if last_crop:
+            return last_crop.removeprefix(b"crop=").decode("utf_8")
+        return None
+
+    async def _get_more_info_async(self):
+        return {
+            "cropdetect": await self.cropdetect_async(),
+        }
+
+    # FIXME cannot cache future, but this gets called multiple times in a run.
+    async def more_info_async(self):
+        path = self.more_info_cache_path()
+        try:
+            with path.open("r", encoding="utf_8") as file:
+                return json.load(file)
+        except FileNotFoundError:
+            # Either the file wasn’t found or wasn’t valid JSON. We use `pass`
+            # to avoid adding this exception to the context of new exceptions.
+            pass
+
+        info = await self._get_more_info_async()
+        with atomic_open(path) as file:
+            json.dump(info, file)
+        return info
+
+    async def finalize_async(self):
+        # Ensure that the video is fully processed and that everything can be
+        # accessed synchronously.
+        await self.processed_video_async()
+
     def clip(self, start_spec, end_spec):
         start = self.time_to_seconds(start_spec, on_none=0)
         end = self.time_to_seconds(end_spec, on_none=None)
@@ -336,6 +387,8 @@ class Video:
             del self._parameters["clip"]
 
     def crop(self, crop):
+        if crop == "none":
+            crop = None
         self._crop = crop
 
     def overlay_text(self, text):
@@ -457,32 +510,51 @@ class Video:
 
         return self.output_options
 
-    def parameters(self):
+    async def actual_crop_async(self):
+        if self._crop == "auto":
+            return (await self.more_info_async())["cropdetect"]
+        if self._crop == "none":
+            return None
+        return self._crop
+
+    async def parameters_async(self):
         """Get parameters for producing the video as a dict."""
-        parameters = self._parameters.copy()
+        self._cached_parameters = self._parameters.copy()
 
         if self._crop is not None:
-            parameters["crop"] = self._crop
+            self._cached_parameters["crop"] = await self.actual_crop_async()
         if self._overlay_text != "":
-            parameters["overlay_text"] = self._overlay_text
+            self._cached_parameters["overlay_text"] = self._overlay_text
         if self._slow is not None:
-            parameters["slow"] = self._slow
+            self._cached_parameters["slow"] = self._slow
 
-        return parameters
+        return self._cached_parameters
 
+    # FIXME seems like there should be a separate FinalVideo class with this.
     def parameters_list(self):
+        """Get parameters for producing the video as list[str] (finalized version)."""
+        if self._cached_parameters is None:
+            raise ValueError("parameters_list() called on un-finalized Video")
+        return [
+            f"{key}={value!r}" for key, value in self._cached_parameters.items()
+        ]
+
+    async def parameters_list_async(self):
         """Get parameters for producing the video as list[str]."""
-        return [f"{key}={value!r}" for key, value in self.parameters().items()]
+        return [
+            f"{key}={value!r}"
+            for key, value in (await self.parameters_async()).items()
+        ]
 
     async def processed_video_async(self):
-        output_path = self.processed_video_cache_path()
+        output_path = await self.processed_video_cache_path_async()
         if not self.reprocess and file_not_empty(output_path):
             return output_path
 
         # Only reprocess once per run.
         self.reprocess = False
 
-        parameters = " ".join(self.parameters_list())
+        parameters = " ".join(await self.parameters_list_async())
         self.logger.info(f"processing with ({parameters}) to {output_path}")
 
         stream = ffmpeg.input(
@@ -493,9 +565,9 @@ class Video:
         if self.wants_video():
             # Video stream is not being stripped
             video = stream["v"]
-            if self._crop:
+            if crop := await self.actual_crop_async():
                 # FIXME kludge; doesn’t handle named params
-                video = video.filter("crop", *self._crop.split(":"))
+                video = video.filter("crop", *crop.split(":"))
 
             video = video.filter("scale", -2, 500)
 
@@ -555,6 +627,7 @@ class Video:
                 stderr=stderr,
                 exit_code=process.returncode,
             )
+        return stdout, stderr
 
     # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
     def _try_apply_slow(self, streams):
