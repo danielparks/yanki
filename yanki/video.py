@@ -474,13 +474,6 @@ class Video:
         """Get parameters for producing the video as list[str]."""
         return [f"{key}={value!r}" for key, value in self.parameters().items()]
 
-    def processed_video(self):
-        output_path = self.processed_video_cache_path()
-        if not self.reprocess and file_not_empty(output_path):
-            return output_path
-
-        return asyncio.run(self.processed_video_async())
-
     async def processed_video_async(self):
         output_path = self.processed_video_cache_path()
         if not self.reprocess and file_not_empty(output_path):
@@ -541,9 +534,6 @@ class Video:
             await self.run_async(stream)
 
         return output_path
-
-    def run(self, stream):
-        asyncio.run(self.run_async(stream))
 
     async def run_async(self, stream):
         command = stream.compile()
