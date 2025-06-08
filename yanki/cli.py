@@ -372,7 +372,7 @@ def open_videos(options, urls):
     """Download and process the video URLs, then open them with `open`."""
     for url in urls:
         video = Video(url, options=options)
-        open_in_app([video.processed_video()])
+        open_in_app([asyncio.run(video.processed_video_async())])
 
 
 @cli.command()
@@ -393,7 +393,7 @@ def open_videos_from_file(options, files):
         for url in _find_urls(file):
             try:
                 video = Video(url, options=options)
-                open_in_app([video.processed_video()])
+                open_in_app([asyncio.run(video.processed_video_async())])
             except BadURL as error:
                 print(f"Error: {error}")
             except yt_dlp.utils.DownloadError:
