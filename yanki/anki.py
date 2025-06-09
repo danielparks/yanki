@@ -192,6 +192,7 @@ EXTRA_FINAL_NOTE_VARIABLES = frozenset(
         "note_id",
         "media_paths",
         "video_parameters",
+        "auto_crop",
     ]
 )
 
@@ -244,6 +245,9 @@ class FinalNote:
             "media": f"{self.spec.video_url()} {self.clip_spec}",
             "text": self.text,
             "media_paths": " ".join(self.media_paths()),
+            "auto_crop": " / ".join(
+                [str(media.more_info()["cropdetect"]) for media in self.media()]
+            ),
             "video_parameters": " / ".join(
                 [" ".join(media.parameters_list()) for media in self.media()]
             ),
