@@ -27,6 +27,7 @@ LOGGER = logging.getLogger(__name__)
 
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
 FILENAME_ILLEGAL_CHARS = '/"[]:'
+MORE_INFO_VERSION = 1
 
 
 class BadURL(ExpectedError):
@@ -342,13 +343,23 @@ class Video:
         try:
             with path.open("r", encoding="utf_8") as file:
                 self._cached_more_info = json.load(file)
-                return self._cached_more_info
+                if self._cached_more_info is not None:
+                    # No version is equivalent to version 1.
+                    version = self._cached_more_info.get("version", 1)
+                    if version == MORE_INFO_VERSION:
+                        return self._cached_more_info
+                    self.logger.warning(
+                        f"Discarding info with bad version {version!r} "
+                        f"(expected {MORE_INFO_VERSION!r}) at {path}"
+                    )
+                    self._cached_more_info = None
         except FileNotFoundError:
             # Either the file wasn’t found or wasn’t valid JSON. We use `pass`
             # to avoid adding this exception to the context of new exceptions.
             pass
 
         self._cached_more_info = {
+            "version": MORE_INFO_VERSION,
             "cropdetect": await self.cropdetect_async(),
         }
         with atomic_open(path) as file:
