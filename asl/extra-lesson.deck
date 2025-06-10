@@ -28,13 +28,6 @@ https://www.youtube.com/watch?v=ZJ80gGVl7yg REVIEW
 https://www.youtube.com/watch?v=J8cuP-YSZIA DEAF-APPLAUSE / yay
   trim: 9F-
 
-group:
-  more: +md:[FORGET](https://www.lifeprint.com/asl101/pages-signs/f/forget.htm)
-  https://www.youtube.com/watch?v=TVFEnWVgoII FORGET / forgot
-    trim: 9F-83F
-  https://www.youtube.com/watch?v=n1bCjM8zeYA BLANK-mind / forget / draw a blank
-    trim: 9F-46F
-
 # From lesson 2 video (https://www.youtube.com/watch?v=U0qG639Vx-0)
 https://www.youtube.com/watch?v=yOq40lDCkcM NONE
   trim: 19F-79F
@@ -156,11 +149,6 @@ group:
     trim: 16F-76F
 
 # From lesson 16 video (https://www.youtube.com/watch?v=p_SC5CSzrLs)
-group:
-  more: +md:[DON’T-CARE](https://www.lifeprint.com/asl101/pages-signs/d/dont-care.htm)
-  https://www.youtube.com/watch?v=0dqyb1R51S4 DON’T-CARE
-    trim: 11F-65F
-
 group:
   more: +md:[WHATEVER](https://www.lifeprint.com/asl101/pages-signs/w/whatever.htm)
   https://www.youtube.com/watch?v=0SxXfJAnBHk
