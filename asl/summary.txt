@@ -1672,7 +1672,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=1o8VwwFYyrs @0- PARAMETER: audio='
 Lifeprint ASL https://www.youtube.com/watch?v=1o8VwwFYyrs @0- PARAMETER: clip=(0.23356666666666667, 2.0020000000000002)
 Lifeprint ASL https://www.youtube.com/watch?v=1o8VwwFYyrs @0- PARAMETER: crop='1920:1072:0:4'
 Lifeprint ASL https://www.youtube.com/watch?v=1o8VwwFYyrs @0- TAGS: 'Lifeprint extra extra-deck extra-deck-miscellaneous vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=1o8VwwFYyrs @0- TEXT: 'muffin / cupcake / CAKE (palm version)'
+Lifeprint ASL https://www.youtube.com/watch?v=1o8VwwFYyrs @0- TEXT: 'CAKE (palm version) / muffin / cupcake'
 Lifeprint ASL https://www.youtube.com/watch?v=1p_XFIHeOeI @0- MEDIA: 'processed_youtube=1p_XFIHeOeI_81719c1896dafce7cc5b6c036bbdddc4.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=1p_XFIHeOeI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson03.htm">lesson 3</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/fine.htm">FINE</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=1p_XFIHeOeI @0- PARAMETER: audio='strip'
