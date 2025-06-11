@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=cQ9u2KmAJto
   trim: 10F-68F
 
 https://www.youtube.com/watch?v=1o8VwwFYyrs
-  muffin / cupcake / CAKE (palm version)
+  CAKE (palm version) / muffin / cupcake
   trim: 7F-60F
 
 https://www.youtube.com/watch?v=pxyi6YW8gOE CHOCOLATE
@@ -83,24 +83,24 @@ https://www.youtube.com/watch?v=bul0cjvDEEE HAT
 https://www.youtube.com/watch?v=S5Xkm-qaEQI HATE
   trim: 11F-56F
 
-https://www.youtube.com/watch?v=MRrSl8ualaI
-  HONEST / honesty / truth (single movement version)
+# See also TRUTH
 https://www.youtube.com/watch?v=cUl4QxfIeg8
   HONEST / authentic (double movement version)
-https://www.youtube.com/watch?v=It4pQoTx0ys TRUTH / TRUE + HONEST
+https://www.youtube.com/watch?v=MRrSl8ualaI
+  HONEST / honesty / truth (single movement version)
 
 group:
   # Handspeak makes a distinction that Dr Bill does not seem to:
   # EXPECT: https://www.handspeak.com/word/2551/
   # HOPE: https://www.handspeak.com/word/1052/
+  https://www.youtube.com/watch?v=D8eeM75bKiA HOPE (R-hands version)
+    trim: 4F-
   https://www.youtube.com/watch?v=aOyZk0caisk
     HOPE / expect / anticipate (casual version)
     trim: 29F-82F
   https://www.youtube.com/watch?v=VeEJdqN3-SA
     HOPE / expect / anticipate (formal version)
     trim: 5F-64F
-  https://www.youtube.com/watch?v=D8eeM75bKiA HOPE (R-hands version)
-    trim: 4F-
 
 https://www.youtube.com/watch?v=Hvuejr0iZ94 IMPORTANT
   trim: 5F-78F
@@ -191,10 +191,10 @@ https://www.youtube.com/watch?v=xq2ZodH6gzk QUIET
   trim: 13F-90F
   more: +md:[QUIET](https://www.lifeprint.com/asl101/pages-signs/q/quiet.htm)
 
-https://www.youtube.com/watch?v=B2UzqvVXn_Y RELIGION / religious (heart version)
-  trim: 15F-57F
 https://www.youtube.com/watch?v=yEGrlfPhcbs RELIGION / religious (fist version)
   trim: 12F-68F
+https://www.youtube.com/watch?v=B2UzqvVXn_Y RELIGION / religious (heart version)
+  trim: 15F-57F
 
 https://www.youtube.com/watch?v=4Uz8apATGXI RICH / wealth / wealthy
   trim: 7F-78F
@@ -230,6 +230,9 @@ https://www.youtube.com/watch?v=ZNs1MRQJG7E TRAUMA / scarred heart and mind
 
 https://www.youtube.com/watch?v=vNqYEX66ekg TRUST / confidence
   trim: 38F-92F
+
+# See also HONEST
+https://www.youtube.com/watch?v=It4pQoTx0ys TRUTH / TRUE + HONEST
 
 https://www.youtube.com/watch?v=6S9riIpP4go UNTIL
   trim: 10F-75F

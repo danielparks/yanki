@@ -164,12 +164,6 @@ group:
     trim: 7F-
 
 group:
-  more: +md:[cochlear implant](https://www.lifeprint.com/asl101/pages-signs/c/cochlear.htm)
-  https://www.youtube.com/watch?v=nE4bHwlVzqM C-I / cochlear implant
-  https://www.youtube.com/watch?v=I_QDeKcyvns COCHLEAR-IMPLANT (bent V version)
-    trim: 30F-102F
-
-group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
   https://www.youtube.com/watch?v=9SMHSwdQUwE CHRISTMAS (C-hand version)
     trim: 4F-49F
@@ -185,6 +179,12 @@ group:
   https://www.youtube.com/watch?v=CBvbmM7dHaY
     CLUSTER / category / section / group
     trim: 7F-50F
+
+group:
+  more: +md:[cochlear implant](https://www.lifeprint.com/asl101/pages-signs/c/cochlear.htm)
+  https://www.youtube.com/watch?v=nE4bHwlVzqM C-I / cochlear implant
+  https://www.youtube.com/watch?v=I_QDeKcyvns COCHLEAR-IMPLANT (bent V version)
+    trim: 30F-102F
 
 group:
   more: +md:[COMMUTE](https://www.lifeprint.com/asl101/pages-signs/c/commute.htm)
@@ -636,6 +636,10 @@ group:
     trim: 8F-58F
 
 group:
+  more: +md:[NOISE](https://www.lifeprint.com/asl101/pages-signs/n/noise.htm)
+  https://www.youtube.com/watch?v=yAtOFiUQ13M NOISY
+
+group:
   more: +md:[OWE](https://www.lifeprint.com/asl101/pages-signs/o/owe.htm)
   https://www.youtube.com/watch?v=Ckgt9JH2o8c OWE / bill / debt / afford
     trim: 13F-86F
@@ -643,10 +647,6 @@ group:
 group:
   more: +md:[OWN](https://www.lifeprint.com/asl101/pages-signs/o/own.htm)
   https://www.youtube.com/watch?v=Rxf0xjZoo5c OWN / owned
-
-group:
-  more: +md:[NOISE](https://www.lifeprint.com/asl101/pages-signs/n/noise.htm)
-  https://www.youtube.com/watch?v=yAtOFiUQ13M NOISY
 
 group:
   more: +md:[PARTNER](https://www.lifeprint.com/asl101/pages-signs/p/partner.htm)
