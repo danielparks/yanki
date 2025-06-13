@@ -158,6 +158,10 @@ class Video:
         self.output_options = {}
         self._parameters = {}
 
+        # Only available after finalizing (or calling their generation methods):
+        self._cached_more_info = None
+        self._cached_parameters = None
+
     def cached(self, filename):
         return self.options.cache_path / filename
 
@@ -317,7 +321,7 @@ class Video:
             ffmpeg.input(str(self.raw_video()), **self.ffmpeg_input_options())[
                 "v"
             ]
-            .filter("cropdetect")
+            .filter("cropdetect", round=2)
             .output("-", format="null")
         )
 
@@ -330,30 +334,37 @@ class Video:
             return last_crop.removeprefix(b"crop=").decode("utf_8")
         return None
 
-    async def _get_more_info_async(self):
-        return {
-            "cropdetect": await self.cropdetect_async(),
-        }
-
-    # FIXME cannot cache future, but this gets called multiple times in a run.
     async def more_info_async(self):
+        if self._cached_more_info:
+            return self._cached_more_info
+
         path = self.more_info_cache_path()
         try:
             with path.open("r", encoding="utf_8") as file:
-                return json.load(file)
+                self._cached_more_info = json.load(file)
+                return self._cached_more_info
         except FileNotFoundError:
             # Either the file wasn’t found or wasn’t valid JSON. We use `pass`
             # to avoid adding this exception to the context of new exceptions.
             pass
 
-        info = await self._get_more_info_async()
+        self._cached_more_info = {
+            "cropdetect": await self.cropdetect_async(),
+        }
         with atomic_open(path) as file:
-            json.dump(info, file)
-        return info
+            json.dump(self._cached_more_info, file)
+        return self._cached_more_info
+
+    def more_info(self):
+        """Get extra information from finalized video."""
+        if self._cached_more_info is None:
+            raise ValueError("more_info() called on un-finalized Video")
+        return self._cached_more_info
 
     async def finalize_async(self):
         # Ensure that the video is fully processed and that everything can be
         # accessed synchronously.
+        await self.more_info_async()
         await self.processed_video_async()
 
     def clip(self, start_spec, end_spec):
