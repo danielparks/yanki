@@ -556,16 +556,21 @@ class Video:
         """Get parameters for producing the video as list[str] (finalized version)."""
         if self._cached_parameters is None:
             raise ValueError("parameters_list() called on un-finalized Video")
-        return [
-            f"{key}={value!r}" for key, value in self._cached_parameters.items()
-        ]
+        return sorted(
+            [
+                f"{key}={value!r}"
+                for key, value in self._cached_parameters.items()
+            ]
+        )
 
     async def parameters_list_async(self):
         """Get parameters for producing the video as list[str]."""
-        return [
-            f"{key}={value!r}"
-            for key, value in (await self.parameters_async()).items()
-        ]
+        return sorted(
+            [
+                f"{key}={value!r}"
+                for key, value in (await self.parameters_async()).items()
+            ]
+        )
 
     async def processed_video_async(self):
         output_path = await self.processed_video_cache_path_async()
