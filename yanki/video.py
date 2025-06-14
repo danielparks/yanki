@@ -536,8 +536,6 @@ class Video:
     async def actual_crop_async(self):
         if self._crop == "auto":
             return (await self.more_info_async())["cropdetect"]
-        if self._crop == "none":
-            return None
         return self._crop
 
     async def parameters_async(self):
