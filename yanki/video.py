@@ -377,6 +377,7 @@ class Video:
         # accessed synchronously.
         await self.more_info_async()
         await self.processed_video_async()
+        return self
 
     def clip(self, start_spec, end_spec):
         start = self.time_to_seconds(start_spec, on_none=0)
