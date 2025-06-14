@@ -410,7 +410,7 @@ class Video:
             del self._parameters["clip"]
 
     def crop(self, crop):
-        if crop == "none":
+        if crop == "none" or crop == "":
             crop = None
         self._crop = crop
 
