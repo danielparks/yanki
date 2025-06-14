@@ -387,7 +387,7 @@ class Video:
             if end - start <= 0:
                 raise ValueError(
                     "Cannot clip video to 0 or fewer seconds "
-                    "({start_spec!r} to {end_spec!r})"
+                    f"({start_spec!r} to {end_spec!r})"
                 )
 
             self.input_options["t"] = end - start
