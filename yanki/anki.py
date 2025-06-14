@@ -95,7 +95,7 @@ class Note:
         )
 
     async def finalize_async(self, deck_id):
-        video = self.video()
+        video = await self.video().finalize_async()
         media_path = await video.processed_video_async()
 
         if video.is_still() or video.output_ext() == "gif":
@@ -111,7 +111,6 @@ class Note:
             text=self.text(),
             spec=self.spec,
             clip_spec=self.clip_spec(),
-            video=await video.finalize_async(),
             logger=logging.getLogger(f"FinalNote[{note_id}]"),
         )
 
@@ -213,7 +212,6 @@ class FinalNote:
     text: str
     spec: NoteSpec
     clip_spec: str
-    video: Video
     logger: logging.Logger
 
     def media(self):
