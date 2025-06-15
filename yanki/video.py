@@ -354,8 +354,8 @@ class Video:
                     version = self._cached_more_info.get("version", 1)
                     if version == MORE_INFO_VERSION:
                         return self._cached_more_info
-                    self.logger.warning(
-                        f"Discarding info with bad version {version!r} "
+                    self.logger.info(
+                        f"Discarding more_info with bad version {version!r} "
                         f"(expected {MORE_INFO_VERSION!r}) at {path}"
                     )
                     self._cached_more_info = None
