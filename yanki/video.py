@@ -619,10 +619,10 @@ class Video:
             self._cached_parameters["slow"] = self._slow
 
         match await self.actual_clip_async():
-            case float(_time):
-                self._cached_parameters["snapshot"] = self._clip
-            case (_start, _end):
-                self._cached_parameters["clip"] = self._clip
+            case float(time):
+                self._cached_parameters["snapshot"] = time
+            case (start, end):
+                self._cached_parameters["clip"] = (start, end)
 
         return self._cached_parameters
 
