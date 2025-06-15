@@ -9,6 +9,7 @@ import math
 from multiprocessing import cpu_count
 from pathlib import Path
 from os.path import getmtime
+import re
 import shlex
 from urllib.parse import urlparse, parse_qs
 import yt_dlp
@@ -27,7 +28,12 @@ LOGGER = logging.getLogger(__name__)
 
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
 FILENAME_ILLEGAL_CHARS = '/"[]:'
-MORE_INFO_VERSION = 1
+MORE_INFO_VERSION = 2
+
+# For parsing ffmpeg output.
+CROPDETECT_RE = re.compile(
+    rb"\[Parsed_cropdetect_.* t:(\d+\.\d+) .* crop=(\S+)"
+)
 
 
 class BadURL(ExpectedError):
@@ -315,10 +321,40 @@ class Video:
 
         return sign * sum
 
-    async def cropdetect_async(self):
-        """Detect black borders to crop."""
-        if not self.wants_video():
+    def cropdetect(self):
+        """
+        Detect black borders to crop.
+
+        more_info_async() must be called first.
+        """
+        more = self.more_info()
+
+        try:
+            # FIXME figure out largest crop
+            return more["cropdetect"][0][1]
+        except (IndexError, KeyError, TypeError):
             return None
+
+    async def load_more_info_async(self):
+        """
+        Load more information about the contents of the media.
+
+        This returns a `dict` with keys:
+          * `version`: the current version of the more_info algorithm so that
+            old data can be invalidated.
+          * `cropdetect`:
+            * `[(time, "crop"), ...]`, e.g. `[(0.067, "1920:1072:0:4"), ...]`
+            * `None`: the video stream was stripped
+
+        https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/cropdetect.html
+        """
+
+        if not self.wants_video():
+            self._cached_more_info = {
+                "version": MORE_INFO_VERSION,
+                "cropdetect": None,
+            }
+            return self._cached_more_info
 
         # Only process the part of the media we care about.
         in_options = self.clip_to_ffmpeg_input_options(self._clip)
@@ -332,14 +368,19 @@ class Video:
         )
         # FIXME use metadata=mode=print?
 
-        last_crop = None
+        cropdetect = []
         for line in err.split(b"\n"):
-            if line.startswith(b"[Parsed_cropdetect"):
-                # FIXME figure out largest crop
-                last_crop = line.split()[-1].rstrip()
-        if last_crop:
-            return last_crop.removeprefix(b"crop=").decode("utf_8")
-        return None
+            if matches := CROPDETECT_RE.search(line):
+                # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
+                cropdetect.append(
+                    (float(matches[1]), matches[2].decode("utf_8"))
+                )
+
+        self._cached_more_info = {
+            "version": MORE_INFO_VERSION,
+            "cropdetect": cropdetect,
+        }
+        return self._cached_more_info
 
     async def more_info_async(self):
         if self._cached_more_info:
@@ -364,10 +405,7 @@ class Video:
             # to avoid adding this exception to the context of new exceptions.
             pass
 
-        self._cached_more_info = {
-            "version": MORE_INFO_VERSION,
-            "cropdetect": await self.cropdetect_async(),
-        }
+        await self.load_more_info_async()
         with atomic_open(path) as file:
             json.dump(self._cached_more_info, file)
         return self._cached_more_info
@@ -501,7 +539,7 @@ class Video:
         """
         Input options for ffmpeg based on real clip.
 
-        Used by cropdetect_async() and processed_video_async().
+        Used by load_more_info_async() and processed_video_async().
         """
         options = {}
         match clip:
@@ -523,7 +561,7 @@ class Video:
         """
         Output options for ffmpeg based on real clip.
 
-        Used by cropdetect_async() and processed_video_async().
+        Used by load_more_info_async() and processed_video_async().
         """
         match clip:
             case None | (_, _):
@@ -550,7 +588,8 @@ class Video:
 
     async def actual_crop_async(self):
         if self._crop == "auto":
-            return (await self.more_info_async())["cropdetect"]
+            await self.more_info_async()
+            return self.cropdetect()
         return self._crop
 
     async def actual_clip_async(self):

@@ -244,7 +244,7 @@ class FinalNote:
             "text": self.text,
             "media_paths": " ".join(self.media_paths()),
             "auto_crop": " / ".join(
-                [str(media.more_info()["cropdetect"]) for media in self.media()]
+                [str(media.cropdetect()) for media in self.media()]
             ),
             "video_parameters": " / ".join(
                 [" ".join(media.parameters_list()) for media in self.media()]
