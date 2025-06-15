@@ -9,6 +9,7 @@ import math
 from multiprocessing import cpu_count
 from pathlib import Path
 from os.path import getmtime
+import re
 import shlex
 from urllib.parse import urlparse, parse_qs
 import yt_dlp
@@ -27,7 +28,12 @@ LOGGER = logging.getLogger(__name__)
 
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
 FILENAME_ILLEGAL_CHARS = '/"[]:'
-MORE_INFO_VERSION = 1
+MORE_INFO_VERSION = 2
+
+# For parsing ffmpeg output.
+CROPDETECT_RE = re.compile(
+    rb"\[Parsed_cropdetect_.* t:(\d+\.\d+) .* crop=(\S+)"
+)
 
 
 class BadURL(ExpectedError):
@@ -152,12 +158,12 @@ class Video:
 
         self._raw_metadata = None
         self._format = None
+        self._strip_audio = False
+        self._strip_video = False
+        self._clip = None
         self._crop = None
         self._overlay_text = ""
         self._slow = None
-        self.input_options = {}
-        self.output_options = {}
-        self._parameters = {}
 
         # Only available after finalizing (or calling their generation methods):
         self._cached_more_info = None
@@ -170,7 +176,9 @@ class Video:
         return self.cached(f"info_{self.id}.json")
 
     def more_info_cache_path(self):
-        return self.cached(f"more_info_{self.id}.json")
+        return self.cached(
+            f"more_info_{self.id}_clip={self.file_safe_clip()}.json"
+        )
 
     def raw_video_cache_path(self):
         return self.cached("raw_" + self.id + "." + self.info()["ext"])
@@ -313,27 +321,66 @@ class Video:
 
         return sign * sum
 
-    async def cropdetect_async(self):
-        """Detect black borders to crop."""
-        if not self.wants_video():
+    def cropdetect(self):
+        """
+        Detect black borders to crop.
+
+        more_info_async() must be called first.
+        """
+        more = self.more_info()
+
+        try:
+            # FIXME figure out largest crop
+            return more["cropdetect"][0][1]
+        except (IndexError, KeyError, TypeError):
             return None
 
-        (_, err) = await self.run_async(
-            ffmpeg.input(str(self.raw_video()), **self.ffmpeg_input_options())[
-                "v"
-            ]
-            .filter("cropdetect", round=2)
-            .output("-", format="null")
-        )
+    async def load_more_info_async(self):
+        """
+        Load more information about the contents of the media.
 
-        last_crop = None
+        This returns a `dict` with keys:
+          * `version`: the current version of the more_info algorithm so that
+            old data can be invalidated.
+          * `cropdetect`:
+            * `[(time, "crop"), ...]`, e.g. `[(0.067, "1920:1072:0:4"), ...]`
+            * `None`: the video stream was stripped
+
+        https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/cropdetect.html
+        """
+
+        if not self.wants_video():
+            self._cached_more_info = {
+                "version": MORE_INFO_VERSION,
+                "cropdetect": None,
+            }
+            return self._cached_more_info
+
+        # Only process the part of the media we care about.
+        in_options = self.clip_to_ffmpeg_input_options(self._clip)
+        out_options = self.clip_to_ffmpeg_output_options(self._clip)
+
+        video = ffmpeg.input(str(self.raw_video()), **in_options)["v"]
+        video = video.filter("cropdetect", round=2)
+
+        (_, err) = await self.run_async(
+            video.output("-", format="null", **out_options)
+        )
+        # FIXME use metadata=mode=print?
+
+        cropdetect = []
         for line in err.split(b"\n"):
-            if line.startswith(b"[Parsed_cropdetect"):
-                # FIXME figure out largest crop
-                last_crop = line.split()[-1].rstrip()
-        if last_crop:
-            return last_crop.removeprefix(b"crop=").decode("utf_8")
-        return None
+            if matches := CROPDETECT_RE.search(line):
+                # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
+                cropdetect.append(
+                    (float(matches[1]), matches[2].decode("utf_8"))
+                )
+
+        self._cached_more_info = {
+            "version": MORE_INFO_VERSION,
+            "cropdetect": cropdetect,
+        }
+        return self._cached_more_info
 
     async def more_info_async(self):
         if self._cached_more_info:
@@ -348,8 +395,8 @@ class Video:
                     version = self._cached_more_info.get("version", 1)
                     if version == MORE_INFO_VERSION:
                         return self._cached_more_info
-                    self.logger.warning(
-                        f"Discarding info with bad version {version!r} "
+                    self.logger.info(
+                        f"Discarding more_info with bad version {version!r} "
                         f"(expected {MORE_INFO_VERSION!r}) at {path}"
                     )
                     self._cached_more_info = None
@@ -358,10 +405,7 @@ class Video:
             # to avoid adding this exception to the context of new exceptions.
             pass
 
-        self._cached_more_info = {
-            "version": MORE_INFO_VERSION,
-            "cropdetect": await self.cropdetect_async(),
-        }
+        await self.load_more_info_async()
         with atomic_open(path) as file:
             json.dump(self._cached_more_info, file)
         return self._cached_more_info
@@ -382,35 +426,19 @@ class Video:
     def clip(self, start_spec, end_spec):
         start = self.time_to_seconds(start_spec, on_none=0)
         end = self.time_to_seconds(end_spec, on_none=None)
-
         if end is not None:
             if end - start <= 0:
                 raise ValueError(
                     "Cannot clip video to 0 or fewer seconds "
-                    "({start_spec!r} to {end_spec!r})"
+                    f"({start_spec!r} to {end_spec!r})"
                 )
-
-            self.input_options["t"] = end - start
-
-        # After the validation step.
-        if start:
-            self.input_options["ss"] = start
-
-        self._parameters["clip"] = (start, end)
-        if "snapshot" in self._parameters:
-            del self._parameters["snapshot"]
+        self._clip = (start, end)
 
     def snapshot(self, time_spec):
-        self.input_options["ss"] = self.time_to_seconds(time_spec, on_none="")
-        self.output_options["frames:v"] = "1"
-        self.output_options["q:v"] = "2"  # JPEG quality
-
-        self._parameters["snapshot"] = self.input_options["ss"]
-        if "clip" in self._parameters:
-            del self._parameters["clip"]
+        self._clip = self.time_to_seconds(time_spec, on_none=None)
 
     def crop(self, crop):
-        if crop == "none":
+        if crop == "none" or crop == "":
             crop = None
         self._crop = crop
 
@@ -418,24 +446,10 @@ class Video:
         self._overlay_text = text
 
     def audio(self, audio):
-        if audio == "strip":
-            self.output_options["an"] = None
-            self._parameters["audio"] = "strip"
-        else:
-            if "an" in self.output_options:
-                del self.output_options["an"]
-            if "audio" in self._parameters:
-                del self._parameters["audio"]
+        self._strip_audio = audio == "strip"
 
     def video(self, video):
-        if video == "strip":
-            self.output_options["vn"] = None
-            self._parameters["video"] = "strip"
-        else:
-            if "vn" in self.output_options:
-                del self.output_options["vn"]
-            if "video" in self._parameters:
-                del self._parameters["video"]
+        self._strip_video = video == "strip"
 
     def slow(self, start=0, end=None, amount=2):
         """Slow (or speed up) part of the video."""
@@ -464,7 +478,7 @@ class Video:
 
     def is_still(self):
         return (
-            str(self.output_options.get("frames:v")) == "1"
+            isinstance(self._clip, float)
             or self._format in STILL_FORMATS
             or "duration" not in self.raw_metadata("format")
         )
@@ -479,9 +493,7 @@ class Video:
     def wants_audio(self):
         """Should the output include an audio stream?"""
         return (
-            "an" not in self.output_options
-            and self.has_audio()
-            and not self.is_still()
+            not self._strip_audio and self.has_audio() and not self.is_still()
         )
 
     def has_video(self):
@@ -493,7 +505,7 @@ class Video:
 
     def wants_video(self):
         """Should the output include a video stream or image?"""
-        return "vn" not in self.output_options and self.has_video()
+        return not self._strip_video and self.has_video()
 
     @functools.cache
     def raw_video(self):
@@ -523,31 +535,94 @@ class Video:
 
         return path
 
-    def ffmpeg_input_options(self):
-        return self.input_options
+    def clip_to_ffmpeg_input_options(self, clip):
+        """
+        Input options for ffmpeg based on real clip.
 
-    def ffmpeg_output_options(self):
-        if "vf" in self.output_options:
-            # FIXME?
-            raise ValueError("vf output option already set")
+        Used by load_more_info_async() and processed_video_async().
+        """
+        options = {}
+        match clip:
+            case None:
+                pass
+            case float(snapshot_time):
+                options["ss"] = snapshot_time
+            case (start, end):
+                if end is not None:
+                    options["t"] = end - start
+                if start:
+                    options["ss"] = start
+            case other:
+                raise ValueError(f"parameter may not be {other!r}")
 
-        return self.output_options
+        return options
+
+    def clip_to_ffmpeg_output_options(self, clip):
+        """
+        Output options for ffmpeg based on real clip.
+
+        Used by load_more_info_async() and processed_video_async().
+        """
+        match clip:
+            case None | (_, _):
+                return {}
+            case float(_snapshot_time):
+                return {
+                    "frames:v": "1",
+                    "q:v": "2",  # JPEG quality
+                }
+            case other:
+                raise ValueError(f"parameter may not be {other!r}")
+
+    def file_safe_clip(self):
+        """Get the clip in a filesystem safe format. Does not calculate auto."""
+        match self._clip:
+            case None | (0, None):
+                return "none"
+            case float(snapshot_time):
+                return snapshot_time
+            case (float(_) | int(0) as start, None | float(_) as end):
+                return f"({start},{end})"  # No space
+            case other:
+                raise ValueError(f"Unexpected _clip: {other!r}")
 
     async def actual_crop_async(self):
         if self._crop == "auto":
-            return (await self.more_info_async())["cropdetect"]
+            await self.more_info_async()
+            return self.cropdetect()
         return self._crop
+
+    async def actual_clip_async(self):
+        match self._clip:
+            case None:
+                return None
+            case float(snapshot_time):
+                return snapshot_time
+            case (float(_) | int(0) as start, None | float(_) as end):
+                return (start, end)
+            case other:
+                raise ValueError(f"Unexpected _clip: {other!r}")
 
     async def parameters_async(self):
         """Get parameters for producing the video as a dict."""
-        self._cached_parameters = self._parameters.copy()
+        self._cached_parameters = {}
 
+        if self._strip_audio:
+            self._cached_parameters["audio"] = "strip"
+        if self._strip_video:
+            self._cached_parameters["video"] = "strip"
         if self._crop is not None:
             self._cached_parameters["crop"] = await self.actual_crop_async()
         if self._overlay_text != "":
             self._cached_parameters["overlay_text"] = self._overlay_text
         if self._slow is not None:
             self._cached_parameters["slow"] = self._slow
+
+        match await self.actual_clip_async():
+            case float(_time):
+                self._cached_parameters["snapshot"] = self._clip
+            case (_start, _end):
+                self._cached_parameters["clip"] = self._clip
 
         return self._cached_parameters
 
@@ -556,16 +631,21 @@ class Video:
         """Get parameters for producing the video as list[str] (finalized version)."""
         if self._cached_parameters is None:
             raise ValueError("parameters_list() called on un-finalized Video")
-        return [
-            f"{key}={value!r}" for key, value in self._cached_parameters.items()
-        ]
+        return sorted(
+            [
+                f"{key}={value!r}"
+                for key, value in self._cached_parameters.items()
+            ]
+        )
 
     async def parameters_list_async(self):
         """Get parameters for producing the video as list[str]."""
-        return [
-            f"{key}={value!r}"
-            for key, value in (await self.parameters_async()).items()
-        ]
+        return sorted(
+            [
+                f"{key}={value!r}"
+                for key, value in (await self.parameters_async()).items()
+            ]
+        )
 
     async def processed_video_async(self):
         output_path = await self.processed_video_cache_path_async()
@@ -578,9 +658,11 @@ class Video:
         parameters = " ".join(await self.parameters_list_async())
         self.logger.info(f"processing with ({parameters}) to {output_path}")
 
-        stream = ffmpeg.input(
-            str(self.raw_video()), **self.ffmpeg_input_options()
-        )
+        clip = await self.actual_clip_async()
+        in_options = self.clip_to_ffmpeg_input_options(clip)
+        out_options = self.clip_to_ffmpeg_output_options(clip)
+
+        stream = ffmpeg.input(str(self.raw_video()), **in_options)
         output_streams = dict()
 
         if self.wants_video():
@@ -621,7 +703,7 @@ class Video:
         with atomic_open(output_path, encoding=None) as file:
             file.close()
             stream = ffmpeg.output(
-                *output_streams, file.name, **self.ffmpeg_output_options()
+                *output_streams, file.name, **out_options
             ).overwrite_output()
 
             await self.run_async(stream)

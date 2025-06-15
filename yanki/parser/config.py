@@ -142,7 +142,7 @@ class NoteConfig:
         self.slow = (start, end, amount)
 
     def set_trim(self, trim):
-        if trim == "":
+        if trim == "" or trim == "none":
             self.trim = None
         else:
             clip = [part.strip() for part in trim.split("-")]
