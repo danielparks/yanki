@@ -126,8 +126,12 @@ window.addEventListener("load", (event) => {
   function show_answer() {
     showing_question = false;
 
-    current.classList.remove("question");
-    current.classList.add("answer");
+    hide_current();
+    // direction is "text-first" or "media-first".
+    [direction, current] = cards[current_index];
+    current.classList.remove("question", "text-first", "media-first");
+    current.classList.add("answer", direction);
+
     next_button.innerText = "Next card";
     update_status();
 
@@ -141,6 +145,27 @@ window.addEventListener("load", (event) => {
     next_button.innerText = "Restart";
     update_status();
     finished_div.style.display = "block";
+  }
+
+  // Find the card that matches direction_select before current_index.
+  function find_previous_card_index() {
+    if ( current_index == 0 ) {
+      return null;
+    }
+
+    if ( direction_select.value == "both" ) {
+      // No need to filter.
+      return current_index - 1;
+    }
+
+    for ( var i = current_index - 1 ; i >= 0 ; i-- ) {
+      if ( cards[i][0] == direction_select.value ) {
+        // An acceptable card.
+        return i;
+      }
+    }
+
+    return null;
   }
 
   // Find the card that matches direction_select at or beyond current_index.
@@ -175,6 +200,23 @@ window.addEventListener("load", (event) => {
     }
   }
 
+  function back_button_click() {
+    if ( ! showing_question ) {
+      show_question();
+      return;
+    }
+
+    var new_index = find_previous_card_index();
+    if ( new_index === null ) {
+      // Already at the beginning.
+      return;
+    }
+
+    current_index = new_index;
+    hide_current();
+    show_answer();
+  }
+
   function next_button_click() {
     if ( current_index >= cards.length ) {
       // We ran out of cards!
@@ -205,7 +247,8 @@ window.addEventListener("load", (event) => {
     "text-first": true,
     "media-first": true,
   };
-  var next_button = create("button", []);
+  var back_button = create("button", [text("Go back")], { "id": "back-button" });
+  var next_button = create("button", [], { "id": "next-button" });
   var direction_select = create("select", [
     create("option", [text("Mix of text and media first")], { "value": "both" }),
     create("option", [text("Text first")], { "value": "text-first" }),
@@ -214,6 +257,7 @@ window.addEventListener("load", (event) => {
   var status_div = create("div", [], { "id": "status "})
   var controls = create("div", [
     direction_select,
+    back_button,
     next_button,
     status_div,
   ], { "id": "controls" });
@@ -244,6 +288,7 @@ window.addEventListener("load", (event) => {
 
   show_question();
 
+  back_button.addEventListener("click", back_button_click);
   next_button.addEventListener("click", next_button_click);
   document.body.addEventListener("keyup", (event) => {
     if ( event.key == " " ) {
