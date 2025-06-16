@@ -69,73 +69,168 @@ window.addEventListener("load", (event) => {
     finished_div.style.display = "none";
   }
 
+  function hide_current() {
+    if ( current ) {
+      current.classList.remove(
+        "question", "answer", "text-first", "media-first"
+      );
+    }
+  }
+
+  function update_status() {
+    var filter = direction_select.value, completed = 0, count = 0;
+    if ( filter == "both" ) {
+      count = cards.length;
+      completed = current_index;
+    } else {
+      var i = 0;
+      for ( ; i < current_index ; i++ ) {
+        if ( cards[i][0] == filter ) {
+          completed++;
+          count++;
+        }
+      }
+      for ( ; i < cards.length ; i++ ) {
+        if ( cards[i][0] == filter ) {
+          count++;
+        }
+      }
+    }
+
+    if ( ! showing_question && current_index < cards.length ) {
+      // Showing the answer, so the card is completed.
+      completed++;
+    }
+
+    status_div.innerText = "Completed " + completed + " out of " + count
+      + " cards.";
+  }
+
   function show_question() {
-     // direction is "text-first" or "media-first".
+    showing_question = true;
+
+    hide_current();
+    // direction is "text-first" or "media-first".
     [direction, current] = cards[current_index];
     current.classList.remove("answer", "text-first", "media-first");
     current.classList.add("question", direction);
 
     next_button.innerText = "Show answer";
-    status_div.innerText = "Completed " + current_index + " out of "
-      + cards.length + " cards.";
+    update_status();
 
     if ( direction == "media-first" ) {
       play_video(current);
     }
-
-    showing_question = true;
   }
 
   function show_answer() {
-    next_button.innerText = "Next card";
+    showing_question = false;
+
     current.classList.remove("question");
     current.classList.add("answer");
+    next_button.innerText = "Next card";
+    update_status();
 
     if ( direction == "text-first" ) {
       play_video(current);
     }
-
-    showing_question = false;
   }
 
   function show_finished() {
-    current.classList.remove("question", "answer", "text-first", "media-first");
+    hide_current();
     next_button.innerText = "Restart";
-    status_div.innerText = "Completed " + current_index + " out of "
-      + cards.length + " cards.";
+    update_status();
     finished_div.style.display = "block";
+  }
+
+  // Find the card that matches direction_select at or beyond current_index.
+  function find_next_card() {
+    var advanced = false;
+    if ( direction_select.value == "both" ) {
+      // No need to filter.
+      return advanced;
+    }
+
+    for ( ; current_index < cards.length ; current_index++ ) {
+      if ( cards[current_index][0] == direction_select.value ) {
+        // An acceptable card. Show it.
+        return advanced;
+      }
+      advanced = true;
+    }
+
+    return advanced;
+  }
+
+  function direction_select_change() {
+    if ( find_next_card() ) {
+      // The shown card was filtered, so move to the next acceptable one.
+      if ( current_index >= cards.length ) {
+        show_finished();
+      } else {
+        show_question();
+      }
+    } else {
+      update_status();
+    }
   }
 
   function next_button_click() {
     if ( current_index >= cards.length ) {
       // We ran out of cards!
       restart();
-      show_question();
+      // Fall through to show card.
     } else if ( showing_question ) {
       show_answer();
+      return;
     } else {
       // Must be showing the answer, so hide the old card...
       current.classList.remove("answer", "text-first", "media-first");
 
       // ... and switch to the next card.
       current_index++;
-      if ( current_index >= cards.length ) {
-        show_finished();
-      } else {
-        show_question();
-      }
+      // Fall through to show card.
+    }
+
+    find_next_card();
+    if ( current_index >= cards.length ) {
+      show_finished();
+    } else {
+      show_question();
     }
   }
 
+  const valid_directions = {
+    "both": true,
+    "text-first": true,
+    "media-first": true,
+  };
   var next_button = create("button", []);
+  var direction_select = create("select", [
+    create("option", [text("Mix of text and media first")], { "value": "both" }),
+    create("option", [text("Text first")], { "value": "text-first" }),
+    create("option", [text("Media first")], { "value": "media-first" }),
+  ], { "onchange": direction_select_change });
   var status_div = create("div", [], { "id": "status "})
   var controls = create("div", [
+    direction_select,
     next_button,
     status_div,
   ], { "id": "controls" });
   var finished_div = create("div",
     [ text("Finished all cards!") ],
     { "id": "finished" });
+
+  // Check which direction we should show the cards in.
+  if ( window.location.hash ) {
+    const parameters = window.location.hash.slice(1).split(":");
+    if ( parameters.length > 0 ) {
+      if ( valid_directions[parameters[0]] ) {
+        direction_select.value = parameters[0];
+      }
+      // For now, ignore other parameters.
+    }
+  }
 
   document.body.appendChild(finished_div);
   document.body.appendChild(controls);
