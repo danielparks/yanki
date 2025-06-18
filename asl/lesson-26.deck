@@ -51,12 +51,13 @@ group:
 
 group:
   more: +md:[GRASS](https://www.lifeprint.com/asl101/pages-signs/g/grass.htm)
+  https://www.youtube.com/watch?v=o-GOlFqc_aw GRASS / hay / straw
+    trim: 27F-90F
 
 group:
   more: +md:[HEAVY / LIGHT-weight](https://www.lifeprint.com/asl101/pages-signs/h/heavy.htm)
-
-  # FIXME add more
-
+  # This HEAVY is not quite what was described on the page:
+  https://www.youtube.com/watch?v=p8m9-RMJ-8Y HEAVY
   https://www.youtube.com/watch?v=_zgfuzlhI9Q
     LIGHT-weight / LIGHT-colored
 
@@ -65,15 +66,28 @@ group:
 
 group:
   more: +md:[HIGH](https://www.lifeprint.com/asl101/pages-signs/h/high.htm)
+  https://www.youtube.com/watch?v=GwOuxP6lSuE HIGH-height
+
+  tags: +extra
+  https://www.youtube.com/watch?v=8xlph3BbgTQ @3F-52F
+    HIGH-mentally / drug-HIGH (swirl version)
+  https://www.youtube.com/watch?v=8xlph3BbgTQ @65F-99F
+    HIGH-mentally / drug-HIGH (straight version)
 
 group:
   more: +md:[LAUGH](https://www.lifeprint.com/asl101/pages-signs/l/laugh.htm)
+  https://www.youtube.com/watch?v=7Bv4LNS8YvI LAUGH (initialized version)
 
 group:
   more: +md:[LOW](https://www.lifeprint.com/asl101/pages-signs/l/low.htm)
+  # LESS / low amount is in lesson 24.
+  # LOW-height does not apear to have a video, nor does the initialized version.
 
 group:
   more: +md:[MOUNTAIN](https://www.lifeprint.com/asl101/pages-signs/m/mountain.htm)
+  https://www.youtube.com/watch?v=u3xYMeKi63Y MOUNTAIN / ROCK + SLOPE
+  https://www.youtube.com/watch?v=wT3G58lY3_A
+    ROCK / stone (back of hand version)
 
 group:
   more: +md:[OUTSIDE](https://www.lifeprint.com/asl101/pages-signs/o/outside.htm)
