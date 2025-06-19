@@ -94,7 +94,7 @@ Normally you can’t have two cards with the same video URL in a deck (see
 times. This is useful if you need to split a video into multiple cards.
 
 For example, [this video](https://www.youtube.com/watch?v=M4AFC4eEjlQ) has all
-of the numbers in ASL from 1 to 100. You could make flash cards for 11, 12, and
+of the numbers in ASL from 1 to 100. You could make flashcards for 11, 12, and
 13 like so:
 
     https://www.youtube.com/watch?v=M4AFC4eEjlQ @390F-430F 11

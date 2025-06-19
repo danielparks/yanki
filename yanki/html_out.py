@@ -27,7 +27,7 @@ class DeckTree:
             return self
 
 
-def write_html(output_path, cache_path, decks, flash_cards=False):
+def write_html(output_path, cache_path, decks, flashcards=False):
     """Write HTML version of decks to a path."""
     if output_path == cache_path:
         # Serving HTML from the cache; no need to copy media.
@@ -51,7 +51,7 @@ def write_html(output_path, cache_path, decks, flash_cards=False):
             output_media_path,
             deck,
             [(name, None) for name in deck.title.split("::")],
-            flash_cards=flash_cards,
+            flashcards=flashcards,
         )
         return
 
@@ -77,12 +77,12 @@ def write_html(output_path, cache_path, decks, flash_cards=False):
         leaf.deck = deck
 
     write_tree_indices(
-        deck_tree, output_path, output_media_path, flash_cards=flash_cards
+        deck_tree, output_path, output_media_path, flashcards=flashcards
     )
 
 
 def write_tree_indices(
-    tree, output_path, output_media_path, title_path=[], flash_cards=False
+    tree, output_path, output_media_path, title_path=[], flashcards=False
 ):
     if tree.deck_file_name is None and title_path == [] and tree.name is None:
         # Anonymous root.
@@ -92,7 +92,7 @@ def write_tree_indices(
                 list(tree.children.values())[0],
                 output_path,
                 output_media_path,
-                flash_cards=flash_cards,
+                flashcards=flashcards,
             )
         else:
             # Anonymous root has zero or more than one child deck.
@@ -107,7 +107,7 @@ def write_tree_indices(
                 output_media_path,
                 tree.deck,
                 title_path + [(tree.name, tree.deck_file_name)],
-                flash_cards=flash_cards,
+                flashcards=flashcards,
             )
             return (
                 f'<li><a href="{h(tree.deck_file_name)}">{h(tree.name)}'
@@ -136,7 +136,7 @@ def write_tree_indices(
             output_path,
             output_media_path,
             title_path,
-            flash_cards=flash_cards,
+            flashcards=flashcards,
         )
         for child in tree.children.values()
     ]
@@ -148,7 +148,7 @@ def write_tree_indices(
             output_media_path,
             tree.deck,
             title_path + [("Deck", tree.deck_file_name)],
-            flash_cards=flash_cards,
+            flashcards=flashcards,
         )
         deck_link = f'<a href="{h(tree.deck_file_name)}">Deck</a>'
         title_html += f" ({deck_link})"
@@ -184,10 +184,10 @@ def generate_index_html(deck_link_html, child_html, title_path):
 
 
 def write_deck_files(
-    html_path, output_media_path, deck, title_path, flash_cards=False
+    html_path, output_media_path, deck, title_path, flashcards=False
 ):
     html_path.write_text(
-        htmlize_deck(deck, title_path, path_prefix="", flash_cards=flash_cards),
+        htmlize_deck(deck, title_path, path_prefix="", flashcards=flashcards),
         encoding="utf_8",
     )
 
@@ -200,17 +200,17 @@ def write_deck_files(
             output_path.chmod(0o644)
 
 
-def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
+def htmlize_deck(deck, title_path, path_prefix="", flashcards=False):
     if deck.title is None:
         sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
-    if flash_cards:
-        flash_cards_html = f"""
-        <link rel="stylesheet" href="{static_url("flash-cards.css")}">
-        <script src="{static_url("flash-cards.js")}" async></script>
+    if flashcards:
+        flashcards_html = f"""
+        <link rel="stylesheet" href="{static_url("flashcards.css")}">
+        <script src="{static_url("flashcards.js")}" async></script>
         """
     else:
-        flash_cards_html = ""
+        flashcards_html = ""
 
     output = f"""
     <!DOCTYPE html>
@@ -220,7 +220,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flash_cards=False):
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{static_url("general.css")}">
-        {flash_cards_html}
+        {flashcards_html}
       </head>
       <body>
         <h1>{title_html(title_path, final_link=False)}</h1>"""
