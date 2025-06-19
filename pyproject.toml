@@ -3,7 +3,7 @@ name = "yanki"
 version = "0.1.0"
 description = "Build Anki decks from text files containing YouTube URLs."
 authors = [{name = "Daniel Parks", email = "dp+git@oxidized.org"}]
-readme = "README.md"
+readme = "README.adoc"
 requires-python = ">= 3.11"
 dependencies = [
   "yt-dlp >=2024.11.4",
