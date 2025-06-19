@@ -267,17 +267,17 @@ def list_notes(options, decks, format, filter):
 @filter_options
 @click.option(
     "-F",
-    "--flash-cards/--no-flash-cards",
-    help="Render notes as flash cards.",
+    "--flashcards/--no-flashcards",
+    help="Render notes as flashcards.",
 )
 @click.pass_obj
-def to_html(options, output, decks, filter, flash_cards):
+def to_html(options, output, decks, filter, flashcards):
     """Generate HTML version of decks."""
     write_html(
         output,
         options.cache_path,
         read_final_decks_sorted(decks, options, filter),
-        flash_cards=flash_cards,
+        flashcards=flashcards,
     )
 
 
@@ -286,14 +286,14 @@ def to_html(options, output, decks, filter, flash_cards):
 @filter_options
 @click.option(
     "-F",
-    "--flash-cards/--no-flash-cards",
-    help="Render notes as flash cards.",
+    "--flashcards/--no-flashcards",
+    help="Render notes as flashcards.",
 )
 @click.option(
     "-o",
     "--open/--no-open",
     "do_open",
-    help="Open the web site with `open` after starting the server.",
+    help="Open the website with `open` after starting the server.",
 )
 @click.option(
     "-b",
@@ -311,7 +311,7 @@ def to_html(options, output, decks, filter, flash_cards):
     " specified, the server will run until killed by a signal.",
 )
 @click.pass_obj
-def serve_http(options, decks, filter, flash_cards, do_open, bind, run_seconds):
+def serve_http(options, decks, filter, flashcards, do_open, bind, run_seconds):
     """Serve HTML summary of deck on localhost:8000."""
     bind_parts = bind.split(":")
     if len(bind_parts) != 2:
@@ -327,7 +327,7 @@ def serve_http(options, decks, filter, flash_cards, do_open, bind, run_seconds):
         options.cache_path,
         options.cache_path,
         read_final_decks_sorted(decks, options, filter),
-        flash_cards=flash_cards,
+        flashcards=flashcards,
     )
 
     Handler = functools.partial(

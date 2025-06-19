@@ -17,7 +17,7 @@ def test_two_decks(cache_path, deck_1_path, deck_2_path, output_path):
         output_path,
         cache_path,
         read_final_decks_sorted(decks, VideoOptions(cache_path), DeckFilter()),
-        flash_cards=False,
+        flashcards=False,
     )
 
     index_html = (output_path / "index.html").read_text(encoding="utf_8")
