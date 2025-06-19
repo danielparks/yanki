@@ -5,8 +5,10 @@ Files not listed are files that I created from scratch.
 [discrete]
 === link:stopwatch.mp4[stopwatch.mp4]
 
-I forked Yusuf Sezer's https://www.yusufsezer.com/analog-clock/[analog clock demo] and turned it into a https://github.com/danielparks/analog-clock[stopwatch].
-I took screenshots, and used them to generate a video with a a repeating tone:
+I forked Yusuf Sezer's https://www.yusufsezer.com/analog-clock/[analog clock
+demo] and turned it into a
+https://github.com/danielparks/analog-clock[stopwatch]. I took screenshots, and
+used them to generate a video with a a repeating tone:
 
  ffmpeg -hide_banner -y -framerate 60 -i shot_%02d.png \
    -filter_complex "aevalsrc='sin(5*2*PI*t)*sin(220*2*PI*t)':d=1[a]" \

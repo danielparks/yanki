@@ -1,14 +1,17 @@
 = Build https://apps.ankiweb.net[Anki] decks from text files containing YouTube URLs
 
-Yanki makes it easy to build and maintain video flashcard decks for https://apps.ankiweb.net[Anki]. It
-can use local video or image files, or it can download videos from any source
-https://github.com/yt-dlp/yt-dlp[yt-dlp] supports, such as YouTube.
+Yanki makes it easy to build and maintain video flashcard decks for
+https://apps.ankiweb.net[Anki]. It can use local video or image files, or it can
+download videos from any source https://github.com/yt-dlp/yt-dlp[yt-dlp]
+supports, such as YouTube.
 
 == Usage
 
 You will need `ffmpeg` installed to use Yanki. On macOS, install it from
-https://www.ffmpeg.org[ffmpeg.org] or https://brew.sh[`brew`]. On Linux or Windows, try installing from
-https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds[here].
+https://www.ffmpeg.org[ffmpeg.org] or https://brew.sh[`brew`]. On Linux or
+Windows, try installing from
+https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-
+builds[here].
 
 This is a Python package that can be run with https://docs.astral.sh/uv/[`uv`]:
 
@@ -16,22 +19,25 @@ This is a Python package that can be run with https://docs.astral.sh/uv/[`uv`]:
 uv run yanki build -o out.apkg asl/*.deck
 ----
 
-That will produce an `out.apkg` file that can be opened by https://apps.ankiweb.net[Anki].
+That will produce an `out.apkg` file that can be opened by
+https://apps.ankiweb.net[Anki].
 
 == Examples
 
-The link:asl#readme[`asl/`] directory contains example `.deck` files that can be used to build
-a deck for the vocabulary and phrases in each https://www.lifeprint.com[Lifeprint.com ASLU] lesson.
-See its link:asl#readme[README] for information about how I chose which signs to include.
+The link:asl#readme[`asl/`] directory contains example `.deck` files that can be
+used to build a deck for the vocabulary and phrases in each
+https://www.lifeprint.com[Lifeprint.com ASLU] lesson. See its
+link:asl#readme[README] for information about how I chose which signs to
+include.
 
-____
-[!TIP]
+[TIP]
+====
 If you are interested in learning American Sign Language, please see Dr. Bill
-Vicar's https://www.lifeprint.com[Lifeprint.com ASLU]. These decks can help you, but they cannot
-replace the Lifeprint lessons and vocabulary pages.
+Vicar's https://www.lifeprint.com[Lifeprint.com ASLU]. These decks can help you,
+but they cannot replace the Lifeprint lessons and vocabulary pages.
 
 Plus, Lifeprint is full of Dr. Bill's humor.
-____
+====
 
 == Deck file format
 
@@ -169,11 +175,13 @@ The above generates two cards:
 You may set content in three formats:
 
 * No prefix, e.g. `more: some text`. This converts URLs into links and HTML
-escapes everything. Appropriate for plain text.
+  escapes everything. Appropriate for plain text.
 * `html:`, e.g. `more: html:<b>text</b>`. This passes the text through (minus
-the "`html:`" prefix and it is rendered as HTML by Anki.
-* `rst:` This renders the following text as https://docutils.sourceforge.io/rst.html[reStructuredText].
-* `md:` This renders the following text as https://commonmark.org[CommonMark Markdown].
+  the "`html:`" prefix and it is rendered as HTML by Anki.
+* `rst:` This renders the following text as
+  https://docutils.sourceforge.io/rst.html[reStructuredText].
+* `md:` This renders the following text as
+  https://commonmark.org[CommonMark Markdown].
 
 You may also use a plus before any prefix to append the rendered text to the
 whatever has already been set. For example:
