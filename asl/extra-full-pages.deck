@@ -286,18 +286,6 @@ group:
     trim: 3F-61F
 
 group:
-  more: +md:[DARK](https://www.lifeprint.com/asl101/pages-signs/d/dark.htm)
-    (doesn’t cover some variants)
-  https://www.youtube.com/watch?v=CGLQEeEzo1s DARK (flat hands version)
-    trim: 16F-86F
-  https://www.youtube.com/watch?v=7khmmGu70Uc -> DARK (claw hands version)
-    trim: 4F-70F
-  # I can’t find this DARK version on its own. This variant is shown on:
-  # https://www.handspeak.com/word/535/
-  https://www.youtube.com/watch?v=tqjREoNU730 DARK RED / burgundy
-    trim: 7F-70F
-
-group:
   more: +md:[DECIDE](https://www.lifeprint.com/asl101/pages-signs/d/decide.htm)
   https://www.youtube.com/watch?v=r8gvnE0liOg DECIDE / determine (full version)
     trim: 16F-91F
@@ -820,13 +808,6 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=pIIaoLraYm8 -> RELATIONSHIP (initialized)
     trim: 11F-62F
-
-group:
-  more: +md:[REMEMBER](https://www.lifeprint.com/asl101/pages-signs/r/remember.htm)
-  https://www.youtube.com/watch?v=AlQ5uuZk0ps REMEMBER
-    trim: 2F-65F
-  https://www.youtube.com/watch?v=yabFLDVcEOM MEMORIZE / memory
-    trim: 30F-99F
 
 group:
   more: +md:[REST](https://www.lifeprint.com/asl101/pages-signs/r/rest.htm)
