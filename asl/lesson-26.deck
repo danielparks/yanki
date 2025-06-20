@@ -91,11 +91,16 @@ group:
 
 group:
   more: +md:[OUTSIDE](https://www.lifeprint.com/asl101/pages-signs/o/outside.htm)
-
-  # FIXME add more
-
-  https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (place)
+  https://www.youtube.com/watch?v=Usx2lHs8rM8 OUTSIDE (two-handed version)
+  https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (double movement)
     trim: 7F-
+  # OUT (general version) is in lesson 5.
+  # LEAVE / go out (single movement) is in lesson 18.
+  # Could not find video for EXIT.
+
+  tags: +extra
+  https://www.youtube.com/watch?v=8nXYckjMG2Q
+    OUT / exit (open-to-closed hand version)
 
 group:
   more: +md:[PLANT](https://www.lifeprint.com/asl101/pages-signs/p/plant.htm)
@@ -112,6 +117,13 @@ group:
 
 group:
   more: +md:[TOPIC](https://www.lifeprint.com/asl101/pages-signs/t/topic.htm)
+  https://www.youtube.com/watch?v=1yxJYAfanIM
+    QUOTE / topic / subject / title / so-called
+    trim: 14F-56F
 
 group:
   more: +md:[TREE](https://www.lifeprint.com/asl101/pages-signs/t/tree.htm)
+  https://www.youtube.com/watch?v=DMdPpkiUJso TREE
+
+  tags: +extra
+  https://www.youtube.com/watch?v=56QIi_mrzvo FOREST / park / grove of trees

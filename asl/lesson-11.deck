@@ -15,8 +15,7 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=pH4E8ruOcSY -> ABOUT (H-hands version)
     trim: 6F-67F
-  https://www.youtube.com/watch?v=1yxJYAfanIM QUOTE / topic / subject
-    trim: 14F-56F
+  # QUOTE is in lesson 26
   https://www.youtube.com/watch?v=U70SGZbZ3D8 APPROXIMATELY
     trim: 12F-70F
 
