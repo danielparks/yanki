@@ -8300,7 +8300,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=Usx2lHs8rM8 @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=Usx2lHs8rM8 @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=Usx2lHs8rM8 @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=Usx2lHs8rM8 @0- TAGS: 'Lifeprint lesson_26 vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=Usx2lHs8rM8 @0- TEXT: 'OUTSIDE (two-handed version)'
+Lifeprint ASL https://www.youtube.com/watch?v=Usx2lHs8rM8 @0- TEXT: 'OUTSIDE / OUTSIDE-of (two-handed version)'
 Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- MEDIA: 'processed_youtube=Ut0n-GrYwMA_8c8e2cb43ed0b1741ab6038a58a4ac65.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/semester.htm">SEMESTER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Ut0n-GrYwMA @0- PARAMETER: audio='strip'
