@@ -37,6 +37,7 @@ group:
 group:
   more: +md:[FLOWER](https://www.lifeprint.com/asl101/pages-signs/f/flower.htm)
   https://www.youtube.com/watch?v=33DHyOmJN1Y FLOWER
+    trim: 83F-
 
 group:
   more: +md:[FORGET](https://www.lifeprint.com/asl101/pages-signs/f/forget.htm)
@@ -92,16 +93,12 @@ group:
 group:
   more: +md:[OUTSIDE](https://www.lifeprint.com/asl101/pages-signs/o/outside.htm)
   https://www.youtube.com/watch?v=Usx2lHs8rM8
-    OUTSIDE / OUTSIDE-of (two-handed version)
+    OUTSIDE / OUTSIDE-of / exit (two-handed version)
   https://www.youtube.com/watch?v=lnDgTFrQLwU OUTSIDE (double movement)
     trim: 7F-
   # OUT (general version) is in lesson 5.
   # LEAVE / go out (single movement) is in lesson 18.
   # Could not find video for EXIT.
-
-  tags: +extra
-  https://www.youtube.com/watch?v=8nXYckjMG2Q
-    OUT / exit (open-to-closed hand version)
 
 group:
   more: +md:[PLANT](https://www.lifeprint.com/asl101/pages-signs/p/plant.htm)
