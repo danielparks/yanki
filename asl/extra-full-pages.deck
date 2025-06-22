@@ -149,6 +149,10 @@ group:
   # “festival” according to Handspeak (https://www.handspeak.com/word/2972/)
 
 group:
+  more: +md:[CHAMPION](https://www.lifeprint.com/asl101/pages-signs/c/champion.htm)
+  https://www.youtube.com/watch?v=uaf91WMvaFs CHAMPION / champ
+
+group:
   more: +md:[CHANCE](https://www.lifeprint.com/asl101/pages-signs/c/chance.htm)
   https://www.youtube.com/watch?v=w8jjz_R6GaI CHANCE
     trim: 13F-56F
@@ -939,6 +943,14 @@ group:
     trim: 13F-86F
 
 group:
+  more: +md:[SMELL](https://www.lifeprint.com/asl101/pages-signs/s/smell.htm)
+  https://www.youtube.com/watch?v=BWweMqFByBE SMELL (positive affect)
+
+  tags: +extra
+  https://www.youtube.com/watch?v=gQje6mE_a4Y -> SMELL (negative affect)
+  https://www.youtube.com/watch?v=O3L5UOdpvIY STINK
+
+group:
   more: +md:[SPANISH](https://www.lifeprint.com/asl101/pages-signs/s/spanish.htm)
   https://www.youtube.com/watch?v=kBbDaJNNO6U
     SPANISH / Spain (single movement version)
@@ -1024,6 +1036,10 @@ group:
   https://www.youtube.com/watch?v=gR3ynn_BaHo
     TROUBLE / tribulation / adversity / woe / travails
     trim: 20F-83F
+
+group:
+  more: +md:[TOWEL](https://www.lifeprint.com/asl101/pages-signs/t/towel.htm)
+  https://www.youtube.com/watch?v=IZCMA0AL9bk TOWEL
 
 group:
   more: +md:[TRY](https://www.lifeprint.com/asl101/pages-signs/t/try.htm)
