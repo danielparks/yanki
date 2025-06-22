@@ -212,5 +212,20 @@ class NoteConfig:
             "note_id_format": self.note_id,
         }
 
+    def to_dict(self):
+        """Recursively convert to dict."""
+        return dict(
+            crop=self.crop,
+            format=self.format,
+            more=self.more.render_html(),
+            overlay_text=self.overlay_text,
+            tags=sorted(self.tags),
+            slow=self.slow,
+            trim=self.trim,
+            audio=self.audio,
+            video=self.video,
+            note_id=self.note_id,
+        )
+
 
 NoteConfigFrozen = make_frozen(NoteConfig)

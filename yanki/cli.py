@@ -4,6 +4,7 @@ import colorlog
 import functools
 import genanki
 from http import server
+import json
 import logging
 from multiprocessing import cpu_count
 import os
@@ -279,6 +280,32 @@ def to_html(options, output, decks, filter, flashcards):
         read_final_decks_sorted(decks, options, filter),
         flashcards=flashcards,
     )
+
+
+@cli.command()
+@click.argument(
+    "output",
+    type=click.Path(
+        exists=False,
+        dir_okay=False,
+        file_okay=True,
+        writable=True,
+        path_type=Path,
+    ),
+)
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@filter_options
+@click.pass_obj
+def to_json(options, output, decks, filter):
+    """Generate JSON version of decks."""
+    with output.open("w", encoding="utf_8") as output:
+        json.dump(
+            [
+                deck.to_dict()
+                for deck in read_final_decks_sorted(decks, options, filter)
+            ],
+            output,
+        )
 
 
 @cli.command()

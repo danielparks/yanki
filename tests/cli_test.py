@@ -1,5 +1,6 @@
 import inspect
 import io
+import json
 import os
 from pathlib import Path
 import psutil
@@ -113,6 +114,19 @@ def test_yanki_to_html(yanki, deck_1_path, output_path):
     assert index_html.endswith("</html>\n")
     assert "<h3>text</h3>" in index_html
     assert "<img " in index_html
+
+
+def test_yanki_to_json(yanki, deck_1_path, output_path):
+    json_path = output_path / "out.json"
+    result = yanki.run("to-json", json_path, deck_1_path)
+    assert result.returncode == 0
+    assert result.stderr == ""
+    assert result.stdout == ""
+
+    with json_path.open("r", encoding="utf_8") as json_file:
+        output = json.load(json_file)
+        assert len(output) == 1
+        assert len(output[0]["notes"]) == 1
 
 
 def test_yanki_list_notes(yanki, deck_1_path):

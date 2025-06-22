@@ -102,6 +102,19 @@ class NoteSpec:
     def error(self, message):
         raise DeckSyntaxError(message, self.source_path, self.line_number)
 
+    def to_dict(self):
+        """Recursively convert to dict."""
+        return dict(
+            video_url=self.video_url(),
+            clip=self.clip(),
+            direction=self.direction(),
+            text=self.text(),
+            source_path=self.source_path,
+            line_number=self.line_number,
+            source=self.source,
+            config=self.config.to_dict(),
+        )
+
 
 class DeckSpec:
     def __init__(self, source_path):
@@ -113,3 +126,11 @@ class DeckSpec:
 
     def add_note_spec(self, note_spec: NoteSpec):
         self.note_specs.append(note_spec)
+
+    def to_dict(self):
+        """Recursively convert to dict."""
+        return dict(
+            title=self.title,
+            source_path=self.source_path,
+            note_specs=[spec.to_dict() for spec in self.note_specs],
+        )
