@@ -1,6 +1,7 @@
 import click
 import asyncio
 import colorlog
+from contextlib import contextmanager
 import functools
 import genanki
 from http import server
@@ -298,7 +299,7 @@ def to_html(options, output, decks, filter, flashcards):
 @click.pass_obj
 def to_json(options, output, decks, filter):
     """Generate JSON version of decks."""
-    with output.open("w", encoding="utf_8") as output:
+    with file_or_stdout(output) as output:
         json.dump(
             [
                 deck.to_dict()
@@ -306,6 +307,16 @@ def to_json(options, output, decks, filter):
             ],
             output,
         )
+
+
+@contextmanager
+def file_or_stdout(path):
+    """Either open the path or stdout."""
+    if str(path) == "-":
+        yield sys.stdout
+    else:
+        with path.open("w", encoding="utf_8") as writer:
+            yield writer
 
 
 @cli.command()

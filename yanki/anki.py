@@ -285,9 +285,11 @@ class FinalNote:
             media_html=self.media_field().render_html(),
             more_html=self.more_field().render_html(),
             media_paths=sorted(self.media_paths()),
-            text=self.text,
-            spec=self.spec.to_dict(),
-            clip_spec=self.clip_spec,
+            direction=self.spec.direction(),
+            tags=sorted(self.spec.config.tags),
+            video_url=self.spec.video_url(),
+            source_path=self.spec.source_path,
+            line_number=self.spec.line_number,
         )
 
 
@@ -349,7 +351,6 @@ class FinalDeck:
             deck_id=self.deck_id,
             title=self.title,
             source_path=self.source_path,
-            spec=self.spec.to_dict(),
             notes=[note.to_dict() for note in self.notes()],
         )
 
