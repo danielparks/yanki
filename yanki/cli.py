@@ -295,14 +295,20 @@ def to_html(options, output, decks, filter, flashcards):
     ),
 )
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@click.option(
+    "-m",
+    "--html-media-path",
+    default="",
+    help="Path to media to embed in HTML.",
+)
 @filter_options
 @click.pass_obj
-def to_json(options, output, decks, filter):
+def to_json(options, output, decks, html_media_path, filter):
     """Generate JSON version of decks."""
     with file_or_stdout(output) as output:
         json.dump(
             [
-                deck.to_dict()
+                deck.to_dict(base_path=html_media_path)
                 for deck in read_final_decks_sorted(decks, options, filter)
             ],
             output,
