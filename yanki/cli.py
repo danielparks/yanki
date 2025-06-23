@@ -284,8 +284,10 @@ def to_html(options, output, decks, filter, flashcards):
 
 
 @cli.command()
-@click.argument(
-    "output",
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@click.option(
+    "-o",
+    "--output",
     type=click.Path(
         exists=False,
         dir_okay=False,
@@ -293,8 +295,9 @@ def to_html(options, output, decks, filter, flashcards):
         writable=True,
         path_type=Path,
     ),
+    default="-",
+    help="Path to save JSON to, or - to output to stdout.",
 )
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.option(
     "-m",
     "--html-media-path",
