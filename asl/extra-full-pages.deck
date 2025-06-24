@@ -17,6 +17,13 @@ group:
     trim: 17F-63F
 
 group:
+  more: +md:[ALLOW](https://www.lifeprint.com/asl101/pages-signs/a/allow.htm)
+  https://www.youtube.com/watch?v=w705jpxY8m8 ALLOW / permit / let
+
+  tags: +extra
+  https://www.youtube.com/watch?v=i8tVIw8CsTs PERMISSION / permit
+
+group:
   more: +md:[APOSTROPHE-S](https://www.lifeprint.com/asl101/pages-signs/a/apostrophe-s.htm)
   https://www.youtube.com/watch?v=QfXNM1EHyKI APOSTROPHE-S / possessive S
     trim: 15F-63F
@@ -429,6 +436,10 @@ group:
     trim: 17F-68F
   https://www.youtube.com/watch?v=9w-aLcgj16A FIX / repair
     trim: 12F-64F
+
+group:
+  more: +md:[FORCE](https://www.lifeprint.com/asl101/pages-signs/f/force.htm)
+  https://www.youtube.com/watch?v=ksh9LMmwyPM FORCE / enforce / compel
 
 group:
   more: +md:[FOX](https://www.lifeprint.com/asl101/pages-signs/f/fox.htm)
