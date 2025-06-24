@@ -1,9 +1,11 @@
 import click
 import asyncio
 import colorlog
+from contextlib import contextmanager
 import functools
 import genanki
 from http import server
+import json
 import logging
 from multiprocessing import cpu_count
 import os
@@ -279,6 +281,51 @@ def to_html(options, output, decks, filter, flashcards):
         read_final_decks_sorted(decks, options, filter),
         flashcards=flashcards,
     )
+
+
+@cli.command()
+@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@click.option(
+    "-o",
+    "--output",
+    type=click.Path(
+        exists=False,
+        dir_okay=False,
+        file_okay=True,
+        writable=True,
+        path_type=Path,
+    ),
+    default="-",
+    help="Path to save JSON to, or - to output to stdout.",
+)
+@click.option(
+    "-m",
+    "--html-media-path",
+    default="",
+    help="Path to media to embed in HTML.",
+)
+@filter_options
+@click.pass_obj
+def to_json(options, output, decks, html_media_path, filter):
+    """Generate JSON version of decks."""
+    with file_or_stdout(output) as output:
+        json.dump(
+            [
+                deck.to_dict(base_path=html_media_path)
+                for deck in read_final_decks_sorted(decks, options, filter)
+            ],
+            output,
+        )
+
+
+@contextmanager
+def file_or_stdout(path):
+    """Either open the path or stdout."""
+    if str(path) == "-":
+        yield sys.stdout
+    else:
+        with path.open("w", encoding="utf_8") as writer:
+            yield writer
 
 
 @cli.command()

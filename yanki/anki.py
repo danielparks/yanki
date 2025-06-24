@@ -276,13 +276,29 @@ class FinalNote:
             tags=self.spec.config.tags,
         )
 
+    def to_dict(self, base_path=""):
+        """Recursively convert to dict."""
+        return dict(
+            deck_id=self.deck_id,
+            note_id=self.note_id,
+            text_html=self.text_field().render_html(base_path=base_path),
+            media_html=self.media_field().render_html(base_path=base_path),
+            more_html=self.more_field().render_html(base_path=base_path),
+            media_paths=sorted(self.media_paths()),
+            direction=self.spec.direction(),
+            tags=sorted(self.spec.config.tags),
+            video_url=self.spec.video_url(),
+            source_path=self.spec.source_path,
+            line_number=self.spec.line_number,
+        )
+
 
 @dataclass(frozen=True)
 class FinalDeck:
     deck_id: int
     title: str
     source_path: str
-    spec: NoteSpec
+    spec: DeckSpec
     notes_by_id: dict
 
     def id(self):
@@ -328,6 +344,15 @@ class FinalDeck:
         LOGGER.info(f"Wrote deck {self.title} to file {path}")
 
         return path
+
+    def to_dict(self, base_path=""):
+        """Recursively convert to dict."""
+        return dict(
+            deck_id=self.deck_id,
+            title=self.title,
+            source_path=self.source_path,
+            notes=[note.to_dict(base_path=base_path) for note in self.notes()],
+        )
 
 
 class Deck:
