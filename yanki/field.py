@@ -70,20 +70,28 @@ class MediaFragment(Fragment):
         self.path = path
         self._media = media
 
+    def file_name(self):
+        return os.path.basename(self.path)
+
     def path_in_base(self, base_path):
-        return os.path.join(base_path, os.path.basename(self.path))
+        return
 
     def anki_filename(self):
         """Get the filename encoded for Anki."""
         # FIXME need to prevent characters that break Anki.
         # html.escape() breaks Anki. A literal single quote (') is escaped as
         # &#x27;, which then gets transformed to &amp;%23x27; at some point.
-        return self.path_in_base("")
+        return self.file_name()
 
     def html_path_in_base(self, base_path):
-        """Get the path relative to base_path, and encoded for HTML."""
+        """
+        Get the path relative to base_path, and encoded for HTML.
+
+        base_path may be a URL or a relative path. It must already be URL
+        encoded, but must not escaped for HTML.
+        """
         return html.escape(
-            quote(self.path_in_base(base_path), encoding="utf_8")
+            os.path.join(base_path, quote(self.file_name(), encoding="utf_8"))
         )
 
     def media(self):
