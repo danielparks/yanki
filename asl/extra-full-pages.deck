@@ -181,6 +181,13 @@ group:
     trim: 7F-
 
 group:
+  more: +md:[CHINA](https://www.lifeprint.com/asl101/pages-signs/c/china.htm)
+  https://www.youtube.com/watch?v=yLX_qaQY6B8 CHINA (clothes version)
+
+  tags: +extra
+  https://www.youtube.com/watch?v=xVM8aRdgFeQ -> CHINA (legacy version)
+
+group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
   https://www.youtube.com/watch?v=9SMHSwdQUwE CHRISTMAS (C-hand version)
     trim: 4F-49F
@@ -1118,6 +1125,16 @@ group:
   more: +md:[WOOD](https://www.lifeprint.com/asl101/pages-signs/w/wood.htm)
   https://www.youtube.com/watch?v=Jl02T1KXfBc WOOD
     trim: 17F-72F
+
+group:
+  more: +md:[WORLD](https://www.lifeprint.com/asl101/pages-signs/w/world.htm)
+  https://www.youtube.com/watch?v=-H4PejCdr6Y WORLD (W-hands version)
+  # This sign seems to be shown twice with different translations:
+  https://www.youtube.com/watch?v=jrqBM4jy2-Q
+    WORLD / the whole world / international / globe
+  https://www.youtube.com/watch?v=HVrXpnueaoM
+    GLOBAL / all over the world (S-hand and curved hand version)
+  # FIXME: fill in the rest of the signs.
 
 group:
   more: +md:[YOGURT](https://www.lifeprint.com/asl101/pages-signs/y/yogurt.htm)
