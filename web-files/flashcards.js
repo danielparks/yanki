@@ -53,13 +53,13 @@ function make_card_list(notes) {
 }
 
 function play_video(container) {
-    container.querySelectorAll("video").forEach((video) => {
-      video.controls = false;
-      video.play();
+  container.querySelectorAll("video").forEach((video) => {
+    video.controls = false;
+    video.play();
 
-      video.addEventListener("mouseenter", () => { video.controls = true; });
-      video.addEventListener("mouseleave", () => { video.controls = false; });
-    });
+    video.addEventListener("mouseenter", () => { video.controls = true; });
+    video.addEventListener("mouseleave", () => { video.controls = false; });
+  });
 }
 
 window.addEventListener("load", (event) => {
