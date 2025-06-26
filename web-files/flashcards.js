@@ -27,24 +27,37 @@ function query_text(element, query) {
   return element.querySelector(query).innerText;
 }
 
-function note_direction(note) {
+function note_directions(note, desired_direction) {
   const direction = query_text(note, ".metadata .direction > td > span");
-  if ( direction == "<->" ) {
-    return ["media-first", "text-first"];
-  } else if ( direction == "->" ) {
-    return ["media-first"];
+  if ( direction == "->" ) {
+    if ( desired_direction == "text-first" ) {
+      return []; // This is a media-first note, so exclude it.
+    } else {
+      return ["media-first"];
+    }
   } else if ( direction == "<-" ) {
-    return ["text-first"];
+    if ( desired_direction == "media-first" ) {
+      return []; // This is a text-first note, so exclude it.
+    } else {
+      return ["text-first"];
+    }
   } else {
-    console.error("Unknown direction for note", direction);
-    return ["media-first", "text-first"];
+    if ( direction != "<->" ) {
+      console.error("Unknown direction for note", direction);
+    }
+
+    if ( desired_direction == "both" ) {
+      return ["media-first", "text-first"];
+    } else {
+      return [desired_direction];
+    }
   }
 }
 
-function make_card_list(notes) {
+function make_card_list(notes, desired_direction) {
   var cards = [];
   notes.forEach((note) => {
-    note_direction(note).forEach((direction) => {
+    note_directions(note, desired_direction).forEach((direction) => {
       cards.push([direction, note]);
     });
   });
@@ -63,46 +76,46 @@ function play_video(container) {
 }
 
 window.addEventListener("load", (event) => {
+  var filter_direction = "both", current_index = 0;
+  var current_card_direction, current_card, showing_question, cards;
+
   function restart() {
-    cards = make_card_list(document.querySelectorAll("div.note"));
+    cards = make_card_list(document.querySelectorAll("div.note"), filter_direction);
     current_index = 0;
     finished_div.style.display = "none";
+
+    if ( current_index >= cards.length ) {
+      show_finished();
+    } else {
+      show_question();
+    }
   }
 
   function hide_current() {
-    if ( current ) {
-      current.classList.remove(
+    if ( current_card ) {
+      current_card.classList.remove(
         "question", "answer", "text-first", "media-first"
       );
     }
   }
 
-  function update_status() {
-    var filter = direction_select.value, completed = 0, count = 0;
-    if ( filter == "both" ) {
-      count = cards.length;
-      completed = current_index;
-    } else {
-      var i = 0;
-      for ( ; i < current_index ; i++ ) {
-        if ( cards[i][0] == filter ) {
-          completed++;
-          count++;
-        }
-      }
-      for ( ; i < cards.length ; i++ ) {
-        if ( cards[i][0] == filter ) {
-          count++;
-        }
-      }
-    }
+  function set_filter_direction(direction) {
+    filter_direction = direction;
+    Object.values(direction_buttons).forEach((button) => {
+      button.classList.remove('active');
+    });
+    direction_buttons[filter_direction].classList.add('active');
+    restart();
+  }
 
+  function update_status() {
+    var completed = current_index;
     if ( ! showing_question && current_index < cards.length ) {
       // Showing the answer, so the card is completed.
       completed++;
     }
 
-    status_div.innerText = "Completed " + completed + " out of " + count
+    status_div.innerText = "Completed " + completed + " out of " + cards.length
       + " cards.";
   }
 
@@ -110,16 +123,16 @@ window.addEventListener("load", (event) => {
     showing_question = true;
 
     hide_current();
-    // direction is "text-first" or "media-first".
-    [direction, current] = cards[current_index];
-    current.classList.remove("answer", "text-first", "media-first");
-    current.classList.add("question", direction);
+    // current_card_direction is "text-first" or "media-first".
+    [current_card_direction, current_card] = cards[current_index];
+    current_card.classList.remove("answer", "text-first", "media-first");
+    current_card.classList.add("question", current_card_direction);
 
     next_button.innerText = "Show answer";
     update_status();
 
-    if ( direction == "media-first" ) {
-      play_video(current);
+    if ( current_card_direction == "media-first" ) {
+      play_video(current_card);
     }
   }
 
@@ -127,16 +140,16 @@ window.addEventListener("load", (event) => {
     showing_question = false;
 
     hide_current();
-    // direction is "text-first" or "media-first".
-    [direction, current] = cards[current_index];
-    current.classList.remove("question", "text-first", "media-first");
-    current.classList.add("answer", direction);
+    // current_card_direction is "text-first" or "media-first".
+    [current_card_direction, current_card] = cards[current_index];
+    current_card.classList.remove("question", "text-first", "media-first");
+    current_card.classList.add("answer", current_card_direction);
 
     next_button.innerText = "Next card";
     update_status();
 
-    if ( direction == "text-first" ) {
-      play_video(current);
+    if ( current_card_direction == "text-first" ) {
+      play_video(current_card);
     }
   }
 
@@ -147,73 +160,18 @@ window.addEventListener("load", (event) => {
     finished_div.style.display = "block";
   }
 
-  // Find the card that matches direction_select before current_index.
-  function find_previous_card_index() {
-    if ( current_index == 0 ) {
-      return null;
-    }
-
-    if ( direction_select.value == "both" ) {
-      // No need to filter.
-      return current_index - 1;
-    }
-
-    for ( var i = current_index - 1 ; i >= 0 ; i-- ) {
-      if ( cards[i][0] == direction_select.value ) {
-        // An acceptable card.
-        return i;
-      }
-    }
-
-    return null;
-  }
-
-  // Find the card that matches direction_select at or beyond current_index.
-  function find_next_card() {
-    var advanced = false;
-    if ( direction_select.value == "both" ) {
-      // No need to filter.
-      return advanced;
-    }
-
-    for ( ; current_index < cards.length ; current_index++ ) {
-      if ( cards[current_index][0] == direction_select.value ) {
-        // An acceptable card. Show it.
-        return advanced;
-      }
-      advanced = true;
-    }
-
-    return advanced;
-  }
-
-  function direction_select_change() {
-    if ( find_next_card() ) {
-      // The shown card was filtered, so move to the next acceptable one.
-      if ( current_index >= cards.length ) {
-        show_finished();
-      } else {
-        show_question();
-      }
-    } else {
-      update_status();
-    }
-  }
-
   function back_button_click() {
     if ( ! showing_question ) {
       show_question();
       return;
     }
 
-    var new_index = find_previous_card_index();
-    if ( new_index === null ) {
+    if ( current_index == 0 ) {
       // Already at the beginning.
       return;
     }
 
-    current_index = new_index;
-    hide_current();
+    current_index--;
     show_answer();
   }
 
@@ -221,42 +179,54 @@ window.addEventListener("load", (event) => {
     if ( current_index >= cards.length ) {
       // We ran out of cards!
       restart();
-      // Fall through to show card.
     } else if ( showing_question ) {
       show_answer();
-      return;
     } else {
-      // Must be showing the answer, so hide the old card...
-      current.classList.remove("answer", "text-first", "media-first");
-
-      // ... and switch to the next card.
+      // Must be showing the answer, so switch to the next card.
       current_index++;
-      // Fall through to show card.
+      if ( current_index >= cards.length ) {
+        show_finished();
+      } else {
+        show_question();
+      }
     }
 
-    find_next_card();
-    if ( current_index >= cards.length ) {
-      show_finished();
-    } else {
-      show_question();
-    }
   }
 
-  const valid_directions = {
-    "both": true,
-    "text-first": true,
-    "media-first": true,
+  var direction_buttons = {
+    "both": create("button", [text("Both")], {
+      "id": "direction-both",
+      "className": "active",
+      "onclick": () => set_filter_direction("both"),
+    }),
+    "text-first": create("button", [text("Text")], {
+      "id": "direction-text-first",
+      "onclick": () => set_filter_direction("text-first"),
+    }),
+    "media-first": create("button", [text("Media")], {
+      "id": "direction-media-first",
+      "onclick": () => set_filter_direction("media-first"),
+    }),
   };
-  var back_button = create("button", [text("Go back")], { "id": "back-button" });
-  var next_button = create("button", [], { "id": "next-button" });
-  var direction_select = create("select", [
-    create("option", [text("Mix of text and media first")], { "value": "both" }),
-    create("option", [text("Text first")], { "value": "text-first" }),
-    create("option", [text("Media first")], { "value": "media-first" }),
-  ], { "onchange": direction_select_change });
+
+  var direction_control = create("div", [
+    direction_buttons["both"],
+    direction_buttons["text-first"],
+    direction_buttons["media-first"],
+  ], { "id": "direction-control" });
+
+  var back_button = create("button", [text("Go back")], {
+    "id": "back-button",
+    "onclick": back_button_click,
+  });
+  var next_button = create("button", [text("Show answer")], {
+    "id": "next-button",
+    "onclick": next_button_click,
+  });
+
   var status_div = create("div", [], { "id": "status "})
   var controls = create("div", [
-    direction_select,
+    direction_control,
     back_button,
     next_button,
     status_div,
@@ -265,31 +235,23 @@ window.addEventListener("load", (event) => {
     [ text("Finished all cards!") ],
     { "id": "finished" });
 
+  document.body.appendChild(finished_div);
+  document.body.appendChild(controls);
+
   // Check which direction we should show the cards in.
   if ( window.location.hash ) {
     const parameters = window.location.hash.slice(1).split(":");
     if ( parameters.length > 0 ) {
-      if ( valid_directions[parameters[0]] ) {
-        direction_select.value = parameters[0];
+      if ( direction_buttons[parameters[0]]
+          && direction_buttons[parameters[0]].tagName == "BUTTON" ) {
+        set_filter_direction(parameters[0]);
       }
       // For now, ignore other parameters.
     }
   }
 
-  document.body.appendChild(finished_div);
-  document.body.appendChild(controls);
-
-  var current_index = 0, showing_question, direction, current, cards;
   restart();
 
-  if ( cards.length <= 0 ) {
-    return;
-  }
-
-  show_question();
-
-  back_button.addEventListener("click", back_button_click);
-  next_button.addEventListener("click", next_button_click);
   document.body.addEventListener("keyup", (event) => {
     if ( event.key == " " ) {
       next_button_click();

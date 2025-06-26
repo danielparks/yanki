@@ -23,15 +23,43 @@ h1 > a {
   text-align: center;
 }
 
-#controls select {
-  /* Disable bad UI for now. */
-  display: none;
-}
-
 #controls button {
   display: inline-block;
   margin: 10px 8px;
+  padding: 10px 18px;
   font-size: 18px;
+  background: #f0f0f0;
+  border: 2px solid #aaa;
+  border-radius: 6px;
+  transition: background 0.2s, border 0.2s;
+  cursor: pointer;
+}
+
+#controls #direction-control {
+  display: inline-block;
+  margin: 10px 8px;
+  padding: 8px 8px 8px 0;
+  background: #ccc;
+  border-radius: 6px;
+  box-shadow: inset 2px 2px 5px #aaa;
+}
+
+#controls #direction-control > button {
+  background: #dce;
+  border: none;
+  margin: 0 0 0 8px;
+  box-shadow: 2px 2px 5px #aaa;
+}
+
+#controls #direction-control > button:hover {
+  background: #a9c;
+}
+
+#controls #direction-control > button.active,
+#controls #direction-control > button.active:hover {
+  background: #a9c;
+  color: #fff;
+  box-shadow: inset 1px 1px 2px #999;
 }
 
 .note {
