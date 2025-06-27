@@ -69,9 +69,7 @@ def test_yanki_serve_http(yanki, deck_1_path):
     results = []
 
     def run_yanki_serve_http():
-        results.append(
-            yanki.run("serve-http", "--run-seconds", "5", deck_1_path)
-        )
+        results.append(yanki.run("serve-http", deck_1_path))
 
     httpd = threading.Thread(target=run_yanki_serve_http)
     httpd.start()
