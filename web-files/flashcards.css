@@ -2,6 +2,27 @@ body {
   margin-bottom: 112px; /* #controls height + 10px */
 }
 
+button {
+  margin: 10px 8px;
+  padding: 10px 18px;
+  font-size: 18px;
+  background: #cce;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px #aaa;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bbd;
+}
+
+button:disabled,
+button:disabled:hover {
+  background: #ccc;
+  cursor: default;
+}
+
 h1 {
   font-size: 24px;
   text-align: center;
@@ -10,6 +31,36 @@ h1 {
 
 h1 > a {
   color: #a9c;
+}
+
+#direction-control {
+  display: inline-block;
+  margin: 10px;
+  padding: 7px 8px 7px 0;
+  background: #eee;
+  border-radius: 6px;
+  box-shadow: inset 2px 2px 5px #aaa;
+}
+
+#direction-control > button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #dce;
+  border: none;
+  margin: 0 0 0 8px;
+  box-shadow: 2px 2px 5px #aaa;
+}
+
+#direction-control > button:hover {
+  background: #cbd;
+}
+
+#direction-control > button.active,
+#direction-control > button.active:hover {
+  background: #a9c;
+  color: #fff;
+  box-shadow: inset 1px 1px 2px #999;
 }
 
 #controls {
@@ -23,15 +74,18 @@ h1 > a {
   text-align: center;
 }
 
-#controls select {
-  /* Disable bad UI for now. */
-  display: none;
+#controls button {
+  display: inline-block;
 }
 
-#controls button {
-  display: block;
-  margin: 10px auto;
-  font-size: 24px;
+button#next-button {
+  width: 150px;
+  background: #66a;
+  color: #fff;
+}
+
+button#next-button:hover {
+  background: #99c;
 }
 
 .note {
@@ -76,7 +130,7 @@ h1 > a {
 }
 
 .note.question > .more {
-  visibility: hidden;
+  display: none;
 }
 
 .cards {
