@@ -128,6 +128,7 @@ window.addEventListener("load", (event) => {
     current_card.classList.remove("answer", "text-first", "media-first");
     current_card.classList.add("question", current_card_direction);
 
+    back_button.disabled = current_index == 0;
     next_button.innerText = "Show answer";
     update_status();
 
@@ -145,7 +146,8 @@ window.addEventListener("load", (event) => {
     current_card.classList.remove("question", "text-first", "media-first");
     current_card.classList.add("answer", current_card_direction);
 
-    next_button.innerText = "Next card";
+    back_button.disabled = false;
+    next_button.innerText = "Next";
     update_status();
 
     if ( current_card_direction == "text-first" ) {
@@ -215,18 +217,17 @@ window.addEventListener("load", (event) => {
     direction_buttons["media-first"],
   ], { "id": "direction-control" });
 
-  var back_button = create("button", [text("Go back")], {
+  var back_button = create("button", [text("Previous")], {
     "id": "back-button",
     "onclick": back_button_click,
   });
-  var next_button = create("button", [text("Show answer")], {
+  var next_button = create("button", [text("Flip")], {
     "id": "next-button",
     "onclick": next_button_click,
   });
 
   var status_div = create("div", [], { "id": "status "})
   var controls = create("div", [
-    direction_control,
     back_button,
     next_button,
     status_div,
@@ -235,6 +236,7 @@ window.addEventListener("load", (event) => {
     [ text("Finished all cards!") ],
     { "id": "finished" });
 
+  document.querySelector("h1").appendChild(direction_control)
   document.body.appendChild(finished_div);
   document.body.appendChild(controls);
 
