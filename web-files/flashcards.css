@@ -130,7 +130,7 @@ button#next-button:hover {
 }
 
 .note.question > .more {
-  visibility: hidden;
+  display: none;
 }
 
 .cards {
