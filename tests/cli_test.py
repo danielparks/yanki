@@ -76,9 +76,9 @@ def test_yanki_serve_http(yanki, deck_1_path):
     httpd = threading.Thread(target=run_yanki_serve_http)
     httpd.start()
 
-    start = time.time()
+    start = time.monotonic()
     html = None
-    while time.time() - start < 5:  # 5 second timeout
+    while time.monotonic() - start < 5:  # 5 second timeout
         time.sleep(0.1)
         try:
             html = urlopen("http://localhost:8000/").read()
