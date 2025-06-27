@@ -1,7 +1,6 @@
 import click
 import asyncio
 import colorlog
-from contextlib import contextmanager
 import functools
 import genanki
 from http import server
@@ -9,9 +8,11 @@ import json
 import logging
 from multiprocessing import cpu_count
 import os
+import os.path
 from pathlib import Path
 import re
 import shlex
+import shutil
 import signal
 import subprocess
 import sys
@@ -293,6 +294,7 @@ def to_html(options, output, decks, filter, flashcards):
         dir_okay=False,
         file_okay=True,
         writable=True,
+        allow_dash=True,
         path_type=Path,
     ),
     default="-",
@@ -300,32 +302,53 @@ def to_html(options, output, decks, filter, flashcards):
 )
 @click.option(
     "-m",
-    "--html-media-path",
+    "--copy-media-to",
+    type=click.Path(
+        exists=False,
+        dir_okay=True,
+        file_okay=False,
+        writable=True,
+    ),
     default="",
-    help="Path to media to embed in HTML.",
+    help="Directory to copy media into (leave blank to not copy media).",
+)
+@click.option(
+    "-p",
+    "--html-media-prefix",
+    default="",
+    help="Prefix for media references in HTML (may be a URL).",
 )
 @filter_options
 @click.pass_obj
-def to_json(options, output, decks, html_media_path, filter):
-    """Generate JSON version of decks."""
-    with file_or_stdout(output) as output:
-        json.dump(
-            [
-                deck.to_dict(base_path=html_media_path)
-                for deck in read_final_decks_sorted(decks, options, filter)
-            ],
-            output,
-        )
+def to_json(options, output, decks, copy_media_to, html_media_prefix, filter):
+    """
+    Generate JSON version of decks.
 
+    Optionally, copy the media for the decks into a directory.
+    """
+    decks = [
+        deck.to_dict(base_path=html_media_prefix)
+        for deck in read_final_decks_sorted(decks, options, filter)
+    ]
 
-@contextmanager
-def file_or_stdout(path):
-    """Either open the path or stdout."""
-    if str(path) == "-":
-        yield sys.stdout
-    else:
-        with path.open("w", encoding="utf_8") as writer:
-            yield writer
+    if copy_media_to:
+        copy_media_to = Path(copy_media_to)
+        copy_media_to.mkdir(parents=True, exist_ok=True)
+        for deck in decks:
+            for note in deck["notes"]:
+                new_paths = []
+                for source in note["media_paths"]:
+                    file_name = os.path.basename(source)
+                    destination = copy_media_to / file_name
+                    LOGGER.info(f"Copying media to {destination}")
+                    shutil.copy2(source, destination)
+                    new_paths.append(str(destination))
+
+                note["media_paths"] = new_paths
+
+    with click.open_file(output, "w", encoding="utf_8") as file:
+        LOGGER.info(f"Writing JSON to {output}")
+        json.dump(decks, file)
 
 
 @cli.command()
