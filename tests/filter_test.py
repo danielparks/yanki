@@ -26,7 +26,9 @@ tags: -def
 """
 
 
-def parse_deck(filter):
+def filter_deck_tags(include=set(), exclude=set()):
+    filter = DeckFilter(tags_include=set(include), tags_exclude=set(exclude))
+
     input = io.StringIO(REFERENCE_DECK)
     input.name = "-"
 
@@ -40,22 +42,22 @@ def parse_deck(filter):
 
 
 def test_filters():
-    assert "ABCDEF" == parse_deck(DeckFilter())
-    assert "ABC" == parse_deck(DeckFilter(include=["abc"]))
-    assert "DEF" == parse_deck(DeckFilter(exclude=["abc"]))
-    assert "" == parse_deck(DeckFilter(include=["abc"], exclude=["abc"]))
-    assert "ABC" == parse_deck(DeckFilter(include=["abc"], exclude=["def"]))
-    assert "A" == parse_deck(DeckFilter(include=["abc"], exclude=["bcd"]))
+    assert "ABCDEF" == filter_deck_tags()
+    assert "ABC" == filter_deck_tags(include=["abc"])
+    assert "DEF" == filter_deck_tags(exclude=["abc"])
+    assert "" == filter_deck_tags(include=["abc"], exclude=["abc"])
+    assert "ABC" == filter_deck_tags(include=["abc"], exclude=["def"])
+    assert "A" == filter_deck_tags(include=["abc"], exclude=["bcd"])
 
 
 def test_multiple_include():
-    assert "BC" == parse_deck(DeckFilter(include=["abc", "bcd"]))
-    assert "C" == parse_deck(DeckFilter(include=["abc", "bcd"], exclude=["b"]))
+    assert "BC" == filter_deck_tags(include=["abc", "bcd"])
+    assert "C" == filter_deck_tags(include=["abc", "bcd"], exclude=["b"])
 
 
 def test_multiple_exclude():
-    assert "EF" == parse_deck(DeckFilter(exclude=["abc", "bcd"]))
-    assert "E" == parse_deck(DeckFilter(include=["e"], exclude=["abc", "bcd"]))
+    assert "EF" == filter_deck_tags(exclude=["abc", "bcd"])
+    assert "E" == filter_deck_tags(include=["e"], exclude=["abc", "bcd"])
 
 
 def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
