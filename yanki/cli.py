@@ -1,9 +1,7 @@
 import click
 import asyncio
 import colorlog
-import functools
 import genanki
-from http import server
 import json
 import logging
 from multiprocessing import cpu_count
@@ -11,14 +9,10 @@ import os
 import os.path
 from pathlib import Path
 import re
-import shlex
 import shutil
-import subprocess
 import sys
 import tempfile
-import threading
 import traceback
-import time
 import yt_dlp
 
 
@@ -32,8 +26,9 @@ from yanki.filter import (
 from yanki.html_out import write_html
 from yanki.parser import find_invalid_format, NOTE_VARIABLES
 from yanki.anki import FINAL_NOTE_VARIABLES
+from yanki.server import server_options
 from yanki.video import Video, BadURL, FFmpegError, VideoOptions
-from yanki.utils import add_trace_logging
+from yanki.utils import add_trace_logging, open_in_app
 
 add_trace_logging()
 LOGGER = logging.getLogger(__name__)
@@ -353,45 +348,15 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix, filter):
 @cli.command()
 @click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
 @filter_options
+@server_options
 @click.option(
     "-F",
     "--flashcards/--no-flashcards",
     help="Render notes as flashcards.",
 )
-@click.option(
-    "-o",
-    "--open/--no-open",
-    "do_open",
-    help="Open the website with `open` after starting the server.",
-)
-@click.option(
-    "-b",
-    "--bind",
-    default="localhost:8000",
-    show_default=True,
-    type=click.STRING,
-    help="The address and porrt to bind to. NOTE: this is not appropriate for"
-    " serving production loads.",
-)
-@click.option(
-    "--run-seconds",
-    type=click.FLOAT,
-    help="How many seconds to run the server for. May be decimal. If not"
-    " specified, the server will run until killed by a signal.",
-)
 @click.pass_obj
-def serve_http(options, decks, filter, flashcards, do_open, bind, run_seconds):
+def serve_http(options, decks, filter, server, flashcards):
     """Serve HTML summary of deck on localhost:8000."""
-    bind_parts = bind.split(":")
-    if len(bind_parts) != 2:
-        raise click.UsageError("--bind expects a value in address:port format.")
-    [address, port] = bind_parts
-
-    try:
-        port = int(port)
-    except ValueError:
-        raise click.UsageError("--bind expects an integer port.")
-
     write_html(
         options.cache_path,
         options.cache_path,
@@ -399,21 +364,7 @@ def serve_http(options, decks, filter, flashcards, do_open, bind, run_seconds):
         flashcards=flashcards,
     )
 
-    Handler = functools.partial(
-        server.SimpleHTTPRequestHandler, directory=options.cache_path
-    )
-    httpd = server.HTTPServer((address, port), Handler)
-
-    if do_open:
-
-        def _open():
-            time.sleep(0.5)
-            open_in_app([f"http://localhost:{port}/"])
-
-        threading.Thread(target=_open).start()
-
-    print(f"Starting HTTP server on http://{bind}/")
-    httpd.serve_forever()
+    server.serve_forever(directory=options.cache_path)
 
 
 @cli.command()
@@ -497,33 +448,6 @@ def find_errors(group: ExceptionGroup):
             yield from find_errors(error)
         else:
             yield error
-
-
-def open_in_app(arguments):
-    # FIXME only works on macOS and Linux; should handle command not found.
-    if os.uname().sysname == "Darwin":
-        command = "open"
-    elif os.uname().sysname == "Linux":
-        command = "xdg-open"
-    else:
-        raise ExpectedError(
-            f"Don’t know how to open {arguments!r} on this platform."
-        )
-
-    command_line = [command, *arguments]
-    result = subprocess.run(
-        command_line,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        encoding="utf_8",
-    )
-
-    if result.returncode != 0:
-        raise ExpectedError(
-            f"Error running {shlex.join(command_line)}: {result.stdout}"
-        )
-
-    sys.stdout.write(result.stdout)
 
 
 if __name__ == "__main__":

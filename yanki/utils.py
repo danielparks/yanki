@@ -8,7 +8,12 @@ from pathlib import Path
 import tempfile
 import types
 import typing
+import shlex
+import subprocess
+import sys
 from urllib.parse import urlparse
+
+from yanki.errors import ExpectedError
 
 
 def add_trace_logging():
@@ -122,3 +127,31 @@ def make_frozen(klass):
         namespace=namespace,
         frozen=True,
     )
+
+
+def open_in_app(arguments):
+    """Open a file or URL in the appropriate application."""
+    # FIXME only works on macOS and Linux; should handle command not found.
+    if os.uname().sysname == "Darwin":
+        command = "open"
+    elif os.uname().sysname == "Linux":
+        command = "xdg-open"
+    else:
+        raise ExpectedError(
+            f"Don’t know how to open {arguments!r} on this platform."
+        )
+
+    command_line = [command, *arguments]
+    result = subprocess.run(
+        command_line,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        encoding="utf_8",
+    )
+
+    if result.returncode != 0:
+        raise ExpectedError(
+            f"Error running {shlex.join(command_line)}: {result.stdout}"
+        )
+
+    sys.stdout.write(result.stdout)
