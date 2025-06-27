@@ -13,7 +13,6 @@ from pathlib import Path
 import re
 import shlex
 import shutil
-import signal
 import subprocess
 import sys
 import tempfile
@@ -405,34 +404,16 @@ def serve_http(options, decks, filter, flashcards, do_open, bind, run_seconds):
     )
     httpd = server.HTTPServer((address, port), Handler)
 
-    print(f"Starting HTTP server on http://{bind}/")
-    threading.Thread(target=httpd.serve_forever).start()
-    start = time.time()
-
     if do_open:
-        time.sleep(0.5)
-        open_in_app([f"http://localhost:{port}/"])
 
-    if run_seconds is not None:
-        # --open forces the minimum run_seconds to be 0.5.
-        run_seconds -= time.time() - start
-        if run_seconds > 0:
-            time.sleep(run_seconds)
+        def _open():
+            time.sleep(0.5)
+            open_in_app([f"http://localhost:{port}/"])
 
-        # httpd.shutdown() hangs if start() hasn’t been called.
-        shutdown = threading.Thread(target=httpd.shutdown)
-        shutdown.start()
+        threading.Thread(target=_open).start()
 
-        # Wait for shutdown to take
-        for _ in range(10):
-            time.sleep(0.1)
-            if not shutdown.is_alive():
-                return
-
-        print("httpd.shutdown() took more than 1 second; terminating.")
-        os.kill(os.getpid(), signal.SIGTERM)
-        time.sleep(0.1)
-        os.kill(os.getpid(), signal.SIGKILL)
+    print(f"Starting HTTP server on http://{bind}/")
+    httpd.serve_forever()
 
 
 @cli.command()
