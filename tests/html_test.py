@@ -1,7 +1,7 @@
 import html
 import re
 
-from yanki.filter import (
+from yanki.cli.filter import (
     DeckFilter,
     read_final_decks_sorted,
 )

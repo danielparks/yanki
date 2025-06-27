@@ -1,6 +1,6 @@
 import io
 
-from yanki.filter import (
+from yanki.cli.filter import (
     DeckFilter,
     read_deck_specs,
     read_decks_sorted,

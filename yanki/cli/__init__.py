@@ -16,19 +16,22 @@ import traceback
 import yt_dlp
 
 
+from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
-from yanki.filter import (
+from yanki.html_out import write_html
+from yanki.parser import find_invalid_format, NOTE_VARIABLES
+from yanki.utils import add_trace_logging, open_in_app
+from yanki.video import BadURL, FFmpegError, Video, VideoOptions
+
+
+from .filter import (
     filter_options,
     read_decks_sorted,
     read_final_decks,
     read_final_decks_sorted,
 )
-from yanki.html_out import write_html
-from yanki.parser import find_invalid_format, NOTE_VARIABLES
-from yanki.anki import FINAL_NOTE_VARIABLES
-from yanki.server import server_options
-from yanki.video import Video, BadURL, FFmpegError, VideoOptions
-from yanki.utils import add_trace_logging, open_in_app
+from .server import server_options
+
 
 add_trace_logging()
 LOGGER = logging.getLogger(__name__)
