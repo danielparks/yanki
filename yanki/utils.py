@@ -23,6 +23,7 @@ class NotFileURL(ValueError):
 
 
 def add_trace_logging():
+    """Add `logging.TRACE` level. Idempotent."""
     try:
         logging.TRACE
     except AttributeError:
@@ -64,6 +65,7 @@ def atomic_open(path, encoding="utf_8"):
 
 
 def chars_in(chars, input):
+    """Returns chars from `chars` that are in `input`."""
     return [char for char in chars if char in input]
 
 
@@ -104,6 +106,11 @@ def find_errors(group: ExceptionGroup):
 
 
 def get_key_path(data, path: list[any]):
+    """
+    Dig into `data` following the `path` of keys.
+
+    For example, `get_key_path(data, ["a", "b", 0]) == data["a"]["b"][0]`.
+    """
     for key in path:
         data = data[key]
     return data
