@@ -1,7 +1,7 @@
 import asyncio
 import functools
+from collections.abc import Generator
 from dataclasses import dataclass
-from typing import Generator, Set
 
 import click
 
@@ -15,8 +15,8 @@ class DeckSource:
     """Filter notes in decks."""
 
     files: list[click.File]
-    tags_include: Set[str] = frozenset()
-    tags_exclude: Set[str] = frozenset()
+    tags_include: set[str] = frozenset()
+    tags_exclude: set[str] = frozenset()
 
     def _include_note(self, note_spec: NoteSpec) -> bool:
         """Check if a note should be included based on tag filters."""

@@ -50,7 +50,7 @@ class FFmpegError(RuntimeError):
         stderr=None,
         exit_code=None,
     ):
-        super(FFmpegError, self).__init__(f"Error running {command}")
+        super().__init__(f"Error running {command}")
         self.command = command
         if command_line:
             self.add_note(f"Command run: {shlex.join(command_line)}")

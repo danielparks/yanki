@@ -3,7 +3,6 @@ import http.server
 import threading
 import time
 from dataclasses import dataclass
-from typing import Tuple
 
 import click
 
@@ -23,7 +22,7 @@ class Server:
         self.bind_tuple  # noqa: B018 (not actually useless)
 
     @functools.cached_property
-    def bind_tuple(self) -> Tuple[str, int]:
+    def bind_tuple(self) -> tuple[str, int]:
         """Split --bind value into (address, port) and validate.
 
         Raises:

@@ -58,6 +58,8 @@ select = [
     "RUF",
     # https://docs.astral.sh/ruff/rules/#tryceratops-try
     "TRY",
+    # https://docs.astral.sh/ruff/rules/#pyupgrade-up
+    "UP",
 ]
 
 ignore = [
@@ -73,6 +75,8 @@ ignore = [
     "RUF001", "RUF002", "RUF003",
     # It’s a lot more work to have separate error classes.
     "TRY003",
+    # I prefer to be explicit about opening files for reading.
+    "UP015",
 ]
 
 [tool.hatch.build.targets.wheel]
