@@ -16,6 +16,12 @@ from urllib.parse import urlparse
 from yanki.errors import ExpectedError
 
 
+class NotFileURL(ValueError):
+    """Raised by file_url_to_path() when the parameter is not a file:// URL."""
+
+    pass
+
+
 def add_trace_logging():
     try:
         logging.TRACE
@@ -27,10 +33,38 @@ def add_trace_logging():
         logging.trace = partial(logging.log, logging.TRACE)
 
 
-class NotFileURL(ValueError):
-    """Raised by file_url_to_path() when the parameter is not a file:// URL."""
+@contextlib.contextmanager
+def atomic_open(path, encoding="utf_8"):
+    """
+    Open a file for writing and save it atomically.
 
-    pass
+    This creates a temporary file in the same directory, writes to it, then
+    replaces the target file atomically even if it already exists.
+    """
+
+    if encoding is None:
+        mode = "wb"
+    else:
+        mode = "w"
+
+    directory = os.path.dirname(path)
+    (prefix, suffix) = os.path.splitext(os.path.basename(path))
+    with tempfile.NamedTemporaryFile(
+        mode=mode,
+        encoding=encoding,
+        dir=directory,
+        prefix=f"working_{prefix}",
+        suffix=suffix,
+        delete=True,
+        delete_on_close=False,
+    ) as temp_file:
+        yield temp_file
+        os.rename(temp_file.name, path)
+        # Nothing for NamedTemporaryFile to delete.
+
+
+def chars_in(chars, input):
+    return [char for char in chars if char in input]
 
 
 def file_url_to_path(url: str) -> Path:
@@ -69,44 +103,10 @@ def find_errors(group: ExceptionGroup):
             yield error
 
 
-@contextlib.contextmanager
-def atomic_open(path, encoding="utf_8"):
-    """
-    Open a file for writing and save it atomically.
-
-    This creates a temporary file in the same directory, writes to it, then
-    replaces the target file atomically even if it already exists.
-    """
-
-    if encoding is None:
-        mode = "wb"
-    else:
-        mode = "w"
-
-    directory = os.path.dirname(path)
-    (prefix, suffix) = os.path.splitext(os.path.basename(path))
-    with tempfile.NamedTemporaryFile(
-        mode=mode,
-        encoding=encoding,
-        dir=directory,
-        prefix=f"working_{prefix}",
-        suffix=suffix,
-        delete=True,
-        delete_on_close=False,
-    ) as temp_file:
-        yield temp_file
-        os.rename(temp_file.name, path)
-        # Nothing for NamedTemporaryFile to delete.
-
-
 def get_key_path(data, path: list[any]):
     for key in path:
         data = data[key]
     return data
-
-
-def chars_in(chars, input):
-    return [char for char in chars if char in input]
 
 
 def make_frozen(klass):
