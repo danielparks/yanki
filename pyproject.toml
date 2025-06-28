@@ -46,6 +46,8 @@ select = [
     "ERA",
     # https://docs.astral.sh/ruff/rules/#pyflakes-f
     "F",
+    # https://docs.astral.sh/ruff/rules/#refurb-furb
+    "FURB",
     # https://docs.astral.sh/ruff/rules/#isort-i
     "I",
     # https://docs.astral.sh/ruff/rules/#pep8-naming-n
