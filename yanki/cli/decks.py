@@ -27,7 +27,7 @@ class DeckSource:
             and self.tags_exclude.isdisjoint(tags)
         )
 
-    def filter_deck_spec(self, deck_spec: DeckSpec) -> Generator:
+    def filter_deck_spec(self, deck_spec: DeckSpec) -> Generator[DeckSpec]:
         """Filter notes in decks, only yielding decks that still have notes."""
         filtered = [
             note_spec
