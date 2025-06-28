@@ -1,7 +1,8 @@
 import asyncio
-from yanki.parser.config import NoteConfig, NOTE_VARIABLES
+
+from yanki.anki import FINAL_NOTE_VARIABLES, Note
 from yanki.parser import NoteSpec
-from yanki.anki import Note, FINAL_NOTE_VARIABLES
+from yanki.parser.config import NOTE_VARIABLES, NoteConfig
 from yanki.video import VideoOptions
 
 

@@ -1,10 +1,11 @@
-import click
-from dataclasses import dataclass
 import functools
 import http.server
 import threading
 import time
+from dataclasses import dataclass
 from typing import Tuple
+
+import click
 
 from yanki.utils import open_in_app
 

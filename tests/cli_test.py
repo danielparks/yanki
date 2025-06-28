@@ -2,14 +2,15 @@ import inspect
 import io
 import json
 import os
-from pathlib import Path
-import psutil
-import pytest
 import signal
 import threading
 import time
 import urllib.error
+from pathlib import Path
 from urllib.request import urlopen
+
+import psutil
+import pytest
 
 
 def local_tests():

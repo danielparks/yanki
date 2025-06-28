@@ -1,16 +1,16 @@
 import contextlib
 import dataclasses
-from functools import partial, partialmethod
 import inspect
 import logging
 import os
-from pathlib import Path
-import tempfile
-import types
-import typing
 import shlex
 import subprocess
 import sys
+import tempfile
+import types
+import typing
+from functools import partial, partialmethod
+from pathlib import Path
 from urllib.parse import urlparse
 
 from yanki.errors import ExpectedError

@@ -1,11 +1,12 @@
 import io
-import os
 import logging
-from pathlib import Path
-import pytest
-from pytest_console_scripts import ScriptRunner, _StrOrPath, RunResult
-from typing import Any
+import os
 import shutil
+from pathlib import Path
+from typing import Any
+
+import pytest
+from pytest_console_scripts import RunResult, ScriptRunner, _StrOrPath
 
 
 @pytest.fixture(scope="session")

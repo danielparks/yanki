@@ -1,7 +1,7 @@
-from copy import deepcopy
 import io
 import logging
 import re
+from copy import deepcopy
 
 from yanki.errors import DeckSyntaxError
 from yanki.parser.config import NoteConfig

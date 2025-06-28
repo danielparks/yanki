@@ -33,6 +33,13 @@ log_cli_level = "DEBUG"
 [tool.ruff]
 line-length = 80
 
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+# I: isort
+extend-select = ["I"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
 

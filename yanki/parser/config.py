@@ -1,10 +1,9 @@
 import dataclasses
-from dataclasses import field
 import functools
+from dataclasses import field
 
-from yanki.field import Fragment, Field
+from yanki.field import Field, Fragment
 from yanki.utils import make_frozen
-
 
 # Valid variables in note_id format. Used to validate that our code uses the
 # same variables in both places they’re needed.

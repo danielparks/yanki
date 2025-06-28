@@ -1,9 +1,10 @@
-from collections import OrderedDict
-from html import escape as h
 import os
-from pathlib import Path
 import shutil
 import sys
+from collections import OrderedDict
+from html import escape as h
+from pathlib import Path
+
 from yanki.utils import file_safe_name
 
 

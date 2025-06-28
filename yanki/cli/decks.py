@@ -1,8 +1,9 @@
-from dataclasses import dataclass
-from typing import Set, Generator
-import functools
-import click
 import asyncio
+import functools
+from dataclasses import dataclass
+from typing import Generator, Set
+
+import click
 
 from yanki.anki import Deck
 from yanki.parser import DeckFilesParser, DeckSpec, NoteSpec

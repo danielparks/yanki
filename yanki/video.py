@@ -1,27 +1,28 @@
 import asyncio
-from dataclasses import dataclass
-import ffmpeg
 import functools
 import hashlib
 import json
 import logging
 import math
-from multiprocessing import cpu_count
-from pathlib import Path
-from os.path import getmtime
 import re
 import shlex
-from urllib.parse import urlparse, parse_qs
+from dataclasses import dataclass
+from multiprocessing import cpu_count
+from os.path import getmtime
+from pathlib import Path
+from urllib.parse import parse_qs, urlparse
+
+import ffmpeg
 import yt_dlp
 
 from yanki.errors import ExpectedError
 from yanki.utils import (
-    file_url_to_path,
-    file_not_empty,
-    atomic_open,
-    get_key_path,
-    chars_in,
     NotFileURL,
+    atomic_open,
+    chars_in,
+    file_not_empty,
+    file_url_to_path,
+    get_key_path,
 )
 
 LOGGER = logging.getLogger(__name__)

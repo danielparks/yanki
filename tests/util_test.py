@@ -1,9 +1,9 @@
 import os
 from pathlib import Path
+
 import pytest
 
-
-from yanki.utils import atomic_open, file_url_to_path, NotFileURL
+from yanki.utils import NotFileURL, atomic_open, file_url_to_path
 
 
 def test_atomic_open(tmp_path):

@@ -1,32 +1,30 @@
-import click
 import asyncio
-import colorlog
-import genanki
 import json
 import logging
-from multiprocessing import cpu_count
 import os
 import os.path
-from pathlib import Path
 import re
 import shutil
 import sys
 import tempfile
 import traceback
-import yt_dlp
+from multiprocessing import cpu_count
+from pathlib import Path
 
+import click
+import colorlog
+import genanki
+import yt_dlp
 
 from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
 from yanki.html_out import write_html
-from yanki.parser import find_invalid_format, NOTE_VARIABLES
+from yanki.parser import NOTE_VARIABLES, find_invalid_format
 from yanki.utils import add_trace_logging, find_errors, open_in_app
 from yanki.video import BadURL, FFmpegError, Video, VideoOptions
 
-
 from .decks import deck_parameters
 from .server import server_options
-
 
 add_trace_logging()
 LOGGER = logging.getLogger(__name__)

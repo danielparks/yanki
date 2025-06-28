@@ -1,10 +1,11 @@
-import docutils.core
-import html
 import functools
-import mistletoe
+import html
 import os
 import re
 from urllib.parse import quote
+
+import docutils.core
+import mistletoe
 
 # Regular expression to find http:// URLs in text.
 URL_REGEX = re.compile(

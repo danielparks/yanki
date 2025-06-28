@@ -1,4 +1,5 @@
 import pytest
+
 from yanki.video import Video, VideoOptions
 
 
