@@ -43,9 +43,7 @@ class DeckSource:
         parser = DeckFilesParser()
         for file in self.files:
             for deck_spec in parser.parse_file(file.name, file):
-                # FIXME yield from?
-                for deck_spec in self.filter_deck_spec(deck_spec):
-                    yield deck_spec
+                yield from self.filter_deck_spec(deck_spec)
 
     def read(self, options: VideoOptions):
         """Read `Deck`s from `self.files`."""
