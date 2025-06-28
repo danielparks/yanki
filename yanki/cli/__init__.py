@@ -130,7 +130,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
         cache_path=cache,
         progress=verbose > 0,
         reprocess=reprocess,
-        semaphore=asyncio.Semaphore(concurrency),
+        concurrency=concurrency,
     )
 
     # Configure logging

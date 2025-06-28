@@ -67,7 +67,11 @@ class VideoOptions:
     cache_path: Path
     progress: bool = False
     reprocess: bool = False
-    semaphore: asyncio.Semaphore = asyncio.Semaphore(cpu_count())
+    concurrency: int = cpu_count()
+
+    @functools.cached_property
+    def semaphore(self):
+        return asyncio.Semaphore(self.concurrency)
 
 
 # Example YouTube video URLs:
@@ -132,7 +136,6 @@ def url_to_id(url_str):
     )
 
 
-# FIXME cannot be reused
 class Video:
     def __init__(
         self,
