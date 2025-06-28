@@ -369,13 +369,12 @@ class Video:
         )
         # FIXME use metadata=mode=print?
 
-        cropdetect = []
-        for line in err.split(b"\n"):
-            if matches := CROPDETECT_RE.search(line):
-                # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
-                cropdetect.append(
-                    (float(matches[1]), matches[2].decode("utf_8"))
-                )
+        # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
+        cropdetect = [
+            (float(matches[1]), matches[2].decode("utf_8"))
+            for line in err.split(b"\n")
+            if (matches := CROPDETECT_RE.search(line))
+        ]
 
         self._cached_more_info = {
             "version": MORE_INFO_VERSION,

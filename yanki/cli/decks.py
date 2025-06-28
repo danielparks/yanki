@@ -29,10 +29,11 @@ class DeckSource:
 
     def filter_deck_spec(self, deck_spec: DeckSpec) -> Generator:
         """Filter notes in decks, only yielding decks that still have notes."""
-        filtered = []
-        for note_spec in deck_spec.note_specs:
-            if self._include_note(note_spec):
-                filtered.append(note_spec)
+        filtered = [
+            note_spec
+            for note_spec in deck_spec.note_specs
+            if self._include_note(note_spec)
+        ]
 
         if filtered:
             deck_spec.note_specs = filtered
