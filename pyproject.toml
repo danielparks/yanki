@@ -38,6 +38,8 @@ docstring-code-format = true
 
 [tool.ruff.lint]
 select = [
+    # https://docs.astral.sh/ruff/rules/#flake8-bugbear-b
+    "B",
     # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
     "E",
     # https://docs.astral.sh/ruff/rules/#pyflakes-f
@@ -57,6 +59,8 @@ select = [
 ]
 
 ignore = [
+    # `functools.cache` can leak memory: FIXME, I guess.
+    "B019",
     # A lot of “magic” values are easier to understand without a CONSTANT.
     "PLR2004",
     # I like to shadow `for` loop variables.

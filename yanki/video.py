@@ -220,7 +220,11 @@ class Video:
                     ydl.extract_info(self.url, download=False)
                 )
         except yt_dlp.utils.YoutubeDLError as error:
-            raise BadURLError(f"Error downloading {self.url!r}: {error}")
+            # This is an ExpectedError, so the __cause__ won’t normally be
+            # displayed, so it’s included in the message.
+            raise BadURLError(
+                f"Error downloading {self.url!r}: {error}"
+            ) from error
 
     @functools.cache
     def info(self):
@@ -247,7 +251,7 @@ class Video:
         except ffmpeg.Error as error:
             raise FFmpegError(
                 command="ffprobe", stdout=error.stdout, stderr=error.stderr
-            )
+            ) from error
 
         with atomic_open(self.raw_metadata_cache_path()) as file:
             json.dump(self._raw_metadata, file)

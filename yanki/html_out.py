@@ -83,8 +83,10 @@ def write_html(output_path, cache_path, decks, flashcards=False):
 
 
 def write_tree_indices(
-    tree, output_path, output_media_path, title_path=[], flashcards=False
+    tree, output_path, output_media_path, title_path=None, flashcards=False
 ):
+    if title_path is None:
+        title_path = []
     if tree.deck_file_name is None and title_path == [] and tree.name is None:
         # Anonymous root.
         if len(tree.children) == 1:

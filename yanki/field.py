@@ -124,7 +124,9 @@ class VideoFragment(MediaFragment):
 
 
 class Field:
-    def __init__(self, fragments: list[Fragment] = []):
+    def __init__(self, fragments: list[Fragment] | None = None):
+        if fragments is None:
+            fragments = []
         self.fragments = fragments
 
     def add_fragment(self, fragment: Fragment):
