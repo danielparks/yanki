@@ -60,6 +60,15 @@ def file_safe_name(name):
     return name.replace("/", "--").replace(" ", "_")
 
 
+def find_errors(group: ExceptionGroup):
+    """Get actual exceptions out of nested exception groups."""
+    for error in group.exceptions:
+        if isinstance(error, ExceptionGroup):
+            yield from find_errors(error)
+        else:
+            yield error
+
+
 @contextlib.contextmanager
 def atomic_open(path, encoding="utf_8"):
     """

@@ -1,8 +1,8 @@
 import os
 import pytest
 
-from yanki.cli import find_errors
 from yanki.cli.decks import DeckSource
+from yanki.utils import find_errors
 from yanki.video import VideoOptions
 
 

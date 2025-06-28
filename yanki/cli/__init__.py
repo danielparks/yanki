@@ -20,7 +20,7 @@ from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
 from yanki.html_out import write_html
 from yanki.parser import find_invalid_format, NOTE_VARIABLES
-from yanki.utils import add_trace_logging, open_in_app
+from yanki.utils import add_trace_logging, find_errors, open_in_app
 from yanki.video import BadURL, FFmpegError, Video, VideoOptions
 
 
@@ -431,15 +431,6 @@ def ensure_cache(cache_path: Path):
 
     tag_path = cache_path / "CACHEDIR.TAG"
     tag_path.write_text(CACHEDIR_TAG_CONTENT, encoding="ascii")
-
-
-def find_errors(group: ExceptionGroup):
-    """Get actual exceptions out of nested exception groups."""
-    for error in group.exceptions:
-        if isinstance(error, ExceptionGroup):
-            yield from find_errors(error)
-        else:
-            yield error
 
 
 if __name__ == "__main__":
