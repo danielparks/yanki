@@ -42,6 +42,8 @@ select = [
     "B",
     # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
     "E",
+    # https://docs.astral.sh/ruff/rules/#eradicate-era,
+    "ERA",
     # https://docs.astral.sh/ruff/rules/#pyflakes-f
     "F",
     # https://docs.astral.sh/ruff/rules/#isort-i
