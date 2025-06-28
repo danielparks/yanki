@@ -1,4 +1,5 @@
 import asyncio
+import functools
 import json
 import logging
 import os
@@ -29,6 +30,23 @@ from .server import server_options
 add_trace_logging()
 LOGGER = logging.getLogger(__name__)
 
+# Click path value types
+WritableDirectoryPath = functools.partial(
+    click.Path,
+    exists=False,
+    dir_okay=True,
+    file_okay=False,
+    writable=True,
+    readable=True,
+    executable=True,
+)
+WritableFilePath = functools.partial(
+    click.Path,
+    exists=False,
+    dir_okay=False,
+    file_okay=True,
+    writable=True,
+)
 
 # Only used to pass debug logging status out to the exception handler.
 global log_debug
@@ -82,14 +100,7 @@ def main():
     show_default=True,
     envvar="YANKI_CACHE",
     show_envvar=True,
-    type=click.Path(
-        exists=False,
-        file_okay=False,
-        writable=True,
-        readable=True,
-        executable=True,
-        path_type=Path,
-    ),
+    type=WritableDirectoryPath(path_type=Path),
     help="Path to cache for downloads and media files.",
 )
 @click.option(
@@ -163,7 +174,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
 @click.option(
     "-o",
     "--output",
-    type=click.Path(exists=False, dir_okay=False, writable=True),
+    type=WritableFilePath(),
     help="Path to save decks to. Defaults to saving indivdual decks to their "
     "own files named after their sources, but with the extension .apkg.",
 )
@@ -243,16 +254,7 @@ def list_notes(options, decks, format):
 
 
 @cli.command()
-@click.argument(
-    "output",
-    type=click.Path(
-        exists=False,
-        dir_okay=True,
-        file_okay=False,
-        writable=True,
-        path_type=Path,
-    ),
-)
+@click.argument("output", type=WritableDirectoryPath(path_type=Path))
 @deck_parameters
 @click.option(
     "-F",
@@ -275,26 +277,14 @@ def to_html(options, output, decks, flashcards):
 @click.option(
     "-o",
     "--output",
-    type=click.Path(
-        exists=False,
-        dir_okay=False,
-        file_okay=True,
-        writable=True,
-        allow_dash=True,
-        path_type=Path,
-    ),
+    type=WritableFilePath(allow_dash=True, path_type=Path),
     default="-",
     help="Path to save JSON to, or - to output to stdout.",
 )
 @click.option(
     "-m",
     "--copy-media-to",
-    type=click.Path(
-        exists=False,
-        dir_okay=True,
-        file_okay=False,
-        writable=True,
-    ),
+    type=WritableDirectoryPath(),
     default="",
     help="Directory to copy media into (leave blank to not copy media).",
 )
