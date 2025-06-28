@@ -101,14 +101,15 @@ class NoteConfig:
                     pass
                 new_tags = None
             else:
-                # A tag without a + or - prefix, which implies we’re replacing all tags.
-                # FIXME: quoting so a tag with a + or - prefix can be used easily.
+                # No + or - prefix, which implies we’re replacing all tags.
+                # FIXME: quoting so a + or - prefix can be used easily.
                 found_bare_tag = True
 
         if found_bare_tag:
             if new_tags is None:
                 raise ValueError(
-                    f"Invalid mix of changing tags with setting tags: {input.strip()}"
+                    "Invalid mix of changing tags with setting tags: "
+                    f"{input.strip()}"
                 )
             self.tags = set(new_tags)
 

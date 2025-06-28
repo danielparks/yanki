@@ -629,7 +629,7 @@ class Video:
 
     # FIXME seems like there should be a separate FinalVideo class with this.
     def parameters_list(self):
-        """Get parameters for producing the video as list[str] (finalized version)."""
+        """Get video parameters list[str] (finalized version)."""
         if self._cached_parameters is None:
             raise ValueError("parameters_list() called on un-finalized Video")
         return sorted(

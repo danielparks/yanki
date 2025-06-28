@@ -94,8 +94,8 @@ def deck_parameters(func):
         multiple=True,
         default=[],
         metavar="TAG",
-        help="Only include notes that have tag TAG. If specified multiple times, "
-        "notes must have all TAGs.",
+        help="Only include notes that have tag TAG. If specified multiple "
+        "times, notes must have all TAGs.",
     )
     @click.option(
         "-x",

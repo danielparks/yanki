@@ -234,6 +234,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flashcards=False):
         else:
             clip_html = ""
 
+        video_url_html = h(note.spec.video_url())
         output += f"""
         <div class="note">
           <div class="cards">
@@ -262,7 +263,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flashcards=False):
             <tr class="media">
               <th>Media:</th>
               <td>
-                <a href="{h(note.spec.video_url())}">{h(note.spec.video_url())}</a>
+                <a href="{video_url_html}">{video_url_html}</a>
                 {clip_html}
               </td>
             </tr>
