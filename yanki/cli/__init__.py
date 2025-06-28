@@ -22,7 +22,7 @@ from yanki.errors import ExpectedError
 from yanki.html_out import write_html
 from yanki.parser import NOTE_VARIABLES, find_invalid_format
 from yanki.utils import add_trace_logging, find_errors, open_in_app
-from yanki.video import BadURL, FFmpegError, Video, VideoOptions
+from yanki.video import BadURLError, FFmpegError, Video, VideoOptions
 
 from .decks import deck_parameters
 from .server import server_options
@@ -377,7 +377,7 @@ def open_videos_from_file(options, files):
             try:
                 video = Video(url, options=options)
                 open_in_app([asyncio.run(video.processed_video_async())])
-            except BadURL as error:
+            except BadURLError as error:
                 print(f"Error: {error}")
             except yt_dlp.utils.DownloadError:
                 # yt_dlp prints the error itself.

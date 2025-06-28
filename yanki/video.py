@@ -17,7 +17,7 @@ import yt_dlp
 
 from yanki.errors import ExpectedError
 from yanki.utils import (
-    NotFileURL,
+    NotFileURLError,
     atomic_open,
     chars_in,
     file_not_empty,
@@ -37,7 +37,7 @@ CROPDETECT_RE = re.compile(
 )
 
 
-class BadURL(ExpectedError):
+class BadURLError(ExpectedError):
     pass
 
 
@@ -88,7 +88,7 @@ def youtube_url_to_id(url_str, url, query):
         # Fall through to error.
         pass
 
-    raise BadURL(f"Unknown YouTube URL format: {url_str}")
+    raise BadURLError(f"Unknown YouTube URL format: {url_str}")
 
 
 # URLs like http://youtu.be/lalOy8Mbfdc
@@ -102,7 +102,7 @@ def youtu_be_url_to_id(url_str, url, query):
         # Fall through to error.
         pass
 
-    raise BadURL(f"Unknown YouTube URL format: {url_str}")
+    raise BadURLError(f"Unknown YouTube URL format: {url_str}")
 
 
 def url_to_id(url_str):
@@ -116,7 +116,7 @@ def url_to_id(url_str):
             return "youtube=" + youtube_url_to_id(url_str, url, query)
         elif domain.endswith(".youtu.be"):
             return "youtube=" + youtu_be_url_to_id(url_str, url, query)
-    except BadURL:
+    except BadURLError:
         # Try to load the URL with yt_dlp and see what happens.
         pass
 
@@ -153,7 +153,7 @@ class Video:
         self.id = url_to_id(url)
         if invalid := chars_in(FILENAME_ILLEGAL_CHARS, self.id):
             invalid = "".join(invalid)
-            raise BadURL(
+            raise BadURLError(
                 f"Invalid characters ({invalid}) in video ID: {self.id!r}"
             )
 
@@ -207,7 +207,7 @@ class Video:
                 "title": path.stem,
                 "ext": path.suffix[1:],
             }
-        except NotFileURL:
+        except NotFileURLError:
             pass
 
         try:
@@ -217,7 +217,7 @@ class Video:
                     ydl.extract_info(self.url, download=False)
                 )
         except yt_dlp.utils.YoutubeDLError as error:
-            raise BadURL(f"Error downloading {self.url!r}: {error}")
+            raise BadURLError(f"Error downloading {self.url!r}: {error}")
 
     @functools.cache
     def info(self):
@@ -286,7 +286,7 @@ class Video:
 
                 return fps
 
-        raise BadURL(f"Could not get FPS for media URL {self.url!r}")
+        raise BadURLError(f"Could not get FPS for media URL {self.url!r}")
 
     # Expects spec without whitespace
     def time_to_seconds(self, spec, on_none=None):
@@ -515,11 +515,11 @@ class Video:
             source_path = self.working_dir / file_url_to_path(self.url)
             self.logger.info(f"using local raw video {source_path}")
             return source_path
-        except NotFileURL:
+        except NotFileURLError:
             pass
 
         if "ext" not in self.info():
-            raise BadURL(f"Invalid media URL {self.url!r}")
+            raise BadURLError(f"Invalid media URL {self.url!r}")
 
         path = self.raw_video_cache_path()
         if path.exists() and path.stat().st_size > 0:

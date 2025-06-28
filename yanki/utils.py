@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 from yanki.errors import ExpectedError
 
 
-class NotFileURL(ValueError):
+class NotFileURLError(ValueError):
     """Raised by file_url_to_path() when the parameter is not a file:// URL."""
 
     pass
@@ -74,11 +74,11 @@ def file_url_to_path(url: str) -> Path:
     """
     Convert a file:// URL to a Path.
 
-    Raises NotFileURL if the URL is not a file:// URL.
+    Raises NotFileURLError if the URL is not a file:// URL.
     """
     parts = urlparse(url)
     if parts.scheme.lower() != "file":
-        raise NotFileURL(url)
+        raise NotFileURLError(url)
 
     # urlparse doesn’t handle file: very well:
     #

@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from yanki.utils import NotFileURL, atomic_open, file_url_to_path
+from yanki.utils import NotFileURLError, atomic_open, file_url_to_path
 
 
 def test_atomic_open(tmp_path):
@@ -53,9 +53,9 @@ def test_atomic_open_deleted(tmp_path):
 
 
 def test_file_url_to_path():
-    with pytest.raises(NotFileURL):
+    with pytest.raises(NotFileURLError):
         file_url_to_path("foo")
-    with pytest.raises(NotFileURL):
+    with pytest.raises(NotFileURLError):
         file_url_to_path("http://example.com/foo")
 
     assert file_url_to_path("file://a/b/c") == Path("a/b/c")
