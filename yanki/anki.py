@@ -1,14 +1,15 @@
 import asyncio
-from dataclasses import dataclass
 import functools
-import genanki
 import hashlib
 import logging
 import os
+from dataclasses import dataclass
 from pathlib import Path
 
-from yanki.field import Fragment, ImageFragment, VideoFragment, Field
-from yanki.parser import DeckSpec, NoteSpec, NOTE_VARIABLES
+import genanki
+
+from yanki.field import Field, Fragment, ImageFragment, VideoFragment
+from yanki.parser import NOTE_VARIABLES, DeckSpec, NoteSpec
 from yanki.video import Video, VideoOptions
 
 LOGGER = logging.getLogger(__name__)

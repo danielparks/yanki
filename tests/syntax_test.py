@@ -1,7 +1,8 @@
 import io
 import logging
-import pytest
 import textwrap
+
+import pytest
 
 from yanki.errors import DeckSyntaxError
 from yanki.parser import DeckFilesParser

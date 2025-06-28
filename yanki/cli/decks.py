@@ -1,8 +1,9 @@
-from dataclasses import dataclass
-from typing import Set, Generator
-import functools
-import click
 import asyncio
+import functools
+from collections.abc import Generator
+from dataclasses import dataclass
+
+import click
 
 from yanki.anki import Deck
 from yanki.parser import DeckFilesParser, DeckSpec, NoteSpec
@@ -14,8 +15,8 @@ class DeckSource:
     """Filter notes in decks."""
 
     files: list[click.File]
-    tags_include: Set[str] = frozenset()
-    tags_exclude: Set[str] = frozenset()
+    tags_include: set[str] = frozenset()
+    tags_exclude: set[str] = frozenset()
 
     def _include_note(self, note_spec: NoteSpec) -> bool:
         """Check if a note should be included based on tag filters."""
@@ -26,12 +27,13 @@ class DeckSource:
             and self.tags_exclude.isdisjoint(tags)
         )
 
-    def filter_deck_spec(self, deck_spec: DeckSpec) -> Generator:
+    def filter_deck_spec(self, deck_spec: DeckSpec) -> Generator[DeckSpec]:
         """Filter notes in decks, only yielding decks that still have notes."""
-        filtered = []
-        for note_spec in deck_spec.note_specs:
-            if self._include_note(note_spec):
-                filtered.append(note_spec)
+        filtered = [
+            note_spec
+            for note_spec in deck_spec.note_specs
+            if self._include_note(note_spec)
+        ]
 
         if filtered:
             deck_spec.note_specs = filtered
@@ -42,9 +44,7 @@ class DeckSource:
         parser = DeckFilesParser()
         for file in self.files:
             for deck_spec in parser.parse_file(file.name, file):
-                # FIXME yield from?
-                for deck_spec in self.filter_deck_spec(deck_spec):
-                    yield deck_spec
+                yield from self.filter_deck_spec(deck_spec)
 
     def read(self, options: VideoOptions):
         """Read `Deck`s from `self.files`."""
@@ -95,8 +95,8 @@ def deck_parameters(func):
         multiple=True,
         default=[],
         metavar="TAG",
-        help="Only include notes that have tag TAG. If specified multiple times, "
-        "notes must have all TAGs.",
+        help="Only include notes that have tag TAG. If specified multiple "
+        "times, notes must have all TAGs.",
     )
     @click.option(
         "-x",

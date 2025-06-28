@@ -1,9 +1,10 @@
-from collections import OrderedDict
-from html import escape as h
 import os
-from pathlib import Path
 import shutil
 import sys
+from collections import OrderedDict
+from html import escape as h
+from pathlib import Path
+
 from yanki.utils import file_safe_name
 
 
@@ -82,14 +83,16 @@ def write_html(output_path, cache_path, decks, flashcards=False):
 
 
 def write_tree_indices(
-    tree, output_path, output_media_path, title_path=[], flashcards=False
+    tree, output_path, output_media_path, title_path=None, flashcards=False
 ):
+    if title_path is None:
+        title_path = []
     if tree.deck_file_name is None and title_path == [] and tree.name is None:
         # Anonymous root.
         if len(tree.children) == 1:
             # If there is exactly one child of the anonymous root, then skip it.
             return write_tree_indices(
-                list(tree.children.values())[0],
+                next(iter(tree.children.values())),
                 output_path,
                 output_media_path,
                 flashcards=flashcards,
@@ -106,7 +109,7 @@ def write_tree_indices(
                 output_path / tree.deck_file_name,
                 output_media_path,
                 tree.deck,
-                title_path + [(tree.name, tree.deck_file_name)],
+                [*title_path, (tree.name, tree.deck_file_name)],
                 flashcards=flashcards,
             )
             return (
@@ -128,7 +131,7 @@ def write_tree_indices(
 
     # This rebinds the variable to a new value instead of changing the old
     # title_path object like .append() or += would:
-    title_path = title_path + [(tree.name, tree.index_file_name)]
+    title_path = [*title_path, (tree.name, tree.index_file_name)]
 
     list_html = [
         write_tree_indices(
@@ -147,7 +150,7 @@ def write_tree_indices(
             output_path / tree.deck_file_name,
             output_media_path,
             tree.deck,
-            title_path + [("Deck", tree.deck_file_name)],
+            [*title_path, ("Deck", tree.deck_file_name)],
             flashcards=flashcards,
         )
         deck_link = f'<a href="{h(tree.deck_file_name)}">Deck</a>'
@@ -233,6 +236,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flashcards=False):
         else:
             clip_html = ""
 
+        video_url_html = h(note.spec.video_url())
         output += f"""
         <div class="note">
           <div class="cards">
@@ -261,7 +265,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flashcards=False):
             <tr class="media">
               <th>Media:</th>
               <td>
-                <a href="{h(note.spec.video_url())}">{h(note.spec.video_url())}</a>
+                <a href="{video_url_html}">{video_url_html}</a>
                 {clip_html}
               </td>
             </tr>

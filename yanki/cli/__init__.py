@@ -1,40 +1,55 @@
-import click
 import asyncio
-import colorlog
-import genanki
+import functools
 import json
 import logging
-from multiprocessing import cpu_count
 import os
 import os.path
-from pathlib import Path
 import re
 import shutil
 import sys
 import tempfile
 import traceback
-import yt_dlp
+from multiprocessing import cpu_count
+from pathlib import Path
 
+import click
+import colorlog
+import genanki
+import yt_dlp
 
 from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
 from yanki.html_out import write_html
-from yanki.parser import find_invalid_format, NOTE_VARIABLES
-from yanki.utils import add_trace_logging, open_in_app
-from yanki.video import BadURL, FFmpegError, Video, VideoOptions
-
+from yanki.parser import NOTE_VARIABLES, find_invalid_format
+from yanki.utils import add_trace_logging, find_errors, open_in_app
+from yanki.video import BadURLError, FFmpegError, Video, VideoOptions
 
 from .decks import deck_parameters
 from .server import server_options
 
-
 add_trace_logging()
 LOGGER = logging.getLogger(__name__)
 
+# Click path value types
+WritableDirectoryPath = functools.partial(
+    click.Path,
+    exists=False,
+    dir_okay=True,
+    file_okay=False,
+    writable=True,
+    readable=True,
+    executable=True,
+)
+WritableFilePath = functools.partial(
+    click.Path,
+    exists=False,
+    dir_okay=False,
+    file_okay=True,
+    writable=True,
+)
 
 # Only used to pass debug logging status out to the exception handler.
-global log_debug
-log_debug = False
+global_log_debug = False
 
 
 def main():
@@ -51,11 +66,10 @@ def main():
             error.show()
             exit_code = error.exit_code
     except* FFmpegError as group:
-        global log_debug
         exit_code = 1
 
         for error in find_errors(group):
-            if log_debug:
+            if global_log_debug:
                 if error.stdout is not None:
                     sys.stderr.write("STDOUT:\n")
                     sys.stderr.buffer.write(error.stdout)
@@ -84,14 +98,7 @@ def main():
     show_default=True,
     envvar="YANKI_CACHE",
     show_envvar=True,
-    type=click.Path(
-        exists=False,
-        file_okay=False,
-        writable=True,
-        readable=True,
-        executable=True,
-        path_type=Path,
-    ),
+    type=WritableDirectoryPath(path_type=Path),
     help="Path to cache for downloads and media files.",
 )
 @click.option(
@@ -121,20 +128,20 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
         cache_path=cache,
         progress=verbose > 0,
         reprocess=reprocess,
-        semaphore=asyncio.Semaphore(concurrency),
+        concurrency=concurrency,
     )
 
     # Configure logging
-    global log_debug
+    global global_log_debug  # noqa: PLW0603 (global keyword)
     if verbose > 3:
         raise click.UsageError(
             "--verbose or -v may only be specified up to 3 times."
         )
     elif verbose == 3:
-        log_debug = True
+        global_log_debug = True
         level = logging.TRACE
     elif verbose == 2:
-        log_debug = True
+        global_log_debug = True
         level = logging.DEBUG
     elif verbose == 1:
         level = logging.INFO
@@ -165,7 +172,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
 @click.option(
     "-o",
     "--output",
-    type=click.Path(exists=False, dir_okay=False, writable=True),
+    type=WritableFilePath(),
     help="Path to save decks to. Defaults to saving indivdual decks to their "
     "own files named after their sources, but with the extension .apkg.",
 )
@@ -245,16 +252,7 @@ def list_notes(options, decks, format):
 
 
 @cli.command()
-@click.argument(
-    "output",
-    type=click.Path(
-        exists=False,
-        dir_okay=True,
-        file_okay=False,
-        writable=True,
-        path_type=Path,
-    ),
-)
+@click.argument("output", type=WritableDirectoryPath(path_type=Path))
 @deck_parameters
 @click.option(
     "-F",
@@ -277,26 +275,14 @@ def to_html(options, output, decks, flashcards):
 @click.option(
     "-o",
     "--output",
-    type=click.Path(
-        exists=False,
-        dir_okay=False,
-        file_okay=True,
-        writable=True,
-        allow_dash=True,
-        path_type=Path,
-    ),
+    type=WritableFilePath(allow_dash=True, path_type=Path),
     default="-",
     help="Path to save JSON to, or - to output to stdout.",
 )
 @click.option(
     "-m",
     "--copy-media-to",
-    type=click.Path(
-        exists=False,
-        dir_okay=True,
-        file_okay=False,
-        writable=True,
-    ),
+    type=WritableDirectoryPath(),
     default="",
     help="Directory to copy media into (leave blank to not copy media).",
 )
@@ -329,6 +315,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
                     destination = copy_media_to / file_name
                     LOGGER.info(f"Copying media to {destination}")
                     shutil.copy2(source, destination)
+                    destination.chmod(0o644)
                     new_paths.append(str(destination))
 
                 note["media_paths"] = new_paths
@@ -388,7 +375,7 @@ def open_videos_from_file(options, files):
             try:
                 video = Video(url, options=options)
                 open_in_app([asyncio.run(video.processed_video_async())])
-            except BadURL as error:
+            except BadURLError as error:
                 print(f"Error: {error}")
             except yt_dlp.utils.DownloadError:
                 # yt_dlp prints the error itself.
@@ -431,15 +418,6 @@ def ensure_cache(cache_path: Path):
 
     tag_path = cache_path / "CACHEDIR.TAG"
     tag_path.write_text(CACHEDIR_TAG_CONTENT, encoding="ascii")
-
-
-def find_errors(group: ExceptionGroup):
-    """Get actual exceptions out of nested exception groups."""
-    for error in group.exceptions:
-        if isinstance(error, ExceptionGroup):
-            yield from find_errors(error)
-        else:
-            yield error
 
 
 if __name__ == "__main__":

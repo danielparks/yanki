@@ -1,24 +1,31 @@
 import contextlib
 import dataclasses
-from functools import partial, partialmethod
 import inspect
 import logging
 import os
-from pathlib import Path
-import tempfile
-import types
-import typing
 import shlex
 import subprocess
 import sys
+import tempfile
+import types
+import typing
+from functools import partial, partialmethod
+from pathlib import Path
 from urllib.parse import urlparse
 
 from yanki.errors import ExpectedError
 
 
+class NotFileURLError(ValueError):
+    """Raised by file_url_to_path() when the parameter is not a file:// URL."""
+
+    pass
+
+
 def add_trace_logging():
+    """Add `logging.TRACE` level. Idempotent."""
     try:
-        logging.TRACE
+        logging.TRACE  # noqa: B018 (not actually useless)
     except AttributeError:
         # From user DerWeh at https://stackoverflow.com/a/55276759/1043949
         logging.TRACE = 5
@@ -27,41 +34,8 @@ def add_trace_logging():
         logging.trace = partial(logging.log, logging.TRACE)
 
 
-class NotFileURL(ValueError):
-    """Raised by file_url_to_path() when the parameter is not a file:// URL."""
-
-    pass
-
-
-def file_url_to_path(url: str) -> Path:
-    """
-    Convert a file:// URL to a Path.
-
-    Raises NotFileURL if the URL is not a file:// URL.
-    """
-    parts = urlparse(url)
-    if parts.scheme.lower() != "file":
-        raise NotFileURL(url)
-
-    # urlparse doesn’t handle file: very well:
-    #
-    #   >>> urlparse('file://./media/first.png')
-    #   ParseResult(scheme='file', netloc='.', path='/media/first.png', ...)
-    return Path(parts.netloc + parts.path)
-
-
-def file_not_empty(path):
-    """Checks that the path is a file and is non-empty."""
-    return os.path.exists(path) and os.stat(path).st_size > 0
-
-
-def file_safe_name(name):
-    """Sanitize a deck title into something safe for the file system."""
-    return name.replace("/", "--").replace(" ", "_")
-
-
 @contextlib.contextmanager
-def atomic_open(path, encoding="utf_8"):
+def atomic_open(path, encoding="utf_8", permissions=0o644):
     """
     Open a file for writing and save it atomically.
 
@@ -88,16 +62,59 @@ def atomic_open(path, encoding="utf_8"):
         yield temp_file
         os.rename(temp_file.name, path)
         # Nothing for NamedTemporaryFile to delete.
-
-
-def get_key_path(data, path: list[any]):
-    for key in path:
-        data = data[key]
-    return data
+        os.chmod(path, permissions)
 
 
 def chars_in(chars, input):
+    """Returns chars from `chars` that are in `input`."""
     return [char for char in chars if char in input]
+
+
+def file_url_to_path(url: str) -> Path:
+    """
+    Convert a file:// URL to a Path.
+
+    Raises NotFileURLError if the URL is not a file:// URL.
+    """
+    parts = urlparse(url)
+    if parts.scheme.lower() != "file":
+        raise NotFileURLError(url)
+
+    # urlparse doesn’t handle file: very well:
+    #
+    #   >>> urlparse('file://./media/first.png')
+    #   ParseResult(scheme='file', netloc='.', path='/media/first.png', ...)
+    return Path(parts.netloc + parts.path)
+
+
+def file_not_empty(path):
+    """Checks that the path is a file and is non-empty."""
+    return os.path.exists(path) and os.stat(path).st_size > 0
+
+
+def file_safe_name(name):
+    """Sanitize a deck title into something safe for the file system."""
+    return name.replace("/", "--").replace(" ", "_")
+
+
+def find_errors(group: ExceptionGroup):
+    """Get actual exceptions out of nested exception groups."""
+    for error in group.exceptions:
+        if isinstance(error, ExceptionGroup):
+            yield from find_errors(error)
+        else:
+            yield error
+
+
+def get_key_path(data, path: list[any]):
+    """
+    Dig into `data` following the `path` of keys.
+
+    For example, `get_key_path(data, ["a", "b", 0]) == data["a"]["b"][0]`.
+    """
+    for key in path:
+        data = data[key]
+    return data
 
 
 def make_frozen(klass):
@@ -144,6 +161,7 @@ def open_in_app(arguments):
     command_line = [command, *arguments]
     result = subprocess.run(
         command_line,
+        check=False,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         encoding="utf_8",

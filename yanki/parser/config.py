@@ -1,10 +1,9 @@
 import dataclasses
-from dataclasses import field
 import functools
+from dataclasses import field
 
-from yanki.field import Fragment, Field
+from yanki.field import Field, Fragment
 from yanki.utils import make_frozen
-
 
 # Valid variables in note_id format. Used to validate that our code uses the
 # same variables in both places they’re needed.
@@ -40,9 +39,9 @@ def find_invalid_format(format, variables):
     """
     try:
         format.format(**dict.fromkeys(variables, "value"))
-        return None
     except KeyError as error:
         return error
+    return None
 
 
 @functools.cache
@@ -102,14 +101,15 @@ class NoteConfig:
                     pass
                 new_tags = None
             else:
-                # A tag without a + or - prefix, which implies we’re replacing all tags.
-                # FIXME: quoting so a tag with a + or - prefix can be used easily.
+                # No + or - prefix, which implies we’re replacing all tags.
+                # FIXME: quoting so a + or - prefix can be used easily.
                 found_bare_tag = True
 
         if found_bare_tag:
             if new_tags is None:
                 raise ValueError(
-                    f"Invalid mix of changing tags with setting tags: {input.strip()}"
+                    "Invalid mix of changing tags with setting tags: "
+                    f"{input.strip()}"
                 )
             self.tags = set(new_tags)
 
@@ -142,7 +142,7 @@ class NoteConfig:
         self.slow = (start, end, amount)
 
     def set_trim(self, trim):
-        if trim == "" or trim == "none":
+        if trim in {"", "none"}:
             self.trim = None
         else:
             clip = [part.strip() for part in trim.split("-")]
@@ -151,13 +151,13 @@ class NoteConfig:
             self.trim = (clip[0], clip[1])
 
     def set_audio(self, audio):
-        if audio == "include" or audio == "strip":
+        if audio in {"include", "strip"}:
             self.audio = audio
         else:
             raise ValueError('audio must be either "include" or "strip"')
 
     def set_video(self, video):
-        if video == "include" or video == "strip":
+        if video in {"include", "strip"}:
             self.video = video
         else:
             raise ValueError('video must be either "include" or "strip"')

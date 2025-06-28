@@ -1,10 +1,10 @@
-import click
-from dataclasses import dataclass
 import functools
 import http.server
 import threading
 import time
-from typing import Tuple
+from dataclasses import dataclass
+
+import click
 
 from yanki.utils import open_in_app
 
@@ -19,10 +19,10 @@ class Server:
     def __post_init__(self):
         """Validate the configuration."""
         # Trigger validation by accessing the cached property
-        self.bind_tuple
+        self.bind_tuple  # noqa: B018 (not actually useless)
 
     @functools.cached_property
-    def bind_tuple(self) -> Tuple[str, int]:
+    def bind_tuple(self) -> tuple[str, int]:
         """Split --bind value into (address, port) and validate.
 
         Raises:
@@ -36,8 +36,8 @@ class Server:
 
         try:
             port = int(port_str)
-        except ValueError:
-            raise click.UsageError("--bind expects an integer port.")
+        except ValueError as error:
+            raise click.UsageError("--bind expects an integer port.") from error
 
         if not (1 <= port <= 65535):
             raise click.UsageError("--bind port must be between 1 and 65535.")

@@ -21,7 +21,7 @@ tags: -def
 """
 
 
-def filter_deck_tags(include=set(), exclude=set()):
+def filter_deck_tags(include=frozenset(), exclude=frozenset()):
     input = io.StringIO(REFERENCE_DECK)
     input.name = "-"
 

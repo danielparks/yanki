@@ -1,10 +1,11 @@
-import docutils.core
-import html
 import functools
-import mistletoe
+import html
 import os
 import re
 from urllib.parse import quote
+
+import docutils.core
+import mistletoe
 
 # Regular expression to find http:// URLs in text.
 URL_REGEX = re.compile(
@@ -12,9 +13,11 @@ URL_REGEX = re.compile(
     # URL with no surrounding parentheses
     (?<!\() \b(https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-])
     # URL with surrounding parentheses
-    | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-]) (?=\))
+    | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-])
+        (?=\))
     # URL with an initial parenthesis
-    | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-]) (?!\))
+    | (?<=\() (https?://[.?!,;:a-z0-9$_+*\'()/&=@#-]*[a-z0-9$_+*\'()/&=@#-])
+        (?!\))
     """,
     flags=re.IGNORECASE | re.VERBOSE,
 )
@@ -121,7 +124,9 @@ class VideoFragment(MediaFragment):
 
 
 class Field:
-    def __init__(self, fragments: list[Fragment] = []):
+    def __init__(self, fragments: list[Fragment] | None = None):
+        if fragments is None:
+            fragments = []
         self.fragments = fragments
 
     def add_fragment(self, fragment: Fragment):

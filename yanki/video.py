@@ -1,27 +1,28 @@
 import asyncio
-from dataclasses import dataclass
-import ffmpeg
 import functools
 import hashlib
 import json
 import logging
 import math
-from multiprocessing import cpu_count
-from pathlib import Path
-from os.path import getmtime
 import re
 import shlex
-from urllib.parse import urlparse, parse_qs
+from dataclasses import dataclass
+from multiprocessing import cpu_count
+from os.path import getmtime
+from pathlib import Path
+from urllib.parse import parse_qs, urlparse
+
+import ffmpeg
 import yt_dlp
 
 from yanki.errors import ExpectedError
 from yanki.utils import (
-    file_url_to_path,
-    file_not_empty,
+    NotFileURLError,
     atomic_open,
-    get_key_path,
     chars_in,
-    NotFileURL,
+    file_not_empty,
+    file_url_to_path,
+    get_key_path,
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -36,7 +37,7 @@ CROPDETECT_RE = re.compile(
 )
 
 
-class BadURL(ExpectedError):
+class BadURLError(ExpectedError):
     pass
 
 
@@ -49,7 +50,7 @@ class FFmpegError(RuntimeError):
         stderr=None,
         exit_code=None,
     ):
-        super(FFmpegError, self).__init__(f"Error running {command}")
+        super().__init__(f"Error running {command}")
         self.command = command
         if command_line:
             self.add_note(f"Command run: {shlex.join(command_line)}")
@@ -66,7 +67,11 @@ class VideoOptions:
     cache_path: Path
     progress: bool = False
     reprocess: bool = False
-    semaphore: asyncio.Semaphore = asyncio.Semaphore(cpu_count())
+    concurrency: int = cpu_count()
+
+    @functools.cached_property
+    def semaphore(self):
+        return asyncio.Semaphore(self.concurrency)
 
 
 # Example YouTube video URLs:
@@ -87,7 +92,7 @@ def youtube_url_to_id(url_str, url, query):
         # Fall through to error.
         pass
 
-    raise BadURL(f"Unknown YouTube URL format: {url_str}")
+    raise BadURLError(f"Unknown YouTube URL format: {url_str}")
 
 
 # URLs like http://youtu.be/lalOy8Mbfdc
@@ -101,7 +106,7 @@ def youtu_be_url_to_id(url_str, url, query):
         # Fall through to error.
         pass
 
-    raise BadURL(f"Unknown YouTube URL format: {url_str}")
+    raise BadURLError(f"Unknown YouTube URL format: {url_str}")
 
 
 def url_to_id(url_str):
@@ -115,7 +120,7 @@ def url_to_id(url_str):
             return "youtube=" + youtube_url_to_id(url_str, url, query)
         elif domain.endswith(".youtu.be"):
             return "youtube=" + youtu_be_url_to_id(url_str, url, query)
-    except BadURL:
+    except BadURLError:
         # Try to load the URL with yt_dlp and see what happens.
         pass
 
@@ -131,7 +136,6 @@ def url_to_id(url_str):
     )
 
 
-# FIXME cannot be reused
 class Video:
     def __init__(
         self,
@@ -152,7 +156,7 @@ class Video:
         self.id = url_to_id(url)
         if invalid := chars_in(FILENAME_ILLEGAL_CHARS, self.id):
             invalid = "".join(invalid)
-            raise BadURL(
+            raise BadURLError(
                 f"Invalid characters ({invalid}) in video ID: {self.id!r}"
             )
 
@@ -206,7 +210,7 @@ class Video:
                 "title": path.stem,
                 "ext": path.suffix[1:],
             }
-        except NotFileURL:
+        except NotFileURLError:
             pass
 
         try:
@@ -216,7 +220,11 @@ class Video:
                     ydl.extract_info(self.url, download=False)
                 )
         except yt_dlp.utils.YoutubeDLError as error:
-            raise BadURL(f"Error downloading {self.url!r}: {error}")
+            # This is an ExpectedError, so the __cause__ won’t normally be
+            # displayed, so it’s included in the message.
+            raise BadURLError(
+                f"Error downloading {self.url!r}: {error}"
+            ) from error
 
     @functools.cache
     def info(self):
@@ -243,7 +251,7 @@ class Video:
         except ffmpeg.Error as error:
             raise FFmpegError(
                 command="ffprobe", stdout=error.stdout, stderr=error.stderr
-            )
+            ) from error
 
         with atomic_open(self.raw_metadata_cache_path()) as file:
             json.dump(self._raw_metadata, file)
@@ -285,7 +293,7 @@ class Video:
 
                 return fps
 
-        raise BadURL(f"Could not get FPS for media URL {self.url!r}")
+        raise BadURLError(f"Could not get FPS for media URL {self.url!r}")
 
     # Expects spec without whitespace
     def time_to_seconds(self, spec, on_none=None):
@@ -368,13 +376,12 @@ class Video:
         )
         # FIXME use metadata=mode=print?
 
-        cropdetect = []
-        for line in err.split(b"\n"):
-            if matches := CROPDETECT_RE.search(line):
-                # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
-                cropdetect.append(
-                    (float(matches[1]), matches[2].decode("utf_8"))
-                )
+        # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
+        cropdetect = [
+            (float(matches[1]), matches[2].decode("utf_8"))
+            for line in err.split(b"\n")
+            if (matches := CROPDETECT_RE.search(line))
+        ]
 
         self._cached_more_info = {
             "version": MORE_INFO_VERSION,
@@ -438,7 +445,7 @@ class Video:
         self._clip = self.time_to_seconds(time_spec, on_none=None)
 
     def crop(self, crop):
-        if crop == "none" or crop == "":
+        if crop in {"none", ""}:
             crop = None
         self._crop = crop
 
@@ -512,13 +519,14 @@ class Video:
         try:
             # If it’s a file:// URL, then there’s no need to cache.
             source_path = self.working_dir / file_url_to_path(self.url)
+        except NotFileURLError:
+            pass
+        else:
             self.logger.info(f"using local raw video {source_path}")
             return source_path
-        except NotFileURL:
-            pass
 
         if "ext" not in self.info():
-            raise BadURL(f"Invalid media URL {self.url!r}")
+            raise BadURLError(f"Invalid media URL {self.url!r}")
 
         path = self.raw_video_cache_path()
         if path.exists() and path.stat().st_size > 0:
@@ -628,7 +636,7 @@ class Video:
 
     # FIXME seems like there should be a separate FinalVideo class with this.
     def parameters_list(self):
-        """Get parameters for producing the video as list[str] (finalized version)."""
+        """Get video parameters list[str] (finalized version)."""
         if self._cached_parameters is None:
             raise ValueError("parameters_list() called on un-finalized Video")
         return sorted(
@@ -733,7 +741,7 @@ class Video:
         return stdout, stderr
 
     # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
-    def _try_apply_slow(self, streams):
+    def _try_apply_slow(self, streams):  # noqa: PLR0912 (too many branches)
         if self._slow is None:
             return streams
 
