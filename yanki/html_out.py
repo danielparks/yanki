@@ -90,7 +90,7 @@ def write_tree_indices(
         if len(tree.children) == 1:
             # If there is exactly one child of the anonymous root, then skip it.
             return write_tree_indices(
-                list(tree.children.values())[0],
+                next(iter(tree.children.values())),
                 output_path,
                 output_media_path,
                 flashcards=flashcards,
