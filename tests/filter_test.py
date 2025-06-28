@@ -1,11 +1,6 @@
 import io
 
-from yanki.cli.filter import (
-    DeckFilter,
-    read_deck_specs,
-    read_decks_sorted,
-    read_final_decks_sorted,
-)
+from yanki.cli.decks import DeckSource
 from yanki.video import VideoOptions
 
 REFERENCE_DECK = """
@@ -27,15 +22,17 @@ tags: -def
 
 
 def filter_deck_tags(include=set(), exclude=set()):
-    filter = DeckFilter(tags_include=set(include), tags_exclude=set(exclude))
-
     input = io.StringIO(REFERENCE_DECK)
     input.name = "-"
+
+    source = DeckSource(
+        files=[input], tags_include=set(include), tags_exclude=set(exclude)
+    )
 
     return "".join(
         [
             spec.text()
-            for deck in read_deck_specs([input], filter)
+            for deck in source.read_specs()
             for spec in deck.note_specs
         ]
     )
@@ -61,14 +58,12 @@ def test_multiple_exclude():
 
 
 def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
-    decks = read_decks_sorted(
-        [
+    decks = DeckSource(
+        files=[
             open(deck_2_path, "r", encoding="utf_8"),
             open(deck_1_path, "r", encoding="utf_8"),
-        ],
-        VideoOptions(cache_path),
-        DeckFilter(),
-    )
+        ]
+    ).read_sorted(VideoOptions(cache_path))
 
     assert len(decks) == 2
     assert decks[0].title() == "Test::Reference deck"
@@ -76,14 +71,12 @@ def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
 
 
 def test_read_final_decks_sorted(deck_1_path, deck_2_path, cache_path):
-    decks = read_final_decks_sorted(
-        [
+    decks = DeckSource(
+        files=[
             open(deck_2_path, "r", encoding="utf_8"),
             open(deck_1_path, "r", encoding="utf_8"),
-        ],
-        VideoOptions(cache_path),
-        DeckFilter(),
-    )
+        ]
+    ).read_final_sorted(VideoOptions(cache_path))
 
     assert len(decks) == 2
     assert decks[0].title == "Test::Reference deck"

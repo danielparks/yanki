@@ -24,12 +24,7 @@ from yanki.utils import add_trace_logging, open_in_app
 from yanki.video import BadURL, FFmpegError, Video, VideoOptions
 
 
-from .filter import (
-    filter_options,
-    read_decks_sorted,
-    read_final_decks,
-    read_final_decks_sorted,
-)
+from .decks import deck_parameters
 from .server import server_options
 
 
@@ -166,8 +161,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
-@filter_options
+@deck_parameters
 @click.option(
     "-o",
     "--output",
@@ -176,11 +170,11 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     "own files named after their sources, but with the extension .apkg.",
 )
 @click.pass_obj
-def build(options, decks, filter, output):
+def build(options, decks, output):
     """Build an Anki package from deck files."""
     package = genanki.Package([])  # Only used with --output
 
-    for deck in read_final_decks(decks, options, filter):
+    for deck in decks.read_final(options):
         if output is None:
             # Automatically figures out the path to save to.
             deck.save_to_file()
@@ -193,10 +187,9 @@ def build(options, decks, filter, output):
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
-@filter_options
+@deck_parameters
 @click.pass_obj
-def update(options, decks, filter):
+def update(options, decks):
     """
     Update Anki with one or more decks.
 
@@ -206,7 +199,7 @@ def update(options, decks, filter):
     with tempfile.NamedTemporaryFile(suffix=".apkg", delete=False) as file:
         file.close()
         package = genanki.Package([])
-        for deck in read_final_decks(decks, options, filter):
+        for deck in decks.read_final(options):
             deck.save_to_package(package)
         LOGGER.debug(f"Wrote decks to file {file.name}")
         package.write_to_file(file.name)
@@ -223,8 +216,7 @@ class ListNotesCommand(click.Command):
 
 
 @cli.command(cls=ListNotesCommand)
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
-@filter_options
+@deck_parameters
 @click.option(
     "-f",
     "--format",
@@ -234,11 +226,11 @@ class ListNotesCommand(click.Command):
     help="The format to output in.",
 )
 @click.pass_obj
-def list_notes(options, decks, format, filter):
+def list_notes(options, decks, format):
     """Print information about every note in the passed format."""
     if find_invalid_format(format, NOTE_VARIABLES) is None:
         # Don’t need FinalNotes
-        for deck in read_decks_sorted(decks, options, filter):
+        for deck in decks.read_sorted(options):
             for note in deck.notes():
                 ### FIXME document variables
                 print(format.format(**note.variables(deck_id=deck.id())))
@@ -246,7 +238,7 @@ def list_notes(options, decks, format, filter):
         if error := find_invalid_format(format, FINAL_NOTE_VARIABLES):
             sys.exit(f"Invalid variable in format: {error}")
 
-        for deck in read_final_decks_sorted(decks, options, filter):
+        for deck in decks.read_final_sorted(options):
             for note in deck.notes():
                 ### FIXME document variables
                 print(format.format(**note.variables()))
@@ -263,26 +255,25 @@ def list_notes(options, decks, format, filter):
         path_type=Path,
     ),
 )
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
-@filter_options
+@deck_parameters
 @click.option(
     "-F",
     "--flashcards/--no-flashcards",
     help="Render notes as flashcards.",
 )
 @click.pass_obj
-def to_html(options, output, decks, filter, flashcards):
+def to_html(options, output, decks, flashcards):
     """Generate HTML version of decks."""
     write_html(
         output,
         options.cache_path,
-        read_final_decks_sorted(decks, options, filter),
+        decks.read_final_sorted(options),
         flashcards=flashcards,
     )
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
+@deck_parameters
 @click.option(
     "-o",
     "--output",
@@ -315,9 +306,8 @@ def to_html(options, output, decks, filter, flashcards):
     default="",
     help="Prefix for media references in HTML (may be a URL).",
 )
-@filter_options
 @click.pass_obj
-def to_json(options, output, decks, copy_media_to, html_media_prefix, filter):
+def to_json(options, output, decks, copy_media_to, html_media_prefix):
     """
     Generate JSON version of decks.
 
@@ -325,7 +315,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix, filter):
     """
     decks = [
         deck.to_dict(base_path=html_media_prefix)
-        for deck in read_final_decks_sorted(decks, options, filter)
+        for deck in decks.read_final_sorted(options)
     ]
 
     if copy_media_to:
@@ -349,8 +339,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix, filter):
 
 
 @cli.command()
-@click.argument("decks", nargs=-1, type=click.File("r", encoding="utf_8"))
-@filter_options
+@deck_parameters
 @server_options
 @click.option(
     "-F",
@@ -358,12 +347,12 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix, filter):
     help="Render notes as flashcards.",
 )
 @click.pass_obj
-def serve_http(options, decks, filter, server, flashcards):
+def serve_http(options, decks, server, flashcards):
     """Serve HTML summary of deck on localhost:8000."""
     write_html(
         options.cache_path,
         options.cache_path,
-        read_final_decks_sorted(decks, options, filter),
+        decks.read_final_sorted(options),
         flashcards=flashcards,
     )
 

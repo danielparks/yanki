@@ -77,14 +77,13 @@ class Server:
 
 def server_options(func):
     """
-    Decorator that adds common server options to a Click command.
+    Add common server options to a command.
 
     Adds the following options:
     - --open: Open in web browser
     - --bind: Address to bind the HTTP server to
 
-    The decorator creates a Server instance and passes it as the 'server'
-    parameter.
+    The decorated function must take a `server` parameter of type `Server`.
     """
 
     @click.option(
