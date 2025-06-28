@@ -142,7 +142,7 @@ class NoteConfig:
         self.slow = (start, end, amount)
 
     def set_trim(self, trim):
-        if trim == "" or trim == "none":
+        if trim in {"", "none"}:
             self.trim = None
         else:
             clip = [part.strip() for part in trim.split("-")]
@@ -151,13 +151,13 @@ class NoteConfig:
             self.trim = (clip[0], clip[1])
 
     def set_audio(self, audio):
-        if audio == "include" or audio == "strip":
+        if audio in {"include", "strip"}:
             self.audio = audio
         else:
             raise ValueError('audio must be either "include" or "strip"')
 
     def set_video(self, video):
-        if video == "include" or video == "strip":
+        if video in {"include", "strip"}:
             self.video = video
         else:
             raise ValueError('video must be either "include" or "strip"')

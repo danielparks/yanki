@@ -161,6 +161,7 @@ def open_in_app(arguments):
     command_line = [command, *arguments]
     result = subprocess.run(
         command_line,
+        check=False,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         encoding="utf_8",

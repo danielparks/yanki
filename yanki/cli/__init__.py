@@ -49,8 +49,7 @@ WritableFilePath = functools.partial(
 )
 
 # Only used to pass debug logging status out to the exception handler.
-global log_debug
-log_debug = False
+global_log_debug = False
 
 
 def main():
@@ -67,11 +66,10 @@ def main():
             error.show()
             exit_code = error.exit_code
     except* FFmpegError as group:
-        global log_debug
         exit_code = 1
 
         for error in find_errors(group):
-            if log_debug:
+            if global_log_debug:
                 if error.stdout is not None:
                     sys.stderr.write("STDOUT:\n")
                     sys.stderr.buffer.write(error.stdout)
@@ -134,16 +132,16 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     )
 
     # Configure logging
-    global log_debug
+    global global_log_debug  # noqa: PLW0603 (global keyword)
     if verbose > 3:
         raise click.UsageError(
             "--verbose or -v may only be specified up to 3 times."
         )
     elif verbose == 3:
-        log_debug = True
+        global_log_debug = True
         level = logging.TRACE
     elif verbose == 2:
-        log_debug = True
+        global_log_debug = True
         level = logging.DEBUG
     elif verbose == 1:
         level = logging.INFO

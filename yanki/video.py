@@ -441,7 +441,7 @@ class Video:
         self._clip = self.time_to_seconds(time_spec, on_none=None)
 
     def crop(self, crop):
-        if crop == "none" or crop == "":
+        if crop in {"none", ""}:
             crop = None
         self._crop = crop
 
@@ -737,7 +737,7 @@ class Video:
         return stdout, stderr
 
     # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
-    def _try_apply_slow(self, streams):
+    def _try_apply_slow(self, streams):  # noqa: PLR0912 (too many branches)
         if self._slow is None:
             return streams
 

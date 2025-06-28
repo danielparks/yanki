@@ -13,7 +13,7 @@ def get_video(tmp_path):
     )
 
 
-def test_time_parse(tmp_path):
+def test_time_parse(tmp_path):  # noqa: PLR0915 (too many statements)
     video = get_video(tmp_path)
 
     assert video.get_fps() == 60

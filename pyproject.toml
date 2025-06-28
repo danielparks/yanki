@@ -37,19 +37,37 @@ line-length = 80
 docstring-code-format = true
 
 [tool.ruff.lint]
-# E: https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
-# F: https://docs.astral.sh/ruff/rules/#pyflakes-f
-# I: https://docs.astral.sh/ruff/rules/#isort-i
-# N: https://docs.astral.sh/ruff/rules/#pep8-naming-n
-# PERF: https://docs.astral.sh/ruff/rules/#perflint-perf
-# RUF: https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
-# TRY: https://docs.astral.sh/ruff/rules/#tryceratops-try
-select = ["E", "F", "I", "N", "PERF", "RUF", "TRY"]
+select = [
+    # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+    "E",
+    # https://docs.astral.sh/ruff/rules/#pyflakes-f
+    "F",
+    # https://docs.astral.sh/ruff/rules/#isort-i
+    "I",
+    # https://docs.astral.sh/ruff/rules/#pep8-naming-n
+    "N",
+    # https://docs.astral.sh/ruff/rules/#perflint-perf
+    "PERF",
+    # https://docs.astral.sh/ruff/rules/#pylint-pl
+    "PL",
+    # https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
+    "RUF",
+    # https://docs.astral.sh/ruff/rules/#tryceratops-try
+    "TRY",
+]
 
-# RUF001 – RUF003: I frequently use characters that trigger these lints like "’"
-# and "❯".
-# TRY003: It’s a lot more work to have separate error classes.
-ignore = ["RUF001", "RUF002", "RUF003", "TRY003"]
+ignore = [
+    # A lot of “magic” values are easier to understand without a CONSTANT.
+    "PLR2004",
+    # I like to shadow `for` loop variables.
+    "PLW2901",
+    # Ignore too many returns.
+    "PLR0911",
+    # I frequently use characters that trigger these lints like "’"  and "❯".
+    "RUF001", "RUF002", "RUF003",
+    # It’s a lot more work to have separate error classes.
+    "TRY003",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
