@@ -107,7 +107,7 @@ def write_tree_indices(
                 output_path / tree.deck_file_name,
                 output_media_path,
                 tree.deck,
-                title_path + [(tree.name, tree.deck_file_name)],
+                [*title_path, (tree.name, tree.deck_file_name)],
                 flashcards=flashcards,
             )
             return (
@@ -129,7 +129,7 @@ def write_tree_indices(
 
     # This rebinds the variable to a new value instead of changing the old
     # title_path object like .append() or += would:
-    title_path = title_path + [(tree.name, tree.index_file_name)]
+    title_path = [*title_path, (tree.name, tree.index_file_name)]
 
     list_html = [
         write_tree_indices(
@@ -148,7 +148,7 @@ def write_tree_indices(
             output_path / tree.deck_file_name,
             output_media_path,
             tree.deck,
-            title_path + [("Deck", tree.deck_file_name)],
+            [*title_path, ("Deck", tree.deck_file_name)],
             flashcards=flashcards,
         )
         deck_link = f'<a href="{h(tree.deck_file_name)}">Deck</a>'
