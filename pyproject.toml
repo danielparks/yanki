@@ -37,8 +37,14 @@ line-length = 80
 docstring-code-format = true
 
 [tool.ruff.lint]
-# I: isort
-extend-select = ["I"]
+# E: https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+# F: https://docs.astral.sh/ruff/rules/#pyflakes-f
+# I: https://docs.astral.sh/ruff/rules/#isort-i
+# N: https://docs.astral.sh/ruff/rules/#pep8-naming-n
+# PERF: https://docs.astral.sh/ruff/rules/#perflint-perf
+# RUF: https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
+select = ["E", "F", "I", "N", "PERF", "RUF"]
+ignore = ["E501", "N818", "PERF401", "RUF001", "RUF003", "RUF005", "RUF009", "RUF015", "RUF022"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
