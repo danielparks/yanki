@@ -35,7 +35,7 @@ def add_trace_logging():
 
 
 @contextlib.contextmanager
-def atomic_open(path, encoding="utf_8"):
+def atomic_open(path, encoding="utf_8", permissions=0o644):
     """
     Open a file for writing and save it atomically.
 
@@ -62,6 +62,7 @@ def atomic_open(path, encoding="utf_8"):
         yield temp_file
         os.rename(temp_file.name, path)
         # Nothing for NamedTemporaryFile to delete.
+        os.chmod(path, permissions)
 
 
 def chars_in(chars, input):

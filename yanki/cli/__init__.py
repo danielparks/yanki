@@ -317,6 +317,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
                     destination = copy_media_to / file_name
                     LOGGER.info(f"Copying media to {destination}")
                     shutil.copy2(source, destination)
+                    destination.chmod(0o644)
                     new_paths.append(str(destination))
 
                 note["media_paths"] = new_paths
