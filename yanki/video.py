@@ -515,10 +515,11 @@ class Video:
         try:
             # If it’s a file:// URL, then there’s no need to cache.
             source_path = self.working_dir / file_url_to_path(self.url)
-            self.logger.info(f"using local raw video {source_path}")
-            return source_path
         except NotFileURLError:
             pass
+        else:
+            self.logger.info(f"using local raw video {source_path}")
+            return source_path
 
         if "ext" not in self.info():
             raise BadURLError(f"Invalid media URL {self.url!r}")

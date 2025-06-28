@@ -39,9 +39,9 @@ def find_invalid_format(format, variables):
     """
     try:
         format.format(**dict.fromkeys(variables, "value"))
-        return None
     except KeyError as error:
         return error
+    return None
 
 
 @functools.cache
