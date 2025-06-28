@@ -47,7 +47,7 @@ select = ["E", "F", "I", "N", "PERF", "RUF"]
 
 # RUF001 – RUF003: I frequently use characters that trigger these lints like "’"
 # and "❯".
-ignore = ["RUF001", "RUF002", "RUF003", "RUF022"]
+ignore = ["RUF001", "RUF002", "RUF003"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
