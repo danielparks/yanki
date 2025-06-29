@@ -137,7 +137,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
         raise click.UsageError(
             "--verbose or -v may only be specified up to 3 times."
         )
-    elif verbose == 3:
+    if verbose == 3:
         global_log_debug = True
         level = logging.TRACE
     elif verbose == 2:

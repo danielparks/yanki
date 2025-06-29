@@ -33,16 +33,15 @@ def rst_to_html(rst):
 def raw_to_html(raw):
     if raw.startswith("md:"):
         return mistletoe.markdown(raw[3:])
-    elif raw.startswith("rst:"):
+    if raw.startswith("rst:"):
         return rst_to_html(raw[4:])
-    elif raw.startswith("html:"):
+    if raw.startswith("html:"):
         return raw[5:]
-    else:
-        return (
-            URL_REGEX.sub(r'<a href="\1">\1</a>', html.escape(raw))
-            .rstrip()
-            .replace("\n", "<br/>")
-        )
+    return (
+        URL_REGEX.sub(r'<a href="\1">\1</a>', html.escape(raw))
+        .rstrip()
+        .replace("\n", "<br/>")
+    )
 
 
 class Fragment:

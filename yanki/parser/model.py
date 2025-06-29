@@ -49,13 +49,13 @@ class NoteSpec:
     def clip_or_trim(self):
         if self.config.trim is None:
             return self.clip()  # Might be None, but that’s fine
-        elif self.clip() is None:
+        if self.clip() is None:
             return self.config.trim
-        else:
-            self.error(
-                f"Clip ({self.provisional_clip_spec()!r}) is incompatible with "
-                "'trim:'."
-            )
+        self.error(
+            f"Clip ({self.provisional_clip_spec()!r}) is incompatible with "
+            "'trim:'."
+        )
+        return None
 
     @functools.cache
     def _parse_clip(self):
@@ -96,8 +96,7 @@ class NoteSpec:
     def provisional_clip_spec(self):
         if self.clip() is None:
             return "@0-"
-        else:
-            return f"@{'-'.join(self.clip())}"
+        return f"@{'-'.join(self.clip())}"
 
     def error(self, message):
         raise DeckSyntaxError(message, self.source_path, self.line_number)

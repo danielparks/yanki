@@ -170,21 +170,19 @@ class Note:
     def clip_spec(self):
         if self.spec.clip() is None:
             return "@0-"
-        elif len(self.spec.clip()) in (1, 2):
+        if len(self.spec.clip()) in (1, 2):
             return "@" + "-".join(
                 [
                     str(self.video().time_to_seconds(t, on_none=""))
                     for t in self.spec.clip()
                 ]
             )
-        else:
-            raise ValueError(f"Invalid clip: {self.spec.clip()!r}")
+        raise ValueError(f"Invalid clip: {self.spec.clip()!r}")
 
     def text(self):
         if self.spec.text() == "":
             return self.video().title()
-        else:
-            return self.spec.text()
+        return self.spec.text()
 
 
 EXTRA_FINAL_NOTE_VARIABLES = frozenset(

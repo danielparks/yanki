@@ -72,7 +72,6 @@ ignore = [
     "PIE",
     "PT",
     "PTH",
-    "RET",
     "S",
     "SIM",
 

@@ -24,8 +24,7 @@ class DeckTree:
     def dig(self, path):
         if len(path):
             return self[path[0]].dig(path[1:])
-        else:
-            return self
+        return self
 
 
 def write_html(output_path, cache_path, decks, flashcards=False):
@@ -97,9 +96,8 @@ def write_tree_indices(
                 output_media_path,
                 flashcards=flashcards,
             )
-        else:
-            # Anonymous root has zero or more than one child deck.
-            tree.name = "Decks"
+        # Anonymous root has zero or more than one child deck.
+        tree.name = "Decks"
 
     if len(tree.children) == 0:
         if tree.deck_file_name:
@@ -116,8 +114,7 @@ def write_tree_indices(
                 f'<li><a href="{h(tree.deck_file_name)}">{h(tree.name)}'
                 "</a></li>"
             )
-        else:
-            return ""
+        return ""
 
     # Has child decks. Must have a name.
     assert tree.name is not None

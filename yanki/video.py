@@ -118,7 +118,7 @@ def url_to_id(url_str):
         domain = "." + url.netloc.lower()
         if domain.endswith(".youtube.com"):
             return "youtube=" + youtube_url_to_id(url_str, url, query)
-        elif domain.endswith(".youtu.be"):
+        if domain.endswith(".youtu.be"):
             return "youtube=" + youtu_be_url_to_id(url_str, url, query)
     except BadURLError:
         # Try to load the URL with yt_dlp and see what happens.
@@ -307,14 +307,13 @@ class Video:
         if spec[-1] in "Ff":
             # Frame number
             return int(spec[:-1]) / self.get_fps()
-        elif spec[-1] in "Ss":
+        if spec[-1] in "Ss":
             # Second (s), millisecond (ms), or microsecond (us) suffix
             if spec[-2] in "Mm":
                 return float(spec[:-2]) / 1_000
-            elif spec[-2] in "Uuµ":
+            if spec[-2] in "Uuµ":
                 return float(spec[:-2]) / 1_000_000
-            else:
-                return float(spec[:-1])
+            return float(spec[:-1])
 
         # [-][HH]:[MM]:[SS.mmm...]
         sign = 1
@@ -478,10 +477,9 @@ class Video:
     def output_ext(self):
         if self._format is not None:
             return self._format
-        elif self.is_still():
+        if self.is_still():
             return "jpeg"
-        else:
-            return "mp4"
+        return "mp4"
 
     def is_still(self):
         return (
@@ -795,7 +793,7 @@ class Video:
             if amount < 0.01:
                 # FIXME validate on parse
                 raise ValueError("Cannot slow audio by less than 0.01")
-            elif amount > 2:
+            if amount > 2:
                 twos_count = math.floor(math.log2(amount))
                 for _ in range(twos_count):
                     part = part.filter("atempo", 0.5)
