@@ -81,7 +81,7 @@ def test_group():
 
 
 @pytest.mark.parametrize(
-    "lines,more_html",
+    ("lines", "more_html"),
     [
         (["more: one"], "one"),
         (["more: one", "more: two"], "two"),
@@ -99,7 +99,7 @@ def test_deck_more_parametrized(lines, more_html):
 
 
 @pytest.mark.parametrize(
-    "lines,overlay_text",
+    ("lines", "overlay_text"),
     [
         (["overlay_text: one"], "one"),
         (["overlay_text: one", ""], "one"),
@@ -117,7 +117,7 @@ def test_deck_overlay_text_parametrized(lines, overlay_text):
 
 
 @pytest.mark.parametrize(
-    "lines,overlay_text",
+    ("lines", "overlay_text"),
     [
         (["  overlay_text:"], ""),
         (["  overlay_text:", ""], ""),
@@ -164,7 +164,7 @@ def test_note_overlay_text_parametrized(lines, overlay_text):
 
 
 @pytest.mark.parametrize(
-    "note_lines,parsed_text",
+    ("note_lines", "parsed_text"),
     [
         (["one", "  two", "  \t", "  three"], "one\ntwo\n\nthree"),
         (["one", "  two", "  ", "  three"], "one\ntwo\n\nthree"),
@@ -223,7 +223,7 @@ def test_note_parametrized(note_lines, parsed_text):
 
 
 @pytest.mark.parametrize(
-    "deck,message",
+    ("deck", "message"),
     [
         ("  bad", "Error in -, line 1: Unexpected indent"),
         (

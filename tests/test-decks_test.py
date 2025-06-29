@@ -25,7 +25,7 @@ def read_first_line(path):
 def test_deck_error(path, cache_path):
     options = VideoOptions(cache_path=cache_path)
     with open(path, "r", encoding="utf_8") as file:
-        with pytest.raises(Exception) as error_info:
+        with pytest.raises(ExceptionGroup) as error_info:
             DeckSource(files=[file]).read_final(options)
 
     [error] = list(find_errors(error_info.value))

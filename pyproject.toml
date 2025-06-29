@@ -56,6 +56,7 @@ ignore = [
     "PLR2004",  # “Magic” values often easier to understand without a CONSTANT.
     "PLR6301",  # Too many false positive (methods that don’t need `self`).
     "PLW2901",  # I like to shadow `for` loop variables.
+    "PT011",    # `pytest.raises(...)` is too broad: Too many false positives.
     "S404",     # I use `subprocess`.
     "S603",     # This seems to trigger on all calls to `subprocess.run`.
     "T20",      # We use `print()`.
@@ -67,7 +68,6 @@ ignore = [
     "RUF001", "RUF002", "RUF003",
 
     # Rule groups to fix or document:
-    "PT",
     "PTH",
     "SIM",
 ]
