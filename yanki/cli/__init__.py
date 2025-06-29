@@ -297,7 +297,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
     Optionally, copy the media for the decks into a directory.
     """
     decks = [
-        deck.to_dict(base_path=html_media_prefix)
+        deck.to_dict(base_url=html_media_prefix)
         for deck in decks.read_final_sorted(options)
     ]
 

@@ -275,14 +275,14 @@ class FinalNote:
             tags=self.spec.config.tags,
         )
 
-    def to_dict(self, base_path=""):
+    def to_dict(self, base_url=""):
         """Recursively convert to dict."""
         return {
             "deck_id": self.deck_id,
             "note_id": self.note_id,
-            "text_html": self.text_field().render_html(base_path=base_path),
-            "media_html": self.media_field().render_html(base_path=base_path),
-            "more_html": self.more_field().render_html(base_path=base_path),
+            "text_html": self.text_field().render_html(base_url=base_url),
+            "media_html": self.media_field().render_html(base_url=base_url),
+            "more_html": self.more_field().render_html(base_url=base_url),
             "media_paths": sorted(self.media_paths()),
             "direction": self.spec.direction(),
             "tags": sorted(self.spec.config.tags),
@@ -344,15 +344,13 @@ class FinalDeck:
 
         return path
 
-    def to_dict(self, base_path=""):
+    def to_dict(self, base_url=""):
         """Recursively convert to dict."""
         return {
             "deck_id": self.deck_id,
             "title": self.title,
             "source_path": self.source_path,
-            "notes": [
-                note.to_dict(base_path=base_path) for note in self.notes()
-            ],
+            "notes": [note.to_dict(base_url=base_url) for note in self.notes()],
         }
 
 
