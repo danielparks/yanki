@@ -57,7 +57,7 @@ class Fragment:
     def render_anki(self):
         return self.render_html("")
 
-    def render_html(self, base_path=""):
+    def render_html(self, _base_path=""):
         return raw_to_html(self.raw)
 
     def __str__(self):
@@ -75,7 +75,7 @@ class MediaFragment(Fragment):
     def file_name(self):
         return os.path.basename(self.path)
 
-    def path_in_base(self, base_path):
+    def path_in_base(self, _base_path):
         return
 
     def anki_filename(self):

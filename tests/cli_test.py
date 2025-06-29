@@ -115,7 +115,7 @@ def test_yanki_to_html(yanki, deck_1_path, output_path):
     assert "<img " in index_html
 
 
-def test_yanki_to_json(yanki, deck_1_path, output_path):
+def test_yanki_to_json(yanki, deck_1_path):
     result = yanki.run("to-json", deck_1_path)
     assert result.returncode == 0
     assert result.stderr == ""

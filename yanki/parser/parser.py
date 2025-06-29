@@ -233,7 +233,7 @@ class ConfigParser(SubParser):
         # Don’t even look for config directives.
         self.text.append(line)
 
-    def parse_config(self, directive, rest):
+    def parse_config(self, _directive, _rest):
         raise RuntimeError(
             "parse_config() should be unreachable in ConfigParser"
         )

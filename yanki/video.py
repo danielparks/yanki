@@ -96,7 +96,7 @@ def youtube_url_to_id(url_str, url, query):
 
 
 # URLs like http://youtu.be/lalOy8Mbfdc
-def youtu_be_url_to_id(url_str, url, query):
+def youtu_be_url_to_id(url_str, url, _query):
     """Get YouTube video ID, e.g. lalOy8Mbfdc, from a youtu.be URL."""
     try:
         path = url.path.split("/")
