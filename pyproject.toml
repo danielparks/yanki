@@ -43,6 +43,7 @@ ignore = [
     "A",        # I don’t mind shadowing built-ins.
     "B019",     # FIXME: `functools.cache` can leak memory.
     "COM812",   # Conflicts with formatter.
+    "CPY",      # I don’t want copyright notices at the top of every file.
     "D1",       # FIXME: Undocumented public items.
     "DOC",      # FIXME: Undocumented returns, raises, etc.
     "EM",       # I don’t like the `msg = ...; raise Error(msg)` syntax.
@@ -65,7 +66,6 @@ ignore = [
 
     # Rule groups to fix or document:
     "ANN",
-    "CPY",
     "FLY",
     "G",
     "PT",
