@@ -57,8 +57,8 @@ class NoteConfig:
     more: Field = field(default_factory=Field)
     overlay_text: str = ""
     tags: set[str] = field(default_factory=set)
-    slow: None | tuple[str, None | str, float] = None
-    trim: None | tuple[str, str] = None
+    slow: tuple[str, str | None, float] | None = None
+    trim: tuple[str, str] | None = None
     audio: str = "include"
     video: str = "include"
     note_id: str = "{deck_id} {url} {clip}"
