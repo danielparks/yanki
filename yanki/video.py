@@ -289,7 +289,7 @@ class Video:
 
                 fps = float(division.pop(0))
                 for divisor in division:
-                    fps = fps / float(divisor)
+                    fps /= float(divisor)
 
                 return fps
 
