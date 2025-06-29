@@ -1,8 +1,6 @@
 class ExpectedError(Exception):
     """An expected error that can be reported without a traceback."""
 
-    pass
-
 
 class DeckSyntaxError(ExpectedError):
     """Syntax error in a .deck file."""

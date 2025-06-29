@@ -68,7 +68,6 @@ ignore = [
     "FLY",
     "G",
     "LOG",
-    "PIE",
     "PT",
     "PTH",
     "SIM",

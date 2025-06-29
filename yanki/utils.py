@@ -19,8 +19,6 @@ from yanki.errors import ExpectedError
 class NotFileURLError(ValueError):
     """Raised by file_url_to_path() when the parameter is not a file:// URL."""
 
-    pass
-
 
 def add_trace_logging():
     """Add `logging.TRACE` level. Idempotent."""
