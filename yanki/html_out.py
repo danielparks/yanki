@@ -101,8 +101,9 @@ def write_tree_indices(
 
     if len(tree.children) == 0:
         if tree.deck_file_name:
-            # A tree with a deck should have the same name as the deck.
-            assert tree.name is not None
+            # A tree with a deck is created with `deck_tree.dig()`, so it should
+            # always have a name.
+            assert tree.name is not None  # noqa: S101
             write_deck_files(
                 output_path / tree.deck_file_name,
                 output_media_path,
@@ -117,7 +118,7 @@ def write_tree_indices(
         return ""
 
     # Has child decks. Must have a name.
-    assert tree.name is not None
+    assert tree.name is not None  # noqa: S101
     if title_path == []:
         tree.index_file_name = "index.html"
     else:

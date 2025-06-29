@@ -318,4 +318,8 @@ class DeckFilesParser:
 
         unindented = line.lstrip(" \t")
         indent = line[0 : len(line) - len(unindented)]
-        assert self.parser.parse_line(line_number, indent, unindented)
+        if not self.parser.parse_line(line_number, indent, unindented):
+            # DeckParser always has 0 indent because an indent starts a child
+            # parser. If it returns False to indicate it found an outdent, then
+            # something went very wrong.
+            raise RuntimeError("DeckParser found impossible outdent")

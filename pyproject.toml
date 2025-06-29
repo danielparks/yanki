@@ -48,6 +48,7 @@ ignore = [
     "PLR0911",  # Ignore too many returns.
     "PLR2004",  # “Magic” values often easier to understand without a CONSTANT.
     "PLW2901",  # I like to shadow `for` loop variables.
+    "S603",     # This seems to trigger on all calls to `subprocess.run`.
     "T20",      # We use `print()`.
     "TD",       # I prefer my FIXME format.
     "TRY003",   # It’s a lot more work to have separate error classes.
@@ -72,7 +73,6 @@ ignore = [
     "PIE",
     "PT",
     "PTH",
-    "S",
     "SIM",
 
     # Preview rules to investigate:
@@ -86,6 +86,10 @@ ignore = [
     "RUF036",
     "S404",
 ]
+
+[tool.ruff.lint.per-file-ignores]
+# assert is fine in tests.
+"tests/*" = ["S101"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
