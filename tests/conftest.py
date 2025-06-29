@@ -11,8 +11,7 @@ from pytest_console_scripts import RunResult, ScriptRunner, _StrOrPath
 
 @pytest.fixture(scope="session")
 def bin_path(tmp_path_factory):
-    """
-    Get path to directory containing mock `open`.
+    """Get path to directory containing mock `open`.
 
     This version of `open` will just print its arguments.
     """

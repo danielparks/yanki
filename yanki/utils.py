@@ -34,8 +34,7 @@ def add_trace_logging():
 
 @contextlib.contextmanager
 def atomic_open(path, encoding="utf_8", permissions=0o644):
-    """
-    Open a file for writing and save it atomically.
+    """Open a file for writing and save it atomically.
 
     This creates a temporary file in the same directory, writes to it, then
     replaces the target file atomically even if it already exists.
@@ -68,8 +67,7 @@ def chars_in(chars, input):
 
 
 def file_url_to_path(url: str) -> Path:
-    """
-    Convert a file:// URL to a Path.
+    """Convert a file:// URL to a Path.
 
     Raises NotFileURLError if the URL is not a file:// URL.
     """
@@ -104,8 +102,7 @@ def find_errors(group: ExceptionGroup):
 
 
 def get_key_path(data, path: list[any]):
-    """
-    Dig into `data` following the `path` of keys.
+    """Dig into `data` following the `path` of keys.
 
     For example, `get_key_path(data, ["a", "b", 0]) == data["a"]["b"][0]`.
     """

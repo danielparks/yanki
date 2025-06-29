@@ -91,7 +91,7 @@ ignore = [
 ]
 
 [tool.ruff.lint.pydocstyle]
-convention = "pep257"
+convention = "google"
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]

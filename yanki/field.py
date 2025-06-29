@@ -86,8 +86,7 @@ class MediaFragment(Fragment):
         return self.file_name()
 
     def html_path_in_base(self, base_path):
-        """
-        Get the path relative to base_path, and encoded for HTML.
+        """Get the path relative to base_path, and encoded for HTML.
 
         base_path may be a URL or a relative path. It must already be URL
         encoded, but must not escaped for HTML.

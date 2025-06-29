@@ -196,8 +196,7 @@ def build(options, decks, output):
 @deck_parameters
 @click.pass_obj
 def update(options, decks):
-    """
-    Update Anki with one or more decks.
+    """Update Anki with one or more decks.
 
     This will build the .apkg file in a temporary directory that will eventually
     be deleted. It will then open the .apkg file with the `open` command.
@@ -293,8 +292,7 @@ def to_html(options, output, decks, flashcards):
 )
 @click.pass_obj
 def to_json(options, output, decks, copy_media_to, html_media_prefix):
-    """
-    Generate JSON version of decks.
+    """Generate JSON version of decks.
 
     Optionally, copy the media for the decks into a directory.
     """
@@ -359,8 +357,7 @@ def open_videos(options, urls):
 @click.argument("files", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.pass_obj
 def open_videos_from_file(options, files):
-    """
-    Download videos listed in a file and open them.
+    """Download videos listed in a file and open them.
 
     If you don’t pass any arguments this will read from stdin. Videos will be
     downloaded and minimally processed, then opened with the open command.
@@ -381,8 +378,7 @@ def open_videos_from_file(options, files):
 
 
 def _find_urls(file):
-    """
-    Find URLs in a file to open.
+    """Find URLs in a file to open.
 
     Ignore blank lines and # comments. URLs are separated by whitespace.
     """

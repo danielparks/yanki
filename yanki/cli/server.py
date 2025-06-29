@@ -76,8 +76,7 @@ class Server:
 
 
 def server_options(func):
-    """
-    Add common server options to a command.
+    """Add common server options to a command.
 
     Adds the following options:
     - --open: Open in web browser

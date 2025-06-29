@@ -34,8 +34,7 @@ NOTE_VARIABLES = frozenset(
 
 
 def find_invalid_format(format, variables):
-    """
-    Validate `format`.
+    """Validate `format`.
 
     Returns `KeyError` if `format` uses anything not in `variables`.
     """

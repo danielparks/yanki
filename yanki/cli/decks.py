@@ -78,8 +78,7 @@ class DeckSource:
 
 
 def deck_parameters(func):
-    """
-    Add a `decks` argument along with tag filtering options to a command.
+    """Add a `decks` argument along with tag filtering options to a command.
 
     Adds the following options:
     - -i/--include-tag: Only include notes that have all specified tags

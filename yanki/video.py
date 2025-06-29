@@ -329,8 +329,7 @@ class Video:
         return sign * sum
 
     def cropdetect(self):
-        """
-        Detect black borders to crop.
+        """Detect black borders to crop.
 
         more_info_async() must be called first.
         """
@@ -343,8 +342,7 @@ class Video:
             return None
 
     async def load_more_info_async(self):
-        """
-        Load more information about the contents of the media.
+        """Load more information about the contents of the media.
 
         This returns a `dict` with keys:
           * `version`: the current version of the more_info algorithm so that
@@ -541,8 +539,7 @@ class Video:
         return path
 
     def clip_to_ffmpeg_input_options(self, clip):
-        """
-        Input options for ffmpeg based on real clip.
+        """Input options for ffmpeg based on real clip.
 
         Used by load_more_info_async() and processed_video_async().
         """
@@ -563,8 +560,7 @@ class Video:
         return options
 
     def clip_to_ffmpeg_output_options(self, clip):
-        """
-        Output options for ffmpeg based on real clip.
+        """Output options for ffmpeg based on real clip.
 
         Used by load_more_info_async() and processed_video_async().
         """
