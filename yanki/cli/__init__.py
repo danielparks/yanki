@@ -237,7 +237,7 @@ def list_notes(options, decks, format):
         # Don’t need FinalNotes
         for deck in decks.read_sorted(options):
             for note in deck.notes():
-                ### FIXME document variables
+                # FIXME document variables
                 print(format.format(**note.variables(deck_id=deck.id())))
     else:
         if error := find_invalid_format(format, FINAL_NOTE_VARIABLES):
@@ -245,7 +245,7 @@ def list_notes(options, decks, format):
 
         for deck in decks.read_final_sorted(options):
             for note in deck.notes():
-                ### FIXME document variables
+                # FIXME document variables
                 print(format.format(**note.variables()))
 
 

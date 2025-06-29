@@ -74,7 +74,6 @@ ignore = [
 
     # Preview rules to investigate:
     "DOC",
-    "E266",
     "PLC1901",
     "PLR0904",
     "PLR6104",
