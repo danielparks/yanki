@@ -52,7 +52,7 @@ WritableFilePath = functools.partial(
 global_log_debug = False
 
 
-def main():
+def main():  # noqa: C901 (complex)
     exit_code = 0
     try:
         cli.main(standalone_mode=False)

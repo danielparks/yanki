@@ -734,7 +734,7 @@ class Video:
         return stdout, stderr
 
     # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
-    def _try_apply_slow(self, streams):  # noqa: PLR0912 (too many branches)
+    def _try_apply_slow(self, streams):  # noqa: C901 PLR0912 (FIXME complex)
         if self._slow is None:
             return streams
 

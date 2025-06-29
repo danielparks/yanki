@@ -65,7 +65,6 @@ ignore = [
 
     # Rule groups to fix or document:
     "ANN",
-    "C90",
     "CPY",
     "FBT",
     "FLY",
