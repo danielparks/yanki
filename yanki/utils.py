@@ -33,7 +33,7 @@ def add_trace_logging():
 
 
 @contextlib.contextmanager
-def atomic_open(path, encoding="utf_8", permissions=0o644):
+def atomic_open(path: Path, *, encoding="utf_8", permissions=0o644):
     """Open a file for writing and save it atomically.
 
     This creates a temporary file in the same directory, writes to it, then
@@ -44,7 +44,6 @@ def atomic_open(path, encoding="utf_8", permissions=0o644):
     else:
         mode = "w"
 
-    path = Path(path)
     with tempfile.NamedTemporaryFile(
         mode=mode,
         encoding=encoding,
