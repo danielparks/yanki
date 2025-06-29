@@ -2,7 +2,6 @@ import asyncio
 import functools
 import hashlib
 import logging
-import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -117,11 +116,10 @@ class Note:
 
     @functools.cache
     def video(self):
-        deck_dir = os.path.dirname(self.spec.source_path)
         try:
             video = Video(
                 self.spec.video_url(),
-                working_dir=Path(deck_dir),
+                working_dir=Path(self.spec.source_path).parent,
                 options=self.video_options,
                 logger=self.logger,
             )
@@ -334,8 +332,10 @@ class FinalDeck:
         package.decks.append(deck)
 
     def save_to_file(self, path=None):
-        if not path:
-            path = os.path.splitext(self.source_path)[0] + ".apkg"
+        if path:
+            path = Path(path)
+        else:
+            path = Path(self.source_path).with_suffix(".apkg")
 
         package = genanki.Package([])
         self.save_to_package(package)

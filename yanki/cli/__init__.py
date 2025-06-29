@@ -2,8 +2,6 @@ import asyncio
 import functools
 import json
 import logging
-import os
-import os.path
 import re
 import shutil
 import sys
@@ -308,8 +306,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
             for note in deck["notes"]:
                 new_paths = []
                 for source in note["media_paths"]:
-                    file_name = os.path.basename(source)
-                    destination = copy_media_to / file_name
+                    destination = copy_media_to / Path(source).name
                     LOGGER.info(f"Copying media to {destination}")
                     shutil.copy2(source, destination)
                     destination.chmod(0o644)

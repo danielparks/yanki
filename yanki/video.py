@@ -8,7 +8,6 @@ import re
 import shlex
 from dataclasses import dataclass
 from multiprocessing import cpu_count
-from os.path import getmtime
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -141,7 +140,7 @@ class Video:
         self,
         url,
         options,
-        working_dir=Path("."),
+        working_dir=Path(),
         logger=LOGGER,
     ):
         self.url = url
@@ -267,7 +266,10 @@ class Video:
                 return get_key_path(self._raw_metadata, key_path)
 
             metadata_cache_path = self.raw_metadata_cache_path()
-            if getmtime(metadata_cache_path) >= getmtime(self.raw_video()):
+            if (
+                metadata_cache_path.stat().st_mtime
+                >= self.raw_video().stat().st_mtime
+            ):
                 # Metadata isn’t older than raw video.
                 with metadata_cache_path.open("r", encoding="utf_8") as file:
                     self._raw_metadata = json.load(file)

@@ -1,7 +1,7 @@
 import functools
 import html
-import os
 import re
+from pathlib import Path
 from urllib.parse import quote
 
 import docutils.core
@@ -68,12 +68,12 @@ class Fragment:
 
 
 class MediaFragment(Fragment):
-    def __init__(self, path, media):
+    def __init__(self, path: Path, media):
         self.path = path
         self._media = media
 
     def file_name(self):
-        return os.path.basename(self.path)
+        return self.path.name
 
     def path_in_base(self, _base_url):
         return

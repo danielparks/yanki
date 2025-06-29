@@ -68,7 +68,6 @@ ignore = [
     "RUF001", "RUF002", "RUF003",
 
     # Rule groups to fix or document:
-    "PTH",
     "SIM",
 ]
 

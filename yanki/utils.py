@@ -44,21 +44,20 @@ def atomic_open(path, encoding="utf_8", permissions=0o644):
     else:
         mode = "w"
 
-    directory = os.path.dirname(path)
-    (prefix, suffix) = os.path.splitext(os.path.basename(path))
+    path = Path(path)
     with tempfile.NamedTemporaryFile(
         mode=mode,
         encoding=encoding,
-        dir=directory,
-        prefix=f"working_{prefix}",
-        suffix=suffix,
+        dir=path.parent,
+        prefix=f"working_{path.stem}",
+        suffix=path.suffix,
         delete=True,
         delete_on_close=False,
     ) as temp_file:
         yield temp_file
-        os.rename(temp_file.name, path)
+        Path(temp_file.name).rename(path)
         # Nothing for NamedTemporaryFile to delete.
-        os.chmod(path, permissions)
+        path.chmod(permissions)
 
 
 def chars_in(chars, input):
@@ -82,9 +81,9 @@ def file_url_to_path(url: str) -> Path:
     return Path(parts.netloc + parts.path)
 
 
-def file_not_empty(path):
+def file_not_empty(path: Path):
     """Check that `path` is a file and is non-empty."""
-    return os.path.exists(path) and os.stat(path).st_size > 0
+    return path.exists() and path.stat().st_size > 0
 
 
 def file_safe_name(name):

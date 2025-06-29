@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 import pytest
@@ -46,7 +45,7 @@ def test_atomic_open_deleted(tmp_path):
     with pytest.raises(FileNotFoundError) as error_info:  # noqa: PT012
         # Ignore PT012: testing context manager
         with atomic_open(path) as file:
-            os.unlink(file.name)
+            Path(file.name).unlink()
             file.write("First write\n")
     assert error_info.match("No such file or directory")
 

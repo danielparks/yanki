@@ -60,8 +60,8 @@ def test_multiple_exclude():
 def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
     decks = DeckSource(
         files=[
-            open(deck_2_path, "r", encoding="utf_8"),
-            open(deck_1_path, "r", encoding="utf_8"),
+            deck_2_path.open("r", encoding="utf_8"),
+            deck_1_path.open("r", encoding="utf_8"),
         ]
     ).read_sorted(VideoOptions(cache_path))
 
@@ -73,8 +73,8 @@ def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
 def test_read_final_decks_sorted(deck_1_path, deck_2_path, cache_path):
     decks = DeckSource(
         files=[
-            open(deck_2_path, "r", encoding="utf_8"),
-            open(deck_1_path, "r", encoding="utf_8"),
+            deck_2_path.open("r", encoding="utf_8"),
+            deck_1_path.open("r", encoding="utf_8"),
         ]
     ).read_final_sorted(VideoOptions(cache_path))
 

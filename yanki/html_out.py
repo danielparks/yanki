@@ -1,4 +1,3 @@
-import os
 import shutil
 import sys
 from collections import OrderedDict
@@ -195,7 +194,7 @@ def write_deck_files(
     # Copy media to output.
     if output_media_path is not None:
         for path in deck.media_paths():
-            output_path = output_media_path / os.path.basename(path)
+            output_path = output_media_path / Path(path).name
             shutil.copy2(path, output_path)
             # Make sure media is accessible by the web server.
             output_path.chmod(0o644)
@@ -322,5 +321,5 @@ def path_to_web_files() -> Path:
 
 
 def static_url(path) -> str:
-    mtime = os.path.getmtime(path_to_web_files() / path)
+    mtime = (path_to_web_files() / path).stat().st_mtime
     return f"static/{path}?{mtime}"

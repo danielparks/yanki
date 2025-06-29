@@ -2,6 +2,7 @@ import io
 import logging
 import re
 from copy import deepcopy
+from pathlib import Path
 
 from yanki.errors import DeckSyntaxError
 from yanki.parser.config import NoteConfig
@@ -300,7 +301,7 @@ class DeckFilesParser:
         yield from self.flush_decks()
 
     def parse_path(self, path):
-        with open(path, "r", encoding="utf_8") as file:
+        with Path(path).open("r", encoding="utf_8") as file:
             yield from self.parse_file(file.name, file)
 
     def parse_input(self, input):

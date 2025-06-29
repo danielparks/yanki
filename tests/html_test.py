@@ -8,7 +8,7 @@ from yanki.video import VideoOptions
 
 def test_two_decks(cache_path, deck_1_path, deck_2_path, output_path):
     files = [
-        open(path, "r", encoding="utf_8") for path in [deck_1_path, deck_2_path]
+        path.open("r", encoding="utf_8") for path in [deck_1_path, deck_2_path]
     ]
 
     write_html(

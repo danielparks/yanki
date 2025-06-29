@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 
 import pytest
 
@@ -8,14 +8,11 @@ from yanki.video import VideoOptions
 
 
 def find_deck_files(base_path):
-    for dir_path, _, file_names in os.walk(base_path):
-        for file_name in file_names:
-            if file_name.endswith(".deck"):
-                yield f"{dir_path}/{file_name}"
+    yield from Path(base_path).rglob("*.deck")
 
 
-def read_first_line(path):
-    with open(path, "r", encoding="utf_8") as input:
+def read_first_line(path: Path):
+    with path.open("r", encoding="utf_8") as input:
         for line in input:
             return line
     return None
@@ -24,7 +21,7 @@ def read_first_line(path):
 @pytest.mark.parametrize("path", find_deck_files("test-decks/errors"))
 def test_deck_error(path, cache_path):
     options = VideoOptions(cache_path=cache_path)
-    with open(path, "r", encoding="utf_8") as file:
+    with path.open("r", encoding="utf_8") as file:
         with pytest.raises(ExceptionGroup) as error_info:
             DeckSource(files=[file]).read_final(options)
 
@@ -39,6 +36,6 @@ def test_deck_error(path, cache_path):
 @pytest.mark.parametrize("path", find_deck_files("test-decks/good"))
 def test_deck_success(path, cache_path):
     options = VideoOptions(cache_path=cache_path)
-    with open(path, "r", encoding="utf_8") as file:
+    with path.open("r", encoding="utf_8") as file:
         [deck] = DeckSource(files=[file]).read_final(options)
     assert len(deck.notes()) >= 1
