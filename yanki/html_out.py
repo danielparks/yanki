@@ -308,12 +308,12 @@ def ensure_static_link(cache_path: Path):
 
     try:
         static_path.unlink()
-    except Exception as e:
+    except OSError as e:
         sys.exit(f"Error removing {static_path} to replace with symlink: {e}")
 
     try:
         static_path.symlink_to(web_files_path)
-    except Exception as e:
+    except OSError as e:
         sys.exit(f"Error symlinking {static_path} to {web_files_path}: {e}")
 
 
