@@ -297,7 +297,7 @@ class Video:
 
     # Expects spec without whitespace
     def time_to_seconds(self, spec, on_none=None):
-        """Converts a time spec like 1:01.02 or 4F to decimal seconds."""
+        """Convert a time spec like 1:01.02 or 4F to decimal seconds."""
         if spec == "" or spec is None:
             return on_none
 
@@ -355,7 +355,6 @@ class Video:
 
         https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/cropdetect.html
         """
-
         if not self.wants_video():
             self._cached_more_info = {
                 "version": MORE_INFO_VERSION,
@@ -489,27 +488,27 @@ class Video:
         )
 
     def has_audio(self):
-        """Does the raw video contain an audio stream?"""
+        """If the raw video contains an audio stream."""
         for stream in self.raw_metadata("streams"):
             if stream["codec_type"] == "audio":
                 return True
         return False
 
     def wants_audio(self):
-        """Should the output include an audio stream?"""
+        """If the output should include an audio stream."""
         return (
             not self._strip_audio and self.has_audio() and not self.is_still()
         )
 
     def has_video(self):
-        """Does the raw video contain a video stream or image?"""
+        """If the raw video contains a video stream or image."""
         for stream in self.raw_metadata("streams"):
             if stream["codec_type"] == "video":
                 return True
         return False
 
     def wants_video(self):
-        """Should the output include a video stream or image?"""
+        """If the output should include a video stream or image."""
         return not self._strip_video and self.has_video()
 
     @functools.cache
@@ -823,7 +822,7 @@ class Video:
         return ffmpeg.concat(*parts, v=int(wants_video), a=int(wants_audio))
 
     def _yt_dlp(self, **kwargs):
-        """Run yt_dlp"""
+        """Run yt_dlp."""
         return yt_dlp.YoutubeDL(
             {
                 "logtostderr": True,

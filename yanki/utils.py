@@ -40,7 +40,6 @@ def atomic_open(path, encoding="utf_8", permissions=0o644):
     This creates a temporary file in the same directory, writes to it, then
     replaces the target file atomically even if it already exists.
     """
-
     if encoding is None:
         mode = "wb"
     else:
@@ -64,7 +63,7 @@ def atomic_open(path, encoding="utf_8", permissions=0o644):
 
 
 def chars_in(chars, input):
-    """Returns chars from `chars` that are in `input`."""
+    """Return chars from `chars` that are in `input`."""
     return [char for char in chars if char in input]
 
 
@@ -86,7 +85,7 @@ def file_url_to_path(url: str) -> Path:
 
 
 def file_not_empty(path):
-    """Checks that the path is a file and is non-empty."""
+    """Check that `path` is a file and is non-empty."""
     return os.path.exists(path) and os.stat(path).st_size > 0
 
 
@@ -117,7 +116,6 @@ def get_key_path(data, path: list[any]):
 
 def make_frozen(klass):
     """Kludge to produce frozen version of dataclass."""
-
     name = klass.__name__ + "Frozen"
     fields = dataclasses.fields(klass)
 

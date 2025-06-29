@@ -118,7 +118,6 @@ def main():
 @click.pass_context
 def cli(ctx, verbose, cache, reprocess, concurrency):
     """Build Anki decks from text files containing YouTube URLs."""
-
     if concurrency < 1:
         raise click.UsageError("--concurrency must be >= 1.")
 
@@ -361,11 +360,10 @@ def open_videos(options, urls):
 @click.pass_obj
 def open_videos_from_file(options, files):
     """
-    Read files containing video URLs from the arguments or stdin, download the
-    videos, process them, and pass them to the `open` command.
+    Download videos listed in a file and open them.
 
-    You may use this without arguments if you want to enter the URLs and have
-    them opened after each line.
+    If you don’t pass any arguments this will read from stdin. Videos will be
+    downloaded and minimally processed, then opened with the open command.
     """
     if len(files) == 0:
         files = [sys.stdin]

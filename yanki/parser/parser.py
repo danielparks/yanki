@@ -304,7 +304,7 @@ class DeckFilesParser:
             yield from self.parse_file(file.name, file)
 
     def parse_input(self, input):
-        """Takes FileInput as parameter."""
+        """Parse files from FileInput."""
         for line in input:
             self.parse_line(input.filename(), input.filelineno(), line)
             yield from self.flush_decks()

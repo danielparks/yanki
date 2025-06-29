@@ -43,6 +43,7 @@ ignore = [
     "A",        # I don’t mind shadowing built-ins.
     "B019",     # FIXME: `functools.cache` can leak memory.
     "COM812",   # Conflicts with formatter.
+    "D1",       # FIXME: Undocumented public items.
     "EM",       # I don’t like the `msg = ...; raise Error(msg)` syntax.
     "FIX",      # I like FIXME comments for low-priority stuff.
     "PLR0911",  # Ignore too many returns.
@@ -63,7 +64,6 @@ ignore = [
     "BLE",
     "C90",
     "CPY",
-    "D",
     "FBT",
     "FLY",
     "G",
@@ -89,6 +89,9 @@ ignore = [
   "INP001", # Don't care about implicit namespace in tests.
   "S101",   # assert is fine in tests.
 ]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]

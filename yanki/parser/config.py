@@ -35,7 +35,9 @@ NOTE_VARIABLES = frozenset(
 
 def find_invalid_format(format, variables):
     """
-    Try `format` and return `KeyError` if it uses anything not in `variables`.
+    Validate `format`.
+
+    Returns `KeyError` if `format` uses anything not in `variables`.
     """
     try:
         format.format(**dict.fromkeys(variables, "value"))

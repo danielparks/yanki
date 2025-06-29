@@ -11,7 +11,11 @@ from pytest_console_scripts import RunResult, ScriptRunner, _StrOrPath
 
 @pytest.fixture(scope="session")
 def bin_path(tmp_path_factory):
-    """bin directory with `open` that just prints its arguments."""
+    """
+    Get path to directory containing mock `open`.
+
+    This version of `open` will just print its arguments.
+    """
     path = tmp_path_factory.mktemp("bin")
 
     for command in ["open", "xdg-open"]:

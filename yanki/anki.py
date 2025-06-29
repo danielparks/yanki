@@ -304,14 +304,14 @@ class FinalDeck:
         return self.deck_id
 
     def notes(self):
-        """Returns notes in the same order as the .deck file."""
+        """Get notes in the same order as the .deck file."""
         return sorted(
             self.notes_by_id.values(),
             key=lambda n: n.spec.line_number,
         )
 
     def media_paths(self):
-        """Return media paths used in this deck."""
+        """Get media paths used in this deck."""
         for note in self.notes_by_id.values():
             yield from note.media_paths()
 
@@ -398,7 +398,7 @@ class Deck:
         return self.spec.source_path
 
     def notes(self):
-        """Returns notes in the same order as the .deck file."""
+        """Get notes in the same order as the .deck file."""
         return sorted(
             self.notes_by_id.values(),
             key=lambda n: n.spec.line_number,
