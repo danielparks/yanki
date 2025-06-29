@@ -48,6 +48,7 @@ ignore = [
     "DOC",      # FIXME: Undocumented returns, raises, etc.
     "EM",       # I don’t like the `msg = ...; raise Error(msg)` syntax.
     "FIX",      # I like FIXME comments for low-priority stuff.
+    "G004",     # I prefer f-strings for logging for clarity.
     "PLC1901",  # Explicit comparisons to `""` are often clearer.
     "PLR0904",  # FIXME? Too many public methods.
     "PLR0911",  # I don’t care about too many returns.
@@ -67,7 +68,6 @@ ignore = [
     # Rule groups to fix or document:
     "ANN",
     "FLY",
-    "G",
     "PT",
     "PTH",
     "SIM",
