@@ -39,13 +39,8 @@ def atomic_open(path: Path, *, encoding="utf_8", permissions=0o644):
     This creates a temporary file in the same directory, writes to it, then
     replaces the target file atomically even if it already exists.
     """
-    if encoding is None:
-        mode = "wb"
-    else:
-        mode = "w"
-
     with tempfile.NamedTemporaryFile(
-        mode=mode,
+        mode="wb" if encoding is None else "w",
         encoding=encoding,
         dir=path.parent,
         prefix=f"working_{path.stem}",

@@ -1,3 +1,4 @@
+import contextlib
 import dataclasses
 import functools
 from dataclasses import field
@@ -96,10 +97,8 @@ class NoteConfig:
                 self.tags.add(tag[1:])
                 new_tags = None
             elif tag.startswith("-"):
-                try:
+                with contextlib.suppress(KeyError):
                     self.tags.remove(tag[1:])
-                except KeyError:
-                    pass
                 new_tags = None
             else:
                 # No + or - prefix, which implies we’re replacing all tags.
@@ -175,7 +174,7 @@ class NoteConfig:
 
     def generate_note_id(self, **kwargs):
         passed_keys = set(kwargs.keys())
-        if NOTE_VARIABLES != passed_keys:
+        if passed_keys != NOTE_VARIABLES:
             raise KeyError(
                 "Incorrect variables passed to generate_note_id()\n"
                 f"  unknown: {sorted(passed_keys - NOTE_VARIABLES)}\n"

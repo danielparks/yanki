@@ -21,9 +21,11 @@ def read_first_line(path: Path):
 @pytest.mark.parametrize("path", find_deck_files("test-decks/errors"))
 def test_deck_error(path, cache_path):
     options = VideoOptions(cache_path=cache_path)
-    with path.open("r", encoding="utf_8") as file:
-        with pytest.raises(ExceptionGroup) as error_info:
-            DeckSource(files=[file]).read_final(options)
+    with (
+        path.open("r", encoding="utf_8") as file,
+        pytest.raises(ExceptionGroup) as error_info,
+    ):
+        DeckSource(files=[file]).read_final(options)
 
     [error] = list(find_errors(error_info.value))
 

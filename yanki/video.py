@@ -303,7 +303,7 @@ class Video:
         if spec == "" or spec is None:
             return on_none
 
-        if isinstance(spec, float) or isinstance(spec, int):
+        if isinstance(spec, (float, int)):
             return float(spec)
 
         if spec[-1] in "Ff":
@@ -431,12 +431,11 @@ class Video:
     def clip(self, start_spec, end_spec):
         start = self.time_to_seconds(start_spec, on_none=0)
         end = self.time_to_seconds(end_spec, on_none=None)
-        if end is not None:
-            if end - start <= 0:
-                raise ValueError(
-                    "Cannot clip video to 0 or fewer seconds "
-                    f"({start_spec!r} to {end_spec!r})"
-                )
+        if end is not None and end - start <= 0:
+            raise ValueError(
+                "Cannot clip video to 0 or fewer seconds "
+                f"({start_spec!r} to {end_spec!r})"
+            )
         self._clip = (start, end)
 
     def snapshot(self, time_spec):

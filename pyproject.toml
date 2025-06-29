@@ -66,9 +66,6 @@ ignore = [
 
     # I frequently use characters that trigger these lints like "’"  and "❯":
     "RUF001", "RUF002", "RUF003",
-
-    # Rule groups to fix or document:
-    "SIM",
 ]
 
 [tool.ruff.lint.per-file-ignores]

@@ -27,8 +27,9 @@ def test_atomic_open_error(tmp_path):
     assert path.read_text() == "First write\n"
     assert [path.name for path in tmp_path.iterdir()] == ["prefix.suffix"]
 
-    with pytest.raises(RuntimeError) as error_info:  # noqa: PT012
-        # Ignore PT012: we check for the specific `raise`
+    with pytest.raises(RuntimeError) as error_info:  # noqa: PT012 SIM117
+        # Ignore PT012: we check for the specific `raise`.
+        # Ignore SIM117: nested `with`s makes this more clear.
         with atomic_open(path) as file:
             file.write("Second write\n")
             file.close()
@@ -42,8 +43,9 @@ def test_atomic_open_error(tmp_path):
 def test_atomic_open_deleted(tmp_path):
     path = tmp_path / "prefix.suffix"
 
-    with pytest.raises(FileNotFoundError) as error_info:  # noqa: PT012
-        # Ignore PT012: testing context manager
+    with pytest.raises(FileNotFoundError) as error_info:  # noqa: PT012 SIM117
+        # Ignore PT012: testing context manager.
+        # Ignore SIM117: nested `with`s makes this more clear.
         with atomic_open(path) as file:
             Path(file.name).unlink()
             file.write("First write\n")
