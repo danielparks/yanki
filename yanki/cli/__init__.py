@@ -145,7 +145,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     elif verbose == 1:
         level = logging.INFO
     else:
-        level = logging.WARN
+        level = logging.WARNING
 
     handler = colorlog.StreamHandler()
     handler.setFormatter(

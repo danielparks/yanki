@@ -72,7 +72,6 @@ ignore = [
     "FBT",
     "FLY",
     "G",
-    "LOG",
     "PT",
     "PTH",
     "SIM",
