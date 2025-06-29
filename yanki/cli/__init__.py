@@ -118,7 +118,6 @@ def main():
 @click.pass_context
 def cli(ctx, verbose, cache, reprocess, concurrency):
     """Build Anki decks from text files containing YouTube URLs."""
-
     if concurrency < 1:
         raise click.UsageError("--concurrency must be >= 1.")
 
@@ -137,7 +136,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
         raise click.UsageError(
             "--verbose or -v may only be specified up to 3 times."
         )
-    elif verbose == 3:
+    if verbose == 3:
         global_log_debug = True
         level = logging.TRACE
     elif verbose == 2:
@@ -197,8 +196,7 @@ def build(options, decks, output):
 @deck_parameters
 @click.pass_obj
 def update(options, decks):
-    """
-    Update Anki with one or more decks.
+    """Update Anki with one or more decks.
 
     This will build the .apkg file in a temporary directory that will eventually
     be deleted. It will then open the .apkg file with the `open` command.
@@ -239,7 +237,7 @@ def list_notes(options, decks, format):
         # Don’t need FinalNotes
         for deck in decks.read_sorted(options):
             for note in deck.notes():
-                ### FIXME document variables
+                # FIXME document variables
                 print(format.format(**note.variables(deck_id=deck.id())))
     else:
         if error := find_invalid_format(format, FINAL_NOTE_VARIABLES):
@@ -247,7 +245,7 @@ def list_notes(options, decks, format):
 
         for deck in decks.read_final_sorted(options):
             for note in deck.notes():
-                ### FIXME document variables
+                # FIXME document variables
                 print(format.format(**note.variables()))
 
 
@@ -294,8 +292,7 @@ def to_html(options, output, decks, flashcards):
 )
 @click.pass_obj
 def to_json(options, output, decks, copy_media_to, html_media_prefix):
-    """
-    Generate JSON version of decks.
+    """Generate JSON version of decks.
 
     Optionally, copy the media for the decks into a directory.
     """
@@ -360,12 +357,10 @@ def open_videos(options, urls):
 @click.argument("files", nargs=-1, type=click.File("r", encoding="utf_8"))
 @click.pass_obj
 def open_videos_from_file(options, files):
-    """
-    Read files containing video URLs from the arguments or stdin, download the
-    videos, process them, and pass them to the `open` command.
+    """Download videos listed in a file and open them.
 
-    You may use this without arguments if you want to enter the URLs and have
-    them opened after each line.
+    If you don’t pass any arguments this will read from stdin. Videos will be
+    downloaded and minimally processed, then opened with the open command.
     """
     if len(files) == 0:
         files = [sys.stdin]
@@ -383,8 +378,7 @@ def open_videos_from_file(options, files):
 
 
 def _find_urls(file):
-    """
-    Find URLs in a file to open.
+    """Find URLs in a file to open.
 
     Ignore blank lines and # comments. URLs are separated by whitespace.
     """

@@ -86,7 +86,7 @@ def youtube_url_to_id(url_str, url, query):
 
     try:
         path = url.path.split("/")
-        if path[0] == "" and path[1] in ("watch", "v"):
+        if path[0] == "" and path[1] in {"watch", "v"}:
             return path[2]
     except IndexError:
         # Fall through to error.
@@ -118,7 +118,7 @@ def url_to_id(url_str):
         domain = "." + url.netloc.lower()
         if domain.endswith(".youtube.com"):
             return "youtube=" + youtube_url_to_id(url_str, url, query)
-        elif domain.endswith(".youtu.be"):
+        if domain.endswith(".youtu.be"):
             return "youtube=" + youtu_be_url_to_id(url_str, url, query)
     except BadURLError:
         # Try to load the URL with yt_dlp and see what happens.
@@ -289,7 +289,7 @@ class Video:
 
                 fps = float(division.pop(0))
                 for divisor in division:
-                    fps = fps / float(divisor)
+                    fps /= float(divisor)
 
                 return fps
 
@@ -297,7 +297,7 @@ class Video:
 
     # Expects spec without whitespace
     def time_to_seconds(self, spec, on_none=None):
-        """Converts a time spec like 1:01.02 or 4F to decimal seconds."""
+        """Convert a time spec like 1:01.02 or 4F to decimal seconds."""
         if spec == "" or spec is None:
             return on_none
 
@@ -307,14 +307,13 @@ class Video:
         if spec[-1] in "Ff":
             # Frame number
             return int(spec[:-1]) / self.get_fps()
-        elif spec[-1] in "Ss":
+        if spec[-1] in "Ss":
             # Second (s), millisecond (ms), or microsecond (us) suffix
             if spec[-2] in "Mm":
                 return float(spec[:-2]) / 1_000
-            elif spec[-2] in "Uuµ":
+            if spec[-2] in "Uuµ":
                 return float(spec[:-2]) / 1_000_000
-            else:
-                return float(spec[:-1])
+            return float(spec[:-1])
 
         # [-][HH]:[MM]:[SS.mmm...]
         sign = 1
@@ -330,8 +329,7 @@ class Video:
         return sign * sum
 
     def cropdetect(self):
-        """
-        Detect black borders to crop.
+        """Detect black borders to crop.
 
         more_info_async() must be called first.
         """
@@ -344,8 +342,7 @@ class Video:
             return None
 
     async def load_more_info_async(self):
-        """
-        Load more information about the contents of the media.
+        """Load more information about the contents of the media.
 
         This returns a `dict` with keys:
           * `version`: the current version of the more_info algorithm so that
@@ -356,7 +353,6 @@ class Video:
 
         https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/cropdetect.html
         """
-
         if not self.wants_video():
             self._cached_more_info = {
                 "version": MORE_INFO_VERSION,
@@ -478,10 +474,9 @@ class Video:
     def output_ext(self):
         if self._format is not None:
             return self._format
-        elif self.is_still():
+        if self.is_still():
             return "jpeg"
-        else:
-            return "mp4"
+        return "mp4"
 
     def is_still(self):
         return (
@@ -491,27 +486,27 @@ class Video:
         )
 
     def has_audio(self):
-        """Does the raw video contain an audio stream?"""
+        """If the raw video contains an audio stream."""
         for stream in self.raw_metadata("streams"):
             if stream["codec_type"] == "audio":
                 return True
         return False
 
     def wants_audio(self):
-        """Should the output include an audio stream?"""
+        """If the output should include an audio stream."""
         return (
             not self._strip_audio and self.has_audio() and not self.is_still()
         )
 
     def has_video(self):
-        """Does the raw video contain a video stream or image?"""
+        """If the raw video contains a video stream or image."""
         for stream in self.raw_metadata("streams"):
             if stream["codec_type"] == "video":
                 return True
         return False
 
     def wants_video(self):
-        """Should the output include a video stream or image?"""
+        """If the output should include a video stream or image."""
         return not self._strip_video and self.has_video()
 
     @functools.cache
@@ -544,8 +539,7 @@ class Video:
         return path
 
     def clip_to_ffmpeg_input_options(self, clip):
-        """
-        Input options for ffmpeg based on real clip.
+        """Input options for ffmpeg based on real clip.
 
         Used by load_more_info_async() and processed_video_async().
         """
@@ -566,8 +560,7 @@ class Video:
         return options
 
     def clip_to_ffmpeg_output_options(self, clip):
-        """
-        Output options for ffmpeg based on real clip.
+        """Output options for ffmpeg based on real clip.
 
         Used by load_more_info_async() and processed_video_async().
         """
@@ -671,7 +664,7 @@ class Video:
         out_options = self.clip_to_ffmpeg_output_options(clip)
 
         stream = ffmpeg.input(str(self.raw_video()), **in_options)
-        output_streams = dict()
+        output_streams = {}
 
         if self.wants_video():
             # Video stream is not being stripped
@@ -795,7 +788,7 @@ class Video:
             if amount < 0.01:
                 # FIXME validate on parse
                 raise ValueError("Cannot slow audio by less than 0.01")
-            elif amount > 2:
+            if amount > 2:
                 twos_count = math.floor(math.log2(amount))
                 for _ in range(twos_count):
                     part = part.filter("atempo", 0.5)
@@ -825,7 +818,7 @@ class Video:
         return ffmpeg.concat(*parts, v=int(wants_video), a=int(wants_audio))
 
     def _yt_dlp(self, **kwargs):
-        """Run yt_dlp"""
+        """Run yt_dlp."""
         return yt_dlp.YoutubeDL(
             {
                 "logtostderr": True,

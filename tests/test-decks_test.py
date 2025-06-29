@@ -18,6 +18,7 @@ def read_first_line(path):
     with open(path, "r", encoding="utf_8") as input:
         for line in input:
             return line
+    return None
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/errors"))

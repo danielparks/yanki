@@ -49,13 +49,13 @@ class NoteSpec:
     def clip_or_trim(self):
         if self.config.trim is None:
             return self.clip()  # Might be None, but that’s fine
-        elif self.clip() is None:
+        if self.clip() is None:
             return self.config.trim
-        else:
-            self.error(
-                f"Clip ({self.provisional_clip_spec()!r}) is incompatible with "
-                "'trim:'."
-            )
+        self.error(
+            f"Clip ({self.provisional_clip_spec()!r}) is incompatible with "
+            "'trim:'."
+        )
+        return None
 
     @functools.cache
     def _parse_clip(self):
@@ -86,7 +86,7 @@ class NoteSpec:
 
         try:
             [direction, *rest] = input.split(maxsplit=1)
-            if direction in ["->", "<-", "<->"]:
+            if direction in {"->", "<-", "<->"}:
                 return direction, "".join(rest)  # rest is either [] or [str]
         except ValueError:
             pass
@@ -96,24 +96,23 @@ class NoteSpec:
     def provisional_clip_spec(self):
         if self.clip() is None:
             return "@0-"
-        else:
-            return f"@{'-'.join(self.clip())}"
+        return f"@{'-'.join(self.clip())}"
 
     def error(self, message):
         raise DeckSyntaxError(message, self.source_path, self.line_number)
 
     def to_dict(self):
         """Recursively convert to dict."""
-        return dict(
-            video_url=self.video_url(),
-            clip=self.clip(),
-            direction=self.direction(),
-            text=self.text(),
-            source_path=self.source_path,
-            line_number=self.line_number,
-            source=self.source,
-            config=self.config.to_dict(),
-        )
+        return {
+            "video_url": self.video_url(),
+            "clip": self.clip(),
+            "direction": self.direction(),
+            "text": self.text(),
+            "source_path": self.source_path,
+            "line_number": self.line_number,
+            "source": self.source,
+            "config": self.config.to_dict(),
+        }
 
 
 class DeckSpec:
@@ -129,8 +128,8 @@ class DeckSpec:
 
     def to_dict(self):
         """Recursively convert to dict."""
-        return dict(
-            title=self.title,
-            source_path=self.source_path,
-            note_specs=[spec.to_dict() for spec in self.note_specs],
-        )
+        return {
+            "title": self.title,
+            "source_path": self.source_path,
+            "note_specs": [spec.to_dict() for spec in self.note_specs],
+        }

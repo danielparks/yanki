@@ -170,21 +170,19 @@ class Note:
     def clip_spec(self):
         if self.spec.clip() is None:
             return "@0-"
-        elif len(self.spec.clip()) in (1, 2):
+        if len(self.spec.clip()) in {1, 2}:
             return "@" + "-".join(
                 [
                     str(self.video().time_to_seconds(t, on_none=""))
                     for t in self.spec.clip()
                 ]
             )
-        else:
-            raise ValueError(f"Invalid clip: {self.spec.clip()!r}")
+        raise ValueError(f"Invalid clip: {self.spec.clip()!r}")
 
     def text(self):
         if self.spec.text() == "":
             return self.video().title()
-        else:
-            return self.spec.text()
+        return self.spec.text()
 
 
 EXTRA_FINAL_NOTE_VARIABLES = frozenset(
@@ -279,19 +277,19 @@ class FinalNote:
 
     def to_dict(self, base_path=""):
         """Recursively convert to dict."""
-        return dict(
-            deck_id=self.deck_id,
-            note_id=self.note_id,
-            text_html=self.text_field().render_html(base_path=base_path),
-            media_html=self.media_field().render_html(base_path=base_path),
-            more_html=self.more_field().render_html(base_path=base_path),
-            media_paths=sorted(self.media_paths()),
-            direction=self.spec.direction(),
-            tags=sorted(self.spec.config.tags),
-            video_url=self.spec.video_url(),
-            source_path=self.spec.source_path,
-            line_number=self.spec.line_number,
-        )
+        return {
+            "deck_id": self.deck_id,
+            "note_id": self.note_id,
+            "text_html": self.text_field().render_html(base_path=base_path),
+            "media_html": self.media_field().render_html(base_path=base_path),
+            "more_html": self.more_field().render_html(base_path=base_path),
+            "media_paths": sorted(self.media_paths()),
+            "direction": self.spec.direction(),
+            "tags": sorted(self.spec.config.tags),
+            "video_url": self.spec.video_url(),
+            "source_path": self.spec.source_path,
+            "line_number": self.spec.line_number,
+        }
 
 
 @dataclass(frozen=True)
@@ -306,14 +304,14 @@ class FinalDeck:
         return self.deck_id
 
     def notes(self):
-        """Returns notes in the same order as the .deck file."""
+        """Get notes in the same order as the .deck file."""
         return sorted(
             self.notes_by_id.values(),
             key=lambda n: n.spec.line_number,
         )
 
     def media_paths(self):
-        """Return media paths used in this deck."""
+        """Get media paths used in this deck."""
         for note in self.notes_by_id.values():
             yield from note.media_paths()
 
@@ -348,12 +346,14 @@ class FinalDeck:
 
     def to_dict(self, base_path=""):
         """Recursively convert to dict."""
-        return dict(
-            deck_id=self.deck_id,
-            title=self.title,
-            source_path=self.source_path,
-            notes=[note.to_dict(base_path=base_path) for note in self.notes()],
-        )
+        return {
+            "deck_id": self.deck_id,
+            "title": self.title,
+            "source_path": self.source_path,
+            "notes": [
+                note.to_dict(base_path=base_path) for note in self.notes()
+            ],
+        }
 
 
 class Deck:
@@ -364,7 +364,7 @@ class Deck:
     ):
         self.spec = spec
         self.video_options = video_options
-        self.notes_by_id = dict()
+        self.notes_by_id = {}
         for note_spec in spec.note_specs:
             self.add_note(Note(note_spec, video_options=video_options))
 
@@ -373,7 +373,7 @@ class Deck:
             final_note = await note.finalize_async(deck_id)
             collection[final_note.note_id] = final_note
 
-        final_notes = dict()
+        final_notes = {}
         async with asyncio.TaskGroup() as group:
             for note in self.notes():
                 group.create_task(
@@ -398,7 +398,7 @@ class Deck:
         return self.spec.source_path
 
     def notes(self):
-        """Returns notes in the same order as the .deck file."""
+        """Get notes in the same order as the .deck file."""
         return sorted(
             self.notes_by_id.values(),
             key=lambda n: n.spec.line_number,

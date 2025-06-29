@@ -34,8 +34,9 @@ NOTE_VARIABLES = frozenset(
 
 
 def find_invalid_format(format, variables):
-    """
-    Try `format` and return `KeyError` if it uses anything not in `variables`.
+    """Validate `format`.
+
+    Returns `KeyError` if `format` uses anything not in `variables`.
     """
     try:
         format.format(**dict.fromkeys(variables, "value"))
@@ -46,7 +47,7 @@ def find_invalid_format(format, variables):
 
 @functools.cache
 def note_config_directives():
-    return set([field.name for field in dataclasses.fields(NoteConfig)])
+    return {field.name for field in dataclasses.fields(NoteConfig)}
 
 
 @dataclasses.dataclass()
@@ -56,8 +57,8 @@ class NoteConfig:
     more: Field = field(default_factory=Field)
     overlay_text: str = ""
     tags: set[str] = field(default_factory=set)
-    slow: None | tuple[str, None | str, float] = None
-    trim: None | tuple[str, str] = None
+    slow: tuple[str, str | None, float] | None = None
+    trim: tuple[str, str] | None = None
     audio: str = "include"
     video: str = "include"
     note_id: str = "{deck_id} {url} {clip}"
@@ -214,18 +215,18 @@ class NoteConfig:
 
     def to_dict(self):
         """Recursively convert to dict."""
-        return dict(
-            crop=self.crop,
-            format=self.format,
-            more=self.more.render_html(),
-            overlay_text=self.overlay_text,
-            tags=sorted(self.tags),
-            slow=self.slow,
-            trim=self.trim,
-            audio=self.audio,
-            video=self.video,
-            note_id=self.note_id,
-        )
+        return {
+            "crop": self.crop,
+            "format": self.format,
+            "more": self.more.render_html(),
+            "overlay_text": self.overlay_text,
+            "tags": sorted(self.tags),
+            "slow": self.slow,
+            "trim": self.trim,
+            "audio": self.audio,
+            "video": self.video,
+            "note_id": self.note_id,
+        }
 
 
 NoteConfigFrozen = make_frozen(NoteConfig)
