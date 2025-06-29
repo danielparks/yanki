@@ -25,7 +25,7 @@ class NoteSpec:
             "url": self.video_url(),
             "clip": self.provisional_clip_spec(),
             "direction": self.direction(),
-            "media": " ".join([self.video_url(), self.provisional_clip_spec()]),
+            "media": f"{self.video_url()} {self.provisional_clip_spec()}",
             "text": self.text(),
             "line_number": self.line_number,
             "source_path": self.source_path,
