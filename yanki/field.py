@@ -1,7 +1,7 @@
 import functools
 import html
-import os
 import re
+from pathlib import Path
 from urllib.parse import quote
 
 import docutils.core
@@ -57,7 +57,7 @@ class Fragment:
     def render_anki(self):
         return self.render_html("")
 
-    def render_html(self, base_path=""):
+    def render_html(self, _base_url=""):
         return raw_to_html(self.raw)
 
     def __str__(self):
@@ -68,14 +68,14 @@ class Fragment:
 
 
 class MediaFragment(Fragment):
-    def __init__(self, path, media):
+    def __init__(self, path: Path, media):
         self.path = path
         self._media = media
 
     def file_name(self):
-        return os.path.basename(self.path)
+        return self.path.name
 
-    def path_in_base(self, base_path):
+    def path_in_base(self, _base_url):
         return
 
     def anki_filename(self):
@@ -85,15 +85,15 @@ class MediaFragment(Fragment):
         # &#x27;, which then gets transformed to &amp;%23x27; at some point.
         return self.file_name()
 
-    def html_path_in_base(self, base_path):
-        """Get the path relative to base_path, and encoded for HTML.
+    def html_path_in_base(self, base_url: str):
+        """Get the path relative to base_url, and encoded for HTML.
 
-        base_path may be a URL or a relative path. It must already be URL
-        encoded, but must not escaped for HTML.
+        base_url may be a absolute or relative URL.
         """
-        return html.escape(
-            os.path.join(base_path, quote(self.file_name(), encoding="utf_8"))
-        )
+        quoted_file_name = quote(self.file_name(), encoding="utf_8")
+        if base_url == "":
+            return html.escape(quoted_file_name)
+        return html.escape(f"{base_url}/{quoted_file_name}")
 
     def media(self):
         return [self._media]
@@ -106,18 +106,18 @@ class ImageFragment(MediaFragment):
     def render_anki(self):
         return f'<img src="{self.anki_filename()}" />'
 
-    def render_html(self, base_path=""):
-        return f'<img src="{self.html_path_in_base(base_path)}" />'
+    def render_html(self, base_url=""):
+        return f'<img src="{self.html_path_in_base(base_url)}" />'
 
 
 class VideoFragment(MediaFragment):
     def render_anki(self):
         return f"[sound:{self.anki_filename()}]"
 
-    def render_html(self, base_path="."):
+    def render_html(self, base_url="."):
         return (
             "<video controls playsinline "
-            f'src="{self.html_path_in_base(base_path)}"></video>'
+            f'src="{self.html_path_in_base(base_url)}"></video>'
         )
 
 
@@ -141,9 +141,9 @@ class Field:
     def render_anki(self):
         return "".join([fragment.render_anki() for fragment in self.fragments])
 
-    def render_html(self, base_path=""):
+    def render_html(self, base_url=""):
         return "".join(
-            [fragment.render_html(base_path) for fragment in self.fragments]
+            [fragment.render_html(base_url) for fragment in self.fragments]
         )
 
     def __str__(self):

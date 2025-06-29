@@ -8,7 +8,6 @@ import re
 import shlex
 from dataclasses import dataclass
 from multiprocessing import cpu_count
-from os.path import getmtime
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -96,7 +95,7 @@ def youtube_url_to_id(url_str, url, query):
 
 
 # URLs like http://youtu.be/lalOy8Mbfdc
-def youtu_be_url_to_id(url_str, url, query):
+def youtu_be_url_to_id(url_str, url, _query):
     """Get YouTube video ID, e.g. lalOy8Mbfdc, from a youtu.be URL."""
     try:
         path = url.path.split("/")
@@ -141,7 +140,7 @@ class Video:
         self,
         url,
         options,
-        working_dir=Path("."),
+        working_dir=Path(),
         logger=LOGGER,
     ):
         self.url = url
@@ -267,7 +266,10 @@ class Video:
                 return get_key_path(self._raw_metadata, key_path)
 
             metadata_cache_path = self.raw_metadata_cache_path()
-            if getmtime(metadata_cache_path) >= getmtime(self.raw_video()):
+            if (
+                metadata_cache_path.stat().st_mtime
+                >= self.raw_video().stat().st_mtime
+            ):
                 # Metadata isn’t older than raw video.
                 with metadata_cache_path.open("r", encoding="utf_8") as file:
                     self._raw_metadata = json.load(file)
@@ -301,7 +303,7 @@ class Video:
         if spec == "" or spec is None:
             return on_none
 
-        if isinstance(spec, float) or isinstance(spec, int):
+        if isinstance(spec, (float, int)):
             return float(spec)
 
         if spec[-1] in "Ff":
@@ -429,12 +431,11 @@ class Video:
     def clip(self, start_spec, end_spec):
         start = self.time_to_seconds(start_spec, on_none=0)
         end = self.time_to_seconds(end_spec, on_none=None)
-        if end is not None:
-            if end - start <= 0:
-                raise ValueError(
-                    "Cannot clip video to 0 or fewer seconds "
-                    f"({start_spec!r} to {end_spec!r})"
-                )
+        if end is not None and end - start <= 0:
+            raise ValueError(
+                "Cannot clip video to 0 or fewer seconds "
+                f"({start_spec!r} to {end_spec!r})"
+            )
         self._clip = (start, end)
 
     def snapshot(self, time_spec):
@@ -734,7 +735,7 @@ class Video:
         return stdout, stderr
 
     # Expect { 'v': video?, 'a' : audio? } depending on if -vn and -an are set.
-    def _try_apply_slow(self, streams):  # noqa: PLR0912 (too many branches)
+    def _try_apply_slow(self, streams):  # noqa: C901 PLR0912 (FIXME complex)
         if self._slow is None:
             return streams
 

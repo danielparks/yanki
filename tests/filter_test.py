@@ -39,29 +39,29 @@ def filter_deck_tags(include=frozenset(), exclude=frozenset()):
 
 
 def test_filters():
-    assert "ABCDEF" == filter_deck_tags()
-    assert "ABC" == filter_deck_tags(include=["abc"])
-    assert "DEF" == filter_deck_tags(exclude=["abc"])
-    assert "" == filter_deck_tags(include=["abc"], exclude=["abc"])
-    assert "ABC" == filter_deck_tags(include=["abc"], exclude=["def"])
-    assert "A" == filter_deck_tags(include=["abc"], exclude=["bcd"])
+    assert filter_deck_tags() == "ABCDEF"
+    assert filter_deck_tags(include=["abc"]) == "ABC"
+    assert filter_deck_tags(exclude=["abc"]) == "DEF"
+    assert filter_deck_tags(include=["abc"], exclude=["abc"]) == ""
+    assert filter_deck_tags(include=["abc"], exclude=["def"]) == "ABC"
+    assert filter_deck_tags(include=["abc"], exclude=["bcd"]) == "A"
 
 
 def test_multiple_include():
-    assert "BC" == filter_deck_tags(include=["abc", "bcd"])
-    assert "C" == filter_deck_tags(include=["abc", "bcd"], exclude=["b"])
+    assert filter_deck_tags(include=["abc", "bcd"]) == "BC"
+    assert filter_deck_tags(include=["abc", "bcd"], exclude=["b"]) == "C"
 
 
 def test_multiple_exclude():
-    assert "EF" == filter_deck_tags(exclude=["abc", "bcd"])
-    assert "E" == filter_deck_tags(include=["e"], exclude=["abc", "bcd"])
+    assert filter_deck_tags(exclude=["abc", "bcd"]) == "EF"
+    assert filter_deck_tags(include=["e"], exclude=["abc", "bcd"]) == "E"
 
 
 def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
     decks = DeckSource(
         files=[
-            open(deck_2_path, "r", encoding="utf_8"),
-            open(deck_1_path, "r", encoding="utf_8"),
+            deck_2_path.open("r", encoding="utf_8"),
+            deck_1_path.open("r", encoding="utf_8"),
         ]
     ).read_sorted(VideoOptions(cache_path))
 
@@ -73,8 +73,8 @@ def test_read_decks_sorted(deck_1_path, deck_2_path, cache_path):
 def test_read_final_decks_sorted(deck_1_path, deck_2_path, cache_path):
     decks = DeckSource(
         files=[
-            open(deck_2_path, "r", encoding="utf_8"),
-            open(deck_1_path, "r", encoding="utf_8"),
+            deck_2_path.open("r", encoding="utf_8"),
+            deck_1_path.open("r", encoding="utf_8"),
         ]
     ).read_final_sorted(VideoOptions(cache_path))
 

@@ -1,4 +1,3 @@
-import os
 import shutil
 import sys
 from collections import OrderedDict
@@ -27,7 +26,7 @@ class DeckTree:
         return self
 
 
-def write_html(output_path, cache_path, decks, flashcards=False):
+def write_html(output_path, cache_path, decks, *, flashcards=False):
     """Write HTML version of decks to a path."""
     if output_path == cache_path:
         # Serving HTML from the cache; no need to copy media.
@@ -82,7 +81,7 @@ def write_html(output_path, cache_path, decks, flashcards=False):
 
 
 def write_tree_indices(
-    tree, output_path, output_media_path, title_path=None, flashcards=False
+    tree, output_path, output_media_path, *, title_path=None, flashcards=False
 ):
     if title_path is None:
         title_path = []
@@ -136,7 +135,7 @@ def write_tree_indices(
             child,
             output_path,
             output_media_path,
-            title_path,
+            title_path=title_path,
             flashcards=flashcards,
         )
         for child in tree.children.values()
@@ -185,7 +184,7 @@ def generate_index_html(deck_link_html, child_html, title_path):
 
 
 def write_deck_files(
-    html_path, output_media_path, deck, title_path, flashcards=False
+    html_path, output_media_path, deck, title_path, *, flashcards=False
 ):
     html_path.write_text(
         htmlize_deck(deck, title_path, path_prefix="", flashcards=flashcards),
@@ -195,13 +194,13 @@ def write_deck_files(
     # Copy media to output.
     if output_media_path is not None:
         for path in deck.media_paths():
-            output_path = output_media_path / os.path.basename(path)
+            output_path = output_media_path / Path(path).name
             shutil.copy2(path, output_path)
             # Make sure media is accessible by the web server.
             output_path.chmod(0o644)
 
 
-def htmlize_deck(deck, title_path, path_prefix="", flashcards=False):
+def htmlize_deck(deck, title_path, *, path_prefix="", flashcards=False):
     if deck.title is None:
         sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
@@ -276,7 +275,7 @@ def htmlize_deck(deck, title_path, path_prefix="", flashcards=False):
     """.replace("\n    ", "\n").lstrip()
 
 
-def title_html(title_path, add_links=True, final_link=True):
+def title_html(title_path, *, add_links=True, final_link=True):
     if not title_path:
         return ""
     if not add_links:
@@ -308,12 +307,12 @@ def ensure_static_link(cache_path: Path):
 
     try:
         static_path.unlink()
-    except Exception as e:
+    except OSError as e:
         sys.exit(f"Error removing {static_path} to replace with symlink: {e}")
 
     try:
         static_path.symlink_to(web_files_path)
-    except Exception as e:
+    except OSError as e:
         sys.exit(f"Error symlinking {static_path} to {web_files_path}: {e}")
 
 
@@ -322,5 +321,5 @@ def path_to_web_files() -> Path:
 
 
 def static_url(path) -> str:
-    mtime = os.path.getmtime(path_to_web_files() / path)
+    mtime = (path_to_web_files() / path).stat().st_mtime
     return f"static/{path}?{mtime}"

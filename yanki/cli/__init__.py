@@ -2,8 +2,6 @@ import asyncio
 import functools
 import json
 import logging
-import os
-import os.path
 import re
 import shutil
 import sys
@@ -52,7 +50,7 @@ WritableFilePath = functools.partial(
 global_log_debug = False
 
 
-def main():
+def main():  # noqa: C901 (complex)
     exit_code = 0
     try:
         cli.main(standalone_mode=False)
@@ -145,7 +143,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     elif verbose == 1:
         level = logging.INFO
     else:
-        level = logging.WARN
+        level = logging.WARNING
 
     handler = colorlog.StreamHandler()
     handler.setFormatter(
@@ -297,7 +295,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
     Optionally, copy the media for the decks into a directory.
     """
     decks = [
-        deck.to_dict(base_path=html_media_prefix)
+        deck.to_dict(base_url=html_media_prefix)
         for deck in decks.read_final_sorted(options)
     ]
 
@@ -308,8 +306,7 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
             for note in deck["notes"]:
                 new_paths = []
                 for source in note["media_paths"]:
-                    file_name = os.path.basename(source)
-                    destination = copy_media_to / file_name
+                    destination = copy_media_to / Path(source).name
                     LOGGER.info(f"Copying media to {destination}")
                     shutil.copy2(source, destination)
                     destination.chmod(0o644)

@@ -41,18 +41,22 @@ preview = true
 select = ["ALL"]
 ignore = [
     "A",        # I don’t mind shadowing built-ins.
+    "ANN",      # FIXME? type annotations.
     "B019",     # FIXME: `functools.cache` can leak memory.
     "COM812",   # Conflicts with formatter.
+    "CPY",      # I don’t want copyright notices at the top of every file.
     "D1",       # FIXME: Undocumented public items.
     "DOC",      # FIXME: Undocumented returns, raises, etc.
     "EM",       # I don’t like the `msg = ...; raise Error(msg)` syntax.
     "FIX",      # I like FIXME comments for low-priority stuff.
+    "G004",     # I prefer f-strings for logging for clarity.
     "PLC1901",  # Explicit comparisons to `""` are often clearer.
     "PLR0904",  # FIXME? Too many public methods.
     "PLR0911",  # I don’t care about too many returns.
     "PLR2004",  # “Magic” values often easier to understand without a CONSTANT.
     "PLR6301",  # Too many false positive (methods that don’t need `self`).
     "PLW2901",  # I like to shadow `for` loop variables.
+    "PT011",    # `pytest.raises(...)` is too broad: Too many false positives.
     "S404",     # I use `subprocess`.
     "S603",     # This seems to trigger on all calls to `subprocess.run`.
     "T20",      # We use `print()`.
@@ -62,20 +66,6 @@ ignore = [
 
     # I frequently use characters that trigger these lints like "’"  and "❯":
     "RUF001", "RUF002", "RUF003",
-
-    # Rule groups to fix or document:
-    "ANN",
-    "ARG",
-    "BLE",
-    "C90",
-    "CPY",
-    "FBT",
-    "FLY",
-    "G",
-    "LOG",
-    "PT",
-    "PTH",
-    "SIM",
 ]
 
 [tool.ruff.lint.per-file-ignores]
