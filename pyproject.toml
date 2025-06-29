@@ -41,6 +41,7 @@ preview = true
 select = ["ALL"]
 ignore = [
     "A",        # I don’t mind shadowing built-ins.
+    "ANN",      # FIXME? type annotations.
     "B019",     # FIXME: `functools.cache` can leak memory.
     "COM812",   # Conflicts with formatter.
     "CPY",      # I don’t want copyright notices at the top of every file.
@@ -66,7 +67,6 @@ ignore = [
     "RUF001", "RUF002", "RUF003",
 
     # Rule groups to fix or document:
-    "ANN",
     "FLY",
     "PT",
     "PTH",
