@@ -75,6 +75,7 @@ class YankiRunner(ScriptRunner):
         rootdir: Path,
         bin_path: Path,
         cache_path: Path,
+        *,
         print_result: bool = True,
     ):
         super().__init__(launch_mode, rootdir, print_result)
@@ -130,7 +131,10 @@ def yanki(
     bin_path: Path,
     cache_path: Path,
 ) -> YankiRunner:
-    print_result = not request.config.getoption("--hide-run-results")
     return YankiRunner(
-        script_launch_mode, script_cwd, bin_path, cache_path, print_result
+        script_launch_mode,
+        script_cwd,
+        bin_path,
+        cache_path,
+        print_result=not request.config.getoption("--hide-run-results"),
     )
