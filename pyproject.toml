@@ -1,10 +1,21 @@
 [project]
 name = "yanki"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Build Anki decks from text files containing YouTube URLs."
-authors = [{name = "Daniel Parks", email = "dp+git@oxidized.org"}]
+authors = [{name = "Daniel Parks", email = "oss-yanki@demonhorse.org"}]
 readme = "README.md"
 requires-python = ">= 3.11"
+license = "MIT OR Apache-2.0"
+license-files = ["LICENSE-*"]
+keywords = ["Anki", "flashcard"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Education",
+]
+
 dependencies = [
     "yt-dlp >=2024.11.4",
     "genanki >=0.13.1,<0.14",
@@ -23,6 +34,10 @@ dev = [
     "pytest-console-scripts>=1.4.1,<2",
     "psutil>=6.1.1,<7",
 ]
+
+[project.urls]
+Homepage = "https://github.com/danielparks/yanki"
+Issues = "https://github.com/danielparks/yanki/issues"
 
 [project.scripts]
 yanki = "yanki.cli:main"
@@ -79,6 +94,9 @@ convention = "google"
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
+
+[tool.hatch.version]
+path = "yanki/__version__.py"
 
 [build-system]
 requires = ["hatchling"]
