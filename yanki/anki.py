@@ -277,19 +277,19 @@ class FinalNote:
 
     def to_dict(self, base_path=""):
         """Recursively convert to dict."""
-        return dict(
-            deck_id=self.deck_id,
-            note_id=self.note_id,
-            text_html=self.text_field().render_html(base_path=base_path),
-            media_html=self.media_field().render_html(base_path=base_path),
-            more_html=self.more_field().render_html(base_path=base_path),
-            media_paths=sorted(self.media_paths()),
-            direction=self.spec.direction(),
-            tags=sorted(self.spec.config.tags),
-            video_url=self.spec.video_url(),
-            source_path=self.spec.source_path,
-            line_number=self.spec.line_number,
-        )
+        return {
+            "deck_id": self.deck_id,
+            "note_id": self.note_id,
+            "text_html": self.text_field().render_html(base_path=base_path),
+            "media_html": self.media_field().render_html(base_path=base_path),
+            "more_html": self.more_field().render_html(base_path=base_path),
+            "media_paths": sorted(self.media_paths()),
+            "direction": self.spec.direction(),
+            "tags": sorted(self.spec.config.tags),
+            "video_url": self.spec.video_url(),
+            "source_path": self.spec.source_path,
+            "line_number": self.spec.line_number,
+        }
 
 
 @dataclass(frozen=True)
@@ -346,12 +346,14 @@ class FinalDeck:
 
     def to_dict(self, base_path=""):
         """Recursively convert to dict."""
-        return dict(
-            deck_id=self.deck_id,
-            title=self.title,
-            source_path=self.source_path,
-            notes=[note.to_dict(base_path=base_path) for note in self.notes()],
-        )
+        return {
+            "deck_id": self.deck_id,
+            "title": self.title,
+            "source_path": self.source_path,
+            "notes": [
+                note.to_dict(base_path=base_path) for note in self.notes()
+            ],
+        }
 
 
 class Deck:
@@ -362,7 +364,7 @@ class Deck:
     ):
         self.spec = spec
         self.video_options = video_options
-        self.notes_by_id = dict()
+        self.notes_by_id = {}
         for note_spec in spec.note_specs:
             self.add_note(Note(note_spec, video_options=video_options))
 
@@ -371,7 +373,7 @@ class Deck:
             final_note = await note.finalize_async(deck_id)
             collection[final_note.note_id] = final_note
 
-        final_notes = dict()
+        final_notes = {}
         async with asyncio.TaskGroup() as group:
             for note in self.notes():
                 group.create_task(

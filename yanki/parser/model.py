@@ -103,16 +103,16 @@ class NoteSpec:
 
     def to_dict(self):
         """Recursively convert to dict."""
-        return dict(
-            video_url=self.video_url(),
-            clip=self.clip(),
-            direction=self.direction(),
-            text=self.text(),
-            source_path=self.source_path,
-            line_number=self.line_number,
-            source=self.source,
-            config=self.config.to_dict(),
-        )
+        return {
+            "video_url": self.video_url(),
+            "clip": self.clip(),
+            "direction": self.direction(),
+            "text": self.text(),
+            "source_path": self.source_path,
+            "line_number": self.line_number,
+            "source": self.source,
+            "config": self.config.to_dict(),
+        }
 
 
 class DeckSpec:
@@ -128,8 +128,8 @@ class DeckSpec:
 
     def to_dict(self):
         """Recursively convert to dict."""
-        return dict(
-            title=self.title,
-            source_path=self.source_path,
-            note_specs=[spec.to_dict() for spec in self.note_specs],
-        )
+        return {
+            "title": self.title,
+            "source_path": self.source_path,
+            "note_specs": [spec.to_dict() for spec in self.note_specs],
+        }

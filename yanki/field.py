@@ -151,4 +151,4 @@ class Field:
         return self.render_anki()
 
     def __repr__(self):
-        return repr([fragment for fragment in self.fragments])
+        return repr(list(self.fragments))

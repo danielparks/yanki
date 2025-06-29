@@ -56,7 +56,7 @@ def write_html(output_path, cache_path, decks, flashcards=False):
         return
 
     # Figure out file names for decks.
-    decks_by_path = dict()
+    decks_by_path = {}
     deck_tree = DeckTree()
     for deck in decks:
         if deck.title is None:

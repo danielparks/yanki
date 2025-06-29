@@ -669,7 +669,7 @@ class Video:
         out_options = self.clip_to_ffmpeg_output_options(clip)
 
         stream = ffmpeg.input(str(self.raw_video()), **in_options)
-        output_streams = dict()
+        output_streams = {}
 
         if self.wants_video():
             # Video stream is not being stripped
