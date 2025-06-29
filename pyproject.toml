@@ -67,7 +67,6 @@ ignore = [
     "FBT",
     "FLY",
     "G",
-    "INP",
     "LOG",
     "PIE",
     "PT",
@@ -87,8 +86,10 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-# assert is fine in tests.
-"tests/*" = ["S101"]
+"tests/*" = [
+  "INP001", # Don't care about implicit namespace in tests.
+  "S101",   # assert is fine in tests.
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
