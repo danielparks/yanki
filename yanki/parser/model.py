@@ -86,7 +86,7 @@ class NoteSpec:
 
         try:
             [direction, *rest] = input.split(maxsplit=1)
-            if direction in ["->", "<-", "<->"]:
+            if direction in {"->", "<-", "<->"}:
                 return direction, "".join(rest)  # rest is either [] or [str]
         except ValueError:
             pass

@@ -86,7 +86,7 @@ def youtube_url_to_id(url_str, url, query):
 
     try:
         path = url.path.split("/")
-        if path[0] == "" and path[1] in ("watch", "v"):
+        if path[0] == "" and path[1] in {"watch", "v"}:
             return path[2]
     except IndexError:
         # Fall through to error.

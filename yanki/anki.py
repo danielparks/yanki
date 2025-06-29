@@ -170,7 +170,7 @@ class Note:
     def clip_spec(self):
         if self.spec.clip() is None:
             return "@0-"
-        if len(self.spec.clip()) in (1, 2):
+        if len(self.spec.clip()) in {1, 2}:
             return "@" + "-".join(
                 [
                     str(self.video().time_to_seconds(t, on_none=""))
