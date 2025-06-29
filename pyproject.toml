@@ -44,11 +44,16 @@ ignore = [
     "B019",     # FIXME: `functools.cache` can leak memory.
     "COM812",   # Conflicts with formatter.
     "D1",       # FIXME: Undocumented public items.
+    "DOC",      # FIXME: Undocumented returns, raises, etc.
     "EM",       # I don’t like the `msg = ...; raise Error(msg)` syntax.
     "FIX",      # I like FIXME comments for low-priority stuff.
-    "PLR0911",  # Ignore too many returns.
+    "PLC1901",  # Explicit comparisons to `""` are often clearer.
+    "PLR0904",  # FIXME? Too many public methods.
+    "PLR0911",  # I don’t care about too many returns.
     "PLR2004",  # “Magic” values often easier to understand without a CONSTANT.
+    "PLR6301",  # Too many false positive (methods that don’t need `self`).
     "PLW2901",  # I like to shadow `for` loop variables.
+    "S404",     # I use `subprocess`.
     "S603",     # This seems to trigger on all calls to `subprocess.run`.
     "T20",      # We use `print()`.
     "TD",       # I prefer my FIXME format.
@@ -71,13 +76,6 @@ ignore = [
     "PT",
     "PTH",
     "SIM",
-
-    # Preview rules to investigate:
-    "DOC",
-    "PLC1901",
-    "PLR0904",
-    "PLR6301",
-    "S404",
 ]
 
 [tool.ruff.lint.per-file-ignores]
