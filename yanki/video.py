@@ -28,11 +28,14 @@ LOGGER = logging.getLogger(__name__)
 
 STILL_FORMATS = frozenset(["png", "jpeg", "jpg"])
 FILENAME_ILLEGAL_CHARS = '/"[]:'
-MORE_INFO_VERSION = 2
+MORE_INFO_VERSION = 3
 
 # For parsing ffmpeg output.
 CROPDETECT_RE = re.compile(
     rb"\[Parsed_cropdetect_.* t:(\d+\.\d+) .* crop=(\S+)"
+)
+SCDET_RE = re.compile(
+    rb"\[scdet .* lavfi\.scd\.score: (\d+\.\d+), lavfi\.scd\.time: (\d+\.\d+)"
 )
 
 
@@ -343,6 +346,35 @@ class Video:
         except (IndexError, KeyError, TypeError):
             return None
 
+    def auto_trim(self):
+        """Detect lack of movement at start and end of video and trim.
+
+        more_info_async() must be called first.
+        """
+        more = self.more_info()
+        if more["scdet"] is None or len(more["scdet"]) < 2:
+            return None
+
+        first_move = 0
+        last_time = 0
+        # If no movement is found, nothing will be trimmed.
+        for timestamp, score in more["scdet"]:
+            if score >= 0.2:
+                first_move = last_time
+                break
+            last_time = timestamp
+
+        last_move = None
+        last_time = None
+        # If no movement is found, nothing will be trimmed.
+        for timestamp, score in reversed(more["scdet"]):
+            if score >= 0.2:
+                last_move = last_time
+                break
+            last_time = timestamp
+
+        return (first_move, last_move)
+
     async def load_more_info_async(self):
         """Load more information about the contents of the media.
 
@@ -352,38 +384,60 @@ class Video:
           * `cropdetect`:
             * `[(time, "crop"), ...]`, e.g. `[(0.067, "1920:1072:0:4"), ...]`
             * `None`: the video stream was stripped
+          * `scdet`:
+            * `[(time, score), ...]`, e.g. `[(0.033, "0.777"), ...]`
+            * `None`: the video stream was stripped or clip isn’t `auto`
 
         https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/cropdetect.html
+        https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/scdet.html
         """
         if not self.wants_video():
             self._cached_more_info = {
                 "version": MORE_INFO_VERSION,
                 "cropdetect": None,
+                "scdet": None,
             }
             return self._cached_more_info
 
-        # Only process the part of the media we care about.
-        in_options = self.clip_to_ffmpeg_input_options(self._clip)
-        out_options = self.clip_to_ffmpeg_output_options(self._clip)
+        if self._clip == "auto":
+            in_options = {}
+            out_options = {}
+        else:
+            # Only process the part of the media we care about.
+            in_options = self.clip_to_ffmpeg_input_options(self._clip)
+            out_options = self.clip_to_ffmpeg_output_options(self._clip)
 
         video = ffmpeg.input(str(self.raw_video()), **in_options)["v"]
         video = video.filter("cropdetect", round=2)
+
+        # Only detect scene transitions if clip is auto or None.
+        if self._clip == "auto" or self._clip is None:
+            video = video.filter("scdet", threshold=0)
+            scdet = []
+        else:
+            # This will raise AttributeError if we detect scdet results below.
+            scdet = None
 
         (_, err) = await self.run_async(
             video.output("-", format="null", **out_options)
         )
         # FIXME use metadata=mode=print?
 
-        # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
-        cropdetect = [
-            (float(matches[1]), matches[2].decode("utf_8"))
-            for line in err.split(b"\n")
-            if (matches := CROPDETECT_RE.search(line))
-        ]
+        cropdetect = []
+        for line in err.split(b"\n"):
+            if matches := CROPDETECT_RE.search(line):
+                # (time, "crop"), e.g. (2.369, "1920:1072:0:4")
+                cropdetect.append(
+                    (float(matches[1]), matches[2].decode("utf_8"))
+                )
+            elif matches := SCDET_RE.search(line):
+                # (time, score), e.g. (2.369, 0.008):
+                scdet.append((float(matches[2]), float(matches[1])))
 
         self._cached_more_info = {
             "version": MORE_INFO_VERSION,
             "cropdetect": cropdetect,
+            "scdet": scdet,
         }
         return self._cached_more_info
 
@@ -437,6 +491,9 @@ class Video:
                 f"({start_spec!r} to {end_spec!r})"
             )
         self._clip = (start, end)
+
+    def clip_auto(self):
+        self._clip = "auto"
 
     def snapshot(self, time_spec):
         self._clip = self.time_to_seconds(time_spec, on_none=None)
@@ -581,6 +638,8 @@ class Video:
         match self._clip:
             case None | (0, None):
                 return "none"
+            case "auto":
+                return "auto"
             case float(snapshot_time):
                 return snapshot_time
             case (float(_) | int(0) as start, None | float(_) as end):
@@ -598,6 +657,9 @@ class Video:
         match self._clip:
             case None:
                 return None
+            case "auto":
+                await self.more_info_async()
+                return self.auto_trim()
             case float(snapshot_time):
                 return snapshot_time
             case (float(_) | int(0) as start, None | float(_) as end):
