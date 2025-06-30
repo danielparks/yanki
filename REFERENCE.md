@@ -1,6 +1,19 @@
 # Deck file format reference
 
-A deck file is composed to **config** lines and **note** lines.
+A deck file is composed of [config lines](#config-lines) and [notes](#notes):
+
+```yaml
+# These are config lines. They set configuration for the deck and for the
+# generated flash cards.
+title: Basic ASL phrases
+more: md:From [Lifeprint](https://www.lifeprint.com/)
+audio: strip
+
+# These are notes. They represent flashcards.
+https://www.youtube.com/watch?v=FHPszRvL9pg What is your name?
+https://www.youtube.com/watch?v=zW8cpOVeKZ4 Are you deaf?
+https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
+```
 
 ## Notes
 
@@ -230,8 +243,8 @@ note_id: Really Cool Cards {url} {clip}
 
 There are a few other configuration options:
 
-  * `format:`: The file extension of the media to generate (default: `mp4`)
-  * `overlay_text:`: Set overlay text to appear on the video
-  * `tags:`: Set tags for notes (divided by spaces)
-  * `audio:`: `include` (default) or `strip` (remove from media)
-  * `video:`: `include` (default) or `strip` (remove from media)
+  * `format:` — The file extension of the media to generate (default: `mp4`)
+  * `overlay_text:` — Set overlay text to appear on the video
+  * `tags:` — Set tags for notes (divided by spaces)
+  * `audio:` — `include` (default) or `strip` (remove from media)
+  * `video:` — `include` (default) or `strip` (remove from media)
