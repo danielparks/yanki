@@ -170,7 +170,7 @@ The above generates two cards:
 * _video.mp4_ → “`text`” “`added context`”
 * “`text`” → _video.mp4_ “`added context`”
 
-You may set content in three formats:
+You may set content in four formats:
 
 * *No prefix*, e.g. `more: some text`. This converts URLs into links and
   HTML-escapes the content. Appropriate for plain text
