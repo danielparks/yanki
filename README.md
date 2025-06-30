@@ -7,11 +7,12 @@ any other source [yt-dlp] supports.
 ## Installation
 
 You will need `ffmpeg` installed to use Yanki. On macOS, install it from
-[ffmpeg.org] or [`brew`]. On Linux or Windows, try installing [yt-dlp’s ffmpeg].
+[ffmpeg.org] or with [`brew install ffmpeg`]. On Linux or Windows, try
+installing [yt-dlp’s ffmpeg].
 
-I recommend using [`uv`] to run Yanki. It can be [installed][uv install] a
-number of ways, but it’s probably simplest to install it through your package
-manager, e.g. [`brew`] on macOS.
+I recommend using [`uvx`] run Yanki. `uvx` is part of [uv], which can be
+[installed][uv install] a number of ways, but it’s probably simplest to install
+`uv` through your package manager, e.g. [`brew install uv`] on macOS.
 
 ## Quick start
 
@@ -31,13 +32,13 @@ On macOS and some Linux distributions, you can make `yanki` open Anki and start
 the import of the new deck:
 
 ```
-uv run yanki -v update basic.deck
+uvx yanki -v update basic.deck
 ```
 
 Otherwise, you can make it build an `.apkg` and then import that into Anki:
 
 ```
-uv run yanki -v build -o basic.apkg basic.deck
+uvx yanki -v build -o basic.apkg basic.deck
 ```
 
 ## Deck file format
@@ -59,17 +60,17 @@ replace the Lifeprint lessons and vocabulary pages.
 
 ## Command usage
 
-This is a Python package that can be run with [`uv`]. The most common usage is
+This is a Python package that can be run with [`uvx`]. The most common usage is
 probably just to build your decks and import them to Anki. That’s as simple as:
 
 ```
-uv run yanki update *.deck
+uvx yanki update *.deck
 ```
 
 You can see all the commands and options with `--help`:
 
 ```
-❯ uv run yanki --help
+❯ uvx yanki --help
 Usage: yanki [OPTIONS] COMMAND [ARGS]...
 
   Build Anki decks from text files containing YouTube URLs.
@@ -110,9 +111,11 @@ Vicars][LP].
 [Anki]: https://apps.ankiweb.net
 [yt-dlp]: https://github.com/yt-dlp/yt-dlp
 [ffmpeg.org]: https://www.ffmpeg.org
-[`brew`]: https://brew.sh
+[`brew install ffmpeg`]: https://formulae.brew.sh/formula/ffmpeg#default
+[`brew install uv`]: https://formulae.brew.sh/formula/uv#default
 [yt-dlp’s ffmpeg]: https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds
-[`uv`]: https://docs.astral.sh/uv/
+[uv]: https://docs.astral.sh/uv/
+[`uvx`]: https://docs.astral.sh/uv/guides/tools/#running-tools
 [uv install]: https://docs.astral.sh/uv/getting-started/installation/
 [REFERENCE.adoc]: REFERENCE.adoc
 [asl]: asl#readme
