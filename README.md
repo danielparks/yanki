@@ -76,13 +76,14 @@ Usage: yanki [OPTIONS] COMMAND [ARGS]...
   Build Anki decks from text files containing YouTube URLs.
 
 Options:
-  -v, --verbose
+  -v, --verbose                 Be more verbose. May be passed up to 3 times.
   --cache DIRECTORY             Path to cache for downloads and media files.
                                 [env var: YANKI_CACHE; default:
                                 /Users/daniel/.cache/yanki]
   --reprocess / --no-reprocess  Force reprocessing videos.
   -j, --concurrency INTEGER     Number of ffmpeg process to run at once.  [env
                                 var: YANKI_CONCURRENCY; default: 8]
+  --version                     Show the version and exit.
   --help                        Show this message and exit.
 
 Commands:
