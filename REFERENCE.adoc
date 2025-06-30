@@ -28,10 +28,10 @@ the following line defines a note that is composed of two cards:
 
 The cards are (question → answer):
 
-* Video → "`YOUR NAME?`"
-* "`YOUR NAME?`" → Video
+* Video → “`YOUR NAME?`”
+* “`YOUR NAME?`” → Video
 
-If the text component is left off, Yanki will use the title of the video if it's
+If the text component is left off, Yanki will use the title of the video if it’s
 available.
 
 If the line gets too long, you can continue on the following line by indenting
@@ -64,7 +64,7 @@ For example, you could specify `@1:00-` to trim 1 minute off the beginning of
 the video, or `@0.5-70f` to trim the first half second off the video and then
 end the video at the 70th frame (counting from the original video start).
 
-Normally you can't have two cards with the same video URL in a deck (see
+Normally you can’t have two cards with the same video URL in a deck (see
 <<note_id,`note_id`>> below), but if you specify a clip you can use the same
 video multiple times. This is useful if you need to split a video into multiple
 cards.
@@ -92,7 +92,7 @@ image from frame 320:
 [#config]
 == Config lines
 
-Config lines set configuration for future notes, unless they're _inside_ a
+Config lines set configuration for future notes, unless they’re _inside_ a
 note, in which case they set the configuration for that note and nothing else.
 
 [,yaml]
@@ -167,15 +167,15 @@ file://video.mp4 text
 
 The above generates two cards:
 
-* _video.mp4_ → "`text`" "`added context`"
-* "`text`" → _video.mp4_ "`added context`"
+* _video.mp4_ → “`text`” “`added context`”
+* “`text`” → _video.mp4_ “`added context`”
 
 You may set content in three formats:
 
 * No prefix, e.g. `more: some text`. This converts URLs into links and HTML
 escapes everything. Appropriate for plain text.
 * `html:`, e.g. `more: html:<b>text</b>`. This passes the text through (minus
-the "`html:`" prefix) and it is rendered as HTML by Anki.
+the “`html:`” prefix) and it is rendered as HTML by Anki.
 * `rst:` This renders the following text as https://docutils.sourceforge.io/rst.html[reStructuredText].
 * `md:` This renders the following text as https://commonmark.org[CommonMark Markdown].
 
@@ -189,7 +189,7 @@ file://video.mp4 text
   more: +md: _second_
 ----
 
-The above generates a note with the `more` text set to "`*First* _second_`".
+The above generates a note with the `more` text set to “`*First* _second_`”.
 
 [#crop]
 === `crop:` -- Crop visual media
@@ -199,7 +199,7 @@ absolute pixel value, e.g. `300:500`, or it can be an expression based on `in_h`
 and/or `in_w`. For example, `crop: in_h:in_h` will crop the video to a square of
 the size of the input height.
 
-See `ffmpeg`'s https://ffmpeg.org/ffmpeg-filters.html#crop[`crop` filter] for
+See `ffmpeg`’s https://ffmpeg.org/ffmpeg-filters.html#crop[`crop` filter] for
 more possibilities.
 
 Note that Yanki always scales images and videos to be 500px tall while
@@ -211,7 +211,7 @@ maintaining their aspect ratio. The scaling happens after cropping.
 This is very similar to <<clip,clip (`@time-time`)>>, which is explained above.
 It takes the same parameters.
 
-The difference is that it doesn't affect the <<note_id,`note_id`>>. This has two
+The difference is that it doesn’t affect the <<note_id,`note_id`>>. This has two
 advantages:
 
 . You can come back and adjust `trim` later and Anki will correctly update the
@@ -289,7 +289,7 @@ The above file results in notes with the following tags:
 [#overlay_text]
 === `overlay_text:` -- Set overlay text to appear on the video
 
-Overlay text can be added to videos or images. It's always white text on a
+Overlay text can be added to videos or images. It’s always white text on a
 semi-transparent black box in the upper left corner. It does not support any
 kind of styling.
 
@@ -312,7 +312,7 @@ note_id: {deck_id} {text}
 ----
 
 Leaving out `+{deck_id}+` can be useful if you might need to move notes between
-decks later on. Unfortunately, Anki's import will not actually move notes from
+decks later on. Unfortunately, Anki’s import will not actually move notes from
 one deck to another, but it will update them in the other deck. You can then
 move them manually. This is useful if you want to keep your study progress.
 
