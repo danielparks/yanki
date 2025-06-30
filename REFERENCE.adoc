@@ -175,7 +175,7 @@ You may set content in three formats:
 * No prefix, e.g. `more: some text`. This converts URLs into links and HTML
 escapes everything. Appropriate for plain text.
 * `html:`, e.g. `more: html:<b>text</b>`. This passes the text through (minus
-the "`html:`" prefix and it is rendered as HTML by Anki.
+the "`html:`" prefix) and it is rendered as HTML by Anki.
 * `rst:` This renders the following text as https://docutils.sourceforge.io/rst.html[reStructuredText].
 * `md:` This renders the following text as https://commonmark.org[CommonMark Markdown].
 
@@ -199,7 +199,7 @@ absolute pixel value, e.g. `300:500`, or it can be an expression based on `in_h`
 and/or `in_w`. For example, `crop: in_h:in_h` will crop the video to a square of
 the size of the input height.
 
-See `ffmpeg``'s https://ffmpeg.org/ffmpeg-filters.html#crop[`crop` filter] for
+See `ffmpeg`'s https://ffmpeg.org/ffmpeg-filters.html#crop[`crop` filter] for
 more possibilities.
 
 Note that Yanki always scales images and videos to be 500px tall while
