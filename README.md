@@ -27,14 +27,14 @@ https://www.youtube.com/watch?v=zW8cpOVeKZ4 Are you deaf?
 https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
 ```
 
-On macOS and some Linux distros, you can have `yanki` open Anki and start the
-import of the new deck:
+On macOS and some Linux distributions, you can make `yanki` open Anki and start
+the import of the new deck:
 
 ```
 uv run yanki -v update basic.deck
 ```
 
-Otherwise, you have have it build an `.apkg` and then import that into Anki:
+Otherwise, you can make it build an `.apkg` and then import that into Anki:
 
 ```
 uv run yanki -v build -o basic.apkg basic.deck
@@ -48,8 +48,7 @@ There is a reference for the deck file format in [REFERENCE.adoc][].
 
 The [`asl/`][asl] directory contains example `.deck` files that can be used to
 build a deck for the vocabulary and phrases in each [Lifeprint.com ASLU][LP]
-lesson. See its [README.md][asl] for information about how I chose which signs
-to include.
+lesson. Its [README.md][asl] briefly explains how the signs were chosen.
 
 > [!TIP]
 > If you are interested in learning American Sign Language, please see Dr. Bill
