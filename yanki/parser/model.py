@@ -47,10 +47,14 @@ class NoteSpec:
         return self._parse_clip()[0]
 
     def clip_or_trim(self):
+        clip = self.clip()
         if self.config.trim is None:
-            return self.clip()  # Might be None, but that’s fine
-        if self.clip() is None:
+            return clip  # Might be None, but that’s fine
+        if clip is None:
             return self.config.trim
+        if self.config.trim == "auto":
+            # clip overrides trim: auto, since that’s the default.
+            return clip
         self.error(
             f"Clip ({self.provisional_clip_spec()!r}) is incompatible with "
             "'trim:'."

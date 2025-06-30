@@ -59,7 +59,7 @@ class NoteConfig:
     overlay_text: str = ""
     tags: set[str] = field(default_factory=set)
     slow: tuple[str, str | None, float] | None = None
-    trim: tuple[str, str] | None = None
+    trim: tuple[str, str] | str | None = None
     audio: str = "include"
     video: str = "include"
     note_id: str = "{deck_id} {url} {clip}"
@@ -144,6 +144,8 @@ class NoteConfig:
     def set_trim(self, trim):
         if trim in {"", "none"}:
             self.trim = None
+        elif trim == "auto":
+            self.trim = "auto"
         else:
             clip = [part.strip() for part in trim.split("-")]
             if len(clip) != 2:
@@ -195,6 +197,8 @@ class NoteConfig:
     def trim_spec(self):
         if self.trim is None:
             return ""
+        if self.trim == "auto":
+            return "auto"
 
         return "-".join(self.trim)
 

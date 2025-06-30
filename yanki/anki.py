@@ -139,7 +139,9 @@ class Note:
 
         clip = self.spec.clip_or_trim()
         if clip is not None:
-            if len(clip) == 1:
+            if clip == "auto":
+                video.clip_auto()
+            elif len(clip) == 1:
                 video.snapshot(clip[0])
             elif len(clip) == 2:
                 video.clip(clip[0], clip[1])
@@ -189,6 +191,7 @@ EXTRA_FINAL_NOTE_VARIABLES = frozenset(
         "media_paths",
         "video_parameters",
         "auto_crop",
+        "auto_trim",
     ]
 )
 
@@ -242,6 +245,9 @@ class FinalNote:
             "media_paths": " ".join(self.media_paths()),
             "auto_crop": " / ".join(
                 [str(media.cropdetect()) for media in self.media()]
+            ),
+            "auto_trim": " / ".join(
+                [str(media.auto_trim()) for media in self.media()]
             ),
             "video_parameters": " / ".join(
                 [" ".join(media.parameters_list()) for media in self.media()]
