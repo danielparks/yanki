@@ -15,6 +15,7 @@ import colorlog
 import genanki
 import yt_dlp
 
+from yanki.__version__ import __version__
 from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
 from yanki.html_out import write_html
@@ -113,6 +114,7 @@ def main():  # noqa: C901 (complex)
     type=click.INT,
     help="Number of ffmpeg process to run at once.",
 )
+@click.version_option(__version__)
 @click.pass_context
 def cli(ctx, verbose, cache, reprocess, concurrency):
     """Build Anki decks from text files containing YouTube URLs."""
