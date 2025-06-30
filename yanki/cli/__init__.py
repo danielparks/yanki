@@ -101,7 +101,7 @@ def main():  # noqa: C901 (complex)
 )
 @click.option(
     "--reprocess/--no-reprocess",
-    help="Reprocess videos whether or not anything has changed.",
+    help="Force reprocessing videos.",
 )
 @click.option(
     "-j",
@@ -111,7 +111,7 @@ def main():  # noqa: C901 (complex)
     envvar="YANKI_CONCURRENCY",
     show_envvar=True,
     type=click.INT,
-    help="How many parallel runs of ffmpeg to allow at once.",
+    help="Number of ffmpeg process to run at once.",
 )
 @click.pass_context
 def cli(ctx, verbose, cache, reprocess, concurrency):
@@ -194,7 +194,7 @@ def build(options, decks, output):
 @deck_parameters
 @click.pass_obj
 def update(options, decks):
-    """Update Anki with one or more decks.
+    """Update Anki from deck files.
 
     This will build the .apkg file in a temporary directory that will eventually
     be deleted. It will then open the .apkg file with the `open` command.
@@ -230,7 +230,7 @@ class ListNotesCommand(click.Command):
 )
 @click.pass_obj
 def list_notes(options, decks, format):
-    """Print information about every note in the passed format."""
+    """List notes in deck files."""
     if find_invalid_format(format, NOTE_VARIABLES) is None:
         # Don’t need FinalNotes
         for deck in decks.read_sorted(options):
@@ -344,7 +344,7 @@ def serve_http(options, decks, server, flashcards):
 @click.argument("urls", nargs=-1, type=click.STRING)
 @click.pass_obj
 def open_videos(options, urls):
-    """Download and process the video URLs, then open them with `open`."""
+    """Download, process, and open video URLs."""
     for url in urls:
         video = Video(url, options=options)
         open_in_app([asyncio.run(video.processed_video_async())])
