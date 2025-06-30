@@ -1,6 +1,8 @@
 = Deck file format reference
+:toc: preamble
+:toc-title:
 
-A deck file is composed of <<config-lines,config lines>> and <<notes,notes>>:
+A deck file is composed of <<config,config lines>> and <<notes,notes>>:
 
 [,yaml]
 ----
@@ -16,6 +18,7 @@ https://www.youtube.com/watch?v=zW8cpOVeKZ4 Are you deaf?
 https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
 ----
 
+[#notes]
 == Notes
 
 Notes are what we call a collection of one or two (flash) cards. For example,
@@ -37,6 +40,7 @@ it, for example:
  https://www.youtube.com/watch?v=UDM9KJJtRbE
    YOU DIVORCE-[non-initialized] YOU?
 
+[#direction]
 === Direction (`+<-+`, `+<->+`, `+->+`)
 
 You may customize which cards are generated using a direction sign. For example,
@@ -49,6 +53,7 @@ You may also use `+<-+` for a single card going from text to video, or you may
 explicitly set a note to generate both cards with `+<->+` (this is the default
 behavior).
 
+[#clip]
 === Clip (`@time-time`)
 
 Clip the start and/or end of the video. `time` can be a frame (`#F`, e.g.
@@ -74,6 +79,7 @@ of the numbers in ASL from 1 to 100. You could make flashcards for 11, 12, and
 If you only want to clip the blank or still frames from the beginning or end or
 videos, see `trim:` below.
 
+[#snapshot]
 === Snapshot (`@time`)
 
 You can snapshot a video by specifying a single frame (`@#F`) or a timestamp
@@ -82,6 +88,7 @@ image from frame 320:
 
  https://www.youtube.com/watch?v=M4AFC4eEjlQ @320F 9
 
+[#config]
 == Config lines
 
 Config lines set configuration for future notes, unless they're _inside_ a
@@ -105,11 +112,13 @@ The above example produces 3 notes (and 6 cards):
 . note 2, with the overlay text "`note`".
 . note 3, with the overlay text "`deck`".
 
+[#title]
 === `title:` -- Deck title
 
 `title` sets the title of the deck. You _must_ set this somewhere in your deck
 file. I recommend putting it right at the top for clarity.
 
+[#group]
 === `group:` -- Group notes together for easy configuration
 
 This allows setting configuration on a group of notes without affecting anything
@@ -132,6 +141,7 @@ Neither applies to any notes outside the group.
 
 You may nest groups.
 
+[#more]
 === `more:` -- Add more information to answer card
 
 This configuration adds more information to the answer side of the each card
@@ -169,6 +179,7 @@ file://video.mp4 text
 
 The above generates a note with the `more` text set to "`*First* _second_`".
 
+[#crop]
 === `crop:` -- Crop visual media
 
 Crop the media to a certain size in _width_:__height__ format. This can be an
@@ -182,6 +193,7 @@ more possibilities.
 Note that Yanki always scales images and videos to be 500px tall while
 maintaining their aspect ratio. The scaling happens after cropping.
 
+[#trim]
 === `trim:` -- Cut the start and/or end off the video
 
 This is very similar to clip (`@time-time`), which is explained above. It takes
@@ -195,6 +207,7 @@ existing cards rather than creating a new ones.
 the same video URL, Yanki will treat them as distinct cards. If you used
 `trim:` instead, it will flag them as duplicates.
 
+[#slow]
 === `slow:` -- Slow down or speed up part of the media
 
 Sometimes a video, or just a part of a video, is too slow or too fast. The
@@ -217,6 +230,7 @@ slow: 60F- *0.5
 
 `slow` can only be applied to one part of a video (or audio track).
 
+[#tags]
 === `tags:` -- Set tags for notes
 
 Tags are separated by spaces. You can prefix tags with `+` or `-` to add or
@@ -259,12 +273,14 @@ The above file results in notes with the following tags:
 | vocabulary
 |===
 
+[#overlay_text]
 === `overlay_text:` -- Set overlay text to appear on the video
 
 Overlay text can be added to videos or images. It's always white text on a
 semi-transparent black box in the upper left corner. It does not support any
 kind of styling.
 
+[#note_id]
 === `note_id:` -- Note GUIDs
 
 Anki uses the GUID (Globally Unique ID) field to identify notes for update.
@@ -296,16 +312,19 @@ title: Really Cool Cards::subdeck 1
 note_id: Really Cool Cards {url} {clip}
 ----
 
+[#audio]
 === `audio:` -- Whether to keep to strip audio from a video
 
 * `include` (default) -- keep all audio tracks in place.
 * `strip` -- remove all audio tracks.
 
+[#video]
 === `video:` -- Whether to keep to strip video from a video
 
 * `include` (default) -- keep video.
 * `strip` -- remove video, presumably leaving just audio.
 
+[#format]
 === `format:` -- File extension to use for generated media
 
 The file extension of the media to generate (default: `mp4`). You may wish to
