@@ -108,9 +108,20 @@ https://www.youtube.com/watch?v=zW8cpOVeKZ4 note 3
 
 The above example produces 3 notes (and 6 cards):
 
-. note 1, with no overlay text.
-. note 2, with the overlay text "`note`".
-. note 3, with the overlay text "`deck`".
+|===
+| Note text | Overlay text
+
+| note 1
+|
+
+| note 2
+| note
+
+| note 3
+| deck
+
+|===
+
 
 [#title]
 === `title:` -- Deck title
