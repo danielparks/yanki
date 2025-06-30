@@ -90,7 +90,12 @@ def main():  # noqa: C901 (complex)
 
 
 @click.group()
-@click.option("-v", "--verbose", count=True)
+@click.option(
+    "-v",
+    "--verbose",
+    count=True,
+    help="Be more verbose. May be passed up to 3 times.",
+)
 @click.option(
     "--cache",
     default=Path("~/.cache/yanki/").expanduser(),
