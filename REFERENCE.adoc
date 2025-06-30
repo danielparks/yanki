@@ -65,8 +65,9 @@ the video, or `@0.5-70f` to trim the first half second off the video and then
 end the video at the 70th frame (counting from the original video start).
 
 Normally you can't have two cards with the same video URL in a deck (see
-`note_id:` below), but if you specify a clip you can use the same video multiple
-times. This is useful if you need to split a video into multiple cards.
+<<note_id,`note_id`>> below), but if you specify a clip you can use the same
+video multiple times. This is useful if you need to split a video into multiple
+cards.
 
 For example, https://www.youtube.com/watch?v=M4AFC4eEjlQ[this video] has all
 of the numbers in ASL from 1 to 100. You could make flashcards for 11, 12, and
@@ -77,7 +78,7 @@ of the numbers in ASL from 1 to 100. You could make flashcards for 11, 12, and
  https://www.youtube.com/watch?v=M4AFC4eEjlQ @505F-545F 13
 
 If you only want to clip the blank or still frames from the beginning or end or
-videos, see `trim:` below.
+videos, see <<trim,`trim:`>> below.
 
 [#snapshot]
 === Snapshot (`@time`)
@@ -207,10 +208,11 @@ maintaining their aspect ratio. The scaling happens after cropping.
 [#trim]
 === `trim:` -- Cut the start and/or end off the video
 
-This is very similar to clip (`@time-time`), which is explained above. It takes
-the same parameters.
+This is very similar to <<clip,clip (`@time-time`)>>, which is explained above.
+It takes the same parameters.
 
-The difference is that it doesn't affect the `note_id`. This has two advantages:
+The difference is that it doesn't affect the <<note_id,`note_id`>>. This has two
+advantages:
 
 . You can come back and adjust `trim` later and Anki will correctly update the
 existing cards rather than creating a new ones.
