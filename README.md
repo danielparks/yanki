@@ -1,22 +1,73 @@
 # Build [Anki] decks from text files containing YouTube URLs
 
 Yanki makes it easy to build and maintain video flashcard decks for [Anki]. It
-can use local video or image files, or it can download videos from any source
-[yt-dlp] supports, such as YouTube.
+can use local video or image files, or it can download videos from YouTube or
+any other source [yt-dlp] supports.
 
 ## Installation
 
 You will need `ffmpeg` installed to use Yanki. On macOS, install it from
-[ffmpeg.org] or [`brew`]. On Linux or Windows, try installing from
-[here][yt-dlp ffmpeg].
+[ffmpeg.org] or [`brew`]. On Linux or Windows, try installing [yt-dlp’s ffmpeg].
 
 I recommend using [`uv`] to run Yanki. It can be [installed][uv install] a
-number of ways, but through your package manager, e.g. [`brew`], is simplest.
+number of ways, but it’s probably simplest to install it through your package
+manager, e.g. [`brew`] on macOS.
 
-## Usage
+## Quick start
 
-This is a Python package that can be run with [`uv`]. You can see all the
-commands and options with
+Create a simple deck file, e.g. `basic.deck`, to define your flashcards:
+
+```yaml
+title: Basic ASL phrases
+more: md:From [Lifeprint](https://www.lifeprint.com/)
+audio: strip
+
+https://www.youtube.com/watch?v=FHPszRvL9pg What is your name?
+https://www.youtube.com/watch?v=zW8cpOVeKZ4 Are you deaf?
+https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
+```
+
+On macOS and some Linux distros, you can have `yanki` open Anki and start the
+import of the new deck:
+
+```
+uv run yanki -v update basic.deck
+```
+
+Otherwise, you have have it build an `.apkg` and then import that into Anki:
+
+```
+uv run yanki -v build -o basic.apkg basic.deck
+```
+
+## Deck file format
+
+There is a reference for the deck file format in [REFERENCE.adoc][].
+
+### Examples
+
+The [`asl/`][asl] directory contains example `.deck` files that can be used to
+build a deck for the vocabulary and phrases in each [Lifeprint.com ASLU][LP]
+lesson. See its [README.md][asl] for information about how I chose which signs
+to include.
+
+> [!TIP]
+> If you are interested in learning American Sign Language, please see Dr. Bill
+Vicar’s [Lifeprint.com ASLU][LP]. These decks can help you, but they cannot
+replace the Lifeprint lessons and vocabulary pages.
+>
+> Plus, Lifeprint is full of Dr. Bill’s humor.
+
+## Command usage
+
+This is a Python package that can be run with [`uv`]. The most common usage is
+probably just to build your decks and import them to Anki. That’s as simple as:
+
+```
+uv run yanki update *.deck
+```
+
+You can see all the commands and options with `--help`:
 
 ```
 ❯ uv run yanki --help
@@ -45,51 +96,6 @@ Commands:
   update                 Update Anki from deck files.
 ```
 
-## Quick start
-
-Create a simple deck file, e.g. `basic.deck`, to define your flashcards:
-
-```yaml
-title: Basic ASL phrases
-more: md:From [Lifeprint](https://www.lifeprint.com/)
-audio: strip
-
-https://www.youtube.com/watch?v=FHPszRvL9pg What is your name?
-https://www.youtube.com/watch?v=zW8cpOVeKZ4 Are you deaf?
-https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
-```
-
-On macOS and some Linux distros, you can have `yanki` open Anki and start the
-import of the new deck:
-
-```
-uv run yanki -v update basic.deck
-```
-
-Otherwise, you have have it build an `.apkg` file that you can import into Anki:
-
-```
-uv run yanki -v build -o basic.apkg basic.deck
-```
-
-## Deck file format
-
-There is a reference for the deck file format in [REFERENCE.adoc][].
-
-## Examples
-
-The [`asl/`][asl] directory contains example `.deck` files that can be used to
-build a deck for the vocabulary and phrases in each [Lifeprint.com ASLU][LP]
-lesson. See its [README.md][asl] for information about how I chose which signs
-to include.
-
-> [!TIP]
-> If you are interested in learning American Sign Language, please see Dr. Bill
-Vicar’s [Lifeprint.com ASLU][LP]. These decks can help you, but they cannot
-replace the Lifeprint lessons and vocabulary pages.
->
-> Plus, Lifeprint is full of Dr. Bill’s humor.
-
 ## License
 
 Unless otherwise noted, this is dual-licensed under the Apache 2 and MIT
@@ -106,7 +112,7 @@ Vicars][LP].
 [yt-dlp]: https://github.com/yt-dlp/yt-dlp
 [ffmpeg.org]: https://www.ffmpeg.org
 [`brew`]: https://brew.sh
-[yt-dlp ffmpeg]: https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds
+[yt-dlp’s ffmpeg]: https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds
 [`uv`]: https://docs.astral.sh/uv/
 [uv install]: https://docs.astral.sh/uv/getting-started/installation/
 [REFERENCE.adoc]: REFERENCE.adoc
