@@ -6,6 +6,7 @@ import logging
 import math
 import re
 import shlex
+import time
 from dataclasses import dataclass
 from multiprocessing import cpu_count
 from pathlib import Path
@@ -776,9 +777,16 @@ class Video:
 
     async def run_async(self, stream):
         command = stream.compile()
-        self.logger.debug(f"Run {shlex.join(command)}")
+        time_scheduled = time.perf_counter()
 
         async with self.options.semaphore:
+            time_started = time.perf_counter()
+            waited = time_started - time_scheduled
+            if waited < 0.001:
+                waited = 0.0
+            self.logger.trace(
+                f"Start run (waited {waited:0.3}s) {shlex.join(command)}"
+            )
             process = await asyncio.create_subprocess_exec(
                 *command,
                 stdin=asyncio.subprocess.DEVNULL,
@@ -787,6 +795,12 @@ class Video:
             )
 
             stdout, stderr = await process.communicate()
+
+        run_time = time.perf_counter() - time_started
+        self.logger.debug(
+            f"Finished run (in {run_time:0.3}s, returned {process.returncode}) "
+            f"{shlex.join(command)}"
+        )
 
         if process.returncode:
             raise FFmpegError(
