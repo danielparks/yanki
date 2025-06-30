@@ -74,7 +74,7 @@ uv run yanki -v build -o basic.apkg basic.deck
 
 ## Deck file format
 
-There is a reference for the deck file format in [REFERENCE.md][].
+There is a reference for the deck file format in [REFERENCE.adoc][].
 
 ## Examples
 
@@ -109,6 +109,6 @@ Vicars][LP].
 [yt-dlp ffmpeg]: https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds
 [`uv`]: https://docs.astral.sh/uv/
 [uv install]: https://docs.astral.sh/uv/getting-started/installation/
-[REFERENCE.md]: REFERENCE.md
+[REFERENCE.adoc]: REFERENCE.adoc
 [asl]: asl#readme
 [LP]: https://www.lifeprint.com
