@@ -173,7 +173,7 @@ The above generates two cards:
 You may set content in four formats:
 
 * *No prefix*, e.g. `more: some text`. This converts URLs into links and
-  HTML-escapes the content. Appropriate for plain text
+  HTML-escapes the content. Appropriate for plain text.
 * `html:`, e.g. `more: html:<b>text</b>`. This passes the text through (minus
   the “`html:`” prefix) and renders it as HTML in Anki.
 * `rst:` This renders the following text as
