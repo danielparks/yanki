@@ -173,11 +173,13 @@ The above generates two cards:
 You may set content in three formats:
 
 * *No prefix*, e.g. `more: some text`. This converts URLs into links and
-HTML-escapes the content. Appropriate for plain text
+  HTML-escapes the content. Appropriate for plain text
 * `html:`, e.g. `more: html:<b>text</b>`. This passes the text through (minus
-the “`html:`” prefix) and renders it as HTML in Anki.
-* `rst:` This renders the following text as https://docutils.sourceforge.io/rst.html[reStructuredText].
-* `md:` This renders the following text as https://commonmark.org[CommonMark Markdown].
+  the “`html:`” prefix) and renders it as HTML in Anki.
+* `rst:` This renders the following text as
+  https://docutils.sourceforge.io/rst.html[reStructuredText].
+* `md:` This renders the following text as
+  https://commonmark.org[CommonMark Markdown].
 
 You may also use a plus before any prefix to append the rendered text to the
 whatever has already been set. For example:
@@ -215,10 +217,10 @@ The difference is that it doesn’t affect the <<note_id,`note_id`>>. This has t
 advantages:
 
 . You can come back and adjust `trim` later and Anki will correctly update the
-existing cards rather than creating new ones.
+  existing cards rather than creating new ones.
 . It can help avoid duplicate videos. If you use slightly different clips for
-the same video URL, Yanki will treat them as distinct cards. If you used
-`trim:` instead, it will flag them as duplicates.
+  the same video URL, Yanki will treat them as distinct cards. If you used
+  `trim:` instead, it will flag them as duplicates.
 
 [#slow]
 === `slow:` -- Slow down or speed up part of the media
