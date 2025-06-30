@@ -105,9 +105,11 @@ licenses. You may choose to use either.
   * [Apache License, Version 2.0](LICENSE-APACHE)
   * [MIT license](LICENSE-MIT)
 
+<!-- GitHub only -->
 Files in the `asl` directory are not licensed for redistribution. Copyright is
 somewhat unclear, and at least some of the material is owned by [Dr. William
 Vicars][LP].
+<!-- /GitHub only -->
 
 [Anki]: https://apps.ankiweb.net
 [yt-dlp]: https://github.com/yt-dlp/yt-dlp
