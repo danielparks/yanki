@@ -88,9 +88,12 @@ note, in which case they set the configuration for that note and nothing else.
 
 ```yaml
 https://www.youtube.com/watch?v=FHPszRvL9pg note 1
+
 overlay_text: deck
+
 https://www.youtube.com/watch?v=UyfRF3TeLPs note 2
   overlay_text: note
+
 https://www.youtube.com/watch?v=zW8cpOVeKZ4 note 3
 ```
 
@@ -210,6 +213,44 @@ slow: 60F- *0.5
 
 `slow` can only be applied to one part of a video (or audio track).
 
+### `tags:` — Set tags for notes
+
+Tags are separated by spaces. You can prefix tags with `+` or `-` to add or
+remove them, respectively, to the already set tags. For example:
+
+```yaml
+title: Example
+tags: phrases wh-question
+
+https://www.youtube.com/watch?v=FHPszRvL9pg What is your name?
+
+group:
+  tags: -wh-question +yes-no
+
+  https://www.youtube.com/watch?v=zW8cpOVeKZ4 Are you deaf?
+  https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
+
+# This note has its tags overridden:
+https://www.youtube.com/watch?v=sMRpqyQK72c
+  HEARING-[a culturally hearing person]
+  tags: vocabulary
+```
+
+The above file results in notes with the following tags:
+
+| Note text                               | Tags                 |
+| --------------------------------------- | -------------------- |
+| What is your name?                      | phrases, wh-question |
+| Are you deaf?                           | phrases, yes-no      |
+| Are you a student?                      | phrases, yes-no      |
+| HEARING-\[a culturally hearing person\] | vocabulary           |
+
+### `overlay_text:` — Set overlay text to appear on the video
+
+Overlay text can be added to videos or images. It’s always white text on a
+semi-transparent black box in the upper left corner. It does not support any
+kind of styling.
+
 ### `note_id:` — Note GUIDs
 
 Anki uses the GUID (Globally Unique ID) field to identify notes for update.
@@ -239,12 +280,18 @@ title: Really Cool Cards::subdeck 1
 note_id: Really Cool Cards {url} {clip}
 ```
 
-### Other configs
+### `audio:` — Whether to keep to strip audio from a video
 
-There are a few other configuration options:
+  * `include` (default) — keep all audio tracks in place.
+  * `strip` — remove all audio tracks.
 
-  * `format:` — The file extension of the media to generate (default: `mp4`)
-  * `overlay_text:` — Set overlay text to appear on the video
-  * `tags:` — Set tags for notes (divided by spaces)
-  * `audio:` — `include` (default) or `strip` (remove from media)
-  * `video:` — `include` (default) or `strip` (remove from media)
+### `video:` — Whether to keep to strip video from a video
+
+  * `include` (default) — keep video.
+  * `strip` — remove video, presumably leaving just audio.
+
+### `format:` — File extension to use for generated media
+
+The file extension of the media to generate (default: `mp4`). You may wish to
+use something else, e.g. `mp3`, if you are stripping the video and just using
+the audio tracks.
