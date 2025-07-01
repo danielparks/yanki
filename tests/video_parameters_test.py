@@ -3,18 +3,15 @@ import pytest
 from yanki.video import Video, VideoOptions
 
 
-def get_video(tmp_path):
-    cache_path = tmp_path / "cache"
-    cache_path.mkdir(parents=True, exist_ok=True)
-
+def get_video():
     return Video(
         "file://./test-decks/good/media/stopwatch.mp4",
-        options=VideoOptions(cache_path=cache_path),
+        options=VideoOptions(),
     )
 
 
-def test_time_parse(tmp_path):  # noqa: PLR0915 (too many statements)
-    video = get_video(tmp_path)
+def test_time_parse():  # noqa: PLR0915 (too many statements)
+    video = get_video()
 
     assert video.get_fps() == 60
 

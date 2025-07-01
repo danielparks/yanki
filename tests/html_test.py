@@ -6,15 +6,16 @@ from yanki.html_out import write_html
 from yanki.video import VideoOptions
 
 
-def test_two_decks(cache_path, deck_1_path, deck_2_path, output_path):
+def test_two_decks(deck_1_path, deck_2_path, output_path):
+    options = VideoOptions()
     files = [
         path.open("r", encoding="utf_8") for path in [deck_1_path, deck_2_path]
     ]
 
     write_html(
         output_path,
-        cache_path,
-        DeckSource(files=files).read_final_sorted(VideoOptions(cache_path)),
+        options.cache.path,
+        DeckSource(files=files).read_final_sorted(options),
         flashcards=False,
     )
 

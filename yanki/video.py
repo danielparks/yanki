@@ -7,7 +7,7 @@ import math
 import re
 import shlex
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from multiprocessing import cpu_count
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -15,6 +15,7 @@ from urllib.parse import parse_qs, urlparse
 import ffmpeg
 import yt_dlp
 
+from yanki.cache import Cache
 from yanki.errors import ExpectedError
 from yanki.utils import (
     NotFileURLError,
@@ -63,11 +64,11 @@ class FFmpegError(RuntimeError):
         self.exit_code = exit_code
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VideoOptions:
     """Options for processing videos."""
 
-    cache_path: Path
+    cache: Cache = field(default_factory=Cache)
     progress: bool = False
     reprocess: bool = False
     concurrency: int = cpu_count()
@@ -177,7 +178,7 @@ class Video:
         self._cached_parameters = None
 
     def cached(self, filename):
-        return self.options.cache_path / filename
+        return self.options.cache.path / filename
 
     def info_cache_path(self):
         return self.cached(f"info_{self.id}.json")

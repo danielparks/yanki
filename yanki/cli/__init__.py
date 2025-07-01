@@ -21,7 +21,7 @@ from yanki.errors import ExpectedError
 from yanki.html_out import write_html
 from yanki.parser import NOTE_VARIABLES, find_invalid_format
 from yanki.utils import add_trace_logging, find_errors, open_in_app
-from yanki.video import BadURLError, FFmpegError, Video, VideoOptions
+from yanki.video import BadURLError, Cache, FFmpegError, Video, VideoOptions
 
 from .decks import deck_parameters
 from .server import server_options
@@ -126,10 +126,8 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     if concurrency < 1:
         raise click.UsageError("--concurrency must be >= 1.")
 
-    ensure_cache(cache)
-
     ctx.obj = VideoOptions(
-        cache_path=cache,
+        cache=Cache(cache),
         progress=verbose > 0,
         reprocess=reprocess,
         concurrency=concurrency,
@@ -267,7 +265,7 @@ def to_html(options, output, decks, flashcards):
     """Generate HTML version of decks."""
     write_html(
         output,
-        options.cache_path,
+        options.cache.path,
         decks.read_final_sorted(options),
         flashcards=flashcards,
     )
@@ -338,13 +336,13 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
 def serve_http(options, decks, server, flashcards):
     """Serve HTML summary of deck on localhost:8000."""
     write_html(
-        options.cache_path,
-        options.cache_path,
+        options.cache.path,
+        options.cache.path,
         decks.read_final_sorted(options),
         flashcards=flashcards,
     )
 
-    server.serve_forever(directory=options.cache_path)
+    server.serve_forever(directory=options.cache.path)
 
 
 @cli.command()
@@ -398,24 +396,6 @@ def _find_urls(file):
                 yield url
             else:
                 print(f"Does not look like a URL: {url!r}")
-
-
-CACHEDIR_TAG_CONTENT = """Signature: 8a477f597d28d172789f06886806bc55
-# This file is a cache directory tag created by yanki.
-# For information about cache directory tags, see:
-#	https://bford.info/cachedir/
-#
-# For information about yanki, see:
-#   https://github.com/danielparks/yanki
-"""
-
-
-def ensure_cache(cache_path: Path):
-    """Make sure cache is set up."""
-    cache_path.mkdir(parents=True, exist_ok=True)
-
-    tag_path = cache_path / "CACHEDIR.TAG"
-    tag_path.write_text(CACHEDIR_TAG_CONTENT, encoding="ascii")
 
 
 if __name__ == "__main__":
