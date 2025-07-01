@@ -1,10 +1,9 @@
-import shutil
 import sys
 from collections import OrderedDict
 from html import escape as h
 from pathlib import Path
 
-from yanki.utils import file_safe_name
+from yanki.utils import hardlink_into, url_friendly_name
 
 
 class DeckTree:
@@ -26,19 +25,16 @@ class DeckTree:
         return self
 
 
-def write_html(output_path, cache_path, decks, *, flashcards=False):
+def write_html(output_path, decks, *, flashcards=False):
     """Write HTML version of decks to a path."""
-    if output_path == cache_path:
-        # Serving HTML from the cache; no need to copy media.
-        output_media_path = None
-        ensure_static_link(output_path)
-    else:
-        # Generating a fresh output directory; copy media.
-        output_path.mkdir(parents=True, exist_ok=True)
-        output_media_path = output_path
-        shutil.copytree(
-            path_to_web_files(), output_path / "static", dirs_exist_ok=True
-        )
+    static_dir = output_path / "static"
+    static_dir.mkdir(parents=True, exist_ok=True)
+
+    for file in path_to_web_files().glob("*"):
+        hardlink_into(file, static_dir)
+
+    output_media_path = output_path / "media"
+    output_media_path.mkdir(exist_ok=True)
 
     if len(decks) == 1:
         # Special case: single deck goes in index.html
@@ -61,7 +57,8 @@ def write_html(output_path, cache_path, decks, *, flashcards=False):
         if deck.title is None:
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
-        file_name = "deck_" + file_safe_name(deck.title) + ".html"
+        # FIXME create_unique_file
+        file_name = "deck_" + url_friendly_name(deck.title) + ".html"
         html_path = output_path / file_name
         if html_path in decks_by_path:
             raise KeyError(
@@ -123,7 +120,7 @@ def write_tree_indices(
     else:
         title_names = [name for name, _ in title_path] + [tree.name]
         tree.index_file_name = (
-            "index_" + file_safe_name("::".join(title_names)) + ".html"
+            "index_" + url_friendly_name("::".join(title_names)) + ".html"
         )
 
     # This rebinds the variable to a new value instead of changing the old
@@ -187,17 +184,16 @@ def write_deck_files(
     html_path, output_media_path, deck, title_path, *, flashcards=False
 ):
     html_path.write_text(
-        htmlize_deck(deck, title_path, path_prefix="", flashcards=flashcards),
+        htmlize_deck(
+            deck, title_path, path_prefix="media", flashcards=flashcards
+        ),
         encoding="utf_8",
     )
 
-    # Copy media to output.
-    if output_media_path is not None:
-        for path in deck.media_paths():
-            output_path = output_media_path / Path(path).name
-            shutil.copy2(path, output_path)
-            # Make sure media is accessible by the web server.
-            output_path.chmod(0o644)
+    # Link media into output media directory.
+    for path in deck.media_paths():
+        # chmod to ensure media is accessible by the web server.
+        hardlink_into(Path(path), output_media_path).chmod(0o644)
 
 
 def htmlize_deck(deck, title_path, *, path_prefix="", flashcards=False):
@@ -292,28 +288,6 @@ def title_html(title_path, *, add_links=True, final_link=True):
         html[-1] = h(name)
 
     return " ❯ ".join(html)
-
-
-def ensure_static_link(cache_path: Path):
-    web_files_path = path_to_web_files()
-    static_path = cache_path / "static"
-
-    try:
-        static_path.symlink_to(web_files_path)
-    except FileExistsError:
-        if static_path.readlink() == web_files_path:
-            # Symlink already exists
-            return
-
-    try:
-        static_path.unlink()
-    except OSError as e:
-        sys.exit(f"Error removing {static_path} to replace with symlink: {e}")
-
-    try:
-        static_path.symlink_to(web_files_path)
-    except OSError as e:
-        sys.exit(f"Error symlinking {static_path} to {web_files_path}: {e}")
 
 
 def path_to_web_files() -> Path:

@@ -14,7 +14,6 @@ def test_two_decks(deck_1_path, deck_2_path, output_path):
 
     write_html(
         output_path,
-        options.cache.path,
         DeckSource(files=files).read_final_sorted(options),
         flashcards=False,
     )
