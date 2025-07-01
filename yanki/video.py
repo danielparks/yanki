@@ -247,8 +247,8 @@ class Video:
     def title(self):
         return self.info()["title"]
 
-    def refresh_raw_metadata(self):
-        self.logger.debug(f"refresh raw metadata: {self.raw_video()}")
+    def load_raw_metadata(self):
+        self.logger.debug(f"load raw metadata: {self.raw_video()}")
         try:
             self._raw_metadata = ffmpeg.probe(self.raw_video())
         except ffmpeg.Error as error:
@@ -269,21 +269,16 @@ class Video:
 
         metadata_cache_path = self.raw_metadata_cache_path()
         try:
-            if (
-                metadata_cache_path.stat().st_mtime
-                >= self.raw_video().stat().st_mtime
-            ):
-                # Metadata isn’t older than raw video.
-                with metadata_cache_path.open("r", encoding="utf_8") as file:
-                    self._raw_metadata = json.load(file)
-                    return get_key_path(self._raw_metadata, key_path)
+            with metadata_cache_path.open("r", encoding="utf_8") as file:
+                self._raw_metadata = json.load(file)
+                return get_key_path(self._raw_metadata, key_path)
         except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):
             # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
             # the key path. We use `pass` here to avoid adding this exception to
             # the context of new exceptions.
             pass
 
-        return get_key_path(self.refresh_raw_metadata(), key_path)
+        return get_key_path(self.load_raw_metadata(), key_path)
 
     def get_fps(self):
         for stream in self.raw_metadata("streams"):
