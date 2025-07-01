@@ -264,12 +264,11 @@ class Video:
     # This will refresh metadata once if it doesn’t find the passed path the
     # first time.
     def raw_metadata(self, *key_path):
-        try:
-            # FIXME? Track if ffprobe was already run and don’t run it again.
-            if self._raw_metadata:
-                return get_key_path(self._raw_metadata, key_path)
+        if self._raw_metadata:
+            return get_key_path(self._raw_metadata, key_path)
 
-            metadata_cache_path = self.raw_metadata_cache_path()
+        metadata_cache_path = self.raw_metadata_cache_path()
+        try:
             if (
                 metadata_cache_path.stat().st_mtime
                 >= self.raw_video().stat().st_mtime
