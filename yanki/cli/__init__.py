@@ -18,9 +18,16 @@ import yt_dlp
 from yanki.__version__ import __version__
 from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
-from yanki.html_out import write_html
+from yanki.html_out import path_to_web_files, write_html
 from yanki.parser import NOTE_VARIABLES, find_invalid_format
-from yanki.utils import add_trace_logging, find_errors, open_in_app
+from yanki.utils import (
+    add_trace_logging,
+    create_unique_file,
+    find_errors,
+    open_in_app,
+    symlink_into,
+    url_friendly_name,
+)
 from yanki.video import BadURLError, Cache, FFmpegError, Video, VideoOptions
 
 from .decks import deck_parameters
@@ -255,23 +262,14 @@ def list_notes(options, decks, format):
 @cli.command()
 @click.argument("output", type=WritableDirectoryPath(path_type=Path))
 @deck_parameters
-@click.option(
-    "-F",
-    "--flashcards/--no-flashcards",
-    help="Render notes as flashcards.",
-)
 @click.pass_obj
-def to_html(options, output, decks, flashcards):
+def to_html(options, output, decks):
     """Generate HTML version of decks.
 
     This will create a directory at OUTPUT containing HTML versions of the
     flashcard decks as well as hard linked media and other assets.
     """
-    write_html(
-        output,
-        decks.read_final_sorted(options),
-        flashcards=flashcards,
-    )
+    write_html(output, decks.read_final_sorted(options))
 
 
 @cli.command()
@@ -330,13 +328,67 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
 @cli.command()
 @deck_parameters
 @server_options
-@click.option(
-    "-F",
-    "--flashcards/--no-flashcards",
-    help="Render notes as flashcards.",
-)
 @click.pass_obj
-def serve_http(options, decks, server, flashcards):
+def serve_flashcards(options, decks, server):
+    """Serve HTML flashcards localhost:8000."""
+    web_files = path_to_web_files()
+    decks = decks.read_final_sorted(options)
+    with tempfile.TemporaryDirectory(
+        dir=options.cache.path, prefix="webroot_"
+    ) as root:
+        root = Path(root)
+        root.chmod(0o755)  # TemporaryDirectory creates dirs with mode 0o700.
+        symlink_into(web_files / "static", root)
+
+        # Generate index.html
+        index_html = (web_files / "templates/flashcards.html").read_text()
+        for path in (web_files / "static").glob("*"):
+            index_html = index_html.replace(
+                f'"static/{path.name}"',
+                f'"/static/{path.name}?{path.stat().st_mtime}"',
+            )
+        (root / "index.html").write_text(index_html)
+
+        media_dir = root / "media"
+        media_dir.mkdir()
+
+        deck_dir = root / "decks"
+        deck_dir.mkdir()
+
+        deck_index = []
+        for deck in decks:
+            deck_json = deck.to_dict(base_url="/media")
+            for note in deck_json["notes"]:
+                new_paths = []
+                for source_path in note["media_paths"]:
+                    link_path = symlink_into(Path(source_path), media_dir)
+                    new_paths.append(f"/media/{link_path.name}")
+                note["media_paths"] = new_paths
+
+            # Create the deck JSON file.
+            name = url_friendly_name(deck.title)
+            with create_unique_file(deck_dir / f"{name}.json") as file:
+                LOGGER.debug(f"Saving {deck.title!r} into {file.name!r}")
+                json.dump(deck_json, file)
+                deck_index.append(
+                    {
+                        "title": deck.title,
+                        "path": f"/decks/{Path(file.name).name}",
+                    }
+                )
+
+        with (root / "decks.json").open("w", encoding="utf_8") as file:
+            json.dump(deck_index, file)
+
+        LOGGER.info(f"Starting web server in temporary directory {root}")
+        server.serve_forever(directory=root)
+
+
+@cli.command()
+@deck_parameters
+@server_options
+@click.pass_obj
+def serve_http(options, decks, server):
     """Serve HTML summary of deck on localhost:8000."""
     decks = decks.read_final_sorted(options)
     with tempfile.TemporaryDirectory(
@@ -346,7 +398,7 @@ def serve_http(options, decks, server, flashcards):
         root = Path(root)
         root.chmod(0o755)  # TemporaryDirectory creates dirs with mode 0o700.
 
-        write_html(root, decks, flashcards=flashcards)
+        write_html(root, decks)
 
         LOGGER.info(f"Starting web server in temporary directory {root}")
         server.serve_forever(directory=root)

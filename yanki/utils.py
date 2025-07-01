@@ -1,3 +1,4 @@
+import contextlib
 import dataclasses
 import hashlib
 import inspect
@@ -39,6 +40,22 @@ def add_trace_logging():
 def chars_in(chars, input):
     """Return chars from `chars` that are in `input`."""
     return [char for char in chars if char in input]
+
+
+@contextlib.contextmanager
+def create_unique_file(path: Path, **kwargs):
+    """Create and open a file ensuring it has a unique name."""
+    original_stem = path.stem
+    i = 2
+    while True:
+        try:
+            with path.open("x", **kwargs) as file:
+                yield file
+        except FileExistsError:
+            path = path.with_stem(f"{original_stem}_{i}")
+            i += 1
+        else:
+            return
 
 
 def file_url_to_path(url: str) -> Path:
@@ -110,22 +127,22 @@ def fs_is_legal_name(name: str) -> bool:
     )
 
 
-def hardlink_into(source: Path, target_dir: Path) -> Path:
-    """Hard link source into target_dir/source.name.
+def hardlink_into(source_path: Path, directory: Path) -> Path:
+    """Hard link the file at source_path into directory/file.name.
 
-    Will remove existing files that are in the way if they don’t already link to
-    the right place.
+    This will remove existing files that are in the way if they don’t already
+    link to the right place.
 
-    Retuns `Path` to new file.
+    Retuns a `Path` to the newly linked file.
     """
     # FIXME use shutil.copy2 if hardlink doesn’t work
-    target = target_dir / source.name
+    target = directory / source_path.name
     try:
-        target.hardlink_to(source)
+        target.hardlink_to(source_path)
     except FileExistsError:
-        if not target.samefile(source):
+        if not target.samefile(source_path):
             target.unlink()
-            target.hardlink_to(source)
+            target.hardlink_to(source_path)
     return target
 
 
@@ -184,6 +201,35 @@ def open_in_app(arguments):
         )
 
     sys.stdout.write(result.stdout)
+
+
+def symlink_into(source_path: Path, directory: Path):
+    """Symlink the file at source_path into directory/file.name.
+
+    This handles duplicate links, and raises FileExistsError with a reasonable
+    message if there is a conflict.
+
+    Retuns a `Path` to the new symlink.
+    """
+    link_path = directory / source_path.name
+    try:
+        link_path.symlink_to(source_path)
+    except FileExistsError:
+        try:
+            destination = link_path.readlink()
+        except OSError:
+            raise FileExistsError(
+                "Found non-symlink {str(link_path)!r}"
+            ) from None  # Source error messages are confusing
+
+        if destination != source_path:
+            # Links should always have the same name as the source, so this
+            # should never happen.
+            raise FileExistsError(
+                f"Symlink {str(link_path)!r} points to {str(destination)!r} "
+                f"instead of {str(source_path)!r}"
+            ) from None  # Source error message is confusing
+    return link_path
 
 
 URL_UNFRIENDLY_RE = re.compile(r'[\|"\[\]:/ _]+')

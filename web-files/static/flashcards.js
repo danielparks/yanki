@@ -205,6 +205,22 @@ window.addEventListener("load", (event) => {
     }
   }
 
+  fetch("decks.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error, status = ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((decks) => {
+      console.log("got", decks);
+    });
+
+
+  get_id("loading").remove();
+  document.body.classList.remove("loading");
+
+
   var direction_buttons = {
     both: create("button", [text("Both")], {
       id: "direction-both",
