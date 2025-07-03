@@ -132,6 +132,8 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
         reprocess=reprocess,
         concurrency=concurrency,
     )
+    # FIXME remove after Video is changed to use new Cache.
+    ctx.obj.cache.ensure_tag()
 
     # Configure logging
     global global_log_debug  # noqa: PLW0603 (global keyword)

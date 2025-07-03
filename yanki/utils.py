@@ -1,8 +1,10 @@
 import contextlib
 import dataclasses
+import hashlib
 import inspect
 import logging
 import os
+import re
 import shlex
 import subprocess
 import sys
@@ -14,6 +16,10 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from yanki.errors import ExpectedError
+
+FS_ILLEGAL_CHARS = frozenset('/"[]:')
+FS_ILLEGAL_NAMES = frozenset(["", ".", ".."])
+FS_VALID_SUFFIX_RE = re.compile(r".(\.[a-z0-9]{1,10})$")
 
 
 class NotFileURLError(ValueError):
@@ -92,6 +98,50 @@ def find_errors(group: ExceptionGroup):
             yield from find_errors(error)
         else:
             yield error
+
+
+def fs_escape(name: str) -> str:
+    """Escape a name for the filesystem.
+
+    This must always produce a unique name — no two inputs to this function may
+    ever produce the same result.
+
+    FIXME: This does not handle illegal characters or names on Windows.
+    """
+    if fs_is_legal_name(name):
+        return name
+    return fs_hash_name(name)
+
+
+def fs_hash_name(name: str) -> str:
+    """Escape a name for the filesystem with a hash (unconditionally).
+
+    This preserves the extension if it only contains ASCII alphanumeric
+    characters and is no longer than 10 characters.
+    """
+    suffix = ""
+    if result := FS_VALID_SUFFIX_RE.search(name):
+        suffix = result[1]
+
+    hash = hashlib.blake2b(
+        name.encode(encoding="utf_8"),
+        digest_size=32,
+        usedforsecurity=False,
+    ).hexdigest()
+
+    return f"_blake2b_{hash}{suffix}"
+
+
+def fs_is_legal_name(name: str) -> bool:
+    """Is the passed name a legal filename?
+
+    FIXME: This does not handle illegal characters or names on Windows.
+    """
+    return (
+        not name.startswith("_")
+        and name not in FS_ILLEGAL_NAMES
+        and FS_ILLEGAL_CHARS.isdisjoint(name)
+    )
 
 
 def get_key_path(data, path: list[any]):

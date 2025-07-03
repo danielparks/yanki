@@ -15,7 +15,7 @@ from urllib.parse import parse_qs, urlparse
 import ffmpeg
 import yt_dlp
 
-from yanki.cache import Cache
+from yanki.cache import Cache, SelfAttr, cached_json
 from yanki.errors import ExpectedError
 from yanki.utils import (
     NotFileURLError,
@@ -177,11 +177,13 @@ class Video:
         self._cached_more_info = None
         self._cached_parameters = None
 
+    # Needed for `@cached_json` and `@cached_path`.
+    @property
+    def cache(self):
+        return self.options.cache
+
     def cached(self, filename):
         return self.options.cache.path / filename
-
-    def info_cache_path(self):
-        return self.cached(f"info_{self.id}.json")
 
     def more_info_cache_path(self):
         return self.cached(
@@ -207,7 +209,8 @@ class Video:
             f"{prefix}{self.id}_{parameters}.{self.output_ext()}"
         )
 
-    def _download_info(self):
+    @cached_json(SelfAttr("id"), "info")
+    def info(self):
         try:
             path = file_url_to_path(self.url)
             return {
@@ -229,21 +232,6 @@ class Video:
             raise BadURLError(
                 f"Error downloading {self.url!r}: {error}"
             ) from error
-
-    @functools.cache
-    def info(self):
-        try:
-            with self.info_cache_path().open("r", encoding="utf_8") as file:
-                return json.load(file)
-        except FileNotFoundError:
-            # Either the file wasn’t found or wasn’t valid JSON. We use `pass`
-            # to avoid adding this exception to the context of new exceptions.
-            pass
-
-        info = self._download_info()
-        with atomic_open(self.info_cache_path()) as file:
-            json.dump(info, file)
-        return info
 
     def title(self):
         return self.info()["title"]
