@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 import click
 
+from yanki.errors import ExpectedError
 from yanki.utils import open_in_app
 
 
@@ -61,18 +62,24 @@ class Server:
             time.sleep(0.5)
             open_in_app([f"http://localhost:{self.bind_port}/"])
 
-        httpd = http.server.HTTPServer(
-            self.bind_tuple,
-            functools.partial(
-                http.server.SimpleHTTPRequestHandler, directory=directory
-            ),
-        )
+        print(f"Starting HTTP server on http://{self.bind}/")
+        try:
+            httpd = http.server.HTTPServer(
+                self.bind_tuple,
+                functools.partial(
+                    http.server.SimpleHTTPRequestHandler, directory=directory
+                ),
+            )
+        except OSError as error:
+            raise ExpectedError(f"Error starting server: {error}") from error
 
         if self.open:
             threading.Thread(target=open_browser).start()
 
-        print(f"Starting HTTP server on http://{self.bind}/")
-        httpd.serve_forever()
+        try:
+            httpd.serve_forever()
+        except OSError as error:
+            raise ExpectedError(f"Error running server: {error}") from error
 
 
 def server_options(func):
