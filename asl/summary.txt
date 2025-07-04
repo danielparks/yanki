@@ -1645,9 +1645,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=1XSPru7x0G4 @0- PARAMETER: crop='1
 Lifeprint ASL https://www.youtube.com/watch?v=1XSPru7x0G4 @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=1XSPru7x0G4 @0- TAGS: 'Lifeprint lesson_14 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=1XSPru7x0G4 @0- TEXT: 'WARM COOKIE AND MILK, YOU LIKE?'
-Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- MEDIA: 'processed_youtube=1XxOZbXT0Ck_39320f8a069bab69914357d2e9f46d90.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- MEDIA: 'processed_youtube=1XxOZbXT0Ck_2ddc02ad341ac1f6cd012a8232b9f94a.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- PARAMETER: clip=(1.0343666666666667, 2.6026000000000002)
 Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- TAGS: 'Lifeprint extra extra-deck extra-deck-miscellaneous vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=1XxOZbXT0Ck @0- TEXT: 'STICKY'
