@@ -943,10 +943,13 @@ group:
 group:
   more: +md:[SMELL](https://www.lifeprint.com/asl101/pages-signs/s/smell.htm)
   https://www.youtube.com/watch?v=BWweMqFByBE SMELL (positive affect)
+    trim: 20F-72F
 
   tags: +extra
   https://www.youtube.com/watch?v=gQje6mE_a4Y -> SMELL (negative affect)
+    trim: 13F-60F
   https://www.youtube.com/watch?v=O3L5UOdpvIY STINK
+    trim: 18F-69F
 
 group:
   more: +md:[SOCCER](https://www.lifeprint.com/asl101/pages-signs/s/soccer.htm)
