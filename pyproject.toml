@@ -71,6 +71,7 @@ ignore = [
     "PLR6301",  # Too many false positive (methods that don’t need `self`).
     "PLW2901",  # I like to shadow `for` loop variables.
     "PT011",    # `pytest.raises(...)` is too broad: Too many false positives.
+    "RSE102",   # Always use parentheses raising an exception for consistency.
     "S404",     # I use `subprocess`.
     "S603",     # This seems to trigger on all calls to `subprocess.run`.
     "T20",      # We use `print()`.
@@ -84,8 +85,8 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = [
-  "INP001", # Don't care about implicit namespace in tests.
-  "S101",   # assert is fine in tests.
+    "INP001", # Don't care about implicit namespace in tests.
+    "S101",   # assert is fine in tests.
 ]
 
 [tool.ruff.lint.pydocstyle]
