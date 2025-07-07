@@ -19,13 +19,12 @@ def read_first_line(path: Path):
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/errors"))
-def test_deck_error(path, cache_path):
-    options = VideoOptions(cache_path=cache_path)
+def test_deck_error(path):
     with (
         path.open("r", encoding="utf_8") as file,
         pytest.raises(ExceptionGroup) as error_info,
     ):
-        DeckSource(files=[file]).read_final(options)
+        DeckSource(files=[file]).read_final(VideoOptions())
 
     [error] = list(find_errors(error_info.value))
 
@@ -36,8 +35,7 @@ def test_deck_error(path, cache_path):
 
 
 @pytest.mark.parametrize("path", find_deck_files("test-decks/good"))
-def test_deck_success(path, cache_path):
-    options = VideoOptions(cache_path=cache_path)
+def test_deck_success(path):
     with path.open("r", encoding="utf_8") as file:
-        [deck] = DeckSource(files=[file]).read_final(options)
+        [deck] = DeckSource(files=[file]).read_final(VideoOptions())
     assert len(deck.notes()) >= 1
