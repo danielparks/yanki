@@ -482,6 +482,10 @@ group:
     trim: 4F-50F
 
 group:
+  more: +md:[GOSSIP](https://www.lifeprint.com/asl101/pages-signs/g/gossip.htm)
+  https://www.youtube.com/watch?v=ITxU_FbNfhw GOSSIP
+
+group:
   more: +md:[GROW](https://www.lifeprint.com/asl101/pages-signs/g/grow.htm)
   # GROW is in lesson 14 under SPRING
   https://www.youtube.com/watch?v=K06cSaDx4BM GROW-large
@@ -863,6 +867,16 @@ group:
   more: +md:[SEASON](https://www.lifeprint.com/asl101/pages-signs/s/season.htm)
   https://www.youtube.com/watch?v=kdo-Tn7Klnc SEASON (time of year)
     trim: 9F-65F
+
+group:
+  more: +md:[SECRET](https://www.lifeprint.com/asl101/pages-signs/s/secret.htm)
+  https://www.youtube.com/watch?v=ELNOdcy_1fE
+    SECRET / private / password / privacy / personal
+
+  tags: +extra
+  https://www.youtube.com/watch?v=izHqamODHIM keep-a-SECRET / I’m not telling
+  https://www.youtube.com/watch?v=jY5lxlGWklw
+    I’m not telling (finger-to-lips version)
 
 group:
   more: +md:[SEEM](https://www.lifeprint.com/asl101/pages-signs/s/seem.htm)
