@@ -8,7 +8,8 @@ body {
   margin-bottom: 2em;
 }
 
-img, video {
+img,
+video {
   max-height: 300px;
 }
 
@@ -17,15 +18,19 @@ img, video {
   margin: 1em 0;
 }
 
-.metadata td, .metadata th {
+.metadata td,
+.metadata th {
   border: none;
   text-align: left;
 }
 
-.metadata th, .metadata tr.direction td, .metadata tr.source td {
+.metadata th,
+.metadata tr.direction td,
+.metadata tr.source td {
   font-weight: normal;
 }
 
-.metadata td, .metadata td span {
+.metadata td,
+.metadata td span {
   font-weight: bold;
 }
