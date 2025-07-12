@@ -1,6 +1,10 @@
+import logging
+
 import pytest
 
 from yanki.video import Video, VideoOptions
+
+LOGGER = logging.getLogger(__name__)
 
 
 def get_video():
@@ -36,6 +40,7 @@ def test_time_parse():  # noqa: PLR0915 (too many statements)
 
     with pytest.raises(ValueError) as error_info:
         video.time_to_seconds("2ks")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("could not convert string to float")
 
     assert round(video.time_to_seconds("0:45.6"), 9) == 45.6
@@ -61,14 +66,17 @@ def test_time_parse():  # noqa: PLR0915 (too many statements)
 
     with pytest.raises(ValueError) as error_info:
         video.time_to_seconds(":2")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("could not convert string to float")
 
     with pytest.raises(ValueError) as error_info:
         video.time_to_seconds("2:")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("could not convert string to float")
 
     with pytest.raises(ValueError) as error_info:
         video.time_to_seconds("af:2")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("could not convert string to float")
 
     # FIXME? Should probably be error
@@ -85,8 +93,10 @@ def test_time_parse():  # noqa: PLR0915 (too many statements)
 
     with pytest.raises(ValueError) as error_info:
         video.time_to_seconds("2fF")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("invalid literal")
 
     with pytest.raises(ValueError) as error_info:
         video.time_to_seconds("2F0")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("could not convert string to float")

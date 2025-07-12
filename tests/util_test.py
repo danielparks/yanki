@@ -1,8 +1,11 @@
+import logging
 from pathlib import Path
 
 import pytest
 
 from yanki.utils import NotFileURLError, atomic_open, file_url_to_path
+
+LOGGER = logging.getLogger(__name__)
 
 
 def test_atomic_open(tmp_path):
@@ -34,6 +37,7 @@ def test_atomic_open_error(tmp_path):
             file.write("Second write\n")
             file.close()
             raise RuntimeError("boo")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("boo")
 
     assert path.read_text() == "First write\n"
@@ -49,6 +53,7 @@ def test_atomic_open_deleted(tmp_path):
         with atomic_open(path) as file:
             Path(file.name).unlink()
             file.write("First write\n")
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert error_info.match("No such file or directory")
 
     assert not path.exists()

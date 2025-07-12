@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 
 import pytest
@@ -5,6 +6,8 @@ import pytest
 from yanki.cli.decks import DeckSource
 from yanki.utils import find_errors
 from yanki.video import VideoOptions
+
+LOGGER = logging.getLogger(__name__)
 
 
 def find_deck_files(base_path):
@@ -27,6 +30,7 @@ def test_deck_error(path):
         DeckSource(files=[file]).read_final(VideoOptions())
 
     [error] = list(find_errors(error_info.value))
+    LOGGER.info("Caught exception", exc_info=error)
 
     first_line = read_first_line(path)
     assert first_line[0:2] == "# "

@@ -10,6 +10,7 @@ from yanki.utils import add_trace_logging
 
 add_trace_logging()
 logging.getLogger("yanki.parser").setLevel(logging.TRACE)
+LOGGER = logging.getLogger(__name__)
 
 
 def parse_maybe_deck(contents, name="-"):
@@ -277,4 +278,5 @@ def test_note_parametrized(note_lines, parsed_text):
 def test_errors_parametrized(deck, message):
     with pytest.raises(DeckSyntaxError) as error_info:
         parse_deck(deck)
+    LOGGER.info("Caught exception", exc_info=error_info.value)
     assert str(error_info.value) == message
