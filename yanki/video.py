@@ -585,10 +585,8 @@ class Video:
         self.logger.info(f"downloading raw video to {path}")
 
         with self._yt_dlp(outtmpl={"default": str(path)}) as ydl:
-            # FIXME why not use the in-memory info?
-            if error := ydl.download_with_info_file(self.info_cache_path()):
-                # FIXME??!
-                raise RuntimeError(error)
+            # Returns “resolved” info. Not useful to us.
+            ydl.process_ie_result(self.info(), download=True)
 
         return path
 
