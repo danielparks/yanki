@@ -193,9 +193,6 @@ class Video:
     def raw_video_cache_path(self):
         return self.cached("raw_" + self.id + "." + self.info()["ext"])
 
-    def raw_metadata_cache_path(self):
-        return self.cached(f"ffprobe_raw_{self.id}.json")
-
     async def processed_video_cache_path_async(self, prefix="processed_"):
         parameters = "_".join(await self.parameters_list_async())
 
@@ -236,11 +233,12 @@ class Video:
     def title(self):
         return self.info()["title"]
 
+    @cached_json(SelfAttr("id"), "raw_metadata")
     def load_raw_metadata(self):
         self.logger.trace(f"start ffprobe on {self.raw_video()}")
         time_started = time.perf_counter()
         try:
-            self._raw_metadata = ffmpeg.probe(self.raw_video())
+            result = ffmpeg.probe(self.raw_video())
         except ffmpeg.Error as error:
             raise FFmpegError(
                 command="ffprobe", stdout=error.stdout, stderr=error.stderr
@@ -251,29 +249,12 @@ class Video:
             f"raw metadata loaded from {self.raw_video()} in {elapsed:,.3f}s"
         )
 
-        with atomic_open(self.raw_metadata_cache_path()) as file:
-            json.dump(self._raw_metadata, file)
+        return result
 
-        return self._raw_metadata
-
-    # This will refresh metadata once if it doesn’t find the passed path the
-    # first time.
     def raw_metadata(self, *key_path):
-        if self._raw_metadata:
-            return get_key_path(self._raw_metadata, key_path)
-
-        metadata_cache_path = self.raw_metadata_cache_path()
-        try:
-            with metadata_cache_path.open("r", encoding="utf_8") as file:
-                self._raw_metadata = json.load(file)
-                return get_key_path(self._raw_metadata, key_path)
-        except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):
-            # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
-            # the key path. We use `pass` here to avoid adding this exception to
-            # the context of new exceptions.
-            pass
-
-        return get_key_path(self.load_raw_metadata(), key_path)
+        if not self._raw_metadata:
+            self._raw_metadata = self.load_raw_metadata()
+        return get_key_path(self._raw_metadata, key_path)
 
     def get_fps(self):
         for stream in self.raw_metadata("streams"):
