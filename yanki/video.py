@@ -584,9 +584,16 @@ class Video:
 
         self.logger.info(f"downloading raw video to {path}")
 
-        with self._yt_dlp(outtmpl={"default": str(path)}) as ydl:
-            # Returns “resolved” info. Not useful to us.
-            ydl.process_ie_result(self.info(), download=True)
+        try:
+            with self._yt_dlp(outtmpl={"default": str(path)}) as ydl:
+                # Returns “resolved” info. Not useful to us.
+                ydl.process_ie_result(self.info(), download=True)
+        except yt_dlp.utils.DownloadError as error:
+            # This is an ExpectedError, so the __cause__ won’t normally be
+            # displayed, so it’s included in the message.
+            raise BadURLError(
+                f"Error downloading {self.url!r}: {error}"
+            ) from error
 
         return path
 
