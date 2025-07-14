@@ -1001,6 +1001,13 @@ group:
     trim: 7F-
 
 group:
+  more: +md:[SPICY](https://www.lifeprint.com/asl101/pages-signs/s/spicy.htm)
+  https://www.youtube.com/watch?v=ivKp9p_0InQ SPICY (closed to open version)
+    trim: 13F-54F
+  https://www.youtube.com/watch?v=X_AfZFQmrHM SPICY (closed to closed version)
+    trim: 14F-72F
+
+group:
   more: +md:[START](https://www.lifeprint.com/asl101/pages-signs/s/start.htm)
   https://www.youtube.com/watch?v=wFuWmTNw4SE START / begin / initiate
     trim: 4F-48F
