@@ -6921,6 +6921,13 @@ Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=NzhYpb6dgfs @0- TEXT: 'REBEL / strike / protest / defiant'
+Lifeprint ASL https://www.youtube.com/watch?v=O1JjzPxNC_0 @0.7674333333333333-1.7350666666666668 MEDIA: 'processed_youtube=O1JjzPxNC_0_531ac5c9324c34543f8cb670a5424927.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=O1JjzPxNC_0 @0.7674333333333333-1.7350666666666668 MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=O1JjzPxNC_0 @0.7674333333333333-1.7350666666666668 PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=O1JjzPxNC_0 @0.7674333333333333-1.7350666666666668 PARAMETER: clip=(0.7674333333333333, 1.7350666666666668)
+Lifeprint ASL https://www.youtube.com/watch?v=O1JjzPxNC_0 @0.7674333333333333-1.7350666666666668 PARAMETER: crop='960:720:160:0'
+Lifeprint ASL https://www.youtube.com/watch?v=O1JjzPxNC_0 @0.7674333333333333-1.7350666666666668 TAGS: 'Lifeprint extra extra-deck extra-deck-miscellaneous vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=O1JjzPxNC_0 @0.7674333333333333-1.7350666666666668 TEXT: 'SWEAT'
 Lifeprint ASL https://www.youtube.com/watch?v=O1kESRrCxXs @0- MEDIA: 'processed_youtube=O1kESRrCxXs_fa111808cb759bb577ec94a5d0c4ae93.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=O1kESRrCxXs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson08.htm">lesson 8</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/d/dirty.htm">DIRTY</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=O1kESRrCxXs @0- PARAMETER: audio='strip'
