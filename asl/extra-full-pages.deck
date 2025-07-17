@@ -311,13 +311,6 @@ group:
     trim: 16F-66F
 
 group:
-  more: +md:[DELICIOUS](https://www.lifeprint.com/asl101/pages-signs/d/delicious.htm)
-  https://www.youtube.com/watch?v=jHACe_ba-tc DELICIOUS (snap version)
-    trim: 11F-58F
-  https://www.youtube.com/watch?v=SgUwD_atMHo DELICIOUS (open-8 version)
-    trim: 11F-76F
-
-group:
   more: +md:[DEPEND](https://www.lifeprint.com/asl101/pages-signs/d/depend.htm)
   https://www.youtube.com/watch?v=8E1NT-uiDXs DEPEND / it depends / depends on
     trim: 10F-73F
@@ -958,17 +951,6 @@ group:
     trim: 18F-68F
   https://www.youtube.com/watch?v=vnon88Fjhsg COMMON-SENSE
     trim: 9F-56F
-
-group:
-  more: +md:[SMELL](https://www.lifeprint.com/asl101/pages-signs/s/smell.htm)
-  https://www.youtube.com/watch?v=BWweMqFByBE SMELL (positive affect)
-    trim: 20F-72F
-
-  tags: +extra
-  https://www.youtube.com/watch?v=gQje6mE_a4Y -> SMELL (negative affect)
-    trim: 13F-60F
-  https://www.youtube.com/watch?v=O3L5UOdpvIY STINK
-    trim: 18F-69F
 
 group:
   more: +md:[SOCCER](https://www.lifeprint.com/asl101/pages-signs/s/soccer.htm)
