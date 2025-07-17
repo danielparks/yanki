@@ -87,13 +87,6 @@ https://www.youtube.com/watch?v=9yoJHvDfj-4 BOTH
   trim: 0-64F
 https://www.youtube.com/watch?v=pYPZpBatN5c -> BOTH (C to S)
   trim: 9F-57F
-https://www.youtube.com/watch?v=zMd-DsDftP8 VEGETABLE / vegetarian
-  trim: 7F-56F
-https://www.youtube.com/watch?v=m5lfRYfXUIQ ->
-  VEGETABLE / vegetarian (twist version)
-  trim: 9F-74F
-https://www.youtube.com/watch?v=GnHH4QK3Ths -> V-E-G / vegetable / vegetarian
-  trim: 9F-73F
 https://www.youtube.com/watch?v=Ft6JlxIIEP4 TOMATO
   trim: 11F-60F
 https://www.youtube.com/watch?v=CcLvZ5buj68 CLAM
@@ -169,11 +162,6 @@ group:
     trim: 15F-68F
 
 # From lesson 17 video (https://www.youtube.com/watch?v=GGZRweOqFtc)
-group:
-  more: +md:[BREAD](https://www.lifeprint.com/asl101/pages-signs/b/bread.htm)
-  https://www.youtube.com/watch?v=uLTW-N6UY8E BREAD
-    trim: 13F-65F
-
 group:
   more: +md:[CORN](https://www.lifeprint.com/asl101/pages-signs/c/corn.htm)
   https://www.youtube.com/watch?v=-DYBrDwlwhw CORN
