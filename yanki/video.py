@@ -1,7 +1,6 @@
 import asyncio
 import functools
 import hashlib
-import json
 import logging
 import math
 import re
@@ -192,11 +191,6 @@ class Video:
     def cached(self, filename):
         return self.options.cache.path / filename
 
-    def more_info_cache_path(self):
-        return self.cached(
-            f"more_info_{self.id}_clip={self.file_safe_clip()}.json"
-        )
-
     async def processed_video_cache_path_async(self, prefix="processed_"):
         parameters = "_".join(await self.parameters_list_async())
 
@@ -353,12 +347,11 @@ class Video:
 
         return (first_move, last_move)
 
+    @cached_json(SelfAttr("id"), "more_info", version=MORE_INFO_VERSION)
     async def load_more_info_async(self):
         """Load more information about the contents of the media.
 
         This returns a `dict` with keys:
-          * `version`: the current version of the more_info algorithm so that
-            old data can be invalidated.
           * `cropdetect`:
             * `[(time, "crop"), ...]`, e.g. `[(0.067, "1920:1072:0:4"), ...]`
             * `None`: the video stream was stripped
@@ -370,12 +363,10 @@ class Video:
         https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/scdet.html
         """
         if not self.wants_video():
-            self._cached_more_info = {
-                "version": MORE_INFO_VERSION,
+            return {
                 "cropdetect": None,
                 "scdet": None,
             }
-            return self._cached_more_info
 
         if self._clip == "auto":
             in_options = {}
@@ -412,44 +403,19 @@ class Video:
                 # (time, score), e.g. (2.369, 0.008):
                 scdet.append((float(matches[2]), float(matches[1])))
 
-        self._cached_more_info = {
-            "version": MORE_INFO_VERSION,
+        return {
             "cropdetect": cropdetect,
             "scdet": scdet,
         }
-        return self._cached_more_info
 
     async def more_info_async(self):
-        if self._cached_more_info:
-            return self._cached_more_info
-
-        path = self.more_info_cache_path()
-        try:
-            with path.open("r", encoding="utf_8") as file:
-                self._cached_more_info = json.load(file)
-                if self._cached_more_info is not None:
-                    # No version is equivalent to version 1.
-                    version = self._cached_more_info.get("version", 1)
-                    if version == MORE_INFO_VERSION:
-                        return self._cached_more_info
-                    self.logger.info(
-                        f"Discarding more_info with bad version {version!r} "
-                        f"(expected {MORE_INFO_VERSION!r}) at {path}"
-                    )
-                    self._cached_more_info = None
-        except FileNotFoundError:
-            # Either the file wasn’t found or wasn’t valid JSON. We use `pass`
-            # to avoid adding this exception to the context of new exceptions.
-            pass
-
-        await self.load_more_info_async()
-        with atomic_open(path) as file:
-            json.dump(self._cached_more_info, file)
+        if not self._cached_more_info:
+            self._cached_more_info = await self.load_more_info_async()
         return self._cached_more_info
 
     def more_info(self):
         """Get extra information from finalized video."""
-        if self._cached_more_info is None:
+        if not self._cached_more_info:
             raise ValueError("more_info() called on un-finalized Video")
         return self._cached_more_info
 
