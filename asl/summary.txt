@@ -6529,7 +6529,7 @@ Lifeprint ASL https://www.youtube.com/watch?v=LvuQ0qc1uOA @0- MORE: '<p>From <a 
 Lifeprint ASL https://www.youtube.com/watch?v=LvuQ0qc1uOA @0- PARAMETER: audio='strip'
 Lifeprint ASL https://www.youtube.com/watch?v=LvuQ0qc1uOA @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=LvuQ0qc1uOA @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=LvuQ0qc1uOA @0- TEXT: 'tissue / COLD-sick PAPER (compound version)'
+Lifeprint ASL https://www.youtube.com/watch?v=LvuQ0qc1uOA @0- TEXT: 'tissue / COLD-sick + PAPER (compound version)'
 Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- MEDIA: 'processed_youtube=LzPY8zNNLlo_13baea6d08b253c566c92b229f072d59.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson21.htm">lesson 21</a></p>\n<h3>Why are most postal employees thin?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=LzPY8zNNLlo @0- PARAMETER: audio='strip'
