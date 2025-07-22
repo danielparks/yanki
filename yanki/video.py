@@ -791,7 +791,7 @@ class Video:
             if waited < 0.001:
                 waited = 0.0
             self.logger.trace(
-                f"Start run (waited {waited:0.3}s) {shlex.join(command)}"
+                f"Start run (waited {waited:,.3f}s) {shlex.join(command)}"
             )
             process = await asyncio.create_subprocess_exec(
                 *command,
@@ -804,8 +804,8 @@ class Video:
 
         run_time = time.perf_counter() - time_started
         self.logger.debug(
-            f"Finished run (in {run_time:0.3}s, returned {process.returncode}) "
-            f"{shlex.join(command)}"
+            f"Finished run (in {run_time:,.3f}s, returned {process.returncode})"
+            f" {shlex.join(command)}"
         )
 
         if process.returncode:
