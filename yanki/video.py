@@ -249,13 +249,19 @@ class Video:
         return self.info()["title"]
 
     def load_raw_metadata(self):
-        self.logger.debug(f"load raw metadata: {self.raw_video()}")
+        self.logger.trace(f"start ffprobe on {self.raw_video()}")
+        time_started = time.perf_counter()
         try:
             self._raw_metadata = ffmpeg.probe(self.raw_video())
         except ffmpeg.Error as error:
             raise FFmpegError(
                 command="ffprobe", stdout=error.stdout, stderr=error.stderr
             ) from error
+
+        elapsed = time_started - time.perf_counter()
+        self.logger.debug(
+            f"raw metadata loaded from {self.raw_video()} in {elapsed:,.3f}s"
+        )
 
         with atomic_open(self.raw_metadata_cache_path()) as file:
             json.dump(self._raw_metadata, file)
