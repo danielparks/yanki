@@ -273,7 +273,7 @@ class Entry:
         """
         raise NotImplementedError("abstract base class")
 
-    def write_file(self):
+    def write_file(self, _lock_file: io.IOBase):
         """Write value to `self.working_path`."""
         raise NotImplementedError("abstract base class")
 
@@ -304,13 +304,14 @@ class Entry:
                 if self.check_memory_cache():
                     return self.value
 
-                with self._lock_and_read_cache() as lock_file:
+                self._read_cache()
+                if self.needs_load():
+                    result = self._load_and_write()
                     if self.needs_load():
-                        result = self._load_and_write(lock_file)
-                        if self.needs_load():
-                            # The loader elected not to cache; just pass the
-                            # return value through.
-                            return result
+                        # The loader elected not to cache; just pass the
+                        # return value through.
+                        return result
+
                 self.cache.set_entry_value(
                     self.resolved_cache_path, self._value
                 )
@@ -335,13 +336,14 @@ class Entry:
                 if self.check_memory_cache():
                     return self.value
 
-                with self._lock_and_read_cache() as lock_file:
+                self._read_cache()
+                if self.needs_load():
+                    result = await self._load_and_write_async()
                     if self.needs_load():
-                        result = await self._load_and_write_async(lock_file)
-                        if self.needs_load():
-                            # The loader elected not to cache; just pass the
-                            # return value through.
-                            return result
+                        # The loader elected not to cache; just pass the
+                        # return value through.
+                        return result
+
                 self.cache.set_entry_value(
                     self.resolved_cache_path, self._value
                 )
@@ -349,68 +351,53 @@ class Entry:
             finally:
                 self.logger.trace("releasing async lock")
 
-    @contextmanager
-    def _lock_and_read_cache(self) -> Generator:
-        """Gets a shared file lock and reads the file system cache."""
-        lock_path = self.file_path.with_name(f"_lock_{self.file_path.name}")
-        self.logger.trace(f"opening {lock_path} for reading")
-        with lock_path.open("a+", encoding="utf_8") as lock_file:
-            lock_file.seek(0)
-            self.logger.trace(f"acquiring shared lock on {lock_path}")
-            fcntl.lockf(lock_file, fcntl.LOCK_SH)
-            self.logger.trace(f"acquired shared lock on {lock_path}")
-
-            self._read_cache(lock_file)
-
-            try:
-                yield lock_file
-            finally:
-                self.logger.trace(f"closing {lock_path} and releasing locks")
-
-    def _read_cache(self, lock_file: io.IOBase):
-        assert lock_file.readable(), "reading cache requires read lock"  # noqa: S101 just a sanity check
+    def _read_cache(self):
         try:
             self._value = self.read_file()
         except FileNotFoundError:
             self._value = _UNSET
 
-    def _load_and_write(self, lock_file: io.IOBase) -> Any:
-        with self._write_lock(lock_file):
+    def _load_and_write(self) -> Any:
+        with self._write_lock() as lock_file:
             # It’s possible that another process loaded the value while we were
             # waiting for a write lock.
-            self._read_cache(lock_file)
+            self._read_cache()
             if not self.needs_load():
                 return self.value
             self.logger.trace("calling loader")
-            return self._post_load(self.load())
+            return self._post_load(self.load(), lock_file)
 
-    async def _load_and_write_async(self, lock_file: io.IOBase) -> Any:
-        with self._write_lock(lock_file):
+    async def _load_and_write_async(self) -> Any:
+        with self._write_lock() as lock_file:
             # It’s possible that another process loaded the value while we were
             # waiting for a write lock.
-            self._read_cache(lock_file)
+            self._read_cache()
             if not self.needs_load():
                 return self.value
             self.logger.trace("calling async loader")
-            return self._post_load(await self.load_async())
+            return self._post_load(await self.load_async(), lock_file)
 
     @contextmanager
-    def _write_lock(self, lock_file: io.IOBase) -> Generator:
-        self.logger.debug("open for writing")
-        self.logger.trace(f"acquiring exclusive lock on {lock_file.name}")
-        fcntl.lockf(lock_file, fcntl.LOCK_EX)
-        self.logger.trace(f"acquired exclusive lock on {lock_file.name}")
-        lock_file.truncate()
-        lock_file.write(str(os.getpid()))
-        self.working_path.unlink(missing_ok=True)
-
-        try:
-            yield
-        finally:
-            self.working_path.unlink(missing_ok=True)
+    def _write_lock(self) -> Generator:
+        lock_path = self.file_path.with_name(f"_lock_{self.file_path.name}")
+        self.logger.debug(f"opening {lock_path} for writing")
+        with lock_path.open("a+", encoding="utf_8") as lock_file:
+            lock_file.seek(0)
+            self.logger.trace(f"acquiring exclusive lock on {lock_path}")
+            fcntl.lockf(lock_file, fcntl.LOCK_EX)
+            self.logger.trace(f"acquired exclusive lock on {lock_path}")
             lock_file.truncate()
+            lock_file.write(str(os.getpid()))
+            self.working_path.unlink(missing_ok=True)
 
-    def _post_load(self, load_return: Any) -> Any:
+            try:
+                yield lock_file
+            finally:
+                self.working_path.unlink(missing_ok=True)
+                lock_file.truncate()
+                self.logger.trace(f"closing {lock_path} and releasing lock")
+
+    def _post_load(self, load_return: Any, lock_file: io.IOBase) -> Any:
         """Save value set by `load()` or pass through its return.
 
         This must be called within a write lock.
@@ -422,7 +409,7 @@ class Entry:
         if not self.is_valid():
             raise LoadInvalidError()
 
-        self.write_file()
+        self.write_file(lock_file)
         self.working_path.rename(self.file_path)
         self.logger.debug(f"saved to {self.file_path}")
         return self.value
@@ -482,11 +469,11 @@ class EntryPath(Entry):
             return self.file_path
         return _UNSET
 
-    def _read_cache(self, _lock_file: io.IOBase):
+    def _read_cache(self):
         # Nothing to do: is_set() and value() do all the work.
         pass
 
-    def write_file(self):
+    def write_file(self, _lock_file: io.IOBase):
         # Nothing to do: the loader is responsible for this.
         pass
 
@@ -527,7 +514,8 @@ class EntryContent(Entry):
         except FileNotFoundError:
             return _UNSET
 
-    def write_file(self):
+    def write_file(self, lock_file: io.IOBase):
+        assert lock_file.writable(), "writing cache requires exclusive lock"  # noqa: S101 just a sanity check
         if self.encoding:
             return self.working_path.write_text(
                 self._value, encoding=self.encoding
@@ -599,8 +587,9 @@ class EntryJson(Entry):
         with self.file_path.open() as file:
             return json.load(file)
 
-    def write_file(self):
+    def write_file(self, lock_file: io.IOBase):
         """Write `self._value` to the the file."""
+        assert lock_file.writable(), "writing cache requires exclusive lock"  # noqa: S101 just a sanity check
         with self.working_path.open("w") as file:
             json.dump(
                 self._value,
