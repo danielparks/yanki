@@ -15,7 +15,14 @@ from urllib.parse import parse_qs, urlparse
 import ffmpeg
 import yt_dlp
 
-from yanki.cache import Cache, SelfAttr, cached_json
+from yanki.cache import (
+    Cache,
+    Join,
+    SelfAttr,
+    SelfMethod,
+    cached_json,
+    cached_path,
+)
 from yanki.errors import ExpectedError
 from yanki.utils import (
     NotFileURLError,
@@ -190,9 +197,6 @@ class Video:
             f"more_info_{self.id}_clip={self.file_safe_clip()}.json"
         )
 
-    def raw_video_cache_path(self):
-        return self.cached("raw_" + self.id + "." + self.info()["ext"])
-
     async def processed_video_cache_path_async(self, prefix="processed_"):
         parameters = "_".join(await self.parameters_list_async())
 
@@ -232,6 +236,9 @@ class Video:
 
     def title(self):
         return self.info()["title"]
+
+    def extension(self):
+        return self.info()["ext"]
 
     @cached_json(SelfAttr("id"), "raw_metadata")
     def load_raw_metadata(self):
@@ -538,8 +545,8 @@ class Video:
         """If the output should include a video stream or image."""
         return not self._strip_video and self.has_video()
 
-    @functools.cache
-    def raw_video(self):
+    @cached_path(SelfAttr("id"), Join("raw.", SelfMethod("extension")))
+    def raw_video(self, output_path, *, final_path):
         try:
             # If it’s a file:// URL, then there’s no need to cache.
             source_path = self.working_dir / file_url_to_path(self.url)
@@ -549,18 +556,10 @@ class Video:
             self.logger.info(f"using local raw video {source_path}")
             return source_path
 
-        if "ext" not in self.info():
-            raise BadURLError(f"Invalid media URL {self.url!r}")
-
-        path = self.raw_video_cache_path()
-        if path.exists() and path.stat().st_size > 0:
-            # Already cached, and we can’t check if it’s out of date.
-            return path
-
-        self.logger.info(f"downloading raw video to {path}")
+        self.logger.info(f"downloading raw video to {final_path}")
 
         try:
-            with self._yt_dlp(outtmpl={"default": str(path)}) as ydl:
+            with self._yt_dlp(outtmpl={"default": str(output_path)}) as ydl:
                 # Returns “resolved” info. Not useful to us.
                 ydl.process_ie_result(self.info(), download=True)
         except yt_dlp.utils.DownloadError as error:
@@ -570,7 +569,11 @@ class Video:
                 f"Error downloading {self.url!r}: {error}"
             ) from error
 
-        return path
+        if output_path.stat().st_size == 0:
+            raise BadURLError(f"Got 0 bytes from {self.url!r}")
+
+        # The real output path will be returned by @cached_path.
+        return output_path
 
     def clip_to_ffmpeg_input_options(self, clip):
         """Input options for ffmpeg based on real clip.
