@@ -96,9 +96,11 @@ class YankiRunner(ScriptRunner):
         check: bool = False,
         **options: Any,
     ) -> RunResult:
-        old_level = logging.getLogger("yanki.parser").level
+        old_level_parser = logging.getLogger("yanki.parser").level
+        old_level = logging.getLogger("yanki").level
         try:
-            logging.getLogger("yanki.parser").setLevel(logging.INFO)
+            logging.getLogger("yanki.parser").setLevel(logging.WARNING)
+            logging.getLogger("yanki").setLevel(logging.WARNING)
 
             if env is None:
                 env = {}
@@ -108,6 +110,9 @@ class YankiRunner(ScriptRunner):
                 env["PATH"] = f"{self.bin_path}:{env['PATH']}"
             else:
                 env["PATH"] = f"{self.bin_path}:{os.environ['PATH']}"
+
+            if "NO_COLOR" not in env:
+                env["NO_COLOR"] = "1"
 
             return super().run(
                 ["yanki", "--cache", self.cache_path, *arguments],
@@ -120,7 +125,8 @@ class YankiRunner(ScriptRunner):
                 **options,
             )
         finally:
-            logging.getLogger("yanki.parser").setLevel(old_level)
+            logging.getLogger("yanki.parser").setLevel(old_level_parser)
+            logging.getLogger("yanki").setLevel(old_level)
 
 
 @pytest.fixture

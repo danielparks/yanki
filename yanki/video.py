@@ -1,7 +1,6 @@
 import asyncio
 import functools
 import hashlib
-import json
 import logging
 import math
 import re
@@ -15,7 +14,14 @@ from urllib.parse import parse_qs, urlparse
 import ffmpeg
 import yt_dlp
 
-from yanki.cache import Cache
+from yanki.cache import (
+    Cache,
+    Join,
+    SelfAttr,
+    SelfMethod,
+    cached_json,
+    cached_path,
+)
 from yanki.errors import ExpectedError
 from yanki.utils import (
     NotFileURLError,
@@ -177,22 +183,13 @@ class Video:
         self._cached_more_info = None
         self._cached_parameters = None
 
+    # Needed for `@cached_json` and `@cached_path`.
+    @property
+    def cache(self):
+        return self.options.cache
+
     def cached(self, filename):
         return self.options.cache.path / filename
-
-    def info_cache_path(self):
-        return self.cached(f"info_{self.id}.json")
-
-    def more_info_cache_path(self):
-        return self.cached(
-            f"more_info_{self.id}_clip={self.file_safe_clip()}.json"
-        )
-
-    def raw_video_cache_path(self):
-        return self.cached("raw_" + self.id + "." + self.info()["ext"])
-
-    def raw_metadata_cache_path(self):
-        return self.cached(f"ffprobe_raw_{self.id}.json")
 
     async def processed_video_cache_path_async(self, prefix="processed_"):
         parameters = "_".join(await self.parameters_list_async())
@@ -207,7 +204,8 @@ class Video:
             f"{prefix}{self.id}_{parameters}.{self.output_ext()}"
         )
 
-    def _download_info(self):
+    @cached_json(SelfAttr("id"), "info")
+    def info(self):
         try:
             path = file_url_to_path(self.url)
             return {
@@ -230,29 +228,18 @@ class Video:
                 f"Error downloading {self.url!r}: {error}"
             ) from error
 
-    @functools.cache
-    def info(self):
-        try:
-            with self.info_cache_path().open("r", encoding="utf_8") as file:
-                return json.load(file)
-        except FileNotFoundError:
-            # Either the file wasn’t found or wasn’t valid JSON. We use `pass`
-            # to avoid adding this exception to the context of new exceptions.
-            pass
-
-        info = self._download_info()
-        with atomic_open(self.info_cache_path()) as file:
-            json.dump(info, file)
-        return info
-
     def title(self):
         return self.info()["title"]
 
+    def extension(self):
+        return self.info()["ext"]
+
+    @cached_json(SelfAttr("id"), "raw_metadata")
     def load_raw_metadata(self):
         self.logger.trace(f"start ffprobe on {self.raw_video()}")
         time_started = time.perf_counter()
         try:
-            self._raw_metadata = ffmpeg.probe(self.raw_video())
+            result = ffmpeg.probe(self.raw_video())
         except ffmpeg.Error as error:
             raise FFmpegError(
                 command="ffprobe", stdout=error.stdout, stderr=error.stderr
@@ -263,29 +250,12 @@ class Video:
             f"raw metadata loaded from {self.raw_video()} in {elapsed:,.3f}s"
         )
 
-        with atomic_open(self.raw_metadata_cache_path()) as file:
-            json.dump(self._raw_metadata, file)
+        return result
 
-        return self._raw_metadata
-
-    # This will refresh metadata once if it doesn’t find the passed path the
-    # first time.
     def raw_metadata(self, *key_path):
-        if self._raw_metadata:
-            return get_key_path(self._raw_metadata, key_path)
-
-        metadata_cache_path = self.raw_metadata_cache_path()
-        try:
-            with metadata_cache_path.open("r", encoding="utf_8") as file:
-                self._raw_metadata = json.load(file)
-                return get_key_path(self._raw_metadata, key_path)
-        except (FileNotFoundError, json.JSONDecodeError, KeyError, IndexError):
-            # Either the file wasn’t found, wasn’t valid JSON, or it didn’t have
-            # the key path. We use `pass` here to avoid adding this exception to
-            # the context of new exceptions.
-            pass
-
-        return get_key_path(self.load_raw_metadata(), key_path)
+        if not self._raw_metadata:
+            self._raw_metadata = self.load_raw_metadata()
+        return get_key_path(self._raw_metadata, key_path)
 
     def get_fps(self):
         for stream in self.raw_metadata("streams"):
@@ -377,12 +347,11 @@ class Video:
 
         return (first_move, last_move)
 
+    @cached_json(SelfAttr("id"), "more_info", version=MORE_INFO_VERSION)
     async def load_more_info_async(self):
         """Load more information about the contents of the media.
 
         This returns a `dict` with keys:
-          * `version`: the current version of the more_info algorithm so that
-            old data can be invalidated.
           * `cropdetect`:
             * `[(time, "crop"), ...]`, e.g. `[(0.067, "1920:1072:0:4"), ...]`
             * `None`: the video stream was stripped
@@ -394,12 +363,10 @@ class Video:
         https://ayosec.github.io/ffmpeg-filters-docs/7.0/Filters/Video/scdet.html
         """
         if not self.wants_video():
-            self._cached_more_info = {
-                "version": MORE_INFO_VERSION,
+            return {
                 "cropdetect": None,
                 "scdet": None,
             }
-            return self._cached_more_info
 
         if self._clip == "auto":
             in_options = {}
@@ -436,44 +403,19 @@ class Video:
                 # (time, score), e.g. (2.369, 0.008):
                 scdet.append((float(matches[2]), float(matches[1])))
 
-        self._cached_more_info = {
-            "version": MORE_INFO_VERSION,
+        return {
             "cropdetect": cropdetect,
             "scdet": scdet,
         }
-        return self._cached_more_info
 
     async def more_info_async(self):
-        if self._cached_more_info:
-            return self._cached_more_info
-
-        path = self.more_info_cache_path()
-        try:
-            with path.open("r", encoding="utf_8") as file:
-                self._cached_more_info = json.load(file)
-                if self._cached_more_info is not None:
-                    # No version is equivalent to version 1.
-                    version = self._cached_more_info.get("version", 1)
-                    if version == MORE_INFO_VERSION:
-                        return self._cached_more_info
-                    self.logger.info(
-                        f"Discarding more_info with bad version {version!r} "
-                        f"(expected {MORE_INFO_VERSION!r}) at {path}"
-                    )
-                    self._cached_more_info = None
-        except FileNotFoundError:
-            # Either the file wasn’t found or wasn’t valid JSON. We use `pass`
-            # to avoid adding this exception to the context of new exceptions.
-            pass
-
-        await self.load_more_info_async()
-        with atomic_open(path) as file:
-            json.dump(self._cached_more_info, file)
+        if not self._cached_more_info:
+            self._cached_more_info = await self.load_more_info_async()
         return self._cached_more_info
 
     def more_info(self):
         """Get extra information from finalized video."""
-        if self._cached_more_info is None:
+        if not self._cached_more_info:
             raise ValueError("more_info() called on un-finalized Video")
         return self._cached_more_info
 
@@ -569,8 +511,8 @@ class Video:
         """If the output should include a video stream or image."""
         return not self._strip_video and self.has_video()
 
-    @functools.cache
-    def raw_video(self):
+    @cached_path(SelfAttr("id"), Join("raw.", SelfMethod("extension")))
+    def raw_video(self, output_path, *, final_path):
         try:
             # If it’s a file:// URL, then there’s no need to cache.
             source_path = self.working_dir / file_url_to_path(self.url)
@@ -580,18 +522,10 @@ class Video:
             self.logger.info(f"using local raw video {source_path}")
             return source_path
 
-        if "ext" not in self.info():
-            raise BadURLError(f"Invalid media URL {self.url!r}")
-
-        path = self.raw_video_cache_path()
-        if path.exists() and path.stat().st_size > 0:
-            # Already cached, and we can’t check if it’s out of date.
-            return path
-
-        self.logger.info(f"downloading raw video to {path}")
+        self.logger.info(f"downloading raw video to {final_path}")
 
         try:
-            with self._yt_dlp(outtmpl={"default": str(path)}) as ydl:
+            with self._yt_dlp(outtmpl={"default": str(output_path)}) as ydl:
                 # Returns “resolved” info. Not useful to us.
                 ydl.process_ie_result(self.info(), download=True)
         except yt_dlp.utils.DownloadError as error:
@@ -601,7 +535,11 @@ class Video:
                 f"Error downloading {self.url!r}: {error}"
             ) from error
 
-        return path
+        if output_path.stat().st_size == 0:
+            raise BadURLError(f"Got 0 bytes from {self.url!r}")
+
+        # The real output path will be returned by @cached_path.
+        return output_path
 
     def clip_to_ffmpeg_input_options(self, clip):
         """Input options for ffmpeg based on real clip.

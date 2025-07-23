@@ -23,6 +23,7 @@ dependencies = [
     "colorlog >=6.9.0,<7.0",
     "click >=8.1.8,<9.0",
     "mistletoe>=1.4.0",
+    "pytest-asyncio>=1.1.0",
 ]
 
 [dependency-groups]
