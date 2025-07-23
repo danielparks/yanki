@@ -8,7 +8,7 @@ import logging
 import os
 import threading
 from collections.abc import Callable, Generator
-from contextlib import contextmanager
+from contextlib import asynccontextmanager, contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -49,10 +49,15 @@ class Cache:
     """Manage a cache directory."""
 
     def __init__(
-        self, path: Path | None = None, *, logger: logging.Logger | None = None
+        self,
+        path: Path | None = None,
+        *,
+        async_lock_limit: int = 64,
+        logger: logging.Logger | None = None,
     ):
         """Set up the cache directory."""
         self._cachedir_tag_written = False
+        self._async_lock_limit = asyncio.Semaphore(async_lock_limit)
         self._lock_lock = threading.Lock()
         self._locks = {}
         self._values = {}
@@ -95,21 +100,34 @@ class Cache:
         else:
             self._values[tuple(path)] = value
 
-    def thread_lock(self, path: list[str]) -> threading.Lock:
-        with self._lock_lock:
-            if path not in self._locks:
-                self._locks[path] = threading.Lock()
-            elif not isinstance(self._locks[path], threading.Lock):
-                raise MixedLockError()
-            return self._locks[path]
+    @contextmanager
+    def thread_lock(self, path: list[str]) -> Generator:
+        """Open a threading lock for a cache entry path."""
+        self.logger.trace(f"acquiring threading lock for {path}")
+        with self._get_lock(threading.Lock, path):
+            self.logger.trace(f"acquired threading lock for {path}")
+            try:
+                yield
+            finally:
+                self.logger.trace(f"releasing threading lock for {path}")
 
-    def async_lock(self, path: list[str]) -> asyncio.Lock:
-        with self._lock_lock:
-            if path not in self._locks:
-                self._locks[path] = asyncio.Lock()
-            elif not isinstance(self._locks[path], asyncio.Lock):
-                raise MixedLockError()
-            return self._locks[path]
+    @asynccontextmanager
+    async def async_lock(self, path: list[str]) -> Generator:
+        """Open an async lock for a cache entry path."""
+
+        def _remaining():
+            try:
+                return f" ({self._async_lock_limit._value} remaining)"  # noqa: SLF001  kludge
+            except AttributeError:
+                return " (could not determine locks remaining)"
+
+        self.logger.trace(f"acquiring async lock for {path}{_remaining()}")
+        async with self._async_lock_limit, self._get_lock(asyncio.Lock, path):
+            self.logger.trace(f"acquired async lock for {path}{_remaining()}")
+            try:
+                yield
+            finally:
+                self.logger.trace(f"releasing async lock for {path}")
 
     def ensure_tag(self):
         """Make sure cache/CACHEDIR.TAG exists."""
@@ -118,6 +136,16 @@ class Cache:
                 CACHEDIR_TAG_CONTENT, encoding="ascii"
             )
             self._cachedir_tag_written = True
+
+    def _get_lock(
+        self, type: type[threading.Lock | asyncio.Lock], path: list[str]
+    ) -> threading.Lock | asyncio.Lock:
+        with self._lock_lock:
+            if path not in self._locks:
+                self._locks[path] = type()
+            elif not isinstance(self._locks[path], type):
+                raise MixedLockError()
+            return self._locks[path]
 
 
 class Resolvable:
@@ -295,29 +323,21 @@ class Entry:
         if self.check_memory_cache():
             return self.value
 
-        self.logger.trace("acquiring threading lock")
         with self.cache.thread_lock(tuple(self.resolved_cache_path)):
-            try:
-                self.logger.trace("acquired threading lock")
-
-                # Another thread might have loaded the value.
-                if self.check_memory_cache():
-                    return self.value
-
-                self._read_cache()
-                if self.needs_load():
-                    result = self._load_and_write()
-                    if self.needs_load():
-                        # The loader elected not to cache; just pass the
-                        # return value through.
-                        return result
-
-                self.cache.set_entry_value(
-                    self.resolved_cache_path, self._value
-                )
+            # Another thread might have loaded the value.
+            if self.check_memory_cache():
                 return self.value
-            finally:
-                self.logger.trace("releasing threading lock")
+
+            self._read_cache()
+            if self.needs_load():
+                result = self._load_and_write()
+                if self.needs_load():
+                    # The loader elected not to cache; just pass the
+                    # return value through.
+                    return result
+
+            self.cache.set_entry_value(self.resolved_cache_path, self._value)
+            return self.value
 
     async def get_value_async(self) -> Any:
         """Get the value from this entry.
@@ -327,29 +347,21 @@ class Entry:
         if self.check_memory_cache():
             return self.value
 
-        self.logger.trace("acquiring async lock")
         async with self.cache.async_lock(tuple(self.resolved_cache_path)):
-            try:
-                self.logger.trace("acquired async lock")
-
-                # Another thread might have loaded the value.
-                if self.check_memory_cache():
-                    return self.value
-
-                self._read_cache()
-                if self.needs_load():
-                    result = await self._load_and_write_async()
-                    if self.needs_load():
-                        # The loader elected not to cache; just pass the
-                        # return value through.
-                        return result
-
-                self.cache.set_entry_value(
-                    self.resolved_cache_path, self._value
-                )
+            # Another thread might have loaded the value.
+            if self.check_memory_cache():
                 return self.value
-            finally:
-                self.logger.trace("releasing async lock")
+
+            self._read_cache()
+            if self.needs_load():
+                result = await self._load_and_write_async()
+                if self.needs_load():
+                    # The loader elected not to cache; just pass the
+                    # return value through.
+                    return result
+
+            self.cache.set_entry_value(self.resolved_cache_path, self._value)
+            return self.value
 
     def _read_cache(self):
         try:
