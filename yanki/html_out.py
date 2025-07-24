@@ -57,19 +57,17 @@ def write_html(output_path, decks, *, flashcards=False):
         if deck.title is None:
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
-        # FIXME create_unique_file
-        file_name = "deck_" + url_friendly_name(deck.title) + ".html"
-        html_path = output_path / file_name
-        if html_path in decks_by_path:
-            raise KeyError(
-                f"Decks with titles {decks_by_path[html_path].title!r} and "
-                f"{deck.title!r} would both to write to file {html_path!r}"
-            )
+        url_title = url_friendly_name(deck.title)
+        html_path = output_path / f"deck_{url_title}.html"
+        i = 2
+        while html_path in decks_by_path:
+            html_path = output_path / f"deck_{url_title}_{i}.html"
+            i += 1
         decks_by_path[html_path] = deck
 
         title_parts = deck.title.split("::")
         leaf = deck_tree.dig(title_parts)
-        leaf.deck_file_name = file_name
+        leaf.deck_file_name = html_path.name
         leaf.deck = deck
 
     write_tree_indices(
