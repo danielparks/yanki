@@ -1,4 +1,3 @@
-import contextlib
 import dataclasses
 import hashlib
 import inspect
@@ -8,7 +7,6 @@ import re
 import shlex
 import subprocess
 import sys
-import tempfile
 import types
 import typing
 from functools import partial, partialmethod
@@ -38,28 +36,6 @@ def add_trace_logging():
         logging.trace = partial(logging.log, logging.TRACE)
 
 
-@contextlib.contextmanager
-def atomic_open(path: Path, *, encoding="utf_8", permissions=0o644):
-    """Open a file for writing and save it atomically.
-
-    This creates a temporary file in the same directory, writes to it, then
-    replaces the target file atomically even if it already exists.
-    """
-    with tempfile.NamedTemporaryFile(
-        mode="wb" if encoding is None else "w",
-        encoding=encoding,
-        dir=path.parent,
-        prefix=f"working_{path.stem}",
-        suffix=path.suffix,
-        delete=True,
-        delete_on_close=False,
-    ) as temp_file:
-        yield temp_file
-        Path(temp_file.name).rename(path)
-        # Nothing for NamedTemporaryFile to delete.
-        path.chmod(permissions)
-
-
 def chars_in(chars, input):
     """Return chars from `chars` that are in `input`."""
     return [char for char in chars if char in input]
@@ -79,11 +55,6 @@ def file_url_to_path(url: str) -> Path:
     #   >>> urlparse('file://./media/first.png')
     #   ParseResult(scheme='file', netloc='.', path='/media/first.png', ...)
     return Path(parts.netloc + parts.path)
-
-
-def file_not_empty(path: Path):
-    """Check that `path` is a file and is non-empty."""
-    return path.exists() and path.stat().st_size > 0
 
 
 def find_errors(group: ExceptionGroup):

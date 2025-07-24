@@ -136,7 +136,9 @@ def test_yanki_list_final_notes(yanki, deck_1_path, cache_path):
     """Check that list-notes can list notes after being processed."""
     result = yanki.run("list-notes", "-f", "{media_paths}", deck_1_path)
     assert result.returncode == 0
-    assert result.stdout.startswith(f"{cache_path}/processed_file\\=||")
+    assert result.stdout.startswith(
+        f"{cache_path}/file\\=||first.png/processed/media_file\\=||"
+    )
     assert result.stderr == ""
 
     # Might as well check CACHEDIR.TAG too. See https://bford.info/cachedir/
@@ -147,19 +149,25 @@ def test_yanki_list_final_notes(yanki, deck_1_path, cache_path):
 # Fake `open` doesn’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
 def test_yanki_open_videos(yanki, deck_1_path, cache_path):
+    assert list(cache_path.glob("*")) == []
     result = yanki.run("open-videos", f"file://{deck_1_path.parent}/first.png")
     assert result.returncode == 0
-    assert result.stdout.startswith(f"{cache_path}/processed_file\\=||")
+    media_files = list(cache_path.glob("file*/processed/media_*"))
+    assert len(media_files) == 1
+    assert result.stdout == f"{media_files[0]}\n"
     assert result.stderr == ""
 
 
 # input and fake `open` don’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
 def test_yanki_open_videos_from_file(yanki, deck_1_path, cache_path):
+    assert list(cache_path.glob("*")) == []
     result = yanki.run(
         "open-videos-from-file",
         stdin=io.StringIO(f"file://{deck_1_path.parent}/first.png\n"),
     )
     assert result.returncode == 0
-    assert result.stdout.startswith(f"{cache_path}/processed_file\\=||")
+    media_files = list(cache_path.glob("file*/processed/media_*"))
+    assert len(media_files) == 1
+    assert result.stdout == f"{media_files[0]}\n"
     assert result.stderr == ""

@@ -25,9 +25,7 @@ from yanki.cache import (
 from yanki.errors import ExpectedError
 from yanki.utils import (
     NotFileURLError,
-    atomic_open,
     chars_in,
-    file_not_empty,
     file_url_to_path,
 )
 
@@ -189,7 +187,7 @@ class Video:
     def cached(self, filename):
         return self.options.cache.path / filename
 
-    async def processed_video_cache_path_async(self, prefix="processed_"):
+    async def processed_video_name_async(self):
         parameters = "_".join(await self.parameters_list_async())
 
         if len(parameters) > 60 or chars_in(FILENAME_ILLEGAL_CHARS, parameters):
@@ -198,9 +196,7 @@ class Video:
                 digest_size=16,
                 usedforsecurity=False,
             ).hexdigest()
-        return self.cached(
-            f"{prefix}{self.id}_{parameters}.{self.output_ext()}"
-        )
+        return f"media_{self.id}_{parameters}.{self.output_ext()}"
 
     @cached_json(SelfAttr("id"), "info")
     def info(self):
@@ -416,7 +412,9 @@ class Video:
         # Ensure that the video is fully processed and that everything can be
         # accessed synchronously.
         await self.more_info_async()
-        await self.processed_video_async()
+        await self.processed_video_async(reload=self.reprocess)
+        # Only reprocess once per run.
+        self.reprocess = False
         return self
 
     def clip(self, start_spec, end_spec):
@@ -649,16 +647,14 @@ class Video:
             ]
         )
 
-    async def processed_video_async(self):
-        output_path = await self.processed_video_cache_path_async()
-        if not self.reprocess and file_not_empty(output_path):
-            return output_path
-
-        # Only reprocess once per run.
-        self.reprocess = False
-
+    @cached_path(
+        SelfAttr("id"),
+        "processed",
+        SelfMethod("processed_video_name_async"),
+    )
+    async def processed_video_async(self, output_path, *, final_path):
         parameters = " ".join(await self.parameters_list_async())
-        self.logger.info(f"processing with ({parameters}) to {output_path}")
+        self.logger.info(f"processing with ({parameters}) to {final_path}")
 
         clip = await self.actual_clip_async()
         in_options = self.clip_to_ffmpeg_input_options(clip)
@@ -702,13 +698,9 @@ class Video:
         else:
             output_streams = [output_streams]
 
-        with atomic_open(output_path, encoding=None) as file:
-            file.close()
-            stream = ffmpeg.output(
-                *output_streams, file.name, **out_options
-            ).overwrite_output()
-
-            await self.run_async(stream)
+        await self.run_async(
+            ffmpeg.output(*output_streams, str(output_path), **out_options)
+        )
 
         return output_path
 

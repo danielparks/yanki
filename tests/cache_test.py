@@ -9,6 +9,7 @@ from typing import Any
 import pytest
 
 from yanki.cache import (
+    AsyncCalledFromSyncError,
     Cache,
     EntryContent,
     Join,
@@ -74,6 +75,61 @@ def test_cached_json():
     thing = Thing(value="OTHER", cache=cache)
     assert thing.info() == REFERENCE, "did not access cache"
     assert thing.info() == REFERENCE, "did not access cache"
+
+
+def test_cached_json_reload():
+    cache = Cache()
+
+    @dataclass
+    class Thing(Base):
+        value: Any
+
+        @cached_json("foo")
+        def info(self):
+            self.assert_once()
+            return self.value
+
+    thing = Thing("ONE", cache=cache)
+    assert thing.info() == "ONE"
+    thing.counter = 0
+    thing.value = "TWO"
+    assert thing.info() == "ONE"
+    assert thing.info(reload=True) == "TWO"
+
+    thing = Thing("THREE", cache=cache)
+    assert thing.info() == "TWO"
+    thing.counter = 0
+    thing.value = "THREE"
+    assert thing.info() == "TWO"
+    assert thing.info(reload=True) == "THREE"
+
+
+@pytest.mark.asyncio
+async def test_cached_json_reload_async():
+    cache = Cache()
+
+    @dataclass
+    class Thing(Base):
+        value: Any
+
+        @cached_json("foo")
+        async def info(self):
+            self.assert_once()
+            return self.value
+
+    thing = Thing("ONE", cache=cache)
+    assert await thing.info() == "ONE"
+    thing.counter = 0
+    thing.value = "TWO"
+    assert await thing.info() == "ONE"
+    assert await thing.info(reload=True) == "TWO"
+
+    thing = Thing("THREE", cache=cache)
+    assert await thing.info() == "TWO"
+    thing.counter = 0
+    thing.value = "THREE"
+    assert await thing.info() == "TWO"
+    assert await thing.info(reload=True) == "THREE"
 
 
 def test_cached_json_version():
@@ -147,6 +203,73 @@ def test_cached_path():
     assert thing.path() == thing_path
 
 
+def test_cached_path_reload():
+    cache = Cache()
+
+    @dataclass
+    class Thing(Base):
+        id: str
+
+        @cached_path("abc")
+        def path(self, path):
+            self.assert_once()
+            path.write_text(self.id)
+
+    thing = Thing(id="one", cache=cache)
+    assert strs(ls_r(thing.cache.path)) == []
+
+    thing_path = thing.path()
+    assert thing.cache.path in thing_path.parents
+    assert thing_path.read_text() == "one"
+
+    thing.id = "two"
+    thing.counter = 0
+    assert thing.path() == thing_path
+    assert thing.path(reload=True) == thing_path
+    assert thing_path.read_text() == "two"
+    assert thing.path() == thing_path
+
+    thing = Thing(id="three", cache=cache)
+    assert thing.path() == thing_path
+    assert thing_path.read_text() == "two"
+    assert thing.path(reload=True) == thing_path
+    assert thing_path.read_text() == "three"
+
+
+@pytest.mark.asyncio
+async def test_cached_path_reload_async():
+    cache = Cache()
+
+    @dataclass
+    class Thing(Base):
+        id: str
+
+        @cached_path("abc")
+        async def path(self, path):
+            self.assert_once()
+            path.write_text(self.id)
+
+    thing = Thing(id="one", cache=cache)
+    assert strs(ls_r(thing.cache.path)) == []
+
+    thing_path = await thing.path()
+    assert thing.cache.path in thing_path.parents
+    assert thing_path.read_text() == "one"
+
+    thing.id = "two"
+    thing.counter = 0
+    assert await thing.path() == thing_path
+    assert await thing.path(reload=True) == thing_path
+    assert thing_path.read_text() == "two"
+    assert await thing.path() == thing_path
+
+    thing = Thing(id="three", cache=cache)
+    assert await thing.path() == thing_path
+    assert thing_path.read_text() == "two"
+    assert await thing.path(reload=True) == thing_path
+    assert thing_path.read_text() == "three"
+
+
 def test_uncached_path():
     class Thing(Base):
         @cached_path("abc")
@@ -159,6 +282,21 @@ def test_uncached_path():
     assert thing.value() == "RETURN"
     assert strs(ls_r(thing.cache.path)) == ["CACHEDIR.TAG", "_lock_abc"]
     assert thing.value() == "RETURN"
+
+
+@pytest.mark.asyncio
+async def test_uncached_path_async():
+    class Thing(Base):
+        @cached_path("abc")
+        async def value(self, _path):
+            return "RETURN"
+
+    thing = Thing()
+    assert strs(ls_r(thing.cache.path)) == []
+
+    assert await thing.value() == "RETURN"
+    assert strs(ls_r(thing.cache.path)) == ["CACHEDIR.TAG", "_lock_abc"]
+    assert await thing.value() == "RETURN"
 
 
 def test_cached_path_passes_final_path():
@@ -380,6 +518,83 @@ def test_self_method_3():
     assert thing.info() == "CONTENTS"
     assert (thing.cache.path / "VALUE.json").read_text() == CONTENTS_AS_JSON
     assert thing.info() == "CONTENTS"
+
+
+def test_self_method_async_from_sync():
+    class Thing(Base):
+        async def a(self):
+            raise RuntimeError("should not reach here")
+
+        @cached_json(SelfMethod("a"))
+        def info(self):
+            raise RuntimeError("should not reach here")
+
+    thing = Thing()
+    with pytest.raises(AsyncCalledFromSyncError):
+        thing.info()
+
+
+@pytest.mark.asyncio
+async def test_self_method_1_async():
+    class Thing(Base):
+        async def a(self):
+            return "VALUE"
+
+        @cached_json(SelfMethod("a"))
+        async def info(self):
+            self.assert_once()
+            return "CONTENTS"
+
+    thing = Thing()
+    assert await thing.info() == "CONTENTS"
+    assert (thing.cache.path / "VALUE.json").read_text() == CONTENTS_AS_JSON
+    assert await thing.info() == "CONTENTS"
+
+
+@pytest.mark.asyncio
+async def test_self_method_2_async():
+    class Wrapper1:
+        async def b(self):
+            return "VALUE"
+
+    class Thing(Base):
+        def a(self):
+            return Wrapper1()
+
+        @cached_json(SelfMethod("a", "b"))
+        async def info(self):
+            self.assert_once()
+            return "CONTENTS"
+
+    thing = Thing()
+    assert await thing.info() == "CONTENTS"
+    assert (thing.cache.path / "VALUE.json").read_text() == CONTENTS_AS_JSON
+    assert await thing.info() == "CONTENTS"
+
+
+@pytest.mark.asyncio
+async def test_self_method_3_async():
+    class Wrapper2:
+        async def c(self):
+            return "VALUE"
+
+    class Wrapper1:
+        def b(self):
+            return Wrapper2()
+
+    class Thing(Base):
+        async def a(self):
+            return Wrapper1()
+
+        @cached_json(SelfMethod("a", "b", "c"))
+        async def info(self):
+            self.assert_once()
+            return "CONTENTS"
+
+    thing = Thing()
+    assert await thing.info() == "CONTENTS"
+    assert (thing.cache.path / "VALUE.json").read_text() == CONTENTS_AS_JSON
+    assert await thing.info() == "CONTENTS"
 
 
 def test_cached_path_empty():
