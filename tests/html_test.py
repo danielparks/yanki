@@ -1,16 +1,15 @@
 import html
 import re
+from pathlib import Path
 
 from yanki.cli.decks import DeckSource
 from yanki.html_out import write_html
 from yanki.video import VideoOptions
 
 
-def test_two_decks(deck_1_path, deck_2_path, output_path):
+def deck_paths_to_html(output_path: Path, deck_paths: list[Path]):
     options = VideoOptions()
-    files = [
-        path.open("r", encoding="utf_8") for path in [deck_1_path, deck_2_path]
-    ]
+    files = [path.open("r") for path in deck_paths]
 
     write_html(
         output_path,
@@ -18,21 +17,66 @@ def test_two_decks(deck_1_path, deck_2_path, output_path):
         flashcards=False,
     )
 
-    index_html = (output_path / "index.html").read_text(encoding="utf_8")
-    assert index_html.startswith("<!DOCTYPE html>\n")
-    assert index_html.endswith("</html>\n")
 
+def read_html(path):
+    content = path.read_text()
+    assert content.startswith("<!DOCTYPE html>\n")
+    assert content.endswith("</html>\n")
+    return content
+
+
+def assert_count(content: str, needle: str, count: int):
+    assert content.count(needle) == count, (
+        f"expect exactly {count} {needle!r} in HTML"
+    )
+
+
+def assert_notes(content: str, note_count: int):
+    assert_count(content, '<div class="note">', note_count)
+
+
+def test_one_deck(deck_1_path, output_path):
+    deck_paths_to_html(output_path, [deck_1_path])
+
+    # index.html should be a deck, not an index.
+    index_html = read_html(output_path / "index.html")
+    assert_notes(index_html, 1)
+    assert re.findall(r'<a href="(deck_[^"]+)"', index_html) == []
+
+
+def test_overwrite_deck(deck_1_path, deck_2_path, output_path):
+    deck_paths_to_html(output_path, [deck_1_path])
+
+    # index.html should be a deck, not an index.
+    index_html = read_html(output_path / "index.html")
+    assert_notes(index_html, 1)
+    assert_count(index_html, "_file%5C%3D%7C%7Cfirst.png_", 1)
+    assert_count(index_html, "_file%5C%3D%7C%7Csecond.png_", 0)
+    assert re.findall(r'<a href="(deck_[^"]+)"', index_html) == []
+
+    deck_paths_to_html(output_path, [deck_2_path])
+
+    # index.html should be a deck, not an index.
+    index_html = read_html(output_path / "index.html")
+    assert_notes(index_html, 1)
+    assert_count(index_html, "_file%5C%3D%7C%7Cfirst.png_", 0)
+    assert_count(index_html, "_file%5C%3D%7C%7Csecond.png_", 1)
+    assert re.findall(r'<a href="(deck_[^"]+)"', index_html) == []
+
+
+def test_two_decks(deck_1_path, deck_2_path, output_path):
+    deck_paths_to_html(output_path, [deck_1_path, deck_2_path])
+
+    index_html = read_html(output_path / "index.html")
     matches = re.findall(r'<a href="(deck_[^"]+)"', index_html)
     assert len(matches) == 2
 
-    deck_path = html.unescape(matches[0])
-    deck_html = (output_path / deck_path).read_text(encoding="utf_8")
-    assert deck_html.startswith("<!DOCTYPE html>\n")
-    assert deck_html.endswith("</html>\n")
-    assert deck_html.count('<div class="note">') == 1
+    deck_html = read_html(output_path / html.unescape(matches[0]))
+    assert_notes(deck_html, 1)
+    assert_count(deck_html, "_file%5C%3D%7C%7Cfirst.png_", 1)
+    assert_count(deck_html, "_file%5C%3D%7C%7Csecond.png_", 0)
 
-    deck_path = html.unescape(matches[1])
-    deck_html = (output_path / deck_path).read_text(encoding="utf_8")
-    assert deck_html.startswith("<!DOCTYPE html>\n")
-    assert deck_html.endswith("</html>\n")
-    assert deck_html.count('<div class="note">') == 1
+    deck_html = read_html(output_path / html.unescape(matches[1]))
+    assert_notes(deck_html, 1)
+    assert_count(deck_html, "_file%5C%3D%7C%7Cfirst.png_", 0)
+    assert_count(deck_html, "_file%5C%3D%7C%7Csecond.png_", 1)
