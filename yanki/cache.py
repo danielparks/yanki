@@ -27,8 +27,7 @@ CACHEDIR_TAG_CONTENT = """Signature: 8a477f597d28d172789f06886806bc55
 #   https://github.com/danielparks/Yanki
 """
 
-# cache changes
-#   * each video in a directory to make it easier to track
+# Cache TODO
 #   * touch files (directories?) after they’re accessed to mark them used
 #   * some way of invalidating metadata, etc. when the source changes?
 
