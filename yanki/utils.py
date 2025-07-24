@@ -144,16 +144,6 @@ def fs_is_legal_name(name: str) -> bool:
     )
 
 
-def get_key_path(data, path: list[any]):
-    """Dig into `data` following the `path` of keys.
-
-    For example, `get_key_path(data, ["a", "b", 0]) == data["a"]["b"][0]`.
-    """
-    for key in path:
-        data = data[key]
-    return data
-
-
 def make_frozen(klass):
     """Kludge to produce frozen version of dataclass."""
     name = klass.__name__ + "Frozen"
