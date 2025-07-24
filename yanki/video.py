@@ -29,7 +29,6 @@ from yanki.utils import (
     chars_in,
     file_not_empty,
     file_url_to_path,
-    get_key_path,
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -170,7 +169,6 @@ class Video:
                 f"Invalid characters ({invalid}) in video ID: {self.id!r}"
             )
 
-        self._raw_metadata = None
         self._format = None
         self._strip_audio = False
         self._strip_video = False
@@ -235,7 +233,7 @@ class Video:
         return self.info()["ext"]
 
     @cached_json(SelfAttr("id"), "raw_metadata")
-    def load_raw_metadata(self):
+    def raw_metadata(self):
         self.logger.trace(f"start ffprobe on {self.raw_video()}")
         time_started = time.perf_counter()
         try:
@@ -252,13 +250,8 @@ class Video:
 
         return result
 
-    def raw_metadata(self, *key_path):
-        if not self._raw_metadata:
-            self._raw_metadata = self.load_raw_metadata()
-        return get_key_path(self._raw_metadata, key_path)
-
     def get_fps(self):
-        for stream in self.raw_metadata("streams"):
+        for stream in self.raw_metadata()["streams"]:
             if stream["codec_type"] == "video":
                 division = stream["avg_frame_rate"].split("/")
                 if len(division) == 0:
@@ -484,12 +477,12 @@ class Video:
         return (
             isinstance(self._clip, float)
             or self._format in STILL_FORMATS
-            or "duration" not in self.raw_metadata("format")
+            or "duration" not in self.raw_metadata()["format"]
         )
 
     def has_audio(self):
         """If the raw video contains an audio stream."""
-        for stream in self.raw_metadata("streams"):
+        for stream in self.raw_metadata()["streams"]:
             if stream["codec_type"] == "audio":
                 return True
         return False
@@ -502,7 +495,7 @@ class Video:
 
     def has_video(self):
         """If the raw video contains a video stream or image."""
-        for stream in self.raw_metadata("streams"):
+        for stream in self.raw_metadata()["streams"]:
             if stream["codec_type"] == "video":
                 return True
         return False
