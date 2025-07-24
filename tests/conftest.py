@@ -25,12 +25,12 @@ def bin_path(tmp_path_factory):
     return path
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture
 def output_path(tmp_path_factory):
     return tmp_path_factory.mktemp("output")
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture
 def cache_path(tmp_path_factory):
     return tmp_path_factory.mktemp("cache")
 
