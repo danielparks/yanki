@@ -25,16 +25,16 @@ class DeckTree:
         return self
 
 
-def write_html(output_path, decks, *, flashcards=False):
+def write_html(root, decks, *, flashcards=False):
     """Write HTML version of decks to a path."""
-    static_dir = output_path / "static"
+    static_dir = root / "static"
     static_dir.mkdir(parents=True, exist_ok=True)
 
     for file in path_to_web_files().glob("*"):
         hardlink_into(file, static_dir)
 
-    output_media_path = output_path / "media"
-    output_media_path.mkdir(exist_ok=True)
+    media_dir = root / "media"
+    media_dir.mkdir(exist_ok=True)
 
     if len(decks) == 1:
         # Special case: single deck goes in index.html
@@ -42,8 +42,8 @@ def write_html(output_path, decks, *, flashcards=False):
         if deck.title is None:
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
         write_deck_files(
-            output_path / "index.html",
-            output_media_path,
+            root / "index.html",
+            media_dir,
             deck,
             [(name, None) for name in deck.title.split("::")],
             flashcards=flashcards,
@@ -58,10 +58,10 @@ def write_html(output_path, decks, *, flashcards=False):
             sys.exit(f"Deck {deck.source_path!r} does not contain title")
 
         url_title = url_friendly_name(deck.title)
-        html_path = output_path / f"deck_{url_title}.html"
+        html_path = root / f"deck_{url_title}.html"
         i = 2
         while html_path in decks_by_path:
-            html_path = output_path / f"deck_{url_title}_{i}.html"
+            html_path = root / f"deck_{url_title}_{i}.html"
             i += 1
         decks_by_path[html_path] = deck
 
@@ -70,13 +70,11 @@ def write_html(output_path, decks, *, flashcards=False):
         leaf.deck_file_name = html_path.name
         leaf.deck = deck
 
-    write_tree_indices(
-        deck_tree, output_path, output_media_path, flashcards=flashcards
-    )
+    write_tree_indices(deck_tree, root, media_dir, flashcards=flashcards)
 
 
 def write_tree_indices(
-    tree, output_path, output_media_path, *, title_path=None, flashcards=False
+    tree, root, media_dir, *, title_path=None, flashcards=False
 ):
     if title_path is None:
         title_path = []
@@ -86,8 +84,8 @@ def write_tree_indices(
             # If there is exactly one child of the anonymous root, then skip it.
             return write_tree_indices(
                 next(iter(tree.children.values())),
-                output_path,
-                output_media_path,
+                root,
+                media_dir,
                 flashcards=flashcards,
             )
         # Anonymous root has zero or more than one child deck.
@@ -99,8 +97,8 @@ def write_tree_indices(
             # always have a name.
             assert tree.name is not None  # noqa: S101
             write_deck_files(
-                output_path / tree.deck_file_name,
-                output_media_path,
+                root / tree.deck_file_name,
+                media_dir,
                 tree.deck,
                 [*title_path, (tree.name, tree.deck_file_name)],
                 flashcards=flashcards,
@@ -128,8 +126,8 @@ def write_tree_indices(
     list_html = [
         write_tree_indices(
             child,
-            output_path,
-            output_media_path,
+            root,
+            media_dir,
             title_path=title_path,
             flashcards=flashcards,
         )
@@ -139,8 +137,8 @@ def write_tree_indices(
     title_html = f'<a href="{h(tree.index_file_name)}">{h(tree.name)}</a>'
     if tree.deck_file_name:
         write_deck_files(
-            output_path / tree.deck_file_name,
-            output_media_path,
+            root / tree.deck_file_name,
+            media_dir,
             tree.deck,
             [*title_path, ("Deck", tree.deck_file_name)],
             flashcards=flashcards,
@@ -150,7 +148,7 @@ def write_tree_indices(
     else:
         deck_link = ""
 
-    (output_path / tree.index_file_name).write_text(
+    (root / tree.index_file_name).write_text(
         generate_index_html(deck_link, list_html, title_path), encoding="utf_8"
     )
     return f"""<li>
@@ -179,7 +177,7 @@ def generate_index_html(deck_link_html, child_html, title_path):
 
 
 def write_deck_files(
-    html_path, output_media_path, deck, title_path, *, flashcards=False
+    html_path, media_dir, deck, title_path, *, flashcards=False
 ):
     html_path.write_text(
         htmlize_deck(
@@ -191,7 +189,7 @@ def write_deck_files(
     # Link media into output media directory.
     for path in deck.media_paths():
         # chmod to ensure media is accessible by the web server.
-        hardlink_into(Path(path), output_media_path).chmod(0o644)
+        hardlink_into(Path(path), media_dir).chmod(0o644)
 
 
 def htmlize_deck(deck, title_path, *, path_prefix="", flashcards=False):
