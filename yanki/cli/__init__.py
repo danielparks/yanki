@@ -262,10 +262,13 @@ def list_notes(options, decks, format):
 )
 @click.pass_obj
 def to_html(options, output, decks, flashcards):
-    """Generate HTML version of decks."""
+    """Generate HTML version of decks.
+
+    This will create a directory at OUTPUT containing HTML versions of the
+    flashcard decks as well as hard linked media and other assets.
+    """
     write_html(
         output,
-        options.cache.path,
         decks.read_final_sorted(options),
         flashcards=flashcards,
     )
@@ -335,14 +338,18 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
 @click.pass_obj
 def serve_http(options, decks, server, flashcards):
     """Serve HTML summary of deck on localhost:8000."""
-    write_html(
-        options.cache.path,
-        options.cache.path,
-        decks.read_final_sorted(options),
-        flashcards=flashcards,
-    )
+    decks = decks.read_final_sorted(options)
+    with tempfile.TemporaryDirectory(
+        dir=options.cache.path, prefix="webroot_"
+    ) as root:
+        # FIXME acquire lock
+        root = Path(root)
+        root.chmod(0o755)  # TemporaryDirectory creates dirs with mode 0o700.
 
-    server.serve_forever(directory=options.cache.path)
+        write_html(root, decks, flashcards=flashcards)
+
+        LOGGER.info(f"Starting web server in temporary directory {root}")
+        server.serve_forever(directory=root)
 
 
 @cli.command()

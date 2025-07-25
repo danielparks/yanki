@@ -86,11 +86,6 @@ def file_not_empty(path: Path):
     return path.exists() and path.stat().st_size > 0
 
 
-def file_safe_name(name):
-    """Sanitize a deck title into something safe for the file system."""
-    return name.replace("/", "--").replace(" ", "_")
-
-
 def find_errors(group: ExceptionGroup):
     """Get actual exceptions out of nested exception groups."""
     for error in group.exceptions:
@@ -142,6 +137,25 @@ def fs_is_legal_name(name: str) -> bool:
         and name not in FS_ILLEGAL_NAMES
         and FS_ILLEGAL_CHARS.isdisjoint(name)
     )
+
+
+def hardlink_into(source: Path, target_dir: Path) -> Path:
+    """Hard link source into target_dir/source.name.
+
+    Will remove existing files that are in the way if they don’t already link to
+    the right place.
+
+    Retuns `Path` to new file.
+    """
+    # FIXME use shutil.copy2 if hardlink doesn’t work
+    target = target_dir / source.name
+    try:
+        target.hardlink_to(source)
+    except FileExistsError:
+        if not target.samefile(source):
+            target.unlink()
+            target.hardlink_to(source)
+    return target
 
 
 def make_frozen(klass):
@@ -199,3 +213,14 @@ def open_in_app(arguments):
         )
 
     sys.stdout.write(result.stdout)
+
+
+URL_UNFRIENDLY_RE = re.compile(r'[\|"\[\]:/ _]+')
+
+
+def url_friendly_name(name: str):
+    """Replace runs of URL-unfriendly characters with "_".
+
+    This is not exhaustive.
+    """
+    return URL_UNFRIENDLY_RE.sub("_", name)
