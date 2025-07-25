@@ -1,4 +1,3 @@
-import sys
 from collections import OrderedDict
 from html import escape as h
 from pathlib import Path
@@ -39,8 +38,6 @@ def write_html(root, decks, *, flashcards=False):
     if len(decks) == 1:
         # Special case: single deck goes in index.html
         deck = decks[0]
-        if deck.title is None:
-            sys.exit(f"Deck {deck.source_path!r} does not contain title")
         write_deck_files(
             root / "index.html",
             media_dir,
@@ -54,9 +51,6 @@ def write_html(root, decks, *, flashcards=False):
     decks_by_path = {}
     deck_tree = DeckTree()
     for deck in decks:
-        if deck.title is None:
-            sys.exit(f"Deck {deck.source_path!r} does not contain title")
-
         url_title = url_friendly_name(deck.title)
         html_path = root / f"deck_{url_title}.html"
         i = 2
@@ -193,9 +187,6 @@ def write_deck_files(
 
 
 def htmlize_deck(deck, title_path, *, path_prefix="", flashcards=False):
-    if deck.title is None:
-        sys.exit(f"Deck {deck.source_path!r} does not contain title")
-
     if flashcards:
         flashcards_html = f"""
         <link rel="stylesheet" href="{static_url("flashcards.css")}">

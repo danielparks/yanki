@@ -249,6 +249,8 @@ class ConfigParser(SubParser):
             # in all parsers except DeckParser.
             if "\n" in value:
                 self.parser_error("Title cannot have more than one line")
+            if value.strip() == "":
+                self.parser_error("Title cannot be empty")
             self.deck.title = value
             return
 

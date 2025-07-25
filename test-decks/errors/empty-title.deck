@@ -1,0 +1,3 @@
+# Error in test-decks/errors/empty-title.deck, line 2: Title cannot be empty
+title:
+file://../good/media/hand-counting.mp4 Hand counting
