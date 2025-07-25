@@ -262,7 +262,11 @@ def list_notes(options, decks, format):
 )
 @click.pass_obj
 def to_html(options, output, decks, flashcards):
-    """Generate HTML version of decks."""
+    """Generate HTML version of decks.
+
+    This will create a directory at OUTPUT containing HTML versions of the
+    flashcard decks as well as hard linked media and other assets.
+    """
     write_html(
         output,
         decks.read_final_sorted(options),
