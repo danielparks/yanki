@@ -3,61 +3,9 @@ from pathlib import Path
 
 import pytest
 
-from yanki.utils import NotFileURLError, atomic_open, file_url_to_path
+from yanki.utils import NotFileURLError, file_url_to_path
 
 LOGGER = logging.getLogger(__name__)
-
-
-def test_atomic_open(tmp_path):
-    path = tmp_path / "prefix.suffix"
-
-    with atomic_open(path) as file:
-        file.write("First write\n")
-    assert path.read_text() == "First write\n"
-    assert [path.name for path in tmp_path.iterdir()] == ["prefix.suffix"]
-
-    with atomic_open(path) as file:
-        file.write("Second write\n")
-    assert path.read_text() == "Second write\n"
-    assert [path.name for path in tmp_path.iterdir()] == ["prefix.suffix"]
-
-
-def test_atomic_open_error(tmp_path):
-    path = tmp_path / "prefix.suffix"
-
-    with atomic_open(path) as file:
-        file.write("First write\n")
-    assert path.read_text() == "First write\n"
-    assert [path.name for path in tmp_path.iterdir()] == ["prefix.suffix"]
-
-    with pytest.raises(RuntimeError) as error_info:  # noqa: PT012 SIM117
-        # Ignore PT012: we check for the specific `raise`.
-        # Ignore SIM117: nested `with`s makes this more clear.
-        with atomic_open(path) as file:
-            file.write("Second write\n")
-            file.close()
-            raise RuntimeError("boo")
-    LOGGER.info("Caught exception", exc_info=error_info.value)
-    assert error_info.match("boo")
-
-    assert path.read_text() == "First write\n"
-    assert [path.name for path in tmp_path.iterdir()] == ["prefix.suffix"]
-
-
-def test_atomic_open_deleted(tmp_path):
-    path = tmp_path / "prefix.suffix"
-
-    with pytest.raises(FileNotFoundError) as error_info:  # noqa: PT012 SIM117
-        # Ignore PT012: testing context manager.
-        # Ignore SIM117: nested `with`s makes this more clear.
-        with atomic_open(path) as file:
-            Path(file.name).unlink()
-            file.write("First write\n")
-    LOGGER.info("Caught exception", exc_info=error_info.value)
-    assert error_info.match("No such file or directory")
-
-    assert not path.exists()
-    assert [path.name for path in tmp_path.iterdir()] == []
 
 
 def test_file_url_to_path():

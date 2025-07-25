@@ -9,7 +9,7 @@ import os
 import threading
 from collections.abc import Callable, Generator
 from contextlib import asynccontextmanager, contextmanager
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from typing import Any
@@ -27,8 +27,7 @@ CACHEDIR_TAG_CONTENT = """Signature: 8a477f597d28d172789f06886806bc55
 #   https://github.com/danielparks/Yanki
 """
 
-# cache changes
-#   * each video in a directory to make it easier to track
+# Cache TODO
 #   * touch files (directories?) after they’re accessed to mark them used
 #   * some way of invalidating metadata, etc. when the source changes?
 
@@ -148,6 +147,11 @@ class Cache:
             return self._locks[path]
 
 
+class AsyncCalledFromSyncError(Exception):
+    def __init__(self, message="cannot call async method from sync method"):
+        super().__init__(message)
+
+
 class Resolvable:
     """Abstract base class for something that can be resolved."""
 
@@ -167,6 +171,10 @@ class Resolvable:
         """
         raise NotImplementedError("Resolvable cannot be used directly")
 
+    async def resolve_async(self, object: object) -> str:
+        """Resolve into a string."""
+        return self.resolve(object)
+
 
 @dataclass
 class Join(Resolvable):
@@ -180,6 +188,12 @@ class Join(Resolvable):
     def resolve(self, object: object) -> str:
         """Join `self.parts` with `self.join`."""
         return self.join.join([resolve(object, part) for part in self.parts])
+
+    async def resolve_async(self, object: object) -> str:
+        """Join `self.parts` with `self.join`."""
+        return self.join.join(
+            [await resolve_async(object, part) for part in self.parts]
+        )
 
     def __repr__(self) -> str:
         parts = ", ".join([repr(part) for part in self.parts])
@@ -238,7 +252,23 @@ class SelfMethod(Resolvable):
     def resolve(self, object: object) -> str:
         """Get the value from the method path."""
         for name in self.method_path:
-            object = getattr(object, name)()
+            method = getattr(object, name)
+            if inspect.iscoroutinefunction(method):
+                raise AsyncCalledFromSyncError(
+                    f"cannot call async method {name} in path "
+                    f" {self.method_path} from sync method"
+                )
+            object = method()
+        return str(object)
+
+    async def resolve_async(self, object: object) -> str:
+        """Get the value from the method path."""
+        for name in self.method_path:
+            method = getattr(object, name)
+            if inspect.iscoroutinefunction(method):
+                object = await method()
+            else:
+                object = method()
         return str(object)
 
     def __repr__(self) -> str:
@@ -256,6 +286,14 @@ class LoadInvalidError(Exception):
         super().__init__(message)
 
 
+class UnresolvedEntryError(Exception):
+    def __init__(
+        self,
+        message="resolve_cache_path(_async) must be called first",
+    ):
+        super().__init__(message)
+
+
 @dataclass
 class Entry:
     object: object
@@ -263,6 +301,7 @@ class Entry:
     cache_path: list[str | Resolvable]
     loader: Callable
     _value: Any = _UNSET
+    _resolved_cache_path: list[str] | None = field(init=False, default=None)
 
     def load(self) -> Any:
         """Run the loader."""
@@ -312,55 +351,69 @@ class Entry:
         """
         if not self.needs_load():
             return True
-        self._value = self.cache.get_entry_value(self.resolved_cache_path)
+        self._value = self.cache.get_entry_value(self.resolved_cache_path())
         return not self.needs_load()
 
-    def get_value(self) -> Any:
+    def get_value(self, *, reload: bool = False) -> Any:
         """Get the value from this entry.
 
         If this entry is unset or invalid, this will load the value.
         """
-        if self.check_memory_cache():
+        self.resolve_cache_path()
+
+        if reload:
+            self.logger.debug("reloading")
+
+        if not reload and self.check_memory_cache():
             return self.value
 
-        with self.cache.thread_lock(tuple(self.resolved_cache_path)):
-            # Another thread might have loaded the value.
-            if self.check_memory_cache():
-                return self.value
+        with self.cache.thread_lock(tuple(self.resolved_cache_path())):
+            if not reload:
+                # Another thread might have loaded the value.
+                if self.check_memory_cache():
+                    return self.value
 
-            self._read_cache()
-            if self.needs_load():
-                result = self._load_and_write()
+                self._read_cache()
+
+            if reload or self.needs_load():
+                result = self._load_and_write(reload=reload)
                 if self.needs_load():
                     # The loader elected not to cache; just pass the
                     # return value through.
                     return result
 
-            self.cache.set_entry_value(self.resolved_cache_path, self._value)
+            self.cache.set_entry_value(self.resolved_cache_path(), self._value)
             return self.value
 
-    async def get_value_async(self) -> Any:
+    async def get_value_async(self, *, reload: bool = False) -> Any:
         """Get the value from this entry.
 
         If this entry is unset or invalid, this will load the value.
         """
-        if self.check_memory_cache():
+        await self.resolve_cache_path_async()
+
+        if reload:
+            self.logger.debug("reloading")
+
+        if not reload and self.check_memory_cache():
             return self.value
 
-        async with self.cache.async_lock(tuple(self.resolved_cache_path)):
-            # Another thread might have loaded the value.
-            if self.check_memory_cache():
-                return self.value
+        async with self.cache.async_lock(tuple(self.resolved_cache_path())):
+            if not reload:
+                # Another thread might have loaded the value.
+                if self.check_memory_cache():
+                    return self.value
 
-            self._read_cache()
-            if self.needs_load():
-                result = await self._load_and_write_async()
+                self._read_cache()
+
+            if reload or self.needs_load():
+                result = await self._load_and_write_async(reload=reload)
                 if self.needs_load():
                     # The loader elected not to cache; just pass the
                     # return value through.
                     return result
 
-            self.cache.set_entry_value(self.resolved_cache_path, self._value)
+            self.cache.set_entry_value(self.resolved_cache_path(), self._value)
             return self.value
 
     def _read_cache(self):
@@ -369,23 +422,25 @@ class Entry:
         except FileNotFoundError:
             self._value = _UNSET
 
-    def _load_and_write(self) -> Any:
+    def _load_and_write(self, *, reload: bool) -> Any:
         with self._write_lock() as lock_file:
-            # It’s possible that another process loaded the value while we were
-            # waiting for a write lock.
-            self._read_cache()
-            if not self.needs_load():
-                return self.value
+            if not reload:
+                # It’s possible that another process loaded the value while we
+                # were waiting for a write lock.
+                self._read_cache()
+                if not self.needs_load():
+                    return self.value
             self.logger.trace("calling loader")
             return self._post_load(self.load(), lock_file)
 
-    async def _load_and_write_async(self) -> Any:
+    async def _load_and_write_async(self, *, reload: bool) -> Any:
         with self._write_lock() as lock_file:
-            # It’s possible that another process loaded the value while we were
-            # waiting for a write lock.
-            self._read_cache()
-            if not self.needs_load():
-                return self.value
+            if not reload:
+                # It’s possible that another process loaded the value while we
+                # were waiting for a write lock.
+                self._read_cache()
+                if not self.needs_load():
+                    return self.value
             self.logger.trace("calling async loader")
             return self._post_load(await self.load_async(), lock_file)
 
@@ -430,20 +485,29 @@ class Entry:
     def cache(self) -> Cache:
         return getattr(self.object, self.cache_attr)
 
-    @functools.cached_property
+    def resolve_cache_path(self):
+        self._resolved_cache_path = resolve_path(self.object, self.cache_path)
+
+    async def resolve_cache_path_async(self):
+        self._resolved_cache_path = await resolve_path_async(
+            self.object, self.cache_path
+        )
+
     def resolved_cache_path(self) -> list[str]:
-        return resolve_path(self.object, self.cache_path)
+        if self._resolved_cache_path is None:
+            raise UnresolvedEntryError()
+        return self._resolved_cache_path
 
     @functools.cached_property
     def logger(self) -> logging.Logger:
         return self.cache.logger.getChild(
-            f"entry.{list(self.resolved_cache_path)}"
+            f"entry.{list(self.resolved_cache_path())}"
         )
 
     @functools.cached_property
     def file_path(self) -> Path:
         """The actual cache file on the file system."""
-        return self.cache.file_path_for_entry(self.resolved_cache_path)
+        return self.cache.file_path_for_entry(self.resolved_cache_path())
 
     @functools.cached_property
     def working_path(self) -> Path:
@@ -463,30 +527,12 @@ class EntryPath(Entry):
     stored in the cache.
     """
 
-    def is_set(self):
-        """Is the value of this entry set?"""
-        return self.file_path.exists() or self.working_path.exists()
-
-    def is_valid(self):
-        """Is the value of this entry valid?
-
-        Should only by called if the value is set.
-        """
-        return True
-
-    @property
-    def value(self) -> Any:
-        """Get the value from this entry or _UNSET or _INVALID."""
-        if self.is_set():
-            return self.file_path
-        return _UNSET
-
     def _read_cache(self):
-        # Nothing to do: is_set() and value() do all the work.
-        pass
+        if self.file_path.exists():
+            self._value = self.file_path
 
     def write_file(self, _lock_file: io.IOBase):
-        # Nothing to do: the loader is responsible for this.
+        # Nothing to do: self._post_load() does this.
         pass
 
     def load(self) -> Path:
@@ -495,9 +541,9 @@ class EntryPath(Entry):
         if "final_path" in inspect.signature(self.loader).parameters:
             kwargs["final_path"] = self.file_path
         result = self.loader(self.object, self.working_path, **kwargs)
-        if self.needs_load():
+        if not self.working_path.exists():
             return result
-        self._value = result
+        self._value = self.file_path
         return self._value
 
     async def load_async(self) -> Path:
@@ -506,9 +552,9 @@ class EntryPath(Entry):
         if "final_path" in inspect.signature(self.loader).parameters:
             kwargs["final_path"] = self.file_path
         result = await self.loader(self.object, self.working_path, **kwargs)
-        if self.needs_load():
+        if not self.working_path.exists():
             return result
-        self._value = result
+        self._value = self.file_path
         return self._value
 
 
@@ -624,7 +670,7 @@ def validate_path(path):
     # `fs_escape()` on anything that would cause problems on the file system.
 
 
-def resolve(object: object, value: str | Resolvable):
+def resolve(object: object, value: str | Resolvable) -> str:
     """Resolve a `str` or a `Resolvable` into a `str`."""
     match value:
         case Resolvable():
@@ -647,6 +693,35 @@ def resolve_path(object: object, path: list[str | Resolvable]) -> list[str]:
     `["video_idABCXYZ", "info"]`.
     """
     resolved_path = [resolve(object, segment) for segment in path]
+    validate_path(resolved_path)
+    return resolved_path
+
+
+async def resolve_async(object: object, value: str | Resolvable) -> str:
+    """Resolve a `str` or a `Resolvable` into a `str`."""
+    match value:
+        case Resolvable():
+            return await value.resolve_async(object)
+        case str():
+            return value
+        case other:
+            raise ValueError(f"expected str or Resolvable; got {other!r}")
+
+
+async def resolve_path_async(
+    object: object, path: list[str | Resolvable]
+) -> list[str]:
+    """Resolve the cache path into strings.
+
+    The cache path can be specified with `Resolvable`s in order to allow
+    dynamic paths. For example:
+
+        @cached_json(SelfAttr("id"), "info")
+
+    For each segment of the path, resolve it down to an actual string, e.g.
+    `["video_idABCXYZ", "info"]`.
+    """
+    resolved_path = [await resolve_async(object, segment) for segment in path]
     validate_path(resolved_path)
     return resolved_path
 
