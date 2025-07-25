@@ -14,14 +14,8 @@ from urllib.parse import parse_qs, urlparse
 import ffmpeg
 import yt_dlp
 
-from yanki.cache import (
-    Cache,
-    Join,
-    SelfAttr,
-    SelfMethod,
-    cached_json,
-    cached_path,
-)
+from yanki.cache import Cache, cached_json, cached_path
+from yanki.cache.resolvable import Join, SelfAttr, SelfMethod
 from yanki.errors import ExpectedError
 from yanki.utils import (
     NotFileURLError,
