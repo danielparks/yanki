@@ -6,7 +6,9 @@ from yanki.utils import hardlink_into, url_friendly_name
 
 
 class DeckTree:
-    def __init__(self, name=None):
+    def __init__(self, *, root_dir, media_dir, name=None):
+        self.root_dir = root_dir
+        self.media_dir = media_dir
         self.children = OrderedDict()
         self.name = name
         self.deck = None
@@ -15,13 +17,96 @@ class DeckTree:
 
     def __getitem__(self, key):
         if key not in self.children:
-            self.children[key] = DeckTree(name=key)
+            self.children[key] = DeckTree(
+                name=key, root_dir=self.root_dir, media_dir=self.media_dir
+            )
         return self.children[key]
 
     def dig(self, path):
         if len(path):
             return self[path[0]].dig(path[1:])
         return self
+
+    def write_indices(self, *, title_path=None, flashcards=False):
+        if title_path is None:
+            title_path = []
+        if (
+            self.deck_file_name is None
+            and title_path == []
+            and self.name is None
+        ):
+            # Anonymous root.
+            if len(self.children) == 1:
+                # If there is exactly one child of the anonymous root, then skip
+                # the anonymous root.
+                return next(iter(self.children.values())).write_indices(
+                    flashcards=flashcards,
+                )
+            # Anonymous root has either zero, or more than one child deck.
+            self.name = "Decks"
+
+        if len(self.children) == 0:
+            if self.deck_file_name:
+                # A tree with a deck is created with `deck_tree.dig()`, so it
+                # should always have a name.
+                assert self.name is not None  # noqa: S101
+                write_deck_files(
+                    self.root_dir / self.deck_file_name,
+                    self.media_dir,
+                    self.deck,
+                    [*title_path, (self.name, self.deck_file_name)],
+                    flashcards=flashcards,
+                )
+                return (
+                    f'<li><a href="{h(self.deck_file_name)}">{h(self.name)}'
+                    "</a></li>"
+                )
+            return ""
+
+        # Has child decks. Must have a name.
+        assert self.name is not None  # noqa: S101
+        if title_path == []:
+            self.index_file_name = "index.html"
+        else:
+            title_names = [name for name, _ in title_path] + [self.name]
+            self.index_file_name = (
+                "index_" + url_friendly_name("::".join(title_names)) + ".html"
+            )
+
+        # This rebinds the variable to a new value instead of changing the old
+        # title_path object like .append() or += would:
+        title_path = [*title_path, (self.name, self.index_file_name)]
+
+        list_html = [
+            child.write_indices(
+                title_path=title_path,
+                flashcards=flashcards,
+            )
+            for child in self.children.values()
+        ]
+        list_html = "<ol>\n      " + "\n      ".join(list_html) + "\n    </ol>"
+        title_html = f'<a href="{h(self.index_file_name)}">{h(self.name)}</a>'
+        if self.deck_file_name:
+            write_deck_files(
+                self.root_dir / self.deck_file_name,
+                self.media_dir,
+                self.deck,
+                [*title_path, ("Deck", self.deck_file_name)],
+                flashcards=flashcards,
+            )
+            deck_link = f'<a href="{h(self.deck_file_name)}">Deck</a>'
+            title_html += f" ({deck_link})"
+        else:
+            deck_link = ""
+
+        (self.root_dir / self.index_file_name).write_text(
+            generate_index_html(deck_link, list_html, title_path),
+            encoding="utf_8",
+        )
+        return f"""<li>
+            <h3>{title_html}</h3>
+            {list_html}
+        </li>"""
 
 
 def write_html(root, decks, *, flashcards=False):
@@ -47,108 +132,29 @@ def write_html(root, decks, *, flashcards=False):
         )
         return
 
+    deck_tree = create_deck_tree(decks, root_dir=root, media_dir=media_dir)
+    deck_tree.write_indices(flashcards=flashcards)
+
+
+def create_deck_tree(decks, root_dir: Path, media_dir: Path) -> DeckTree:
     # Figure out file names for decks.
-    decks_by_path = {}
-    deck_tree = DeckTree()
+    unique_file_names = set()
+    tree = DeckTree(root_dir=root_dir, media_dir=media_dir)
     for deck in decks:
         url_title = url_friendly_name(deck.title)
-        html_path = root / f"deck_{url_title}.html"
+        file_name = f"deck_{url_title}.html"
         i = 2
-        while html_path in decks_by_path:
-            html_path = root / f"deck_{url_title}_{i}.html"
+        while file_name in unique_file_names:
+            file_name = f"deck_{url_title}_{i}.html"
             i += 1
-        decks_by_path[html_path] = deck
+        unique_file_names.add(file_name)
 
         title_parts = deck.title.split("::")
-        leaf = deck_tree.dig(title_parts)
-        leaf.deck_file_name = html_path.name
+        leaf = tree.dig(title_parts)
+        leaf.deck_file_name = file_name
         leaf.deck = deck
 
-    write_tree_indices(deck_tree, root, media_dir, flashcards=flashcards)
-
-
-def write_tree_indices(
-    tree, root, media_dir, *, title_path=None, flashcards=False
-):
-    if title_path is None:
-        title_path = []
-    if tree.deck_file_name is None and title_path == [] and tree.name is None:
-        # Anonymous root.
-        if len(tree.children) == 1:
-            # If there is exactly one child of the anonymous root, then skip it.
-            return write_tree_indices(
-                next(iter(tree.children.values())),
-                root,
-                media_dir,
-                flashcards=flashcards,
-            )
-        # Anonymous root has zero or more than one child deck.
-        tree.name = "Decks"
-
-    if len(tree.children) == 0:
-        if tree.deck_file_name:
-            # A tree with a deck is created with `deck_tree.dig()`, so it should
-            # always have a name.
-            assert tree.name is not None  # noqa: S101
-            write_deck_files(
-                root / tree.deck_file_name,
-                media_dir,
-                tree.deck,
-                [*title_path, (tree.name, tree.deck_file_name)],
-                flashcards=flashcards,
-            )
-            return (
-                f'<li><a href="{h(tree.deck_file_name)}">{h(tree.name)}'
-                "</a></li>"
-            )
-        return ""
-
-    # Has child decks. Must have a name.
-    assert tree.name is not None  # noqa: S101
-    if title_path == []:
-        tree.index_file_name = "index.html"
-    else:
-        title_names = [name for name, _ in title_path] + [tree.name]
-        tree.index_file_name = (
-            "index_" + url_friendly_name("::".join(title_names)) + ".html"
-        )
-
-    # This rebinds the variable to a new value instead of changing the old
-    # title_path object like .append() or += would:
-    title_path = [*title_path, (tree.name, tree.index_file_name)]
-
-    list_html = [
-        write_tree_indices(
-            child,
-            root,
-            media_dir,
-            title_path=title_path,
-            flashcards=flashcards,
-        )
-        for child in tree.children.values()
-    ]
-    list_html = "<ol>\n      " + "\n      ".join(list_html) + "\n    </ol>"
-    title_html = f'<a href="{h(tree.index_file_name)}">{h(tree.name)}</a>'
-    if tree.deck_file_name:
-        write_deck_files(
-            root / tree.deck_file_name,
-            media_dir,
-            tree.deck,
-            [*title_path, ("Deck", tree.deck_file_name)],
-            flashcards=flashcards,
-        )
-        deck_link = f'<a href="{h(tree.deck_file_name)}">Deck</a>'
-        title_html += f" ({deck_link})"
-    else:
-        deck_link = ""
-
-    (root / tree.index_file_name).write_text(
-        generate_index_html(deck_link, list_html, title_path), encoding="utf_8"
-    )
-    return f"""<li>
-        <h3>{title_html}</h3>
-        {list_html}
-      </li>"""
+    return tree
 
 
 def generate_index_html(deck_link_html, child_html, title_path):
