@@ -4,7 +4,12 @@ function get_id(id) {
 
 function create(tag, contents = [], attrs = {}) {
   var element = document.createElement(tag);
-  contents.forEach((child) => element.appendChild(child));
+  if (typeof contents === "string") {
+    element.innerHTML = contents;
+  } else {
+    contents.forEach((child) => element.appendChild(child));
+  }
+
   for (var key in attrs) {
     element[key] = attrs[key];
   }
@@ -28,22 +33,21 @@ function query_text(element, query) {
 }
 
 function note_directions(note, desired_direction) {
-  const direction = query_text(note, ".metadata .direction > td > span");
-  if (direction == "->") {
+  if (note.direction == "->") {
     if (desired_direction == "text-first") {
       return []; // This is a media-first note, so exclude it.
     } else {
       return ["media-first"];
     }
-  } else if (direction == "<-") {
+  } else if (note.direction == "<-") {
     if (desired_direction == "media-first") {
       return []; // This is a text-first note, so exclude it.
     } else {
       return ["text-first"];
     }
   } else {
-    if (direction != "<->") {
-      console.error("Unknown direction for note", direction);
+    if (note.direction != "<->") {
+      console.warn("Unknown direction for note", direction);
     }
 
     if (desired_direction == "both") {
@@ -58,7 +62,7 @@ function make_card_list(notes, desired_direction) {
   var cards = [];
   notes.forEach((note) => {
     note_directions(note, desired_direction).forEach((direction) => {
-      cards.push([direction, note]);
+      cards.push(new Card(note, direction));
     });
   });
   shuffle(cards);
@@ -79,20 +83,76 @@ function play_video(container) {
   });
 }
 
+class Card {
+  constructor(note, direction) {
+    this.note = note;
+    this.direction = direction;
+    this.div = create(
+      "div",
+      [
+        create(
+          "div",
+          [
+            create("h3", note.text_html),
+            create("div", note.media_html, { className: "media" }),
+          ],
+          { className: "sides" },
+        ),
+        create("div", note.more_html, { className: "more" }),
+      ],
+      { className: `card ${direction}` },
+    );
+  }
+
+  hide() {
+    this.div.classList.remove("question", "answer");
+  }
+
+  show_question() {
+    this.div.classList.remove("answer");
+    this.div.classList.add("question");
+
+    if (this.direction == "media-first") {
+      play_video(this.div);
+    }
+  }
+
+  show_answer() {
+    this.div.classList.remove("question");
+    this.div.classList.add("answer");
+
+    if (this.direction == "text-first") {
+      play_video(this.div);
+    }
+  }
+}
+
 window.addEventListener("load", (event) => {
   var filter_direction = "both",
     current_index = 0;
-  var current_card_direction, current_card, showing_question, cards;
+  var current_deck, current_card, showing_question, cards;
 
   function restart() {
-    cards = make_card_list(
-      document.querySelectorAll("div.note"),
-      filter_direction,
-    );
+    cards_div.innerHTML = "";
     current_index = 0;
     finished_div.style.display = "none";
 
-    if (current_index >= cards.length) {
+    if (current_deck && current_deck.notes.length > 0) {
+      viewer.classList.remove("no-cards");
+      cards = make_card_list(current_deck.notes, filter_direction);
+    } else {
+      viewer.classList.add("no-cards");
+      cards = [];
+    }
+
+    cards.forEach((card) => {
+      cards_div.appendChild(card.div);
+    });
+    cards_div.appendChild(finished_div);
+
+    if (cards.length == 0) {
+      return;
+    } else if (current_index >= cards.length) {
       show_finished();
     } else {
       show_question();
@@ -101,12 +161,7 @@ window.addEventListener("load", (event) => {
 
   function hide_current() {
     if (current_card) {
-      current_card.classList.remove(
-        "question",
-        "answer",
-        "text-first",
-        "media-first",
-      );
+      current_card.hide();
     }
   }
 
@@ -116,6 +171,10 @@ window.addEventListener("load", (event) => {
       button.classList.remove("active");
     });
     direction_buttons[filter_direction].classList.add("active");
+  }
+
+  function filter_direction_click(direction) {
+    set_filter_direction(direction);
     restart();
   }
 
@@ -134,36 +193,26 @@ window.addEventListener("load", (event) => {
     showing_question = true;
 
     hide_current();
-    // current_card_direction is "text-first" or "media-first".
-    [current_card_direction, current_card] = cards[current_index];
-    current_card.classList.remove("answer", "text-first", "media-first");
-    current_card.classList.add("question", current_card_direction);
 
     back_button.disabled = current_index == 0;
     next_button.innerText = "Show answer";
     update_status();
 
-    if (current_card_direction == "media-first") {
-      play_video(current_card);
-    }
+    current_card = cards[current_index];
+    current_card.show_question();
   }
 
   function show_answer() {
     showing_question = false;
 
     hide_current();
-    // current_card_direction is "text-first" or "media-first".
-    [current_card_direction, current_card] = cards[current_index];
-    current_card.classList.remove("question", "text-first", "media-first");
-    current_card.classList.add("answer", current_card_direction);
 
     back_button.disabled = false;
     next_button.innerText = "Next";
     update_status();
 
-    if (current_card_direction == "text-first") {
-      play_video(current_card);
-    }
+    current_card = cards[current_index];
+    current_card.show_answer();
   }
 
   function show_finished() {
@@ -205,38 +254,72 @@ window.addEventListener("load", (event) => {
     }
   }
 
-  fetch("decks.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error, status = ${response.status}`);
+  function fix_param_direction(param, fallback) {
+    if (param) {
+      if (
+        direction_buttons[param] &&
+        direction_buttons[param].tagName == "BUTTON"
+      ) {
+        return param;
+      } else {
+        console.warn("Invalid direction parameter:", param);
       }
-      return response.json();
-    })
-    .then((decks) => {
-      console.log("got", decks);
-    });
+    }
+    return fallback;
+  }
 
+  function parse_hash(hash) {
+    const params = new URLSearchParams(hash.slice(1));
+    return {
+      path: params.get("path"),
+      direction: fix_param_direction(params.get("direction"), filter_direction),
+    };
+  }
 
-  get_id("loading").remove();
-  document.body.classList.remove("loading");
+  function directory_deck_click(_event) {
+    load_params(parse_hash(this.hash));
+  }
 
+  function load_params(params) {
+    document.body.classList.add("loading");
+    set_filter_direction(params.direction);
+    if (params.path) {
+      fetch(params.path)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error, status = ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((deck) => {
+          current_deck = deck;
+          title.innerText = deck.title.replaceAll("::", " ❯ ");
+          document.body.classList.remove("loading");
+          restart();
+        });
+    } else {
+      document.body.classList.remove("loading");
+      restart();
+    }
+  }
 
   var direction_buttons = {
     both: create("button", [text("Both")], {
       id: "direction-both",
       className: "active",
-      onclick: () => set_filter_direction("both"),
+      onclick: () => filter_direction_click("both"),
     }),
     "text-first": create("button", [text("Text")], {
       id: "direction-text-first",
-      onclick: () => set_filter_direction("text-first"),
+      onclick: () => filter_direction_click("text-first"),
     }),
     "media-first": create("button", [text("Media")], {
       id: "direction-media-first",
-      onclick: () => set_filter_direction("media-first"),
+      onclick: () => filter_direction_click("media-first"),
     }),
   };
 
+  var title = create("h1");
   var direction_control = create(
     "div",
     [
@@ -251,38 +334,56 @@ window.addEventListener("load", (event) => {
     id: "back-button",
     onclick: back_button_click,
   });
-  var next_button = create("button", [text("Flip")], {
+  var next_button = create("button", [text("Show answer")], {
     id: "next-button",
     onclick: next_button_click,
   });
 
-  var status_div = create("div", [], { id: "status " });
+  var status_div = create("div", [], { id: "status" });
   var controls = create("div", [back_button, next_button, status_div], {
     id: "controls",
   });
   var finished_div = create("div", [text("Finished all cards!")], {
     id: "finished",
   });
+  var cards_div = create("div", [finished_div], { id: "cards" });
 
-  document.querySelector("h1").appendChild(direction_control);
-  document.body.appendChild(finished_div);
-  document.body.appendChild(controls);
+  var directory = get_id("directory");
+  var viewer = get_id("viewer");
+  viewer.appendChild(title);
+  viewer.appendChild(direction_control);
+  viewer.appendChild(cards_div);
+  viewer.appendChild(controls);
+
+  fetch("decks.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error, status = ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((decks) => {
+      directory.appendChild(
+        create(
+          "ol",
+          decks.map((deck) => {
+            return create("li", [
+              create("a", [text(deck.title.replaceAll("::", " ❯ "))], {
+                href: `#path=${encodeURIComponent(deck.path)}`,
+                onclick: directory_deck_click,
+              }),
+            ]);
+          }),
+        ),
+      );
+    });
 
   // Check which direction we should show the cards in.
   if (window.location.hash) {
-    const parameters = window.location.hash.slice(1).split(":");
-    if (parameters.length > 0) {
-      if (
-        direction_buttons[parameters[0]] &&
-        direction_buttons[parameters[0]].tagName == "BUTTON"
-      ) {
-        set_filter_direction(parameters[0]);
-      }
-      // For now, ignore other parameters.
-    }
+    load_params(parse_hash(window.location.hash));
+  } else {
+    load_params(parse_hash("#"));
   }
-
-  restart();
 
   document.body.addEventListener("keyup", (event) => {
     if (event.key == " ") {

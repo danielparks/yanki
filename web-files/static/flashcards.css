@@ -16,6 +16,18 @@ body.loading {
   justify-content: center;
 }
 
+body.loading > * {
+  display: none;
+}
+
+body #loading {
+  display: none;
+}
+
+body.loading > #loading {
+  display: block;
+}
+
 button {
   margin: 10px 8px;
   padding: 10px 18px;
@@ -45,6 +57,11 @@ h1 {
 
 h1 > a {
   color: #a9c;
+}
+
+#viewer.no-cards #controls,
+#viewer.no-cards #direction-control {
+  display: none;
 }
 
 #direction-control {
@@ -102,13 +119,13 @@ button#next-button:hover {
   background: #99c;
 }
 
-.note {
+#cards > div {
   display: none;
 }
 
-.note.question,
-.note.answer,
-#finished {
+#cards > div.question,
+#cards > div.answer,
+#cards > div#finished {
   display: block;
   position: relative;
   margin: 0 auto;
@@ -124,20 +141,20 @@ button#next-button:hover {
   }
 }
 
-#finished {
+#cards > div#finished {
   display: none;
   line-height: 400px;
   font-size: 24px;
 }
 
-.note video,
-.note img {
+#cards > div video,
+#cards > div img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
 
-.note > .more {
+#cards > div > .more {
   padding: 0 25px;
   background: #eee;
   border: 1px solid #ccc;
@@ -146,60 +163,56 @@ button#next-button:hover {
   min-height: 1em; /* If empty, we need to maintain margin for answer */
 }
 
-.note.question > .more {
+#cards > div.question > .more {
   display: none;
 }
 
-.cards {
+.sides {
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
   background: #eee;
 }
 
-.note.media-first > .cards {
+#cards > div.media-first > .sides {
   flex-direction: column-reverse;
 }
 
-.note.answer > .cards {
+#cards > div.answer > .sides {
   border-bottom: none;
 }
 
-.cards > h3 {
+.sides > h3 {
   margin: 0;
 }
 
-.cards > .media {
+.sides > .media {
   /* Don’t display scroll bars on page if this hangs off the end when hidden: */
   overflow: hidden;
 }
 
-.note.text-first > .cards > h3,
-.note.media-first > .cards > .media {
+#cards > div.text-first > .sides > h3,
+#cards > div.media-first > .sides > .media {
   background: #fff;
 }
 
-.metadata {
-  display: none;
-}
-
 /* Make question area bigger for text questions */
-.note.text-first.question > .cards > h3 {
+#cards > div.text-first.question > .sides > h3 {
   padding: 200px 25px;
 }
 
-.note.text-first.question > .cards > .media {
+#cards > div.text-first.question > .sides > .media {
   height: 0;
   padding: 0;
   visibility: hidden;
 }
 
-.note.text-first.answer > .cards > h3 {
+#cards > div.text-first.answer > .sides > h3 {
   padding: 25px;
   transition: padding 0.1s;
 }
 
-.note.text-first.answer > .cards > .media {
+#cards > div.text-first.answer > .sides > .media {
   padding: 25px 0;
   padding-bottom: calc(25px - 1em);
   transition: height 0.1s;
@@ -207,22 +220,22 @@ button#next-button:hover {
 }
 
 /* Make question area bigger for media questions */
-.note.media-first.question > .cards > .media {
+#cards > div.media-first.question > .sides > .media {
   padding: 50px 0;
 }
 
-.note.media-first.question > .cards > h3 {
+#cards > div.media-first.question > .sides > h3 {
   padding: 0;
   height: 0;
   visibility: hidden;
 }
 
-.note.media-first.answer > .cards > .media {
+#cards > div.media-first.answer > .sides > .media {
   padding: 25px 0;
   transition: padding 0.1s;
 }
 
-.note.media-first.answer > .cards > h3 {
+#cards > div.media-first.answer > .sides > h3 {
   padding: 25px;
   padding-bottom: calc(25px - 1em);
   transition: height 0.1s;
@@ -235,21 +248,21 @@ button#next-button:hover {
     margin-right: 0;
   }
 
-  .note.question,
-  .note.answer,
-  #finished {
+  #cards > div.question,
+  #cards > div.answer,
+  #cards > div#finished {
     width: 100%;
   }
 
-  .cards,
-  .note > .more {
+  .sides,
+  #cards > div > .more {
     border: none;
   }
 
-  .note.text-first.question > .cards > .media,
-  .note.text-first.answer > .cards > .media,
-  .note.media-first.question > .cards > .media,
-  .note.media-first.answer > .cards > .media {
+  #cards > div.text-first.question > .sides > .media,
+  #cards > div.text-first.answer > .sides > .media,
+  #cards > div.media-first.question > .sides > .media,
+  #cards > div.media-first.answer > .sides > .media {
     padding: 0;
   }
 }
