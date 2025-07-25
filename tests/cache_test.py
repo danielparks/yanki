@@ -8,16 +8,13 @@ from typing import Any
 
 import pytest
 
-from yanki.cache import (
+from yanki.cache import Cache, cached, cached_json, cached_path
+from yanki.cache.entry import EntryContent
+from yanki.cache.resolvable import (
     AsyncCalledFromSyncError,
-    Cache,
-    EntryContent,
     Join,
     SelfAttr,
     SelfMethod,
-    cached,
-    cached_json,
-    cached_path,
 )
 from yanki.utils import add_trace_logging, fs_hash_name
 
@@ -41,11 +38,7 @@ class Base:
 
 
 def ls_r(path: Path):
-    return [child.relative_to(path) for child in path.rglob("*")]
-
-
-def strs(list):
-    return sorted([str(e) for e in list])
+    return sorted([str(child.relative_to(path)) for child in path.rglob("*")])
 
 
 def test_cached_json():
@@ -62,10 +55,10 @@ def test_cached_json():
             return self.value
 
     thing = Thing(value=REFERENCE, cache=cache)
-    assert strs(ls_r(thing.cache.path)) == []
+    assert ls_r(thing.cache.path) == []
 
     assert thing.info() == REFERENCE
-    assert strs(ls_r(thing.cache.path)) == [
+    assert ls_r(thing.cache.path) == [
         "CACHEDIR.TAG",
         "_lock_a.json",
         "a.json",
@@ -185,12 +178,12 @@ def test_cached_path():
             path.write_text(self.id)
 
     thing = Thing(id="test_cached_path", cache=cache)
-    assert strs(ls_r(thing.cache.path)) == []
+    assert ls_r(thing.cache.path) == []
 
     thing_path = thing.path()
     assert thing.cache.path in thing_path.parents
     assert thing_path.read_text() == "test_cached_path"
-    assert strs(ls_r(thing.cache.path)) == [
+    assert ls_r(thing.cache.path) == [
         "CACHEDIR.TAG",
         "_lock_abc",
         "abc",
@@ -216,7 +209,7 @@ def test_cached_path_reload():
             path.write_text(self.id)
 
     thing = Thing(id="one", cache=cache)
-    assert strs(ls_r(thing.cache.path)) == []
+    assert ls_r(thing.cache.path) == []
 
     thing_path = thing.path()
     assert thing.cache.path in thing_path.parents
@@ -250,7 +243,7 @@ async def test_cached_path_reload_async():
             path.write_text(self.id)
 
     thing = Thing(id="one", cache=cache)
-    assert strs(ls_r(thing.cache.path)) == []
+    assert ls_r(thing.cache.path) == []
 
     thing_path = await thing.path()
     assert thing.cache.path in thing_path.parents
@@ -277,10 +270,10 @@ def test_uncached_path():
             return "RETURN"
 
     thing = Thing()
-    assert strs(ls_r(thing.cache.path)) == []
+    assert ls_r(thing.cache.path) == []
 
     assert thing.value() == "RETURN"
-    assert strs(ls_r(thing.cache.path)) == ["CACHEDIR.TAG", "_lock_abc"]
+    assert ls_r(thing.cache.path) == ["CACHEDIR.TAG", "_lock_abc"]
     assert thing.value() == "RETURN"
 
 
@@ -292,10 +285,10 @@ async def test_uncached_path_async():
             return "RETURN"
 
     thing = Thing()
-    assert strs(ls_r(thing.cache.path)) == []
+    assert ls_r(thing.cache.path) == []
 
     assert await thing.value() == "RETURN"
-    assert strs(ls_r(thing.cache.path)) == ["CACHEDIR.TAG", "_lock_abc"]
+    assert ls_r(thing.cache.path) == ["CACHEDIR.TAG", "_lock_abc"]
     assert await thing.value() == "RETURN"
 
 
@@ -321,7 +314,7 @@ def test_json_with_path_extension():
 
     thing = Thing()
     assert thing.info() == "CONTENTS"
-    assert strs(ls_r(thing.cache.path)) == [
+    assert ls_r(thing.cache.path) == [
         "CACHEDIR.TAG",
         "_lock_a.txt",
         "a.txt",
