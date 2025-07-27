@@ -334,6 +334,11 @@ group:
     trim: 10F-73F
 
 group:
+  more: +md:[DEPOSIT](https://www.lifeprint.com/asl101/pages-signs/d/deposit.htm)
+  https://www.youtube.com/watch?v=MI5O36P8wLE DEPOSIT (financial) / down payment
+    trim: 26F-121F
+
+group:
   more: +md:[DEPRESSED](https://www.lifeprint.com/asl101/pages-signs/d/depressed.htm)
   https://www.youtube.com/watch?v=mLWP-yNA0XU
     DEPRESSED / depression / feeling down
@@ -406,6 +411,11 @@ group:
   https://www.youtube.com/watch?v=ZvW1ocG6Hwo
     gas-on-EMPTY-or-nearly-so (depictive)
     trim: 24F-88F
+
+group:
+  more: +md:[ENCOURAGE](https://www.lifeprint.com/asl101/pages-signs/e/encourage.htm)
+  https://www.youtube.com/watch?v=7LwoQ4-W_dk ENCOURAGE
+    trim: 8F-57F
 
 group:
   more: +md:[ENTER](https://www.lifeprint.com/asl101/pages-signs/e/enter.htm)
@@ -836,6 +846,14 @@ group:
     trim: 12F-57F
   https://www.youtube.com/watch?v=3ggI2d3N4Ls DIFFICULT / problem
     trim: 10F-55F
+
+group:
+  more: +md:[QUIT](https://www.lifeprint.com/asl101/pages-signs/q/quit.htm)
+  https://www.youtube.com/watch?v=vUvsF5ktDx0 QUIT
+    trim: 6F-60F
+  https://www.youtube.com/watch?v=j7-2qB08VJc @2F-50F GET-OUT-OF / resign / quit
+  https://www.youtube.com/watch?v=j7-2qB08VJc @68F- ->
+    GET-OUT-OF / resign / quit
 
 group:
   more: +md:[READY](https://www.lifeprint.com/asl101/pages-signs/r/ready.htm)
