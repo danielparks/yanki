@@ -20,6 +20,7 @@ from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
 from yanki.html_out import path_to_web_files, write_html
 from yanki.parser import NOTE_VARIABLES, find_invalid_format
+from yanki.tree import TreeNode, tree
 from yanki.utils import (
     add_trace_logging,
     create_unique_file,
@@ -340,15 +341,6 @@ def serve_flashcards(options, decks, server):
         root.chmod(0o755)  # TemporaryDirectory creates dirs with mode 0o700.
         symlink_into(web_files / "static", root)
 
-        # Generate index.html
-        index_html = (web_files / "templates/flashcards.html").read_text()
-        for path in (web_files / "static").glob("*"):
-            index_html = index_html.replace(
-                f'"static/{path.name}"',
-                f'"/static/{path.name}?{path.stat().st_mtime}"',
-            )
-        (root / "index.html").write_text(index_html)
-
         media_dir = root / "media"
         media_dir.mkdir()
 
@@ -377,8 +369,35 @@ def serve_flashcards(options, decks, server):
                     }
                 )
 
-        with (root / "decks.json").open("w", encoding="utf_8") as file:
-            json.dump(deck_index, file)
+        def encoder(value):
+            if isinstance(value, TreeNode):
+                node = {
+                    "segment": value.name,
+                    "children": value.sorted_children(),
+                }
+                if value.datum:
+                    node.update(value.datum)
+                return node
+            raise TypeError(f"cannot serialize object of {type(value)}")
+
+        decks_tree_json = json.dumps(
+            tree(
+                deck_index,
+                key=lambda deck: deck["title"].split("::"),
+                root_name="Decks",
+            ),
+            default=encoder,
+        )
+
+        # Generate index.html
+        index_html = (web_files / "templates/flashcards.html").read_text()
+        for path in (web_files / "static").glob("*"):
+            index_html = index_html.replace(
+                f'"static/{path.name}"',
+                f'"/static/{path.name}?{path.stat().st_mtime}"',
+            )
+        index_html = index_html.replace("{ DECKS }", decks_tree_json)
+        (root / "index.html").write_text(index_html)
 
         LOGGER.info(f"Starting web server in temporary directory {root}")
         server.serve_forever(directory=root)

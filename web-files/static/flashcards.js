@@ -127,6 +127,10 @@ class Card {
   }
 }
 
+function get_deck_href(path) {
+  return `#path=${encodeURIComponent(path)}`;
+}
+
 window.addEventListener("load", (event) => {
   var filter_direction = "both",
     current_index = 0;
@@ -279,6 +283,14 @@ window.addEventListener("load", (event) => {
   }
 
   function load_params(params) {
+    directory.querySelectorAll("a").forEach((a) => {
+      a.classList.remove("current");
+    });
+    directory
+      .querySelectorAll(`a[href="${get_deck_href(params.path)}"]`)
+      .forEach((a) => {
+        a.classList.add("current");
+      });
     viewer.classList.add("loading");
     set_filter_direction(params.direction);
     if (params.path) {
@@ -345,34 +357,28 @@ window.addEventListener("load", (event) => {
   var cards_div = create("div", [finished_div], { id: "cards" });
 
   var directory = get_id("directory");
+  directory.appendChild(create("ol", [tree_to_li(decks_tree)]));
   var viewer = get_id("viewer");
   viewer.appendChild(title);
   viewer.appendChild(direction_control);
   viewer.appendChild(cards_div);
   viewer.appendChild(controls);
 
-  fetch("decks.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error, status = ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((decks) => {
-      directory.appendChild(
-        create(
-          "ol",
-          decks.map((deck) => {
-            return create("li", [
-              create("a", [text(deck.title.replaceAll("::", " ❯ "))], {
-                href: `#path=${encodeURIComponent(deck.path)}`,
-                onclick: directory_deck_click,
-              }),
-            ]);
-          }),
-        ),
-      );
-    });
+  function tree_to_li(node) {
+    var name_label = text(node.segment);
+    if (node.path) {
+      name_label = create("a", [name_label], {
+        href: get_deck_href(node.path),
+        onclick: directory_deck_click,
+      });
+    } else {
+      name_label = create("span", [name_label]);
+    }
+    return create("li", [
+      name_label,
+      create("ol", node.children.map(tree_to_li)),
+    ]);
+  }
 
   // Check which direction we should show the cards in.
   if (window.location.hash) {
