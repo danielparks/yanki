@@ -110,6 +110,16 @@ group:
     trim: 31F-94F
 
 group:
+  more: +md:[brain](https://www.lifeprint.com/asl101/pages-signs/b/brain.htm)
+  # “brain” is under SMART as MIND.
+  https://www.youtube.com/watch?v=CBBNlZ7m5Ow
+    big-BRAIN / genius / very knowledgeable / erudite (idiomatic)
+    trim: 41F-98F
+  https://www.youtube.com/watch?v=SXqFKbIym-k
+    double-BRAIN / genius / very knowledgeable / erudite (idiomatic)
+    trim: 20F-77F
+
+group:
   more: +md:[BREAK](https://www.lifeprint.com/asl101/pages-signs/b/break.htm)
   https://www.youtube.com/watch?v=y7Jyiy6soRM BREAK  / broken
     trim: 28F-112F
@@ -896,6 +906,11 @@ group:
   tags: +extra
   https://www.youtube.com/watch?v=pIIaoLraYm8 -> RELATIONSHIP (initialized)
     trim: 11F-62F
+
+group:
+  more: +md:[RESPECT](https://www.lifeprint.com/asl101/pages-signs/r/respect.htm)
+  https://www.youtube.com/watch?v=Rrjgr_FBQeQ RESPECT
+    trim: 14F-67F
 
 group:
   more: +md:[REST](https://www.lifeprint.com/asl101/pages-signs/r/rest.htm)
