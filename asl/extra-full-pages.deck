@@ -89,6 +89,14 @@ group:
     trim: 14F-94F
 
 group:
+  more: +md:[BLAME](https://www.lifeprint.com/asl101/pages-signs/b/blame.htm)
+    (directional sign)
+  https://www.youtube.com/watch?v=evlOvHVPgMc
+    BLAME / accuse / charge with / indict
+  https://www.youtube.com/watch?v=0RPmhAGfwjs
+    BLAME-me / accuse me / it’s my fault
+
+group:
   more: +md:[BLOOD](https://www.lifeprint.com/asl101/pages-signs/b/blood.htm)
   https://www.youtube.com/watch?v=xiqROSdoIhM BLOOD / RED + TRICKLE-DOWN
     trim: 4F-
@@ -382,6 +390,10 @@ group:
     trim: 16F-74F
 
 group:
+  more: +md:[DUTY](https://www.lifeprint.com/asl101/pages-signs/d/duty.htm)
+  https://www.youtube.com/watch?v=EZj07NEY8I4 DUTY
+
+group:
   more: +md:[EACH](https://www.lifeprint.com/asl101/pages-signs/e/each.htm)
   https://www.youtube.com/watch?v=EE8SbEdpQ3A
     EACH / every (single movement version)
@@ -486,6 +498,11 @@ group:
     trim: 2F-61F
     more: +md:This is a larger movement than
       [POLITE](https://www.lifeprint.com/asl101/pages-signs/p/polite.htm).
+
+group:
+  more: +md:[FAULT](https://www.lifeprint.com/asl101/pages-signs/f/fault.htm)
+  https://www.youtube.com/watch?v=5Kzi_CtM1nc FAULT
+    trim: 13F-70F
 
 group:
   more: +md:[FIX](https://www.lifeprint.com/asl101/pages-signs/f/fix.htm)
@@ -911,6 +928,11 @@ group:
   more: +md:[RESPECT](https://www.lifeprint.com/asl101/pages-signs/r/respect.htm)
   https://www.youtube.com/watch?v=Rrjgr_FBQeQ RESPECT
     trim: 14F-67F
+
+group:
+  more: +md:[RESPONSIBLE](https://www.lifeprint.com/asl101/pages-signs/r/responsible.htm)
+  https://www.youtube.com/watch?v=Qmzg74JQGYk RESPONSIBLE
+  # Can’t find older initialized version in video
 
 group:
   more: +md:[REST](https://www.lifeprint.com/asl101/pages-signs/r/rest.htm)
