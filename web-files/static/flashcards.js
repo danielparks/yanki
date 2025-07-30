@@ -145,10 +145,8 @@ window.addEventListener("load", (event) => {
       cards = [];
     }
 
-    cards.forEach((card) => {
-      cards_div.appendChild(card.div);
-    });
-    cards_div.appendChild(finished_div);
+    cards_div.append(...cards.map((card) => card.div), finished_div);
+    viewer.classList.remove("loading");
 
     if (cards.length == 0) {
       return;
@@ -281,7 +279,7 @@ window.addEventListener("load", (event) => {
   }
 
   function load_params(params) {
-    document.body.classList.add("loading");
+    viewer.classList.add("loading");
     set_filter_direction(params.direction);
     if (params.path) {
       fetch(params.path)
@@ -294,11 +292,9 @@ window.addEventListener("load", (event) => {
         .then((deck) => {
           current_deck = deck;
           title.innerText = deck.title.replaceAll("::", " ❯ ");
-          document.body.classList.remove("loading");
           restart();
         });
     } else {
-      document.body.classList.remove("loading");
       restart();
     }
   }
