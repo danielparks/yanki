@@ -17,6 +17,15 @@ group:
     trim: 17F-63F
 
 group:
+  more: +md:[AGREE](https://www.lifeprint.com/asl101/pages-signs/a/agree.htm)
+  https://www.youtube.com/watch?v=WhB0k01dsVk AGREE / THINK + SAME-also
+    trim: 12F-57F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=owBgxa2AWTQ AGREE / THINK + SAME-as-you
+    trim: 13F-74F
+
+group:
   more: +md:[ALLOW](https://www.lifeprint.com/asl101/pages-signs/a/allow.htm)
   https://www.youtube.com/watch?v=w705jpxY8m8 ALLOW / permit / let
 
@@ -134,6 +143,11 @@ group:
   https://www.youtube.com/watch?v=4Wvw0BFABwY
     INTERMISSION / in between / insert / in the middle of
     trim: 17F-80F
+
+group:
+  more: +md:[BREAKDOWN](https://lifeprint.com/asl101/pages-signs/b/breakdown.htm)
+  https://www.youtube.com/watch?v=B2IojDif5rg BREAKDOWN
+    trim: 4F-60F
 
 group:
   more: +md:[BUSINESS](https://www.lifeprint.com/asl101/pages-signs/b/business.htm)
@@ -460,6 +474,10 @@ group:
   more: +md:[EXAMPLE](https://www.lifeprint.com/asl101/pages-signs/e/example.htm)
   https://www.youtube.com/watch?v=WCHuS1irhxQ EXAMPLE
     trim: 26F-98F
+
+group:
+  more: +md:[EXCHANGE](https://www.lifeprint.com/asl101/pages-signs/e/exchange.htm)
+  https://www.youtube.com/watch?v=vHemAaxfLpM EXCHANGE / swap
 
 group:
   more: +md:[EXCITED](https://www.lifeprint.com/asl101/pages-signs/e/excited.htm)
@@ -1096,6 +1114,10 @@ group:
     trim: 14F-72F
 
 group:
+  more: +md:[STAR](https://www.lifeprint.com/asl101/pages-signs/s/star.htm)
+  https://www.youtube.com/watch?v=o_oZ2KuuH48 STAR
+
+group:
   more: +md:[START](https://www.lifeprint.com/asl101/pages-signs/s/start.htm)
   https://www.youtube.com/watch?v=wFuWmTNw4SE START / begin / initiate
     trim: 4F-48F
@@ -1180,6 +1202,11 @@ group:
   https://www.youtube.com/watch?v=IZCMA0AL9bk TOWEL
 
 group:
+  more: +md:[TRADE](https://www.lifeprint.com/asl101/pages-signs/t/trade.htm)
+  https://www.youtube.com/watch?v=A0_B8ZK-nC4 TRADE
+    trim: 26F-102F
+
+group:
   more: +md:[TROUBLE](https://www.lifeprint.com/asl101/pages-signs/t/trouble.htm)
   https://www.youtube.com/watch?v=gR3ynn_BaHo
     TROUBLE / tribulation / adversity / woe / travails
@@ -1213,6 +1240,11 @@ group:
   more: +md:[WEDDING](https://www.lifeprint.com/asl101/pages-signs/w/wedding.htm)
   https://www.youtube.com/watch?v=AmOkwl1sVDs WEDDING / to wed
     trim: 13F-77F
+
+group:
+  more: +md:[WEIGH](https://www.lifeprint.com/asl101/pages-signs/w/weigh.htm)
+  https://www.youtube.com/watch?v=Yth8Epy9TpU WEIGH / pound / ton
+    trim: 35F-102F
 
 group:
   more: +md:[WEIRD](https://www.lifeprint.com/asl101/pages-signs/w/weird.htm)
