@@ -1,11 +1,14 @@
-:root {
-  --directory-width: 350px;
-}
-
 body {
-  font-family: sans-serif;
-  padding-left: var(--directory-width);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  font-family: sans-serif;
 }
 
 button {
@@ -40,13 +43,9 @@ h1 > a {
 }
 
 #directory {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   overflow: auto;
   box-sizing: border-box;
-  width: var(--directory-width);
+  max-width: 350px;
   padding: 10px 20px 10px 0;
   border-right: 2px solid #ccc;
 }
@@ -86,14 +85,20 @@ h1 > a {
 }
 
 #viewer {
-  padding-bottom: 112px; /* #controls height + 10px */
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+}
+
+#viewer.no-cards {
+  min-width: auto;
 }
 
 #viewer.loading {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 #viewer.loading > * {
@@ -111,6 +116,11 @@ h1 > a {
 #viewer.no-cards #controls,
 #viewer.no-cards #direction-control {
   display: none;
+}
+
+#viewer > main {
+  flex: 1;
+  overflow: auto;
 }
 
 #direction-control {
@@ -144,10 +154,6 @@ h1 > a {
 }
 
 #controls {
-  position: fixed;
-  bottom: 0;
-  left: var(--directory-width);
-  right: 0;
   height: 100px;
   border-top: 2px solid #ccc;
   background: #f9f9f9;
@@ -292,11 +298,6 @@ button#next-button:hover {
 }
 
 @media (max-width: 600px) {
-  body {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
   #cards > div.question,
   #cards > div.answer,
   #cards > div#finished {

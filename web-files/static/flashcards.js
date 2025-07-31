@@ -359,10 +359,10 @@ window.addEventListener("load", (event) => {
   var directory = get_id("directory");
   directory.appendChild(create("ol", [tree_to_li(decks_tree)]));
   var viewer = get_id("viewer");
-  viewer.appendChild(title);
-  viewer.appendChild(direction_control);
-  viewer.appendChild(cards_div);
-  viewer.appendChild(controls);
+  viewer.append(
+    create("main", [title, direction_control, cards_div]),
+    controls,
+  );
 
   function tree_to_li(node) {
     var name_label = text(node.segment);
