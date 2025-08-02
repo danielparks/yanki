@@ -142,15 +142,15 @@ window.addEventListener("load", (event) => {
     finished_div.style.display = "none";
 
     if (current_deck && current_deck.notes.length > 0) {
-      viewer.classList.remove("no-cards");
+      document.body.classList.remove("no-cards");
       cards = make_card_list(current_deck.notes, filter_direction);
     } else {
-      viewer.classList.add("no-cards");
+      document.body.classList.add("no-cards");
       cards = [];
     }
 
     cards_div.append(...cards.map((card) => card.div), finished_div);
-    viewer.classList.remove("loading");
+    document.body.classList.remove("loading");
 
     if (cards.length == 0) {
       return;
@@ -286,14 +286,16 @@ window.addEventListener("load", (event) => {
     directory.querySelectorAll("a").forEach((a) => {
       a.classList.remove("current");
     });
-    directory
+    var current = directory
       .querySelectorAll(`a[href="${get_deck_href(params.path)}"]`)
       .forEach((a) => {
         a.classList.add("current");
       });
-    viewer.classList.add("loading");
+
     set_filter_direction(params.direction);
     if (params.path) {
+      document.body.classList.add("loading");
+      document.body.classList.remove("no-deck");
       fetch(params.path)
         .then((response) => {
           if (!response.ok) {
@@ -307,6 +309,7 @@ window.addEventListener("load", (event) => {
           restart();
         });
     } else {
+      document.body.classList.add("no-deck");
       restart();
     }
   }
@@ -357,7 +360,13 @@ window.addEventListener("load", (event) => {
   var cards_div = create("div", [finished_div], { id: "cards" });
 
   var directory = get_id("directory");
-  directory.appendChild(create("ol", [tree_to_li(decks_tree)]));
+  directory.querySelector("a").addEventListener("click", (_) => {
+    load_params(parse_hash("#"));
+  });
+  directory.appendChild(
+    create("main", [create("ol", [tree_to_li(decks_tree)])]),
+  );
+
   var viewer = get_id("viewer");
   viewer.append(
     create("main", [title, direction_control, cards_div]),

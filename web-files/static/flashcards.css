@@ -1,3 +1,7 @@
+:root {
+  --directory-width: 350px;
+}
+
 body {
   position: fixed;
   top: 0;
@@ -43,11 +47,31 @@ h1 > a {
 }
 
 #directory {
-  overflow: auto;
+  max-width: var(--directory-width);
+  background: #fff;
+}
+
+#directory > a {
+  display: none;
+}
+
+#directory > main {
   box-sizing: border-box;
-  max-width: 350px;
+  width: 100%;
+  height: 100%;
   padding: 10px 20px 10px 0;
   border-right: 2px solid #ccc;
+  overflow: auto;
+}
+
+.no-deck #directory {
+  width: 100%;
+  max-width: 100%;
+  border-right: none;
+}
+
+.no-deck #directory > a {
+  display: none;
 }
 
 #directory ol {
@@ -56,11 +80,11 @@ h1 > a {
   list-style: none;
 }
 
-#directory > ol ol {
+#directory > main > ol ol {
   padding-left: 20px;
 }
 
-#directory ol > li {
+#directory > main ol > li {
   margin: 0;
   padding: 0;
 }
@@ -90,18 +114,19 @@ h1 > a {
   display: flex;
   flex-direction: column;
   min-width: 600px;
+  z-index: 1;
 }
 
-#viewer.no-cards {
-  min-width: auto;
+.no-deck #viewer {
+  display: none;
 }
 
-#viewer.loading {
+.loading #viewer {
   justify-content: center;
   text-align: center;
 }
 
-#viewer.loading > * {
+.loading #viewer > * {
   display: none;
 }
 
@@ -109,12 +134,12 @@ h1 > a {
   display: none;
 }
 
-#viewer.loading > #loading {
+.loading #viewer > #loading {
   display: block;
 }
 
-#viewer.no-cards #controls,
-#viewer.no-cards #direction-control {
+.no-cards #viewer #controls,
+.no-cards #viewer #direction-control {
   display: none;
 }
 
@@ -295,6 +320,45 @@ button#next-button:hover {
   padding-bottom: calc(25px - 1em);
   transition: height 0.1s;
   transition: padding 0.1s;
+}
+
+@media (max-width: 850px) {
+  #directory {
+    position: absolute;
+    top: 0;
+    left: calc(0px - var(--directory-width));
+    bottom: 0;
+    width: var(--directory-width);
+    z-index: 2;
+    transition: left 0.1s;
+  }
+
+  #directory:hover {
+    left: 0;
+    transition: left 0.1s;
+  }
+
+  .no-deck #directory {
+    position: static;
+    left: 0;
+  }
+
+  /* thumb */
+  #directory > a {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: var(--directory-width);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    background: #ccc;
+    color: #fff;
+    border-radius: 0 25% 25% 0;
+  }
 }
 
 @media (max-width: 600px) {
