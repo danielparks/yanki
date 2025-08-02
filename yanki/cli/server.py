@@ -1,5 +1,6 @@
 import functools
 import http.server
+import socketserver
 import threading
 import time
 from dataclasses import dataclass
@@ -8,6 +9,19 @@ import click
 
 from yanki.errors import ExpectedError
 from yanki.utils import open_in_app
+
+
+class _HTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
+    """Threaded HTTPServer."""
+
+    def __init__(self, address, *, directory="."):
+        http.server.HTTPServer.__init__(
+            self,
+            address,
+            functools.partial(
+                http.server.SimpleHTTPRequestHandler, directory=directory
+            ),
+        )
 
 
 @dataclass(frozen=True)
@@ -64,12 +78,7 @@ class Server:
 
         print(f"Starting HTTP server on http://{self.bind}/")
         try:
-            httpd = http.server.HTTPServer(
-                self.bind_tuple,
-                functools.partial(
-                    http.server.SimpleHTTPRequestHandler, directory=directory
-                ),
-            )
+            server = _HTTPServer(self.bind_tuple, directory=directory)
         except OSError as error:
             raise ExpectedError(f"Error starting server: {error}") from error
 
@@ -77,7 +86,7 @@ class Server:
             threading.Thread(target=open_browser).start()
 
         try:
-            httpd.serve_forever()
+            server.serve_forever()
         except OSError as error:
             raise ExpectedError(f"Error running server: {error}") from error
 
