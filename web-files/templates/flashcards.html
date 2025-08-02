@@ -12,10 +12,32 @@
   </head>
   <body class="no-deck">
     <div id="directory">
-      <a href="#">❯</a>
+      <a id="thumb" href="#">❯</a>
+      <main>
+        <ol></ol>
+      </main>
     </div>
     <div id="viewer">
       <h1 id="loading">Loading…</h1>
+      <main>
+        <h1 id="title"></h1>
+        <div id="direction-control">
+          Questions:
+          <div class="control">
+            <button id="direction-both" class="active">Both</button>
+            <button id="direction-text-first">Text</button>
+            <button id="direction-media-first">Media</button>
+          </div>
+        </div>
+        <div id="cards">
+          <div id="finished">Finished all cards!</div>
+        </div>
+      </main>
+      <div id="controls">
+        <button id="back-button">Previous</button>
+        <button id="next-button">Show answer</button>
+        <div id="status"></div>
+      </div>
     </div>
   </body>
 </html>

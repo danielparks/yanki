@@ -314,72 +314,6 @@ window.addEventListener("load", (event) => {
     }
   }
 
-  var direction_buttons = {
-    both: create("button", [text("Both")], {
-      id: "direction-both",
-      className: "active",
-      onclick: () => filter_direction_click("both"),
-    }),
-    "text-first": create("button", [text("Text")], {
-      id: "direction-text-first",
-      onclick: () => filter_direction_click("text-first"),
-    }),
-    "media-first": create("button", [text("Media")], {
-      id: "direction-media-first",
-      onclick: () => filter_direction_click("media-first"),
-    }),
-  };
-
-  var title = create("h1");
-  var direction_control = create(
-    "div",
-    [
-      text("Questions: "),
-      create(
-        "div",
-        [
-          direction_buttons["both"],
-          direction_buttons["text-first"],
-          direction_buttons["media-first"],
-        ],
-        { className: "control" },
-      ),
-    ],
-    { id: "direction-control" },
-  );
-
-  var back_button = create("button", [text("Previous")], {
-    id: "back-button",
-    onclick: back_button_click,
-  });
-  var next_button = create("button", [text("Show answer")], {
-    id: "next-button",
-    onclick: next_button_click,
-  });
-
-  var status_div = create("div", [], { id: "status" });
-  var controls = create("div", [back_button, next_button, status_div], {
-    id: "controls",
-  });
-  var finished_div = create("div", [text("Finished all cards!")], {
-    id: "finished",
-  });
-  var cards_div = create("div", [finished_div], { id: "cards" });
-
-  var directory = get_id("directory");
-  directory.querySelector("a").addEventListener("click", (_) => {
-    load_params(parse_hash("#"));
-  });
-  directory.appendChild(
-    create("main", [create("ol", [tree_to_li(decks_tree)])]),
-  );
-
-  var viewer = get_id("viewer");
-  viewer.append(
-    create("main", [title, direction_control, cards_div]),
-    controls,
-  );
-
   function tree_to_li(node) {
     var name_label = text(node.segment);
     if (node.path) {
@@ -395,6 +329,34 @@ window.addEventListener("load", (event) => {
       create("ol", node.children.map(tree_to_li)),
     ]);
   }
+
+  get_id("thumb").addEventListener("click", (_) => {
+    load_params(parse_hash("#"));
+  });
+
+  var directory = document.querySelector("#directory > main > ol");
+  directory.append(tree_to_li(decks_tree));
+
+  var title = get_id("title");
+
+  var direction_buttons = {};
+  document
+    .querySelectorAll("#direction-control > .control > button")
+    .forEach((button) => {
+      var direction = button.id.replace("direction-", "");
+      button.addEventListener("click", () => filter_direction_click(direction));
+      direction_buttons[direction] = button;
+    });
+
+  var finished_div = get_id("finished");
+  var cards_div = get_id("cards");
+
+  var back_button = get_id("back-button");
+  back_button.addEventListener("click", back_button_click);
+  var next_button = get_id("next-button");
+  next_button.addEventListener("click", next_button_click);
+
+  var status_div = get_id("status");
 
   // Check which direction we should show the cards in.
   if (window.location.hash) {
