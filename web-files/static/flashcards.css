@@ -36,16 +36,6 @@ button:disabled:hover {
   cursor: default;
 }
 
-h1 {
-  font-size: 24px;
-  text-align: center;
-  color: #999;
-}
-
-h1 > a {
-  color: #a9c;
-}
-
 #directory {
   max-width: var(--directory-width);
   background: #fff;
@@ -148,7 +138,19 @@ h1 > a {
   overflow: auto;
 }
 
+#viewer > main > h1 {
+  float: left;
+  margin: 10px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #999;
+}
+
 #direction-control {
+  float: right;
+}
+
+#direction-control > .control {
   display: inline-block;
   margin: 10px;
   padding: 7px 8px 7px 0;
@@ -157,7 +159,7 @@ h1 > a {
   box-shadow: inset 2px 2px 5px #aaa;
 }
 
-#direction-control > button {
+#direction-control > .control > button {
   display: inline-block;
   padding: 6px 12px;
   font-size: 14px;
@@ -167,12 +169,12 @@ h1 > a {
   box-shadow: 2px 2px 5px #aaa;
 }
 
-#direction-control > button:hover {
+#direction-control > .control > button:hover {
   background: #cbd;
 }
 
-#direction-control > button.active,
-#direction-control > button.active:hover {
+#direction-control > .control > button.active,
+#direction-control > .control > button.active:hover {
   background: #a9c;
   color: #fff;
   box-shadow: inset 1px 1px 2px #999;
@@ -197,6 +199,10 @@ button#next-button {
 
 button#next-button:hover {
   background: #99c;
+}
+
+#cards {
+  clear: both;
 }
 
 #cards > div {
@@ -358,6 +364,10 @@ button#next-button:hover {
     background: #ccc;
     color: #fff;
     border-radius: 0 25% 25% 0;
+  }
+
+  #viewer > main > h1 {
+    margin-left: 60px;
   }
 }
 

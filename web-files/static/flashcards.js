@@ -305,7 +305,7 @@ window.addEventListener("load", (event) => {
         })
         .then((deck) => {
           current_deck = deck;
-          title.innerText = deck.title.replaceAll("::", " ❯ ");
+          title.innerText = deck.title.replace(/.*::/, "");
           restart();
         });
     } else {
@@ -334,9 +334,16 @@ window.addEventListener("load", (event) => {
   var direction_control = create(
     "div",
     [
-      direction_buttons["both"],
-      direction_buttons["text-first"],
-      direction_buttons["media-first"],
+      text("Questions: "),
+      create(
+        "div",
+        [
+          direction_buttons["both"],
+          direction_buttons["text-first"],
+          direction_buttons["media-first"],
+        ],
+        { className: "control" },
+      ),
     ],
     { id: "direction-control" },
   );
