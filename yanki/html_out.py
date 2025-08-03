@@ -2,7 +2,7 @@ from collections import OrderedDict
 from html import escape as h
 from pathlib import Path
 
-from yanki.utils import hardlink_into, url_friendly_name
+from yanki.utils import hardlink_into, symlink_into, url_friendly_name
 
 
 class DeckTree:
@@ -27,7 +27,7 @@ class DeckTree:
             return self[path[0]].dig(path[1:])
         return self
 
-    def write_indices(self, *, title_path=None, flashcards=False):
+    def write_indices(self, *, title_path=None):
         if title_path is None:
             title_path = []
         if (
@@ -39,9 +39,7 @@ class DeckTree:
             if len(self.children) == 1:
                 # If there is exactly one child of the anonymous root, then skip
                 # the anonymous root.
-                return next(iter(self.children.values())).write_indices(
-                    flashcards=flashcards,
-                )
+                return next(iter(self.children.values())).write_indices()
             # Anonymous root has either zero, or more than one child deck.
             self.name = "Decks"
 
@@ -55,7 +53,6 @@ class DeckTree:
                     self.media_dir,
                     self.deck,
                     [*title_path, (self.name, self.deck_file_name)],
-                    flashcards=flashcards,
                 )
                 return (
                     f'<li><a href="{h(self.deck_file_name)}">{h(self.name)}'
@@ -78,10 +75,7 @@ class DeckTree:
         title_path = [*title_path, (self.name, self.index_file_name)]
 
         list_html = [
-            child.write_indices(
-                title_path=title_path,
-                flashcards=flashcards,
-            )
+            child.write_indices(title_path=title_path)
             for child in self.children.values()
         ]
         list_html = "<ol>\n      " + "\n      ".join(list_html) + "\n    </ol>"
@@ -92,7 +86,6 @@ class DeckTree:
                 self.media_dir,
                 self.deck,
                 [*title_path, ("Deck", self.deck_file_name)],
-                flashcards=flashcards,
             )
             deck_link = f'<a href="{h(self.deck_file_name)}">Deck</a>'
             title_html += f" ({deck_link})"
@@ -109,13 +102,10 @@ class DeckTree:
         </li>"""
 
 
-def write_html(root, decks, *, flashcards=False):
+def write_html(root, decks):
     """Write HTML version of decks to a path."""
-    static_dir = root / "static"
-    static_dir.mkdir(parents=True, exist_ok=True)
-
-    for file in path_to_web_files().glob("*"):
-        hardlink_into(file, static_dir)
+    root.mkdir(parents=True, exist_ok=True)
+    symlink_into(path_to_web_files() / "static", root)
 
     media_dir = root / "media"
     media_dir.mkdir(exist_ok=True)
@@ -128,12 +118,11 @@ def write_html(root, decks, *, flashcards=False):
             media_dir,
             deck,
             [(name, None) for name in deck.title.split("::")],
-            flashcards=flashcards,
         )
         return
 
     deck_tree = create_deck_tree(decks, root_dir=root, media_dir=media_dir)
-    deck_tree.write_indices(flashcards=flashcards)
+    deck_tree.write_indices()
 
 
 def create_deck_tree(decks, root_dir: Path, media_dir: Path) -> DeckTree:
@@ -176,31 +165,20 @@ def generate_index_html(deck_link_html, child_html, title_path):
         """.replace("\n        ", "\n").lstrip()
 
 
-def write_deck_files(
-    html_path, media_dir, deck, title_path, *, flashcards=False
-):
+def write_deck_files(html_path, media_dir, deck, title_path):
     html_path.write_text(
-        htmlize_deck(
-            deck, title_path, path_prefix="media", flashcards=flashcards
-        ),
+        htmlize_deck(deck, title_path, path_prefix="media"),
         encoding="utf_8",
     )
 
     # Link media into output media directory.
     for path in deck.media_paths():
-        # chmod to ensure media is accessible by the web server.
+        # chmod to ensure media is accessible by the web server. This will
+        # change the permissions of the original file too.
         hardlink_into(Path(path), media_dir).chmod(0o644)
 
 
-def htmlize_deck(deck, title_path, *, path_prefix="", flashcards=False):
-    if flashcards:
-        flashcards_html = f"""
-        <link rel="stylesheet" href="{static_url("flashcards.css")}">
-        <script src="{static_url("flashcards.js")}" async></script>
-        """
-    else:
-        flashcards_html = ""
-
+def htmlize_deck(deck, title_path, *, path_prefix=""):
     output = f"""
     <!DOCTYPE html>
     <html>
@@ -209,7 +187,6 @@ def htmlize_deck(deck, title_path, *, path_prefix="", flashcards=False):
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{static_url("general.css")}">
-        {flashcards_html}
       </head>
       <body>
         <h1>{title_html(title_path, final_link=False)}</h1>"""
@@ -288,5 +265,5 @@ def path_to_web_files() -> Path:
 
 
 def static_url(path) -> str:
-    mtime = (path_to_web_files() / path).stat().st_mtime
+    mtime = (path_to_web_files() / "static" / path).stat().st_mtime
     return f"static/{path}?{mtime}"

@@ -1,0 +1,401 @@
+:root {
+  --directory-width: 350px;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  font-family: sans-serif;
+}
+
+button {
+  margin: 10px 8px;
+  padding: 10px 18px;
+  font-size: 18px;
+  background: #cce;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px #aaa;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bbd;
+}
+
+button:disabled,
+button:disabled:hover {
+  background: #ccc;
+  cursor: default;
+}
+
+#directory {
+  max-width: var(--directory-width);
+  background: #fff;
+}
+
+#directory > a {
+  display: none;
+}
+
+#directory > main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px 10px 0;
+  border-right: 2px solid #ccc;
+  overflow: auto;
+}
+
+.no-deck #directory {
+  width: 100%;
+  max-width: 100%;
+  border-right: none;
+}
+
+.no-deck #directory > a {
+  display: none;
+}
+
+#directory ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#directory > main > ol ol {
+  padding-left: 20px;
+}
+
+#directory > main ol > li {
+  margin: 0;
+  padding: 0;
+}
+
+#directory ol > li > a,
+#directory ol > li > span {
+  display: block;
+  padding: 5px 20px;
+}
+
+#directory ol > li > a {
+  text-decoration: none;
+}
+
+#directory ol > li > a:hover {
+  background: #dce;
+}
+
+#directory ol > li > a.current {
+  background: #a9c;
+  color: #fff;
+}
+
+#viewer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 1vw;
+  z-index: 1;
+}
+
+.no-deck #viewer {
+  display: none;
+}
+
+.loading #viewer {
+  justify-content: center;
+  text-align: center;
+}
+
+.loading #viewer > * {
+  display: none;
+}
+
+#viewer #loading {
+  display: none;
+}
+
+.loading #viewer > #loading {
+  display: block;
+  background: text linear-gradient(45deg, #ccc 0%, #999 50%, #ccc 100%) 0% 0% /
+    200% 100%;
+  animation: background-wipe 2s linear infinite;
+  color: transparent;
+}
+
+@keyframes background-wipe {
+  to {
+    background-position: 200% 0%;
+  }
+}
+
+.no-cards #viewer #controls,
+.no-cards #viewer > main {
+  display: none;
+}
+
+#viewer > main {
+  flex: 1;
+  overflow: auto;
+}
+
+#viewer > main > header {
+  display: flex;
+  padding: 0 10px;
+}
+
+#viewer > main > header > h1 {
+  flex: 1;
+  margin: 10px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #000;
+  min-width: 100px;
+  overflow: hidden;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#directory-link {
+  display: none;
+  padding-right: 10px;
+  color: #a9c;
+  text-decoration: none;
+}
+
+#viewer > main > header > label {
+  font-size: 20px;
+  line-height: 50px;
+  padding: 12px 5px 0 0;
+  color: #666;
+  min-width: 0;
+}
+
+#direction-control > .control {
+  display: inline-block;
+  margin: 14px 10px 10px 10px;
+  padding: 7px 8px 7px 0;
+  background: #eee;
+  border-radius: 6px;
+  box-shadow: inset 2px 2px 5px #aaa;
+}
+
+#direction-control > .control > button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #dce;
+  border: none;
+  margin: 0 0 0 8px;
+  box-shadow: 2px 2px 5px #aaa;
+}
+
+#direction-control > .control > button:hover {
+  background: #cbd;
+}
+
+#direction-control > .control > button.active,
+#direction-control > .control > button.active:hover {
+  background: #a9c;
+  color: #fff;
+  box-shadow: inset 1px 1px 2px #999;
+}
+
+#controls {
+  height: 100px;
+  border-top: 2px solid #ccc;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#controls button {
+  display: inline-block;
+}
+
+button#next-button {
+  width: 150px;
+  background: #66a;
+  color: #fff;
+}
+
+button#next-button:hover {
+  background: #99c;
+}
+
+#cards {
+  clear: both;
+}
+
+#cards > div {
+  display: none;
+}
+
+#cards > div.question,
+#cards > div.answer,
+#cards > div#finished {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  min-height: 400px;
+  width: 600px;
+  min-width: 1vw;
+  text-align: center;
+
+  /* Flash card to make it clear that it’s new. */
+  opacity: 1;
+  transition: opacity 0.3s;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+#cards > div#finished {
+  display: none;
+  line-height: 400px;
+  font-size: 24px;
+}
+
+#cards > div video,
+#cards > div img {
+  display: block;
+  max-height: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#cards > div > .more {
+  padding: 0 25px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-top: none;
+  overflow: hidden; /* Contain margins */
+  min-height: 1em; /* If empty, we need to maintain margin for answer */
+}
+
+#cards > div.question > .more {
+  display: none;
+}
+
+.sides {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  background: #eee;
+}
+
+#cards > div.media-first > .sides {
+  flex-direction: column-reverse;
+}
+
+#cards > div.answer > .sides {
+  border-bottom: none;
+}
+
+.sides > h3 {
+  margin: 0;
+}
+
+.sides > .media {
+  /* Don’t display scroll bars on page if this hangs off the end when hidden: */
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+#cards > div.text-first > .sides > h3,
+#cards > div.media-first > .sides > .media {
+  background: #fff;
+}
+
+/* Make question area bigger for text questions */
+#cards > div.text-first.question > .sides > h3 {
+  padding: 200px 25px;
+}
+
+#cards > div.text-first.question > .sides > .media {
+  height: 0;
+  padding: 0;
+  visibility: hidden;
+  transition: height 0.1s;
+  transition: padding 0.1s;
+}
+
+#cards > div.text-first.answer > .sides > h3 {
+  padding: 25px;
+  transition: padding 0.1s;
+}
+
+#cards > div.text-first.answer > .sides > .media {
+  padding-bottom: 0;
+  transition: padding 0.1s;
+}
+
+#cards > div.media-first.question > .sides > h3 {
+  padding: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+#cards > div.media-first.answer > .sides > h3 {
+  padding: 25px;
+  padding-bottom: calc(25px - 1em);
+  transition: height 0.1s;
+  transition: padding 0.1s;
+}
+
+@media (max-width: 850px) {
+  #directory {
+    display: none;
+  }
+
+  #directory-link {
+    display: inline-block;
+  }
+
+  .no-deck #directory {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #viewer > main > header {
+    padding: 0;
+  }
+
+  #viewer > main > header > label {
+    display: none;
+  }
+
+  #cards > div.question,
+  #cards > div.answer,
+  #cards > div#finished {
+    width: 100%;
+  }
+
+  .sides,
+  #cards > div > .more {
+    border: none;
+  }
+
+  #cards > div.text-first.question > .sides > .media,
+  #cards > div.text-first.answer > .sides > .media,
+  #cards > div.media-first.question > .sides > .media,
+  #cards > div.media-first.answer > .sides > .media {
+    padding: 0;
+  }
+  #cards > div.text-first.answer > .sides > .media {
+    padding-top: 25px;
+  }
+}

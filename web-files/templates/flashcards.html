@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flashcards</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/flashcards.css" />
+    <script>
+      const decks_tree = { DECKS };
+    </script>
+    <script src="static/flashcards.js" async></script>
+  </head>
+  <body class="no-deck">
+    <div id="directory">
+      <main>
+        <ol></ol>
+      </main>
+    </div>
+    <div id="viewer">
+      <h1 id="loading">Loading…</h1>
+      <main>
+        <header>
+          <h1>
+            <a id="directory-link" href="#">❮❮</a> <span id="title"></span>
+          </h1>
+          <label>Questions:</label>
+          <div id="direction-control">
+            <div class="control">
+              <button id="direction-both" class="active">Both</button>
+              <button id="direction-text-first">Text</button>
+              <button id="direction-media-first">Media</button>
+            </div>
+          </div>
+        </header>
+        <div id="cards">
+          <div id="finished">Finished all cards!</div>
+        </div>
+      </main>
+      <div id="controls">
+        <button id="back-button">Previous</button>
+        <button id="next-button">Show answer</button>
+        <div id="status"></div>
+      </div>
+    </div>
+  </body>
+</html>
