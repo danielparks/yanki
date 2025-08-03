@@ -126,6 +126,16 @@ button:disabled:hover {
 
 .loading #viewer > #loading {
   display: block;
+  background: text linear-gradient(45deg, #ccc 0%, #999 50%, #ccc 100%) 0% 0% /
+    200% 100%;
+  animation: background-wipe 2s linear infinite;
+  color: transparent;
+}
+
+@keyframes background-wipe {
+  to {
+    background-position: 200% 0%;
+  }
 }
 
 .no-cards #viewer #controls,
