@@ -162,6 +162,7 @@ button:disabled:hover {
   min-width: 100px;
   overflow: hidden;
   text-wrap: nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
