@@ -102,6 +102,45 @@ def test_yanki_serve_http(yanki, deck_1_path):
     assert "GET / HTTP" in result.stderr
 
 
+# This doesn’t work without subprocess.
+@pytest.mark.script_launch_mode("subprocess")
+def test_yanki_serve_flashcards(yanki, deck_1_path):
+    # Need to add result to an object to get it out of thread:
+    results = []
+
+    def run_yanki_serve_flashcards():
+        results.append(yanki.run("serve-flashcards", deck_1_path))
+
+    httpd = threading.Thread(target=run_yanki_serve_flashcards)
+    httpd.start()
+
+    start = time.monotonic()
+    html = None
+    while time.monotonic() - start < 5:  # 5 second timeout
+        time.sleep(0.1)
+        try:
+            html = urlopen("http://localhost:8000/").read()
+            break
+        except urllib.error.URLError as error:
+            if not isinstance(error.reason, ConnectionRefusedError):
+                # Not connection refused.
+                raise
+
+    for child in psutil.Process().children(recursive=False):
+        # KLUDGE: Assume that yanki is the only subprocess.
+        os.kill(child.pid, signal.SIGTERM)
+
+    httpd.join()
+
+    assert html.startswith(b"<!doctype html>\n")
+
+    assert len(results) == 1
+    result = results[0]
+    assert result.returncode == -signal.SIGTERM
+    # FIXME We don’t always get the “Starting HTTP server” on stdout
+    assert "GET / HTTP" in result.stderr
+
+
 def test_yanki_to_html(yanki, deck_1_path, output_path):
     result = yanki.run("to-html", output_path, deck_1_path)
     assert result.returncode == 0

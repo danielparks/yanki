@@ -12,11 +12,7 @@ def deck_paths_to_html(output_path: Path, deck_paths: list[Path]):
     options = VideoOptions()
     files = [path.open("r") for path in deck_paths]
 
-    write_html(
-        output_path,
-        DeckSource(files=files).read_final_sorted(options),
-        flashcards=False,
-    )
+    write_html(output_path, DeckSource(files=files).read_final_sorted(options))
 
 
 def read_html(path):
