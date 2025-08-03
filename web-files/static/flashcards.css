@@ -257,6 +257,7 @@ button#next-button:hover {
 #cards > div video,
 #cards > div img {
   display: block;
+  max-height: 300px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -296,6 +297,7 @@ button#next-button:hover {
 .sides > .media {
   /* Don’t display scroll bars on page if this hangs off the end when hidden: */
   overflow: hidden;
+  padding: 20px 0;
 }
 
 #cards > div.text-first > .sides > h3,
@@ -312,6 +314,8 @@ button#next-button:hover {
   height: 0;
   padding: 0;
   visibility: hidden;
+  transition: height 0.1s;
+  transition: padding 0.1s;
 }
 
 #cards > div.text-first.answer > .sides > h3 {
@@ -320,26 +324,14 @@ button#next-button:hover {
 }
 
 #cards > div.text-first.answer > .sides > .media {
-  padding: 25px 0;
-  padding-bottom: calc(25px - 1em);
-  transition: height 0.1s;
+  padding-bottom: 0;
   transition: padding 0.1s;
-}
-
-/* Make question area bigger for media questions */
-#cards > div.media-first.question > .sides > .media {
-  padding: 50px 0;
 }
 
 #cards > div.media-first.question > .sides > h3 {
   padding: 0;
   height: 0;
   visibility: hidden;
-}
-
-#cards > div.media-first.answer > .sides > .media {
-  padding: 25px 0;
-  transition: padding 0.1s;
 }
 
 #cards > div.media-first.answer > .sides > h3 {
@@ -391,5 +383,8 @@ button#next-button:hover {
   #cards > div.media-first.question > .sides > .media,
   #cards > div.media-first.answer > .sides > .media {
     padding: 0;
+  }
+  #cards > div.text-first.answer > .sides > .media {
+    padding-top: 25px;
   }
 }
