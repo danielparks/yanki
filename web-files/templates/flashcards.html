@@ -12,7 +12,6 @@
   </head>
   <body class="no-deck">
     <div id="directory">
-      <a id="thumb" href="#">❯</a>
       <main>
         <ol></ol>
       </main>
@@ -20,15 +19,19 @@
     <div id="viewer">
       <h1 id="loading">Loading…</h1>
       <main>
-        <h1 id="title"></h1>
-        <div id="direction-control">
-          Questions:
-          <div class="control">
-            <button id="direction-both" class="active">Both</button>
-            <button id="direction-text-first">Text</button>
-            <button id="direction-media-first">Media</button>
+        <header>
+          <h1>
+            <a id="directory-link" href="#">❮❮</a> <span id="title"></span>
+          </h1>
+          <label>Questions:</label>
+          <div id="direction-control">
+            <div class="control">
+              <button id="direction-both" class="active">Both</button>
+              <button id="direction-text-first">Text</button>
+              <button id="direction-media-first">Media</button>
+            </div>
           </div>
-        </div>
+        </header>
         <div id="cards">
           <div id="finished">Finished all cards!</div>
         </div>

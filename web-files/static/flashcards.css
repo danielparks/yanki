@@ -103,7 +103,7 @@ button:disabled:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 600px;
+  min-width: 1vw;
   z-index: 1;
 }
 
@@ -129,7 +129,7 @@ button:disabled:hover {
 }
 
 .no-cards #viewer #controls,
-.no-cards #viewer #direction-control {
+.no-cards #viewer > main {
   display: none;
 }
 
@@ -138,21 +138,41 @@ button:disabled:hover {
   overflow: auto;
 }
 
-#viewer > main > h1 {
-  float: left;
+#viewer > main > header {
+  display: flex;
+  padding: 0 10px;
+}
+
+#viewer > main > header > h1 {
+  flex: 1;
   margin: 10px;
   line-height: 50px;
   font-size: 24px;
-  color: #999;
+  color: #000;
+  min-width: 100px;
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
 }
 
-#direction-control {
-  float: right;
+#directory-link {
+  display: none;
+  padding-right: 10px;
+  color: #a9c;
+  text-decoration: none;
+}
+
+#viewer > main > header > label {
+  font-size: 20px;
+  line-height: 50px;
+  padding: 12px 5px 0 0;
+  color: #666;
+  min-width: 0;
 }
 
 #direction-control > .control {
   display: inline-block;
-  margin: 10px;
+  margin: 14px 10px 10px 10px;
   padding: 7px 8px 7px 0;
   background: #eee;
   border-radius: 6px;
@@ -217,6 +237,7 @@ button#next-button:hover {
   margin: 0 auto;
   min-height: 400px;
   width: 600px;
+  min-width: 1vw;
   text-align: center;
 
   /* Flash card to make it clear that it’s new. */
@@ -330,48 +351,30 @@ button#next-button:hover {
 
 @media (max-width: 850px) {
   #directory {
-    position: absolute;
-    top: 0;
-    left: calc(0px - var(--directory-width));
-    bottom: 0;
-    width: var(--directory-width);
-    z-index: 2;
-    transition: left 0.1s;
+    display: none;
   }
 
-  #directory:hover {
-    left: 0;
-    transition: left 0.1s;
+  #directory-link {
+    display: inline-block;
   }
 
   .no-deck #directory {
-    position: static;
-    left: 0;
-  }
-
-  /* thumb */
-  #directory > a {
     display: block;
-    position: absolute;
-    top: 5px;
-    left: var(--directory-width);
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    font-size: 50px;
-    text-align: center;
-    text-decoration: none;
-    background: #ccc;
-    color: #fff;
-    border-radius: 0 25% 25% 0;
-  }
-
-  #viewer > main > h1 {
-    margin-left: 60px;
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
   }
 }
 
 @media (max-width: 600px) {
+  #viewer > main > header {
+    padding: 0;
+  }
+
+  #viewer > main > header > label {
+    display: none;
+  }
+
   #cards > div.question,
   #cards > div.answer,
   #cards > div#finished {

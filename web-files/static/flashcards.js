@@ -136,7 +136,7 @@ window.addEventListener("load", (event) => {
     current_index = 0;
   var current_deck, current_card, showing_question, cards;
 
-  function restart() {
+  function reset() {
     cards_div.innerHTML = "";
     current_index = 0;
     finished_div.style.display = "none";
@@ -177,7 +177,7 @@ window.addEventListener("load", (event) => {
 
   function filter_direction_click(direction) {
     set_filter_direction(direction);
-    restart();
+    reset();
   }
 
   function update_status() {
@@ -242,7 +242,7 @@ window.addEventListener("load", (event) => {
   function next_button_click() {
     if (current_index >= cards.length) {
       // We ran out of cards!
-      restart();
+      reset();
     } else if (showing_question) {
       show_answer();
     } else {
@@ -283,6 +283,7 @@ window.addEventListener("load", (event) => {
   }
 
   function load_params(params) {
+    /* Mark correct directory entry as current */
     directory.querySelectorAll("a").forEach((a) => {
       a.classList.remove("current");
     });
@@ -296,21 +297,24 @@ window.addEventListener("load", (event) => {
     if (params.path) {
       document.body.classList.add("loading");
       document.body.classList.remove("no-deck");
-      fetch(params.path)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error, status = ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((deck) => {
+      response = fetch(params.path).then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error, status = ${response.status}`);
+        }
+        return response.json();
+      });
+
+      window.setTimeout(() => {
+        response.then((deck) => {
           current_deck = deck;
           title.innerText = deck.title.replace(/.*::/, "");
-          restart();
+          reset();
         });
+      });
     } else {
       document.body.classList.add("no-deck");
-      restart();
+      current_deck = null;
+      reset();
     }
   }
 
@@ -330,7 +334,7 @@ window.addEventListener("load", (event) => {
     ]);
   }
 
-  get_id("thumb").addEventListener("click", (_) => {
+  get_id("directory-link").addEventListener("click", (_) => {
     load_params(parse_hash("#"));
   });
 
@@ -340,13 +344,11 @@ window.addEventListener("load", (event) => {
   var title = get_id("title");
 
   var direction_buttons = {};
-  document
-    .querySelectorAll("#direction-control > .control > button")
-    .forEach((button) => {
-      var direction = button.id.replace("direction-", "");
-      button.addEventListener("click", () => filter_direction_click(direction));
-      direction_buttons[direction] = button;
-    });
+  document.querySelectorAll("#direction-control button").forEach((button) => {
+    var direction = button.id.replace("direction-", "");
+    button.addEventListener("click", () => filter_direction_click(direction));
+    direction_buttons[direction] = button;
+  });
 
   var finished_div = get_id("finished");
   var cards_div = get_id("cards");
