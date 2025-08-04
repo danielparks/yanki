@@ -107,11 +107,10 @@ def main():  # noqa: C901 (complex)
 @click.option(
     "--cache",
     default=Path("~/.cache/yanki/").expanduser(),
-    show_default=True,
     envvar="YANKI_CACHE",
-    show_envvar=True,
     type=WritableDirectoryPath(path_type=Path),
-    help="Path to cache for downloads and media files.",
+    help="Path to cache for downloads and media files. [default: $YANKI_CACHE "
+    "or ~/.cache/yanki]",
 )
 @click.option(
     "--reprocess/--no-reprocess",
@@ -121,11 +120,10 @@ def main():  # noqa: C901 (complex)
     "-j",
     "--concurrency",
     default=cpu_count(),
-    show_default=True,
     envvar="YANKI_CONCURRENCY",
-    show_envvar=True,
     type=click.INT,
-    help="Number of ffmpeg process to run at once.",
+    help="Number of ffmpeg process to run at once. [default: $YANKI_CONCURRENCY"
+    f" or {cpu_count()}]",
 )
 @click.version_option(__version__)
 @click.pass_context
