@@ -79,6 +79,15 @@ function play_video(container) {
   });
 }
 
+function fetch_json(url) {
+  return fetch(url).then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    return response.json();
+  });
+}
+
 class Card {
   constructor(note, direction) {
     this.note = note;
@@ -293,19 +302,10 @@ window.addEventListener("load", (event) => {
     if (params.path) {
       document.body.classList.add("loading");
       document.body.classList.remove("no-deck");
-      response = fetch(params.path).then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error, status = ${response.status}`);
-        }
-        return response.json();
-      });
-
-      window.setTimeout(() => {
-        response.then((deck) => {
-          current_deck = deck;
-          title.innerText = deck.title.replace(/.*::/, "");
-          reset();
-        });
+      fetch_json(params.path).then((deck) => {
+        current_deck = deck;
+        title.innerText = deck.title.replace(/.*::/, "");
+        reset();
       });
     } else {
       document.body.classList.add("no-deck");
