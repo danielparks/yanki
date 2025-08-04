@@ -78,11 +78,10 @@ Usage: yanki [OPTIONS] COMMAND [ARGS]...
 Options:
   -v, --verbose                 Be more verbose. May be passed up to 3 times.
   --cache DIRECTORY             Path to cache for downloads and media files.
-                                [env var: YANKI_CACHE; default:
-                                /Users/daniel/.cache/yanki]
+                                [default: $YANKI_CACHE or ~/.cache/yanki]
   --reprocess / --no-reprocess  Force reprocessing videos.
-  -j, --concurrency INTEGER     Number of ffmpeg process to run at once.  [env
-                                var: YANKI_CONCURRENCY; default: 8]
+  -j, --concurrency INTEGER     Number of ffmpeg process to run at once.
+                                [default: $YANKI_CONCURRENCY or 4]
   --version                     Show the version and exit.
   --help                        Show this message and exit.
 
@@ -91,6 +90,7 @@ Commands:
   list-notes             List notes in deck files.
   open-videos            Download, process, and open video URLs.
   open-videos-from-file  Download videos listed in a file and open them.
+  serve-flashcards       Serve HTML flashcards localhost:8000.
   serve-http             Serve HTML summary of deck on localhost:8000.
   to-html                Generate HTML version of decks.
   to-json                Generate JSON version of decks.
