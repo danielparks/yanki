@@ -1,7 +1,3 @@
-:root {
-  --directory-width: 350px;
-}
-
 body {
   position: fixed;
   top: 0;
@@ -37,7 +33,7 @@ button:disabled:hover {
 }
 
 #directory {
-  max-width: var(--directory-width);
+  max-width: 350px;
   background: #fff;
 }
 
