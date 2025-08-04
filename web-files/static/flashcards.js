@@ -28,10 +28,6 @@ function shuffle(array) {
   }
 }
 
-function query_text(element, query) {
-  return element.querySelector(query).innerText;
-}
-
 function note_directions(note, desired_direction) {
   if (note.direction == "->") {
     if (desired_direction == "text-first") {
