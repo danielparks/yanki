@@ -334,9 +334,11 @@ window.addEventListener("load", (event) => {
     ]);
   }
 
-  get_id("directory-link").addEventListener("click", (_) => {
-    load_params(parse_hash("#"));
-  });
+  document
+    .querySelector("#viewer > main > header > a")
+    .addEventListener("click", (_) => {
+      load_params(parse_hash("#"));
+    });
 
   var directory = document.querySelector("#directory > main > ol");
   directory.append(tree_to_li(decks_tree));
