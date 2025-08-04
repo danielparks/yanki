@@ -1,7 +1,3 @@
-:root {
-  --directory-width: 350px;
-}
-
 body {
   position: fixed;
   top: 0;
@@ -37,7 +33,7 @@ button:disabled:hover {
 }
 
 #directory {
-  max-width: var(--directory-width);
+  max-width: 350px;
   background: #fff;
 }
 
@@ -153,24 +149,26 @@ button:disabled:hover {
   padding: 0 10px;
 }
 
-#viewer > main > header > h1 {
+#viewer > main > header > a {
+  display: block;
   flex: 1;
-  margin: 10px;
-  line-height: 50px;
-  font-size: 24px;
-  color: #000;
   min-width: 100px;
+  padding: 10px;
+  line-height: 50px;
   overflow: hidden;
   text-wrap: nowrap;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
 }
 
-#directory-link {
+#directory-icon {
   display: none;
   padding-right: 10px;
   color: #a9c;
-  text-decoration: none;
 }
 
 #viewer > main > header > label {
@@ -357,7 +355,7 @@ button#next-button:hover {
     display: none;
   }
 
-  #directory-link {
+  #directory-icon {
     display: inline-block;
   }
 

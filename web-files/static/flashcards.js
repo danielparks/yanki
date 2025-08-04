@@ -28,10 +28,6 @@ function shuffle(array) {
   }
 }
 
-function query_text(element, query) {
-  return element.querySelector(query).innerText;
-}
-
 function note_directions(note, desired_direction) {
   if (note.direction == "->") {
     if (desired_direction == "text-first") {
@@ -80,6 +76,15 @@ function play_video(container) {
     video.addEventListener("mouseleave", () => {
       video.controls = false;
     });
+  });
+}
+
+function fetch_json(url) {
+  return fetch(url).then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    return response.json();
   });
 }
 
@@ -297,19 +302,10 @@ window.addEventListener("load", (event) => {
     if (params.path) {
       document.body.classList.add("loading");
       document.body.classList.remove("no-deck");
-      response = fetch(params.path).then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error, status = ${response.status}`);
-        }
-        return response.json();
-      });
-
-      window.setTimeout(() => {
-        response.then((deck) => {
-          current_deck = deck;
-          title.innerText = deck.title.replace(/.*::/, "");
-          reset();
-        });
+      fetch_json(params.path).then((deck) => {
+        current_deck = deck;
+        title.innerText = deck.title.replace(/.*::/, "");
+        reset();
       });
     } else {
       document.body.classList.add("no-deck");
@@ -334,9 +330,11 @@ window.addEventListener("load", (event) => {
     ]);
   }
 
-  get_id("directory-link").addEventListener("click", (_) => {
-    load_params(parse_hash("#"));
-  });
+  document
+    .querySelector("#viewer > main > header > a")
+    .addEventListener("click", (_) => {
+      load_params(parse_hash("#"));
+    });
 
   var directory = document.querySelector("#directory > main > ol");
   directory.append(tree_to_li(decks_tree));
