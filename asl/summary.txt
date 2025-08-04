@@ -2127,9 +2127,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=3iJi1wpAjxU @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=3iJi1wpAjxU @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=3iJi1wpAjxU @0- TAGS: 'Lifeprint lesson_11 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=3iJi1wpAjxU @0- TEXT: 'CALL-to (via TTY)'
-Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- MEDIA: 'youtube=3khp7ixJxpo/processed/media_youtube=3khp7ixJxpo_39320f8a069bab69914357d2e9f46d90.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- MEDIA: 'youtube=3khp7ixJxpo/processed/media_youtube=3khp7ixJxpo_fe90f46186392a017fe0a2dc85b6739d.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- PARAMETER: clip=(0.8675333333333334, 2.8361666666666667)
 Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- TAGS: 'Lifeprint extra extra-deck extra-deck-miscellaneous vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=3khp7ixJxpo @0- TEXT: 'SLIDES / PowerPoint'
@@ -6939,9 +6940,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=NXBAUjxzhWs @0- TEXT: 'CONTEXT'
-Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- MEDIA: 'youtube=NXg3uw5PrZs/processed/media_youtube=NXg3uw5PrZs_39320f8a069bab69914357d2e9f46d90.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- MEDIA: 'youtube=NXg3uw5PrZs/processed/media_youtube=NXg3uw5PrZs_4e2fbd793c98ed1b4ebfb36e5476d8a8.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/c/cough.htm">COUGH</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- PARAMETER: clip=(0.6006, 2.5025)
 Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=NXg3uw5PrZs @0- TEXT: 'COUGH (pound chest version) / disdain / scoff'
