@@ -3,7 +3,6 @@ import functools
 import json
 import logging
 import re
-import shutil
 import sys
 import tempfile
 import traceback
@@ -18,19 +17,18 @@ import yt_dlp
 from yanki.__version__ import __version__
 from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
+from yanki.json import update_media_paths
 from yanki.parser import NOTE_VARIABLES, find_invalid_format
-from yanki.tree import TreeNode, tree
 from yanki.utils import (
     add_trace_logging,
-    create_unique_file,
+    copy_into,
     find_errors,
     open_in_app,
     symlink_into,
-    url_friendly_name,
 )
 from yanki.video import BadURLError, Cache, FFmpegError, Video, VideoOptions
-from yanki.web import path_to_web_files
 from yanki.web.summary import write_html
+from yanki.web.ui import save_flashcard_html_to
 
 from .decks import deck_parameters
 from .server import server_options
@@ -310,15 +308,9 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
         copy_media_to.mkdir(parents=True, exist_ok=True)
         for deck in decks:
             for note in deck["notes"]:
-                new_paths = []
-                for source in note["media_paths"]:
-                    destination = copy_media_to / Path(source).name
-                    LOGGER.info(f"Copying media to {destination}")
-                    shutil.copy2(source, destination)
-                    destination.chmod(0o644)
-                    new_paths.append(str(destination))
-
-                note["media_paths"] = new_paths
+                update_media_paths(
+                    note, copy_media_to, install_method=copy_into
+                )
 
     with click.open_file(output, "w", encoding="utf_8") as file:
         LOGGER.info(f"Writing JSON to {output}")
@@ -331,72 +323,13 @@ def to_json(options, output, decks, copy_media_to, html_media_prefix):
 @click.pass_obj
 def serve_flashcards(options, decks, server):
     """Serve HTML flashcards localhost:8000."""
-    web_files = path_to_web_files()
     decks = decks.read_final_sorted(options)
     with tempfile.TemporaryDirectory(
         dir=options.cache.path, prefix="webroot_"
     ) as root:
         root = Path(root)
         root.chmod(0o755)  # TemporaryDirectory creates dirs with mode 0o700.
-        symlink_into(web_files / "static", root)
-
-        media_dir = root / "media"
-        media_dir.mkdir()
-
-        deck_dir = root / "decks"
-        deck_dir.mkdir()
-
-        deck_index = []
-        for deck in decks:
-            deck_json = deck.to_dict(base_url="/media")
-            for note in deck_json["notes"]:
-                new_paths = []
-                for source_path in note["media_paths"]:
-                    link_path = symlink_into(Path(source_path), media_dir)
-                    new_paths.append(f"/media/{link_path.name}")
-                note["media_paths"] = new_paths
-
-            # Create the deck JSON file.
-            name = url_friendly_name(deck.title)
-            with create_unique_file(deck_dir / f"{name}.json") as file:
-                LOGGER.debug(f"Saving {deck.title!r} into {file.name!r}")
-                json.dump(deck_json, file)
-                deck_index.append(
-                    {
-                        "title": deck.title,
-                        "path": f"/decks/{Path(file.name).name}",
-                    }
-                )
-
-        def encoder(value):
-            if isinstance(value, TreeNode):
-                node = {
-                    "segment": value.name,
-                    "children": value.sorted_children(),
-                }
-                if value.datum:
-                    node.update(value.datum)
-                return node
-            raise TypeError(f"cannot serialize object of {type(value)}")
-
-        decks_tree_json = json.dumps(
-            tree(
-                deck_index,
-                key=lambda deck: deck["title"].split("::"),
-                root_name="Decks",
-            ),
-            default=encoder,
-        )
-
-        # Generate index.html
-        index_html = (web_files / "templates/flashcards.html").read_text()
-        for path in (web_files / "static").glob("*"):
-            index_html = index_html.replace(
-                f'"static/{path.name}"',
-                f'"/static/{path.name}?{path.stat().st_mtime}"',
-            )
-        index_html = index_html.replace("{ DECKS }", decks_tree_json)
-        (root / "index.html").write_text(index_html)
+        save_flashcard_html_to(root, decks, install_method=symlink_into)
 
         LOGGER.info(f"Starting web server in temporary directory {root}")
         server.serve_forever(directory=root)

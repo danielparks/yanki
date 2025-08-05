@@ -6,6 +6,7 @@ import logging
 import os
 import re
 import shlex
+import shutil
 import subprocess
 import sys
 import types
@@ -56,6 +57,20 @@ def create_unique_file(path: Path, **kwargs):
             i += 1
         else:
             return
+
+
+def copy_into(source: Path, directory: Path) -> Path:
+    """Copy the file at `source` into `directory/file.name`.
+
+    This will replace existing files. It sets the permissions on destination
+    file to `0o644`.
+
+    Retuns a `Path` to the new file.
+    """
+    destination = directory / source.name
+    shutil.copy2(source, destination)
+    destination.chmod(0o644)
+    return destination
 
 
 def file_url_to_path(url: str) -> Path:
