@@ -27,7 +27,7 @@ from yanki.utils import (
     symlink_into,
 )
 from yanki.video import BadURLError, Cache, FFmpegError, Video, VideoOptions
-from yanki.web.summary import write_html
+from yanki.web.summary import write_html_summary
 from yanki.web.ui import save_flashcard_html_to
 
 from .decks import deck_parameters
@@ -261,13 +261,13 @@ def list_notes(options, decks, format):
 @click.argument("output", type=WritableDirectoryPath(path_type=Path))
 @deck_parameters
 @click.pass_obj
-def to_html(options, output, decks):
-    """Generate HTML version of decks.
+def save_summary(options, output, decks):
+    """Save HTML summary of decks to a directory.
 
     This will create a directory at OUTPUT containing HTML versions of the
     flashcard decks as well as hard linked media and other assets.
     """
-    write_html(output, decks.read_final_sorted(options))
+    write_html_summary(output, decks.read_final_sorted(options))
 
 
 @cli.command()
@@ -339,7 +339,7 @@ def serve_flashcards(options, decks, server):
 @deck_parameters
 @server_options
 @click.pass_obj
-def serve_http(options, decks, server):
+def serve_summary(options, decks, server):
     """Serve HTML summary of deck on localhost:8000."""
     decks = decks.read_final_sorted(options)
     with tempfile.TemporaryDirectory(
@@ -349,7 +349,7 @@ def serve_http(options, decks, server):
         root = Path(root)
         root.chmod(0o755)  # TemporaryDirectory creates dirs with mode 0o700.
 
-        write_html(root, decks)
+        write_html_summary(root, decks)
 
         LOGGER.info(f"Starting web server in temporary directory {root}")
         server.serve_forever(directory=root)

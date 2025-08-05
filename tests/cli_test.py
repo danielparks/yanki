@@ -65,14 +65,14 @@ def test_yanki_update(yanki, deck_1_path):
 
 # This doesn’t work without subprocess.
 @pytest.mark.script_launch_mode("subprocess")
-def test_yanki_serve_http(yanki, deck_1_path):
+def test_yanki_serve_summary(yanki, deck_1_path):
     # Need to add result to an object to get it out of thread:
     results = []
 
-    def run_yanki_serve_http():
-        results.append(yanki.run("serve-http", deck_1_path))
+    def run_yanki_serve_summary():
+        results.append(yanki.run("serve-summary", deck_1_path))
 
-    httpd = threading.Thread(target=run_yanki_serve_http)
+    httpd = threading.Thread(target=run_yanki_serve_summary)
     httpd.start()
 
     start = time.monotonic()
@@ -141,8 +141,8 @@ def test_yanki_serve_flashcards(yanki, deck_1_path):
     assert "GET / HTTP" in result.stderr
 
 
-def test_yanki_to_html(yanki, deck_1_path, output_path):
-    result = yanki.run("to-html", output_path, deck_1_path)
+def test_yanki_save_summary(yanki, deck_1_path, output_path):
+    result = yanki.run("save-summary", output_path, deck_1_path)
     assert result.returncode == 0
     assert result.stderr == ""
     assert result.stdout == ""
