@@ -127,8 +127,8 @@ def fs_is_legal_name(name: str) -> bool:
     )
 
 
-def hardlink_into(source_path: Path, directory: Path) -> Path:
-    """Hard link the file at source_path into directory/file.name.
+def hardlink_into(source: Path, directory: Path) -> Path:
+    """Hard link the file at `source` into `directory/file.name`.
 
     This will remove existing files that are in the way if they don’t already
     link to the right place.
@@ -136,14 +136,14 @@ def hardlink_into(source_path: Path, directory: Path) -> Path:
     Retuns a `Path` to the newly linked file.
     """
     # FIXME use shutil.copy2 if hardlink doesn’t work
-    target = directory / source_path.name
+    link_path = directory / source.name
     try:
-        target.hardlink_to(source_path)
+        link_path.hardlink_to(source)
     except FileExistsError:
-        if not target.samefile(source_path):
-            target.unlink()
-            target.hardlink_to(source_path)
-    return target
+        if not link_path.samefile(source):
+            link_path.unlink()
+            link_path.hardlink_to(source)
+    return link_path
 
 
 def make_frozen(klass):
@@ -203,17 +203,17 @@ def open_in_app(arguments):
     sys.stdout.write(result.stdout)
 
 
-def symlink_into(source_path: Path, directory: Path):
-    """Symlink the file at source_path into directory/file.name.
+def symlink_into(source: Path, directory: Path) -> Path:
+    """Symlink the file at `source` into `directory/file.name`.
 
-    This handles duplicate links, and raises FileExistsError with a reasonable
+    This handles duplicate links, and raises `FileExistsError` with a reasonable
     message if there is a conflict.
 
     Retuns a `Path` to the new symlink.
     """
-    link_path = directory / source_path.name
+    link_path = directory / source.name
     try:
-        link_path.symlink_to(source_path)
+        link_path.symlink_to(source)
     except FileExistsError:
         try:
             destination = link_path.readlink()
@@ -222,12 +222,12 @@ def symlink_into(source_path: Path, directory: Path):
                 "Found non-symlink {str(link_path)!r}"
             ) from None  # Source error messages are confusing
 
-        if destination != source_path:
+        if destination != source:
             # Links should always have the same name as the source, so this
             # should never happen.
             raise FileExistsError(
                 f"Symlink {str(link_path)!r} points to {str(destination)!r} "
-                f"instead of {str(source_path)!r}"
+                f"instead of {str(source)!r}"
             ) from None  # Source error message is confusing
     return link_path
 
