@@ -90,9 +90,10 @@ Commands:
   list-notes             List notes in deck files.
   open-videos            Download, process, and open video URLs.
   open-videos-from-file  Download videos listed in a file and open them.
+  save-flashcards        Save HTML flashcard UI to a directory.
+  save-summary           Save HTML summary of decks to a directory.
   serve-flashcards       Serve HTML flashcards localhost:8000.
-  serve-http             Serve HTML summary of deck on localhost:8000.
-  to-html                Generate HTML version of decks.
+  serve-summary          Serve HTML summary of deck on localhost:8000.
   to-json                Generate JSON version of decks.
   update                 Update Anki from deck files.
 ```

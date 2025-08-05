@@ -39,3 +39,16 @@ def tree(
         return next(iter(root.children.values()))
 
     return root
+
+
+def tree_node_json_encoder(value: TreeNode) -> dict[str, Any]:
+    """A JSON encoder for `TreeNode`s."""
+    if isinstance(value, TreeNode):
+        node = {
+            "segment": value.name,
+            "children": value.sorted_children(),
+        }
+        if value.datum:
+            node.update(value.datum)
+        return node
+    raise TypeError(f"cannot serialize object of {type(value)}")

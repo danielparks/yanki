@@ -103,7 +103,7 @@ class DeckTree:
         </li>"""
 
 
-def write_html(root, decks):
+def write_html_summary(root, decks):
     """Write HTML version of decks to a path."""
     root.mkdir(parents=True, exist_ok=True)
     symlink_into(path_to_web_files() / "static", root)

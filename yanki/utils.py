@@ -6,6 +6,7 @@ import logging
 import os
 import re
 import shlex
+import shutil
 import subprocess
 import sys
 import types
@@ -56,6 +57,24 @@ def create_unique_file(path: Path, **kwargs):
             i += 1
         else:
             return
+
+
+def copy_into(source: Path, directory: Path) -> Path:
+    """Copy the file at `source` into `directory/file.name`.
+
+    This will replace existing files. It sets the permissions on destination
+    file to `0o644` and directories to `0o755`.
+
+    Retuns a `Path` to the new file.
+    """
+    destination = directory / source.name
+    if source.is_dir():
+        shutil.copytree(source, destination, symlinks=True, dirs_exist_ok=True)
+        destination.chmod(0o755)
+    else:
+        shutil.copy2(source, destination)
+        destination.chmod(0o644)
+    return destination
 
 
 def file_url_to_path(url: str) -> Path:
@@ -127,23 +146,37 @@ def fs_is_legal_name(name: str) -> bool:
     )
 
 
-def hardlink_into(source_path: Path, directory: Path) -> Path:
-    """Hard link the file at source_path into directory/file.name.
+def hardlink_into(source: Path, directory: Path) -> Path:
+    """Hard link the file at `source` into `directory/file.name`.
 
     This will remove existing files that are in the way if they don’t already
     link to the right place.
 
     Retuns a `Path` to the newly linked file.
     """
+
     # FIXME use shutil.copy2 if hardlink doesn’t work
-    target = directory / source_path.name
-    try:
-        target.hardlink_to(source_path)
-    except FileExistsError:
-        if not target.samefile(source_path):
-            target.unlink()
-            target.hardlink_to(source_path)
-    return target
+    # FIXME test this
+    def hardlink_file(source, link_path):
+        try:
+            link_path.hardlink_to(source)
+        except FileExistsError:
+            if not link_path.samefile(source):
+                link_path.unlink()
+                link_path.hardlink_to(source)
+
+    link_path = directory / source.name
+    if source.is_dir():
+        link_path.mkdir(parents=True, exist_ok=True)
+        for parent, dirs, files in source.walk():
+            target_parent = link_path / parent.relative_to(source)
+            for dir in dirs:
+                (target_parent / dir).mkdir(exist_ok=True)
+            for file in files:
+                hardlink_file(parent / file, target_parent / file)
+    else:
+        hardlink_file(source, link_path)
+    return link_path
 
 
 def make_frozen(klass):
@@ -203,17 +236,17 @@ def open_in_app(arguments):
     sys.stdout.write(result.stdout)
 
 
-def symlink_into(source_path: Path, directory: Path):
-    """Symlink the file at source_path into directory/file.name.
+def symlink_into(source: Path, directory: Path) -> Path:
+    """Symlink the file at `source` into `directory/file.name`.
 
-    This handles duplicate links, and raises FileExistsError with a reasonable
+    This handles duplicate links, and raises `FileExistsError` with a reasonable
     message if there is a conflict.
 
     Retuns a `Path` to the new symlink.
     """
-    link_path = directory / source_path.name
+    link_path = directory / source.name
     try:
-        link_path.symlink_to(source_path)
+        link_path.symlink_to(source)
     except FileExistsError:
         try:
             destination = link_path.readlink()
@@ -222,12 +255,12 @@ def symlink_into(source_path: Path, directory: Path):
                 "Found non-symlink {str(link_path)!r}"
             ) from None  # Source error messages are confusing
 
-        if destination != source_path:
+        if destination != source:
             # Links should always have the same name as the source, so this
             # should never happen.
             raise FileExistsError(
                 f"Symlink {str(link_path)!r} points to {str(destination)!r} "
-                f"instead of {str(source_path)!r}"
+                f"instead of {str(source)!r}"
             ) from None  # Source error message is confusing
     return link_path
 
