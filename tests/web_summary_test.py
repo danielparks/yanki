@@ -4,8 +4,8 @@ import shutil
 from pathlib import Path
 
 from yanki.cli.decks import DeckSource
-from yanki.html_out import write_html
 from yanki.video import VideoOptions
+from yanki.web.summary import write_html
 
 
 def deck_paths_to_html(output_path: Path, deck_paths: list[Path]):

@@ -18,7 +18,6 @@ import yt_dlp
 from yanki.__version__ import __version__
 from yanki.anki import FINAL_NOTE_VARIABLES
 from yanki.errors import ExpectedError
-from yanki.html_out import path_to_web_files, write_html
 from yanki.parser import NOTE_VARIABLES, find_invalid_format
 from yanki.tree import TreeNode, tree
 from yanki.utils import (
@@ -30,6 +29,8 @@ from yanki.utils import (
     url_friendly_name,
 )
 from yanki.video import BadURLError, Cache, FFmpegError, Video, VideoOptions
+from yanki.web import path_to_web_files
+from yanki.web.summary import write_html
 
 from .decks import deck_parameters
 from .server import server_options

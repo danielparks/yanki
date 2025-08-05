@@ -3,6 +3,7 @@ from html import escape as h
 from pathlib import Path
 
 from yanki.utils import hardlink_into, symlink_into, url_friendly_name
+from yanki.web import path_to_web_files, static_url
 
 
 class DeckTree:
@@ -258,12 +259,3 @@ def title_html(title_path, *, add_links=True, final_link=True):
         html[-1] = h(name)
 
     return " ❯ ".join(html)
-
-
-def path_to_web_files() -> Path:
-    return Path(__file__).resolve().parent.parent / "web-files"
-
-
-def static_url(path) -> str:
-    mtime = (path_to_web_files() / "static" / path).stat().st_mtime
-    return f"static/{path}?{mtime}"
