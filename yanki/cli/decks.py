@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 import click
 
-from yanki.anki import Deck
+from yanki.anki import Deck, FinalDeck
 from yanki.parser import DeckFilesParser, DeckSpec, NoteSpec
 from yanki.video import VideoOptions
 
@@ -39,23 +39,23 @@ class DeckSource:
             deck_spec.note_specs = filtered
             yield deck_spec
 
-    def read_specs(self):
+    def read_specs(self) -> Generator[DeckSpec]:
         """Read `DeckSpec`s from `files`."""
         parser = DeckFilesParser()
         for file in self.files:
             for deck_spec in parser.parse_file(file.name, file):
                 yield from self.filter_deck_spec(deck_spec)
 
-    def read(self, options: VideoOptions):
+    def read(self, options: VideoOptions) -> Generator[Deck]:
         """Read `Deck`s from `self.files`."""
         for spec in self.read_specs():
             yield Deck(spec, video_options=options)
 
-    def read_sorted(self, options: VideoOptions):
+    def read_sorted(self, options: VideoOptions) -> list[Deck]:
         """Read `Deck`s from `self.files` and sort by title."""
         return sorted(self.read(options), key=lambda deck: deck.title())
 
-    async def read_final_async(self, options: VideoOptions):
+    async def read_final_async(self, options: VideoOptions) -> list[FinalDeck]:
         """Read `FinalDeck`s from `self.files` (async)."""
 
         async def finalize_deck_async(collection, deck):
@@ -68,11 +68,11 @@ class DeckSource:
 
         return final_decks
 
-    def read_final(self, options: VideoOptions):
+    def read_final(self, options: VideoOptions) -> list[FinalDeck]:
         """Read `FinalDeck`s from `self.files`."""
         return asyncio.run(self.read_final_async(options))
 
-    def read_final_sorted(self, options: VideoOptions):
+    def read_final_sorted(self, options: VideoOptions) -> list[FinalDeck]:
         """Read `FinalDeck`s from `self.files` and sort by title."""
         return sorted(self.read_final(options), key=lambda deck: deck.title)
 
