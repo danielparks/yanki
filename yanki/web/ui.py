@@ -42,13 +42,13 @@ def save_flashcard_html_to(
 
     deck_index = []
     for deck in decks:
-        deck_json = deck.to_dict(base_url="/media")
+        deck_json = deck.to_dict(base_url="media")
         for note in deck_json["notes"]:
             update_media_paths(
                 note,
                 media_dir,
                 install_method=install_method,
-                media_prefix="/media/",
+                media_prefix="media/",
             )
 
         # Create the deck JSON file.
@@ -59,7 +59,7 @@ def save_flashcard_html_to(
             deck_index.append(
                 {
                     "title": deck.title,
-                    "path": f"/decks/{Path(file.name).name}",
+                    "path": f"decks/{Path(file.name).name}",
                 }
             )
 
@@ -77,7 +77,7 @@ def save_flashcard_html_to(
     for path in (web_files / "static").glob("*"):
         index_html = index_html.replace(
             f'"static/{path.name}"',
-            f'"/static/{path.name}?{path.stat().st_mtime}"',
+            f'"static/{path.name}?{path.stat().st_mtime}"',
         )
     index_html = index_html.replace("{ DECKS }", decks_tree_json)
     (root / "index.html").write_text(index_html)
