@@ -63,13 +63,17 @@ def copy_into(source: Path, directory: Path) -> Path:
     """Copy the file at `source` into `directory/file.name`.
 
     This will replace existing files. It sets the permissions on destination
-    file to `0o644`.
+    file to `0o644` and directories to `0o755`.
 
     Retuns a `Path` to the new file.
     """
     destination = directory / source.name
-    shutil.copy2(source, destination)
-    destination.chmod(0o644)
+    if source.is_dir():
+        shutil.copytree(source, destination, symlinks=True, dirs_exist_ok=True)
+        destination.chmod(0o755)
+    else:
+        shutil.copy2(source, destination)
+        destination.chmod(0o644)
     return destination
 
 
@@ -150,14 +154,28 @@ def hardlink_into(source: Path, directory: Path) -> Path:
 
     Retuns a `Path` to the newly linked file.
     """
+
     # FIXME use shutil.copy2 if hardlink doesn’t work
-    link_path = directory / source.name
-    try:
-        link_path.hardlink_to(source)
-    except FileExistsError:
-        if not link_path.samefile(source):
-            link_path.unlink()
+    # FIXME test this
+    def hardlink_file(source, link_path):
+        try:
             link_path.hardlink_to(source)
+        except FileExistsError:
+            if not link_path.samefile(source):
+                link_path.unlink()
+                link_path.hardlink_to(source)
+
+    link_path = directory / source.name
+    if source.is_dir():
+        link_path.mkdir(parents=True, exist_ok=True)
+        for parent, dirs, files in source.walk():
+            target_parent = link_path / parent.relative_to(source)
+            for dir in dirs:
+                (target_parent / dir).mkdir(exist_ok=True)
+            for file in files:
+                hardlink_file(parent / file, target_parent / file)
+    else:
+        hardlink_file(source, link_path)
     return link_path
 
 

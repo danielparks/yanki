@@ -32,13 +32,13 @@ def save_flashcard_html_to(
     """
     web_files = path_to_web_files()
 
-    install_method(web_files / "static", root)
-
     media_dir = root / "media"
-    media_dir.mkdir()
+    media_dir.mkdir(parents=True, exist_ok=True)
 
     deck_dir = root / "decks"
-    deck_dir.mkdir()
+    deck_dir.mkdir(exist_ok=True)
+
+    install_method(web_files / "static", root)
 
     deck_index = []
     for deck in decks:

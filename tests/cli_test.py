@@ -141,6 +141,22 @@ def test_yanki_serve_flashcards(yanki, deck_1_path):
     assert "GET / HTTP" in result.stderr
 
 
+def test_yanki_save_flashcards(yanki, deck_1_path, output_path):
+    result = yanki.run("save-flashcards", output_path, deck_1_path)
+    assert result.returncode == 0
+    assert result.stderr == ""
+    assert result.stdout == ""
+
+    index_html = (output_path / "index.html").read_text(encoding="utf_8")
+    assert index_html.startswith("<!doctype html>\n")
+    assert index_html.endswith("</html>\n")
+    assert (output_path / "static").is_dir()
+    assert (output_path / "static/flashcards.js").is_file()
+    assert (output_path / "media").is_dir()
+    assert (output_path / "decks").is_dir()
+    assert (output_path / "decks/Test_Reference_deck.json").is_file()
+
+
 def test_yanki_save_summary(yanki, deck_1_path, output_path):
     result = yanki.run("save-summary", output_path, deck_1_path)
     assert result.returncode == 0

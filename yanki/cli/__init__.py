@@ -23,6 +23,7 @@ from yanki.utils import (
     add_trace_logging,
     copy_into,
     find_errors,
+    hardlink_into,
     open_in_app,
     symlink_into,
 )
@@ -255,6 +256,29 @@ def list_notes(options, decks, format):
             for note in deck.notes():
                 # FIXME document variables
                 print(format.format(**note.variables()))
+
+
+@cli.command()
+@click.argument("output", type=WritableDirectoryPath(path_type=Path))
+@deck_parameters
+@click.option(
+    "--copy-assets/--hardlink-assets",
+    default=False,
+    help="Copy assets into OUTPUT rather than hardlinking them.",
+)
+@click.pass_obj
+def save_flashcards(options, output, decks, copy_assets):
+    """Save HTML flashcard UI to a directory.
+
+    This will create a directory at OUTPUT containing an HTML flashcard UI and
+    hard linked media and other assets.
+    """
+    output.mkdir(parents=True, exist_ok=True)
+    save_flashcard_html_to(
+        output,
+        decks.read_final_sorted(options),
+        install_method=copy_into if copy_assets else hardlink_into,
+    )
 
 
 @cli.command()
