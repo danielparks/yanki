@@ -1,5 +1,6 @@
 import json
 import logging
+import shutil
 from collections.abc import Callable, Iterable
 from pathlib import Path
 
@@ -36,7 +37,11 @@ def save_flashcard_html_to(
     media_dir.mkdir(parents=True, exist_ok=True)
 
     deck_dir = root / "decks"
-    deck_dir.mkdir(exist_ok=True)
+    if deck_dir.exists():
+        # The deck JSON files are created with create_unique_file, which will
+        # never replace and existing file. So, we have to clear them out first.
+        shutil.rmtree(deck_dir)
+    deck_dir.mkdir()
 
     install_method(web_files / "static", root)
 

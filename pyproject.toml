@@ -24,6 +24,7 @@ dependencies = [
     "click >=8.1.8,<9.0",
     "mistletoe>=1.4.0",
     "pytest-asyncio>=1.1.0",
+    "unidecode>=1.4.0",
 ]
 
 [dependency-groups]
