@@ -15,6 +15,8 @@ from functools import partial, partialmethod
 from pathlib import Path
 from urllib.parse import urlparse
 
+from unidecode import unidecode
+
 from yanki.errors import ExpectedError
 
 FS_ILLEGAL_CHARS = frozenset('/"[]:')
@@ -269,8 +271,8 @@ URL_UNFRIENDLY_RE = re.compile(r'[\|"\[\]:/ _]+')
 
 
 def url_friendly_name(name: str):
-    """Replace runs of URL-unfriendly characters with "_".
+    """Convert to ASCII; replace runs of URL-unfriendly characters with a"_".
 
     This is not exhaustive.
     """
-    return URL_UNFRIENDLY_RE.sub("_", name)
+    return URL_UNFRIENDLY_RE.sub("_", unidecode(name))
