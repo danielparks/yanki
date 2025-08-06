@@ -337,7 +337,7 @@ window.addEventListener("load", (event) => {
     });
 
   var directory = document.querySelector("#directory > main > ol");
-  directory.append(tree_to_li(decks_tree));
+  directory.append(tree_to_li(JSON.parse(get_id("decks-json").innerText)));
 
   var title = get_id("title");
 
