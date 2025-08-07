@@ -7,7 +7,7 @@ function create(tag, contents = [], attrs = {}) {
   if (typeof contents === "string") {
     element.innerHTML = contents;
   } else {
-    contents.forEach((child) => element.appendChild(child));
+    element.append(...contents);
   }
 
   for (var key in attrs) {
@@ -92,42 +92,55 @@ class Card {
   constructor(note, direction) {
     this.note = note;
     this.direction = direction;
-    this.div = create(
-      "div",
-      [
-        create(
-          "div",
-          [
-            create("h3", note.text_html),
-            create("div", note.media_html, { className: "media" }),
-          ],
-          { className: "sides" },
-        ),
-        create("div", note.more_html, { className: "more" }),
-      ],
-      { className: `card ${direction}` },
-    );
+    this._div = null;
+  }
+
+  create_in(container) {
+    container.append(this.div());
+  }
+
+  remove() {
+    if (this._div) {
+      this._div.remove();
+      this._div = null;
+    }
+  }
+
+  div() {
+    if (!this._div) {
+      this._div = create(
+        "div",
+        `<div class="card ${this.direction}">
+          <div class="sides">
+            <h3>${this.note.text_html}</h3>
+            <div class="media">${this.note.media_html}</div>
+          </div>
+          <div class="more">${this.note.more_html}</div>
+        </div>`,
+      ).children[0];
+    }
+    return this._div;
   }
 
   hide() {
-    this.div.classList.remove("question", "answer");
+    this._div.classList.remove("question", "answer");
   }
 
   show_question() {
-    this.div.classList.remove("answer");
-    this.div.classList.add("question");
+    this._div.classList.remove("answer");
+    this._div.classList.add("question");
 
     if (this.direction == "media-first") {
-      play_video(this.div);
+      play_video(this._div);
     }
   }
 
   show_answer() {
-    this.div.classList.remove("question");
-    this.div.classList.add("answer");
+    this._div.classList.remove("question");
+    this._div.classList.add("answer");
 
     if (this.direction == "text-first") {
-      play_video(this.div);
+      play_video(this._div);
     }
   }
 }
@@ -145,25 +158,20 @@ window.addEventListener("load", (event) => {
     cards_div.innerHTML = "";
     current_index = 0;
     finished_div.style.display = "none";
+    cards_div.append(finished_div);
 
-    if (current_deck && current_deck.notes.length > 0) {
-      document.body.classList.remove("no-cards");
-      cards = make_card_list(current_deck.notes, filter_direction);
-    } else {
+    if (!current_deck || current_deck.notes.length == 0) {
       document.body.classList.add("no-cards");
       cards = [];
-    }
-
-    cards_div.append(...cards.map((card) => card.div), finished_div);
-    document.body.classList.remove("loading");
-
-    if (cards.length == 0) {
-      return;
-    } else if (current_index >= cards.length) {
       show_finished();
-    } else {
-      show_question();
+      document.body.classList.remove("loading");
+      return;
     }
+
+    document.body.classList.remove("no-cards");
+    cards = make_card_list(current_deck.notes, filter_direction);
+
+    show_question();
   }
 
   function hide_current() {
@@ -196,30 +204,49 @@ window.addEventListener("load", (event) => {
       "Completed " + completed + " out of " + cards.length + " cards.";
   }
 
+  // Make sure only a certain range of cards have <div>s on the page so that we
+  // don’t keep too many <video> elements on-page at the same time.
+  //
+  // This also makes sure the current_card has a <div>.
+  //
+  // If first_index is smaller than 0, or last_index is past the end of the
+  // array, this will treat them like 0 or length-1, respectively.
+  function ensure_card_divs(first_index, last_index) {
+    cards.forEach((card, i) => {
+      if ((i >= first_index && i <= last_index) || card == current_card) {
+        card.create_in(cards_div);
+      } else {
+        card.remove();
+      }
+    });
+  }
+
   function show_question() {
     showing_question = true;
-
-    hide_current();
 
     back_button.disabled = current_index == 0;
     next_button.innerText = "Show answer";
     update_status();
 
+    ensure_card_divs(current_index, current_index + 3);
+    hide_current();
     current_card = cards[current_index];
     current_card.show_question();
+    document.body.classList.remove("loading");
   }
 
   function show_answer() {
     showing_question = false;
 
-    hide_current();
-
     back_button.disabled = false;
     next_button.innerText = "Next";
     update_status();
 
+    ensure_card_divs(current_index - 3, current_index);
+    hide_current();
     current_card = cards[current_index];
     current_card.show_answer();
+    document.body.classList.remove("loading");
   }
 
   function show_finished() {
