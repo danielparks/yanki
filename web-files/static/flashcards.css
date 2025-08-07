@@ -99,7 +99,7 @@ button:disabled:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 1vw;
+  min-width: 100dvw;
   z-index: 1;
 }
 
@@ -221,7 +221,7 @@ button:disabled:hover {
 }
 
 #controls {
-  height: 100px;
+  height: 65px;
   border-top: 2px solid #ccc;
   background: #f9f9f9;
   text-align: center;
@@ -255,9 +255,9 @@ button#next-button:hover {
   display: block;
   position: relative;
   margin: 0 auto;
-  min-height: 400px;
+  min-height: calc(100dvh - 70px - 67px - 2.5rlh);
   width: 600px;
-  min-width: 1vw;
+  min-width: 100dvw;
   text-align: center;
 
   /* Flash card to make it clear that it’s new. */
@@ -359,6 +359,12 @@ button#next-button:hover {
   padding-bottom: calc(25px - 1em);
   transition: height 0.1s;
   transition: padding 0.1s;
+}
+
+#status {
+  text-align: center;
+  margin: 1rlh 0 0 0;
+  color: #666;
 }
 
 @media (max-width: 850px) {
