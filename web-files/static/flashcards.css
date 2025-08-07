@@ -172,41 +172,52 @@ button:disabled:hover {
 }
 
 #viewer > main > header > label {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 50px;
-  padding: 12px 5px 0 0;
+  padding: 13px 0 0 0;
   color: #666;
   min-width: 0;
 }
 
-#direction-control > .control {
-  display: inline-block;
-  margin: 14px 10px 10px 10px;
-  padding: 7px 8px 7px 0;
-  background: #eee;
-  border-radius: 6px;
-  box-shadow: inset 2px 2px 5px #aaa;
-}
-
-#direction-control > .control > button {
-  display: inline-block;
-  padding: 6px 12px;
+#direction-control {
+  display: inline-flex;
+  margin: 21px 8px 17px 8px;
   font-size: 14px;
-  background: #dce;
-  border: none;
-  margin: 0 0 0 8px;
-  box-shadow: 2px 2px 5px #aaa;
 }
 
-#direction-control > .control > button:hover {
+#direction-control > button {
+  flex: 1;
+  box-sizing: content-box;
+  padding: 0.333lh 0.666lh;
+  font-size: 1em;
+  background: #dce;
+  border-radius: 0;
+  border-right: 1px solid #999;
+  margin: 0 0 2px 0;
+  box-shadow: 2px 2px 5px #999;
+  z-index: 2;
+}
+
+#direction-control > button:first-child {
+  border-radius: 0.333lh 0 0 0.333lh;
+}
+
+#direction-control > button:last-child {
+  border-radius: 0 0.333lh 0.333lh 0;
+  border-right: none;
+}
+
+#direction-control > button:hover {
   background: #cbd;
 }
 
-#direction-control > .control > button.active,
-#direction-control > .control > button.active:hover {
+#direction-control > button.active,
+#direction-control > button.active:hover {
   background: #a9c;
   color: #fff;
   box-shadow: inset 1px 1px 2px #999;
+  z-index: 1;
+  margin: 2px 0 0 0;
 }
 
 #controls {
