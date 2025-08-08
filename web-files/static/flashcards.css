@@ -99,7 +99,7 @@ button:disabled:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 100dvw;
+  min-width: 0;
   z-index: 1;
 }
 
@@ -257,7 +257,6 @@ button#next-button:hover {
   margin: 0 auto;
   min-height: calc(100dvh - 70px - 67px - 2.5rlh);
   width: 600px;
-  min-width: 100dvw;
   text-align: center;
 
   /* Flash card to make it clear that it’s new. */
