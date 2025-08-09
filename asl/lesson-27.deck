@@ -12,16 +12,23 @@ group:
 
 group:
   more: +md:[BUTTER](https://www.lifeprint.com/asl101/pages-signs/b/butter.htm)
+  https://www.youtube.com/watch?v=TOwQoI_oDq8 BUTTER
 
 group:
   more: +md:[CABINET](https://www.lifeprint.com/asl101/pages-signs/c/cabinet.htm)
+  https://www.youtube.com/watch?v=RAVEhadXAFc CABINET / cupboard
 
 group:
   more: +md:[CAKE](https://www.lifeprint.com/asl101/pages-signs/c/cake.htm)
-  # FIXME fill out
+  https://www.youtube.com/watch?v=X_CEx2TYaIs C-A-K-E
+  https://www.youtube.com/watch?v=JGoC5P8vN7w CAKE (back of hand version)
   https://www.youtube.com/watch?v=1o8VwwFYyrs
     CAKE (palm version) / muffin / cupcake
     trim: 7F-60F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=9Ech_eTCIRM CAKE (initialized slice version)
+  https://www.youtube.com/watch?v=39DlOmqJATs CHECK (bank draft) / cheque / cake
 
 group:
   more: +md:[COFFEE](https://www.lifeprint.com/asl101/pages-signs/c/coffee.htm)
@@ -37,21 +44,34 @@ group:
 
 group:
   more: +md:[DOZEN](https://www.lifeprint.com/asl101/pages-signs/d/dozen.htm)
+  https://www.youtube.com/watch?v=xHzVa1YZJzQ dozen / D-O-Z
 
 group:
   more: +md:[FEED](https://www.lifeprint.com/asl101/pages-signs/f/feed.htm)
+  https://www.youtube.com/watch?v=-0MHh_huRnI FEED / nourish
 
 group:
   more: +md:[MEAT](https://www.lifeprint.com/asl101/pages-signs/m/meat.htm)
+  https://www.youtube.com/watch?v=8E8ZiHAwzqo MEAT / content / flesh / steak
+    trim: 13F-65F
 
 group:
   more: +md:[OUNCE](https://www.lifeprint.com/asl101/pages-signs/o/ounce.htm)
+  https://www.youtube.com/watch?v=lO9WGkGNnXk ounce / O-Z
+    trim: 57F-
 
 group:
   more: +md:[PIE](https://www.lifeprint.com/asl101/pages-signs/p/pie.htm)
+  https://www.youtube.com/watch?v=Jy_4HuV2qqE PIE
+  # No video for initialized version.
 
 group:
   more: +md:[POUND](https://www.lifeprint.com/asl101/pages-signs/p/pound.htm)
+  https://www.youtube.com/watch?v=Yth8Epy9TpU WEIGH / pound / ton
+    trim: 35F-102F
+  # No separate video for L-B. Despite what the page says — not to use L-B-S —
+  # there is a video for L-B-S.
+  https://www.youtube.com/watch?v=kc1nHxh66po @49F-74F pound / L-B
 
 group:
   more: +md:[SMELL](https://www.lifeprint.com/asl101/pages-signs/s/smell.htm)
@@ -68,6 +88,8 @@ group:
 
 group:
   more: +md:[TEA](https://www.lifeprint.com/asl101/pages-signs/t/tea.htm)
+  https://www.youtube.com/watch?v=t56aB-4U9q0 TEA
+    trim: 13F-67F
 
 group:
   more: +md:[VEGETABLE](https://www.lifeprint.com/asl101/pages-signs/v/vegetable.htm)
