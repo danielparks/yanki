@@ -86,16 +86,15 @@ Options:
   --help                        Show this message and exit.
 
 Commands:
-  build                  Build an Anki package from deck files.
-  list-notes             List notes in deck files.
-  open-videos            Download, process, and open video URLs.
-  open-videos-from-file  Download videos listed in a file and open them.
-  save-flashcards        Save HTML flashcard UI to a directory.
-  save-summary           Save HTML summary of decks to a directory.
-  serve-flashcards       Serve HTML flashcards localhost:8000.
-  serve-summary          Serve HTML summary of deck on localhost:8000.
-  to-json                Generate JSON version of decks.
-  update                 Update Anki from deck files.
+  build             Build an Anki package from deck files.
+  list-notes        List notes in deck files.
+  open-videos       Download, process, and open video URLs.
+  save-flashcards   Save HTML flashcard UI to a directory.
+  save-summary      Save HTML summary of decks to a directory.
+  serve-flashcards  Serve HTML flashcards localhost:8000.
+  serve-summary     Serve HTML summary of deck on localhost:8000.
+  to-json           Generate JSON version of decks.
+  update            Update Anki from deck files.
 ```
 
 ## License

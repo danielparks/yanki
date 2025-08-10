@@ -218,7 +218,7 @@ def test_yanki_open_videos(yanki, deck_1_path, cache_path):
 def test_yanki_open_videos_from_file(yanki, deck_1_path, cache_path):
     assert list(cache_path.glob("*")) == []
     result = yanki.run(
-        "open-videos-from-file",
+        "open-videos",
         stdin=io.StringIO(f"file://{deck_1_path.parent}/first.png\n"),
     )
     assert result.returncode == 0
