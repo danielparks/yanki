@@ -383,34 +383,28 @@ def serve_summary(options, decks, server):
 @click.argument("urls", nargs=-1, type=click.STRING)
 @click.pass_obj
 def open_videos(options, urls):
-    """Download, process, and open video URLs."""
-    for url in urls:
-        video = Video(url, options=options)
-        open_in_app([asyncio.run(video.processed_video_async())])
+    """Download, process, and open video URLs.
 
-
-@cli.command()
-@click.argument("files", nargs=-1, type=click.File("r", encoding="utf_8"))
-@click.pass_obj
-def open_videos_from_file(options, files):
-    """Download videos listed in a file and open them.
-
-    If you don’t pass any arguments this will read from stdin. Videos will be
+    You can pass the URLs as arguments or on stdin. Videos will be
     downloaded and minimally processed, then opened with the open command.
     """
-    if len(files) == 0:
-        files = [sys.stdin]
+    if urls:
+        for url in urls:
+            _open_url(url, options)
+    else:
+        for url in _find_urls(sys.stdin):
+            _open_url(url, options)
 
-    for file in files:
-        for url in _find_urls(file):
-            try:
-                video = Video(url, options=options)
-                open_in_app([asyncio.run(video.processed_video_async())])
-            except BadURLError as error:
-                print(f"Error: {error}")
-            except yt_dlp.utils.DownloadError:
-                # yt_dlp prints the error itself.
-                pass
+
+def _open_url(url, options):
+    try:
+        video = Video(url, options=options)
+        open_in_app([asyncio.run(video.processed_video_async())])
+    except BadURLError as error:
+        print(f"Error: {error}")
+    except yt_dlp.utils.DownloadError:
+        # yt_dlp prints the error itself.
+        pass
 
 
 def _find_urls(file):
