@@ -93,17 +93,24 @@ group:
 
 group:
   more: +md:[VEGETABLE](https://www.lifeprint.com/asl101/pages-signs/v/vegetable.htm)
-  # FIXME fill out
-  https://www.youtube.com/watch?v=zMd-DsDftP8 VEGETABLE / vegetarian
+  https://www.youtube.com/watch?v=zMd-DsDftP8
+    VEGETABLE / vegetarian (flip version)
     trim: 7F-56F
   https://www.youtube.com/watch?v=m5lfRYfXUIQ ->
     VEGETABLE / vegetarian (twist version)
     trim: 9F-74F
   https://www.youtube.com/watch?v=GnHH4QK3Ths -> V-E-G / vegetable / vegetarian
     trim: 9F-73F
+  # Leaving off indivdual vegatable signs for now.
 
 group:
   more: +md:[WASH-DISHES](https://www.lifeprint.com/asl101/pages-signs/w/wash-dishes.htm)
+  # DISH WASH is an extra sign in lesson 4.
+  https://www.youtube.com/watch?v=crOjS7Hspak WASH-dishes
+    trim: 12F-73F
 
 group:
   more: +md:[WINE](https://www.lifeprint.com/asl101/pages-signs/w/wine.htm)
+  https://www.youtube.com/watch?v=3u3AQ4mzx6c WINE (small circle version)
+    trim: 10F-60F
+  # No video of down-the-cheek version (like BEER).
