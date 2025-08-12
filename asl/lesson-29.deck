@@ -7,12 +7,19 @@ note_id: Lifeprint ASL {url} {clip}
 
 group:
   more: +md:[BALD](https://www.lifeprint.com/asl101/pages-signs/b/bald.htm)
+  https://www.youtube.com/watch?v=h81FEVG0nKg BALD (circle head version)
+    trim: 17F-71F
+  https://www.youtube.com/watch?v=aljVQQh2Il0 BALD (circle S-hand version)
+    trim: 17F-64F
+  https://www.youtube.com/watch?v=DOrfpxigC8U BALD (rub S-hand version)
+    trim: 21F-75F
+  https://www.youtube.com/watch?v=aZcAStRBjrI BALD (cueball version)
+    trim: 18F-72F
 
 group:
   more: +md:[BEARD](https://www.lifeprint.com/asl101/pages-signs/b/beard.htm)
 
-group:
-  more: +md:[CAN](https://www.lifeprint.com/asl101/pages-signs/c/can.htm)
+# CAN was in lesson 5.
 
 group:
   more: +md:[CARD](https://www.lifeprint.com/asl101/pages-signs/c/card.htm)
@@ -24,13 +31,15 @@ group:
   more: +md:[DISAPPEAR](https://www.lifeprint.com/asl101/pages-signs/d/disappear.htm)
 
 group:
-  more: +md:[COUSIN](https://www.lifeprint.com/asl101/pages-signs/c/cousin.htm)
-
-group:
   more: +md:[HAPPEN](https://www.lifeprint.com/asl101/pages-signs/h/happen.htm)
+    and [When vs Happen (Advanced Discussion)](https://www.lifeprint.com/asl101/pages-signs/w/when2.htm)
+  https://www.youtube.com/watch?v=FsM-D-NCNdc HAPPEN
+    trim: 4F-65F
 
 group:
   more: +md:[HIDE](https://www.lifeprint.com/asl101/pages-signs/h/hide.htm)
+  https://www.youtube.com/watch?v=yZ8Uwt2-21o HIDE
+    trim: 16F-77F
 
 group:
   more: +md:[IMPOSSIBLE](https://www.lifeprint.com/asl101/pages-signs/i/impossible.htm)
@@ -40,39 +49,77 @@ group:
 
 group:
   more: +md:[MUSIC](https://www.lifeprint.com/asl101/pages-signs/m/music.htm)
-
-group:
-  more: +md:[SONG](https://www.lifeprint.com/asl101/pages-signs/s/song.htm)
+  https://www.youtube.com/watch?v=-OYTTmF4m8M MUSIC / sing / song
+    trim: 13F-86F
+  # FIXME? POETRY? SINGER?
 
 group:
   more: +md:[PLAN](https://www.lifeprint.com/asl101/pages-signs/p/plan.htm)
+  https://www.youtube.com/watch?v=yndCPGXCqwU PREPARE / PLAN
+    trim: 8F-62F
+  https://www.youtube.com/watch?v=hwpt8G2RYnI PLAN (noun or verb) / plan on
+    trim: 10F-58F
 
 group:
-  more: +md:[PLAY-CARDS](https://www.lifeprint.com/asl101/pages-signs/p/play-cards.htm)
+  more: +md:[play cards](https://www.lifeprint.com/asl101/pages-signs/p/play-cards.htm)
+  https://www.youtube.com/watch?v=T3jyHxtckAw play-CARDS / deal cards
+  https://www.youtube.com/watch?v=R21j8UqGNjo CARD / rectangle
 
 group:
   more: +md:[SECRET](https://www.lifeprint.com/asl101/pages-signs/s/secret.htm)
+  https://www.youtube.com/watch?v=ELNOdcy_1fE
+    SECRET / private / password / privacy / personal
 
-group:
-  more: +md:[SEARCH](https://www.lifeprint.com/asl101/pages-signs/s/search.htm)
+  tags: +extra
+  https://www.youtube.com/watch?v=izHqamODHIM keep-a-SECRET / I’m not telling
+  https://www.youtube.com/watch?v=jY5lxlGWklw
+    I’m not telling (finger-to-lips version)
+
+# SEARCH / seek was in lesson 18.
 
 group:
   more: +md:[SEEM](https://www.lifeprint.com/asl101/pages-signs/s/seem.htm)
+  https://www.youtube.com/watch?v=oaTwtikdiuE
+    SEEM / apparantly (1 movement version)
+    trim: 2F-65F
+  https://www.youtube.com/watch?v=-NuU5ieFphQ
+    seemingly / SEEM / apparantly (2 movement version)
+    trim: 12F-92F
+  # FIXME MIRROR?
 
 group:
   more: +md:[SHOW-UP](https://www.lifeprint.com/asl101/pages-signs/s/show-up.htm)
+  https://www.youtube.com/watch?v=UYkt4YgYcuE
+    SHOW-UP / appearance / appear / pop up / symptom
+    trim: 6F-57F
 
 group:
   more: +md:[SHY](https://www.lifeprint.com/asl101/pages-signs/s/shy.htm)
+  https://www.youtube.com/watch?v=O7dBt1V2b3Q SHY
+    trim: 3F-67F
 
 group:
   more: +md:[SMART](https://www.lifeprint.com/asl101/pages-signs/s/smart.htm)
+  https://www.youtube.com/watch?v=jSrpOyl3ASc
+    SMART / intelligent (index finger version)
+    trim: 7F-66F
+  https://www.youtube.com/watch?v=HduVfkAvx_M
+    SMART / intelligent / clever / bright (8-hand version)
+    trim: 12F-62F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=Yuc8uoiNDzs
+    MIND / sense / makes sense / brain / mental
+    trim: 18F-68F
+  https://www.youtube.com/watch?v=vnon88Fjhsg COMMON-SENSE
+    trim: 9F-56F
 
 group:
   more: +md:[STUPID](https://www.lifeprint.com/asl101/pages-signs/s/stupid.htm)
 
+# The lesson page links to WHITE, but the text of the link is “WHITE-FACED-
+# [pale, Caucasian]”, so CAUCASIAN makes more sense. (WHITE is in lesson 6).
 group:
-  more: +md:[WHITE](https://www.lifeprint.com/asl101/pages-signs/w/white.htm)
+  more: +md:[CAUCASIAN](https://www.lifeprint.com/asl101/pages-signs/c/caucasian.htm)
 
-group:
-  more: +md:[SELF](https://www.lifeprint.com/asl101/pages-signs/s/self.htm)
+# YOURSELF was covered in lesson 6.
