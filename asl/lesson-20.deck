@@ -114,10 +114,6 @@ group:
     trim: 2F-48F
   https://www.youtube.com/watch?v=xX62egU_O5k STRAIGHT-HAIR
     trim: 11F-70F
-  https://www.youtube.com/watch?v=h81FEVG0nKg BALD (circle head version)
-    trim: 17F-71F
-  https://www.youtube.com/watch?v=DOrfpxigC8U BALD (rub S-hand version)
-    trim: 21F-75F
 
   # I wonder if it makes sense to trim this list of extra signs? It’s huge.
   tags: +extra
@@ -140,10 +136,6 @@ group:
   https://www.youtube.com/watch?v=i1UOXQBV43c GRAY HAIR
     trim: 15F-75F
   # RED HAIR is basically just like GRAY HAIR, so I’m skipping it.
-  https://www.youtube.com/watch?v=aljVQQh2Il0 BALD (circle S-hand version)
-    trim: 17F-64F
-  https://www.youtube.com/watch?v=aZcAStRBjrI BALD (cueball version)
-    trim: 18F-72F
   https://www.youtube.com/watch?v=h6mob12oAvw DREADLOCKS
     trim: 18F-
   https://www.youtube.com/watch?v=3d_wO7zvDYY HAIR-BUN
@@ -154,10 +146,6 @@ group:
     trim: 14F-63F
   https://www.youtube.com/watch?v=s5zeqr1Y9jE FRIZZY-HAIR
     trim: 7F-63F
-  https://www.youtube.com/watch?v=J7FCsSQbWt0 HAIR-DRYER (H-hand version)
-    trim: 11F-
-  https://www.youtube.com/watch?v=HjD2eDJcGdw HAIR-DRYER (G-hand version)
-    trim: 10F-
   https://www.youtube.com/watch?v=rB4oK27oniY HAIR-SHEDDING / HAIR-FALLING-OUT
     trim: 9F-61F
   https://www.youtube.com/watch?v=n2oJvWhQ0ts COMB-HAIR
