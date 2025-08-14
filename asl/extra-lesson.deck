@@ -85,14 +85,10 @@ https://www.youtube.com/watch?v=9yoJHvDfj-4 BOTH
   trim: 0-64F
 https://www.youtube.com/watch?v=pYPZpBatN5c -> BOTH (C to S)
   trim: 9F-57F
-https://www.youtube.com/watch?v=Ft6JlxIIEP4 TOMATO
-  trim: 11F-60F
 https://www.youtube.com/watch?v=CcLvZ5buj68 CLAM
   trim: 4F-72F
 
-# Related to lesson 7 — food
-https://www.youtube.com/watch?v=mZVixrzz_MM MUSHROOM
-  trim: 16F-76F
+# Related to lesson 7 — food. One more in lesson 27 bonus vegetables deck.
 https://www.youtube.com/watch?v=sUNzESZAeto -> MUSHROOM
   trim: 14F-74F
 https://www.youtube.com/watch?v=uHf264ZBg48 -> MUSHROOM
@@ -160,11 +156,6 @@ group:
     trim: 15F-68F
 
 # From lesson 17 video (https://www.youtube.com/watch?v=GGZRweOqFtc)
-group:
-  more: +md:[CORN](https://www.lifeprint.com/asl101/pages-signs/c/corn.htm)
-  https://www.youtube.com/watch?v=-DYBrDwlwhw CORN
-    trim: 21F-80F
-
 group:
   more: +md:[SPAGHETTI](https://www.lifeprint.com/asl101/pages-signs/s/spaghetti.htm)
   https://www.youtube.com/watch?v=UMRY9wD37Yk SPAGHETTI / pasta / noodles
