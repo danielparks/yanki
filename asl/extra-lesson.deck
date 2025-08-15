@@ -207,6 +207,63 @@ group:
     STUCK / trapped / victim / unwanted pregnancy
     trim: 16F-60F
 
+# From lesson 27 video (https://www.youtube.com/watch?v=EQYWE1ZUt1o)
+group:
+  more: +md:[LEMON](https://www.lifeprint.com/asl101/pages-signs/l/lemon.htm)
+  https://www.youtube.com/watch?v=TIYO3ae3nQg LEMON
+    trim: 20F-61F
+
+https://www.youtube.com/watch?v=J2-ijucUMTY ->
+  CREAM (open to closed version) / EARN / deserve
+  trim: 6F-66F
+https://www.youtube.com/watch?v=-b9Zx5jEpMw CREAM (open to open version)
+  trim: 3F-47F
+
+group:
+  more: +md:[PEACH](https://www.lifeprint.com/asl101/pages-signs/p/peach.htm)
+  https://www.youtube.com/watch?v=XLv8TfJs_Ds PEACH
+    trim: 14F-74F
+  # No video for other version of PEACH.
+
+group:
+  more: +md:[BERRY](https://www.lifeprint.com/asl101/pages-signs/b/berry.htm)
+  https://www.youtube.com/watch?v=rLUHPaGzXp8 STRAWBERRY / BERRY
+    trim: 13F-62F
+  https://www.youtube.com/watch?v=rMF0qiUG96M CHERRY
+    trim: 11F-58F
+
+group:
+  more: +md:[teaspoon](https://www.lifeprint.com/asl101/pages-signs/t/teaspoon.htm)
+  https://www.youtube.com/watch?v=UtdL8Pkl3X8 @143F-183F T-S-P / teaspoon
+    slow: 0-3F * 3
+
+group:
+  more: +md:[tablespoon](https://www.lifeprint.com/asl101/pages-signs/t/tablespoon.htm)
+  # No video for T-B-S
+  # FIXME text <-> text
+
+# From lesson 27 part 2 video (https://www.youtube.com/watch?v=MEaYkcPywrQ)
+group:
+  more: +md:[BOIL](https://www.lifeprint.com/asl101/pages-signs/b/boil.htm)
+  https://www.youtube.com/watch?v=S-vlWxeOxr4 BOIL
+    trim: 10F-56F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=_hTsgrcfWGY
+    burning inside / BOIL-inside / fuming emotionally / boiling mad (idiomatic)
+    trim: 5F-71F
+  https://www.youtube.com/watch?v=Fick56kwkew
+    blow-top / lose temper / anger boil over (idiomatic)
+    trim: 29F-78F
+  https://www.youtube.com/watch?v=17PYhP-rGlc simmer / BOIL-small
+    trim: 13F-84F
+
+https://www.youtube.com/watch?v=dVXgo4HsNpY EVERYTHING
+  trim: 9F-76F
+
+https://www.youtube.com/watch?v=IIO1R8DMjfs average / median / MEDIUM
+  trim: 27F-101F
+
 # First 100 signs
 # https://www.lifeprint.com/asl101/pages-layout/concepts.htm
 https://www.youtube.com/watch?v=_8BuYOIPeIs FORK (2 tines version)
