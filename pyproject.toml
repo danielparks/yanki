@@ -38,6 +38,8 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/danielparks/yanki"
+Source = "https://github.com/danielparks/yanki"
+ChangeLog = "https://github.com/danielparks/yanki/blob/main/CHANGELOG.md"
 Issues = "https://github.com/danielparks/yanki/issues"
 
 [project.scripts]
