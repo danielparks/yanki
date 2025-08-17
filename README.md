@@ -1,8 +1,11 @@
-# Build [Anki] decks from text files containing YouTube URLs
+# Build flashcard decks from text files containing YouTube URLs
 
-Yanki makes it easy to build and maintain video flashcard decks for [Anki]. It
-can use local video or image files, or it can download videos from YouTube or
-any other source [yt-dlp] supports.
+Yanki makes it easy to build and maintain video flashcard decks. It can export
+decks to [Anki], or it can display flashcards in a simple web UI that can be
+hosted on any web server.
+
+Flashcards can use media from local video or image files, YouTube, or any other
+source [yt-dlp] supports.
 
 ## Installation
 
@@ -28,18 +31,28 @@ https://www.youtube.com/watch?v=zW8cpOVeKZ4 Are you deaf?
 https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
 ```
 
+### Web flashcard UI
+
+    uvx yanki serve-flashcards --open *.deck
+
+The `--open` flag will open your web browser to the correct URL on macOS and
+some Linux distributions (requires [xdg-utils]). If that doesn’t work, you can
+just open http://localhost:8000/ in your web browser.
+
+You can also save the web UI into a directory and serve it from any web browser:
+
+    uvx yanki save-flashcards my-export-dir *.deck
+
+### Anki export
+
 On macOS and some Linux distributions, you can make `yanki` open Anki and start
 the import of the new deck:
 
-```
-uvx yanki -v update basic.deck
-```
+    uvx yanki -v update basic.deck
 
 Otherwise, you can make it build an `.apkg` and then import that into Anki:
 
-```
-uvx yanki -v build -o basic.apkg basic.deck
-```
+    uvx yanki -v build -o basic.apkg basic.deck
 
 ## Deck file format
 
@@ -63,9 +76,7 @@ replace the Lifeprint lessons and vocabulary pages.
 This is a Python package that can be run with [`uvx`]. The most common usage is
 probably just to build your decks and import them to Anki. That’s as simple as:
 
-```
-uvx yanki update *.deck
-```
+    uvx yanki update *.deck
 
 You can see all the commands and options with `--help`:
 
@@ -120,6 +131,7 @@ Vicars][LP].
 [uv]: https://docs.astral.sh/uv/
 [`uvx`]: https://docs.astral.sh/uv/guides/tools/#running-tools
 [uv install]: https://docs.astral.sh/uv/getting-started/installation/
+[xdg-utils]: https://www.freedesktop.org/wiki/Software/xdg-utils/
 [REFERENCE.adoc]: REFERENCE.adoc
 [asl]: asl#readme
 [LP]: https://www.lifeprint.com

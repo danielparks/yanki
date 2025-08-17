@@ -1,7 +1,7 @@
 [project]
 name = "yanki"
 dynamic = ["readme", "version"]
-description = "Build Anki decks from text files containing YouTube URLs."
+description = "Build flashcard decks from text files containing YouTube URLs."
 authors = [{ name = "Daniel Parks", email = "oss-yanki@demonhorse.org" }]
 requires-python = ">= 3.11"
 license = "MIT OR Apache-2.0"
