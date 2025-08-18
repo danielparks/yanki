@@ -168,7 +168,8 @@ group:
 
 group:
   more: +md:[VIDEO](https://www.lifeprint.com/asl101/pages-signs/v/video.htm)
-  https://www.youtube.com/watch?v=AL5vDzEz4-k video-RECORD
+  https://www.youtube.com/watch?v=AL5vDzEz4-k VIDEO-record
+    trim: 23F-81F
 
 group:
   more: +md:[WEBCAM](https://www.lifeprint.com/asl101/pages-signs/w/webcam.htm)
