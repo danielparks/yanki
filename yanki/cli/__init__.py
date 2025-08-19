@@ -128,7 +128,18 @@ def main():  # noqa: C901 (complex)
 @click.version_option(__version__)
 @click.pass_context
 def cli(ctx, verbose, cache, reprocess, concurrency):
-    """Build Anki decks from text files containing YouTube URLs."""
+    """Build flashcard decks from text files containing YouTube URLs.
+
+    There are two ways to use flashcards built with Yanki:
+
+        1. With Anki <https://apps.ankiweb.net>. Use either `yanki update` to
+           export decks directly to Anki, or `yanki build` to build an .apkg
+           file that can be imported into Anki.
+
+        2. Through a web UI. Use `yanki serve-flashcards` to start a web server
+           you can visit at <http://localhost:8000/>, or save HTML into a
+           directory with `yanki save-flashcards`.
+    """
     if concurrency < 1:
         raise click.UsageError("--concurrency must be >= 1.")
 
