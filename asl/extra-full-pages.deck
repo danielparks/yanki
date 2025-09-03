@@ -190,6 +190,21 @@ group:
     trim: 13F-56F
 
 group:
+  more: +md:[CHARGE](https://www.lifeprint.com/asl101/pages-signs/c/charge.htm)
+  https://www.youtube.com/watch?v=KxUKbS8znTE
+    PLUG-in / charge / charge with (crime) / impeach / impeachment
+    trim: 11F-63F
+  https://www.youtube.com/watch?v=ItvMJOaNRTg
+    CHARGE / charge with (crime) / formally accuse / impeach
+    trim: 11F-68F
+  https://www.youtube.com/watch?v=tX734yhTHi8 CREDIT-CARD / charge credit card
+    trim: 7F-64F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=IGEb1SDw-tE CHARGING-BULL
+    trim: 10F-73F
+
+group:
   more: +md:[CHEAP](https://www.lifeprint.com/asl101/pages-signs/c/cheap.htm)
   https://www.youtube.com/watch?v=H-39q5BLM44 CHEAP / inexpensive
     trim: 7F-59F
@@ -531,6 +546,11 @@ group:
   more: +md:[FOX](https://www.lifeprint.com/asl101/pages-signs/f/fox.htm)
   https://www.youtube.com/watch?v=QptjrI9w0IQ FOX
     trim: 10F-67F
+
+group:
+  more: +md:[FROG](https://www.lifeprint.com/asl101/pages-signs/f/frog.htm)
+  https://www.youtube.com/watch?v=WKUEbjcYZdg FROG
+    trim: 6F-71F
 
 group:
   more: +md:[FRUGAL](https://www.lifeprint.com/asl101/pages-signs/f/frugal.htm)
