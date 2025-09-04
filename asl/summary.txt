@@ -969,10 +969,10 @@ Lifeprint ASL 98 PARAMETER: crop='in_h:in_h'
 Lifeprint ASL 98 PARAMETER: slow=(0.0, 0.1, 2.0)
 Lifeprint ASL 98 TAGS: 'Lifeprint numbers::91-100'
 Lifeprint ASL 98 TEXT: '98'
-Lifeprint ASL 99 MEDIA: 'youtube=M4AFC4eEjlQ/processed/media_youtube=M4AFC4eEjlQ_c3530a7f737c128fecd65c977fb2bdeb.mp4'
+Lifeprint ASL 99 MEDIA: 'youtube=M4AFC4eEjlQ/processed/media_youtube=M4AFC4eEjlQ_825ac8873a6e3cbe29035cef146ac2ca.mp4'
 Lifeprint ASL 99 MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU <a href="https://www.lifeprint.com/asl101/pages-signs/n/numbers31-40.htm">Numbers\n31–40</a></p>\n'
 Lifeprint ASL 99 PARAMETER: audio='strip'
-Lifeprint ASL 99 PARAMETER: clip=(172.00516666666667, 173.4733)
+Lifeprint ASL 99 PARAMETER: clip=(171.7716, 173.4733)
 Lifeprint ASL 99 PARAMETER: crop='in_h:in_h'
 Lifeprint ASL 99 PARAMETER: slow=(0.0, 0.1, 2.0)
 Lifeprint ASL 99 TAGS: 'Lifeprint numbers::91-100'
@@ -9241,9 +9241,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=WlGF00cLjhM @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=WlGF00cLjhM @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=WlGF00cLjhM @0- TAGS: 'Lifeprint lesson_24 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=WlGF00cLjhM @0- TEXT: 'LEAF (CL:5)'
-Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- MEDIA: 'youtube=Wlk4x85bHtI/processed/media_youtube=Wlk4x85bHtI_e3b68cc56ed1ef0423878e759b20555d.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- MEDIA: 'youtube=Wlk4x85bHtI/processed/media_youtube=Wlk4x85bHtI_b4b82a535fae1a1169605cbbd8d15f29.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson22.htm">lesson 22</a></p>\n<h3>Some Deaf receive government assistance, why?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- PARAMETER: clip=(0.9342666666666667, 3.9039)
 Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=Wlk4x85bHtI @0- TAGS: 'Lifeprint lesson_22 phrase'
