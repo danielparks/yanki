@@ -3,6 +3,7 @@
 set -e -o pipefail
 
 cache_prefix=${YANKI_CACHE:-$HOME/.cache/yanki/}
+temp_out=$(mktemp)
 
 yanki list-notes -f '{note_id} MEDIA: {media_paths!r}
 {note_id} MORE: {more!r}
@@ -23,6 +24,10 @@ yanki list-notes -f '{note_id} MEDIA: {media_paths!r}
   }
   // { print }' \
 | LC_COLLATE=C sort \
->asl/summary.txt
+>"$temp_out"
+
+# Update all at once so that yanki failing, or killing script this in the middle
+# of a run doesn’t produce an empty file.
+mv "$temp_out" asl/summary.txt
 
 git --no-pager diff --no-ext-diff --word-diff-regex=. -U1 --color=always asl/summary.txt
