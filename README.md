@@ -33,6 +33,12 @@ https://www.youtube.com/watch?v=xqKENRGkOUQ Are you a student?
 
 ### Web flashcard UI
 
+You can try a demo of the web UI at <http://demon.horse/portfolio/yanki/ui/>.
+
+![Screenshot of web UI](demo/web-ui.jpg)
+
+To open your flashcard decks in the web UI:
+
     uvx yanki serve-flashcards --open *.deck
 
 The `--open` flag will open your web browser to the correct URL on macOS and
