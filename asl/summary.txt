@@ -4149,9 +4149,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=BEfH2a6OfRA @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=BEfH2a6OfRA @0- PARAMETER: crop='852:478:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=BEfH2a6OfRA @0- TAGS: 'Lifeprint lesson_03 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=BEfH2a6OfRA @0- TEXT: 'ALL / whole / entire'
-Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- MEDIA: 'youtube=BFUgIKY8XXI/processed/media_youtube=BFUgIKY8XXI_e3b68cc56ed1ef0423878e759b20555d.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- MEDIA: 'youtube=BFUgIKY8XXI/processed/media_youtube=BFUgIKY8XXI_0a5d1858158d9d24afa76e7e2b0713e0.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson12.htm">lesson 12</a></p>\n<h3>Do you think life is fair for all people?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- PARAMETER: clip=(0.9342666666666667, 8.008000000000001)
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=BFUgIKY8XXI @0- TAGS: 'Lifeprint lesson_12 phrase'
