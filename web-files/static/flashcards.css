@@ -37,10 +37,6 @@ button:disabled:hover {
   background: #fff;
 }
 
-#directory > a {
-  display: none;
-}
-
 #directory > main {
   box-sizing: border-box;
   width: 100%;
@@ -50,14 +46,24 @@ button:disabled:hover {
   overflow: auto;
 }
 
+#directory > main > h1 {
+  display: none;
+}
+
 .no-deck #directory {
   width: 100%;
   max-width: 100%;
   border-right: none;
 }
 
-.no-deck #directory > a {
-  display: none;
+.no-deck #directory > main {
+  border-right: none;
+  padding: 0 50px;
+}
+
+.no-deck #directory > main > h1 {
+  display: block;
+  margin: 20px 0;
 }
 
 #directory ol {
