@@ -12,6 +12,14 @@ group:
     trim: 11F-75F
 
 group:
+  more: +md:[AFRICA](https://www.lifeprint.com/asl101/pages-signs/a/africa.htm)
+  https://www.youtube.com/watch?v=ZyH7kuEa18Q AFRICA (shape version)
+    trim: 19F-78F
+  https://www.youtube.com/watch?v=qtVdE7tBGsU
+    -> AFRICA (beautiful/face version, old)
+    trim: 11F-69F
+
+group:
   more: +md:[AGAINST](https://www.lifeprint.com/asl101/pages-signs/a/against.htm)
   https://www.youtube.com/watch?v=Oi6KM2rmbq4 AGAINST / opposed / anti-
     trim: 17F-63F
@@ -929,6 +937,13 @@ group:
   more: +md:[REST](https://www.lifeprint.com/asl101/pages-signs/r/rest.htm)
   https://www.youtube.com/watch?v=5wJ-UMQfp84 REST / relax / leisure
   # No video for initialized version.
+
+group:
+  more: +md:[ROOF](https://www.lifeprint.com/asl101/pages-signs/r/roof.htm)
+  https://www.youtube.com/watch?v=gMWBLeAN2hQ ROOF-of-house
+    trim: 15F-92F
+  https://www.youtube.com/watch?v=l1Mlqc3D1Tg R-O-O-F
+    trim: 20F-72F
 
 group:
   more: +md:[RUDE](https://www.lifeprint.com/asl101/pages-signs/r/rude.htm)
