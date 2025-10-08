@@ -341,20 +341,27 @@ window.addEventListener("load", (event) => {
     }
   }
 
-  function tree_to_li(node) {
-    var name_label = text(node.segment);
-    if (node.path) {
-      name_label = create("a", [name_label], {
-        href: get_deck_href(node.path),
-        onclick: directory_deck_click,
-      });
-    } else {
-      name_label = create("span", [name_label]);
-    }
-    return create("li", [
-      name_label,
-      create("ol", node.children.map(tree_to_li)),
-    ]);
+  function trees_to_ol(nodes) {
+    return create("ol", nodes.map((node) => {
+      var name_label = text(node.segment);
+      if (node.path) {
+        name_label = create("a", [name_label], {
+          href: get_deck_href(node.path),
+          onclick: directory_deck_click,
+        });
+      } else {
+        name_label = create("span", [name_label]);
+      }
+
+      if (node.children) {
+        return create("li", [
+          name_label,
+          trees_to_ol(node.children),
+        ]);
+      } else {
+        return create("li", [ name_label ]);
+      }
+    }));
   }
 
   document
@@ -363,8 +370,8 @@ window.addEventListener("load", (event) => {
       load_params(parse_hash("#"));
     });
 
-  var directory = document.querySelector("#directory > main > ol");
-  directory.append(tree_to_li(JSON.parse(get_id("decks-json").innerText)));
+  var directory = document.querySelector("#directory > main");
+  directory.append(trees_to_ol(JSON.parse(get_id("decks-json").innerText)));
 
   var title = get_id("title");
 

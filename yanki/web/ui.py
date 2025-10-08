@@ -72,8 +72,7 @@ def save_flashcard_html_to(
         tree(
             deck_index,
             key=lambda deck: deck["title"].split("::"),
-            root_name="Decks",
-        ),
+        ).sorted_children(),
         default=tree_node_json_encoder,
     )
 
