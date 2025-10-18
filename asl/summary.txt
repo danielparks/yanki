@@ -9167,6 +9167,13 @@ Lifeprint ASL https://www.youtube.com/watch?v=WOSoJ1zFoiM @0- PARAMETER: crop='1
 Lifeprint ASL https://www.youtube.com/watch?v=WOSoJ1zFoiM @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=WOSoJ1zFoiM @0- TAGS: 'Lifeprint lesson_05 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=WOSoJ1zFoiM @0- TEXT: 'YOU COME HERE HOW?'
+Lifeprint ASL https://www.youtube.com/watch?v=WTSt-oSO6Ng @0- MEDIA: 'youtube=WTSt-oSO6Ng/processed/media_youtube=WTSt-oSO6Ng_13ded74f34dd96d43892bea3bf42b083.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=WTSt-oSO6Ng @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/p/promise.htm">PROMISE</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=WTSt-oSO6Ng @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=WTSt-oSO6Ng @0- PARAMETER: clip=(0.64, 2.6)
+Lifeprint ASL https://www.youtube.com/watch?v=WTSt-oSO6Ng @0- PARAMETER: crop='1920:1080:0:0'
+Lifeprint ASL https://www.youtube.com/watch?v=WTSt-oSO6Ng @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=WTSt-oSO6Ng @0- TEXT: 'PROMISE / confirm / assure'
 Lifeprint ASL https://www.youtube.com/watch?v=WV5Vw9bUfOg @0- MEDIA: 'youtube=WV5Vw9bUfOg/processed/media_youtube=WV5Vw9bUfOg_68aecfc6b7101b7296d93b1e3d02ad99.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=WV5Vw9bUfOg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson14.htm">lesson 14</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/w/weather.htm">WEATHER</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=WV5Vw9bUfOg @0- PARAMETER: audio='strip'
