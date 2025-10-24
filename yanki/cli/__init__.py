@@ -192,7 +192,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     "-o",
     "--output",
     type=WritableFilePath(),
-    help="Path to save decks to. Defaults to saving indivdual decks to their "
+    help="Path to save decks to. Defaults to saving individual decks to their "
     "own files named after their sources, but with the extension .apkg.",
 )
 @click.pass_obj

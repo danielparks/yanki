@@ -67,7 +67,7 @@ def copy_into(source: Path, directory: Path) -> Path:
     This will replace existing files. It sets the permissions on destination
     file to `0o644` and directories to `0o755`.
 
-    Retuns a `Path` to the new file.
+    Returns a `Path` to the new file.
     """
     destination = directory / source.name
     if source.is_dir():
@@ -154,7 +154,7 @@ def hardlink_into(source: Path, directory: Path) -> Path:
     This will remove existing files that are in the way if they don’t already
     link to the right place.
 
-    Retuns a `Path` to the newly linked file.
+    Returns a `Path` to the newly linked file.
     """
 
     # FIXME use shutil.copy2 if hardlink doesn’t work
@@ -244,7 +244,7 @@ def symlink_into(source: Path, directory: Path) -> Path:
     This handles duplicate links, and raises `FileExistsError` with a reasonable
     message if there is a conflict.
 
-    Retuns a `Path` to the new symlink.
+    Returns a `Path` to the new symlink.
     """
     link_path = directory / source.name
     try:

@@ -1,0 +1,7 @@
+# Configure https://github.com/crate-ci/typos
+[default]
+extend-ignore-re = [
+  "(?Rm)^.*(#|//)\\s*typos:ignore-line$",
+  "(?s)(#|//)\\s*typos:ignore-start.*?\\n\\s*(#|//)\\s*typos:ignore-end",
+  "(#|//)\\s*typos:ignore-next-line\\n.*"
+]

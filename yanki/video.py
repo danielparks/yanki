@@ -281,7 +281,7 @@ class Video:
             spec = spec[1:]
             sign = -1
 
-        # FIXME? this acccepts 3.3:500:67.8:0:1.2
+        # FIXME? this accepts 3.3:500:67.8:0:1.2
         sum = 0
         for part in spec.split(":"):
             sum = sum * 60 + float(part)

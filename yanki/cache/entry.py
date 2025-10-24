@@ -223,7 +223,7 @@ class Entry:
         return self.value
 
     @functools.cached_property
-    def cache(self) -> "Cache":  # noqa: F821 circlular dependency
+    def cache(self) -> "Cache":  # noqa: F821 circular dependency
         return getattr(self.object, self.cache_attr)
 
     def resolve_cache_path(self):

@@ -69,7 +69,7 @@ def test_trailing_colon():
     assert find_url("foo https://example.com/:\nbar") == "https://example.com/"
 
 
-def test_preceeding_lt():
+def test_preceding_lt():
     assert find_url("<https://example.com/ more") == "https://example.com/"
 
 

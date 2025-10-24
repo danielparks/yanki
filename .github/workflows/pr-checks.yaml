@@ -7,6 +7,10 @@ on:
       - main
   pull_request:
 
+env:
+  # Enable color in typos
+  CLICOLOR: 1
+
 jobs:
   format:
     name: ruff format
@@ -37,3 +41,11 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - run: uv python install
       - run: uv run pytest --color=yes
+
+  typos:
+    name: typos
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: crate-ci/typos@v1.38.1

@@ -126,8 +126,8 @@ async def test_cached_json_reload_async():
 
 
 def test_cached_json_version():
-    REFERENCE1 = {"a": "REFERENCEa"}  # noqa: N806 uppercase
-    REFERENCE2 = {"b": "REFERENCEb"}  # noqa: N806 uppercase
+    REFERENCE1 = {"a": "REFERENCE_a"}  # noqa: N806 uppercase
+    REFERENCE2 = {"b": "REFERENCE_b"}  # noqa: N806 uppercase
     cache = Cache()
 
     @dataclass

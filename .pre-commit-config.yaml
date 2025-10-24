@@ -26,6 +26,12 @@ repos:
       - id: ruff-check
       - id: ruff-format
         args: ["--check"]
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.38.1
+    hooks:
+      - id: typos
+        args: []
+        exclude: '^asl/summary[.]txt$'
   - repo: local
     hooks:
       - id: generate-summary.sh

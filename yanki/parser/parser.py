@@ -211,7 +211,7 @@ class NoteParser(SubParser):
         # Quotes can be used to prevent a line from being a config directive.
         line_chomped = line.rstrip("\n\r")
         if line.startswith('"') and line_chomped.endswith('"'):
-            # Stip quotes, but add the newline back:
+            # Strip quotes, but add the newline back:
             line = line_chomped[1:-1] + line[len(line_chomped) :]
 
         self.text.append(line)
