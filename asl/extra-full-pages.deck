@@ -629,6 +629,13 @@ group:
   # No video for EAVESDROP.
 
 group:
+  more: +md:[HISTORY](https://www.lifeprint.com/asl101/pages-signs/h/history.htm)
+  https://www.youtube.com/watch?v=sGyX9V8ek_s
+    HISTORY / historical (one hand version)
+    trim: 2F-62F
+  # No video for two hand version.
+
+group:
   more: +md:[HOMEWORK](https://www.lifeprint.com/asl101/pages-signs/h/homework.htm)
   https://www.youtube.com/watch?v=AhwgtWiATWE HOMEWORK
     trim: 9F-75F
