@@ -22,12 +22,25 @@ group:
 
 group:
   more: +md:[COPY](https://www.lifeprint.com/asl101/pages-signs/c/copy.htm)
+  https://www.youtube.com/watch?v=dm0PExvlbKY COPY / photocopy
+    trim: 9F-
+  https://www.youtube.com/watch?v=XNkqOrWrReI COPY-me
+    trim: 26F-88F
+  # No video for other versions of this sign.
 
 group:
   more: +md:[DIAPER](https://www.lifeprint.com/asl101/pages-signs/d/diaper.htm)
+  https://www.youtube.com/watch?v=s8VxtVSQ_XI DIAPER
+    trim: 13F-
 
 group:
   more: +md:[DOTS](https://www.lifeprint.com/asl101/pages-signs/d/dots.htm)
+  https://www.youtube.com/watch?v=yUzKJbAnfnc DOTTED-[shirt] (CL:C)
+    trim: 10F-62F
+  https://www.youtube.com/watch?v=-Gk3wcynOGI DOTTED-[shirt] (CL:F)
+    trim: 14F-66F
+  https://www.youtube.com/watch?v=j5vcvfvwOn8 DOTTED-[upright-surface] (CL:F)
+    trim: 14F-78F
 
 # DRESS was in lesson 8.
 
