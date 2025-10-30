@@ -804,12 +804,11 @@ group:
     trim: 13F-66F
   https://www.youtube.com/watch?v=hxvnNhay64c PARTNERSHIP (non-romantic)
     trim: 5F-70F
-  https://www.youtube.com/watch?v=cMlRLyAmpZc ROOMMATE / partner (non-romantic)
-    trim: 12F-72F
   https://www.youtube.com/watch?v=zYc7JHABcwg PAIR / COUPLE
     trim: 10F-55F
   https://www.youtube.com/watch?v=zMBQJAu7l_g SWEETHEART
     trim: 5F-55F
+  # ROOMMATE is now under MATCH in lesson 28.
 
 group:
   more: +md:[PARTY](https://www.lifeprint.com/asl101/pages-signs/p/party.htm)

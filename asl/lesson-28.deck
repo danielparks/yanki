@@ -57,16 +57,36 @@ group:
   more: +md:[HAT](https://www.lifeprint.com/asl101/pages-signs/h/hat.htm)
   https://www.youtube.com/watch?v=bul0cjvDEEE HAT
     trim: 14F-75F
-  # FIXME: incomplete
+
+  tags: +extra
+  https://www.youtube.com/watch?v=cIOyK7OFExE wide-brim-HAT
+    trim: 22F-98F
+  https://www.youtube.com/watch?v=t2CFbQZEXjA ball-cap-HAT
+    trim: 20F-96F
+  https://www.youtube.com/watch?v=g8x5gzHu68Q beanie-HAT
+    trim: 10F-83F
+  https://www.youtube.com/watch?v=fcNajf2Y8U0 news-boy-HAT
+    trim: 21F-98F
+  https://www.youtube.com/watch?v=WRJGxhC8RzQ HIJAB / head wrap / head scarf
+    trim: 14F-81F
+  https://www.youtube.com/watch?v=Dar3Xo_qL38 tip my hat to you (idiomatic)
+    trim: 6F-70F
 
 group:
   more: +md:[MATCH](https://www.lifeprint.com/asl101/pages-signs/m/match.htm)
   https://www.youtube.com/watch?v=vN9YMc4XGOw MATCH / fit / combine
     trim: 14F-62F
-  # FIXME check that other signs are in lessons
+  https://www.youtube.com/watch?v=cMlRLyAmpZc ROOMMATE / partner (non-romantic)
+    trim: 12F-72F
+  # LIGHT-A-MATCH was an extra card in lesson 9.
 
 group:
   more: +md:[NECKLACE](https://www.lifeprint.com/asl101/pages-signs/n/necklace.htm)
+  # No separate videos for these. This version of necklace (moving down the
+  # the chest and inward) matches the page.
+  https://www.youtube.com/watch?v=w-DQW1kFKL4 @18F-62F NECKLACE
+  https://www.youtube.com/watch?v=2QDFcxU3RtQ @81F-101F BRACELET
+    slow: 15F- *4
 
 group:
   more: +md:[PLAID](https://www.lifeprint.com/asl101/pages-signs/p/plaid.htm)
