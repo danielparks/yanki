@@ -92,13 +92,21 @@ group:
   more: +md:[PLAID](https://www.lifeprint.com/asl101/pages-signs/p/plaid.htm)
   https://www.youtube.com/watch?v=Yd8GXz_nrMA PLAID
     trim: 5F-
-  # FIXME add SCOTLAND
+  https://www.youtube.com/watch?v=dpNJGTWbMig SCOTLAND
+    trim: 15F-68F
 
 group:
   more: +md:[SCARF](https://www.lifeprint.com/asl101/pages-signs/s/scarf.htm)
+  https://www.youtube.com/watch?v=MUlh0wHEH60 @20F-51F SCARF
+    slow: 28F- *3
 
 group:
   more: +md:[SEW](https://www.lifeprint.com/asl101/pages-signs/s/sew.htm)
+  https://www.youtube.com/watch?v=aMaofqtclMw SEW-by-hand
+    trim: 6F-74F
+  https://www.youtube.com/watch?v=0nWWoCRCGPg SEW-by-machine
+    trim: 14F-85F
+  # No video for SEWING-MACHINE
 
 group:
   more: +md:[SHAVE](https://www.lifeprint.com/asl101/pages-signs/s/shave.htm)
@@ -128,7 +136,15 @@ group:
   more: +md:[TIE](https://www.lifeprint.com/asl101/pages-signs/t/tie.htm)
   https://www.youtube.com/watch?v=5KkAKN27ygg TIE / NECKWARE
     trim: 34F-80F
-  # FIXME incomplete
+  https://www.youtube.com/watch?v=dTU33gNSIbY BOW-TIE / tuxedo
+    trim: 8F-
+
+  tags: +extra
+  https://www.youtube.com/watch?v=JcZO0S3DfoI large-BOW-TIE-on-shirt
+    trim: 6F-70F
+  https://www.youtube.com/watch?v=1BJk6BOMGmU
+    WRAP-UP / TIE-up / conclude-end-[idiomatic]
+    trim: 12F-67F
 
 group:
   more: +md:[TOUCH](https://www.lifeprint.com/asl101/pages-signs/t/touch.htm)
@@ -147,7 +163,6 @@ group:
   # The lesson links to the WET-WIPES page, but the WET page covers the same
   # signs more comprehensively.
   more: +md:[WET](https://www.lifeprint.com/asl101/pages-signs/w/wet.htm)
-  # No video for neutral WET. FIXME check SOFT
   https://www.youtube.com/watch?v=5Ns7zdDWcbg unpleasantly-WET
     trim: 9F-61F
   https://www.youtube.com/watch?v=0mM6JGIaKpA WET WIPES (butt version)
@@ -156,3 +171,5 @@ group:
     trim: 5F-
   https://www.youtube.com/watch?v=_z11N9p0Xik -> WET W-I-P-E-S
     trim: 5F-
+  https://www.youtube.com/watch?v=6-NPJ5P01Dw SOFT / WET
+    trim: 13F-72F
