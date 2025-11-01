@@ -124,9 +124,13 @@ group:
   https://www.youtube.com/watch?v=NF_jrhLKWlY YOURSELF / SELF / your own
     trim: 34F-84F
   https://www.youtube.com/watch?v=TzNk3Yl2tMw MYSELF / my own
+    trim: 14F-53F
   https://www.youtube.com/watch?v=RiypOflHvXQ ITSELF / its own
-  https://www.youtube.com/watch?v=n5NIhFE3wy4 THEMSELVES / their own
+    trim: 17F-59F
+  https://www.youtube.com/watch?v=n5NIhFE3wy4 THEMSELVES / their own (plural)
+    trim: 11F-67F
   https://www.youtube.com/watch?v=4zMWHsJlHGg OURSELVES / our own
+    trim: 9F-59F
 
 group:
   more: +md:[TOMORROW](https://www.lifeprint.com/asl101/pages-signs/t/tomorrow.htm)
