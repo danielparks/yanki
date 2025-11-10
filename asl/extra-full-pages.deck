@@ -427,6 +427,11 @@ group:
     trim: 16F-74F
 
 group:
+  more: +md:[DUMB](https://www.lifeprint.com/asl101/pages-signs/d/dumb.htm)
+  https://www.youtube.com/watch?v=vow9UwL-hS8 DUMB
+    trim: 16F-61F
+
+group:
   more: +md:[DUTY](https://www.lifeprint.com/asl101/pages-signs/d/duty.htm)
   https://www.youtube.com/watch?v=EZj07NEY8I4 DUTY
 
@@ -1089,6 +1094,21 @@ group:
   more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
   https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
     trim: 13F-68F
+
+group:
+  more: +md:[STUPID](https://www.lifeprint.com/asl101/pages-signs/s/stupid.htm)
+  https://www.youtube.com/watch?v=hZE-2WNybKs STUPID (one-handed version)
+    trim: 13F-57F
+
+  # Not covered on page
+  tags: +extra
+  https://www.youtube.com/watch?v=GkZhBJMYR0M STUPID (two-handed version)
+    trim: 13F-58F
+  https://www.youtube.com/watch?v=aRrjeL0YCCc
+    STUPID (two-handed crossed-V version)
+    trim: 8F-54F
+  https://www.youtube.com/watch?v=NBZX_tzCxL4 CLUELESS / stupid
+    trim: 23F-80F
 
 group:
   more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/support.htm)
