@@ -10657,13 +10657,6 @@ Lifeprint ASL https://www.youtube.com/watch?v=aQ3JNyVy5ik @0- PARAMETER: crop='1
 Lifeprint ASL https://www.youtube.com/watch?v=aQ3JNyVy5ik @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=aQ3JNyVy5ik @0- TAGS: 'Lifeprint lesson_11 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=aQ3JNyVy5ik @0- TEXT: 'YOU FEEL NERVOUS, WHEN?'
-Lifeprint ASL https://www.youtube.com/watch?v=aRrjeL0YCCc @0- MEDIA: 'youtube=aRrjeL0YCCc/processed/media_youtube=aRrjeL0YCCc_cd5453443abfcff46d93eaca10beeed6.mp4'
-Lifeprint ASL https://www.youtube.com/watch?v=aRrjeL0YCCc @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/s/stupid.htm">STUPID</a></p>\n'
-Lifeprint ASL https://www.youtube.com/watch?v=aRrjeL0YCCc @0- PARAMETER: audio='strip'
-Lifeprint ASL https://www.youtube.com/watch?v=aRrjeL0YCCc @0- PARAMETER: clip=(0.26693333333333336, 1.8018)
-Lifeprint ASL https://www.youtube.com/watch?v=aRrjeL0YCCc @0- PARAMETER: crop='1920:1080:0:0'
-Lifeprint ASL https://www.youtube.com/watch?v=aRrjeL0YCCc @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
-Lifeprint ASL https://www.youtube.com/watch?v=aRrjeL0YCCc @0- TEXT: 'STUPID (two-handed crossed-V version)'
 Lifeprint ASL https://www.youtube.com/watch?v=aS3IcUMDjZU @0- MEDIA: 'youtube=aS3IcUMDjZU/processed/media_youtube=aS3IcUMDjZU_e3b68cc56ed1ef0423878e759b20555d.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=aS3IcUMDjZU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson24.htm">lesson 24</a></p>\n<h3>How can you improve your signing?</h3>\n<p>or, depending on context</p>\n<h3>Your signing has improved. How did you do it?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=aS3IcUMDjZU @0- PARAMETER: audio='strip'
