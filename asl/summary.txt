@@ -15564,9 +15564,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=u33E8wPkfyU @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=u33E8wPkfyU @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=u33E8wPkfyU @0- TAGS: 'Lifeprint lesson_09 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=u33E8wPkfyU @0- TEXT: 'FLASH-THE-LIGHTS'
-Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- MEDIA: 'youtube=u3xYMeKi63Y/processed/media_youtube=u3xYMeKi63Y_39320f8a069bab69914357d2e9f46d90.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- MEDIA: 'youtube=u3xYMeKi63Y/processed/media_youtube=u3xYMeKi63Y_0dfb54d77172a7cf9a2bac99a2994f56.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson26.htm">lesson 26</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/mountain.htm">MOUNTAIN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- PARAMETER: clip=(0.5005000000000001, 2.6693333333333333)
 Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- TAGS: 'Lifeprint lesson_26 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=u3xYMeKi63Y @0- TEXT: 'MOUNTAIN / ROCK + SLOPE'
@@ -16182,9 +16183,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- PARAMETER: crop='1
 Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- TAGS: 'Lifeprint lesson_01 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=wRUMbRLiN88 @0- TEXT: 'STUDENT, [that-person]?'
-Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- MEDIA: 'youtube=wT3G58lY3_A/processed/media_youtube=wT3G58lY3_A_39320f8a069bab69914357d2e9f46d90.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- MEDIA: 'youtube=wT3G58lY3_A/processed/media_youtube=wT3G58lY3_A_8fb00c487f1845751264dac9723f88e4.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson26.htm">lesson 26</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/m/mountain.htm">MOUNTAIN</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- PARAMETER: clip=(0.9342666666666667, 3.036366666666667)
 Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- TAGS: 'Lifeprint lesson_26 vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=wT3G58lY3_A @0- TEXT: 'ROCK / stone (back of hand version)'
