@@ -9,13 +9,18 @@ source [yt-dlp] supports.
 
 ## Installation
 
-You will need `ffmpeg` installed to use Yanki. On macOS, install it from
-[ffmpeg.org] or with [`brew install ffmpeg`]. On Linux or Windows, try
-installing [yt-dlp’s ffmpeg].
+There are a few prerequisites needed to use Yanki:
 
-I recommend using [`uvx`] run Yanki. `uvx` is part of [uv], which can be
-[installed][uv install] a number of ways, but it’s probably simplest to install
-`uv` through your package manager, e.g. [`brew install uv`] on macOS.
+  * **`python`**: This may be built into your system, but I recommend using
+    [`uvx`] run Yanki. `uvx` is part of [uv], which can be [installed][uv
+    install] a number of ways, but it’s probably simplest to install `uv`
+    through your package manager, e.g. [`brew install uv`] on macOS.
+  * **`ffmpeg`**: On macOS, install it with [`brew install ffmpeg`] or from
+    [ffmpeg.org]. On Linux or Windows, try installing it from a package manager
+    or [yt-dlp’s ffmpeg].
+  * **`deno` (only needed for YouTube downloads)**: On macOS, install it with
+    [`brew install deno`] or from [deno.com]. On Linux or Windows, try
+    installing it from a package manager or [deno.com].
 
 ## Quick start
 
@@ -142,6 +147,8 @@ Vicars][LP].
 [yt-dlp]: https://github.com/yt-dlp/yt-dlp
 [ffmpeg.org]: https://www.ffmpeg.org
 [`brew install ffmpeg`]: https://formulae.brew.sh/formula/ffmpeg#default
+[`brew install deno`]: https://formulae.brew.sh/formula/deno#default
+[deno.com]: https://docs.deno.com/runtime/getting_started/installation/
 [`brew install uv`]: https://formulae.brew.sh/formula/uv#default
 [yt-dlp’s ffmpeg]: https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds
 [uv]: https://docs.astral.sh/uv/
