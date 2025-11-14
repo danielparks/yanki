@@ -539,6 +539,11 @@ group:
     trim: 10F-83F
 
 group:
+  more: +md:[FAMOUS](https://www.lifeprint.com/asl101/pages-signs/f/famous.htm)
+  https://www.youtube.com/watch?v=u28F_Vo2z2k FAMOUS
+    trim: 9F-
+
+group:
   more: +md:[FANCY](https://www.lifeprint.com/asl101/pages-signs/f/fancy.htm)
   https://www.youtube.com/watch?v=XfGTE4a91QE FANCY / stylish / luxury
     trim: 2F-61F
@@ -830,6 +835,11 @@ group:
     trim: 5F-80F
   https://www.youtube.com/watch?v=qnB7FWefQoQ impatient / NONE PATIENCE
     trim: 8F-56F
+
+group:
+  more: +md:[PATIENT](https://www.lifeprint.com/asl101/pages-signs/p/patient.htm)
+  https://www.youtube.com/watch?v=GpwqfknHObE medical-PATIENT
+    trim: 30F-86F
 
 group:
   more: +md:[PAUSE](https://www.lifeprint.com/asl101/pages-signs/p/pause.htm)
