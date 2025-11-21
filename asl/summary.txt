@@ -4594,9 +4594,10 @@ Lifeprint ASL https://www.youtube.com/watch?v=Cph1Vk3lFXk @0- PARAMETER: clip=(0
 Lifeprint ASL https://www.youtube.com/watch?v=Cph1Vk3lFXk @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=Cph1Vk3lFXk @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
 Lifeprint ASL https://www.youtube.com/watch?v=Cph1Vk3lFXk @0- TEXT: 'SPAIN (chest version)'
-Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- MEDIA: 'youtube=Czv0FEriKBU/processed/media_youtube=Czv0FEriKBU_e3b68cc56ed1ef0423878e759b20555d.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- MEDIA: 'youtube=Czv0FEriKBU/processed/media_youtube=Czv0FEriKBU_ae6c3ce772f276404c8b87bf5e080a27.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson10.htm">lesson 10</a></p>\n<h3>What do dogs like to chase?</h3>\n<p>CAR, CAT, BIKE</p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- PARAMETER: clip=(0.9009, 5.271933333333333)
 Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- PARAMETER: crop='1920:1080:0:0'
 Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=Czv0FEriKBU @0- TAGS: 'Lifeprint lesson_10 phrase'
