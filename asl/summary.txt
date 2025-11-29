@@ -6682,6 +6682,13 @@ Lifeprint ASL https://www.youtube.com/watch?v=L1JBkF-jm5g @0- PARAMETER: crop='1
 Lifeprint ASL https://www.youtube.com/watch?v=L1JBkF-jm5g @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=L1JBkF-jm5g @0- TAGS: 'Lifeprint lesson_02 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=L1JBkF-jm5g @0- TEXT: 'YOU MARRIED?'
+Lifeprint ASL https://www.youtube.com/watch?v=L2bLPu92wJs @0- MEDIA: 'youtube=L2bLPu92wJs/processed/media_youtube=L2bLPu92wJs_5881b6a889a96e2cb1701c7ccc4e2870.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=L2bLPu92wJs @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/r/ringing.htm">RINGING</a></p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=L2bLPu92wJs @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=L2bLPu92wJs @0- PARAMETER: clip=(0.3003, None)
+Lifeprint ASL https://www.youtube.com/watch?v=L2bLPu92wJs @0- PARAMETER: crop='1920:1080:0:0'
+Lifeprint ASL https://www.youtube.com/watch?v=L2bLPu92wJs @0- TAGS: 'Lifeprint extra extra-deck extra-deck-full vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=L2bLPu92wJs @0- TEXT: 'RINGING / alarm'
 Lifeprint ASL https://www.youtube.com/watch?v=L5BctWiop9I @0- MEDIA: 'youtube=L5BctWiop9I/processed/media_youtube=L5BctWiop9I_a011a42fa001556c1766857a1b93b2cd.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=L5BctWiop9I @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson23.htm">lesson 23</a></p>\n<h3>Where is the cafeteria?</h3>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=L5BctWiop9I @0- PARAMETER: audio='strip'
