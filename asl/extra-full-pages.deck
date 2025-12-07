@@ -427,6 +427,15 @@ group:
     trim: 16F-74F
 
 group:
+  more: +md:[DRUNK](https://www.lifeprint.com/asl101/pages-signs/d/drunk.htm)
+  https://www.youtube.com/watch?v=zZQSa3h05ts DRUNK (A-hand version)
+    trim: 7F-65F
+  https://www.youtube.com/watch?v=fFh_jd3NjQU
+    DRUNK (4-hand version) / tipsy / buzzed
+    trim: 10F-62F
+  # No video for alcoholic that I can see.
+
+group:
   more: +md:[DUMB](https://www.lifeprint.com/asl101/pages-signs/d/dumb.htm)
   https://www.youtube.com/watch?v=vow9UwL-hS8 DUMB
     trim: 16F-61F
@@ -1043,6 +1052,12 @@ group:
     trim: 10F-74F
   https://www.youtube.com/watch?v=7yJl8tjBmSY ROLLER-BLADE
     trim: 13F-64F
+
+group:
+  more: +md:[SKI](https://www.lifeprint.com/asl101/pages-signs/s/ski.htm)
+    (seems to often be used as SNOW SKI)
+  https://www.youtube.com/watch?v=kdrMcGYNjPs SKI / skiing
+    trim: 8F-49F
 
 group:
   more: +md:[SKILL](https://www.lifeprint.com/asl101/pages-signs/s/skill.htm)
