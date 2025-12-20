@@ -237,9 +237,12 @@ group:
 
 group:
   more: +md:[CHOOSE](https://www.lifeprint.com/asl101/pages-signs/c/choose.htm)
-
   https://www.youtube.com/watch?v=e4YCKEFcVdU CHOOSE / pick / select / choice
     trim: 7F-73F
+
+group:
+  more: +md:[CHRIST](https://www.lifeprint.com/asl101/pages-signs/c/christ.htm)
+  https://www.youtube.com/watch?v=cVR02pxl3sk @43F-83F CHRIST
 
 group:
   more: +md:[CHRISTMAS](https://www.lifeprint.com/asl101/pages-signs/c/christmas.htm)
@@ -596,6 +599,12 @@ group:
     trim: 10F-78F
 
 group:
+  more: +md:[GENERAL](https://www.lifeprint.com/asl101/pages-signs/g/general.htm)
+  https://www.youtube.com/watch?v=Qfn0Tl2caZc
+    GENERAL / in general / broadly / wide
+    trim: 35F-105F
+
+group:
   more: +md:[GHOST](https://www.lifeprint.com/asl101/pages-signs/g/ghost.htm)
   https://www.youtube.com/watch?v=AOhXN8awg1E GHOST / spirit / haunted
 
@@ -634,6 +643,15 @@ group:
   more: +md:[HALLOWEEN](https://www.lifeprint.com/asl101/pages-signs/h/halloween.htm)
   https://www.youtube.com/watch?v=etaFxJRJxhc HALLOWEEN (hide face version)
   # No video for RACCOON version.
+
+group:
+  more: +md:[HANUKKAH](https://www.lifeprint.com/asl101/pages-signs/h/hanukkah.htm)
+  https://www.youtube.com/watch?v=wXk1nupiUDg
+    HANUKKAH (palm forward version) / Chanukah
+    trim: 10F-59F
+  https://www.youtube.com/watch?v=b6hT9u2w5zw ->
+    HANUKKAH (palm back version) / Chanukah
+    trim: 10F-59F
 
 group:
   more: +md:[HEAD](https://www.lifeprint.com/asl101/pages-signs/h/head.htm)
@@ -701,9 +719,14 @@ group:
     trim: 1F-62F
 
 group:
+  more: +md:[JEWISH](https://www.lifeprint.com/asl101/pages-signs/j/jewish.htm)
+  https://www.youtube.com/watch?v=Ko0htMaC7BI JEWISH
+    trim: 6F-57F
+
+group:
   more: +md:[JOB](https://www.lifeprint.com/asl101/pages-signs/j/job.htm)
   https://www.youtube.com/watch?v=42A3aALiSng #JOB
-    trim: 8F - 73F
+    trim: 8F-73F
 
 group:
   more: +md:[JOIN](https://www.lifeprint.com/asl101/pages-signs/j/join.htm)
