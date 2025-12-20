@@ -245,13 +245,17 @@ def test_note_parametrized(note_lines, parsed_text):
         ),
         (
             "version: 2",
-            "Error in -, line 1: This version of yanki only supports version 1 "
-            "deck files (found '2')",
+            (
+                "Error in -, line 1: This version of yanki only supports "
+                "version 1 deck files (found '2')"
+            ),
         ),
         (
             "version:",
-            "Error in -, line 1: This version of yanki only supports version 1 "
-            "deck files (found '')",
+            (
+                "Error in -, line 1: This version of yanki only supports "
+                "version 1 deck files (found '')"
+            ),
         ),
         (
             "title: a\ngroup:\n  title: one",
