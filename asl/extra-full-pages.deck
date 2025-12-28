@@ -800,11 +800,6 @@ group:
   https://www.youtube.com/watch?v=dQiSaYUurgY [menstrual]-PERIOD / menstruation
 
 group:
-  more: +md:[MIRROR](https://www.lifeprint.com/asl101/pages-signs/m/mirror.htm)
-  https://www.youtube.com/watch?v=uRxfofBY88M MIRROR
-    trim: 6F-74F
-
-group:
   more: +md:[MISS](https://www.lifeprint.com/asl101/pages-signs/m/miss.htm)
   https://www.youtube.com/watch?v=ZT-SHd3kPaA MISS (emotion)
     trim: 8F-58F
@@ -1147,18 +1142,6 @@ group:
   more: +md:[STUBBORN](https://www.lifeprint.com/asl101/pages-signs/s/stubborn.htm)
   https://www.youtube.com/watch?v=n6_vhSmtSJw STUBBORN
     trim: 13F-68F
-
-group:
-  more: +md:[STUPID](https://www.lifeprint.com/asl101/pages-signs/s/stupid.htm)
-  https://www.youtube.com/watch?v=hZE-2WNybKs STUPID (one-handed version)
-    trim: 13F-57F
-
-  # Not covered on page
-  tags: +extra
-  https://www.youtube.com/watch?v=GkZhBJMYR0M STUPID (two-handed version)
-    trim: 13F-58F
-  https://www.youtube.com/watch?v=NBZX_tzCxL4 CLUELESS / stupid
-    trim: 23F-80F
 
 group:
   more: +md:[SUPPORT](https://www.lifeprint.com/asl101/pages-signs/s/support.htm)

@@ -21,18 +21,27 @@ group:
   https://www.youtube.com/watch?v=d_ME0WTSuVI BEARD
     trim: 22F-83F
   https://www.youtube.com/watch?v=NmnmSS1KwDc BEARD-goatee
-
+    trim: 6F-67F
 
 # CAN was in lesson 5.
 
 group:
   more: +md:[CARD](https://www.lifeprint.com/asl101/pages-signs/c/card.htm)
+  https://www.youtube.com/watch?v=R21j8UqGNjo
+    CARD / CHECK (cheque) / ENVELOPE / rectangle
+    trim: 12F-88F
 
 group:
   more: +md:[COUSIN](https://www.lifeprint.com/asl101/pages-signs/c/cousin.htm)
+  https://www.youtube.com/watch?v=e9-jd3sf6us COUSIN
+    trim: 15F-64F
 
 group:
   more: +md:[DISAPPEAR](https://www.lifeprint.com/asl101/pages-signs/d/disappear.htm)
+  https://www.youtube.com/watch?v=wg3MSASSmCo DISAPPEAR (1-hand version)
+    trim: 9F-58F
+  https://www.youtube.com/watch?v=q9VxLF5shUw DISAPPEAR (1 to X version)
+    trim: 11F-63F
 
 group:
   more: +md:[HAPPEN](https://www.lifeprint.com/asl101/pages-signs/h/happen.htm)
@@ -47,6 +56,8 @@ group:
 
 group:
   more: +md:[IMPOSSIBLE](https://www.lifeprint.com/asl101/pages-signs/i/impossible.htm)
+  https://www.youtube.com/watch?v=Qau2mlInMlA IMPOSSIBLE
+    trim: 12F-90F
 
 group:
   more: +md:[MUSTACHE](https://www.lifeprint.com/asl101/pages-signs/m/mustache.htm)
@@ -57,7 +68,7 @@ group:
   more: +md:[MUSIC](https://www.lifeprint.com/asl101/pages-signs/m/music.htm)
   https://www.youtube.com/watch?v=-OYTTmF4m8M MUSIC / sing / song
     trim: 13F-86F
-  # FIXME? POETRY? SINGER?
+  # POETRY will be covered in lesson 34
 
 group:
   more: +md:[PLAN](https://www.lifeprint.com/asl101/pages-signs/p/plan.htm)
@@ -69,7 +80,6 @@ group:
 group:
   more: +md:[play cards](https://www.lifeprint.com/asl101/pages-signs/p/play-cards.htm)
   https://www.youtube.com/watch?v=T3jyHxtckAw play-CARDS / deal cards
-  https://www.youtube.com/watch?v=R21j8UqGNjo CARD / rectangle
 
 group:
   more: +md:[SECRET](https://www.lifeprint.com/asl101/pages-signs/s/secret.htm)
@@ -91,7 +101,10 @@ group:
   https://www.youtube.com/watch?v=-NuU5ieFphQ
     seemingly / SEEM / apparently (2 movement version)
     trim: 12F-92F
-  # FIXME MIRROR?
+
+  tags: +extra
+  https://www.youtube.com/watch?v=uRxfofBY88M MIRROR
+    trim: 6F-74F
 
 group:
   more: +md:[SHOW-UP](https://www.lifeprint.com/asl101/pages-signs/s/show-up.htm)
@@ -122,10 +135,21 @@ group:
 
 group:
   more: +md:[STUPID](https://www.lifeprint.com/asl101/pages-signs/s/stupid.htm)
+  https://www.youtube.com/watch?v=hZE-2WNybKs STUPID (one-handed version)
+    trim: 13F-57F
+
+  # Not covered on page
+  tags: +extra
+  https://www.youtube.com/watch?v=GkZhBJMYR0M STUPID (two-handed version)
+    trim: 13F-58F
+  https://www.youtube.com/watch?v=NBZX_tzCxL4 CLUELESS / stupid
+    trim: 23F-80F
 
 # The lesson page links to WHITE, but the text of the link is “WHITE-FACED-
 # [pale, Caucasian]”, so CAUCASIAN makes more sense. (WHITE is in lesson 6).
 group:
   more: +md:[CAUCASIAN](https://www.lifeprint.com/asl101/pages-signs/c/caucasian.htm)
+  https://www.youtube.com/watch?v=xpbY94u28ZY CAUCASIAN / white person / pale
+    trim: 6F-57F
 
 # YOURSELF was covered in lesson 6.
