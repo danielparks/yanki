@@ -88,6 +88,8 @@ ignore = [
     "RUF001",
     "RUF002",
     "RUF003",
+
+    "RUF067",  # Minimal `__init__` (I may wish to enable later).
 ]
 
 [tool.ruff.lint.per-file-ignores]
