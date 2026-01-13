@@ -5,36 +5,58 @@ tags: Lifeprint lesson_30 vocabulary
 audio: strip
 note_id: Lifeprint ASL {url} {clip}
 
+# FIXME classifier B? https://www.lifeprint.com/asl101/pages-signs/c/clb.htm
+
 group:
   more: +md:[AT](https://www.lifeprint.com/asl101/pages-signs/a/at.htm)
   https://www.youtube.com/watch?v=sh1LBgeZNnM AT-symbol (@)
     trim: 3F-64F
-  # FIXME? add rare version of AT?
+  # Could not find video for rare version.
 
 group:
-  more: +md:[CELLPHONE](https://www.lifeprint.com/asl101/pages-signs/c/cellphone.htm)
+  more: +md:[CELL-PHONE](https://www.lifeprint.com/asl101/pages-signs/c/cellphone.htm)
+  https://www.youtube.com/watch?v=ioSCc2teLUs CELL-PHONE
+    trim: 10F-65F
 
 group:
   more: +md:[DRAWER](https://www.lifeprint.com/asl101/pages-signs/d/drawer.htm)
   # DRESSER was in lesson 9.
-  # FIXME add PUSH?
+
+  tags: +extra
+  https://www.youtube.com/watch?v=-PJpxxxfNw4 PUSH / close drawer
+    trim: 26F-78F
 
 # ELEVATOR was in lesson 18.
 
 group:
   more: +md:[FLOOR](https://www.lifeprint.com/asl101/pages-signs/f/floor.htm)
+  https://www.youtube.com/watch?v=ITtL6y_Lt14 FLOOR / carpet
+    trim: 12F-71F
 
 group:
   more: +md:[FURNITURE](https://www.lifeprint.com/asl101/pages-signs/f/furniture.htm)
+  https://www.youtube.com/watch?v=AG4ZNOYVZN4 FURNITURE
+    trim: 16F-97F
 
 group:
   more: +md:[GIVE-UP](https://www.lifeprint.com/asl101/pages-signs/g/give-up.htm)
+  https://www.youtube.com/watch?v=iDBgJS7x0x8
+    GIVE-UP / surrender / compromise / sacrifice
+    trim: 16F-72F
+  # compromise / sacrifice from video title
 
 group:
   more: +md:[JANITOR](https://www.lifeprint.com/asl101/pages-signs/j/janitor.htm)
+    may be signed with or without AGENT
+  https://www.youtube.com/watch?v=_B6TyCNcEl8 JANITOR (mop version)
+    trim: 18F-77F
+  https://www.youtube.com/watch?v=65onp_R7-Mo JANITOR (sweep version)
+    trim: 28F-85F
 
 group:
   more: +md:[MACHINE](https://www.lifeprint.com/asl101/pages-signs/m/machine.htm)
+  https://www.youtube.com/watch?v=y59idlTVHjY MACHINE / engine / factory
+    trim: 12F-76F
 
 group:
   more: +md:[MEASURE](https://www.lifeprint.com/asl101/pages-signs/m/measure.htm)
@@ -53,12 +75,15 @@ group:
 group:
   more: +md:[RESPONSIBLE](https://www.lifeprint.com/asl101/pages-signs/r/responsible.htm)
   https://www.youtube.com/watch?v=Qmzg74JQGYk RESPONSIBLE
+    trim: 6F-78F
   # Can’t find video for older initialized version.
 
 # RESTAURANT is in lesson 23.
 
 group:
   more: +md:[SALESPERSON](https://www.lifeprint.com/asl101/pages-signs/s/salesperson.htm)
+  https://www.youtube.com/watch?v=nD4K5Zf-Twg SALESPERSON / seller
+    trim: 12F-66F
 
 group:
   more: +md:[BEGIN](https://www.lifeprint.com/asl101/pages-signs/b/begin.htm)
@@ -67,11 +92,17 @@ group:
 
 group:
   more: +md:[VET](https://www.lifeprint.com/asl101/pages-signs/v/vet.htm)
+  https://www.youtube.com/watch?v=8fGITa1Uzd0 V-E-T / veterinarian
+    trim: 7F-
 
 group:
   more: +md:[WALL](https://www.lifeprint.com/asl101/pages-signs/w/wall.htm)
+  https://www.youtube.com/watch?v=6QwJs9xhOuU WALL (CL:B)
+    trim: 11F-78F
 
 # wrist-WATCH is in lesson 5.
 
 group:
   more: +md:[WAY](https://www.lifeprint.com/asl101/pages-signs/w/way.htm)
+  https://www.youtube.com/watch?v=suYp8zCSpWo WAY / street / path / road
+    trim: 1F-49F
