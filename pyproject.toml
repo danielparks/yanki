@@ -18,7 +18,7 @@ classifiers = [
 dependencies = [
     "yt-dlp >=2024.11.4",
     "genanki >=0.13.1,<0.14",
-    "docutils >=0.21.2,<0.22",
+    "docutils>=0.21.2,<0.23",
     "ffmpeg-python >=0.2.0,<0.3",
     "colorlog >=6.9.0,<7.0",
     "click >=8.1.8,<9.0",
@@ -30,11 +30,11 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "pytest~=8.3",
+    "pytest~=9.0",
     "ruff>0.8.4",
     "pre-commit>=4.0.1,<5",
     "pytest-console-scripts>=1.4.1,<2",
-    "psutil>=6.1.1,<7",
+    "psutil>=6.1.1,<8",
 ]
 
 [project.urls]
