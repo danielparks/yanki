@@ -17067,6 +17067,13 @@ Lifeprint ASL https://www.youtube.com/watch?v=x6ya_EuBMwY @0- PARAMETER: crop='1
 Lifeprint ASL https://www.youtube.com/watch?v=x6ya_EuBMwY @0- PARAMETER: overlay_text='Phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=x6ya_EuBMwY @0- TAGS: 'Lifeprint lesson_17 phrase'
 Lifeprint ASL https://www.youtube.com/watch?v=x6ya_EuBMwY @0- TEXT: 'YOU THINK SALT BAD FOR YOU?'
+Lifeprint ASL https://www.youtube.com/watch?v=x79oj8a1IAg @0- MEDIA: 'youtube=x79oj8a1IAg/processed/media_youtube=x79oj8a1IAg_1028246750abc0b52b6f25a9f3bb576d.mp4'
+Lifeprint ASL https://www.youtube.com/watch?v=x79oj8a1IAg @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU</p>\n'
+Lifeprint ASL https://www.youtube.com/watch?v=x79oj8a1IAg @0- PARAMETER: audio='strip'
+Lifeprint ASL https://www.youtube.com/watch?v=x79oj8a1IAg @0- PARAMETER: clip=(0.5338666666666667, 2.1021)
+Lifeprint ASL https://www.youtube.com/watch?v=x79oj8a1IAg @0- PARAMETER: crop='1920:1080:0:0'
+Lifeprint ASL https://www.youtube.com/watch?v=x79oj8a1IAg @0- TAGS: 'Lifeprint extra extra-deck extra-deck-miscellaneous vocabulary'
+Lifeprint ASL https://www.youtube.com/watch?v=x79oj8a1IAg @0- TEXT: 'NUTS'
 Lifeprint ASL https://www.youtube.com/watch?v=x9xgoFqsBkE @0- MEDIA: 'youtube=x9xgoFqsBkE/processed/media_youtube=x9xgoFqsBkE_182131523c809b206335f5433f673ed7.mp4'
 Lifeprint ASL https://www.youtube.com/watch?v=x9xgoFqsBkE @0- MORE: '<p>From <a href="https://www.lifeprint.com/">Lifeprint</a> ASLU\n<a href="https://www.lifeprint.com/asl101/lessons/lesson16.htm">lesson 16</a></p>\n<p><a href="https://www.lifeprint.com/asl101/pages-signs/f/first.htm">FIRST</a></p>\n'
 Lifeprint ASL https://www.youtube.com/watch?v=x9xgoFqsBkE @0- PARAMETER: audio='strip'
