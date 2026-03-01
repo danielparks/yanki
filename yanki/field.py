@@ -25,7 +25,7 @@ URL_REGEX = re.compile(
 
 def rst_to_html(rst):
     # From https://wiki.python.org/moin/reStructuredText#The_.22Cool.22_Way
-    parts = docutils.core.publish_parts(source=rst, writer_name="html5")
+    parts = docutils.core.publish_parts(source=rst, writer="html5")
     return parts["body_pre_docinfo"] + parts["fragment"]
 
 
