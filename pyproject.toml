@@ -16,7 +16,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "yt-dlp >=2024.11.4",
+    "yt-dlp >=2026.2.21",
     "genanki >=0.13.1,<0.14",
     "docutils>=0.21.2,<0.23",
     "ffmpeg-python >=0.2.0,<0.3",
