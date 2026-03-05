@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## main branch
+## Release 0.6.1 (2026-03-05)
 
 ### Security
 
@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 
 ### Minor changes
 
-* Update README.md and project description now that flashcards can be used directlty (through the web UI) rather than requiring Anki.
+* Update README.md and project description now that flashcards can be used directly (through the web UI) rather than requiring Anki.
 
 ## Release 0.6.0 (2025-08-16)
 
