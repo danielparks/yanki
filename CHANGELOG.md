@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+## main branch
+
 ## Release 0.6.2 (2026-03-05)
 
 Fix screenshot and change log link on PyPi.org.
