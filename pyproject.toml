@@ -40,7 +40,7 @@ dev = [
 [project.urls]
 Homepage = "https://github.com/danielparks/yanki"
 Source = "https://github.com/danielparks/yanki"
-ChangeLog = "https://github.com/danielparks/yanki/blob/main/CHANGELOG.md"
+ChangeLog = "https://github.com/danielparks/yanki/blob/v0.6.2/CHANGELOG.md"
 Issues = "https://github.com/danielparks/yanki/issues"
 
 [project.scripts]
@@ -139,3 +139,8 @@ replacement = '### 💡 Tip'
 # Make links to package files absolute GitHub links.
 pattern = '(?m)^(\[.+?\]):\s*((?!\w+:)\S+)'
 replacement = '\1: https://github.com/danielparks/yanki/blob/v$HFPR_VERSION/\2'
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
+# Make image links to package files absolute GitHub links.
+pattern = '(?m)^(!\[.+?\])\(((?!\w+:)\S+?)\)'
+replacement = '\1(https://github.com/danielparks/yanki/raw/v$HFPR_VERSION/\2)'

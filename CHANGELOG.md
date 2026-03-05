@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 0.6.2 (2026-03-05)
+
+Fix screenshot and change log link on PyPi.org.
+
 ## Release 0.6.1 (2026-03-05)
 
 ### Security
