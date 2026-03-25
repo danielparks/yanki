@@ -1285,6 +1285,15 @@ group:
   # FIXME: fill in the rest of the signs.
 
 group:
+  more: +md:[WRESTLE](https://www.lifeprint.com/asl101/pages-signs/w/wrestle.htm)
+  https://www.youtube.com/watch?v=ceklXVyTDYM WRESTLE
+    trim: 13F-63F
+
+  tags: +extra
+  https://www.youtube.com/watch?v=eRrasXA69w4 WRESTLING-around / grappling / tussling
+    trim: 25F-104F
+
+group:
   more: +md:[YOGURT](https://www.lifeprint.com/asl101/pages-signs/y/yogurt.htm)
   https://www.youtube.com/watch?v=DtSZIk2f9JQ Y-O-G-U-R-T
     trim: 14F-123F
