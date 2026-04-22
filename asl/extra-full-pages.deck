@@ -56,6 +56,11 @@ group:
     trim: 10F-68F
 
 group:
+  more: +md:[AUTISM](https://www.lifeprint.com/asl101/pages-signs/a/autism.htm)
+  https://www.youtube.com/watch?v=W-hU2HfZSq8 AUTISM (within-self version)
+    trim: 27F-88F
+
+group:
   more: +md:[AWKWARD](https://www.lifeprint.com/asl101/pages-signs/a/awkward.htm)
   https://www.youtube.com/watch?v=JlKhON_Ta2k AWKWARD
 
@@ -719,6 +724,11 @@ group:
     trim: 1F-62F
 
 group:
+  more: +md:[JESUS](https://www.lifeprint.com/asl101/pages-signs/j/jesus.htm)
+  https://www.youtube.com/watch?v=PZpegBLONAU JESUS
+    trim: 11F-64F
+
+group:
   more: +md:[JEWISH](https://www.lifeprint.com/asl101/pages-signs/j/jewish.htm)
   https://www.youtube.com/watch?v=Ko0htMaC7BI JEWISH
     trim: 6F-57F
@@ -1242,6 +1252,11 @@ group:
     trim: 13F-62F
   https://www.youtube.com/watch?v=SWefjHHUouc VISIT-other-person
     trim: 18F-68F
+
+group:
+  more: +md:[WARN](https://www.lifeprint.com/asl101/pages-signs/w/warn.htm)
+  https://www.youtube.com/watch?v=kkJY3WXTqmI WARN
+    trim: 19F-85F
 
 group:
   more: +md:[WEDDING](https://www.lifeprint.com/asl101/pages-signs/w/wedding.htm)
