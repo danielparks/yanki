@@ -74,6 +74,7 @@ ignore = [
     "PLR0911", # I don’t care about too many returns.
     "PLR2004", # “Magic” values often easier to understand without a CONSTANT.
     "PLR6301", # Too many false positive (methods that don’t need `self`).
+    "PLW0717", # Nothing wrong with a big `try` block.
     "PLW2901", # I like to shadow `for` loop variables.
     "PT011",   # `pytest.raises(...)` is too broad: Too many false positives.
     "RSE102",  # Always use parentheses raising an exception for consistency.
