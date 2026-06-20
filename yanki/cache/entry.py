@@ -71,7 +71,7 @@ class Entry:
 
     @property
     def value(self) -> Any:
-        """Get the value from this entry or UNSET or INVALID."""
+        """The value from this entry or UNSET or INVALID."""
         return self._value
 
     def read_file(self) -> Any:
@@ -357,7 +357,7 @@ class EntryJson(Entry):
 
     @property
     def value(self) -> Any:
-        """Get the value from this entry or UNSET or INVALID."""
+        """The value from this entry or UNSET or INVALID."""
         if self._value is UNSET:
             return UNSET
         try:

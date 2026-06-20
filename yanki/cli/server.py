@@ -61,12 +61,12 @@ class Server:
 
     @property
     def bind_address(self) -> str:
-        """Get the address to bind to from --bind."""
+        """The address to bind to (from --bind)."""
         return self.bind_tuple[0]
 
     @property
     def bind_port(self) -> int:
-        """Get the port to bind to from --bind."""
+        """The port to bind to (from --bind)."""
         return self.bind_tuple[1]
 
     def serve_forever(self, directory="."):
