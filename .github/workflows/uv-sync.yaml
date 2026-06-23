@@ -1,0 +1,52 @@
+name: uv sync -U
+
+on:
+  schedule:
+    - cron: "0 17 24 * *" # Every 24th at 17:00 UTC (10am PDT / 9am PST).
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  uv-sync-u:
+    name: uv sync -U
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # Change files
+      pull-requests: write # Create and update PRs
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          # zizmor: ignore[artipacked] no archive; needed for git
+          persist-credentials: true
+      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+      - run: uv sync -U
+        shell: bash
+      - name: Open PR if changed
+        env:
+          BRANCH: uv-sync-U
+          COMMIT_MESSAGE: "`uv sync -U`."
+          GH_TOKEN: ${{ secrets.AUTO_UPDATE_TOKEN }}
+        run: |
+          if [[ -z $(git status --porcelain) ]]; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add -A
+          git commit -m "$COMMIT_MESSAGE"
+          git push -u origin "$BRANCH" --force
+
+          if ! gh pr list --head "$BRANCH" --state open --json number --jq '.[0]' | grep -q .; then
+            gh pr create \
+              --title '`uv sync -U``' \
+              --body 'Automated monthly update from `uv sync -U`.'
+          fi
+        shell: bash

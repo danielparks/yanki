@@ -102,6 +102,9 @@ ignore = [
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
+[tool.uv]
+exclude-newer = "30 days"
+
 [tool.hatch.build.targets.wheel]
 packages = ["yanki"]
 

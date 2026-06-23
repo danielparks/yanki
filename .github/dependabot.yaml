@@ -18,7 +18,10 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 30
+    # Security updates only:
+    open-pull-requests-limit: 0
     groups:
       uv-dependencies:
+        applies-to: security-updates
         patterns:
           - "*"
