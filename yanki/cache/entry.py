@@ -223,7 +223,7 @@ class Entry:
         return self.value
 
     @functools.cached_property
-    def cache(self) -> "Cache":  # noqa: F821 circular dependency
+    def cache(self) -> "Cache":  # ruff: ignore[undefined-name] circular dependency
         return getattr(self.object, self.cache_attr)
 
     def resolve_cache_path(self):
@@ -314,7 +314,7 @@ class EntryContent(Entry):
             return UNSET
 
     def write_file(self, lock_file: io.IOBase):
-        assert lock_file.writable(), "writing cache requires exclusive lock"  # noqa: S101 just a sanity check
+        assert lock_file.writable(), "writing cache requires exclusive lock"  # ruff: ignore[assert] just a sanity check
         if self.encoding:
             return self.working_path.write_text(
                 self._value, encoding=self.encoding
@@ -388,7 +388,7 @@ class EntryJson(Entry):
 
     def write_file(self, lock_file: io.IOBase):
         """Write `self._value` to the the file."""
-        assert lock_file.writable(), "writing cache requires exclusive lock"  # noqa: S101 just a sanity check
+        assert lock_file.writable(), "writing cache requires exclusive lock"  # ruff: ignore[assert] just a sanity check
         with self.working_path.open("w") as file:
             json.dump(
                 self._value,

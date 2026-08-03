@@ -114,7 +114,7 @@ class Cache:
 
         def _remaining():
             try:
-                return f" ({self._async_lock_limit._value} remaining)"  # noqa: SLF001  kludge
+                return f" ({self._async_lock_limit._value} remaining)"  # ruff: ignore[private-member-access]  kludge
             except AttributeError:
                 return " (could not determine locks remaining)"
 

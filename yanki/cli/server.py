@@ -34,7 +34,7 @@ class Server:
     def __post_init__(self):
         """Validate the configuration."""
         # Trigger validation by accessing the cached property
-        self.bind_tuple  # noqa: B018 (not actually useless)
+        self.bind_tuple  # ruff: ignore[useless-expression] (not actually useless)
 
     @functools.cached_property
     def bind_tuple(self) -> tuple[str, int]:

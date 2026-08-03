@@ -31,7 +31,7 @@ class NotFileURLError(ValueError):
 def add_trace_logging():
     """Add `logging.TRACE` level. Idempotent."""
     try:
-        logging.TRACE  # noqa: B018 (not actually useless)
+        logging.TRACE  # ruff: ignore[useless-expression] (not actually useless)
     except AttributeError:
         # From user DerWeh at https://stackoverflow.com/a/55276759/1043949
         logging.TRACE = 5

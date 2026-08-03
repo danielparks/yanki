@@ -85,7 +85,7 @@ class YankiRunner(ScriptRunner):
     def __repr__(self) -> str:
         return f"<YankiRunner {self.launch_mode}>"
 
-    def run(  # noqa: PLR0913 (too many arguments)
+    def run(  # ruff: ignore[too-many-arguments] (too many arguments)
         self,
         *arguments: _StrOrPath,
         print_result: bool | None = None,

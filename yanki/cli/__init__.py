@@ -59,7 +59,7 @@ WritableFilePath = functools.partial(
 global_log_debug = False
 
 
-def main():  # noqa: C901 (complex)
+def main():  # ruff: ignore[complex-structure] (complex)
     exit_code = 0
     try:
         cli.main(standalone_mode=False)
@@ -151,7 +151,7 @@ def cli(ctx, verbose, cache, reprocess, concurrency):
     )
 
     # Configure logging
-    global global_log_debug  # noqa: PLW0603 (global keyword)
+    global global_log_debug  # ruff: ignore[global-statement] (global keyword)
     if verbose > 3:
         raise click.UsageError(
             "--verbose or -v may only be specified up to 3 times."

@@ -15,7 +15,7 @@ def get_video():
     )
 
 
-def test_time_parse():  # noqa: PLR0915 (too many statements)
+def test_time_parse():  # ruff: ignore[too-many-statements] (too many statements)
     video = get_video()
 
     assert video.get_fps() == 60

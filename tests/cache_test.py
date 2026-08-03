@@ -42,7 +42,7 @@ def ls_r(path: Path):
 
 
 def test_cached_json():
-    REFERENCE = {"a": "REFERENCE"}  # noqa: N806 uppercase
+    REFERENCE = {"a": "REFERENCE"}  # ruff: ignore[non-lowercase-variable-in-function] uppercase
     cache = Cache()
 
     @dataclass
@@ -126,8 +126,8 @@ async def test_cached_json_reload_async():
 
 
 def test_cached_json_version():
-    REFERENCE1 = {"a": "REFERENCE_a"}  # noqa: N806 uppercase
-    REFERENCE2 = {"b": "REFERENCE_b"}  # noqa: N806 uppercase
+    REFERENCE1 = {"a": "REFERENCE_a"}  # ruff: ignore[non-lowercase-variable-in-function] uppercase
+    REFERENCE2 = {"b": "REFERENCE_b"}  # ruff: ignore[non-lowercase-variable-in-function] uppercase
     cache = Cache()
 
     @dataclass
@@ -631,7 +631,7 @@ def test_cached_path_invalid_name():
 
 @pytest.mark.asyncio
 async def test_sync_cache_in_async():
-    TASK_COUNT = 20  # noqa: N806 local constant
+    TASK_COUNT = 20  # ruff: ignore[non-lowercase-variable-in-function] local constant
     cache = Cache()
 
     @dataclass
@@ -646,7 +646,7 @@ async def test_sync_cache_in_async():
 
     async def fn(id: str):
         thing = Thing(id=id, cache=cache)
-        await asyncio.sleep(random.uniform(0, 0.1))  # noqa: S311 not cryptography
+        await asyncio.sleep(random.uniform(0, 0.1))  # ruff: ignore[suspicious-non-cryptographic-random-usage] not cryptography
         return thing.value()
 
     async with asyncio.TaskGroup() as group:
@@ -661,7 +661,7 @@ async def test_sync_cache_in_async():
 
 @pytest.mark.asyncio
 async def test_async_cache_in_async():
-    TASK_COUNT = 20  # noqa: N806 local constant
+    TASK_COUNT = 20  # ruff: ignore[non-lowercase-variable-in-function] local constant
     cache = Cache()
 
     @dataclass
@@ -671,14 +671,14 @@ async def test_async_cache_in_async():
         @cached("abc", type=EntryContent)
         async def value(self):
             self.assert_once()
-            sleep = random.uniform(0, 0.1)  # noqa: S311 not cryptography
+            sleep = random.uniform(0, 0.1)  # ruff: ignore[suspicious-non-cryptographic-random-usage] not cryptography
             LOGGER.info(f"Fn {id} running (sleep {round(sleep * 1000)} ms)")
             await asyncio.sleep(sleep)
             return self.id
 
     async def fn(id: str):
         thing = Thing(id=id, cache=cache)
-        await asyncio.sleep(random.uniform(0, 0.1))  # noqa: S311 not cryptography
+        await asyncio.sleep(random.uniform(0, 0.1))  # ruff: ignore[suspicious-non-cryptographic-random-usage] not cryptography
         return await thing.value()
 
     async with asyncio.TaskGroup() as group:

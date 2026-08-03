@@ -61,42 +61,42 @@ select = ["ALL"]
 ignore = [
     "A",       # I don’t mind shadowing built-ins.
     "ANN",     # FIXME? type annotations.
-    "B019",    # FIXME: `functools.cache` can leak memory.
-    "COM812",  # Conflicts with formatter.
+    "cached-instance-method",    # FIXME: `functools.cache` can leak memory.
+    "missing-trailing-comma",  # Conflicts with formatter.
     "CPY",     # I don’t want copyright notices at the top of every file.
     "D1",      # FIXME: Undocumented public items.
     "DOC",     # FIXME: Undocumented returns, raises, etc.
     "EM",      # I don’t like the `msg = ...; raise Error(msg)` syntax.
     "FIX",     # I like FIXME comments for low-priority stuff.
-    "G004",    # I prefer f-strings for logging for clarity.
-    "PLC1901", # Explicit comparisons to `""` are often clearer.
-    "PLR0904", # FIXME? Too many public methods.
-    "PLR0911", # I don’t care about too many returns.
-    "PLR2004", # “Magic” values often easier to understand without a CONSTANT.
-    "PLR6301", # Too many false positive (methods that don’t need `self`).
-    "PLW0717", # Nothing wrong with a big `try` block.
-    "PLW2901", # I like to shadow `for` loop variables.
-    "PT011",   # `pytest.raises(...)` is too broad: Too many false positives.
-    "RSE102",  # Always use parentheses raising an exception for consistency.
-    "S404",    # I use `subprocess`.
-    "S603",    # This seems to trigger on all calls to `subprocess.run`.
+    "logging-f-string",    # I prefer f-strings for logging for clarity.
+    "compare-to-empty-string", # Explicit comparisons to `""` are often clearer.
+    "too-many-public-methods", # FIXME? Too many public methods.
+    "too-many-return-statements", # I don’t care about too many returns.
+    "magic-value-comparison", # “Magic” values often easier to understand without a CONSTANT.
+    "no-self-use", # Too many false positive (methods that don’t need `self`).
+    "too-many-statements-in-try-clause", # Nothing wrong with a big `try` block.
+    "redefined-loop-name", # I like to shadow `for` loop variables.
+    "pytest-raises-too-broad",   # `pytest.raises(...)` is too broad: Too many false positives.
+    "unnecessary-paren-on-raise-exception",  # Always use parentheses raising an exception for consistency.
+    "suspicious-subprocess-import",    # I use `subprocess`.
+    "subprocess-without-shell-equals-true",    # This seems to trigger on all calls to `subprocess.run`.
     "T20",     # We use `print()`.
     "TD",      # I prefer my FIXME format.
-    "TRY003",  # It’s a lot more work to have separate error classes.
-    "UP015",   # I prefer to be explicit about opening files for reading.
+    "raise-vanilla-args",  # It’s a lot more work to have separate error classes.
+    "redundant-open-modes",   # I prefer to be explicit about opening files for reading.
 
     # I frequently use characters that trigger these lints like "’"  and "❯":
-    "RUF001",
-    "RUF002",
-    "RUF003",
+    "ambiguous-unicode-character-string",
+    "ambiguous-unicode-character-docstring",
+    "ambiguous-unicode-character-comment",
 
-    "RUF067",  # Minimal `__init__` (I may wish to enable later).
+    "non-empty-init-module",  # Minimal `__init__` (I may wish to enable later).
 ]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = [
-    "INP001", # Don't care about implicit namespace in tests.
-    "S101",   # assert is fine in tests.
+    "implicit-namespace-package", # Don't care about implicit namespace in tests.
+    "assert",   # assert is fine in tests.
 ]
 
 [tool.ruff.lint.pydocstyle]

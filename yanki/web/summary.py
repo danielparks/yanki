@@ -48,7 +48,7 @@ class DeckTree:
             if self.deck_file_name:
                 # A tree with a deck is created with `deck_tree.dig()`, so it
                 # should always have a name.
-                assert self.name is not None  # noqa: S101
+                assert self.name is not None  # ruff: ignore[assert]
                 write_deck_files(
                     self.root_dir / self.deck_file_name,
                     self.media_dir,
@@ -62,7 +62,7 @@ class DeckTree:
             return ""
 
         # Has child decks. Must have a name.
-        assert self.name is not None  # noqa: S101
+        assert self.name is not None  # ruff: ignore[assert]
         if title_path == []:
             self.index_file_name = "index.html"
         else:
