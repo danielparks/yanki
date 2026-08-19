@@ -6,11 +6,13 @@ All notable changes to this project will be documented in this file.
 
 ### Security
 
-* Updated [yt-dlp] dependency to require version 2026.6.9 or newer. Previous versions could create files with insecure names ([GHSA-c6mh-fpjc-4pr3], [CVE-2026-50023]). I do not believe Yanki was affected, but I upgraded out of an abundance of caution.
+* Updated [yt-dlp] dependency to require version 2026.7.4 or newer. Previous versions could create files with insecure names ([GHSA-c6mh-fpjc-4pr3], [CVE-2026-50023], [GHSA-6v4j-43gg-vj32], [CVE-2026-55404]). I do not believe Yanki was affected, but I upgraded out of an abundance of caution.
 
 [yt-dlp]: https://github.com/yt-dlp/yt-dlp
 [GHSA-c6mh-fpjc-4pr3]: https://github.com/advisories/GHSA-c6mh-fpjc-4pr3
 [CVE-2026-50023]: https://nvd.nist.gov/vuln/detail/CVE-2026-50023
+[GHSA-6v4j-43gg-vj32]: https://github.com/yt-dlp/yt-dlp/security/advisories/GHSA-6v4j-43gg-vj32
+[CVE-2026-55404]: https://nvd.nist.gov/vuln/detail/CVE-2026-55404
 
 ## Release 0.6.2 (2026-03-05)
 
