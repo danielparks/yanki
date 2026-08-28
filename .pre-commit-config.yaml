@@ -21,13 +21,13 @@ repos:
       - id: name-tests-test
       - id: no-commit-to-branch
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.4
+    rev: v0.16.5
     hooks:
       - id: ruff-check
       - id: ruff-format
         args: ["--check"]
   - repo: https://github.com/crate-ci/typos
-    rev: v1.49.0
+    rev: v1.50.0
     hooks:
       - id: typos
         args: []
