@@ -148,24 +148,32 @@ def fs_is_legal_name(name: str) -> bool:
     )
 
 
-def hardlink_into(source: Path, directory: Path) -> Path:
-    """Hard link the file at `source` into `directory/file.name`.
+def hardlink_or_copy_into(source: Path, directory: Path) -> Path:
+    """Try to hard link the file tree at `source` into `directory/file.name`.
+
+    If `source` is a single file it will just hardlink it; if it's a directory
+    tree it will reproduce the directories and hardlink the files.
 
     This will remove existing files that are in the way if they don’t already
     link to the right place.
 
+    If a file cannot be hardlinked, e.g. it's on different file system, this
+    will try copying it before failing.
+
     Returns a `Path` to the newly linked file.
     """
 
-    # FIXME use shutil.copy2 if hardlink doesn’t work
     # FIXME test this
     def hardlink_file(source, link_path):
         try:
-            link_path.hardlink_to(source)
-        except FileExistsError:
-            if not link_path.samefile(source):
-                link_path.unlink()
+            try:
                 link_path.hardlink_to(source)
+            except FileExistsError:
+                if not link_path.samefile(source):
+                    link_path.unlink()
+                    link_path.hardlink_to(source)
+        except (OSError, NotImplementedError):
+            shutil.copy2(source, link_path)
 
     link_path = directory / source.name
     if source.is_dir():

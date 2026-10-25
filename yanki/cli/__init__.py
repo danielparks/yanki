@@ -23,7 +23,7 @@ from yanki.utils import (
     add_trace_logging,
     copy_into,
     find_errors,
-    hardlink_into,
+    hardlink_or_copy_into,
     open_in_app,
     symlink_into,
 )
@@ -288,7 +288,7 @@ def save_flashcards(options, output, decks, copy_assets):
     save_flashcard_html_to(
         output,
         decks.read_final_sorted(options),
-        install_method=copy_into if copy_assets else hardlink_into,
+        install_method=copy_into if copy_assets else hardlink_or_copy_into,
     )
 
 

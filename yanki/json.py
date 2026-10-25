@@ -15,7 +15,7 @@ def update_media_paths(
     must be one of:
 
         * `yanki.util.copy_into`
-        * `yanki.util.hardlink_into`
+        * `yanki.util.hardlink_or_copy_into`
         * `yanki.util.symlink_into`
 
     It updates `note["media_paths"]` with the new paths to the media, OR to have

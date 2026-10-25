@@ -2,7 +2,7 @@ from collections import OrderedDict
 from html import escape as h
 from pathlib import Path
 
-from yanki.utils import hardlink_into, symlink_into, url_friendly_name
+from yanki.utils import hardlink_or_copy_into, symlink_into, url_friendly_name
 from yanki.web import path_to_web_files, static_url
 
 
@@ -176,7 +176,7 @@ def write_deck_files(html_path, media_dir, deck, title_path):
     for path in deck.media_paths():
         # chmod to ensure media is accessible by the web server. This will
         # change the permissions of the original file too.
-        hardlink_into(Path(path), media_dir).chmod(0o644)
+        hardlink_or_copy_into(Path(path), media_dir).chmod(0o644)
 
 
 def htmlize_deck(deck, title_path, *, path_prefix=""):

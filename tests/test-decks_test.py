@@ -11,7 +11,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 def find_deck_files(base_path):
-    yield from Path(base_path).rglob("*.deck")
+    return list(Path(base_path).rglob("*.deck"))
 
 
 def read_first_line(path: Path):

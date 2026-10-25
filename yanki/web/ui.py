@@ -28,7 +28,7 @@ def save_flashcard_html_to(
     be one of:
 
         * `yanki.util.copy_into`
-        * `yanki.util.hardlink_into`
+        * `yanki.util.hardlink_or_copy_into`
         * `yanki.util.symlink_into`
     """
     web_files = path_to_web_files()
