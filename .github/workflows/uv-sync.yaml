@@ -46,7 +46,7 @@ jobs:
 
           if ! gh pr list --head "$BRANCH" --state open --json number --jq '.[0]' | grep -q .; then
             gh pr create \
-              --title '`uv sync -U``' \
+              --title '`uv sync -U`' \
               --body 'Automated monthly update from `uv sync -U`.'
           fi
         shell: bash
