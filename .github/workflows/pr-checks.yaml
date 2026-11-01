@@ -35,7 +35,7 @@ jobs:
 
       - run: sudo apt-get update
       - run: sudo apt-get install -y ffmpeg
-      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
       - run: uv python install
 
       - name: ruff format
@@ -52,10 +52,10 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
 
-      - uses: crate-ci/typos@d43b6c087ac471e2ea7b8af622ff15f05c0c365b # v1.50.1
+      - uses: crate-ci/typos@00f422f3b19c57bc6338715ebfe3316d38768461 # v1.50.3
         if: ${{ !cancelled() }}
 
-      - uses: zizmorcore/zizmor-action@70fb788f84895a7701f5643d103d587e460b5c99 # v0.6.3
+      - uses: zizmorcore/zizmor-action@cc914d7f3750a2d13d75c7f184a1060aa0e9d482 # v0.6.4
         if: ${{ !cancelled() }}
         with:
           persona: pedantic
