@@ -25,7 +25,8 @@ def read_first_line(path: Path):
 def test_deck_error(path):
     with (
         path.open("r", encoding="utf_8") as file,
-        pytest.raises(ExceptionGroup) as error_info,
+        # We match on the error string rather than the exact exceptions.
+        pytest.raises(ExceptionGroup) as error_info,  # ruff: ignore[pytest-raises-exception-group]
     ):
         DeckSource(files=[file]).read_final(VideoOptions())
 
